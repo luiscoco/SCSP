@@ -1,0 +1,1728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8784951F-3012-4802-8A11-7DE6A1F34008}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RefPropWindowsForms</RootNamespace>
+    <AssemblyName>RefPropWindowsForms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\SCSP_with Optimization\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\server\myapp\</InstallUrl>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>451246A4BE8A56BE4222144FCDF79D00AB6CE843</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RefPropWindowsForms_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>Accord Libraries\net462\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>Accord Libraries\net462\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="BlogCode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BlogCode.dll</HintPath>
+    </Reference>
+    <Reference Include="CSNumerics, Version=1.0.1.0, Culture=neutral, PublicKeyToken=b745125f2c40bf32, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CSNumerics.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNumerics">
+      <HintPath>..\..\..\DotNumerics V1.1 Dec-15-2009\DotNumerics V1.1 Dec-15-2009\Binaries\Release\DotNumerics.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Accord Libraries\net462\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="netchartdir_cp">
+      <HintPath>.\netchartdir_cp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SharpDX">
+      <HintPath>Accord Libraries\net462\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectSound">
+      <HintPath>Accord Libraries\net462\SharpDX.DirectSound.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Base, Version=15.3400.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Chart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Windows, Version=15.3400.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Chart.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=15.3400.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2018.3.911.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.PdfViewer, Version=2018.3.911.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2018.3.911.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" />
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" />
+    <Reference Include="TelerikCommon, Version=2018.3.911.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZedGraph, Version=1.0.1812.29779, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Accord Libraries\net462\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdobePDFViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdobePDFViewer.Designer.cs">
+      <DependentUpon>AdobePDFViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartsExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartsExample.Designer.cs">
+      <DependentUpon>ChartsExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="Comonent.cs" />
+    <Compile Include="Configurations_Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations_Summary.Designer.cs">
+      <DependentUpon>Configurations_Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration_Form.Designer.cs">
+      <DependentUpon>Configuration_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core.cs" />
+    <Compile Include="Core1.cs" />
+    <Compile Include="Diagrams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagrams.Designer.cs">
+      <DependentUpon>Diagrams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dual_Loop_SF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dual_Loop_SF.Designer.cs">
+      <DependentUpon>Dual_Loop_SF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dual_Loop_SF_Calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dual_Loop_SF_Calculation.Designer.cs">
+      <DependentUpon>Dual_Loop_SF_Calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_CIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_CIT.Designer.cs">
+      <DependentUpon>Effec_CIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_CIT_PCRC_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_CIT_PCRC_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_CIT_PCRC_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_CIT_PCRC_withReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_CIT_PCRC_withReHeating.Designer.cs">
+      <DependentUpon>Effec_CIT_PCRC_withReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_CIT_RCMCI_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_CIT_RCMCI_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_CIT_RCMCI_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_CIT_RCMCI_withReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_CIT_RCMCI_withReHeating.Designer.cs">
+      <DependentUpon>Effec_CIT_RCMCI_withReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_CIT_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_CIT_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_CIT_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_HXs_AP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_HXs_AP.Designer.cs">
+      <DependentUpon>Effec_HXs_AP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract.Designer.cs">
+      <DependentUpon>Effec_Recomp_Fract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_PCRC_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_PCRC_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_Recomp_Fract_PCRC_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_PCRC_withReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_PCRC_withReHeating.Designer.cs">
+      <DependentUpon>Effec_Recomp_Fract_PCRC_withReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_RCMCI_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_RCMCI_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_Recomp_Fract_RCMCI_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_RCMCI_withReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_RCMCI_withReHeating.Designer.cs">
+      <DependentUpon>Effec_Recomp_Fract_RCMCI_withReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_Recomp_Fract_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_Recomp_Fract_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TIP.Designer.cs">
+      <DependentUpon>Effec_TIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TIP_PCRC_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TIP_PCRC_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_TIP_PCRC_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TIP_PCRC_withReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TIP_PCRC_withReHeating.Designer.cs">
+      <DependentUpon>Effec_TIP_PCRC_withReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TIP_RCMCI_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TIP_RCMCI_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_TIP_RCMCI_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TIP_RCMCI_withReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TIP_RCMCI_withReHeating.Designer.cs">
+      <DependentUpon>Effec_TIP_RCMCI_withReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TIP_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TIP_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_TIP_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TIT.Designer.cs">
+      <DependentUpon>Effec_TIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TIT_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TIT_withoutReHeating.Designer.cs">
+      <DependentUpon>Effec_TIT_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effec_TurboMachines_Eff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effec_TurboMachines_Eff.Designer.cs">
+      <DependentUpon>Effec_TurboMachines_Eff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipments_Unitary_Cost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipments_Unitary_Cost.Designer.cs">
+      <DependentUpon>Equipments_Unitary_Cost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estimated_Cost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estimated_Cost.Designer.cs">
+      <DependentUpon>Estimated_Cost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Final_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Final_Report.Designer.cs">
+      <DependentUpon>Final_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fresnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fresnel.Designer.cs">
+      <DependentUpon>Fresnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator.Designer.cs">
+      <DependentUpon>Generator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeatExchangerUA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeatExchangerUA.Designer.cs">
+      <DependentUpon>HeatExchangerUA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LF_SF_Calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LF_SF_Calculation.Designer.cs">
+      <DependentUpon>LF_SF_Calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LF_SF_PHX_Data_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LF_SF_PHX_Data_Input.Designer.cs">
+      <DependentUpon>LF_SF_PHX_Data_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Net Power.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Net Power.Designer.cs">
+      <DependentUpon>Net Power.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Charts Types\anglepie.cs" />
+    <Compile Include="Charts Types\angularpointer.cs" />
+    <Compile Include="Charts Types\angularpointer2.cs" />
+    <Compile Include="Charts Types\arealine.cs" />
+    <Compile Include="Charts Types\axisscale.cs" />
+    <Compile Include="Charts Types\background.cs" />
+    <Compile Include="Charts Types\barlabel.cs" />
+    <Compile Include="Charts Types\binaryseries.cs" />
+    <Compile Include="Charts Types\blackhbarmeter.cs" />
+    <Compile Include="Charts Types\blackhlinearmeter.cs" />
+    <Compile Include="Charts Types\blackroundmeter.cs" />
+    <Compile Include="Charts Types\blacksemicirclemeter.cs" />
+    <Compile Include="Charts Types\blackvbarmeter.cs" />
+    <Compile Include="Charts Types\blackvlinearmeter.cs" />
+    <Compile Include="Charts Types\boxwhisker.cs" />
+    <Compile Include="Charts Types\boxwhisker2.cs" />
+    <Compile Include="Charts Types\bubble.cs" />
+    <Compile Include="Charts Types\bubblescale.cs" />
+    <Compile Include="Charts Types\builtinsymbols.cs" />
+    <Compile Include="Charts Types\candlestick.cs" />
+    <Compile Include="Charts Types\circlelabelpie.cs" />
+    <Compile Include="Charts Types\colorbar.cs" />
+    <Compile Include="Charts Types\colorbar2.cs" />
+    <Compile Include="Charts Types\colorgantt.cs" />
+    <Compile Include="Charts Types\colorhbarmeter.cs" />
+    <Compile Include="Charts Types\colorhlinearmeter.cs" />
+    <Compile Include="Charts Types\colorroundmeter.cs" />
+    <Compile Include="Charts Types\colorsemicirclemeter.cs" />
+    <Compile Include="Charts Types\colorvbarmeter.cs" />
+    <Compile Include="Charts Types\colorvlinearmeter.cs" />
+    <Compile Include="Charts Types\compactline.cs" />
+    <Compile Include="Charts Types\concentric.cs" />
+    <Compile Include="Charts Types\cone.cs" />
+    <Compile Include="Charts Types\confidenceband.cs" />
+    <Compile Include="Charts Types\contour.cs" />
+    <Compile Include="Charts Types\contourcolor.cs" />
+    <Compile Include="Charts Types\contourinterpolate.cs" />
+    <Compile Include="Charts Types\contourlegend.cs" />
+    <Compile Include="Charts Types\curvefitting.cs" />
+    <Compile Include="Charts Types\customsymbolline.cs" />
+    <Compile Include="Charts Types\cylinderbar.cs" />
+    <Compile Include="Charts Types\cylinderlightbar.cs" />
+    <Compile Include="Charts Types\datatable.cs" />
+    <Compile Include="Charts Types\datatable2.cs" />
+    <Compile Include="Charts Types\DemoModule.cs" />
+    <Compile Include="Charts Types\deptharea.cs" />
+    <Compile Include="Charts Types\depthbar.cs" />
+    <Compile Include="Charts Types\donut.cs" />
+    <Compile Include="Charts Types\donutshading.cs" />
+    <Compile Include="Charts Types\donutwidth.cs" />
+    <Compile Include="Charts Types\dualhbar.cs" />
+    <Compile Include="Charts Types\dualxaxis.cs" />
+    <Compile Include="Charts Types\dualyaxis.cs" />
+    <Compile Include="Charts Types\enhancedarea.cs" />
+    <Compile Include="Charts Types\errline.cs" />
+    <Compile Include="Charts Types\explodedpie.cs" />
+    <Compile Include="Charts Types\finance.cs" />
+    <Compile Include="Charts Types\finance2.cs" />
+    <Compile Include="Charts Types\financesymbols.cs" />
+    <Compile Include="Charts Types\floatingbox.cs" />
+    <Compile Include="Charts Types\fontpie.cs" />
+    <Compile Include="Charts Types\fontxy.cs" />
+    <Compile Include="Charts Types\fourq.cs" />
+    <Compile Include="Charts Types\funnel.cs" />
+    <Compile Include="Charts Types\gantt.cs" />
+    <Compile Include="Charts Types\gapbar.cs" />
+    <Compile Include="Charts Types\glasslightbar.cs" />
+    <Compile Include="Charts Types\glassmultibar.cs" />
+    <Compile Include="Charts Types\gradientbar.cs" />
+    <Compile Include="Charts Types\gradientmultibar.cs" />
+    <Compile Include="Charts Types\hbar.cs" />
+    <Compile Include="Charts Types\hbarmeter.cs" />
+    <Compile Include="Charts Types\hbarmeterorientation.cs" />
+    <Compile Include="Charts Types\hboxwhisker.cs" />
+    <Compile Include="Charts Types\histogram.cs" />
+    <Compile Include="Charts Types\hlinearmeter.cs" />
+    <Compile Include="Charts Types\hlinearmeterorientation.cs" />
+    <Compile Include="Charts Types\hloc.cs" />
+    <Compile Include="Charts Types\iconameter.cs" />
+    <Compile Include="Charts Types\icondonut.cs" />
+    <Compile Include="Charts Types\iconpie.cs" />
+    <Compile Include="Charts Types\iconpie2.cs" />
+    <Compile Include="Charts Types\layergantt.cs" />
+    <Compile Include="Charts Types\legendpie.cs" />
+    <Compile Include="Charts Types\legendpie2.cs" />
+    <Compile Include="Charts Types\linearzonemeter.cs" />
+    <Compile Include="Charts Types\linecompare.cs" />
+    <Compile Include="Charts Types\linefill.cs" />
+    <Compile Include="Charts Types\logaxis.cs" />
+    <Compile Include="Charts Types\markbar.cs" />
+    <Compile Include="Charts Types\markzone.cs" />
+    <Compile Include="Charts Types\markzone2.cs" />
+    <Compile Include="Charts Types\missingpoints.cs" />
+    <Compile Include="Charts Types\multiaxes.cs" />
+    <Compile Include="Charts Types\multibar.cs" />
+    <Compile Include="Charts Types\multicylinder.cs" />
+    <Compile Include="Charts Types\multidepthpie.cs" />
+    <Compile Include="Charts Types\multihmeter.cs" />
+    <Compile Include="Charts Types\multiline.cs" />
+    <Compile Include="Charts Types\multiline2.cs" />
+    <Compile Include="Charts Types\multipie.cs" />
+    <Compile Include="Charts Types\multiradar.cs" />
+    <Compile Include="Charts Types\multishapebar.cs" />
+    <Compile Include="Charts Types\multistackbar.cs" />
+    <Compile Include="Charts Types\multisymbolline.cs" />
+    <Compile Include="Charts Types\multivmeter.cs" />
+    <Compile Include="Charts Types\neonroundmeter.cs" />
+    <Compile Include="Charts Types\overlapbar.cs" />
+    <Compile Include="Charts Types\paramcurve.cs" />
+    <Compile Include="Charts Types\pareto.cs" />
+    <Compile Include="Charts Types\patternarea.cs" />
+    <Compile Include="Charts Types\percentarea.cs" />
+    <Compile Include="Charts Types\percentbar.cs" />
+    <Compile Include="Charts Types\pieshading.cs" />
+    <Compile Include="Charts Types\polararea.cs" />
+    <Compile Include="Charts Types\polarbubble.cs" />
+    <Compile Include="Charts Types\polarline.cs" />
+    <Compile Include="Charts Types\polarscatter.cs" />
+    <Compile Include="Charts Types\polarspline.cs" />
+    <Compile Include="Charts Types\polarvector.cs" />
+    <Compile Include="Charts Types\polarzones.cs" />
+    <Compile Include="Charts Types\polarzones2.cs" />
+    <Compile Include="Charts Types\polygonbar.cs" />
+    <Compile Include="Charts Types\posnegbar.cs" />
+    <Compile Include="Charts Types\posnegwaterfall.cs" />
+    <Compile Include="Charts Types\pyramidelevation.cs" />
+    <Compile Include="Charts Types\pyramidgap.cs" />
+    <Compile Include="Charts Types\pyramidrotation.cs" />
+    <Compile Include="Charts Types\rectangularmeter.cs" />
+    <Compile Include="Charts Types\rose.cs" />
+    <Compile Include="Charts Types\rotatedarea.cs" />
+    <Compile Include="Charts Types\rotatedline.cs" />
+    <Compile Include="Charts Types\rotatedpyramid.cs" />
+    <Compile Include="Charts Types\roundmeter.cs" />
+    <Compile Include="Charts Types\roundmeterreadout.cs" />
+    <Compile Include="Charts Types\scatter.cs" />
+    <Compile Include="Charts Types\scattercontour.cs" />
+    <Compile Include="Charts Types\scatterlabels.cs" />
+    <Compile Include="Charts Types\scattersurface.cs" />
+    <Compile Include="Charts Types\scattersymbols.cs" />
+    <Compile Include="Charts Types\scattertrend.cs" />
+    <Compile Include="Charts Types\semicirclemeter.cs" />
+    <Compile Include="Charts Types\semicirclemeterreadout.cs" />
+    <Compile Include="Charts Types\shadowpie.cs" />
+    <Compile Include="Charts Types\sidelabelpie.cs" />
+    <Compile Include="Charts Types\simplearea.cs" />
+    <Compile Include="Charts Types\simplebar.cs" />
+    <Compile Include="Charts Types\simplebar2.cs" />
+    <Compile Include="Charts Types\simpleline.cs" />
+    <Compile Include="Charts Types\simplepie.cs" />
+    <Compile Include="Off_design_from_Design_Point.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Off_design_from_Design_Point.Designer.cs">
+      <DependentUpon>Off_design_from_Design_Point.cs</DependentUpon>
+    </Compile>
+    <Compile Include="off_design_from_optimization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="off_design_from_optimization.Designer.cs">
+      <DependentUpon>off_design_from_optimization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Off_design_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Off_design_without_ReHeating.Designer.cs">
+      <DependentUpon>Off_design_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Optimal_Alt_Off_Design_from_Design.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Optimal_Alt_Off_Design_from_Design.Designer.cs">
+      <DependentUpon>Optimal_Alt_Off_Design_from_Design.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Optimization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Optimization.Designer.cs">
+      <DependentUpon>Optimization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC.Designer.cs">
+      <DependentUpon>PCRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRCMCI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRCMCI.Designer.cs">
+      <DependentUpon>PCRCMCI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRCMCI_Sensing_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRCMCI_Sensing_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRCMCI_Sensing_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRCMCI_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRCMCI_withoutReHeating.Designer.cs">
+      <DependentUpon>PCRCMCI_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRCMCI_with_Three_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRCMCI_with_Three_ReHeating.Designer.cs">
+      <DependentUpon>PCRCMCI_with_Three_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRCMCI_with_Two_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRCMCI_with_Two_ReHeating.Designer.cs">
+      <DependentUpon>PCRCMCI_with_Two_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_optimal_withoutReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_optimal_withoutReHeating.Designer.cs">
+      <DependentUpon>PCRC_optimal_withoutReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_Sensing_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_Sensing_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRC_Sensing_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_without_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_without_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_without_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRC_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_with_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Three_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Three_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_with_Three_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Three_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Three_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRC_with_Three_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_without_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_with_Two_Intercooling_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_without_Reheating_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_without_Reheating_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRC_with_Two_Intercooling_without_Reheating_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_with_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_with_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_with_Two_Intercooling_with_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_with_Two_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_with_Two_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_with_Two_Intercooling_with_Two_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Two_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Two_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_with_Two_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Two_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Two_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRC_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreeCooler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreeCooler.Designer.cs">
+      <DependentUpon>PreeCooler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PTC_SF_Calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTC_SF_Calculation.Designer.cs">
+      <DependentUpon>PTC_SF_Calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTC_Solar_Field.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTC_Solar_Field.Designer.cs">
+      <DependentUpon>PTC_Solar_Field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Radial_Turbine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Radial_Turbine.Designer.cs">
+      <DependentUpon>Radial_Turbine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Radial_Turbine_Design.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Radial_Turbine_Design.Designer.cs">
+      <DependentUpon>Radial_Turbine_Design.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI.Designer.cs">
+      <DependentUpon>RCMCI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_optimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_optimal.Designer.cs">
+      <DependentUpon>RCMCI_optimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_optimal_without_RH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_optimal_without_RH.Designer.cs">
+      <DependentUpon>RCMCI_optimal_without_RH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_Sensing_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_Sensing_Analysis_Results.Designer.cs">
+      <DependentUpon>RCMCI_Sensing_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_without_ReHeating.Designer.cs">
+      <DependentUpon>RCMCI_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_without_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_without_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RCMCI_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RCMCI_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Three_Reheatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Three_Reheatings.Designer.cs">
+      <DependentUpon>RCMCI_with_Three_Reheatings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Three_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Three_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RCMCI_with_Three_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_without_Reheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_without_Reheating.Designer.cs">
+      <DependentUpon>RCMCI_with_Two_Intercooling_without_Reheating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.Designer.cs">
+      <DependentUpon>RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_with_Reheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_with_Reheating.Designer.cs">
+      <DependentUpon>RCMCI_with_Two_Intercooling_with_Reheating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_with_Two_Reheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_with_Two_Reheating.Designer.cs">
+      <DependentUpon>RCMCI_with_Two_Intercooling_with_Two_Reheating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Reheatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Reheatings.Designer.cs">
+      <DependentUpon>RCMCI_with_Two_Reheatings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RCMCI_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_optimal_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_optimal_without_ReHeating.Designer.cs">
+      <DependentUpon>RC_optimal_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_Optimization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_Optimization.Designer.cs">
+      <DependentUpon>RC_Optimization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_without_ReHeating.Designer.cs">
+      <DependentUpon>RC_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_without_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_without_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_without_ReHeating_Sensing_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_without_ReHeating_Sensing_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_without_ReHeating_Sensing_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_ReHeating_Sensing_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_ReHeating_Sensing_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_with_ReHeating_Sensing_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_Three_ReHeating.cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_Three_ReHeating.cs.Designer.cs">
+      <DependentUpon>RC_with_Three_ReHeating.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_Three_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_Three_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_with_Three_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_Two_ReHeating.cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_Two_ReHeating.cs.Designer.cs">
+      <DependentUpon>RC_with_Two_ReHeating.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_Two_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_Two_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_Two_ReHeating_Sensing_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_Two_ReHeating_Sensing_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_with_Two_ReHeating_Sensing_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receiver_Forristall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiver_Forristall.Designer.cs">
+      <DependentUpon>Receiver_Forristall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recompression_Brayton_Power_Cycle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recompression_Brayton_Power_Cycle.Designer.cs">
+      <DependentUpon>Recompression_Brayton_Power_Cycle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REFPROP_Interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REFPROP_Interface.Designer.cs">
+      <DependentUpon>REFPROP_Interface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IFluid.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refprop.cs" />
+    <Compile Include="REFPROP_Interface_Mixture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REFPROP_Interface_Mixture.Designer.cs">
+      <DependentUpon>REFPROP_Interface_Mixture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refrigerant.cs" />
+    <Compile Include="IsoentropicEfficiency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsoentropicEfficiency.Designer.cs">
+      <DependentUpon>IsoentropicEfficiency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTC_SF_PHX_Data_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTC_SF_PHX_Data_Input.Designer.cs">
+      <DependentUpon>PTC_SF_PHX_Data_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snl_compressor_tsr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snl_compressor_tsr.Designer.cs">
+      <DependentUpon>snl_compressor_tsr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snl_radial_turbine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snl_radial_turbine.Designer.cs">
+      <DependentUpon>snl_radial_turbine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Target_offdesign_from_optimization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Target_offdesign_from_optimization.Designer.cs">
+      <DependentUpon>Target_offdesign_from_optimization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Target_off_design_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Target_off_design_without_ReHeating.Designer.cs">
+      <DependentUpon>Target_off_design_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TOPGEN_V3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TOPGEN_V3.Designer.cs">
+      <DependentUpon>TOPGEN_V3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TurboMachineOutlet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TurboMachineOutlet.Designer.cs">
+      <DependentUpon>TurboMachineOutlet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizard.Designer.cs">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardCinco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardCinco.Designer.cs">
+      <DependentUpon>WizardCinco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardCuatro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardCuatro.Designer.cs">
+      <DependentUpon>WizardCuatro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardDiez.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardDiez.Designer.cs">
+      <DependentUpon>WizardDiez.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardDos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardDos.Designer.cs">
+      <DependentUpon>WizardDos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardNueve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardNueve.Designer.cs">
+      <DependentUpon>WizardNueve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardOcho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardOcho.Designer.cs">
+      <DependentUpon>WizardOcho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardOnce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardOnce.Designer.cs">
+      <DependentUpon>WizardOnce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardSeis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardSeis.Designer.cs">
+      <DependentUpon>WizardSeis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardSiete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardSiete.Designer.cs">
+      <DependentUpon>WizardSiete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardTres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardTres.Designer.cs">
+      <DependentUpon>WizardTres.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdobePDFViewer.resx">
+      <DependentUpon>AdobePDFViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartsExample.resx">
+      <DependentUpon>ChartsExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations_Summary.resx">
+      <DependentUpon>Configurations_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration_Form.resx">
+      <DependentUpon>Configuration_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagrams.resx">
+      <DependentUpon>Diagrams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dual_Loop_SF.resx">
+      <DependentUpon>Dual_Loop_SF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dual_Loop_SF_Calculation.resx">
+      <DependentUpon>Dual_Loop_SF_Calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_CIT.resx">
+      <DependentUpon>Effec_CIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_CIT_PCRC_withoutReHeating.resx">
+      <DependentUpon>Effec_CIT_PCRC_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_CIT_PCRC_withReHeating.resx">
+      <DependentUpon>Effec_CIT_PCRC_withReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_CIT_RCMCI_withoutReHeating.resx">
+      <DependentUpon>Effec_CIT_RCMCI_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_CIT_RCMCI_withReHeating.resx">
+      <DependentUpon>Effec_CIT_RCMCI_withReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_CIT_withoutReHeating.resx">
+      <DependentUpon>Effec_CIT_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_HXs_AP.resx">
+      <DependentUpon>Effec_HXs_AP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_Recomp_Fract.resx">
+      <DependentUpon>Effec_Recomp_Fract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_Recomp_Fract_PCRC_withoutReHeating.resx">
+      <DependentUpon>Effec_Recomp_Fract_PCRC_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_Recomp_Fract_PCRC_withReHeating.resx">
+      <DependentUpon>Effec_Recomp_Fract_PCRC_withReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_Recomp_Fract_RCMCI_withoutReHeating.resx">
+      <DependentUpon>Effec_Recomp_Fract_RCMCI_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_Recomp_Fract_RCMCI_withReHeating.resx">
+      <DependentUpon>Effec_Recomp_Fract_RCMCI_withReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_Recomp_Fract_withoutReHeating.resx">
+      <DependentUpon>Effec_Recomp_Fract_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TIP.resx">
+      <DependentUpon>Effec_TIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TIP_PCRC_withoutReHeating.resx">
+      <DependentUpon>Effec_TIP_PCRC_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TIP_PCRC_withReHeating.resx">
+      <DependentUpon>Effec_TIP_PCRC_withReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TIP_RCMCI_withoutReHeating.resx">
+      <DependentUpon>Effec_TIP_RCMCI_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TIP_RCMCI_withReHeating.resx">
+      <DependentUpon>Effec_TIP_RCMCI_withReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TIP_withoutReHeating.resx">
+      <DependentUpon>Effec_TIP_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TIT.resx">
+      <DependentUpon>Effec_TIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TIT_withoutReHeating.resx">
+      <DependentUpon>Effec_TIT_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effec_TurboMachines_Eff.resx">
+      <DependentUpon>Effec_TurboMachines_Eff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipments_Unitary_Cost.resx">
+      <DependentUpon>Equipments_Unitary_Cost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estimated_Cost.resx">
+      <DependentUpon>Estimated_Cost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Final_Report.resx">
+      <DependentUpon>Final_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fresnel.resx">
+      <DependentUpon>Fresnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generator.resx">
+      <DependentUpon>Generator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeatExchangerUA.resx">
+      <DependentUpon>HeatExchangerUA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LF_SF_Calculation.resx">
+      <DependentUpon>LF_SF_Calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LF_SF_PHX_Data_Input.resx">
+      <DependentUpon>LF_SF_PHX_Data_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net Power.resx">
+      <DependentUpon>Net Power.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Off_design_from_Design_Point.resx">
+      <DependentUpon>Off_design_from_Design_Point.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="off_design_from_optimization.resx">
+      <DependentUpon>off_design_from_optimization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Off_design_without_ReHeating.resx">
+      <DependentUpon>Off_design_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Optimal_Alt_Off_Design_from_Design.resx">
+      <DependentUpon>Optimal_Alt_Off_Design_from_Design.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Optimization.resx">
+      <DependentUpon>Optimization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC.resx">
+      <DependentUpon>PCRC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRCMCI.resx">
+      <DependentUpon>PCRCMCI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRCMCI_Sensing_Analysis_Results.resx">
+      <DependentUpon>PCRCMCI_Sensing_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRCMCI_withoutReHeating.resx">
+      <DependentUpon>PCRCMCI_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRCMCI_with_Two_ReHeating.resx">
+      <DependentUpon>PCRCMCI_with_Two_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_optimal_withoutReHeating.resx">
+      <DependentUpon>PCRC_optimal_withoutReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_Sensing_Analysis_Results.resx">
+      <DependentUpon>PCRC_Sensing_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_without_ReHeating.resx">
+      <DependentUpon>PCRC_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_without_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>PCRC_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_ReHeating.resx">
+      <DependentUpon>PCRC_with_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>PCRC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Three_ReHeating.resx">
+      <DependentUpon>PCRC_with_Three_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Three_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>PCRC_with_Three_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Two_Intercooling_without_ReHeating.resx">
+      <DependentUpon>PCRC_with_Two_Intercooling_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Two_Intercooling_without_Reheating_Analysis_Results.resx">
+      <DependentUpon>PCRC_with_Two_Intercooling_without_Reheating_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Two_Intercooling_with_ReHeating.resx">
+      <DependentUpon>PCRC_with_Two_Intercooling_with_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Two_Intercooling_with_Two_ReHeating.resx">
+      <DependentUpon>PCRC_with_Two_Intercooling_with_Two_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Two_ReHeating.resx">
+      <DependentUpon>PCRC_with_Two_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Two_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>PCRC_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreeCooler.resx">
+      <DependentUpon>PreeCooler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="PTC_SF_Calculation.resx">
+      <DependentUpon>PTC_SF_Calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTC_Solar_Field.resx">
+      <DependentUpon>PTC_Solar_Field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Radial_Turbine.resx">
+      <DependentUpon>Radial_Turbine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Radial_Turbine_Design.resx">
+      <DependentUpon>Radial_Turbine_Design.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI.resx">
+      <DependentUpon>RCMCI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_optimal.resx">
+      <DependentUpon>RCMCI_optimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_optimal_without_RH.resx">
+      <DependentUpon>RCMCI_optimal_without_RH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_Sensing_Analysis_Results.resx">
+      <DependentUpon>RCMCI_Sensing_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_without_ReHeating.resx">
+      <DependentUpon>RCMCI_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_without_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RCMCI_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RCMCI_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Three_Reheatings.resx">
+      <DependentUpon>RCMCI_with_Three_Reheatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Three_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RCMCI_with_Three_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Two_Intercooling_without_Reheating.resx">
+      <DependentUpon>RCMCI_with_Two_Intercooling_without_Reheating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.resx">
+      <DependentUpon>RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Two_Intercooling_with_Reheating.resx">
+      <DependentUpon>RCMCI_with_Two_Intercooling_with_Reheating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Two_Intercooling_with_Two_Reheating.resx">
+      <DependentUpon>RCMCI_with_Two_Intercooling_with_Two_Reheating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Two_Reheatings.resx">
+      <DependentUpon>RCMCI_with_Two_Reheatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Two_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RCMCI_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_optimal_without_ReHeating.resx">
+      <DependentUpon>RC_optimal_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_Optimization.resx">
+      <DependentUpon>RC_Optimization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_without_ReHeating.resx">
+      <DependentUpon>RC_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_without_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RC_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_without_ReHeating_Sensing_Analysis_Results.resx">
+      <DependentUpon>RC_without_ReHeating_Sensing_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_ReHeating_Sensing_Analysis_Results.resx">
+      <DependentUpon>RC_with_ReHeating_Sensing_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_Three_ReHeating.cs.resx">
+      <DependentUpon>RC_with_Three_ReHeating.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_Three_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RC_with_Three_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_Two_ReHeating.cs.resx">
+      <DependentUpon>RC_with_Two_ReHeating.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_Two_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RC_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_Two_ReHeating_Sensing_Analysis_Results.resx">
+      <DependentUpon>RC_with_Two_ReHeating_Sensing_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiver_Forristall.resx">
+      <DependentUpon>Receiver_Forristall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recompression_Brayton_Power_Cycle.resx">
+      <DependentUpon>Recompression_Brayton_Power_Cycle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REFPROP_Interface.resx">
+      <DependentUpon>REFPROP_Interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsoentropicEfficiency.resx">
+      <DependentUpon>IsoentropicEfficiency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTC_SF_PHX_Data_Input.resx">
+      <DependentUpon>PTC_SF_PHX_Data_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REFPROP_Interface_Mixture.resx">
+      <DependentUpon>REFPROP_Interface_Mixture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snl_compressor_tsr.resx">
+      <DependentUpon>snl_compressor_tsr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snl_radial_turbine.resx">
+      <DependentUpon>snl_radial_turbine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Target_offdesign_from_optimization.resx">
+      <DependentUpon>Target_offdesign_from_optimization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Target_off_design_without_ReHeating.resx">
+      <DependentUpon>Target_off_design_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TOPGEN_V3.resx">
+      <DependentUpon>TOPGEN_V3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TurboMachineOutlet.resx">
+      <DependentUpon>TurboMachineOutlet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardCinco.resx">
+      <DependentUpon>WizardCinco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardCuatro.resx">
+      <DependentUpon>WizardCuatro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardDiez.resx">
+      <DependentUpon>WizardDiez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardDos.resx">
+      <DependentUpon>WizardDos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardNueve.resx">
+      <DependentUpon>WizardNueve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardOcho.resx">
+      <DependentUpon>WizardOcho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardOnce.resx">
+      <DependentUpon>WizardOnce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardSeis.resx">
+      <DependentUpon>WizardSeis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardSiete.resx">
+      <DependentUpon>WizardSiete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardTres.resx">
+      <DependentUpon>WizardTres.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RefPropWindowsForms_TemporaryKey.pfx" />
+    <None Include="Resources\RC with ReHeating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNL compressor Performance Map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turbine_Map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turbine_Map1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Titulo_Turbina.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Linear_Fresnel_Solar_Field.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LF_Irradiance_Tab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LF_Collector_Details_Tab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LF_Flowpaht_Hardware_Design.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PHX_interface_with_BOP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PHX_interface_with_BOP1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PHX_interface_with_BOP2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PHX_interface_with_BOP3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCRC with ReHeating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RC with ReHeating1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RC with ReHeating2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RCMCI with ReHeating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RC with ReHeating3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RC without ReHeating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Figure 2.RC Brayton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RC final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RC final1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RCMCI without ReHeating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCRC without ReHeating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prueba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RC with RH Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RC without RH Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCRC with RH Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCRC without RH Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RCMCI with ReHeating Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RCMCI with ReHeating Small1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RCMCI with ReHeating Small2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RCMCI without ReHeating Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo UPM Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PTC SF Results Summary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PTC SF Results Summary1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HX Results Summary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turbine Results Summary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compressor Results Summary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turbine Results Summary1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collector Details PTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collector Details PTC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ED Main Inputs PTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flow_Path_Hardware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generator RPM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ED Main Inputs LF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collector Details LF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCRCMCI with ReHeating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoDimensionHeatEquation.png" />
+    <None Include="Resources\TwoDimensionHeatModel.png" />
+    <None Include="Resources\SB with PreHeating in parallel with LTR and HTR without ReHeating Small.jpg" />
+    <None Include="Resources\SB with PreHeating in parallel with LTR and HTR without ReHeating.jpg" />
+    <None Include="Resources\SB with PreHeating in parallel with LTR without ReHeating Small.jpg" />
+    <None Include="Resources\SB with PreHeating in parallel with LTR without ReHeating.jpg" />
+    <None Include="Resources\PCRC with ReHeating Small.jpg" />
+    <None Include="Resources\PCRC with ReHeating with Three Reheating Stages Small.jpg" />
+    <None Include="Resources\Cascade Cycle Small.jpg" />
+    <None Include="Resources\Kimzey Cycle Small.jpg" />
+    <None Include="Resources\Config52_Ref_L_Veseley_SimpleBrayton.png" />
+    <None Include="Resources\Config53_Ref_L_Veseley_Brayton.png" />
+    <None Include="Resources\Forristal_receiver_model.png" />
+    <Content Include="Resources\PCRC with ReHeating with Three Reheating Stages.jpg" />
+    <None Include="Resources\PCRC with ReHeating with Two Reheating Stages Small.jpg" />
+    <Content Include="Resources\PCRC with ReHeating with Two Reheating Stages.jpg" />
+    <Content Include="Resources\PCRC with Three RH.jpg" />
+    <None Include="Resources\Two Intercooling PCRCMCI with Two Intercooling without RH Small.jpg" />
+    <None Include="Resources\Two Intercooling PCRCMCI without RH Small.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling and without RH Small.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling and RH Small.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling and Two Reheating.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling Without Reheating Small.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling and Reheating Stages Small.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling and Two Reheating Stages Small.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling Without Reheating.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling and Reheating Stages.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling and Two Reheating Stages.jpg" />
+    <Content Include="Resources\PCRC with Two RH.jpg" />
+    <None Include="Resources\PCRCMCI without RH Small.jpg" />
+    <None Include="Resources\PCRCMCI with RH Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two RH Small.jpg" />
+    <None Include="Resources\RC with PreHeating in parallel with LTR without ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Three RH Small.jpg" />
+    <None Include="Resources\PCRCMCI Two Intercooling without RH Small.jpg" />
+    <None Include="Resources\RC with PreHeating in parallel with LTR and HTR without ReHeating Small.jpg" />
+    <None Include="Resources\RC with PreHeating in parallel with HTR without ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI without ReHeating.jpg" />
+    <None Include="Resources\PCRCMCI without ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Three ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two ReHeating  Stages.jpg" />
+    <None Include="Resources\RC with ReHeating1 Small.jpg" />
+    <None Include="Resources\PCRC without ReHeating Small.jpg" />
+    <None Include="Resources\RC with Three ReHeating Stages Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling without ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Intercooling without ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling without ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Intercooling with ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Two ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Intercooling with Two ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with Two ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Three ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Intercooling with Three ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with Three ReHeating Small.jpg" />
+    <None Include="Resources\RC with PreHeating in parallel with LTR with ReHeating Small.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with Three ReHeating_Icon.jpg" />
+    <None Include="Resources\PCRCMCI with ReHeating_Icon.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling without ReHeating_Icon.jpg" />
+    <None Include="Resources\RC with PreHeating in parallel with LTR and Three Recuperators Small.jpg" />
+    <Content Include="Resources\RC with Three ReHeating Stages.jpg" />
+    <Content Include="Resources\RC with Three RH Small.jpg" />
+    <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />
+    <Content Include="Resources\RC with Two ReHeating Stages.jpg" />
+    <None Include="Resources\RC with Two ReHeating Stages_Icon.jpg" />
+    <Content Include="Resources\RC with Two RH Small.jpg" />
+    <None Include="Resources\RCMCI with Three ReHeating Small2.jpg" />
+    <None Include="Resources\RC without ReHeating-Case 4-Mecheri Small.jpg" />
+    <None Include="Resources\RC without ReHeating Small.jpg" />
+    <None Include="Resources\RCMCI with ReHeating with Three Reheating Stages Small.jpg" />
+    <None Include="Resources\RC without ReHeating_Icon.jpg" />
+    <Content Include="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" />
+    <None Include="Resources\RCMCI with ReHeating with Two Reheating Stages Small.jpg" />
+    <Content Include="Resources\RCMCI with ReHeating with Two Reheating Stages.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling and without ReHeating.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling and ReHeating Small2.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling and Two ReHeating Small2.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling and ReHeating Small.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling without ReHeating Small.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling and Two Reheating Stages Small.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling without ReHeating.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling and ReHeating.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling and Two Reheating Stages.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling without ReHeating_Icon.jpg" />
+    <Content Include="Resources\RCMCI with Two ReHeating Small2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NLoptNet\NLoptNet.csproj">
+      <Project>{c9ade0c4-bcd0-47e1-951a-f7afeae82927}</Project>
+      <Name>NLoptNet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

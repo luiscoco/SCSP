@@ -1,0 +1,139 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Accord.Video.FFMPEG, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7: 
+	hash=None, flags=None
+Assembly Accord.Video, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Struct Accord.Video.FFMPEG.AudioCodec: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Accord.Video.FFMPEG.AudioCodec None = -1 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.AudioCodec MP3 = 0 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.AudioCodec AAC = 1 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.AudioCodec M4A = 2 : Public, Static, Literal, HasDefault (Obsolete)
+    Accord.Video.FFMPEG.AudioCodec MP4ALS = 2 : Public, Static, Literal, HasDefault
+Struct Accord.Video.FFMPEG.VideoCodec: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Accord.Video.FFMPEG.VideoCodec Default = -1 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec MPEG4 = 0 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec WMV1 = 1 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec WMV2 = 2 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec MSMPEG4v2 = 3 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec MSMPEG4v3 = 4 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec H263P = 5 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec FLV1 = 6 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec MPEG2 = 7 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec Raw = 8 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec FFV1 = 9 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec FFVHUFF = 10 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec H264 = 11 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec H265 = 12 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec Theora = 13 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec VP8 = 14 : Public, Static, Literal, HasDefault
+    Accord.Video.FFMPEG.VideoCodec VP9 = 15 : Public, Static, Literal, HasDefault
+Class Accord.Video.FFMPEG.VideoFileReader: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Boolean IsOpen 'get ' : 
+    System.String CodecName 'get ' : 
+    Int32 BitRate 'get ' : 
+    Int64 FrameCount 'get ' : 
+    Accord.Math.Rational FrameRate 'get ' : 
+    Int32 Height 'get ' : 
+    Int32 Width 'get ' : 
+  Methods:
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    get_FrameRate(): PrivateScope, Public, HideBySig, SpecialName
+    get_FrameCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_BitRate(): PrivateScope, Public, HideBySig, SpecialName
+    get_CodecName(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsOpen(): PrivateScope, Public, HideBySig, SpecialName
+    Open(String): PrivateScope, Public, HideBySig
+    ReadVideoFrame(Int32, BitmapData): PrivateScope, Public, HideBySig
+    ReadVideoFrame(BitmapData): PrivateScope, Public, HideBySig
+    ReadVideoFrame(Int32): PrivateScope, Public, HideBySig
+    ReadVideoFrame(): PrivateScope, Public, HideBySig
+    Close(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Accord.Video.FFMPEG.VideoFileSource: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Accord.Video.IVideoSource
+  Properties:
+    Boolean FrameIntervalFromSource 'get set' : 
+    Int32 FrameInterval 'get set' : 
+    Boolean IsRunning 'get ' : 
+    Int64 BytesReceived 'get ' : 
+    Int32 FramesReceived 'get ' : 
+    System.String Source 'get set' : 
+  Events:
+    Accord.Video.PlayingFinishedEventHandler PlayingFinished: SpecialName
+    Accord.Video.VideoSourceErrorEventHandler VideoSourceError: SpecialName
+    Accord.Video.NewFrameEventHandler NewFrame: SpecialName
+  Methods:
+    add_NewFrame(NewFrameEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    remove_NewFrame(NewFrameEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    add_VideoSourceError(VideoSourceErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    remove_VideoSourceError(VideoSourceErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    add_PlayingFinished(PlayingFinishedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    remove_PlayingFinished(PlayingFinishedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Source(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Source(String): PrivateScope, Public, HideBySig, SpecialName
+    get_FramesReceived(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BytesReceived(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsRunning(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_FrameInterval(): PrivateScope, Public, HideBySig, SpecialName
+    set_FrameInterval(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_FrameIntervalFromSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_FrameIntervalFromSource(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    Start(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SignalToStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    WaitForStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Accord.Video.FFMPEG.VideoFileWriter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Boolean IsOpen 'get ' : 
+    Accord.Video.FFMPEG.VideoCodec Codec 'get ' : 
+    Int32 BitRate 'get ' : 
+    Accord.Math.Rational FrameRate 'get ' : 
+    Int32 Height 'get ' : 
+    Int32 Width 'get ' : 
+  Methods:
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    get_FrameRate(): PrivateScope, Public, HideBySig, SpecialName
+    get_BitRate(): PrivateScope, Public, HideBySig, SpecialName
+    get_Codec(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsOpen(): PrivateScope, Public, HideBySig, SpecialName
+    Open(String, Int32, Int32, Rational, VideoCodec, Int32, AudioCodec, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Open(String, Int32, Int32, Rational, VideoCodec, Int32): PrivateScope, Public, HideBySig
+    Open(String, Int32, Int32, Rational, VideoCodec): PrivateScope, Public, HideBySig
+    Open(String, Int32, Int32, Rational): PrivateScope, Public, HideBySig
+    Open(String, Int32, Int32): PrivateScope, Public, HideBySig
+    WriteVideoFrame(Bitmap, TimeSpan): PrivateScope, Public, HideBySig
+    WriteVideoFrame(BitmapData, UInt32 IsLong): PrivateScope, Public, HideBySig
+    WriteVideoFrame(Bitmap, UInt32 IsLong): PrivateScope, Public, HideBySig
+    WriteVideoFrame(BitmapData): PrivateScope, Public, HideBySig
+    WriteVideoFrame(Bitmap): PrivateScope, Public, HideBySig
+    WriteAudioFrame(Byte[]): PrivateScope, Public, HideBySig
+    Flush(): PrivateScope, Public, HideBySig
+    Close(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

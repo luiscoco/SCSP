@@ -1,0 +1,8 @@
+1. Modify the design_point.f90 file changing the minimum pressure at compressor inlet in the optimisation_design subroutine.
+2. Modify the path fluid in the CO2_RP_module.f90
+3. Modify the program_CO2_optimal_RCMCI_with_RH_prueba.f90 file for new comperssor inlet pressure to the fluid
+critical point.
+
+FOR FUTURE WORKS:
+
+1. Next Step wold be integrating for MIXTURES.

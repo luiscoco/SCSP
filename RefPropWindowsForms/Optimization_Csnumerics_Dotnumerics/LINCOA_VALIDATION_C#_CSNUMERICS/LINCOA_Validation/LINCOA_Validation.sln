@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINCOA_Validation", "LINCOA_Validation\LINCOA_Validation.csproj", "{91A9199F-742C-4C8F-946A-3B7A572D5F1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91A9199F-742C-4C8F-946A-3B7A572D5F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A9199F-742C-4C8F-946A-3B7A572D5F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A9199F-742C-4C8F-946A-3B7A572D5F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A9199F-742C-4C8F-946A-3B7A572D5F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C10F3D35-15FA-4B45-8C89-F75AEA23502B}
+	EndGlobalSection
+EndGlobal

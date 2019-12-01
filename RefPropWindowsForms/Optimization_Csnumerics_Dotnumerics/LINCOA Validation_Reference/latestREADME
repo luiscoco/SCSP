@@ -1,0 +1,63 @@
+1 September 2014, Cambridge, UK
+
+Dear Colleague,
+
+    I am sending this e-mail to all people on my address list who may
+be users of my LINCOA software for minimization without derivatives with
+linear constraints on the variables. I hope the software has helped your
+computer calculations and/or research.
+
+    My first report on the methods that are employed by LINCOA is now
+available. It addresses only the construction of new vectors of variables
+on the trust region iterations of LINCOA. Each new vector should provide
+a substantial reduction in the current quadratic approximation to the
+objective function subject to the linear constraints. Further, the
+average amount of work of the construction is intended to be only of
+magnitude n squared, where n is the number of variables, in order that
+the software can be applied when there are hundreds of variables.
+
+    The report is on the web at the address "www.damtp.cam.ac.uk".
+There you have to click on "Research at DAMTP", then on "Numerical
+Analysis" and then on "Reports 2008-2014". It is also available at the
+Optimization Online website under the heading Nonlinear Optimization
+(August, 2014). If you wish to cite the report in a publication, I
+suggest the reference:
+
+    M.J.D. Powell (2014), "On fast trust region methods for quadratic
+    models with linear constraints", Report No. DAMTP 2014/NA02,
+    University of Cambridge.
+
+    I should write more about LINCOA soon, in order to describe the
+other techniques that are used. They include the construction of the
+quadratic models, and the choice of new vectors of variables on the
+iterations of LINCOA that take model steps, which means that the
+new vectors are designed to improve the quadratic models instead
+of providing a reduction in the objective function.
+
+    I will let you know when further reports become available. Also
+I will let you know if I make any changes to the Fortran software,
+one change being likely because of the findings I presented at the
+SIAM Optimization Conference in San Diego (May, 2014). They concern
+the test for choosing between two ways of taking up the freedom in
+each new model after satisfying the current interpolation conditions.
+Usually the symmetric Broyden method is applied, which means that
+the freedom is taken up by minimizing the Frobenius norm of the CHANGE
+to the second derivative matrix of the model. The alternative is to
+minimize the ACTUAL Frobenius norm of the second derivative matrix
+of the new model. At present the test compares errors in predictions
+of new values of the objective function, but instead it seems better
+to compare the norms of the gradients of the alternative models at
+the trust region centre. Including the latter comparison instead of
+the former one in LINCOA would make no difference when every update
+of the model is done by the symmetric Broyden method, which happens
+in the vast majority of applications. The change would replace DFFALT
+and DIFF by norms of gradients in the test
+
+    IF (DABS(DFFALT) .GE. TENTH*DABS(DIFF)) ITEST=0
+
+which occurs midway between labels 320 and 330 in the Fortran listing
+of subroutine LINCOB of LINCOA.
+
+    With best wishes,
+
+                        Mike Powell.

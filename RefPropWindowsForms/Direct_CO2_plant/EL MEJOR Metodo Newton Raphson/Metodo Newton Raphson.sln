@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metodo Newton Raphson MUY BUENO FUNCIONA BIENNNNN", "Metodo Newton Raphson MUY BUENO FUNCIONA BIENNNNN\Metodo Newton Raphson MUY BUENO FUNCIONA BIENNNNN.csproj", "{729F0C61-9CA4-4078-A704-30EA11765DC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{729F0C61-9CA4-4078-A704-30EA11765DC3}.Debug|x86.ActiveCfg = Debug|x86
+		{729F0C61-9CA4-4078-A704-30EA11765DC3}.Debug|x86.Build.0 = Debug|x86
+		{729F0C61-9CA4-4078-A704-30EA11765DC3}.Release|x86.ActiveCfg = Release|x86
+		{729F0C61-9CA4-4078-A704-30EA11765DC3}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
