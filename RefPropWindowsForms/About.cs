@@ -45,19 +45,19 @@ namespace RefPropWindowsForms
                 puntero.configurations712ToolStripMenuItem.Enabled = true;
                 puntero.configurations1318ToolStripMenuItem.Enabled = true;
                 puntero.configurations1924ToolStripMenuItem.Enabled = true;
-                puntero.configurations2224ToolStripMenuItem.Enabled = false;
-                puntero.configurations2527ToolStripMenuItem.Enabled = false;
-                puntero.configurations2830ToolStripMenuItem.Enabled = false;
-                puntero.configurations3133ToolStripMenuItem.Enabled = false;
-                puntero.configurations3437ToolStripMenuItem.Enabled = false;
-                puntero.configurations3840ToolStripMenuItem.Enabled = false;
-                puntero.configurationsToolStripMenuItem.Enabled = false;
-                puntero.adobePDFViewerToolStripMenuItem.Enabled = false;
-                puntero.chartsExampleToolStripMenuItem.Enabled = false;
+                puntero.configurations2224ToolStripMenuItem.Enabled = true;
+                puntero.configurations2527ToolStripMenuItem.Enabled = true;
+                puntero.configurations2830ToolStripMenuItem.Enabled = true;
+                puntero.configurations3133ToolStripMenuItem.Enabled = true;
+                puntero.configurations3437ToolStripMenuItem.Enabled = true;
+                puntero.configurations3840ToolStripMenuItem.Enabled = true;
+                puntero.configurationsToolStripMenuItem.Enabled = true;
+                puntero.adobePDFViewerToolStripMenuItem.Enabled = true;
+                puntero.chartsExampleToolStripMenuItem.Enabled = true;
                 puntero.toolsToolStripMenuItem.Enabled = true;
-                puntero.aboutToolStripMenuItem.Enabled = false;
-                puntero.validationsToolStripMenuItem.Enabled = false;
-                puntero.configurationsSummaryToolStripMenuItem.Enabled = false;
+                puntero.aboutToolStripMenuItem.Enabled = true;
+                puntero.validationsToolStripMenuItem.Enabled = true;
+                puntero.configurationsSummaryToolStripMenuItem.Enabled = true;
             }
             this.Dispose();
         }
