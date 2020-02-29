@@ -1115,6 +1115,36 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RC_without_ReHeating_ICAI_proposed_configuration {
+            get {
+                object obj = ResourceManager.GetObject("RC without ReHeating ICAI proposed configuration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_without_ReHeating_ICAI_proposed_configuration1 {
+            get {
+                object obj = ResourceManager.GetObject("RC without ReHeating ICAI proposed configuration1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_without_ReHeating_ICAI_proposed_configuration2 {
+            get {
+                object obj = ResourceManager.GetObject("RC without ReHeating ICAI proposed configuration2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RC_without_ReHeating_Icon {
             get {
                 object obj = ResourceManager.GetObject("RC without ReHeating_Icon", resourceCulture);

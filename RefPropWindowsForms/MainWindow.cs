@@ -34,7 +34,7 @@ namespace RefPropWindowsForms
         public Configuration_Form Configuration_window;
         public Recompression_Brayton_Power_Cycle RCwindow;
         public RC_Optimization RC_optimization_window;
-        //public RC_Auto_Optimal RC_AutoOptimalwindow;
+        public RC_without_ReHeating_new_proposed_configuration RC_without_ReHeating_new_configuration_window;
         public Effec_Recomp_Fract Sensing_Effec_Recomp_Frac;
         public Effec_CIT Sensing_Effect_CIT;
         public Effec_TIP Sensing_Effect_TIP;
@@ -772,6 +772,13 @@ namespace RefPropWindowsForms
             Receiver_Forristall_dialog = new Receiver_Forristall(this);
             Receiver_Forristall_dialog.MdiParent = this;
             Receiver_Forristall_dialog.Show();
+        }
+
+        private void newProposedConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RC_without_ReHeating_new_configuration_window = new RC_without_ReHeating_new_proposed_configuration();
+            RC_without_ReHeating_new_configuration_window.MdiParent = this;
+            RC_without_ReHeating_new_configuration_window.Show();
         }
     }
 }

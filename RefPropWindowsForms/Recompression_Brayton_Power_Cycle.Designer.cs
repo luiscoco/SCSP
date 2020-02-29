@@ -2096,7 +2096,7 @@
             "13BUTADIENE",
             "1BUTYNE",
             "1PENTENE",
-            "22DIMETHYLBUTANE",
+            "2,2-Dimethylbutane",
             "23DIMETHYLBUTANE",
             "3METHYLPENTANE",
             "ACETONE",

@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RC without ReHeating ICAI proposed configuration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RC without ReHeating ICAI proposed configuration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Generator RPM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Generator RPM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCRCMCI with Two Intercooling without ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with Two Intercooling without ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,9 +138,6 @@
   </data>
   <data name="PCRCMCI with ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Turbine Results Summary1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Turbine Results Summary1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SNL compressor Performance Map" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SNL compressor Performance Map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,6 +304,9 @@
   <data name="RCMCI with ReHeating" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RCMCI with ReHeating.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TwoDimensionHeatModel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TwoDimensionHeatModel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCRCMCI without ReHeating Small1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI without ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -409,6 +415,9 @@
   <data name="PTC SF Results Summary1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PTC SF Results Summary1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PCRCMCI with Two Partial Cooling with Three ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PCRCMCI with Two Partial Cooling with Three ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCRCMCI without ReHeating Small2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI without ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -493,14 +502,17 @@
   <data name="LF_Flowpaht_Hardware_Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LF_Flowpaht_Hardware_Design.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Generator RPM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Generator RPM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TwoDimensionHeatEquation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TwoDimensionHeatEquation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HX Results Summary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HX Results Summary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RC with ReHeating3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RC with ReHeating3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RC without ReHeating ICAI proposed configuration1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RC without ReHeating ICAI proposed configuration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCRCMCI with RH Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with RH Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -532,8 +544,8 @@
   <data name="PCRCMCI with Three ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with Three ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PCRCMCI with Two Partial Cooling with Three ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PCRCMCI with Two Partial Cooling with Three ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Turbine Results Summary1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Turbine Results Summary1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RC with ReHeating1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RC with ReHeating1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -553,10 +565,7 @@
   <data name="PHX_interface_with_BOP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PHX_interface_with_BOP2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TwoDimensionHeatModel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TwoDimensionHeatModel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TwoDimensionHeatEquation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TwoDimensionHeatEquation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RC without ReHeating ICAI proposed configuration2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RC without ReHeating ICAI proposed configuration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

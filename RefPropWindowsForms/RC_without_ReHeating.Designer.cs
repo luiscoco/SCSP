@@ -154,7 +154,6 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button21 = new System.Windows.Forms.Button();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -279,9 +278,10 @@
             this.button34 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button12
@@ -1320,17 +1320,6 @@
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.RC_with_ReHeating3;
-            this.pictureBox1.Location = new System.Drawing.Point(232, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(614, 396);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 341;
-            this.pictureBox1.TabStop = false;
-            // 
             // button21
             // 
             this.button21.Location = new System.Drawing.Point(682, 4);
@@ -1854,7 +1843,7 @@
             "Dodecane",
             "Ethane",
             "Ethanol",
-            "Ethylene glycol",
+            "Ethyleneglycol",
             "Ethylbenzene",
             "Ethylene",
             "Ethylene oxide",
@@ -1963,7 +1952,11 @@
             "Undecane",
             "Vinyl chloride",
             "Water",
-            "Xenon"});
+            "Xenon",
+            "EGLYCOL",
+            "MLINOLEA",
+            "MLINOLEN",
+            "MOLEATE"});
             this.comboBox6.Location = new System.Drawing.Point(145, 73);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(80, 21);
@@ -3098,6 +3091,17 @@
             this.checkBox3.Text = "Direct sHTF (without PHX)";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.RC_with_ReHeating3;
+            this.pictureBox1.Location = new System.Drawing.Point(232, 98);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(614, 396);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 341;
+            this.pictureBox1.TabStop = false;
+            // 
             // RC_without_ReHeating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3319,11 +3323,11 @@
             this.Controls.Add(this.label51);
             this.Name = "RC_without_ReHeating";
             this.Text = "Parabolic";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

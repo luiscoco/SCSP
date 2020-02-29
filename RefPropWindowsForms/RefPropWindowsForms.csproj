@@ -842,6 +842,12 @@
     <Compile Include="RC_without_ReHeating.Designer.cs">
       <DependentUpon>RC_without_ReHeating.cs</DependentUpon>
     </Compile>
+    <Compile Include="RC_without_ReHeating_new_proposed_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_without_ReHeating_new_proposed_configuration.Designer.cs">
+      <DependentUpon>RC_without_ReHeating_new_proposed_configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="RC_without_ReHeating_Optimization_Analysis_Results.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1301,6 +1307,9 @@
     <EmbeddedResource Include="RC_without_ReHeating.resx">
       <DependentUpon>RC_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RC_without_ReHeating_new_proposed_configuration.resx">
+      <DependentUpon>RC_without_ReHeating_new_proposed_configuration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RC_without_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>RC_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
@@ -1696,6 +1705,7 @@
     <None Include="Resources\RC without ReHeating Small.jpg" />
     <None Include="Resources\RCMCI with ReHeating with Three Reheating Stages Small.jpg" />
     <None Include="Resources\RC without ReHeating_Icon.jpg" />
+    <None Include="Resources\RC without ReHeating ICAI proposed configuration.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\RCMCI with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Two Reheating Stages.jpg" />
