@@ -2082,7 +2082,7 @@ namespace RefPropWindowsForms
 
             return;
         }
-
+                     
         public void RecompCycledesign(core luis, ref core.RecompCycle_withoutRH recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                              Double m_T_t_in, Double P_mc_in, Double m_P_mc_out, Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX,
                              Double DP_LT_h, Double DP_HT_h, Double UA_LT, Double UA_HT, Double m_recomp_frac, Double m_eta_mc,

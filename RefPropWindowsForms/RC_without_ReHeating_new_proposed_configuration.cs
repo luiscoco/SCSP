@@ -213,12 +213,14 @@ namespace RefPropWindowsForms
         //Main Turbine results
         public Double Main_Turbine_Pin, Main_Turbine_Tin, Main_Turbine_Pout, Main_Turbine_Tout;
         public Double Main_Turbine_Flow, Main_Turbine_Rotary_Velocity, Main_Turbine_Diameter, Main_Turbine_Efficiency, Main_Turbine_Anozzle;
-
-        public Double Main_Turbine_nu, Main_Turbine_w_Tip_Ratio;
+              
+        public Double Main_Turbine_nu, Main_Turbine_w_Tip_Ratio;        
 
         //ReHeating Turbine results
         public Double ReHeating_Turbine_Pin, ReHeating_Turbine_Tin, ReHeating_Turbine_Pout, ReHeating_Turbine_Tout;
+
         public Double ReHeating_Turbine_Flow, ReHeating_Turbine_Rotary_Velocity, ReHeating_Turbine_Diameter, ReHeating_Turbine_Efficiency, ReHeating_Turbine_Anozzle;
+
         public Double ReHeating_Turbine_nu, ReHeating_Turbine_w_Tip_Ratio;
 
         //LTR results 
@@ -561,7 +563,7 @@ namespace RefPropWindowsForms
             massflow2 = cicloRC.m_dot_turbine;
             w_dot_net2 = cicloRC.W_dot_net;
             eta_thermal2 = cicloRC.eta_thermal;
-            recomp_frac2 = cicloRC.recomp_frac;
+            recomp_frac2 = cicloRC.recomp_frac;           
 
             temp21 = cicloRC.temp[0];
             temp22 = cicloRC.temp[1];
@@ -596,26 +598,26 @@ namespace RefPropWindowsForms
             textBox27.Text = Convert.ToString(pres23);
             textBox24.Text = Convert.ToString(pres24);
             textBox29.Text = Convert.ToString(pres25);
-            textBox28.Text = Convert.ToString(pres26);
+            //textBox28.Text = Convert.ToString(pres26);
             textBox41.Text = Convert.ToString(pres27);
             textBox40.Text = Convert.ToString(pres28);
             textBox39.Text = Convert.ToString(pres29);
             textBox38.Text = Convert.ToString(pres210);
             textBox37.Text = Convert.ToString(pres211);
-            textBox36.Text = Convert.ToString(pres212);
+            //textBox36.Text = Convert.ToString(pres212);
 
             textBox47.Text = Convert.ToString(temp21);
             textBox46.Text = Convert.ToString(temp22);
             textBox45.Text = Convert.ToString(temp23);
             textBox44.Text = Convert.ToString(temp24);
             textBox43.Text = Convert.ToString(temp25);
-            textBox42.Text = Convert.ToString(temp26);
+            //textBox42.Text = Convert.ToString(temp26);
             textBox35.Text = Convert.ToString(temp27);
             textBox34.Text = Convert.ToString(temp28);
             textBox33.Text = Convert.ToString(temp29);
             textBox32.Text = Convert.ToString(temp210);
             textBox31.Text = Convert.ToString(temp211);
-            textBox30.Text = Convert.ToString(temp212);
+            //textBox30.Text = Convert.ToString(temp212);
 
             textBox48.Text = Convert.ToString(w_dot_net2);
             textBox49.Text = Convert.ToString(massflow2);
@@ -747,8 +749,10 @@ namespace RefPropWindowsForms
 
             if (checkBox1.Checked == false)
             {
-                PHX_Q2 = cicloRC.PHX.Q_dot;
-                RHX_Q2 = cicloRC.RHX.Q_dot;
+
+                PHX_Q2 = massflow2 * (cicloRC.enth[11] - cicloRC.enth[10]);
+                //PHX_Q2 = cicloRC.PHX.Q_dot;
+                //RHX_Q2 = cicloRC.RHX.Q_dot;
 
                 LT_Q = cicloRC.LT.Q_dot;
                 LT_mdotc = cicloRC.LT.m_dot_design[0];
@@ -798,33 +802,7 @@ namespace RefPropWindowsForms
                     button18.Enabled = false;
 
                     button4.Enabled = true;
-                }
-
-                if (comboBox5.Text == "Dual-Loop")
-                {
-                    //ReHeating SF
-                    comboBox12.Enabled = true;
-                    comboBox13.Enabled = true;
-                    comboBox14.Enabled = true;
-                    comboBox15.Enabled = true;
-                    button20.Enabled = true;
-                    button21.Enabled = true;
-
-                    //button8.Enabled = false;
-                }
-
-                else
-                {
-                    //ReHeaing SF
-                    comboBox12.Enabled = false;
-                    comboBox13.Enabled = false;
-                    comboBox14.Enabled = false;
-                    comboBox15.Enabled = false;
-                    button20.Enabled = false;
-                    button21.Enabled = false;
-
-                    //button8.Enabled = true;
-                }
+                }               
 
                 button5.Enabled = true;
                 button6.Enabled = true;
@@ -835,6 +813,7 @@ namespace RefPropWindowsForms
             }
         }
 
+        
         private void comboBox16_SelectedValueChanged(object sender, EventArgs e)
         {
             if (comboBox16.Text == "PureFluid")
@@ -867,6 +846,610 @@ namespace RefPropWindowsForms
                 textBox59.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox58.Text = Convert.ToString(working_fluid.CriticalTemperature - 273.15);
                 textBox55.Text = Convert.ToString(working_fluid.CriticalDensity);
+            }
+        }
+
+        //Set Critical properties button
+        private void button30_Click(object sender, EventArgs e)
+        {
+            double option1 = 0.0;
+            double option2 = 0.0;
+            double option3 = 0.0;
+            double option4 = 0.0;
+
+            option1 = Convert.ToDouble(this.textBox60.Text);
+            option2 = Convert.ToDouble(this.textBox61.Text);
+            option3 = Convert.ToDouble(this.textBox51.Text);
+            option4 = Convert.ToDouble(this.textBox80.Text);
+
+            if ((option1 == 1) || (option2 == 1) || (option3 == 1) || (option4 == 1))
+            {
+                Refrigerant working_fluid = new Refrigerant(RefrigerantCategory.NewMixture, this.comboBox2.Text + "=" + textBox60.Text + "," + this.comboBox1.Text + "=" + textBox61.Text + "," + this.comboBox18.Text + "=" + textBox51.Text + "," + this.comboBox17.Text + "=" + textBox80.Text, ReferenceState.DEF);
+
+                textBox59.Text = Convert.ToString(working_fluid.CriticalPressure);
+                textBox58.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox55.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                textBox3.Text = Convert.ToString(working_fluid.CriticalPressure);
+                textBox2.Text = Convert.ToString(working_fluid.CriticalTemperature);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+            }
+
+            else
+            {
+                Excel.Application xlApp;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                xlApp = new Excel.Application();
+
+                xlWorkBook = xlApp.Workbooks.Open("C:\\SCSP_Gitlab\\RefPropWindowsForms\\bin\\Debug\\REFPROP.xls");
+
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(9);
+
+                //Fluids selection
+                xlWorkSheet.Cells[13, 6] = this.comboBox2.Text;
+                xlWorkSheet.Cells[14, 6] = this.comboBox1.Text;
+                xlWorkSheet.Cells[15, 6] = this.comboBox18.Text;
+                xlWorkSheet.Cells[16, 6] = this.comboBox17.Text;
+
+                // % Compositions
+                xlWorkSheet.Cells[13, 7] = this.textBox60.Text;
+                xlWorkSheet.Cells[14, 7] = this.textBox61.Text;
+                xlWorkSheet.Cells[15, 7] = this.textBox51.Text;
+                xlWorkSheet.Cells[16, 7] = this.textBox80.Text;
+
+                //MessageBox.Show(xlWorkSheet.get_Range("D68", "D68").Value2.ToString());
+                this.textBox58.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox59.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox55.Text = xlWorkSheet.get_Range("D70", "D70").Value2.ToString();
+
+                this.textBox3.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox2.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+
+                MixtureCriticalPressure = xlWorkSheet.get_Range("D69", "D69").Value2;
+                MixtureCriticalTemperature = xlWorkSheet.get_Range("D68", "D68").Value2;
+
+                //xlWorkBook.SaveAs("C:\\SCSP_Gitlab\\RefPropWindowsForms\\Copia de REFPROP.xlS", 
+                //    Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, 
+                //    Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, 
+                //    misValue);
+
+                xlWorkBook.Close(false, misValue, misValue);
+
+                xlApp.Quit();
+
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
+            }            
+        }
+
+        public void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
+        //Reset button
+        private void button14_Click(object sender, EventArgs e)
+        {
+            checkBox2.Checked = false;
+            //w_dot_net2 = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "50000";
+            //t_mc_in2 = Convert.ToDouble(textBox2.Text);
+            textBox2.Text = "305.15";
+            //t_t_in2 = Convert.ToDouble(textBox4.Text);
+            //comboBox6_SelectedValueChanged(this, e);
+            //p_mc_in2 = Convert.ToDouble(textBox3.Text);
+            textBox3.Text = "7400";
+            //p_mc_out2 = Convert.ToDouble(textBox8.Text);
+            textBox8.Text = "25000";
+            //p_rhx_in2 = Convert.ToDouble(textBox7.Text);
+            //textBox7.Text = "17300";
+            //t_rht_in2 = Convert.ToDouble(textBox6.Text);
+            comboBox7_SelectedValueChanged(this, e);
+            //ua_lt2 = Convert.ToDouble(textBox17.Text);
+            textBox17.Text = "5000";
+            //ua_ht2 = Convert.ToDouble(textBox16.Text);
+            textBox16.Text = "5000";
+            //dp2_lt1 = Convert.ToDouble(textBox5.Text);
+            textBox5.Text = "0.0";
+            //dp2_lt2 = Convert.ToDouble(textBox26.Text);
+            textBox26.Text = "0.0";
+            //dp2_ht1 = Convert.ToDouble(textBox12.Text);
+            textBox12.Text = "0.0";
+            //dp2_ht2 = Convert.ToDouble(textBox25.Text);
+            textBox25.Text = "0.0";
+            //dp2_pc1 = Convert.ToDouble(textBox11.Text);
+            textBox11.Text = "0.0";
+            //dp2_phx2 = Convert.ToDouble(textBox10.Text);
+            textBox10.Text = "0.0";
+            //dp2_rhx2 = Convert.ToDouble(textBox9.Text);
+            textBox9.Text = "0.0";
+            //recomp_frac2 = Convert.ToDouble(textBox15.Text);
+            textBox15.Text = "0.25";
+            //eta_mc2 = Convert.ToDouble(textBox14.Text);
+            textBox14.Text = "0.89";
+            //eta_rc2 = Convert.ToDouble(textBox13.Text);
+            textBox13.Text = "0.89";
+            //eta_t2 = Convert.ToDouble(textBox19.Text);
+            textBox19.Text = "0.93";
+            //eta_trh2 = Convert.ToDouble(textBox18.Text);
+            textBox18.Text = "0.93";
+            //n_sub_hxrs2 = Convert.ToInt64(textBox20.Text);
+            textBox20.Text = "15";
+            //tol2 = Convert.ToDouble(textBox21.Text);
+            textBox21.Text = "0.00001";
+
+            textBox22.Text = "";
+            textBox23.Text = "";
+            textBox27.Text = "";
+            textBox24.Text = "";
+            textBox29.Text = "";
+            //textBox28.Text = "";
+            textBox41.Text = "";
+            textBox40.Text = "";
+            textBox39.Text = "";
+            textBox38.Text = "";
+            textBox37.Text = "";
+            //textBox36.Text = "";
+
+            textBox47.Text = "";
+            textBox46.Text = "";
+            textBox45.Text = "";
+            textBox44.Text = "";
+            textBox43.Text = "";
+            //textBox42.Text = "";
+            textBox35.Text = "";
+            textBox34.Text = "";
+            textBox33.Text = "";
+            textBox32.Text = "";
+            textBox31.Text = "";
+            //textBox30.Text = "";
+
+            textBox48.Text = "";
+            textBox49.Text = "";
+            textBox50.Text = "";
+        }
+
+        private void comboBox7_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (comboBox7.Text == "Solar Salt")
+            {
+                textBox6.Text = "823.15";
+            }
+
+            else if (comboBox7.Text == "Hitec XL")
+            {
+                textBox6.Text = "793.15";
+            }
+
+            else if (comboBox7.Text == "Therminol VP1")
+            {
+                textBox6.Text = "663.15";
+            }
+
+            else if (comboBox7.Text == "Syltherm_800")
+            {
+                textBox6.Text = "663.15";
+            }
+
+            else if (comboBox7.Text == "Dowtherm_A")
+            {
+                textBox6.Text = "683.15";
+            }
+
+            else if (comboBox7.Text == "Therminol_75")
+            {
+                textBox6.Text = "648.15";
+            }
+        }
+
+        //LTR calculation
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LT_Recuperator = new HeatExchangerUA();
+            LT_Recuperator.textBox2.Text = Convert.ToString(LT_Q);
+            LT_Recuperator.textBox3.Text = Convert.ToString(LT_mdotc);
+            LT_Recuperator.textBox4.Text = Convert.ToString(LT_mdoth);
+            LT_Recuperator.textBox7.Text = Convert.ToString(LT_Tcin);
+            LT_Recuperator.textBox6.Text = Convert.ToString(LT_Thin);
+            LT_Recuperator.textBox5.Text = Convert.ToString(LT_Pcin);
+            LT_Recuperator.textBox8.Text = Convert.ToString(LT_Phin);
+            LT_Recuperator.textBox9.Text = Convert.ToString(LT_Pcout);
+            LT_Recuperator.textBox12.Text = Convert.ToString(LT_Phout);
+            LT_Recuperator.textBox13.Text = Convert.ToString(LT_Effc);
+            LT_Recuperator.HeatExchangerUA1(luis);
+            LT_Recuperator.Calculate_HX();
+            LT_Recuperator.Show();
+        }
+
+        //HTR calculation
+        private void button7_Click(object sender, EventArgs e)
+        {
+            HT_Recuperator = new HeatExchangerUA();
+            HT_Recuperator.textBox2.Text = Convert.ToString(HT_Q);
+            HT_Recuperator.textBox3.Text = Convert.ToString(HT_mdotc);
+            HT_Recuperator.textBox4.Text = Convert.ToString(HT_mdoth);
+            HT_Recuperator.textBox7.Text = Convert.ToString(HT_Tcin);
+            HT_Recuperator.textBox6.Text = Convert.ToString(HT_Thin);
+            HT_Recuperator.textBox5.Text = Convert.ToString(HT_Pcin);
+            HT_Recuperator.textBox8.Text = Convert.ToString(HT_Phin);
+            HT_Recuperator.textBox9.Text = Convert.ToString(HT_Pcout);
+            HT_Recuperator.textBox12.Text = Convert.ToString(HT_Phout);
+            HT_Recuperator.textBox13.Text = Convert.ToString(HT_Effc);
+            HT_Recuperator.HeatExchangerUA1(luis);
+            HT_Recuperator.Calculate_HX();
+            HT_Recuperator.Show();
+        }
+
+        //Solar Field calculation
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (comboBox4.Text == "Parabolic")
+            {
+                SF_PHX = new PTC_Solar_Field();
+
+                if (comboBox7.Text == "Solar Salt")
+                {
+                    SF_PHX.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox7.Text == "Hitec XL")
+                {
+                    SF_PHX.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox7.Text == "Therminol VP1")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox7.Text == "Syltherm_800")
+                {
+                    SF_PHX.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox7.Text == "Dowtherm_A")
+                {
+                    SF_PHX.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox7.Text == "Therminol_75")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox7.Text == "Liquid Sodium")
+                {
+                    SF_PHX.comboBox1.Text = "Liquid Sodium";
+                }
+
+                SF_PHX.textBox27.Text = "0.141";
+                SF_PHX.textBox28.Text = "6.48e-9";
+
+                SF_PHX.textBox41.Text = Convert.ToString(PHX_Q2);
+                SF_PHX.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX.textBox38.Text = Convert.ToString(temp211);
+                SF_PHX.textBox36.Text = Convert.ToString(pres211);
+                SF_PHX.textBox35.Text = Convert.ToString(pres212);
+                SF_PHX.textBox37.Text = Convert.ToString(temp212);
+                SF_PHX.PTC_Solar_Field_uno(luis);
+                SF_PHX.PTC_Solar_Field_ciclo_RC_Design_withoutReHeating_new_configuration(this, 21, "Main_SF");
+                SF_PHX.button3_Click(this, e);
+                SF_PHX.Show();
+            }
+
+            else if (comboBox4.Text == "Parabolic with cavity receiver (Norwich)")
+            {
+                SF_PHX = new PTC_Solar_Field();
+
+                if (comboBox7.Text == "Solar Salt")
+                {
+                    SF_PHX.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox7.Text == "Hitec XL")
+                {
+                    SF_PHX.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox7.Text == "Therminol VP1")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox7.Text == "Syltherm_800")
+                {
+                    SF_PHX.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox7.Text == "Dowtherm_A")
+                {
+                    SF_PHX.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox7.Text == "Therminol_75")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox7.Text == "Liquid Sodium")
+                {
+                    SF_PHX.comboBox1.Text = "Liquid Sodium";
+                }
+
+                SF_PHX.textBox27.Text = "0.3";
+                SF_PHX.textBox28.Text = "3.25e-9";
+
+                SF_PHX.textBox41.Text = Convert.ToString(PHX_Q2);
+                SF_PHX.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX.textBox38.Text = Convert.ToString(temp211);
+                SF_PHX.textBox36.Text = Convert.ToString(pres211);
+                SF_PHX.textBox35.Text = Convert.ToString(pres212);
+                SF_PHX.textBox37.Text = Convert.ToString(temp212);
+                SF_PHX.PTC_Solar_Field_uno(luis);
+                SF_PHX.PTC_Solar_Field_ciclo_RC_Design_withoutReHeating_new_configuration(this, 21, "Main_SF");
+                SF_PHX.button3_Click(this, e);
+                SF_PHX.Show();
+            }
+
+            else if (comboBox4.Text == "Fresnel")
+            {
+                SF_PHX_LF = new Fresnel();
+
+                if (comboBox7.Text == "Solar Salt")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox7.Text == "Hitec XL")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox7.Text == "Therminol VP1")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox7.Text == "Syltherm_800")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox7.Text == "Dowtherm_A")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox7.Text == "Therminol_75")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox7.Text == "Liquid Sodium")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Liquid Sodium";
+                }
+
+                SF_PHX_LF.textBox41.Text = Convert.ToString(PHX_Q2);
+                SF_PHX_LF.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX_LF.textBox38.Text = Convert.ToString(temp211);
+                SF_PHX_LF.textBox36.Text = Convert.ToString(pres211);
+                SF_PHX_LF.textBox35.Text = Convert.ToString(pres212);
+                SF_PHX_LF.textBox37.Text = Convert.ToString(temp212);
+                SF_PHX_LF.LF_Solar_Field_uno(luis);
+                SF_PHX_LF.LF_Solar_Field_ciclo_RC_Design_withoutReHeating_new_configuration(this, 21, "Main_SF");
+                SF_PHX_LF.Load_ComboBox7();
+                SF_PHX_LF.button3_Click(this, e);
+                SF_PHX_LF.Show();
+            }
+        }
+
+        //Dual-Loop Solar Field 1
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (comboBox11.Text == "Parabolic")
+            {
+                SF_PHX = new PTC_Solar_Field();
+
+                if (comboBox9.Text == "Solar Salt")
+                {
+                    SF_PHX.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox9.Text == "Hitec XL")
+                {
+                    SF_PHX.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox9.Text == "Therminol VP1")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox9.Text == "Syltherm_800")
+                {
+                    SF_PHX.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox9.Text == "Dowtherm_A")
+                {
+                    SF_PHX.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox9.Text == "Therminol_75")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox9.Text == "Liquid Sodium")
+                {
+                    SF_PHX.comboBox1.Text = "Liquid Sodium";
+                }
+
+                luis.working_fluid.FindStateWithTP(temp211, pres211); // properties at the inlet conditions
+                PHX1_h_in = luis.working_fluid.Enthalpy;
+                PHX1_temp_out = Convert.ToDouble(textBox54.Text);
+                DP_PHX1 = Convert.ToDouble(textBox53.Text);
+                PHX1_pres_out = pres212 - pres212 * DP_PHX1;
+                luis.working_fluid.FindStateWithTP(PHX1_temp_out, PHX1_pres_out); // properties at the inlet conditions
+                PHX1_h_out = luis.working_fluid.Enthalpy;
+                PHX1_Q = massflow2 * (PHX1_h_out - PHX1_h_in);
+
+                SF_PHX.textBox41.Text = Convert.ToString(PHX1_Q);
+                SF_PHX.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX.textBox38.Text = Convert.ToString(temp211);
+                SF_PHX.textBox36.Text = Convert.ToString(pres211);
+                SF_PHX.textBox35.Text = Convert.ToString(PHX1_pres_out);
+                SF_PHX.PTC_Solar_Field_uno(luis);
+                SF_PHX.PTC_Solar_Field_ciclo_RC_Design_withoutReHeating_new_configuration(this, 21, "Main_SF1_Dual_Loop");
+                SF_PHX.button3_Click(this, e);
+                SF_PHX.Show();
+            }
+
+            else if (comboBox11.Text == "Fresnel")
+            {
+                SF_PHX_LF = new Fresnel();
+
+                if (comboBox9.Text == "Solar Salt")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox9.Text == "Hitec XL")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox9.Text == "Therminol VP1")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox9.Text == "Syltherm_800")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox9.Text == "Dowtherm_A")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox9.Text == "Therminol_75")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox9.Text == "Liquid Sodium")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Liquid Sodium";
+                }
+
+                luis.working_fluid.FindStateWithTP(temp211, pres211); // properties at the inlet conditions
+                PHX1_h_in = luis.working_fluid.Enthalpy;
+                PHX1_temp_out = Convert.ToDouble(textBox54.Text);
+                DP_PHX1 = Convert.ToDouble(textBox53.Text);
+                PHX1_pres_out = pres25 - pres25 * DP_PHX1;
+                luis.working_fluid.FindStateWithTP(PHX1_temp_out, PHX1_pres_out); // properties at the inlet conditions
+                PHX1_h_out = luis.working_fluid.Enthalpy;
+                PHX1_Q = massflow2 * (PHX1_h_out - PHX1_h_in);
+
+                SF_PHX_LF.textBox41.Text = Convert.ToString(PHX1_Q);
+                SF_PHX_LF.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX_LF.textBox38.Text = Convert.ToString(temp211);
+                SF_PHX_LF.textBox36.Text = Convert.ToString(pres211);
+                SF_PHX_LF.textBox35.Text = Convert.ToString(PHX1_pres_out);
+                SF_PHX_LF.LF_Solar_Field_uno(luis);
+                SF_PHX_LF.LF_Solar_Field_ciclo_RC_Design_withoutReHeating_new_configuration(this, 21, "Main_SF1_Dual_Loop");
+                SF_PHX_LF.Load_ComboBox7();
+                SF_PHX_LF.button3_Click(this, e);
+                SF_PHX_LF.Show();
+            }
+        }
+
+        //Dual-Loop Solar Field 2
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (comboBox10.Text == "Parabolic")
+            {
+                SF_PHX = new PTC_Solar_Field();
+
+                if (comboBox8.Text == "Solar Salt")
+                {
+                    SF_PHX.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox8.Text == "Hitec XL")
+                {
+                    SF_PHX.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox8.Text == "Therminol VP1")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox8.Text == "Syltherm_800")
+                {
+                    SF_PHX.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox8.Text == "Dowtherm_A")
+                {
+                    SF_PHX.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox8.Text == "Therminol_75")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox8.Text == "Liquid Sodium")
+                {
+                    SF_PHX.comboBox1.Text = "Liquid Sodium";
+                }
+
+                PHX2_Q = PHX_Q2 - PHX1_Q;
+
+                SF_PHX.textBox41.Text = Convert.ToString(PHX2_Q);
+                SF_PHX.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX.textBox38.Text = Convert.ToString(PHX1_temp_out);
+                SF_PHX.textBox36.Text = Convert.ToString(PHX1_pres_out);
+                SF_PHX.textBox35.Text = Convert.ToString(pres212);
+                SF_PHX.PTC_Solar_Field_uno(luis);
+                SF_PHX.PTC_Solar_Field_ciclo_RC_Design_withoutReHeating_new_configuration(this, 21, "Main_SF2_Dual_Loop");
+                SF_PHX.button3_Click(this, e);
+                SF_PHX.Show();
+            }
+
+            else if (comboBox10.Text == "Fresnel")
+            {
+                SF_PHX_LF = new Fresnel();
+
+                if (comboBox8.Text == "Solar Salt")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox8.Text == "Hitec XL")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox8.Text == "Therminol VP1")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox8.Text == "Syltherm_800")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox8.Text == "Dowtherm_A")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox8.Text == "Therminol_75")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox8.Text == "Liquid Sodium")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Liquid Sodium";
+                }
+
+                PHX2_Q = PHX_Q2 - PHX1_Q;
+
+                SF_PHX_LF.textBox41.Text = Convert.ToString(PHX2_Q);
+                SF_PHX_LF.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX_LF.textBox38.Text = Convert.ToString(PHX1_temp_out);
+                SF_PHX_LF.textBox36.Text = Convert.ToString(PHX1_pres_out);
+                SF_PHX_LF.textBox35.Text = Convert.ToString(pres212);
+                SF_PHX_LF.LF_Solar_Field_uno(luis);
+                SF_PHX_LF.LF_Solar_Field_ciclo_RC_Design_withoutReHeating_new_configuration(this, 21, "Main_SF2_Dual_Loop");
+                SF_PHX_LF.Load_ComboBox7();
+                SF_PHX_LF.button3_Click(this, e);
+                SF_PHX_LF.Show();
             }
         }
     }
