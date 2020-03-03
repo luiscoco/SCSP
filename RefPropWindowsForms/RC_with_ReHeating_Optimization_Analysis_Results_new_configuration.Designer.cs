@@ -763,7 +763,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 1233;
-            this.label4.Text = "T9 (K)";
+            this.label4.Text = "T6 (K)";
             // 
             // label2
             // 
@@ -789,7 +789,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 1231;
-            this.label5.Text = "T8 (K)";
+            this.label5.Text = "T5 (K)";
             // 
             // listBox6
             // 

@@ -451,6 +451,7 @@ namespace RefPropWindowsForms
 
             core.RecompCycle cicloRC = new core.RecompCycle();
 
+            //PRIMERA LLAMADA a la función RC with ReHeating (para eliminar la turbina de reheating)
             luis.RecompCycledesign_newproposed(luis, ref cicloRC, w_dot_net2, t_mc_in2, t_t_in2, p_mc_in2, p_mc_out2, p_rhx_in2, t_rht_in2,
                    -dp2_lt1, -dp2_ht1, -dp2_pc2, -dp2_phx1, -dp2_rhx1, -dp2_lt2, -dp2_ht2, ua_lt2, ua_ht2, recomp_frac,
                    eta_mc2, eta_rc2, eta_t2, eta_trh2, n_sub_hxrs2, tol2);
@@ -486,6 +487,7 @@ namespace RefPropWindowsForms
             pres211 = cicloRC.pres[10];
             pres212 = cicloRC.pres[11];
 
+            //SEGUNDA LLAMADA a la función RC with ReHeating (para eliminar el Main Solar Field)
             luis.RecompCycledesign_newproposed(luis, ref cicloRC, w_dot_net2, t_mc_in2, temp25, p_mc_in2, p_mc_out2, p_rhx_in2, t_rht_in2,
                    -dp2_lt1, -dp2_ht1, -dp2_pc2, -dp2_phx1, -dp2_rhx1, -dp2_lt2, -dp2_ht2, ua_lt2, ua_ht2, recomp_frac,
                    eta_mc2, eta_rc2, eta_t2, eta_trh2, n_sub_hxrs2, tol2);
@@ -521,6 +523,7 @@ namespace RefPropWindowsForms
             pres211 = cicloRC.pres[10];
             pres212 = cicloRC.pres[11];
 
+            //TERCERA LLAMADA a la función RC with ReHeating (para eliminar el Main Solar Field)
             luis.RecompCycledesign_newproposed(luis, ref cicloRC, w_dot_net2, t_mc_in2, temp25, p_mc_in2, p_mc_out2, p_rhx_in2, t_rht_in2,
                    -dp2_lt1, -dp2_ht1, -dp2_pc2, -dp2_phx1, -dp2_rhx1, -dp2_lt2, -dp2_ht2, ua_lt2, ua_ht2, recomp_frac,
                    eta_mc2, eta_rc2, eta_t2, eta_trh2, n_sub_hxrs2, tol2);
@@ -556,6 +559,7 @@ namespace RefPropWindowsForms
             pres211 = cicloRC.pres[10];
             pres212 = cicloRC.pres[11];
 
+            //CUARTA LLAMADA a la función RC with ReHeating (para eliminar el Main Solar Field)
             luis.RecompCycledesign_newproposed(luis, ref cicloRC, w_dot_net2, t_mc_in2, temp25, p_mc_in2, p_mc_out2, p_rhx_in2, t_rht_in2,
                    -dp2_lt1, -dp2_ht1, -dp2_pc2, -dp2_phx1, -dp2_rhx1, -dp2_lt2, -dp2_ht2, ua_lt2, ua_ht2, recomp_frac,
                    eta_mc2, eta_rc2, eta_t2, eta_trh2, n_sub_hxrs2, tol2);
@@ -1452,5 +1456,14 @@ namespace RefPropWindowsForms
                 SF_PHX_LF.Show();
             }
         }
+
+        //Optimization button
+        private void button35_Click(object sender, EventArgs e)
+        {
+            RC_with_ReHeating_Optimization_Analysis_Results_new_configuration RC_with_ReHeating_Optimization_Analysis_Results_new_configuration_window = new RC_with_ReHeating_Optimization_Analysis_Results_new_configuration(this);
+            RC_with_ReHeating_Optimization_Analysis_Results_new_configuration_window.Show();
+        }
+
+
     }
 }
