@@ -68,9 +68,25 @@ namespace RefPropWindowsForms
 
             double initial_CIP_value = 0;
 
+            double initial_recomp_frac_value = 0.2;
+
+            double initial_LT_fraction = 0.5;
+
             double optimization_error_tolerance = 0.00001;
 
             optimization_error_tolerance = Convert.ToDouble(textBox3.Text);
+
+            double recomp_frac_step_size = 0.005;
+
+            recomp_frac_step_size = Convert.ToDouble(textBox4.Text);
+
+            double CIP_step_size = 50.0;
+
+            CIP_step_size = Convert.ToDouble(textBox5.Text);
+
+            double LT_fraction_step_size = 0.01;
+
+            LT_fraction_step_size = Convert.ToDouble(textBox6.Text);
 
             //Do not optimize UA
             if (checkBox2.Checked == false)
@@ -171,6 +187,7 @@ namespace RefPropWindowsForms
                 else if (comboBox19.Text == "PRAXIS")
                     algorithm_type = NLoptAlgorithm.LN_PRAXIS;
 
+                //Set CIP initial value
                 if (checkBox6.Checked == true)
                 {
                     initial_CIP_value = Convert.ToDouble(textBox1.Text);
@@ -180,6 +197,12 @@ namespace RefPropWindowsForms
                     initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
                 }
 
+                //Set recompresion fraction initial value
+                if (checkBox8.Checked == true)
+                {
+                    initial_recomp_frac_value = Convert.ToDouble(textBox7.Text);
+                }                
+             
                 xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
 
                                          //puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox31.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox36.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox67.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox68.Text
@@ -214,7 +237,7 @@ namespace RefPropWindowsForms
                         solver.SetLowerBounds(new[] { initial_CIP_value });
                         solver.SetUpperBounds(new[] {  125000.0 });
 
-                        solver.SetInitialStepSize(new[] { 50.0 });
+                        solver.SetInitialStepSize(new[] { CIP_step_size });
 
                         var initialValue = new[] { initial_CIP_value };
 
@@ -371,9 +394,9 @@ namespace RefPropWindowsForms
                         solver.SetLowerBounds(new[] { 0.1, initial_CIP_value });
                         solver.SetUpperBounds(new[] { 1.0, 125000 });
 
-                        solver.SetInitialStepSize(new[] { 0.005, 100 });
+                        solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value };
+                        var initialValue = new[] { initial_recomp_frac_value, initial_CIP_value };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -622,6 +645,7 @@ namespace RefPropWindowsForms
                 else if (comboBox19.Text == "PRAXIS")
                     algorithm_type = NLoptAlgorithm.LN_PRAXIS;
 
+                //Set CIP initival value
                 if (checkBox6.Checked == true)
                 {
                     initial_CIP_value = Convert.ToDouble(textBox1.Text);
@@ -629,6 +653,18 @@ namespace RefPropWindowsForms
                 else
                 {
                     initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                }
+
+                //Set recompresion fraction initial value
+                if (checkBox8.Checked == true)
+                {
+                    initial_recomp_frac_value = Convert.ToDouble(textBox7.Text);
+                }
+
+                //Set LT_fraction initial value
+                if (checkBox9.Checked == true)
+                {
+                    initial_LT_fraction = Convert.ToDouble(textBox8.Text);
                 }
 
                 xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
@@ -665,7 +701,7 @@ namespace RefPropWindowsForms
                         solver.SetLowerBounds(new[] { initial_CIP_value });
                         solver.SetUpperBounds(new[] { 125000.0 });
 
-                        solver.SetInitialStepSize(new[] { 50.0 });
+                        solver.SetInitialStepSize(new[] { CIP_step_size });
 
                         var initialValue = new[] { initial_CIP_value };
 
@@ -822,9 +858,9 @@ namespace RefPropWindowsForms
                         solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2 });
                         solver.SetUpperBounds(new[] { 1.0, 125000, 0.8 });
 
-                        solver.SetInitialStepSize(new[] { 0.01, 100, 0.01 });
+                        solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, LT_fraction_step_size });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, 0.5 };
+                        var initialValue = new[] { initial_recomp_frac_value, initial_CIP_value, initial_LT_fraction };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -1006,8 +1042,7 @@ namespace RefPropWindowsForms
             listBox17.Items.Clear();
             listBox18.Items.Clear();
         }
-
-
+        
         private void Button2_Click(object sender, EventArgs e)
         {
             Clear_all_Lists();
@@ -1030,11 +1065,27 @@ namespace RefPropWindowsForms
         {
             int counter = 0;
 
-            double initial_Pressure_value = 0;
+            double initial_CIP_value = 0;
+
+            double initial_recomp_frac_value = 0.2;
+
+            double initial_LT_fraction = 0.5;
 
             double optimization_error_tolerance = 0.00001;
 
             optimization_error_tolerance = Convert.ToDouble(textBox3.Text);
+
+            double recomp_frac_step_size = 0.005;
+
+            recomp_frac_step_size = Convert.ToDouble(textBox4.Text);
+
+            double CIP_step_size = 50.0;
+
+            CIP_step_size = Convert.ToDouble(textBox5.Text);
+
+            double LT_fraction_step_size = 0.01;
+
+            LT_fraction_step_size = Convert.ToDouble(textBox6.Text);
 
             int counter_Excel = 4;
 
@@ -1058,6 +1109,8 @@ namespace RefPropWindowsForms
             for (double i = Convert.ToDouble(textBox57.Text); i <= Convert.ToDouble(textBox56.Text); i = i + Convert.ToDouble(textBox55.Text))
             {
                 counter = 0;
+
+                // Not UA Optimization 
 
                 if (checkBox2.Checked == false)
                 {
@@ -1188,18 +1241,24 @@ namespace RefPropWindowsForms
 
                     if (i == Convert.ToDouble(textBox57.Text))
                     {
+                        //Set CIP initial value
                         if (checkBox6.Checked == true)
                         {
-                            initial_Pressure_value = Convert.ToDouble(textBox1.Text);
+                            initial_CIP_value = Convert.ToDouble(textBox1.Text);
                         }
                         else
                         {
-                            initial_Pressure_value = puntero_aplicacion.MixtureCriticalPressure;
-                        }                        
+                            initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                        }
+
+                        //Set recompresion fraction initial value
+                        if (checkBox8.Checked == true)
+                        {
+                            initial_recomp_frac_value = Convert.ToDouble(textBox7.Text);
+                        }
 
                         xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
-
-                                                 //puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox31.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox36.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox67.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox68.Text
+                                                                         //puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox31.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox36.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox67.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox68.Text
                         xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox31.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox36.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox67.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox68.Text;
                         xlWorkSheet1.Cells[1, 2] = "Pcrit(kPa)";
                         xlWorkSheet1.Cells[1, 3] = "Tcrit(ºC)";
@@ -1237,12 +1296,12 @@ namespace RefPropWindowsForms
                     {                        
                         using (var solver = new NLoptSolver(algorithm_type, 1, optimization_error_tolerance, 10000))
                         {
-                            solver.SetLowerBounds(new[] { initial_Pressure_value });
+                            solver.SetLowerBounds(new[] { initial_CIP_value });
                             solver.SetUpperBounds(new[] { 125000.0 });
 
-                            solver.SetInitialStepSize(new[] { 50.0 });
+                            solver.SetInitialStepSize(new[] { CIP_step_size });
 
-                            var initialValue = new[] { initial_Pressure_value };
+                            var initialValue = new[] { initial_CIP_value };
 
                             Func<double[], double> funcion = delegate (double[] variables)
                             {
@@ -1458,7 +1517,7 @@ namespace RefPropWindowsForms
                             }
                             counter_Excel++;
 
-                            initial_Pressure_value = puntero_aplicacion.p_mc_in2;
+                            initial_CIP_value = puntero_aplicacion.p_mc_in2;
                         }
                     }
 
@@ -1467,12 +1526,12 @@ namespace RefPropWindowsForms
                     {                        
                         using (var solver = new NLoptSolver(algorithm_type, 2, optimization_error_tolerance, 10000))
                         {
-                            solver.SetLowerBounds(new[] { 0.1, initial_Pressure_value });
+                            solver.SetLowerBounds(new[] { 0.1, initial_CIP_value });
                             solver.SetUpperBounds(new[] { 1.0, 125000 });
 
-                            solver.SetInitialStepSize(new[] { 0.005, 100 });
+                            solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size });
 
-                            var initialValue = new[] { 0.2, initial_Pressure_value };
+                            var initialValue = new[] { initial_recomp_frac_value, initial_CIP_value };
 
                             Func<double[], double> funcion = delegate (double[] variables)
                             {
@@ -1680,13 +1739,14 @@ namespace RefPropWindowsForms
                             }
                             counter_Excel++;
 
-                            initial_Pressure_value = puntero_aplicacion.p_mc_in2;
+                            initial_CIP_value = puntero_aplicacion.p_mc_in2;
                         }
                     }
                 }
 
                 //-------------------------------------------------------------------------
 
+                // UA Optimization 
                 else if (checkBox2.Checked == true)
                 {
                     //PureFluid
@@ -1815,14 +1875,27 @@ namespace RefPropWindowsForms
                         algorithm_type = NLoptAlgorithm.LN_PRAXIS;
 
                     if (i == Convert.ToDouble(textBox57.Text))
-                    {                      
+                    {       
+                        //Set CIP initial value
                         if (checkBox6.Checked == true)
                         {
-                            initial_Pressure_value = Convert.ToDouble(textBox1.Text);
+                            initial_CIP_value = Convert.ToDouble(textBox1.Text);
                         }
                         else
                         {
-                            initial_Pressure_value = puntero_aplicacion.MixtureCriticalPressure;
+                            initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                        }
+
+                        //Set recompresion fraction initial value
+                        if (checkBox8.Checked == true)
+                        {
+                            initial_recomp_frac_value = Convert.ToDouble(textBox7.Text);
+                        }
+
+                        //Set LT_fraction initial value
+                        if (checkBox9.Checked == true)
+                        {
+                            initial_LT_fraction = Convert.ToDouble(textBox8.Text);
                         }
 
                         xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
@@ -1865,12 +1938,12 @@ namespace RefPropWindowsForms
                     {
                         using (var solver = new NLoptSolver(algorithm_type, 1, optimization_error_tolerance, 10000))
                         {
-                            solver.SetLowerBounds(new[] { initial_Pressure_value });
+                            solver.SetLowerBounds(new[] { initial_CIP_value });
                             solver.SetUpperBounds(new[] { 125000.0 });
 
-                            solver.SetInitialStepSize(new[] { 50.0 });
+                            solver.SetInitialStepSize(new[] { CIP_step_size });
 
-                            var initialValue = new[] { initial_Pressure_value };
+                            var initialValue = new[] { initial_CIP_value };
 
                             Func<double[], double> funcion = delegate (double[] variables)
                             {
@@ -2075,7 +2148,7 @@ namespace RefPropWindowsForms
                             }
                             counter_Excel++;
 
-                            initial_Pressure_value = puntero_aplicacion.p_mc_in2;
+                            initial_CIP_value = puntero_aplicacion.p_mc_in2;
                         }
                     }
                     
@@ -2084,12 +2157,12 @@ namespace RefPropWindowsForms
                     {                        
                         using (var solver = new NLoptSolver(algorithm_type, 3, optimization_error_tolerance, 10000))
                         {
-                            solver.SetLowerBounds(new[] { 0.1, initial_Pressure_value, 0.2 });
+                            solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2 });
                             solver.SetUpperBounds(new[] { 1.0, 125000, 0.8 });
 
-                            solver.SetInitialStepSize(new[] { 0.01, 100, 0.01 });
+                            solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, LT_fraction_step_size });
 
-                            var initialValue = new[] { 0.2, initial_Pressure_value, 0.5 };
+                            var initialValue = new[] { initial_recomp_frac_value, initial_CIP_value, initial_LT_fraction };
 
                             Func<double[], double> funcion = delegate (double[] variables)
                             {
@@ -2300,7 +2373,7 @@ namespace RefPropWindowsForms
                             }
                             counter_Excel++;
 
-                            initial_Pressure_value = puntero_aplicacion.p_mc_in2;
+                            initial_CIP_value = puntero_aplicacion.p_mc_in2;
                         }
                     }
 
