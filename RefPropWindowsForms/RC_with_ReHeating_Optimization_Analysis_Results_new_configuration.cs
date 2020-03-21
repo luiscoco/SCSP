@@ -219,9 +219,9 @@ namespace RefPropWindowsForms
                     solver.SetLowerBounds(new[] { 0.1, initial_CIP_value });
                     solver.SetUpperBounds(new[] { 1.0, 125000 });
 
-                    solver.SetInitialStepSize(new[] { 0.001, 1 });
+                    solver.SetInitialStepSize(new[] { 0.005, 50 });
 
-                    var initialValue = new[] { 0.25, initial_CIP_value };
+                    var initialValue = new[] { 0.2, initial_CIP_value };
 
                     Func<double[], double> funcion = delegate (double[] variables1)
                     {
@@ -422,7 +422,7 @@ namespace RefPropWindowsForms
                     solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value });
                     solver1.SetUpperBounds(new[] { 1.0, 125000 });
 
-                    solver1.SetInitialStepSize(new[] { 0.05, 1 });
+                    solver1.SetInitialStepSize(new[] { 0.005, 50 });
 
                     var initialValue = new[] { max_recomp_fraction, max_mc_p_in };
 
@@ -624,7 +624,7 @@ namespace RefPropWindowsForms
                     solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value });
                     solver2.SetUpperBounds(new[] { 1.0, 125000 });
 
-                    solver2.SetInitialStepSize(new[] { 0.05, 1 });
+                    solver2.SetInitialStepSize(new[] { 0.005, 50 });
 
                     var initialValue = new[] { max_recomp_fraction_1, max_mc_p_in_1 };
 
@@ -823,7 +823,7 @@ namespace RefPropWindowsForms
                     solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value });
                     solver3.SetUpperBounds(new[] { 1.0, 125000 });
 
-                    solver3.SetInitialStepSize(new[] { 0.05, 1 });
+                    solver3.SetInitialStepSize(new[] { 0.005, 50 });
 
                     var initialValue = new[] { max_recomp_fraction_2, max_mc_p_in_2 };
 

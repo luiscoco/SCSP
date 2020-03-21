@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -110,6 +108,8 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -117,33 +117,13 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Parabolic",
-            "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox1.Location = new System.Drawing.Point(653, 378);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 21);
-            this.comboBox1.TabIndex = 1288;
-            this.comboBox1.Text = "Parabolic";
-            // 
-            // label20
-            // 
-            this.label20.Location = new System.Drawing.Point(651, 360);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(190, 15);
-            this.label20.TabIndex = 1289;
-            this.label20.Text = "ReHeating Solar Field Collectors:";
-            // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Parabolic",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox4.Location = new System.Drawing.Point(652, 331);
+            this.comboBox4.Location = new System.Drawing.Point(678, 361);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(191, 21);
             this.comboBox4.TabIndex = 1286;
@@ -151,7 +131,7 @@
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(650, 313);
+            this.label19.Location = new System.Drawing.Point(676, 343);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(150, 15);
             this.label19.TabIndex = 1287;
@@ -172,7 +152,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(487, 20);
             this.textBox3.TabIndex = 1284;
-            this.textBox3.Text = "C:\\Users\\luisc\\Desktop\\SolarPaces 2019\\";
+            this.textBox3.Text = "C:\\Users\\luisc\\Desktop\\";
             // 
             // groupBox4
             // 
@@ -624,7 +604,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(742, 224);
+            this.button6.Location = new System.Drawing.Point(768, 260);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(99, 40);
             this.button6.TabIndex = 1279;
@@ -633,7 +613,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(742, 200);
+            this.button5.Location = new System.Drawing.Point(768, 236);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(99, 23);
             this.button5.TabIndex = 1278;
@@ -643,7 +623,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(744, 124);
+            this.checkBox1.Location = new System.Drawing.Point(770, 124);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(97, 17);
             this.checkBox1.TabIndex = 1276;
@@ -652,7 +632,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(744, 43);
+            this.button4.Location = new System.Drawing.Point(770, 43);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 23);
             this.button4.TabIndex = 1275;
@@ -662,7 +642,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(741, 81);
+            this.label3.Location = new System.Drawing.Point(767, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 1274;
@@ -678,7 +658,7 @@
             "SUBPLEX",
             "NEWUOA",
             "PRAXIS"});
-            this.comboBox19.Location = new System.Drawing.Point(744, 97);
+            this.comboBox19.Location = new System.Drawing.Point(770, 97);
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(99, 21);
             this.comboBox19.TabIndex = 1273;
@@ -686,7 +666,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(742, 176);
+            this.button3.Location = new System.Drawing.Point(768, 212);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 23);
             this.button3.TabIndex = 1272;
@@ -696,7 +676,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(742, 271);
+            this.button2.Location = new System.Drawing.Point(768, 307);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 23);
             this.button2.TabIndex = 1271;
@@ -705,7 +685,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(744, 19);
+            this.button1.Location = new System.Drawing.Point(770, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 23);
             this.button1.TabIndex = 1270;
@@ -896,20 +876,36 @@
             // 
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(744, 134);
+            this.checkBox3.Location = new System.Drawing.Point(770, 134);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(115, 48);
             this.checkBox3.TabIndex = 1277;
             this.checkBox3.Text = "Copy results as design-point inputs";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(814, 181);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(55, 20);
+            this.textBox4.TabIndex = 1290;
+            this.textBox4.Text = "0.00001";
+            // 
+            // label21
+            // 
+            this.label21.Location = new System.Drawing.Point(733, 181);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(85, 26);
+            this.label21.TabIndex = 1291;
+            this.label21.Text = "Optimization error tolerance:";
+            // 
             // RC_with_ReHeating_Optimization_Analysis_Results_new_configuration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 514);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label20);
+            this.ClientSize = new System.Drawing.Size(893, 514);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -947,9 +943,6 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.ComboBox comboBox1;
-        public System.Windows.Forms.Label label20;
         public System.Windows.Forms.ComboBox comboBox4;
         public System.Windows.Forms.Label label19;
         public System.Windows.Forms.Label label18;
@@ -1030,5 +1023,7 @@
         public System.Windows.Forms.ListBox listBox2;
         public System.Windows.Forms.ListBox listBox1;
         public System.Windows.Forms.CheckBox checkBox3;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.Label label21;
     }
 }

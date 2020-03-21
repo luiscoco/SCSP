@@ -99,7 +99,7 @@ namespace NLoptNet
 		private readonly Dictionary<Delegate, nlopt_func> _funcCache = new Dictionary<Delegate, nlopt_func>();
 
 
-		public NLoptSolver(NLoptAlgorithm algorithm, uint numVariables, double relativeStoppingTolerance = 0.0001, int maximumIterations = 0, NLoptAlgorithm? childAlgorithm = null)
+		public NLoptSolver(NLoptAlgorithm algorithm, uint numVariables, double relativeStoppingTolerance = 0.00001, int maximumIterations = 0, NLoptAlgorithm? childAlgorithm = null)
 		{
 			if (numVariables < 1)
 				throw new ArgumentOutOfRangeException("numVariables");

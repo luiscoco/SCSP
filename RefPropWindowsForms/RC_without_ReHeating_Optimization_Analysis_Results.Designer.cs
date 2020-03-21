@@ -103,6 +103,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -192,7 +194,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(687, 266);
+            this.button2.Location = new System.Drawing.Point(687, 311);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 34);
             this.button2.TabIndex = 1224;
@@ -373,7 +375,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(687, 176);
+            this.button3.Location = new System.Drawing.Point(687, 221);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 23);
             this.button3.TabIndex = 1225;
@@ -450,7 +452,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(687, 200);
+            this.button5.Location = new System.Drawing.Point(687, 245);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(99, 23);
             this.button5.TabIndex = 1233;
@@ -460,7 +462,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(687, 224);
+            this.button6.Location = new System.Drawing.Point(687, 269);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(99, 40);
             this.button6.TabIndex = 1234;
@@ -806,7 +808,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(487, 20);
             this.textBox2.TabIndex = 1248;
-            this.textBox2.Text = "C:\\Users\\luisc\\Desktop\\SolarPaces 2019\\";
+            this.textBox2.Text = "C:\\Users\\luisc\\Desktop\\";
             // 
             // label7
             // 
@@ -823,7 +825,7 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Parabolic",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox4.Location = new System.Drawing.Point(654, 326);
+            this.comboBox4.Location = new System.Drawing.Point(654, 371);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(191, 21);
             this.comboBox4.TabIndex = 1250;
@@ -831,17 +833,35 @@
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(652, 308);
+            this.label16.Location = new System.Drawing.Point(652, 353);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(110, 15);
             this.label16.TabIndex = 1251;
             this.label16.Text = "Solar Field Collectors:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(731, 188);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(55, 20);
+            this.textBox3.TabIndex = 1252;
+            this.textBox3.Text = "0.00001";
+            // 
+            // label17
+            // 
+            this.label17.Location = new System.Drawing.Point(650, 188);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(85, 26);
+            this.label17.TabIndex = 1253;
+            this.label17.Text = "Optimization error tolerance:";
             // 
             // RC_without_ReHeating_Optimization_Analysis_Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 509);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label7);
@@ -956,5 +976,7 @@
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.ComboBox comboBox4;
         public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.Label label17;
     }
 }

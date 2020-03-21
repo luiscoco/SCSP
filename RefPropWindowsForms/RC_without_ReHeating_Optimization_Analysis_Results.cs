@@ -66,7 +66,11 @@ namespace RefPropWindowsForms
 
             //xlWorkSheet1 = (Excel.Worksheet)xlWorkBook1.Worksheets.get_Item(xlWorkBook1.Worksheets.Count);           
 
-            double initial_CIP_value = 0;                      
+            double initial_CIP_value = 0;
+
+            double optimization_error_tolerance = 0.00001;
+
+            optimization_error_tolerance = Convert.ToDouble(textBox3.Text);
 
             //Do not optimize UA
             if (checkBox2.Checked == false)
@@ -205,12 +209,12 @@ namespace RefPropWindowsForms
                 //Simple Brayton power cycle
                 if (puntero_aplicacion.checkBox2.Checked == true)
                 {                    
-                    using (var solver = new NLoptSolver(algorithm_type, 1, 0.01, 10000))
+                    using (var solver = new NLoptSolver(algorithm_type, 1, optimization_error_tolerance, 10000))
                     {
                         solver.SetLowerBounds(new[] { initial_CIP_value });
                         solver.SetUpperBounds(new[] {  125000.0 });
 
-                        solver.SetInitialStepSize(new[] { 200.0 });
+                        solver.SetInitialStepSize(new[] { 50.0 });
 
                         var initialValue = new[] { initial_CIP_value };
 
@@ -347,7 +351,7 @@ namespace RefPropWindowsForms
                         }
 
                         //Closing Excel Book
-                        xlWorkBook1.SaveAs(textBox2.Text + "SolarPaces2019_Paper_Results_SB_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+                        xlWorkBook1.SaveAs(textBox2.Text + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
                         xlWorkBook1.Close(true, misValue1, misValue1);
                         xlApp1.Quit();
@@ -362,14 +366,14 @@ namespace RefPropWindowsForms
                 //Recompression Brayton power cycle
                 else if (puntero_aplicacion.checkBox2.Checked == false)
                 {                    
-                    using (var solver = new NLoptSolver(algorithm_type, 2, 0.01, 10000))
+                    using (var solver = new NLoptSolver(algorithm_type, 2, optimization_error_tolerance, 10000))
                     {
                         solver.SetLowerBounds(new[] { 0.1, initial_CIP_value });
                         solver.SetUpperBounds(new[] { 1.0, 125000 });
 
-                        solver.SetInitialStepSize(new[] { 0.01, 200 });
+                        solver.SetInitialStepSize(new[] { 0.005, 100 });
 
-                        var initialValue = new[] { 0.1, initial_CIP_value };
+                        var initialValue = new[] { 0.2, initial_CIP_value };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -502,7 +506,7 @@ namespace RefPropWindowsForms
                         }
 
                         //Closing Excel Book
-                        xlWorkBook1.SaveAs(textBox2.Text + "SolarPaces2019_Paper_Results_RC_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+                        xlWorkBook1.SaveAs(textBox2.Text + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
                         xlWorkBook1.Close(true, misValue1, misValue1);
                         xlApp1.Quit();
@@ -656,12 +660,12 @@ namespace RefPropWindowsForms
                 //Simple Brayton power cycle
                 if (puntero_aplicacion.checkBox2.Checked == true)
                 {
-                    using (var solver = new NLoptSolver(algorithm_type, 1, 0.01, 10000))
+                    using (var solver = new NLoptSolver(algorithm_type, 1, optimization_error_tolerance, 10000))
                     {
                         solver.SetLowerBounds(new[] { initial_CIP_value });
                         solver.SetUpperBounds(new[] { 125000.0 });
 
-                        solver.SetInitialStepSize(new[] { 200.0 });
+                        solver.SetInitialStepSize(new[] { 50.0 });
 
                         var initialValue = new[] { initial_CIP_value };
 
@@ -813,14 +817,14 @@ namespace RefPropWindowsForms
                 //Recompression Brayton power cycle
                 else if (puntero_aplicacion.checkBox2.Checked == false)
                 {
-                    using (var solver = new NLoptSolver(algorithm_type, 3, 0.01, 10000))
+                    using (var solver = new NLoptSolver(algorithm_type, 3, optimization_error_tolerance, 10000))
                     {
                         solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2 });
                         solver.SetUpperBounds(new[] { 1.0, 125000, 0.8 });
 
-                        solver.SetInitialStepSize(new[] { 0.05, 200, 0.05 });
+                        solver.SetInitialStepSize(new[] { 0.01, 100, 0.01 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, 0.2 };
+                        var initialValue = new[] { 0.2, initial_CIP_value, 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -967,7 +971,7 @@ namespace RefPropWindowsForms
                         }
 
                         //Closing Excel Book
-                        xlWorkBook1.SaveAs(textBox2.Text + "SolarPaces2019_Paper_Results_RC_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+                        xlWorkBook1.SaveAs(textBox2.Text + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
                         xlWorkBook1.Close(true, misValue1, misValue1);
                         xlApp1.Quit();
@@ -1027,6 +1031,10 @@ namespace RefPropWindowsForms
             int counter = 0;
 
             double initial_Pressure_value = 0;
+
+            double optimization_error_tolerance = 0.00001;
+
+            optimization_error_tolerance = Convert.ToDouble(textBox3.Text);
 
             int counter_Excel = 4;
 
@@ -1227,12 +1235,12 @@ namespace RefPropWindowsForms
                     //Simple Brayton power cycle
                     if (puntero_aplicacion.checkBox2.Checked == true)
                     {                        
-                        using (var solver = new NLoptSolver(algorithm_type, 1, 0.01, 10000))
+                        using (var solver = new NLoptSolver(algorithm_type, 1, optimization_error_tolerance, 10000))
                         {
                             solver.SetLowerBounds(new[] { initial_Pressure_value });
                             solver.SetUpperBounds(new[] { 125000.0 });
 
-                            solver.SetInitialStepSize(new[] { 200.0 });
+                            solver.SetInitialStepSize(new[] { 50.0 });
 
                             var initialValue = new[] { initial_Pressure_value };
 
@@ -1457,14 +1465,14 @@ namespace RefPropWindowsForms
                     //Recompression Brayton power cycle
                     else if (puntero_aplicacion.checkBox2.Checked == false)
                     {                        
-                        using (var solver = new NLoptSolver(algorithm_type, 2, 0.01, 10000))
+                        using (var solver = new NLoptSolver(algorithm_type, 2, optimization_error_tolerance, 10000))
                         {
                             solver.SetLowerBounds(new[] { 0.1, initial_Pressure_value });
                             solver.SetUpperBounds(new[] { 1.0, 125000 });
 
-                            solver.SetInitialStepSize(new[] { 0.01, 200 });
+                            solver.SetInitialStepSize(new[] { 0.005, 100 });
 
-                            var initialValue = new[] { 0.1, initial_Pressure_value };
+                            var initialValue = new[] { 0.2, initial_Pressure_value };
 
                             Func<double[], double> funcion = delegate (double[] variables)
                             {
@@ -1855,12 +1863,12 @@ namespace RefPropWindowsForms
                     //Simple Brayton power cycle
                     if (puntero_aplicacion.checkBox2.Checked == true)
                     {
-                        using (var solver = new NLoptSolver(algorithm_type, 1, 0.01, 10000))
+                        using (var solver = new NLoptSolver(algorithm_type, 1, optimization_error_tolerance, 10000))
                         {
                             solver.SetLowerBounds(new[] { initial_Pressure_value });
                             solver.SetUpperBounds(new[] { 125000.0 });
 
-                            solver.SetInitialStepSize(new[] { 200.0 });
+                            solver.SetInitialStepSize(new[] { 50.0 });
 
                             var initialValue = new[] { initial_Pressure_value };
 
@@ -2074,14 +2082,14 @@ namespace RefPropWindowsForms
                     //Recompression Brayton power cycle
                     else if (puntero_aplicacion.checkBox2.Checked == false)
                     {                        
-                        using (var solver = new NLoptSolver(algorithm_type, 3, 0.01, 10000))
+                        using (var solver = new NLoptSolver(algorithm_type, 3, optimization_error_tolerance, 10000))
                         {
                             solver.SetLowerBounds(new[] { 0.1, initial_Pressure_value, 0.2 });
                             solver.SetUpperBounds(new[] { 1.0, 125000, 0.8 });
 
-                            solver.SetInitialStepSize(new[] { 0.05, 200, 0.05 });
+                            solver.SetInitialStepSize(new[] { 0.01, 100, 0.01 });
 
-                            var initialValue = new[] { 0.2, initial_Pressure_value, 0.2 };
+                            var initialValue = new[] { 0.2, initial_Pressure_value, 0.5 };
 
                             Func<double[], double> funcion = delegate (double[] variables)
                             {
