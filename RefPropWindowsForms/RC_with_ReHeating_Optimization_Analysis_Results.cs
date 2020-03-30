@@ -80,6 +80,31 @@ namespace RefPropWindowsForms
 
             double initial_CIP_value = 0;
 
+            double initial_recomp_frac_value = 0.2;
+
+            double initial_LT_fraction = 0.5;
+
+            double optimization_error_tolerance = 0.00001;
+
+            optimization_error_tolerance = Convert.ToDouble(textBox4.Text);
+
+            double recomp_frac_step_size = 0.005;
+
+            recomp_frac_step_size = Convert.ToDouble(textBox5.Text);
+
+            double CIP_step_size = 50.0;
+
+            CIP_step_size = Convert.ToDouble(textBox7.Text);
+
+            double LT_fraction_step_size = 0.01;
+
+            LT_fraction_step_size = Convert.ToDouble(textBox6.Text);
+
+            double ReHeating_Inlet_Pressure_step_size = 1000;
+
+            ReHeating_Inlet_Pressure_step_size = Convert.ToDouble(textBox10.Text);
+
+            //Not optimized UA
             if (checkBox2.Checked == false)
             {
                 //PureFluid
@@ -218,7 +243,7 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Cells[4, 10] = "HTR Eff.(%)";
                 xlWorkSheet1.Cells[4, 11] = "HTR Pinch(ºC)";               
 
-                using (var solver = new NLoptSolver(algorithm_type, 3, 0.01, 10000))
+                using (var solver = new NLoptSolver(algorithm_type, 3, 0.00001, 10000))
                 {
                     solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 11000 });
                     solver.SetUpperBounds(new[] { 1.0, 125000, 18000 });
@@ -388,6 +413,7 @@ namespace RefPropWindowsForms
 
             //-------------------------------------------------------------------------
 
+            //Optimized UA
             else if (checkBox2.Checked == true)
             {
                 //PureFluid
@@ -527,7 +553,7 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Cells[4, 10] = "HTR Eff.(%)";
                 xlWorkSheet1.Cells[4, 11] = "HTR Pinch(ºC)";               
 
-                using (var solver = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
+                using (var solver = new NLoptSolver(algorithm_type, 4, 0.00001, 10000))
                 {
                     solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, 11000 });
                     solver.SetUpperBounds(new[] { 1.0, 125000, 0.8, 18000 });
@@ -922,7 +948,7 @@ namespace RefPropWindowsForms
                         xlWorkSheet1.Cells[4, 19] = "LF_RHX_Pressure_Drop(bar)";
                     }
 
-                    using (var solver = new NLoptSolver(algorithm_type, 3, 0.01, 10000))
+                    using (var solver = new NLoptSolver(algorithm_type, 3, 0.00001, 10000))
                     {
                         solver.SetLowerBounds(new[] { 0.1, initial_Pressure_value, 11000 });
                         solver.SetUpperBounds(new[] { 1.0, 125000, 18000 });
@@ -1393,7 +1419,7 @@ namespace RefPropWindowsForms
                         xlWorkSheet1.Cells[4, 19] = "LF_RHX_Pressure_Drop(bar)";
                     }
 
-                    using (var solver = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
+                    using (var solver = new NLoptSolver(algorithm_type, 4, 0.00001, 10000))
                     {
                         solver.SetLowerBounds(new[] { 0.1, initial_Pressure_value, 0.2, 11000 });
                         solver.SetUpperBounds(new[] { 1.0, 125000, 0.8, 18000 });
