@@ -1657,6 +1657,7 @@
     <None Include="Resources\Config52_Ref_L_Veseley_SimpleBrayton.png" />
     <None Include="Resources\Config53_Ref_L_Veseley_Brayton.png" />
     <None Include="Resources\Forristal_receiver_model.png" />
+    <None Include="Resources\PCRC with ReHeating ICAI proposed configuration Small.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\PCRC with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Two Reheating Stages.jpg" />
@@ -1708,6 +1709,8 @@
     <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling without ReHeating_Icon.jpg" />
     <None Include="Resources\RC with PreHeating in parallel with LTR and Three Recuperators Small.jpg" />
     <None Include="Resources\PCRC without ReHeating ICAI proposed configuration Small.jpg" />
+    <None Include="Resources\RC with ReHeating ICAI proposed configuration.jpg" />
+    <None Include="Resources\RC with ReHeating ICAI proposed configuration Small.jpg" />
     <Content Include="Resources\RC with Three ReHeating Stages.jpg" />
     <Content Include="Resources\RC with Three RH Small.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />
@@ -1721,6 +1724,8 @@
     <None Include="Resources\RC without ReHeating_Icon.jpg" />
     <None Include="Resources\RC without ReHeating ICAI proposed configuration.jpg" />
     <None Include="Resources\RC without ReHeating ICAI proposed configuration Small.jpg" />
+    <None Include="Resources\RCMCI with ReHeating ICAI proposed configuration Small.jpg" />
+    <None Include="Resources\RCMCI with ReHeating ICAI proposed configuration Small luis.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\RCMCI with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Two Reheating Stages.jpg" />

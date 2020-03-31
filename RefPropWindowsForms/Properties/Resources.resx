@@ -181,14 +181,17 @@
   <data name="PCRC with Two Intercooling and Reheating Stages" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRC with Two Intercooling and Reheating Stages.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RC with ReHeating ICAI proposed configuration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RC with ReHeating ICAI proposed configuration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCRC with Two Intercooling and without RH Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRC with Two Intercooling and without RH Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCRCMCI with Two Partial Cooling with Two Intercooling with ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PHX_interface_with_BOP1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PHX_interface_with_BOP1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PCRC with ReHeating ICAI proposed configuration Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PCRC with ReHeating ICAI proposed configuration Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCRCMCI with ReHeating_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with ReHeating_Icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,8 +220,8 @@
   <data name="RCMCI with Two Intercooling and ReHeating" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RCMCI with Two Intercooling and ReHeating.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PCRCMCI with Two RH Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PCRCMCI with Two RH Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RCMCI with ReHeating ICAI proposed configuration Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RCMCI with ReHeating ICAI proposed configuration Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ED Main Inputs PTC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ED Main Inputs PTC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +229,8 @@
   <data name="PCRC with ReHeating with Three Reheating Stages" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRC with ReHeating with Three Reheating Stages.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PCRCMCI with Two Partial Cooling with Two Intercooling with Three ReHeating_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with Three ReHeating_Icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PCRC without ReHeating ICAI proposed configuration Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PCRC without ReHeating ICAI proposed configuration Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RCMCI with Two Intercooling and Two Reheating Stages Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RCMCI with Two Intercooling and Two Reheating Stages Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,8 +307,8 @@
   <data name="RCMCI with ReHeating" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RCMCI with ReHeating.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TwoDimensionHeatModel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TwoDimensionHeatModel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RC with ReHeating ICAI proposed configuration Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RC with ReHeating ICAI proposed configuration Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCRCMCI without ReHeating Small1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI without ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -327,6 +330,9 @@
   </data>
   <data name="Figure 2.RC Brayton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Figure 2.RC Brayton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TwoDimensionHeatModel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TwoDimensionHeatModel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCRCMCI with Two Partial Cooling with Two ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with Two Partial Cooling with Two ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -385,6 +391,9 @@
   <data name="PCRCMCI with Two Intercooling with ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with Two Intercooling with ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PCRCMCI with Two Partial Cooling with Two Intercooling with Three ReHeating_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with Three ReHeating_Icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCRC with ReHeating Small1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRC with ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -402,6 +411,9 @@
   </data>
   <data name="RC with Two ReHeating Stages Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RC with Two ReHeating Stages Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RCMCI with ReHeating ICAI proposed configuration Small1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RCMCI with ReHeating ICAI proposed configuration Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RC with PreHeating in parallel with HTR without ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RC with PreHeating in parallel with HTR without ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -424,8 +436,8 @@
   <data name="LF_Irradiance_Tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LF_Irradiance_Tab.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RC with Three ReHeating Stages" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RC with Three ReHeating Stages.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RCMCI without ReHeating ICAI proposed configuration Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RCMCI without ReHeating ICAI proposed configuration Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RC with ReHeating2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RC with ReHeating2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -445,6 +457,9 @@
   <data name="RC with PreHeating in parallel with LTR and HTR without ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RC with PreHeating in parallel with LTR and HTR without ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RC with Three ReHeating Stages" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RC with Three ReHeating Stages.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RCMCI with ReHeating with Two Reheating Stages Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RCMCI with ReHeating with Two Reheating Stages Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -460,11 +475,11 @@
   <data name="LF_Collector_Details_Tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LF_Collector_Details_Tab.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RCMCI without ReHeating ICAI proposed configuration Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RCMCI without ReHeating ICAI proposed configuration Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="RC with Three ReHeating Stages Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RC with Three ReHeating Stages Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PCRCMCI with Two RH Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PCRCMCI with Two RH Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SB with PreHeating in parallel with LTR and HTR without ReHeating" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SB with PreHeating in parallel with LTR and HTR without ReHeating.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -553,6 +568,9 @@
   <data name="PCRCMCI with Three ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with Three ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PHX_interface_with_BOP1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PHX_interface_with_BOP1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCRCMCI with Two Partial Cooling with Three ReHeating Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCRCMCI with Two Partial Cooling with Three ReHeating Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -574,7 +592,7 @@
   <data name="PHX_interface_with_BOP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PHX_interface_with_BOP2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PCRC without ReHeating ICAI proposed configuration Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PCRC without ReHeating ICAI proposed configuration Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RCMCI with ReHeating ICAI proposed configuration Small luis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RCMCI with ReHeating ICAI proposed configuration Small luis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
