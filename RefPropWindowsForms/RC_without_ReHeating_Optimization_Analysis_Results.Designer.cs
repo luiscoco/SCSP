@@ -865,7 +865,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(522, 20);
             this.textBox2.TabIndex = 1248;
-            this.textBox2.Text = "C:\\Users\\luiscoco\\Desktop\\SolarPaces_2020\\";
+            this.textBox2.Text = "C:\\SolarPaces_2020\\";
             // 
             // label7
             // 

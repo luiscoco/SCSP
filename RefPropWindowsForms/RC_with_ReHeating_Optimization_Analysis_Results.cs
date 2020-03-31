@@ -84,6 +84,8 @@ namespace RefPropWindowsForms
 
             double initial_LT_fraction = 0.5;
 
+            double initial_ReHeating_Inlet_Pressure = 11000;
+
             double optimization_error_tolerance = 0.00001;
 
             optimization_error_tolerance = Convert.ToDouble(textBox4.Text);
@@ -207,6 +209,7 @@ namespace RefPropWindowsForms
                 else if (comboBox19.Text == "PRAXIS")
                     algorithm_type = NLoptAlgorithm.LN_PRAXIS;
 
+                //initial_CIP_value
                 if (checkBox6.Checked == true)
                 {
                     initial_CIP_value = Convert.ToDouble(textBox1.Text);
@@ -216,9 +219,39 @@ namespace RefPropWindowsForms
                     initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
                 }
 
+                //initial_recomp_frac_value
+                if (checkBox8.Checked == true)
+                {
+                    initial_recomp_frac_value = Convert.ToDouble(textBox9.Text);
+                }
+                else
+                {
+                    initial_recomp_frac_value = 0.25;
+                }
+
+                //initial_LT_fraction
+                if (checkBox9.Checked == true)
+                {
+                    initial_LT_fraction = Convert.ToDouble(textBox8.Text);
+                }
+                else
+                {
+                    initial_LT_fraction = 0.5;
+                }
+
+                //initial_ReHeating_Inlet_Pressure
+                if (checkBox10.Checked == true)
+                {
+                    initial_ReHeating_Inlet_Pressure = Convert.ToDouble(textBox11.Text);
+                }
+                else
+                {
+                    initial_ReHeating_Inlet_Pressure = puntero_aplicacion.MixtureCriticalPressure + 4000;
+                }
+
                 xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
 
-                                         //puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox60.Text + "," + puntero_aplicacion.comboBox1.Text + "=" + puntero_aplicacion.textBox61.Text
+                //puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox60.Text + "," + puntero_aplicacion.comboBox1.Text + "=" + puntero_aplicacion.textBox61.Text
                 xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox60.Text + "," + puntero_aplicacion.comboBox1.Text + ":" + puntero_aplicacion.textBox61.Text;
                 xlWorkSheet1.Cells[1, 2] = "Pcrit(kPa)";
                 xlWorkSheet1.Cells[1, 3] = "Tcrit(ºC)";
@@ -243,14 +276,14 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Cells[4, 10] = "HTR Eff.(%)";
                 xlWorkSheet1.Cells[4, 11] = "HTR Pinch(ºC)";               
 
-                using (var solver = new NLoptSolver(algorithm_type, 3, 0.00001, 10000))
+                using (var solver = new NLoptSolver(algorithm_type, 3, optimization_error_tolerance, 10000))
                 {
                     solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 11000 });
                     solver.SetUpperBounds(new[] { 1.0, 125000, 18000 });
 
-                    solver.SetInitialStepSize(new[] { 0.01, 200, 1000 });
+                    solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, ReHeating_Inlet_Pressure_step_size });
 
-                    var initialValue = new[] { 0.1, initial_CIP_value, 11000 };
+                    var initialValue = new[] { initial_recomp_frac_value, initial_CIP_value, initial_ReHeating_Inlet_Pressure };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -518,6 +551,7 @@ namespace RefPropWindowsForms
                 else if (comboBox19.Text == "PRAXIS")
                     algorithm_type = NLoptAlgorithm.LN_PRAXIS;
 
+                //initial_CIP_value
                 if (checkBox6.Checked == true)
                 {
                     initial_CIP_value = Convert.ToDouble(textBox1.Text);
@@ -525,6 +559,36 @@ namespace RefPropWindowsForms
                 else
                 {
                     initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                }
+
+                //initial_recomp_frac_value
+                if (checkBox8.Checked == true)
+                {
+                    initial_recomp_frac_value = Convert.ToDouble(textBox9.Text);
+                }
+                else
+                {
+                    initial_recomp_frac_value = 0.25;
+                }
+
+                //initial_LT_fraction
+                if (checkBox9.Checked == true)
+                {
+                    initial_LT_fraction = Convert.ToDouble(textBox8.Text);
+                }
+                else
+                {
+                    initial_LT_fraction = 0.5;
+                }
+
+                //initial_ReHeating_Inlet_Pressure
+                if (checkBox10.Checked == true)
+                {
+                    initial_ReHeating_Inlet_Pressure = Convert.ToDouble(textBox11.Text);
+                }
+                else
+                {
+                    initial_ReHeating_Inlet_Pressure = puntero_aplicacion.MixtureCriticalPressure + 4000;
                 }
 
                 xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
@@ -553,14 +617,14 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Cells[4, 10] = "HTR Eff.(%)";
                 xlWorkSheet1.Cells[4, 11] = "HTR Pinch(ºC)";               
 
-                using (var solver = new NLoptSolver(algorithm_type, 4, 0.00001, 10000))
+                using (var solver = new NLoptSolver(algorithm_type, 4, optimization_error_tolerance, 10000))
                 {
                     solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, 11000 });
                     solver.SetUpperBounds(new[] { 1.0, 125000, 0.8, 18000 });
 
-                    solver.SetInitialStepSize(new[] { 0.05, 200, 0.05, 1000 });
+                    solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, LT_fraction_step_size, ReHeating_Inlet_Pressure_step_size });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, 0.2, 11000 };
+                    var initialValue = new[] { initial_recomp_frac_value, initial_CIP_value, initial_LT_fraction, initial_ReHeating_Inlet_Pressure };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -743,8 +807,6 @@ namespace RefPropWindowsForms
         {
             int counter = 0;
 
-            double initial_Pressure_value = 0;
-
             int counter_Excel = 4;
 
             Excel.Application xlApp1;
@@ -759,6 +821,34 @@ namespace RefPropWindowsForms
             xlWorkBook1 = xlApp1.Workbooks.Add(misValue1);
 
             xlWorkSheet1 = (Excel.Worksheet)xlWorkBook1.Worksheets.Add();
+
+            double initial_CIP_value = 0;
+
+            double initial_recomp_frac_value = 0.2;
+
+            double initial_LT_fraction = 0.5;
+
+            double initial_ReHeating_Inlet_Pressure = 11000;
+
+            double optimization_error_tolerance = 0.00001;
+
+            optimization_error_tolerance = Convert.ToDouble(textBox4.Text);
+
+            double recomp_frac_step_size = 0.005;
+
+            recomp_frac_step_size = Convert.ToDouble(textBox5.Text);
+
+            double CIP_step_size = 50.0;
+
+            CIP_step_size = Convert.ToDouble(textBox7.Text);
+
+            double LT_fraction_step_size = 0.01;
+
+            LT_fraction_step_size = Convert.ToDouble(textBox6.Text);
+
+            double ReHeating_Inlet_Pressure_step_size = 1000;
+
+            ReHeating_Inlet_Pressure_step_size = Convert.ToDouble(textBox10.Text);
 
             //xlWorkSheet1 = (Excel.Worksheet)xlWorkBook1.Worksheets.get_Item(xlWorkBook1.Worksheets.Count);    
 
@@ -906,11 +996,51 @@ namespace RefPropWindowsForms
                     {                       
                         if (checkBox6.Checked == true)
                         {
-                            initial_Pressure_value = Convert.ToDouble(textBox1.Text);
+                            initial_CIP_value = Convert.ToDouble(textBox1.Text);
                         }
                         else
                         {
-                            initial_Pressure_value = puntero_aplicacion.MixtureCriticalPressure;
+                            initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                        }
+
+                        //initial_CIP_value
+                        if (checkBox6.Checked == true)
+                        {
+                            initial_CIP_value = Convert.ToDouble(textBox1.Text);
+                        }
+                        else
+                        {
+                            initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                        }
+
+                        //initial_recomp_frac_value
+                        if (checkBox8.Checked == true)
+                        {
+                            initial_recomp_frac_value = Convert.ToDouble(textBox9.Text);
+                        }
+                        else
+                        {
+                            initial_recomp_frac_value = 0.25;
+                        }
+
+                        //initial_LT_fraction
+                        if (checkBox9.Checked == true)
+                        {
+                            initial_LT_fraction = Convert.ToDouble(textBox8.Text);
+                        }
+                        else
+                        {
+                            initial_LT_fraction = 0.5;
+                        }
+
+                        //initial_ReHeating_Inlet_Pressure
+                        if (checkBox10.Checked == true)
+                        {
+                            initial_ReHeating_Inlet_Pressure = Convert.ToDouble(textBox11.Text);
+                        }
+                        else
+                        {
+                            initial_ReHeating_Inlet_Pressure = puntero_aplicacion.MixtureCriticalPressure + 4000;
                         }
 
                         xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
@@ -948,14 +1078,14 @@ namespace RefPropWindowsForms
                         xlWorkSheet1.Cells[4, 19] = "LF_RHX_Pressure_Drop(bar)";
                     }
 
-                    using (var solver = new NLoptSolver(algorithm_type, 3, 0.00001, 10000))
+                    using (var solver = new NLoptSolver(algorithm_type, 3, optimization_error_tolerance, 10000))
                     {
-                        solver.SetLowerBounds(new[] { 0.1, initial_Pressure_value, 11000 });
+                        solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 11000 });
                         solver.SetUpperBounds(new[] { 1.0, 125000, 18000 });
 
-                        solver.SetInitialStepSize(new[] { 0.01, 200, 1000 });
+                        solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, ReHeating_Inlet_Pressure_step_size });
 
-                        var initialValue = new[] { 0.1, initial_Pressure_value, 11000 };
+                        var initialValue = new[] { initial_recomp_frac_value, initial_CIP_value, initial_ReHeating_Inlet_Pressure };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -1231,7 +1361,7 @@ namespace RefPropWindowsForms
 
                         counter_Excel++;
 
-                        initial_Pressure_value = puntero_aplicacion.p_mc_in2;
+                        initial_CIP_value = puntero_aplicacion.p_mc_in2;
                     }
                 }
 
@@ -1377,11 +1507,51 @@ namespace RefPropWindowsForms
                     {
                         if (checkBox6.Checked == true)
                         {
-                            initial_Pressure_value = Convert.ToDouble(textBox1.Text);
+                            initial_CIP_value = Convert.ToDouble(textBox1.Text);
                         }
                         else
                         {
-                            initial_Pressure_value = puntero_aplicacion.MixtureCriticalPressure;
+                            initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                        }
+
+                        //initial_CIP_value
+                        if (checkBox6.Checked == true)
+                        {
+                            initial_CIP_value = Convert.ToDouble(textBox1.Text);
+                        }
+                        else
+                        {
+                            initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                        }
+
+                        //initial_recomp_frac_value
+                        if (checkBox8.Checked == true)
+                        {
+                            initial_recomp_frac_value = Convert.ToDouble(textBox9.Text);
+                        }
+                        else
+                        {
+                            initial_recomp_frac_value = 0.25;
+                        }
+
+                        //initial_LT_fraction
+                        if (checkBox9.Checked == true)
+                        {
+                            initial_LT_fraction = Convert.ToDouble(textBox8.Text);
+                        }
+                        else
+                        {
+                            initial_LT_fraction = 0.5;
+                        }
+
+                        //initial_ReHeating_Inlet_Pressure
+                        if (checkBox10.Checked == true)
+                        {
+                            initial_ReHeating_Inlet_Pressure = Convert.ToDouble(textBox11.Text);
+                        }
+                        else
+                        {
+                            initial_ReHeating_Inlet_Pressure = puntero_aplicacion.MixtureCriticalPressure + 4000;
                         }
 
                         xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
@@ -1419,14 +1589,14 @@ namespace RefPropWindowsForms
                         xlWorkSheet1.Cells[4, 19] = "LF_RHX_Pressure_Drop(bar)";
                     }
 
-                    using (var solver = new NLoptSolver(algorithm_type, 4, 0.00001, 10000))
+                    using (var solver = new NLoptSolver(algorithm_type, 4, optimization_error_tolerance, 10000))
                     {
-                        solver.SetLowerBounds(new[] { 0.1, initial_Pressure_value, 0.2, 11000 });
+                        solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, 11000 });
                         solver.SetUpperBounds(new[] { 1.0, 125000, 0.8, 18000 });
 
-                        solver.SetInitialStepSize(new[] { 0.05, 200, 0.05, 1000 });
+                        solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, LT_fraction_step_size, ReHeating_Inlet_Pressure_step_size });
 
-                        var initialValue = new[] { 0.2, initial_Pressure_value, 0.2, 11000 };
+                        var initialValue = new[] { initial_recomp_frac_value, initial_CIP_value, initial_LT_fraction, initial_ReHeating_Inlet_Pressure };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -1717,7 +1887,7 @@ namespace RefPropWindowsForms
 
                         counter_Excel++;
 
-                        initial_Pressure_value = puntero_aplicacion.p_mc_in2;
+                        initial_CIP_value = puntero_aplicacion.p_mc_in2;
                     }
                 } //checkBox2.Checked (optimize UA)
             } //loop for CIT optimization analysis
@@ -1756,7 +1926,6 @@ namespace RefPropWindowsForms
             listBox17.Items.Clear();
             listBox18.Items.Clear();
         }
-
         private void RC_with_ReHeating_Optimization_Analysis_Results_Load(object sender, EventArgs e)
         {
             textBox1.Text = puntero_aplicacion.textBox59.Text;
