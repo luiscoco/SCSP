@@ -1003,6 +1003,12 @@
     <Compile Include="WizardDiez.Designer.cs">
       <DependentUpon>WizardDiez.cs</DependentUpon>
     </Compile>
+    <Compile Include="WizardDoce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardDoce.Designer.cs">
+      <DependentUpon>WizardDoce.cs</DependentUpon>
+    </Compile>
     <Compile Include="WizardDos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1393,6 +1399,9 @@
     <EmbeddedResource Include="WizardDiez.resx">
       <DependentUpon>WizardDiez.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WizardDoce.resx">
+      <DependentUpon>WizardDoce.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WizardDos.resx">
       <DependentUpon>WizardDos.cs</DependentUpon>
     </EmbeddedResource>
@@ -1634,6 +1643,7 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\RCMCI without ReHeating ICAI proposed configuration Small.jpg" />
     <None Include="Resources\TwoDimensionHeatEquation.png" />
     <None Include="Resources\TwoDimensionHeatModel.png" />
     <None Include="Resources\SB with PreHeating in parallel with LTR and HTR without ReHeating Small.jpg" />
@@ -1697,6 +1707,7 @@
     <None Include="Resources\PCRCMCI with ReHeating_Icon.jpg" />
     <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling without ReHeating_Icon.jpg" />
     <None Include="Resources\RC with PreHeating in parallel with LTR and Three Recuperators Small.jpg" />
+    <None Include="Resources\PCRC without ReHeating ICAI proposed configuration Small.jpg" />
     <Content Include="Resources\RC with Three ReHeating Stages.jpg" />
     <Content Include="Resources\RC with Three RH Small.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />
@@ -1709,6 +1720,7 @@
     <None Include="Resources\RCMCI with ReHeating with Three Reheating Stages Small.jpg" />
     <None Include="Resources\RC without ReHeating_Icon.jpg" />
     <None Include="Resources\RC without ReHeating ICAI proposed configuration.jpg" />
+    <None Include="Resources\RC without ReHeating ICAI proposed configuration Small.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\RCMCI with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Two Reheating Stages.jpg" />

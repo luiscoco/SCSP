@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.IO;
+using System.Diagnostics;
+using System.Reflection;
+
+using System.Data.Common;
+using System.Threading;
+
+using sc.net;
+
+using Excel = Microsoft.Office.Interop.Excel;
+
+namespace RefPropWindowsForms
+{
+    public partial class WizardDoce : Form
+    {
+        MainWindow puntero;
+
+        public WizardDoce(MainWindow puntero1)
+        {
+            puntero = puntero1;
+            InitializeComponent();
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RC_without_ReHeating_new_configuration_window = new RC_without_ReHeating_new_proposed_configuration();
+            puntero.RC_without_ReHeating_new_configuration_window.MdiParent = puntero;
+            puntero.RC_without_ReHeating_new_configuration_window.Show();
+        }
+    }
+}

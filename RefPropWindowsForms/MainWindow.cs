@@ -27,6 +27,8 @@ namespace RefPropWindowsForms
         public WizardNueve WizardNueve_dialog;
         public WizardDiez WizardDiez_dialog;
         public WizardOnce WizardOnce_dialog;
+        public WizardDoce WizardDoce_dialog;
+
         public AdobePDFViewer AdobePDFViewer_dialog;
         public ChartsExample ChartsExample_dialog;
         public Receiver_Forristall Receiver_Forristall_dialog;
@@ -743,6 +745,13 @@ namespace RefPropWindowsForms
             WizardOnce_dialog = new WizardOnce(this);
             WizardOnce_dialog.MdiParent = this;
             WizardOnce_dialog.Show();
+        }
+
+        private void configurations5257ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WizardDoce_dialog = new WizardDoce(this);
+            WizardDoce_dialog.MdiParent = this;
+            WizardDoce_dialog.Show();
         }
 
         private void adobePDFViewerToolStripMenuItem_Click(object sender, EventArgs e)
