@@ -39,6 +39,10 @@ namespace RefPropWindowsForms
         public RC_without_ReHeating_new_proposed_configuration RC_without_ReHeating_new_configuration_window;
         public PCRC_without_ReHeating_new_proposed_configuration PCRC_without_ReHeating_new_proposed_configuration_window;
         public RCMCI_without_ReHeating_new_proposed_configuration RCMCI_without_ReHeating_new_proposed_configuration_window;
+
+        public RC_withReHeating_new_proposed_configuration RC_withReHeating_new_configuration_window;
+
+
         public Effec_Recomp_Fract Sensing_Effec_Recomp_Frac;
         public Effec_CIT Sensing_Effect_CIT;
         public Effec_TIP Sensing_Effect_TIP;
