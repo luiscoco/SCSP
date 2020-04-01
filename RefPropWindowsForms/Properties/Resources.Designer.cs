@@ -483,6 +483,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PCRC_without_ReHeating_ICAI_proposed_configuration {
+            get {
+                object obj = ResourceManager.GetObject("PCRC without ReHeating ICAI proposed configuration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRC_without_ReHeating_ICAI_proposed_configuration_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRC without ReHeating ICAI proposed configuration Small", resourceCulture);
@@ -1478,6 +1488,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap RCMCI_without_ReHeating {
             get {
                 object obj = ResourceManager.GetObject("RCMCI without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RCMCI_without_ReHeating_ICAI_proposed_configuration {
+            get {
+                object obj = ResourceManager.GetObject("RCMCI without ReHeating ICAI proposed configuration", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -34,5 +34,19 @@ namespace RefPropWindowsForms
             puntero.RC_without_ReHeating_new_configuration_window.MdiParent = puntero;
             puntero.RC_without_ReHeating_new_configuration_window.Show();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RCMCI_without_ReHeating_new_proposed_configuration_window = new RCMCI_without_ReHeating_new_proposed_configuration();
+            puntero.RCMCI_without_ReHeating_new_proposed_configuration_window.MdiParent = puntero;
+            puntero.RCMCI_without_ReHeating_new_proposed_configuration_window.Show();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.PCRC_without_ReHeating_new_proposed_configuration_window = new PCRC_without_ReHeating_new_proposed_configuration();
+            puntero.PCRC_without_ReHeating_new_proposed_configuration_window.MdiParent = puntero;
+            puntero.PCRC_without_ReHeating_new_proposed_configuration_window.Show();
+        }
     }
 }

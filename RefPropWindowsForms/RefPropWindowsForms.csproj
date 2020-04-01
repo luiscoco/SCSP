@@ -627,6 +627,12 @@
     <Compile Include="PCRC_without_ReHeating.Designer.cs">
       <DependentUpon>PCRC_without_ReHeating.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCRC_without_ReHeating_new_proposed_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_without_ReHeating_new_proposed_configuration.Designer.cs">
+      <DependentUpon>PCRC_without_ReHeating_new_proposed_configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCRC_without_ReHeating_Optimization_Analysis_Results.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -757,6 +763,12 @@
     </Compile>
     <Compile Include="RCMCI_without_ReHeating.Designer.cs">
       <DependentUpon>RCMCI_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_without_ReHeating_new_proposed_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_without_ReHeating_new_proposed_configuration.Designer.cs">
+      <DependentUpon>RCMCI_without_ReHeating_new_proposed_configuration.cs</DependentUpon>
     </Compile>
     <Compile Include="RCMCI_without_ReHeating_Optimization_Analysis_Results.cs">
       <SubType>Form</SubType>
@@ -1210,6 +1222,9 @@
     <EmbeddedResource Include="PCRC_without_ReHeating.resx">
       <DependentUpon>PCRC_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_without_ReHeating_new_proposed_configuration.resx">
+      <DependentUpon>PCRC_without_ReHeating_new_proposed_configuration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCRC_without_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>PCRC_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
@@ -1273,6 +1288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_without_ReHeating.resx">
       <DependentUpon>RCMCI_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_without_ReHeating_new_proposed_configuration.resx">
+      <DependentUpon>RCMCI_without_ReHeating_new_proposed_configuration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_without_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>RCMCI_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
@@ -1643,6 +1661,7 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\RCMCI without ReHeating ICAI proposed configuration.jpg" />
     <None Include="Resources\RCMCI without ReHeating ICAI proposed configuration Small.jpg" />
     <None Include="Resources\TwoDimensionHeatEquation.png" />
     <None Include="Resources\TwoDimensionHeatModel.png" />
@@ -1711,6 +1730,7 @@
     <None Include="Resources\PCRC without ReHeating ICAI proposed configuration Small.jpg" />
     <None Include="Resources\RC with ReHeating ICAI proposed configuration.jpg" />
     <None Include="Resources\RC with ReHeating ICAI proposed configuration Small.jpg" />
+    <None Include="Resources\PCRC without ReHeating ICAI proposed configuration.jpg" />
     <Content Include="Resources\RC with Three ReHeating Stages.jpg" />
     <Content Include="Resources\RC with Three RH Small.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />

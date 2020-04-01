@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hwLIaDGclkIjnaG3aQSyl2mSzDg11DaITTWoJEXj0+E=</dsig:DigestValue>
+        <dsig:DigestValue>Ys7s7OYZJK395a7fC7UVoDqlMUZ/TcJXI6W4Iaz+SFY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -138,14 +138,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="17951192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="18180568">
       <assemblyIdentity name="RefPropWindowsForms" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fn1NjIlzbRGuUOINxxwpV3c2SYXyaePDJeTxUkhtb3I=</dsig:DigestValue>
+        <dsig:DigestValue>g+3V8w2TYQ+OIGBrvd5e0jbb/4DnDsr36fqFgv9MdcY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
