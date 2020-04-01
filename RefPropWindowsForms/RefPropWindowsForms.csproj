@@ -639,6 +639,12 @@
     <Compile Include="PCRC_without_ReHeating_Optimization_Analysis_Results.Designer.cs">
       <DependentUpon>PCRC_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCRC_withReHeating_new_proposed_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_withReHeating_new_proposed_configuration.Designer.cs">
+      <DependentUpon>PCRC_withReHeating_new_proposed_configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCRC_with_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1234,6 +1240,9 @@
     <EmbeddedResource Include="PCRC_without_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>PCRC_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_withReHeating_new_proposed_configuration.resx">
+      <DependentUpon>PCRC_withReHeating_new_proposed_configuration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCRC_with_ReHeating.resx">
       <DependentUpon>PCRC_with_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
@@ -1686,6 +1695,7 @@
     <None Include="Resources\Config53_Ref_L_Veseley_Brayton.png" />
     <None Include="Resources\Forristal_receiver_model.png" />
     <None Include="Resources\PCRC with ReHeating ICAI proposed configuration Small.jpg" />
+    <None Include="Resources\PCRC with ReHeating ICAI proposed configuration.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\PCRC with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Two Reheating Stages.jpg" />

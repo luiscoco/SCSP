@@ -41,6 +41,7 @@ namespace RefPropWindowsForms
         public RCMCI_without_ReHeating_new_proposed_configuration RCMCI_without_ReHeating_new_proposed_configuration_window;
 
         public RC_withReHeating_new_proposed_configuration RC_withReHeating_new_configuration_window;
+        public PCRC_withReHeating_new_proposed_configuration PCRC_withReHeating_new_configuration_window;
 
 
         public Effec_Recomp_Fract Sensing_Effec_Recomp_Frac;
