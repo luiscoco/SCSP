@@ -437,13 +437,13 @@ namespace RefPropWindowsForms
             Double dp2_ht2 = Convert.ToDouble(textBox25.Text);
             Double dp2_pc2 = Convert.ToDouble(textBox11.Text);
             Double dp2_phx1 = Convert.ToDouble(textBox10.Text);
-            Double dp2_rhx1 = Convert.ToDouble(textBox9.Text);
+            Double dp2_rhx1 = dp2_phx1;
 
             Double recomp_frac = Convert.ToDouble(textBox15.Text);
             Double eta_mc2 = Convert.ToDouble(textBox14.Text);
             Double eta_rc2 = Convert.ToDouble(textBox13.Text);
             Double eta_t2 = Convert.ToDouble(textBox19.Text);
-            Double eta_trh2 = Convert.ToDouble(textBox18.Text);
+            Double eta_trh2 = eta_t2;
             long n_sub_hxrs2 = Convert.ToInt64(textBox20.Text);
             Double tol2 = Convert.ToDouble(textBox21.Text);
 
@@ -751,6 +751,7 @@ namespace RefPropWindowsForms
             //toolTip11.SetToolTip(label64, point11_state);
             //toolTip12.SetToolTip(label68, point12_state);
 
+            //High temperature CheckBox for not calculations the Solar Fields
             if (checkBox1.Checked == false)
             {
 
@@ -984,8 +985,6 @@ namespace RefPropWindowsForms
             textBox11.Text = "0.0";
             //dp2_phx2 = Convert.ToDouble(textBox10.Text);
             textBox10.Text = "0.0";
-            //dp2_rhx2 = Convert.ToDouble(textBox9.Text);
-            textBox9.Text = "0.0";
             //recomp_frac2 = Convert.ToDouble(textBox15.Text);
             textBox15.Text = "0.25";
             //eta_mc2 = Convert.ToDouble(textBox14.Text);
@@ -993,9 +992,7 @@ namespace RefPropWindowsForms
             //eta_rc2 = Convert.ToDouble(textBox13.Text);
             textBox13.Text = "0.89";
             //eta_t2 = Convert.ToDouble(textBox19.Text);
-            textBox19.Text = "0.93";
-            //eta_trh2 = Convert.ToDouble(textBox18.Text);
-            textBox18.Text = "0.93";
+            textBox19.Text = "0.93";           
             //n_sub_hxrs2 = Convert.ToInt64(textBox20.Text);
             textBox20.Text = "15";
             //tol2 = Convert.ToDouble(textBox21.Text);

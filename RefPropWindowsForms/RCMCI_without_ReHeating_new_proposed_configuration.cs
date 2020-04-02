@@ -447,8 +447,8 @@ namespace RefPropWindowsForms
             p_mc1_out2 = Convert.ToDouble(textBox8.Text);
             p_mc2_in2 = Convert.ToDouble(textBox23.Text);
             p_mc2_out2 = Convert.ToDouble(textBox22.Text);
-            p_rhx_in2 = Convert.ToDouble(textBox7.Text);
-            t_rht_in2 = Convert.ToDouble(textBox6.Text);
+            p_rhx_in2 = p_mc1_in2;
+            t_rht_in2 = t_t_in2;
             ua_lt2 = Convert.ToDouble(textBox17.Text);
             ua_ht2 = Convert.ToDouble(textBox16.Text);
             recomp_frac2 = Convert.ToDouble(textBox15.Text);
@@ -456,7 +456,7 @@ namespace RefPropWindowsForms
             eta2_mc2 = Convert.ToDouble(textBox27.Text);
             eta_rc2 = Convert.ToDouble(textBox13.Text);
             eta_t2 = Convert.ToDouble(textBox19.Text);
-            eta_trh2 = Convert.ToDouble(textBox18.Text);
+            eta_trh2 = eta_t2;
             n_sub_hxrs2 = Convert.ToInt64(textBox20.Text);
             tol2 = Convert.ToDouble(textBox21.Text);
             dp2_lt1 = Convert.ToDouble(textBox5.Text);
@@ -464,14 +464,141 @@ namespace RefPropWindowsForms
             dp11_pc1 = Convert.ToDouble(textBox11.Text);
             dp11_pc2 = Convert.ToDouble(textBox24.Text);
             dp2_phx1 = Convert.ToDouble(textBox10.Text);
-            dp2_rhx1 = Convert.ToDouble(textBox9.Text);
+            dp2_rhx1 = dp2_phx1;
             dp2_lt2 = Convert.ToDouble(textBox26.Text);
             dp2_ht2 = Convert.ToDouble(textBox25.Text);
 
             core.RCMCIwithReheating cicloRCMCI_withRH = new core.RCMCIwithReheating();
 
-            luis.RecompCycle_RCMCI_with_Reheating(luis, ref cicloRCMCI_withRH, w_dot_net2,
+            //PRIMERA LLAMADA
+            luis.RecompCycle_RCMCI_without_Reheating_newproposed(luis, ref cicloRCMCI_withRH, w_dot_net2,
             t_mc2_in2, t_t_in2, t_rht_in2, p_rhx_in2, p_mc2_in2, p_mc2_out2, p_mc1_in2, t_mc1_in2, p_mc1_out2,
+            ua_lt2, ua_ht2, eta2_mc2, eta_rc2, eta1_mc2, eta_t2, eta_trh2, n_sub_hxrs2,
+            recomp_frac2, tol2, eta_thermal2, -dp2_lt1, -dp2_lt2, -dp2_ht1, -dp2_ht2,
+            -dp11_pc1, -dp12_pc1, -dp2_phx1, -dp2_phx2, -dp2_rhx1, -dp2_rhx2, -dp11_pc2, -dp12_pc2);
+
+            massflow2 = cicloRCMCI_withRH.m_dot_turbine;
+            w_dot_net2 = cicloRCMCI_withRH.W_dot_net;
+            eta_thermal2 = cicloRCMCI_withRH.eta_thermal;
+            recomp_frac2 = cicloRCMCI_withRH.recomp_frac;
+
+            temp21 = cicloRCMCI_withRH.temp[0];
+            temp22 = cicloRCMCI_withRH.temp[1];
+            temp23 = cicloRCMCI_withRH.temp[2];
+            temp24 = cicloRCMCI_withRH.temp[3];
+            temp25 = cicloRCMCI_withRH.temp[4];
+            temp26 = cicloRCMCI_withRH.temp[5];
+            temp27 = cicloRCMCI_withRH.temp[6];
+            temp28 = cicloRCMCI_withRH.temp[7];
+            temp29 = cicloRCMCI_withRH.temp[8];
+            temp210 = cicloRCMCI_withRH.temp[9];
+            temp211 = cicloRCMCI_withRH.temp[10];
+            temp212 = cicloRCMCI_withRH.temp[11];
+            temp213 = cicloRCMCI_withRH.temp[12];
+            temp214 = cicloRCMCI_withRH.temp[13];
+
+            pres21 = cicloRCMCI_withRH.pres[0];
+            pres22 = cicloRCMCI_withRH.pres[1];
+            pres23 = cicloRCMCI_withRH.pres[2];
+            pres24 = cicloRCMCI_withRH.pres[3];
+            pres25 = cicloRCMCI_withRH.pres[4];
+            pres26 = cicloRCMCI_withRH.pres[5];
+            pres27 = cicloRCMCI_withRH.pres[6];
+            pres28 = cicloRCMCI_withRH.pres[7];
+            pres29 = cicloRCMCI_withRH.pres[8];
+            pres210 = cicloRCMCI_withRH.pres[9];
+            pres211 = cicloRCMCI_withRH.pres[10];
+            pres212 = cicloRCMCI_withRH.pres[11];
+            pres213 = cicloRCMCI_withRH.pres[12];
+            pres214 = cicloRCMCI_withRH.pres[13];
+
+            //SEGUNDA LLAMADA
+            luis.RecompCycle_RCMCI_without_Reheating_newproposed(luis, ref cicloRCMCI_withRH, w_dot_net2,
+            t_mc2_in2, temp25, t_rht_in2, p_rhx_in2, p_mc2_in2, p_mc2_out2, p_mc1_in2, t_mc1_in2, p_mc1_out2,
+            ua_lt2, ua_ht2, eta2_mc2, eta_rc2, eta1_mc2, eta_t2, eta_trh2, n_sub_hxrs2,
+            recomp_frac2, tol2, eta_thermal2, -dp2_lt1, -dp2_lt2, -dp2_ht1, -dp2_ht2,
+            -dp11_pc1, -dp12_pc1, -dp2_phx1, -dp2_phx2, -dp2_rhx1, -dp2_rhx2, -dp11_pc2, -dp12_pc2);
+
+            massflow2 = cicloRCMCI_withRH.m_dot_turbine;
+            w_dot_net2 = cicloRCMCI_withRH.W_dot_net;
+            eta_thermal2 = cicloRCMCI_withRH.eta_thermal;
+            recomp_frac2 = cicloRCMCI_withRH.recomp_frac;
+
+            temp21 = cicloRCMCI_withRH.temp[0];
+            temp22 = cicloRCMCI_withRH.temp[1];
+            temp23 = cicloRCMCI_withRH.temp[2];
+            temp24 = cicloRCMCI_withRH.temp[3];
+            temp25 = cicloRCMCI_withRH.temp[4];
+            temp26 = cicloRCMCI_withRH.temp[5];
+            temp27 = cicloRCMCI_withRH.temp[6];
+            temp28 = cicloRCMCI_withRH.temp[7];
+            temp29 = cicloRCMCI_withRH.temp[8];
+            temp210 = cicloRCMCI_withRH.temp[9];
+            temp211 = cicloRCMCI_withRH.temp[10];
+            temp212 = cicloRCMCI_withRH.temp[11];
+            temp213 = cicloRCMCI_withRH.temp[12];
+            temp214 = cicloRCMCI_withRH.temp[13];
+
+            pres21 = cicloRCMCI_withRH.pres[0];
+            pres22 = cicloRCMCI_withRH.pres[1];
+            pres23 = cicloRCMCI_withRH.pres[2];
+            pres24 = cicloRCMCI_withRH.pres[3];
+            pres25 = cicloRCMCI_withRH.pres[4];
+            pres26 = cicloRCMCI_withRH.pres[5];
+            pres27 = cicloRCMCI_withRH.pres[6];
+            pres28 = cicloRCMCI_withRH.pres[7];
+            pres29 = cicloRCMCI_withRH.pres[8];
+            pres210 = cicloRCMCI_withRH.pres[9];
+            pres211 = cicloRCMCI_withRH.pres[10];
+            pres212 = cicloRCMCI_withRH.pres[11];
+            pres213 = cicloRCMCI_withRH.pres[12];
+            pres214 = cicloRCMCI_withRH.pres[13];
+
+            //Tercera LLAMADA
+            luis.RecompCycle_RCMCI_without_Reheating_newproposed(luis, ref cicloRCMCI_withRH, w_dot_net2,
+            t_mc2_in2, temp25, t_rht_in2, p_rhx_in2, p_mc2_in2, p_mc2_out2, p_mc1_in2, t_mc1_in2, p_mc1_out2,
+            ua_lt2, ua_ht2, eta2_mc2, eta_rc2, eta1_mc2, eta_t2, eta_trh2, n_sub_hxrs2,
+            recomp_frac2, tol2, eta_thermal2, -dp2_lt1, -dp2_lt2, -dp2_ht1, -dp2_ht2,
+            -dp11_pc1, -dp12_pc1, -dp2_phx1, -dp2_phx2, -dp2_rhx1, -dp2_rhx2, -dp11_pc2, -dp12_pc2);
+
+            massflow2 = cicloRCMCI_withRH.m_dot_turbine;
+            w_dot_net2 = cicloRCMCI_withRH.W_dot_net;
+            eta_thermal2 = cicloRCMCI_withRH.eta_thermal;
+            recomp_frac2 = cicloRCMCI_withRH.recomp_frac;
+
+            temp21 = cicloRCMCI_withRH.temp[0];
+            temp22 = cicloRCMCI_withRH.temp[1];
+            temp23 = cicloRCMCI_withRH.temp[2];
+            temp24 = cicloRCMCI_withRH.temp[3];
+            temp25 = cicloRCMCI_withRH.temp[4];
+            temp26 = cicloRCMCI_withRH.temp[5];
+            temp27 = cicloRCMCI_withRH.temp[6];
+            temp28 = cicloRCMCI_withRH.temp[7];
+            temp29 = cicloRCMCI_withRH.temp[8];
+            temp210 = cicloRCMCI_withRH.temp[9];
+            temp211 = cicloRCMCI_withRH.temp[10];
+            temp212 = cicloRCMCI_withRH.temp[11];
+            temp213 = cicloRCMCI_withRH.temp[12];
+            temp214 = cicloRCMCI_withRH.temp[13];
+
+            pres21 = cicloRCMCI_withRH.pres[0];
+            pres22 = cicloRCMCI_withRH.pres[1];
+            pres23 = cicloRCMCI_withRH.pres[2];
+            pres24 = cicloRCMCI_withRH.pres[3];
+            pres25 = cicloRCMCI_withRH.pres[4];
+            pres26 = cicloRCMCI_withRH.pres[5];
+            pres27 = cicloRCMCI_withRH.pres[6];
+            pres28 = cicloRCMCI_withRH.pres[7];
+            pres29 = cicloRCMCI_withRH.pres[8];
+            pres210 = cicloRCMCI_withRH.pres[9];
+            pres211 = cicloRCMCI_withRH.pres[10];
+            pres212 = cicloRCMCI_withRH.pres[11];
+            pres213 = cicloRCMCI_withRH.pres[12];
+            pres214 = cicloRCMCI_withRH.pres[13];
+
+            //Cuarta LLAMADA
+            luis.RecompCycle_RCMCI_without_Reheating_newproposed(luis, ref cicloRCMCI_withRH, w_dot_net2,
+            t_mc2_in2, temp25, t_rht_in2, p_rhx_in2, p_mc2_in2, p_mc2_out2, p_mc1_in2, t_mc1_in2, p_mc1_out2,
             ua_lt2, ua_ht2, eta2_mc2, eta_rc2, eta1_mc2, eta_t2, eta_trh2, n_sub_hxrs2,
             recomp_frac2, tol2, eta_thermal2, -dp2_lt1, -dp2_lt2, -dp2_ht1, -dp2_ht2,
             -dp11_pc1, -dp12_pc1, -dp2_phx1, -dp2_phx2, -dp2_rhx1, -dp2_rhx2, -dp11_pc2, -dp12_pc2);
@@ -516,30 +643,27 @@ namespace RefPropWindowsForms
             textBox45.Text = Convert.ToString(temp23);
             textBox44.Text = Convert.ToString(temp24);
             textBox43.Text = Convert.ToString(temp25);
-            textBox42.Text = Convert.ToString(temp26);
-            textBox39.Text = Convert.ToString(temp27);
-            textBox38.Text = Convert.ToString(temp28);
-            textBox37.Text = Convert.ToString(temp29);
-            textBox29.Text = Convert.ToString(temp210);
-            textBox57.Text = Convert.ToString(temp211);
-            textBox56.Text = Convert.ToString(temp212);
-            textBox65.Text = Convert.ToString(temp213);
-            textBox64.Text = Convert.ToString(temp214);
+            textBox42.Text = Convert.ToString(temp211);
+            textBox35.Text = Convert.ToString(temp27);
+            textBox18.Text = Convert.ToString(temp28);
+            textBox7.Text = Convert.ToString(temp29);
+            textBox6.Text = Convert.ToString(temp210);
+            textBox57.Text = Convert.ToString(temp213);
+            textBox56.Text = Convert.ToString(temp214);
 
-            textBox63.Text = Convert.ToString(pres21);
-            textBox62.Text = Convert.ToString(pres22);
-            textBox61.Text = Convert.ToString(pres23);
-            textBox60.Text = Convert.ToString(pres24);
-            textBox55.Text = Convert.ToString(pres25);
-            textBox54.Text = Convert.ToString(pres26);
-            textBox53.Text = Convert.ToString(pres27);
-            textBox52.Text = Convert.ToString(pres28);
-            textBox41.Text = Convert.ToString(pres29);
-            textBox40.Text = Convert.ToString(pres210);
-            textBox59.Text = Convert.ToString(pres211);
-            textBox58.Text = Convert.ToString(pres212);
-            textBox67.Text = Convert.ToString(pres213);
-            textBox66.Text = Convert.ToString(pres214);
+            textBox54.Text = Convert.ToString(pres21);
+            textBox53.Text = Convert.ToString(pres22);
+            textBox52.Text = Convert.ToString(pres23);
+            textBox9.Text = Convert.ToString(pres24);
+            textBox37.Text = Convert.ToString(pres25);
+            textBox36.Text = Convert.ToString(pres211);
+            textBox41.Text = Convert.ToString(pres27);
+            textBox40.Text = Convert.ToString(pres28);
+            textBox39.Text = Convert.ToString(pres29);
+            textBox38.Text = Convert.ToString(pres210);
+            textBox59.Text = Convert.ToString(pres213);
+            textBox58.Text = Convert.ToString(pres214);
+
 
             String point1_state, point2_state, point3_state, point4_state, point5_state, point6_state;
             String point7_state, point8_state, point9_state, point10_state, point11_state, point12_state, point13_state, point14_state;
@@ -592,13 +716,13 @@ namespace RefPropWindowsForms
             enth212 = luis.working_fluid.Enthalpy;
             entr212 = luis.working_fluid.Entropy;
 
-            luis.working_fluid.FindStateWithTP(temp213, pres213);
-            enth213 = luis.working_fluid.Enthalpy;
-            entr213 = luis.working_fluid.Entropy;
+            //luis.working_fluid.FindStateWithTP(temp213, pres213);
+            //enth213 = luis.working_fluid.Enthalpy;
+            //entr213 = luis.working_fluid.Entropy;
 
-            luis.working_fluid.FindStateWithTP(temp214, pres214);
-            enth214 = luis.working_fluid.Enthalpy;
-            entr214 = luis.working_fluid.Entropy;
+            //luis.working_fluid.FindStateWithTP(temp214, pres214);
+            //enth214 = luis.working_fluid.Enthalpy;
+            //entr214 = luis.working_fluid.Entropy;
 
             point1_state = "Pressure (kPa):" + Convert.ToString(pres21) + Environment.NewLine +
                           "Temperature (K):" + Convert.ToString(temp21) + Environment.NewLine +
@@ -660,15 +784,15 @@ namespace RefPropWindowsForms
                       "Entalphy (kJ/kg):" + Convert.ToString(enth212) + Environment.NewLine +
                       "Entrophy (kJ/kg K):" + Convert.ToString(entr212) + Environment.NewLine;
 
-            point13_state = "Pressure (kPa):" + Convert.ToString(pres213) + Environment.NewLine +
-                      "Temperature (K):" + Convert.ToString(temp213) + Environment.NewLine +
-                      "Entalphy (kJ/kg):" + Convert.ToString(enth213) + Environment.NewLine +
-                      "Entrophy (kJ/kg K):" + Convert.ToString(entr213) + Environment.NewLine;
+            //point13_state = "Pressure (kPa):" + Convert.ToString(pres213) + Environment.NewLine +
+            //          "Temperature (K):" + Convert.ToString(temp213) + Environment.NewLine +
+            //          "Entalphy (kJ/kg):" + Convert.ToString(enth213) + Environment.NewLine +
+            //          "Entrophy (kJ/kg K):" + Convert.ToString(entr213) + Environment.NewLine;
 
-            point14_state = "Pressure (kPa):" + Convert.ToString(pres214) + Environment.NewLine +
-                      "Temperature (K):" + Convert.ToString(temp214) + Environment.NewLine +
-                      "Entalphy (kJ/kg):" + Convert.ToString(enth214) + Environment.NewLine +
-                      "Entrophy (kJ/kg K):" + Convert.ToString(entr214) + Environment.NewLine;
+            //point14_state = "Pressure (kPa):" + Convert.ToString(pres214) + Environment.NewLine +
+            //          "Temperature (K):" + Convert.ToString(temp214) + Environment.NewLine +
+            //          "Entalphy (kJ/kg):" + Convert.ToString(enth214) + Environment.NewLine +
+            //          "Entrophy (kJ/kg K):" + Convert.ToString(entr214) + Environment.NewLine;
 
             textBox48.Text = Convert.ToString(w_dot_net2);
             textBox49.Text = Convert.ToString(massflow2);

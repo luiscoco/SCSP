@@ -150,8 +150,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -246,8 +244,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
@@ -1934,15 +1930,13 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.textBox11);
             this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox9);
             this.groupBox1.Controls.Add(this.textBox26);
             this.groupBox1.Controls.Add(this.textBox25);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Location = new System.Drawing.Point(162, 503);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(178, 141);
+            this.groupBox1.Size = new System.Drawing.Size(178, 124);
             this.groupBox1.TabIndex = 1361;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
@@ -2014,23 +2008,6 @@
             this.textBox10.Size = new System.Drawing.Size(36, 20);
             this.textBox10.TabIndex = 29;
             this.textBox10.Text = "0.0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(41, 121);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 13);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "DP_RHX (kPa):";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(129, 116);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(36, 20);
-            this.textBox9.TabIndex = 31;
-            this.textBox9.Text = "0.0";
             // 
             // textBox26
             // 
@@ -2179,7 +2156,7 @@
             // 
             // textBox52
             // 
-            this.textBox52.Location = new System.Drawing.Point(112, 592);
+            this.textBox52.Location = new System.Drawing.Point(112, 570);
             this.textBox52.Name = "textBox52";
             this.textBox52.Size = new System.Drawing.Size(34, 20);
             this.textBox52.TabIndex = 1347;
@@ -2187,7 +2164,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(21, 594);
+            this.label56.Location = new System.Drawing.Point(21, 572);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(81, 13);
             this.label56.TabIndex = 1346;
@@ -2783,7 +2760,7 @@
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(112, 615);
+            this.textBox21.Location = new System.Drawing.Point(112, 593);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(44, 20);
             this.textBox21.TabIndex = 1267;
@@ -2792,7 +2769,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(77, 618);
+            this.label24.Location = new System.Drawing.Point(77, 596);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(25, 13);
             this.label24.TabIndex = 1266;
@@ -2800,7 +2777,7 @@
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(112, 569);
+            this.textBox20.Location = new System.Drawing.Point(112, 547);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(34, 20);
             this.textBox20.TabIndex = 1265;
@@ -2809,28 +2786,11 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(36, 571);
+            this.label23.Location = new System.Drawing.Point(36, 549);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(66, 13);
             this.label23.TabIndex = 1264;
             this.label23.Text = "N_sub_hxrs:";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(112, 546);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(34, 20);
-            this.textBox18.TabIndex = 1263;
-            this.textBox18.Text = "0.93";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(59, 549);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(43, 13);
-            this.label21.TabIndex = 1262;
-            this.label21.Text = "eta_trh:";
             // 
             // textBox19
             // 
@@ -3237,8 +3197,6 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox13);
@@ -3396,8 +3354,6 @@
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.TextBox textBox11;
         public System.Windows.Forms.TextBox textBox10;
-        public System.Windows.Forms.Label label12;
-        public System.Windows.Forms.TextBox textBox9;
         public System.Windows.Forms.TextBox textBox26;
         public System.Windows.Forms.TextBox textBox25;
         public System.Windows.Forms.Label label25;
@@ -3493,8 +3449,6 @@
         public System.Windows.Forms.Label label24;
         public System.Windows.Forms.TextBox textBox20;
         public System.Windows.Forms.Label label23;
-        public System.Windows.Forms.TextBox textBox18;
-        public System.Windows.Forms.Label label21;
         public System.Windows.Forms.TextBox textBox19;
         public System.Windows.Forms.Label label22;
         public System.Windows.Forms.TextBox textBox13;

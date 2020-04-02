@@ -130,13 +130,13 @@ namespace RefPropWindowsForms
                 puntero_aplicacion.dp2_ht2 = Convert.ToDouble(puntero_aplicacion.textBox25.Text);
                 puntero_aplicacion.dp2_pc2 = Convert.ToDouble(puntero_aplicacion.textBox11.Text);
                 puntero_aplicacion.dp2_phx1 = Convert.ToDouble(puntero_aplicacion.textBox10.Text);
-                puntero_aplicacion.dp2_rhx1 = Convert.ToDouble(puntero_aplicacion.textBox9.Text);
+                puntero_aplicacion.dp2_rhx1 = puntero_aplicacion.dp2_phx1;
 
                 //puntero_aplicacion.recomp_frac = Convert.ToDouble(puntero_aplicacion.textBox15.Text);
                 puntero_aplicacion.eta_mc2 = Convert.ToDouble(puntero_aplicacion.textBox14.Text);
                 puntero_aplicacion.eta_rc2 = Convert.ToDouble(puntero_aplicacion.textBox13.Text);
                 puntero_aplicacion.eta_t2 = Convert.ToDouble(puntero_aplicacion.textBox19.Text);
-                puntero_aplicacion.eta_trh2 = Convert.ToDouble(puntero_aplicacion.textBox18.Text);
+                puntero_aplicacion.eta_trh2 = puntero_aplicacion.eta_t2;
                 puntero_aplicacion.n_sub_hxrs2 = Convert.ToInt64(puntero_aplicacion.textBox20.Text);
                 puntero_aplicacion.tol2 = Convert.ToDouble(puntero_aplicacion.textBox21.Text);
 
