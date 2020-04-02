@@ -1642,7 +1642,8 @@ namespace RefPropWindowsForms
 
             //Calculating Pressure 11
             if (m_DP_RHX[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]); // relative pressure drop specified for PHX
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX[1 - cpp_offset]));
+            //m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]); // relative pressure drop specified for PHX
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                             // absolute pressure drop specified for PHX
     
