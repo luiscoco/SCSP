@@ -36,13 +36,14 @@ namespace RefPropWindowsForms
         public Configuration_Form Configuration_window;
         public Recompression_Brayton_Power_Cycle RCwindow;
         public RC_Optimization RC_optimization_window;
+        
         public RC_without_ReHeating_new_proposed_configuration RC_without_ReHeating_new_configuration_window;
         public PCRC_without_ReHeating_new_proposed_configuration PCRC_without_ReHeating_new_proposed_configuration_window;
         public RCMCI_without_ReHeating_new_proposed_configuration RCMCI_without_ReHeating_new_proposed_configuration_window;
 
         public RC_withReHeating_new_proposed_configuration RC_withReHeating_new_configuration_window;
         public PCRC_withReHeating_new_proposed_configuration PCRC_withReHeating_new_configuration_window;
-
+        public RCMCI_with_ReHeating_new_proposed_configuration RCMCI_with_ReHeating_new_configuration_window;
 
         public Effec_Recomp_Fract Sensing_Effec_Recomp_Frac;
         public Effec_CIT Sensing_Effect_CIT;
