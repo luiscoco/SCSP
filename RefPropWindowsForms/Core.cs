@@ -1575,10 +1575,10 @@ namespace RefPropWindowsForms
             m_pres_last[1 - cpp_offset] = P_mc_in;
             m_pres_last[2 - cpp_offset] = m_P_mc_out;
             m_temp_last[6 - cpp_offset] = m_T_mt_in;
-            m_temp_last[12 - cpp_offset] = m_T_rt_in;
-            m_pres_last[12 - cpp_offset] = m_P_rt_in;
+            m_temp_last[12 - cpp_offset] = m_T_rt_in;           
 
             // Apply pressure drops to heat exchangers, fully defining the pressures at all stages
+            //Calculating Pressure 3
             if (m_DP_LT[1 - cpp_offset] < 0.0)
                 m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset] - m_pres_last[2 - cpp_offset] * Math.Abs(m_DP_LT[1 - cpp_offset]);     // Relative pressure drop specified for LT recuperator (cold stream)
             else
@@ -1587,56 +1587,65 @@ namespace RefPropWindowsForms
             //double UA_LT = m_UA_rec_total * m_LT_frac;
             //double UA_HT = m_UA_rec_total * (1 - m_LT_frac);
 
+            //Calculating Pressure 3
             if (UA_LT < 1E-12)
                 m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset];      // if there is no LT recuperator, there is no pressure drop
 
+            //Calculating Pressure 4
             m_pres_last[4 - cpp_offset] = m_pres_last[3 - cpp_offset];          // No pressure drop in mixing value
+            //Calculating Pressure 10
             m_pres_last[10 - cpp_offset] = m_pres_last[3 - cpp_offset];         // No pressure drop in mixing value
 
+            //Calculating Pressure 5
             if (m_DP_HT[1 - cpp_offset] < 0.0)
                 m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset] - m_pres_last[4 - cpp_offset] * Math.Abs(m_DP_HT[1 - cpp_offset]); // relative pressure drop specified for HT recuperator (cold stream)
             else
                 m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset] - m_DP_HT[1 - cpp_offset];                                // absolute pressure drop specified for HT recuperator (cold stream)
 
+            //Calculating Pressure 5
             if (UA_HT < 1E-12)
                 m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset];      // if there is no HT recuperator, there is no pressure drop
 
+            //Calculating Pressure 6
             if (m_DP_PHX[1 - cpp_offset] < 0.0)
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_pres_last[5 - cpp_offset] * Math.Abs(m_DP_PHX[1 - cpp_offset]);    // relative pressure drop specified for PHX
             else
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
-            if (m_DP_RHX[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]); // relative pressure drop specified for PHX
-            else
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                             // absolute pressure drop specified for PHX
-
+            //Calculating Pressure 9
             if (m_DP_PC[2 - cpp_offset] < 0.0)
                 m_pres_last[9 - cpp_offset] = m_pres_last[1 - cpp_offset] / (1.0 - Math.Abs(m_DP_PC[2 - cpp_offset]));           // relative pressure drop specified for precooler [P1 = P9 - P9*rel_DP => P1 = P9*(1-rel_DP)
             else
                 m_pres_last[9 - cpp_offset] = m_pres_last[1 - cpp_offset] + m_DP_PC[2 - cpp_offset];                                        // absolute pressure drop specified for precooler
 
+            //Calculating Pressure 8
             if (m_DP_LT[2 - cpp_offset] < 0.0)
                 m_pres_last[8 - cpp_offset] = m_pres_last[9 - cpp_offset] / (1.0 - Math.Abs(m_DP_LT[2 - cpp_offset]));           // relative pressure drop specified for LT recuperator (hot stream)
             else
                 m_pres_last[8 - cpp_offset] = m_pres_last[9 - cpp_offset] + m_DP_LT[2 - cpp_offset];                        // absolute pressure drop specified for LT recuperator (hot stream)
 
+            //Calculating Pressure 8
             if (UA_LT < 1E-12)
                 m_pres_last[8 - cpp_offset] = m_pres_last[9 - cpp_offset];      // if there is no LT recup, there is no pressure drop
 
+            //Calculating Pressure 7
             if (m_DP_HT[2 - cpp_offset] < 0.0)
                 m_pres_last[7 - cpp_offset] = m_pres_last[8 - cpp_offset] / (1.0 - Math.Abs(m_DP_HT[2 - cpp_offset]));           // relative pressure drop specified for HT recup
             else
                 m_pres_last[7 - cpp_offset] = m_pres_last[8 - cpp_offset] + m_DP_HT[2 - cpp_offset];                        // absolute pressure drop specified for HT recup
 
+            //Calculating Pressure 7
             if (UA_HT < 1E-12)
                 m_pres_last[7 - cpp_offset] = m_pres_last[8 - cpp_offset];
 
+            m_pres_last[12 - cpp_offset] = m_pres_last[7 - cpp_offset]; 
 
-           
-
-            // 
-
+            //Calculating Pressure 11
+            if (m_DP_RHX[1 - cpp_offset] < 0.0)
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]); // relative pressure drop specified for PHX
+            else
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                             // absolute pressure drop specified for PHX
+    
             int sub_error_code = 0;
 
             // Determine the outlet states of the main compressor and turbine and their specific works
