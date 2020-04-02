@@ -863,6 +863,7 @@
             this.button25.TabIndex = 1412;
             this.button25.Text = "Set Critical condition";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // groupBox3
             // 
@@ -1688,6 +1689,7 @@
             this.button20.TabIndex = 1364;
             this.button20.Text = "Mixture Calculation";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // groupBox2
             // 
@@ -2024,6 +2026,7 @@
             this.comboBox5.Size = new System.Drawing.Size(191, 21);
             this.comboBox5.TabIndex = 1360;
             this.comboBox5.Text = "Solar Salt";
+            this.comboBox5.SelectedValueChanged += new System.EventHandler(this.comboBox5_SelectedValueChanged);
             // 
             // label37
             // 
@@ -2128,6 +2131,7 @@
             this.button14.TabIndex = 1351;
             this.button14.Text = "RESET";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // label9
             // 
@@ -3120,6 +3124,7 @@
             this.comboBox1.Size = new System.Drawing.Size(81, 21);
             this.comboBox1.TabIndex = 1239;
             this.comboBox1.Text = "PureFluid";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 

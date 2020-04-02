@@ -4037,7 +4037,7 @@ namespace RefPropWindowsForms
 
                 xlApp = new Excel.Application();
 
-                xlWorkBook = xlApp.Workbooks.Open("C:\\SCSP_Gitlab\\RefPropWindowsForms\\bin\\Debug\\REFPROP.xls");
+                xlWorkBook = xlApp.Workbooks.Open("C:\\SCSP\\RefPropWindowsForms\\bin\\Debug\\REFPROP.xls");
 
                 xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(9);
 

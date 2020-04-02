@@ -832,7 +832,7 @@ namespace sc.net
             this.hrf = hrf;
             try
             {
-                FileName = "C:\\SCSP_Gitlab\\RefPropWindowsForms\\bin\\Debug\\mixtures\\" + FileName;
+                FileName = "C:\\SCSP\\RefPropWindowsForms\\bin\\Debug\\mixtures\\" + FileName;
                 SETMIXdll(FileName, hfmix, hrf, ref nc, hfiles, MoleFractions, ref ierr, herr, 255, 255, 3, hfiles.Length, 255);
                 if (ierr > 0) throw new Exception(ierr.ToString());
 
