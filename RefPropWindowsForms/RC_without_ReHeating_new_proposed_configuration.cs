@@ -436,8 +436,8 @@ namespace RefPropWindowsForms
             Double dp2_ht1 = Convert.ToDouble(textBox12.Text);
             Double dp2_ht2 = Convert.ToDouble(textBox25.Text);
             Double dp2_pc2 = Convert.ToDouble(textBox11.Text);
-            Double dp2_phx1 = Convert.ToDouble(textBox10.Text);
-            Double dp2_rhx1 = dp2_phx1;
+            Double dp2_phx1 = 0.0;
+            Double dp2_rhx1 = Convert.ToDouble(textBox10.Text);
 
             Double recomp_frac = Convert.ToDouble(textBox15.Text);
             Double eta_mc2 = Convert.ToDouble(textBox14.Text);

@@ -463,8 +463,8 @@ namespace RefPropWindowsForms
             dp2_ht1 = Convert.ToDouble(textBox12.Text);
             dp11_pc1 = Convert.ToDouble(textBox11.Text);
             dp11_pc2 = Convert.ToDouble(textBox24.Text);
-            dp2_phx1 = Convert.ToDouble(textBox10.Text);
-            dp2_rhx1 = dp2_phx1;
+            dp2_phx1 = 0.0;
+            dp2_rhx1 = Convert.ToDouble(textBox10.Text);
             dp2_lt2 = Convert.ToDouble(textBox26.Text);
             dp2_ht2 = Convert.ToDouble(textBox25.Text);
 

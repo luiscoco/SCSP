@@ -14509,7 +14509,6 @@ namespace RefPropWindowsForms
             cicloRCMCI_withoutRH.conv_tol = m_tol;
         }
 
-
         public void RecompCycle_RCMCI_without_Reheating_newproposed(core luis, ref core.RCMCIwithReheating cicloRCMCI_withRH, Double m_W_dot_net,
            Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh_in, Double m_P_trh_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
            Double UA_LT, Double UA_HT, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_t, Double m_eta_trh, Int64 m_N_sub_hxrs,
@@ -14535,7 +14534,7 @@ namespace RefPropWindowsForms
             m_DP_PC1[1] = dp2_pc1;
 
             double[] m_DP_PC2 = new double[2];
-            m_DP_PC2[1] = dp2_cooler2;
+            m_DP_PC2[1] = dp2_cooler1;
 
             double[] m_DP_PHX = new double[2];
             m_DP_PHX[0] = dp2_phx1;
@@ -14593,11 +14592,10 @@ namespace RefPropWindowsForms
             //double P_mc2_in = m_P_mc1_out / m_PR_mc1;
             m_pres_last[1 - cpp_offset] = P_mc2_in;
             m_pres_last[2 - cpp_offset] = m_P_mc2_out;
-            m_temp_last[12 - cpp_offset] = m_T_trh_in;
-            m_pres_last[12 - cpp_offset] = m_P_trh_in;
-
+            m_temp_last[12 - cpp_offset] = m_T_trh_in;            
 
             // Apply pressure drops to heat exchangers, fully defining the pressures at all stages
+            //Calculating Pressure 3
             if (m_DP_LT[1 - cpp_offset] < 0.0)
                 m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset] - m_pres_last[2 - cpp_offset] * Math.Abs(m_DP_LT[1 - cpp_offset]);     // Relative pressure drop specified for LT recuperator (cold stream)
             else
@@ -14606,40 +14604,43 @@ namespace RefPropWindowsForms
             //double UA_LT = m_UA_rec_total * m_LT_frac;
             //double UA_HT = m_UA_rec_total * (1 - m_LT_frac);
 
+            //Calculating Pressure 3
             if (UA_LT < 1E-12)
                 m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset];      // if there is no LT recuperator, there is no pressure drop
 
+            //Calculating Pressure 4
             m_pres_last[4 - cpp_offset] = m_pres_last[3 - cpp_offset];          // No pressure drop in mixing value
+            //Calculating Pressure 10
             m_pres_last[10 - cpp_offset] = m_pres_last[3 - cpp_offset];         // No pressure drop in mixing value
 
+            //Calculating Pressure 5
             if (m_DP_HT[1 - cpp_offset] < 0.0)
                 m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset] - m_pres_last[4 - cpp_offset] * Math.Abs(m_DP_HT[1 - cpp_offset]); // relative pressure drop specified for HT recuperator (cold stream)
             else
                 m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset] - m_DP_HT[1 - cpp_offset];                                // absolute pressure drop specified for HT recuperator (cold stream)
-
+             //Calculating Pressure 5
             if (UA_HT < 1E-12)
                 m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset];      // if there is no HT recuperator, there is no pressure drop
 
+            //Calculating Pressure 6
             if (m_DP_PHX[1 - cpp_offset] < 0.0)
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_pres_last[5 - cpp_offset] * Math.Abs(m_DP_PHX[1 - cpp_offset]);    // relative pressure drop specified for PHX
             else
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
-            if (m_DP_RHX[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]);    // relative pressure drop specified for RHX
-            else
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                             // absolute pressure drop specified for RHX
-
-            if (m_DP_PC1[2 - cpp_offset] < 0.0)
-                m_pres_last[9 - cpp_offset] = m_pres_last[13 - cpp_offset] / (1.0 - Math.Abs(m_DP_PC1[2 - cpp_offset]));         // relative pressure drop specified for precooler [P1 = P9 - P9*rel_DP => P1 = P9*(1-rel_DP)
-            else
-                m_pres_last[9 - cpp_offset] = m_pres_last[13 - cpp_offset] + m_DP_PC1[2 - cpp_offset];                                      // absolute pressure drop specified for precooler
-
+            //Calculating Pressure 14
             if (m_DP_PC2[2 - cpp_offset] < 0.0)
                 m_pres_last[14 - cpp_offset] = m_pres_last[1 - cpp_offset] / (1.0 - Math.Abs(m_DP_PC2[2 - cpp_offset]));         // relative pressure drop specified for precooler [P1 = P9 - P9*rel_DP => P1 = P9*(1-rel_DP)
             else
                 m_pres_last[14 - cpp_offset] = m_pres_last[1 - cpp_offset] + m_DP_PC2[2 - cpp_offset];
-
+            
+            //Calculating Pressure 9
+            if (m_DP_PC1[2 - cpp_offset] < 0.0)
+                m_pres_last[9 - cpp_offset] = m_pres_last[13 - cpp_offset] / (1.0 - Math.Abs(m_DP_PC1[2 - cpp_offset]));         // relative pressure drop specified for precooler [P1 = P9 - P9*rel_DP => P1 = P9*(1-rel_DP)
+            else
+                m_pres_last[9 - cpp_offset] = m_pres_last[13 - cpp_offset] + m_DP_PC1[2 - cpp_offset];                                      // absolute pressure drop specified for precooler
+            
+            //Calculating Pressure 8
             if (m_DP_LT[2 - cpp_offset] < 0.0)
                 m_pres_last[8 - cpp_offset] = m_pres_last[9 - cpp_offset] / (1.0 - Math.Abs(m_DP_LT[2 - cpp_offset]));           // relative pressure drop specified for LT recuperator (hot stream)
             else
@@ -14648,6 +14649,7 @@ namespace RefPropWindowsForms
             if (UA_LT < 1E-12)
                 m_pres_last[8 - cpp_offset] = m_pres_last[9 - cpp_offset];      // if there is no LT recup, there is no pressure drop
 
+            //Caculating Pressure 7
             if (m_DP_HT[2 - cpp_offset] < 0.0)
                 m_pres_last[7 - cpp_offset] = m_pres_last[8 - cpp_offset] / (1.0 - Math.Abs(m_DP_HT[2 - cpp_offset]));           // relative pressure drop specified for HT recup
             else
@@ -14656,6 +14658,15 @@ namespace RefPropWindowsForms
             if (UA_HT < 1E-12)
                 m_pres_last[7 - cpp_offset] = m_pres_last[8 - cpp_offset];
 
+            //Calculating Pressure 12
+            m_pres_last[12 - cpp_offset] = m_pres_last[7 - cpp_offset];
+
+            //Calculating Pressure 11
+            if (m_DP_RHX[1 - cpp_offset] < 0.0)
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX[1 - cpp_offset]));    // relative pressure drop specified for RHX
+            else
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                             // absolute pressure drop specified for RHX
+                       
             int sub_error_code_1 = 0;
             // Determine the outlet states of the main compressor1 and turbine and their specific works
             calculate_turbomachinery_outlet_nuevo(m_temp_last[13 - cpp_offset], m_pres_last[13 - cpp_offset], m_pres_last[14 - cpp_offset], m_eta_mc1,
@@ -15098,7 +15109,6 @@ namespace RefPropWindowsForms
             cicloRCMCI_withRH.m_dot_turbine = m_dot_t;
             cicloRCMCI_withRH.conv_tol = m_tol;
         }
-
 
         public void RecompCycle_RCMCI_without_Reheating_for_Optimization(core luis, ref core.RCMCIwithoutReheating cicloRCMCI_withoutRH, Double m_W_dot_net,
           Double m_T_mc2_in, Double m_T_t_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
@@ -16293,7 +16303,7 @@ namespace RefPropWindowsForms
             m_DP_PC1[1] = dp2_pc1;
 
             double[] m_DP_PC2 = new double[2];
-            m_DP_PC2[1] = dp2_cooler2;
+            m_DP_PC2[1] = dp2_cooler1;
 
             double[] m_DP_PHX = new double[2];
             m_DP_PHX[0] = dp2_phx1;
