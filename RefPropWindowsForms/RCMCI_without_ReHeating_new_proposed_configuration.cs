@@ -798,6 +798,7 @@ namespace RefPropWindowsForms
             textBox49.Text = Convert.ToString(massflow2);
             textBox50.Text = Convert.ToString(eta_thermal2 * 100);
 
+            //PENDIENTE!!! ACTUALIZAR LOS TOOLTIPS
             //toolTip1.SetToolTip(label55, point1_state);
             //toolTip2.SetToolTip(label57, point2_state);
             //toolTip3.SetToolTip(label59, point3_state);

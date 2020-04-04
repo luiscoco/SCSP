@@ -888,6 +888,7 @@
             this.comboBox4.Size = new System.Drawing.Size(191, 21);
             this.comboBox4.TabIndex = 1340;
             this.comboBox4.Text = "Solar Salt";
+            this.comboBox4.SelectedValueChanged += new System.EventHandler(this.comboBox4_SelectedValueChanged);
             // 
             // button25
             // 
@@ -897,6 +898,7 @@
             this.button25.TabIndex = 1410;
             this.button25.Text = "Set Critical Conditions";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // groupBox3
             // 
@@ -1344,7 +1346,7 @@
             // 
             this.label66.BackColor = System.Drawing.Color.White;
             this.label66.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(592, 391);
+            this.label66.Location = new System.Drawing.Point(592, 392);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(16, 19);
             this.label66.TabIndex = 1372;
@@ -1354,7 +1356,7 @@
             // 
             this.label65.BackColor = System.Drawing.Color.White;
             this.label65.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(752, 388);
+            this.label65.Location = new System.Drawing.Point(752, 389);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(16, 19);
             this.label65.TabIndex = 1371;
@@ -1428,6 +1430,7 @@
             this.button20.TabIndex = 1364;
             this.button20.Text = "Mixture Calculation";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label68
             // 
@@ -1891,6 +1894,7 @@
             this.comboBox1.Size = new System.Drawing.Size(80, 21);
             this.comboBox1.TabIndex = 1346;
             this.comboBox1.Text = "PureFluid";
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // groupBox2
             // 
@@ -2373,6 +2377,7 @@
             this.button14.TabIndex = 1327;
             this.button14.Text = "RESET";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // label59
             // 
@@ -2777,7 +2782,7 @@
             // textBox54
             // 
             this.textBox54.BackColor = System.Drawing.Color.Ivory;
-            this.textBox54.Location = new System.Drawing.Point(1188, 133);
+            this.textBox54.Location = new System.Drawing.Point(1188, 134);
             this.textBox54.Name = "textBox54";
             this.textBox54.Size = new System.Drawing.Size(53, 20);
             this.textBox54.TabIndex = 1278;
