@@ -1618,6 +1618,7 @@
             this.button14.TabIndex = 1215;
             this.button14.Text = "RESET";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button3
             // 
@@ -3203,7 +3204,7 @@
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(647, 244);
+            this.button4.Location = new System.Drawing.Point(648, 244);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(43, 99);
             this.button4.TabIndex = 1358;

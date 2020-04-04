@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -245,7 +244,7 @@ namespace RefPropWindowsForms
         public Boolean ReCompressor_Surge;
 
         //Main Turbine results
-        public Double Main_Turbine_Pin, Main_Turbine_Tin, Main_Turbine_Pout, Main_Turbine_Tout;       
+        public Double Main_Turbine_Pin, Main_Turbine_Tin, Main_Turbine_Pout, Main_Turbine_Tout;
 
         public Double Main_Turbine_Flow, Main_Turbine_Rotary_Velocity, Main_Turbine_Diameter, Main_Turbine_Efficiency, Main_Turbine_Anozzle;
         public Double Main_Turbine_nu, Main_Turbine_w_Tip_Ratio;
@@ -2923,6 +2922,99 @@ namespace RefPropWindowsForms
                 releaseObject(xlWorkBook);
                 releaseObject(xlApp);
             }
+        }
+
+        //RESET Button
+        private void button14_Click(object sender, EventArgs e)
+        {
+            //Pressures
+            textBox22.Text = "";
+            textBox23.Text = "";
+            textBox27.Text = "";
+            textBox24.Text = "";
+            textBox29.Text = "";
+            textBox28.Text = "";
+            textBox41.Text = "";
+            textBox40.Text = "";
+            textBox39.Text = "";
+            textBox38.Text = "";
+            textBox37.Text = "";
+            textBox36.Text = "";
+            textBox85.Text = "";
+            textBox87.Text = "";
+
+            //Temperatures
+            textBox47.Text = "";
+            textBox46.Text = "";
+            textBox45.Text = "";
+            textBox44.Text = "";
+            textBox43.Text = "";
+            textBox42.Text = "";
+            textBox35.Text = "";
+            textBox34.Text = "";
+            textBox33.Text = "";
+            textBox32.Text = "";
+            textBox31.Text = "";
+            textBox30.Text = "";
+            textBox84.Text = "";
+            textBox86.Text = "";
+
+            //Power, mass flow and efficiency
+            textBox50.Text = "";
+            textBox49.Text = "";
+            textBox48.Text = "";
+
+            //Data input 
+            //W_dot_net
+            textBox1.Text = "50000";
+            //T_mc_in
+            textBox2.Text = "305.15";
+            //T_t_in
+            textBox4.Text = "823.15";
+            //P_mc_in
+            textBox3.Text = "7400";
+            //P_mc_out
+            textBox8.Text = "25000";
+            //P_rhx1_in
+            textBox7.Text = "17000";
+            //T_rhx1_in
+            textBox6.Text = "823.15";
+            //P_rhx2_in
+            textBox63.Text = "12500";
+            //T_rhx2_in
+            textBox62.Text = "823.15";
+            //recomp_frac
+            textBox15.Text = "0.25";
+            //eta_mc
+            textBox14.Text = "0.89";
+            //eta_rc
+            textBox13.Text = "0.89";
+            //eta_t
+            textBox19.Text = "0.93";
+            //eta_tr1
+            textBox18.Text = "0.93";
+            //eta_tr2
+            textBox88.Text = "0.93";
+            //N_sub_hxs
+            textBox20.Text = "15";
+            //Tolerance
+            textBox21.Text = "0.00001";
+            //DP_LT_cold
+            textBox5.Text = "0.0";
+            //DP_LT_hot
+            textBox26.Text = "0.0";
+            //DP_HT_cold
+            textBox12.Text = "0.0";
+            //DP_HT_hot
+            textBox25.Text = "0.0";
+            //DP_PC
+            textBox11.Text = "0.0";
+            //DP_PHX
+            textBox10.Text = "0.0";
+            //DP_RHX1
+            textBox9.Text = "0.0";
+            //DP_RHX2
+            textBox83.Text = "0.0";
         }
     }
 }

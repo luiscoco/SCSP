@@ -829,6 +829,7 @@
             this.button30.TabIndex = 1439;
             this.button30.Text = "Set Compressor Inlet Critical Point";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // label123
             // 
@@ -2076,6 +2077,7 @@
             this.comboBox16.Size = new System.Drawing.Size(80, 21);
             this.comboBox16.TabIndex = 1365;
             this.comboBox16.Text = "PureFluid";
+            this.comboBox16.SelectedValueChanged += new System.EventHandler(this.comboBox16_SelectedValueChanged);
             // 
             // button22
             // 
@@ -2086,6 +2088,7 @@
             this.button22.TabIndex = 1364;
             this.button22.Text = "Mixture Design";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // groupBox2
             // 
@@ -2416,6 +2419,7 @@
             this.button14.TabIndex = 1348;
             this.button14.Text = "RESET";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // textBox52
             // 
@@ -2466,9 +2470,9 @@
             // button9
             // 
             this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(271, 177);
+            this.button9.Location = new System.Drawing.Point(268, 177);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(48, 40);
+            this.button9.Size = new System.Drawing.Size(55, 40);
             this.button9.TabIndex = 1342;
             this.button9.Text = "Main Comp";
             this.button9.UseVisualStyleBackColor = true;
