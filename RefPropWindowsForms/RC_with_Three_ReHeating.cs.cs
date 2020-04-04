@@ -514,7 +514,7 @@ namespace RefPropWindowsForms
             if (comboBox16.Text == "PureFluid")
             {
                 category = RefrigerantCategory.PureFluid;
-                luis.core1(this.comboBox1.Text, category);
+                luis.core1(this.comboBox2.Text, category);
             }
 
             //NewMixture
