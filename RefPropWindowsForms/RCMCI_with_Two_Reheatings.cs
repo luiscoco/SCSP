@@ -819,6 +819,7 @@ namespace RefPropWindowsForms
             //toolTip11.SetToolTip(label64, point11_state);
             //toolTip12.SetToolTip(label68, point12_state);
 
+            //High Temperature checkBox
             if (checkBox1.Checked == false)
             {
                 PHX1 = cicloRCMCIwithTwoReheating.PHX.Q_dot;
