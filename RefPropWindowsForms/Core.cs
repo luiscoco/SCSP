@@ -2198,7 +2198,7 @@ namespace RefPropWindowsForms
 
             //Calculating Pressure 11
             if (m_DP_RHX1[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX1[1 - cpp_offset]); // relative pressure drop specified for RHX1
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1- Math.Abs(m_DP_RHX1[1 - cpp_offset])); // relative pressure drop specified for RHX1
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX1[1 - cpp_offset];                             // absolute pressure drop specified for RHX1
 
@@ -3927,7 +3927,7 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]); // relative pressure drop specified for PHX
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX[1 - cpp_offset])); // relative pressure drop specified for PHX
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                             // absolute pressure drop specified for PHX
 
@@ -5078,12 +5078,12 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX1[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX1[1 - cpp_offset]); // relative pressure drop specified for RHX1
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX1[1 - cpp_offset])); // relative pressure drop specified for RHX1
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX1[1 - cpp_offset];                             // absolute pressure drop specified for RHX1
 
             if (m_DP_RHX2[1 - cpp_offset] < 0.0)
-                m_pres_last[13 - cpp_offset] = m_pres_last[14 - cpp_offset] + m_pres_last[14 - cpp_offset] * Math.Abs(m_DP_RHX2[1 - cpp_offset]); // relative pressure drop specified for RHX2
+                m_pres_last[13 - cpp_offset] = m_pres_last[14 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX2[1 - cpp_offset])); // relative pressure drop specified for RHX2
             else
                 m_pres_last[13 - cpp_offset] = m_pres_last[14 - cpp_offset] + m_DP_RHX2[1 - cpp_offset];                             // absolute pressure drop specified for RHX2
 
@@ -6263,17 +6263,17 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX1[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX1[1 - cpp_offset]); // relative pressure drop specified for RHX1
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX1[1 - cpp_offset])); // relative pressure drop specified for RHX1
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX1[1 - cpp_offset];                             // absolute pressure drop specified for RHX1
 
             if (m_DP_RHX2[1 - cpp_offset] < 0.0)
-                m_pres_last[13 - cpp_offset] = m_pres_last[14 - cpp_offset] + m_pres_last[14 - cpp_offset] * Math.Abs(m_DP_RHX2[1 - cpp_offset]); // relative pressure drop specified for RHX2
+                m_pres_last[13 - cpp_offset] = m_pres_last[14 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX2[1 - cpp_offset])); // relative pressure drop specified for RHX2
             else
                 m_pres_last[13 - cpp_offset] = m_pres_last[14 - cpp_offset] + m_DP_RHX2[1 - cpp_offset];                             // absolute pressure drop specified for RHX2
 
             if (m_DP_RHX3[1 - cpp_offset] < 0.0)
-                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_pres_last[16 - cpp_offset] * Math.Abs(m_DP_RHX3[1 - cpp_offset]); // relative pressure drop specified for RHX3
+                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX3[1 - cpp_offset])); // relative pressure drop specified for RHX3
             else
                 m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_DP_RHX3[1 - cpp_offset];                             // absolute pressure drop specified for RHX3
 
@@ -11675,7 +11675,7 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]); // relative pressure drop specified for RHX
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX[1 - cpp_offset])); // relative pressure drop specified for RHX
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                             // absolute pressure drop specified for RHX
 
@@ -12824,12 +12824,12 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX1[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX1[1 - cpp_offset]); // relative pressure drop specified for RHX1
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX1[1 - cpp_offset])); // relative pressure drop specified for RHX1
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX1[1 - cpp_offset];                             // absolute pressure drop specified for RHX1
 
             if (m_DP_RHX2[1 - cpp_offset] < 0.0)
-                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_pres_last[16 - cpp_offset] * Math.Abs(m_DP_RHX2[1 - cpp_offset]); // relative pressure drop specified for RHX2
+                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX2[1 - cpp_offset])); // relative pressure drop specified for RHX2
             else
                 m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_DP_RHX2[1 - cpp_offset];                             // absolute pressure drop specified for RHX2
 
@@ -14023,17 +14023,17 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX1[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX1[1 - cpp_offset]); // relative pressure drop specified for RHX1
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX1[1 - cpp_offset])); // relative pressure drop specified for RHX1
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX1[1 - cpp_offset];                             // absolute pressure drop specified for RHX1
 
             if (m_DP_RHX2[1 - cpp_offset] < 0.0)
-                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_pres_last[16 - cpp_offset] * Math.Abs(m_DP_RHX2[1 - cpp_offset]); // relative pressure drop specified for RHX2
+                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX2[1 - cpp_offset])); // relative pressure drop specified for RHX2
             else
                 m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_DP_RHX2[1 - cpp_offset];                             // absolute pressure drop specified for RHX2
 
             if (m_DP_RHX3[1 - cpp_offset] < 0.0)
-                m_pres_last[17 - cpp_offset] = m_pres_last[18 - cpp_offset] + m_pres_last[18 - cpp_offset] * Math.Abs(m_DP_RHX3[1 - cpp_offset]); // relative pressure drop specified for RHX3
+                m_pres_last[17 - cpp_offset] = m_pres_last[18 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX3[1 - cpp_offset])); // relative pressure drop specified for RHX3
             else
                 m_pres_last[17 - cpp_offset] = m_pres_last[18 - cpp_offset] + m_DP_RHX3[1 - cpp_offset];                             // absolute pressure drop specified for RHX3
 
@@ -17582,7 +17582,7 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]);    // relative pressure drop specified for RHX
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX[1 - cpp_offset]));    // relative pressure drop specified for RHX
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                             // absolute pressure drop specified for RHX
 
@@ -20015,12 +20015,12 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX1[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX1[1 - cpp_offset]);    // relative pressure drop specified for RHX1
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX1[1 - cpp_offset]));    // relative pressure drop specified for RHX1
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX1[1 - cpp_offset];                             // absolute pressure drop specified for RHX1
 
             if (m_DP_RHX2[1 - cpp_offset] < 0.0)
-                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_pres_last[16 - cpp_offset] * Math.Abs(m_DP_RHX2[1 - cpp_offset]);    // relative pressure drop specified for RHX2
+                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX2[1 - cpp_offset]));    // relative pressure drop specified for RHX2
             else
                 m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_DP_RHX2[1 - cpp_offset];                            // absolute pressure drop specified for RHX2
 
@@ -21292,17 +21292,17 @@ namespace RefPropWindowsForms
                 m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
 
             if (m_DP_RHX1[1 - cpp_offset] < 0.0)
-                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_pres_last[12 - cpp_offset] * Math.Abs(m_DP_RHX1[1 - cpp_offset]);    // relative pressure drop specified for RHX1
+                m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX1[1 - cpp_offset]));    // relative pressure drop specified for RHX1
             else
                 m_pres_last[11 - cpp_offset] = m_pres_last[12 - cpp_offset] + m_DP_RHX1[1 - cpp_offset];                             // absolute pressure drop specified for RHX1
 
             if (m_DP_RHX2[1 - cpp_offset] < 0.0)
-                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_pres_last[16 - cpp_offset] * Math.Abs(m_DP_RHX2[1 - cpp_offset]);    // relative pressure drop specified for RHX2
+                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX2[1 - cpp_offset]));    // relative pressure drop specified for RHX2
             else
                 m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_DP_RHX2[1 - cpp_offset];                            // absolute pressure drop specified for RHX2
 
             if (m_DP_RHX3[1 - cpp_offset] < 0.0)
-                m_pres_last[17 - cpp_offset] = m_pres_last[18 - cpp_offset] + m_pres_last[18 - cpp_offset] * Math.Abs(m_DP_RHX3[1 - cpp_offset]);    // relative pressure drop specified for RHX3
+                m_pres_last[17 - cpp_offset] = m_pres_last[18 - cpp_offset] / (1.0 - Math.Abs(m_DP_RHX3[1 - cpp_offset]));    // relative pressure drop specified for RHX3
             else
                 m_pres_last[17 - cpp_offset] = m_pres_last[18 - cpp_offset] + m_DP_RHX3[1 - cpp_offset];                            // absolute pressure drop specified for RHX3
             
