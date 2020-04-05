@@ -427,7 +427,7 @@
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(70, 24);
             this.button23.TabIndex = 710;
-            this.button23.Text = "RHX1-SF1";
+            this.button23.Text = "RHX2-SF1";
             this.button23.UseVisualStyleBackColor = false;
             // 
             // label88
@@ -449,7 +449,7 @@
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(70, 24);
             this.button24.TabIndex = 709;
-            this.button24.Text = "PHX2-SF2";
+            this.button24.Text = "RHX1-SF2";
             this.button24.UseVisualStyleBackColor = false;
             // 
             // textBox33
@@ -488,7 +488,7 @@
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(70, 24);
             this.button25.TabIndex = 708;
-            this.button25.Text = "PHX1-SF1";
+            this.button25.Text = "RHX1-SF1";
             this.button25.UseVisualStyleBackColor = false;
             // 
             // label65
@@ -1491,6 +1491,7 @@
             this.button21.TabIndex = 1401;
             this.button21.Text = "Set Critical Conditions";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // label97
             // 
@@ -1772,6 +1773,7 @@
             this.button20.TabIndex = 1388;
             this.button20.Text = "Mixture Calculation";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // groupBox2
             // 
@@ -2012,15 +2014,15 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(147, 40);
+            this.label13.Location = new System.Drawing.Point(146, 40);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 13);
+            this.label13.Size = new System.Drawing.Size(88, 13);
             this.label13.TabIndex = 146;
-            this.label13.Text = "DP_PHX (kPa):";
+            this.label13.Text = "DP_RHX1 (kPa):";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(230, 37);
+            this.textBox10.Location = new System.Drawing.Point(234, 37);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(31, 20);
             this.textBox10.TabIndex = 147;
@@ -2031,13 +2033,13 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(146, 66);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 13);
+            this.label12.Size = new System.Drawing.Size(88, 13);
             this.label12.TabIndex = 148;
-            this.label12.Text = "DP_RHX (kPa):";
+            this.label12.Text = "DP_RHX2 (kPa):";
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(230, 63);
+            this.textBox9.Location = new System.Drawing.Point(234, 63);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(31, 20);
             this.textBox9.TabIndex = 149;
@@ -2198,7 +2200,7 @@
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(184, 445);
+            this.button4.Location = new System.Drawing.Point(182, 445);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 34);
             this.button4.TabIndex = 1375;
@@ -3137,9 +3139,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(7, 576);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(43, 13);
+            this.label21.Size = new System.Drawing.Size(40, 13);
             this.label21.TabIndex = 1270;
-            this.label21.Text = "eta_trh:";
+            this.label21.Text = "eta_t2:";
             // 
             // textBox19
             // 
@@ -3152,11 +3154,11 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(17, 525);
+            this.label22.Location = new System.Drawing.Point(8, 525);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(34, 13);
+            this.label22.Size = new System.Drawing.Size(40, 13);
             this.label22.TabIndex = 1268;
-            this.label22.Text = "eta_t:";
+            this.label22.Text = "eta_t1:";
             // 
             // textBox13
             // 
@@ -3598,6 +3600,7 @@
             this.comboBox1.Size = new System.Drawing.Size(82, 21);
             this.comboBox1.TabIndex = 1238;
             this.comboBox1.Text = "PureFluid";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label116
             // 
