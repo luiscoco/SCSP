@@ -851,8 +851,11 @@ namespace RefPropWindowsForms
                 Refrigerant working_fluid = new Refrigerant(RefrigerantCategory.NewMixture, this.comboBox2.Text + "=" + textBox60.Text + "," + this.comboBox1.Text + "=" + textBox61.Text + "," + this.comboBox18.Text + "=" + textBox51.Text + "," + this.comboBox17.Text + "=" + textBox80.Text, ReferenceState.DEF);
 
                 textBox59.Text = Convert.ToString(working_fluid.CriticalPressure);
-                textBox58.Text = Convert.ToString(working_fluid.CriticalTemperature - 273.15);
+                textBox58.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox55.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
             }
         }
 

@@ -3079,11 +3079,15 @@ namespace RefPropWindowsForms
                 Refrigerant working_fluid = new Refrigerant(RefrigerantCategory.NewMixture, this.comboBox2.Text + "=" + textBox31.Text + "," + this.comboBox6.Text + "=" + textBox36.Text + "," + this.comboBox7.Text + "=" + textBox67.Text + "," + this.comboBox12.Text + "=" + textBox68.Text, ReferenceState.DEF);
 
                 textBox37.Text = Convert.ToString(working_fluid.CriticalPressure);              
-                textBox51.Text = Convert.ToString(working_fluid.CriticalTemperature - 273.15);             
+                textBox51.Text = Convert.ToString(working_fluid.CriticalTemperature);             
                 textBox52.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
             }
         }
 
+        //Set critical conditions button
         private void button13_Click(object sender, EventArgs e)
         {
             double option1 = 0.0;
