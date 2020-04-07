@@ -152,7 +152,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(487, 20);
             this.textBox3.TabIndex = 1284;
-            this.textBox3.Text = "C:\\Users\\luisc\\Desktop\\";
+            this.textBox3.Text = "C:\\SolarPaces_2020\\";
             // 
             // groupBox4
             // 
