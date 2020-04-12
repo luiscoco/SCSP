@@ -68,6 +68,8 @@ namespace RefPropWindowsForms
 
             double initial_CIP_value = 0;
 
+            //UA Optimization (false)
+
             if (checkBox2.Checked == false)
             {
                 //PureFluid
@@ -560,6 +562,7 @@ namespace RefPropWindowsForms
 
             //-------------------------------------------------------------------------
 
+            //UA Optimization (true)
             else if (checkBox2.Checked == true)
             {
                 //PureFluid
@@ -723,7 +726,7 @@ namespace RefPropWindowsForms
                     solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, initial_CIP_value + 2000, initial_CIP_value + 1000 });
                     solver.SetUpperBounds(new[] { 1.0, 125000, 0.8, puntero_aplicacion.p_mc_out2 - 1000, puntero_aplicacion.p_mc_out2 - 2000 });
 
-                    solver.SetInitialStepSize(new[] { 0.05, 200, 0.05, 1000, 1000 });
+                    solver.SetInitialStepSize(new[] { 0.005, 200, 0.05, 1000, 1000 });
 
                     var initialValue = new[] { 0.2, initial_CIP_value, 0.2, 14000, 11000 };
 
