@@ -1462,7 +1462,7 @@ namespace RefPropWindowsForms
         //Optimization button
         private void button35_Click(object sender, EventArgs e)
         {
-            RC_with_ReHeating_Optimization_Analysis_Results_new_configuration RC_with_ReHeating_Optimization_Analysis_Results_new_configuration_window = new RC_with_ReHeating_Optimization_Analysis_Results_new_configuration(this);
+            RC_without_ReHeating_Optimization_Analysis_Results_new_configuration RC_with_ReHeating_Optimization_Analysis_Results_new_configuration_window = new RC_without_ReHeating_Optimization_Analysis_Results_new_configuration(this);
             RC_with_ReHeating_Optimization_Analysis_Results_new_configuration_window.Show();
         }
 

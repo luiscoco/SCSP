@@ -851,6 +851,9 @@ namespace RefPropWindowsForms
                 textBox59.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox58.Text = Convert.ToString(working_fluid.CriticalTemperature - 273.15);
                 textBox55.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
             }
         }
 

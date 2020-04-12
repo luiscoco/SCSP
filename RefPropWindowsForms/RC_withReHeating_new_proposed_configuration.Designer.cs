@@ -182,6 +182,34 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox56 = new System.Windows.Forms.TextBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.textBox57 = new System.Windows.Forms.TextBox();
+            this.button20 = new System.Windows.Forms.Button();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.textBox53 = new System.Windows.Forms.TextBox();
+            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.label82 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.textBox54 = new System.Windows.Forms.TextBox();
+            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
             this.button22 = new System.Windows.Forms.Button();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -279,34 +307,6 @@
             this.button35 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.label82 = new System.Windows.Forms.Label();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.button20 = new System.Windows.Forms.Button();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.textBox56 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label91 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
@@ -1277,29 +1277,29 @@
             // button10
             // 
             this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(746, 183);
+            this.button10.Location = new System.Drawing.Point(744, 182);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(52, 31);
+            this.button10.Size = new System.Drawing.Size(58, 31);
             this.button10.TabIndex = 1343;
-            this.button10.Text = "Turbine";
+            this.button10.Text = "Turbine1";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
             this.button11.Enabled = false;
-            this.button11.Location = new System.Drawing.Point(1003, 183);
+            this.button11.Location = new System.Drawing.Point(1000, 183);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(52, 29);
+            this.button11.Size = new System.Drawing.Size(61, 29);
             this.button11.TabIndex = 1344;
-            this.button11.Text = "Turbine";
+            this.button11.Text = "Turbine2";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
             this.button12.Enabled = false;
-            this.button12.Location = new System.Drawing.Point(435, 306);
+            this.button12.Location = new System.Drawing.Point(433, 306);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(50, 42);
+            this.button12.Size = new System.Drawing.Size(53, 42);
             this.button12.TabIndex = 1345;
             this.button12.Text = "Recom Comp";
             this.button12.UseVisualStyleBackColor = true;
@@ -1650,6 +1650,314 @@
             this.groupBox2.TabIndex = 1363;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dual-Loop Solar Fields";
+            // 
+            // textBox56
+            // 
+            this.textBox56.Location = new System.Drawing.Point(656, 17);
+            this.textBox56.Name = "textBox56";
+            this.textBox56.Size = new System.Drawing.Size(48, 20);
+            this.textBox56.TabIndex = 872;
+            this.textBox56.Text = "0.0";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(564, 20);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(88, 13);
+            this.label85.TabIndex = 871;
+            this.label85.Text = "DP_RHX1 (kPa):";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(557, 45);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(94, 13);
+            this.label86.TabIndex = 869;
+            this.label86.Text = "Intermediate T (K):";
+            // 
+            // textBox57
+            // 
+            this.textBox57.Location = new System.Drawing.Point(656, 42);
+            this.textBox57.Name = "textBox57";
+            this.textBox57.Size = new System.Drawing.Size(48, 20);
+            this.textBox57.TabIndex = 870;
+            this.textBox57.Text = "673.15";
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.Sienna;
+            this.button20.Enabled = false;
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(634, 92);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(70, 24);
+            this.button20.TabIndex = 711;
+            this.button20.Text = "RHX2-SF2";
+            this.button20.UseVisualStyleBackColor = false;
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.Enabled = false;
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            "Solar Salt",
+            "Hitec XL",
+            "Therminol VP1",
+            "Syltherm_800",
+            "Dowtherm_A",
+            "Therminol_75",
+            "Liquid Sodium"});
+            this.comboBox12.Location = new System.Drawing.Point(455, 94);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(99, 21);
+            this.comboBox12.TabIndex = 531;
+            this.comboBox12.Text = "Solar Salt";
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.Sienna;
+            this.button21.Enabled = false;
+            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ForeColor = System.Drawing.Color.White;
+            this.button21.Location = new System.Drawing.Point(560, 92);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(70, 24);
+            this.button21.TabIndex = 710;
+            this.button21.Text = "RHX2-SF1";
+            this.button21.UseVisualStyleBackColor = false;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.Maroon;
+            this.button18.Enabled = false;
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.Location = new System.Drawing.Point(270, 94);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(70, 24);
+            this.button18.TabIndex = 709;
+            this.button18.Text = "RHX1-SF2";
+            this.button18.UseVisualStyleBackColor = false;
+            // 
+            // textBox53
+            // 
+            this.textBox53.Location = new System.Drawing.Point(292, 17);
+            this.textBox53.Name = "textBox53";
+            this.textBox53.Size = new System.Drawing.Size(48, 20);
+            this.textBox53.TabIndex = 866;
+            this.textBox53.Text = "0.0";
+            // 
+            // comboBox13
+            // 
+            this.comboBox13.Enabled = false;
+            this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Items.AddRange(new object[] {
+            "Solar Salt",
+            "Hitec XL",
+            "Therminol VP1",
+            "Syltherm_800",
+            "Dowtherm_A",
+            "Therminol_75",
+            "Liquid Sodium"});
+            this.comboBox13.Location = new System.Drawing.Point(455, 41);
+            this.comboBox13.Name = "comboBox13";
+            this.comboBox13.Size = new System.Drawing.Size(99, 21);
+            this.comboBox13.TabIndex = 529;
+            this.comboBox13.Text = "Solar Salt";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(200, 20);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(87, 13);
+            this.label82.TabIndex = 865;
+            this.label82.Text = "DP_PHX1 (kPa):";
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.Maroon;
+            this.button17.Enabled = false;
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.Location = new System.Drawing.Point(194, 94);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(70, 24);
+            this.button17.TabIndex = 708;
+            this.button17.Text = "RHX1-SF1";
+            this.button17.UseVisualStyleBackColor = false;
+            // 
+            // label77
+            // 
+            this.label77.Location = new System.Drawing.Point(349, 98);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(107, 13);
+            this.label77.TabIndex = 532;
+            this.label77.Text = "ReHeating SF2 HTF:";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(193, 45);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(94, 13);
+            this.label83.TabIndex = 863;
+            this.label83.Text = "Intermediate T (K):";
+            // 
+            // label78
+            // 
+            this.label78.Location = new System.Drawing.Point(348, 43);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(107, 17);
+            this.label78.TabIndex = 530;
+            this.label78.Text = "ReHeating SF1 HTF:";
+            // 
+            // comboBox14
+            // 
+            this.comboBox14.Enabled = false;
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Items.AddRange(new object[] {
+            "Parabolic",
+            "Fresnel"});
+            this.comboBox14.Location = new System.Drawing.Point(482, 67);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(72, 21);
+            this.comboBox14.TabIndex = 527;
+            this.comboBox14.Text = "Parabolic";
+            // 
+            // textBox54
+            // 
+            this.textBox54.Location = new System.Drawing.Point(292, 42);
+            this.textBox54.Name = "textBox54";
+            this.textBox54.Size = new System.Drawing.Size(48, 20);
+            this.textBox54.TabIndex = 864;
+            this.textBox54.Text = "673.15";
+            // 
+            // comboBox15
+            // 
+            this.comboBox15.Enabled = false;
+            this.comboBox15.FormattingEnabled = true;
+            this.comboBox15.Items.AddRange(new object[] {
+            "Parabolic",
+            "Fresnel"});
+            this.comboBox15.Location = new System.Drawing.Point(482, 16);
+            this.comboBox15.Name = "comboBox15";
+            this.comboBox15.Size = new System.Drawing.Size(72, 21);
+            this.comboBox15.TabIndex = 525;
+            this.comboBox15.Text = "Parabolic";
+            // 
+            // label79
+            // 
+            this.label79.Location = new System.Drawing.Point(349, 71);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(133, 14);
+            this.label79.TabIndex = 528;
+            this.label79.Text = "ReHeating SF2 Collectors:";
+            // 
+            // label80
+            // 
+            this.label80.Location = new System.Drawing.Point(349, 20);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(133, 15);
+            this.label80.TabIndex = 526;
+            this.label80.Text = "ReHeating SF1 Collectors:";
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.Enabled = false;
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Items.AddRange(new object[] {
+            "Solar Salt",
+            "Hitec XL",
+            "Therminol VP1",
+            "Syltherm_800",
+            "Dowtherm_A",
+            "Therminol_75",
+            "Liquid Sodium"});
+            this.comboBox8.Location = new System.Drawing.Point(88, 97);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(99, 21);
+            this.comboBox8.TabIndex = 523;
+            this.comboBox8.Text = "Solar Salt";
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.Enabled = false;
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Items.AddRange(new object[] {
+            "Solar Salt",
+            "Hitec XL",
+            "Therminol VP1",
+            "Syltherm_800",
+            "Dowtherm_A",
+            "Therminol_75",
+            "Liquid Sodium"});
+            this.comboBox9.Location = new System.Drawing.Point(87, 43);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(99, 21);
+            this.comboBox9.TabIndex = 521;
+            this.comboBox9.Text = "Solar Salt";
+            // 
+            // label71
+            // 
+            this.label71.Location = new System.Drawing.Point(11, 100);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(102, 14);
+            this.label71.TabIndex = 524;
+            this.label71.Text = "Main SF2 HTF:";
+            // 
+            // label72
+            // 
+            this.label72.Location = new System.Drawing.Point(11, 45);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(84, 17);
+            this.label72.TabIndex = 522;
+            this.label72.Text = "Main SF1 HTF:";
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.Enabled = false;
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            "Parabolic",
+            "Fresnel"});
+            this.comboBox10.Location = new System.Drawing.Point(114, 69);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(72, 21);
+            this.comboBox10.TabIndex = 519;
+            this.comboBox10.Text = "Parabolic";
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.Enabled = false;
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Items.AddRange(new object[] {
+            "Parabolic",
+            "Fresnel"});
+            this.comboBox11.Location = new System.Drawing.Point(114, 18);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(72, 21);
+            this.comboBox11.TabIndex = 517;
+            this.comboBox11.Text = "Parabolic";
+            // 
+            // label73
+            // 
+            this.label73.Location = new System.Drawing.Point(11, 73);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(133, 14);
+            this.label73.TabIndex = 520;
+            this.label73.Text = "Main SF2 Collectors:";
+            // 
+            // label76
+            // 
+            this.label76.Location = new System.Drawing.Point(11, 22);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(107, 15);
+            this.label76.TabIndex = 518;
+            this.label76.Text = "Main SF1 Collectors:";
             // 
             // button22
             // 
@@ -3090,6 +3398,7 @@
             this.button35.TabIndex = 1458;
             this.button35.Text = "Optimization Analysis";
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // comboBox4
             // 
@@ -3118,314 +3427,6 @@
             this.comboBox5.Size = new System.Drawing.Size(191, 21);
             this.comboBox5.TabIndex = 1460;
             this.comboBox5.Text = "Parabolic";
-            // 
-            // label76
-            // 
-            this.label76.Location = new System.Drawing.Point(11, 22);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(107, 15);
-            this.label76.TabIndex = 518;
-            this.label76.Text = "Main SF1 Collectors:";
-            // 
-            // label73
-            // 
-            this.label73.Location = new System.Drawing.Point(11, 73);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(133, 14);
-            this.label73.TabIndex = 520;
-            this.label73.Text = "Main SF2 Collectors:";
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.Enabled = false;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "Parabolic",
-            "Fresnel"});
-            this.comboBox11.Location = new System.Drawing.Point(114, 18);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(72, 21);
-            this.comboBox11.TabIndex = 517;
-            this.comboBox11.Text = "Parabolic";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.Enabled = false;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "Parabolic",
-            "Fresnel"});
-            this.comboBox10.Location = new System.Drawing.Point(114, 69);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(72, 21);
-            this.comboBox10.TabIndex = 519;
-            this.comboBox10.Text = "Parabolic";
-            // 
-            // label72
-            // 
-            this.label72.Location = new System.Drawing.Point(11, 45);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(84, 17);
-            this.label72.TabIndex = 522;
-            this.label72.Text = "Main SF1 HTF:";
-            // 
-            // label71
-            // 
-            this.label71.Location = new System.Drawing.Point(11, 100);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(102, 14);
-            this.label71.TabIndex = 524;
-            this.label71.Text = "Main SF2 HTF:";
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.Enabled = false;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "Solar Salt",
-            "Hitec XL",
-            "Therminol VP1",
-            "Syltherm_800",
-            "Dowtherm_A",
-            "Therminol_75",
-            "Liquid Sodium"});
-            this.comboBox9.Location = new System.Drawing.Point(87, 43);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(99, 21);
-            this.comboBox9.TabIndex = 521;
-            this.comboBox9.Text = "Solar Salt";
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.Enabled = false;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "Solar Salt",
-            "Hitec XL",
-            "Therminol VP1",
-            "Syltherm_800",
-            "Dowtherm_A",
-            "Therminol_75",
-            "Liquid Sodium"});
-            this.comboBox8.Location = new System.Drawing.Point(88, 97);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(99, 21);
-            this.comboBox8.TabIndex = 523;
-            this.comboBox8.Text = "Solar Salt";
-            // 
-            // label80
-            // 
-            this.label80.Location = new System.Drawing.Point(349, 20);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(133, 15);
-            this.label80.TabIndex = 526;
-            this.label80.Text = "ReHeating SF1 Collectors:";
-            // 
-            // label79
-            // 
-            this.label79.Location = new System.Drawing.Point(349, 71);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(133, 14);
-            this.label79.TabIndex = 528;
-            this.label79.Text = "ReHeating SF2 Collectors:";
-            // 
-            // comboBox15
-            // 
-            this.comboBox15.Enabled = false;
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Items.AddRange(new object[] {
-            "Parabolic",
-            "Fresnel"});
-            this.comboBox15.Location = new System.Drawing.Point(482, 16);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(72, 21);
-            this.comboBox15.TabIndex = 525;
-            this.comboBox15.Text = "Parabolic";
-            // 
-            // textBox54
-            // 
-            this.textBox54.Location = new System.Drawing.Point(292, 42);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(48, 20);
-            this.textBox54.TabIndex = 864;
-            this.textBox54.Text = "673.15";
-            // 
-            // comboBox14
-            // 
-            this.comboBox14.Enabled = false;
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Items.AddRange(new object[] {
-            "Parabolic",
-            "Fresnel"});
-            this.comboBox14.Location = new System.Drawing.Point(482, 67);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(72, 21);
-            this.comboBox14.TabIndex = 527;
-            this.comboBox14.Text = "Parabolic";
-            // 
-            // label78
-            // 
-            this.label78.Location = new System.Drawing.Point(348, 43);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(107, 17);
-            this.label78.TabIndex = 530;
-            this.label78.Text = "ReHeating SF1 HTF:";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(193, 45);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(94, 13);
-            this.label83.TabIndex = 863;
-            this.label83.Text = "Intermediate T (K):";
-            // 
-            // label77
-            // 
-            this.label77.Location = new System.Drawing.Point(349, 98);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(107, 13);
-            this.label77.TabIndex = 532;
-            this.label77.Text = "ReHeating SF2 HTF:";
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.Maroon;
-            this.button17.Enabled = false;
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(194, 94);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(70, 24);
-            this.button17.TabIndex = 708;
-            this.button17.Text = "RHX1-SF1";
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(200, 20);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(87, 13);
-            this.label82.TabIndex = 865;
-            this.label82.Text = "DP_PHX1 (kPa):";
-            // 
-            // comboBox13
-            // 
-            this.comboBox13.Enabled = false;
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Items.AddRange(new object[] {
-            "Solar Salt",
-            "Hitec XL",
-            "Therminol VP1",
-            "Syltherm_800",
-            "Dowtherm_A",
-            "Therminol_75",
-            "Liquid Sodium"});
-            this.comboBox13.Location = new System.Drawing.Point(455, 41);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(99, 21);
-            this.comboBox13.TabIndex = 529;
-            this.comboBox13.Text = "Solar Salt";
-            // 
-            // textBox53
-            // 
-            this.textBox53.Location = new System.Drawing.Point(292, 17);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(48, 20);
-            this.textBox53.TabIndex = 866;
-            this.textBox53.Text = "0.0";
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Maroon;
-            this.button18.Enabled = false;
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(270, 94);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(70, 24);
-            this.button18.TabIndex = 709;
-            this.button18.Text = "RHX1-SF2";
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.Sienna;
-            this.button21.Enabled = false;
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(560, 92);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(70, 24);
-            this.button21.TabIndex = 710;
-            this.button21.Text = "RHX2-SF1";
-            this.button21.UseVisualStyleBackColor = false;
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.Enabled = false;
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "Solar Salt",
-            "Hitec XL",
-            "Therminol VP1",
-            "Syltherm_800",
-            "Dowtherm_A",
-            "Therminol_75",
-            "Liquid Sodium"});
-            this.comboBox12.Location = new System.Drawing.Point(455, 94);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(99, 21);
-            this.comboBox12.TabIndex = 531;
-            this.comboBox12.Text = "Solar Salt";
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.Sienna;
-            this.button20.Enabled = false;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(634, 92);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(70, 24);
-            this.button20.TabIndex = 711;
-            this.button20.Text = "RHX2-SF2";
-            this.button20.UseVisualStyleBackColor = false;
-            // 
-            // textBox57
-            // 
-            this.textBox57.Location = new System.Drawing.Point(656, 42);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(48, 20);
-            this.textBox57.TabIndex = 870;
-            this.textBox57.Text = "673.15";
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(557, 45);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(94, 13);
-            this.label86.TabIndex = 869;
-            this.label86.Text = "Intermediate T (K):";
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(564, 20);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(88, 13);
-            this.label85.TabIndex = 871;
-            this.label85.Text = "DP_RHX1 (kPa):";
-            // 
-            // textBox56
-            // 
-            this.textBox56.Location = new System.Drawing.Point(656, 17);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(48, 20);
-            this.textBox56.TabIndex = 872;
-            this.textBox56.Text = "0.0";
             // 
             // textBox4
             // 
@@ -3495,7 +3496,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 700);
+            this.ClientSize = new System.Drawing.Size(1354, 700);
             this.Controls.Add(this.label95);
             this.Controls.Add(this.label94);
             this.Controls.Add(this.label93);

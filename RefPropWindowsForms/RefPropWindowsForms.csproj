@@ -890,6 +890,12 @@
     <Compile Include="RC_with_ReHeating_Optimization_Analysis_Results.Designer.cs">
       <DependentUpon>RC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="RC_without_ReHeating_Optimization_Analysis_Results_new_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_without_ReHeating_Optimization_Analysis_Results_new_configuration.Designer.cs">
+      <DependentUpon>RC_without_ReHeating_Optimization_Analysis_Results_new_configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="RC_with_ReHeating_Optimization_Analysis_Results_new_configuration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1369,6 +1375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RC_with_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>RC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_without_ReHeating_Optimization_Analysis_Results_new_configuration.resx">
+      <DependentUpon>RC_without_ReHeating_Optimization_Analysis_Results_new_configuration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RC_with_ReHeating_Optimization_Analysis_Results_new_configuration.resx">
       <DependentUpon>RC_with_ReHeating_Optimization_Analysis_Results_new_configuration.cs</DependentUpon>

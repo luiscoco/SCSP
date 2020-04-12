@@ -230,27 +230,27 @@ namespace RefPropWindowsForms
                 //xlWorkSheet1.Cells[4, 23] = "LF_RHX2_Apperture_Area(m2)";
                 //xlWorkSheet1.Cells[4, 24] = "LF_RHX2_Pressure_Drop(bar)";
 
-                using (var solver = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
+                using (var solver = new NLoptSolver(algorithm_type, 4, 0.00001, 10000))
                 {
                     solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, initial_CIP_value + 2000, initial_CIP_value + 1000 });
                     solver.SetUpperBounds(new[] { 1.0, 125000, puntero_aplicacion.p_mc_out2 - 1000, puntero_aplicacion.p_mc_out2 - 2000 });
 
-                    solver.SetInitialStepSize(new[] { 0.01, 200, 1000, 1000 });
+                    solver.SetInitialStepSize(new[] { 0.005, 200, 1000, 1000 });
 
-                    var initialValue = new[] { 0.1, initial_CIP_value, 14000, 11000 };
+                    var initialValue = new[] { 0.2, initial_CIP_value, 14000, 11000 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
                         puntero_aplicacion.luis.RecompCycledesign_withTwoReheating(puntero_aplicacion.luis, 
-                            ref cicloRC_withTwoRH, puntero_aplicacion.w_dot_net2, puntero_aplicacion.t_mc_in2, 
-                            puntero_aplicacion.t_t_in2, variables[1], puntero_aplicacion.p_mc_out2,
-                           variables[2], puntero_aplicacion.t_rht1_in2, variables[3], 
-                           puntero_aplicacion.t_rht2_in2, -puntero_aplicacion.dp2_lt1, -puntero_aplicacion.dp2_ht1, 
-                           -puntero_aplicacion.dp2_pc2, -puntero_aplicacion.dp2_phx1, -puntero_aplicacion.dp2_rhx1, 
-                           -puntero_aplicacion.dp2_rhx2, -puntero_aplicacion.dp2_lt2, -puntero_aplicacion.dp2_ht2,
-                           puntero_aplicacion.ua_lt2, puntero_aplicacion.ua_ht2, variables[0], puntero_aplicacion.eta_mc, 
-                           puntero_aplicacion.eta_rc, puntero_aplicacion.eta_t, puntero_aplicacion.eta_trh1, 
-                           puntero_aplicacion.eta_trh2, puntero_aplicacion.n_sub_hxrs2, puntero_aplicacion.tol2);
+                        ref cicloRC_withTwoRH, puntero_aplicacion.w_dot_net2, puntero_aplicacion.t_mc_in2, 
+                        puntero_aplicacion.t_t_in2, variables[1], puntero_aplicacion.p_mc_out2,
+                        variables[2], puntero_aplicacion.t_rht1_in2, variables[3], 
+                        puntero_aplicacion.t_rht2_in2, -puntero_aplicacion.dp2_lt1, -puntero_aplicacion.dp2_ht1, 
+                        -puntero_aplicacion.dp2_pc2, -puntero_aplicacion.dp2_phx1, -puntero_aplicacion.dp2_rhx1, 
+                        -puntero_aplicacion.dp2_rhx2, -puntero_aplicacion.dp2_lt2, -puntero_aplicacion.dp2_ht2,
+                        puntero_aplicacion.ua_lt2, puntero_aplicacion.ua_ht2, variables[0], puntero_aplicacion.eta_mc, 
+                        puntero_aplicacion.eta_rc, puntero_aplicacion.eta_t, puntero_aplicacion.eta_trh1, 
+                        puntero_aplicacion.eta_trh2, puntero_aplicacion.n_sub_hxrs2, puntero_aplicacion.tol2);
                                                                      
                         counter++;
 

@@ -234,6 +234,7 @@ namespace RefPropWindowsForms
         public Double Main_Compressor_Pin, Main_Compressor_Tin, Main_Compressor_Pout, Main_Compressor_Tout;
               
         public Double Main_Compressor_Flow, Main_Compressor_Diameter, Main_Compressor_Rotation_Velocity;
+
         public Double Main_Compressor_Efficiency, Main_Compressor_Phi; //Main_Compressor_Phi is the Compressor Flow Factor
         public Boolean Main_Compressor_Surge;
 
@@ -528,9 +529,10 @@ namespace RefPropWindowsForms
             core.RecompCycleTwoReheating cicloRC = new core.RecompCycleTwoReheating();
 
             //PRIMERA LLAMADA
-            luis.RecompCycledesign_withReheating_newproposed(luis, ref cicloRC, w_dot_net2, t_mc_in2, t_t_in2, p_mc_in2, p_mc_out2,
-                          p_rhx1_in2, t_rht1_in2, p_rhx2_in2, t_rht2_in2, -dp2_lt1, -dp2_ht1, -dp2_pc2, -dp2_phx1, -dp2_rhx1, -dp2_rhx2, -dp2_lt2, -dp2_ht2,
-                          ua_lt2, ua_ht2, recomp_frac, eta_mc, eta_rc, eta_t, eta_trh1, eta_trh2, n_sub_hxrs2, tol2);
+            luis.RecompCycledesign_withReheating_newproposed(luis, ref cicloRC, w_dot_net2, t_mc_in2, t_t_in2, 
+            p_mc_in2, p_mc_out2, p_rhx1_in2, t_rht1_in2, p_rhx2_in2, t_rht2_in2, -dp2_lt1, -dp2_ht1, -dp2_pc2,
+            -dp2_phx1, -dp2_rhx1, -dp2_rhx2, -dp2_lt2, -dp2_ht2, ua_lt2, ua_ht2, recomp_frac, eta_mc, eta_rc,
+            eta_t, eta_trh1, eta_trh2, n_sub_hxrs2, tol2);
 
             massflow2 = cicloRC.m_dot_turbine;
             w_dot_net2 = cicloRC.W_dot_net;
@@ -1003,6 +1005,9 @@ namespace RefPropWindowsForms
                 textBox59.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox58.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox55.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
             }
         }
 
@@ -1107,10 +1112,20 @@ namespace RefPropWindowsForms
             }
         }
 
+        //Optimization Analysis button
+        private void button35_Click(object sender, EventArgs e)
+        {
+            RC_with_ReHeating_Optimization_Analysis_Results_new_configuration RC_with_ReHeating_Optimization_Analysis_Results_new_configuration_window = new RC_with_ReHeating_Optimization_Analysis_Results_new_configuration(this);
+            RC_with_ReHeating_Optimization_Analysis_Results_new_configuration_window.Show();
+        }
+
         //Reset Button
         private void button14_Click(object sender, EventArgs e)
         {
 
         }
+
+      
+
     }
 }
