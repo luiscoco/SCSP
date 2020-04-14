@@ -30,6 +30,8 @@
         {
             this.textBox57 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox86 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -116,8 +118,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -155,6 +155,22 @@
             this.groupBox1.TabIndex = 1303;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Optmization Results";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(40, 89);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(85, 13);
+            this.label24.TabIndex = 1266;
+            this.label24.Text = "P_rhx1_in (kPa):";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(132, 86);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(88, 20);
+            this.textBox5.TabIndex = 1265;
             // 
             // label7
             // 
@@ -699,8 +715,6 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox6.Location = new System.Drawing.Point(16, 28);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(116, 17);
@@ -966,22 +980,6 @@
             this.label20.Size = new System.Drawing.Size(150, 15);
             this.label20.TabIndex = 1314;
             this.label20.Text = "RHX2 Solar Field Collectors:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(40, 89);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(85, 13);
-            this.label24.TabIndex = 1266;
-            this.label24.Text = "P_rhx1_in (kPa):";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(132, 86);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(88, 20);
-            this.textBox5.TabIndex = 1265;
             // 
             // RC_with_ReHeating_Optimization_Analysis_Results_new_configuration
             // 

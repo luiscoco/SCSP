@@ -424,7 +424,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 1246;
-            this.label10.Text = "P_t2_in (kPa):";
+            this.label10.Text = "P_t1_in (kPa):";
             // 
             // textBox7
             // 
