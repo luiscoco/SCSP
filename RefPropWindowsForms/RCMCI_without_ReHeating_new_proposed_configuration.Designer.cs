@@ -233,7 +233,6 @@
             this.label55 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label54 = new System.Windows.Forms.Label();
             this.textBox50 = new System.Windows.Forms.TextBox();
@@ -273,6 +272,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -301,6 +301,7 @@
             this.button35.TabIndex = 1441;
             this.button35.Text = "Optimization Analysis";
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
@@ -2778,17 +2779,6 @@
             this.label57.TabIndex = 1279;
             this.label57.Text = "2";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.RCMCI_without_ReHeating_ICAI_proposed_configuration;
-            this.pictureBox1.Location = new System.Drawing.Point(189, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(849, 397);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1277;
-            this.pictureBox1.TabStop = false;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(768, 4);
@@ -3134,6 +3124,17 @@
             this.button2.TabIndex = 1238;
             this.button2.Text = "Design-Point";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.RCMCI_without_ReHeating_ICAI_proposed_configuration;
+            this.pictureBox1.Location = new System.Drawing.Point(189, 85);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(849, 397);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1277;
+            this.pictureBox1.TabStop = false;
             // 
             // RCMCI_without_ReHeating_new_proposed_configuration
             // 

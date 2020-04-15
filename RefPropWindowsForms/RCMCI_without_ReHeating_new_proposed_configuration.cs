@@ -218,6 +218,7 @@ namespace RefPropWindowsForms
         public Double ReHeating_Turbine_Pin, ReHeating_Turbine_Tin, ReHeating_Turbine_Pout, ReHeating_Turbine_Tout;      
 
         public Double ReHeating_Turbine_Flow, ReHeating_Turbine_Rotary_Velocity, ReHeating_Turbine_Diameter, ReHeating_Turbine_Efficiency, ReHeating_Turbine_Anozzle;
+
         public Double ReHeating_Turbine_nu, ReHeating_Turbine_w_Tip_Ratio;
 
         //LTR results 
@@ -913,6 +914,9 @@ namespace RefPropWindowsForms
                 textBox32.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox51.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox31.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
         }
 
@@ -1134,6 +1138,13 @@ namespace RefPropWindowsForms
             {
                 textBox4.Text = "648.15";
             }
+        }
+
+        //Optimization Analysis button
+        private void button35_Click(object sender, EventArgs e)
+        {
+            RCMCI_without_ReHeating_Optimization_new_configuration RCMCI_without_ReHeating_Optimization_new_configuration_window = new RCMCI_without_ReHeating_Optimization_new_configuration(this);
+            RCMCI_without_ReHeating_Optimization_new_configuration_window.Show();
         }
     }
 }
