@@ -1166,9 +1166,13 @@ namespace RefPropWindowsForms
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
-                        puntero_aplicacion.luis.RecompCycledesign_newproposed_for_Optimization(puntero_aplicacion.luis, ref cicloRC_withRH, puntero_aplicacion.w_dot_net2, puntero_aplicacion.t_mc_in2, puntero_aplicacion.t_t_in2, variables[1], puntero_aplicacion.p_mc_out2,
-                        variables[1], puntero_aplicacion.t_rht_in2, -puntero_aplicacion.dp2_lt1, -puntero_aplicacion.dp2_ht1, -puntero_aplicacion.dp2_pc2, -puntero_aplicacion.dp2_phx1, -puntero_aplicacion.dp2_rhx1, -puntero_aplicacion.dp2_lt2, -puntero_aplicacion.dp2_ht2, variables[2], UA_Total,
-                        variables[0], puntero_aplicacion.eta_mc2, puntero_aplicacion.eta_rc2, puntero_aplicacion.eta_t2, puntero_aplicacion.eta_trh2, puntero_aplicacion.n_sub_hxrs2, puntero_aplicacion.tol2);
+                        puntero_aplicacion.luis.RecompCycledesign_newproposed_for_Optimization(puntero_aplicacion.luis, 
+                        ref cicloRC_withRH, puntero_aplicacion.w_dot_net2, puntero_aplicacion.t_mc_in2, puntero_aplicacion.t_t_in2, 
+                        variables[1], puntero_aplicacion.p_mc_out2, variables[1], puntero_aplicacion.t_rht_in2, -puntero_aplicacion.dp2_lt1, 
+                        -puntero_aplicacion.dp2_ht1, -puntero_aplicacion.dp2_pc2, -puntero_aplicacion.dp2_phx1, -puntero_aplicacion.dp2_rhx1, 
+                        -puntero_aplicacion.dp2_lt2, -puntero_aplicacion.dp2_ht2, variables[2], UA_Total,
+                        variables[0], puntero_aplicacion.eta_mc2, puntero_aplicacion.eta_rc2, puntero_aplicacion.eta_t2, 
+                        puntero_aplicacion.eta_trh2, puntero_aplicacion.n_sub_hxrs2, puntero_aplicacion.tol2);
 
                         counter++;
 
