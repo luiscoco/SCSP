@@ -1190,6 +1190,7 @@
             this.button35.TabIndex = 1480;
             this.button35.Text = "Optimization Analysis";
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 

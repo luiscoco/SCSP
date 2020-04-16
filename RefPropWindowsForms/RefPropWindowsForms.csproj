@@ -800,6 +800,12 @@
     <Compile Include="RCMCI_with_ReHeating_Optimization_Analysis_Results.Designer.cs">
       <DependentUpon>RCMCI_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="RCMCI_with_ReHeating_Optimization_new_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_ReHeating_Optimization_new_configuration.Designer.cs">
+      <DependentUpon>RCMCI_with_ReHeating_Optimization_new_configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="RCMCI_with_Three_Reheatings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1336,6 +1342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_with_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>RCMCI_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_ReHeating_Optimization_new_configuration.resx">
+      <DependentUpon>RCMCI_with_ReHeating_Optimization_new_configuration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_with_Three_Reheatings.resx">
       <DependentUpon>RCMCI_with_Three_Reheatings.cs</DependentUpon>

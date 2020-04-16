@@ -1061,6 +1061,9 @@ namespace RefPropWindowsForms
                 textBox34.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox68.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox51.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
         }
 
@@ -1165,6 +1168,13 @@ namespace RefPropWindowsForms
             {
                 GC.Collect();
             }
+        }
+
+        //Optimization analysis button
+        private void button35_Click(object sender, EventArgs e)
+        {
+            RCMCI_with_ReHeating_Optimization_new_configuration RCMCI_with_ReHeating_Optimization_new_configuration_window = new RCMCI_with_ReHeating_Optimization_new_configuration(this);
+            RCMCI_with_ReHeating_Optimization_new_configuration_window.Show();
         }
     }
 }
