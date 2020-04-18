@@ -3357,6 +3357,7 @@ namespace RefPropWindowsForms
                             xlWorkSheet1.Cells[counter_Excel + 1, 14] = puntero_aplicacion.LF_Main_SF_Pressure_drop.ToString();
 
                         }
+
                         counter_Excel++;
 
                         initial_CIP_value = puntero_aplicacion.p_mc_in2;
@@ -3509,50 +3510,53 @@ namespace RefPropWindowsForms
                     else if (comboBox19.Text == "PRAXIS")
                         algorithm_type = NLoptAlgorithm.LN_PRAXIS;
 
-                    if (checkBox6.Checked == true)
-                    {
-                        initial_CIP_value = Convert.ToDouble(textBox1.Text);
-                    }
-                    else
-                    {
-                        initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
-                    }
-
                     if (i == Convert.ToDouble(textBox57.Text))
                     {
-
-                        xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
-
-                        xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox60.Text + "," + puntero_aplicacion.comboBox1.Text + ":" + puntero_aplicacion.textBox61.Text + "," + puntero_aplicacion.comboBox18.Text + ":" + puntero_aplicacion.textBox51.Text + "," + puntero_aplicacion.comboBox17.Text + ":" + puntero_aplicacion.textBox80.Text;
-                        xlWorkSheet1.Cells[1, 2] = "Pcrit(kPa)";
-                        xlWorkSheet1.Cells[1, 3] = "Tcrit(ºC)";
-
-                        xlWorkSheet1.Cells[2, 1] = "";
-                        xlWorkSheet1.Cells[2, 2] = Convert.ToString(puntero_aplicacion.MixtureCriticalPressure);
-                        xlWorkSheet1.Cells[2, 3] = Convert.ToString(puntero_aplicacion.MixtureCriticalTemperature - 273.15);
-
-                        xlWorkSheet1.Cells[3, 1] = "";
-                        xlWorkSheet1.Cells[3, 2] = "";
-                        xlWorkSheet1.Cells[4, 3] = "";
-
-                        xlWorkSheet1.Cells[4, 1] = "CIP(kPa)";
-                        xlWorkSheet1.Cells[4, 2] = "CIT(K)";
-                        xlWorkSheet1.Cells[4, 3] = "LT UA(kW/K)";
-                        xlWorkSheet1.Cells[4, 4] = "HT UA(kW/K)";
-                        xlWorkSheet1.Cells[4, 5] = "Rec.Frac.";
-                        xlWorkSheet1.Cells[4, 6] = "P_rhx_in(kPa)";
-                        xlWorkSheet1.Cells[4, 7] = "Eff.(%)";
-                        xlWorkSheet1.Cells[4, 8] = "LTR Eff.(%)";
-                        xlWorkSheet1.Cells[4, 9] = "LTR Pinch(ºC)";
-                        xlWorkSheet1.Cells[4, 10] = "HTR Eff.(%)";
-                        xlWorkSheet1.Cells[4, 11] = "HTR Pinch(ºC)";
-
-                        if (checkBox7.Checked == false)
+                        if (checkBox6.Checked == true)
                         {
-                            xlWorkSheet1.Cells[4, 11] = "PTC_Apperture_Area(m2)";
-                            xlWorkSheet1.Cells[4, 12] = "PTC_Pressure_Drop(bar)";
-                            xlWorkSheet1.Cells[4, 13] = "LF_Apperture_Area(m2)";
-                            xlWorkSheet1.Cells[4, 14] = "LF_Pressure_Drop(bar)";
+                            initial_CIP_value = Convert.ToDouble(textBox1.Text);
+                        }
+                        else
+                        {
+                            initial_CIP_value = puntero_aplicacion.MixtureCriticalPressure;
+                        }
+
+                        if (i == Convert.ToDouble(textBox57.Text))
+                        {
+
+                            xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
+
+                            xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox60.Text + "," + puntero_aplicacion.comboBox1.Text + ":" + puntero_aplicacion.textBox61.Text + "," + puntero_aplicacion.comboBox18.Text + ":" + puntero_aplicacion.textBox51.Text + "," + puntero_aplicacion.comboBox17.Text + ":" + puntero_aplicacion.textBox80.Text;
+                            xlWorkSheet1.Cells[1, 2] = "Pcrit(kPa)";
+                            xlWorkSheet1.Cells[1, 3] = "Tcrit(ºC)";
+
+                            xlWorkSheet1.Cells[2, 1] = "";
+                            xlWorkSheet1.Cells[2, 2] = Convert.ToString(puntero_aplicacion.MixtureCriticalPressure);
+                            xlWorkSheet1.Cells[2, 3] = Convert.ToString(puntero_aplicacion.MixtureCriticalTemperature - 273.15);
+
+                            xlWorkSheet1.Cells[3, 1] = "";
+                            xlWorkSheet1.Cells[3, 2] = "";
+                            xlWorkSheet1.Cells[4, 3] = "";
+
+                            xlWorkSheet1.Cells[4, 1] = "CIP(kPa)";
+                            xlWorkSheet1.Cells[4, 2] = "CIT(K)";
+                            xlWorkSheet1.Cells[4, 3] = "LT UA(kW/K)";
+                            xlWorkSheet1.Cells[4, 4] = "HT UA(kW/K)";
+                            xlWorkSheet1.Cells[4, 5] = "Rec.Frac.";
+                            xlWorkSheet1.Cells[4, 6] = "P_rhx_in(kPa)";
+                            xlWorkSheet1.Cells[4, 7] = "Eff.(%)";
+                            xlWorkSheet1.Cells[4, 8] = "LTR Eff.(%)";
+                            xlWorkSheet1.Cells[4, 9] = "LTR Pinch(ºC)";
+                            xlWorkSheet1.Cells[4, 10] = "HTR Eff.(%)";
+                            xlWorkSheet1.Cells[4, 11] = "HTR Pinch(ºC)";
+
+                            if (checkBox7.Checked == false)
+                            {
+                                xlWorkSheet1.Cells[4, 11] = "PTC_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 12] = "PTC_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 13] = "LF_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 14] = "LF_Pressure_Drop(bar)";
+                            }
                         }
                     }
 
@@ -4444,7 +4448,6 @@ namespace RefPropWindowsForms
 
                         if (checkBox7.Checked == false)
                         {
-
                             //Calculo del campo solar
                             PTC_SF_Calculation PTC = new PTC_SF_Calculation();
                             PTC.calledForSensingAnalysis = true;
@@ -4539,6 +4542,7 @@ namespace RefPropWindowsForms
                             xlWorkSheet1.Cells[counter_Excel + 1, 14] = puntero_aplicacion.LF_Main_SF_Pressure_drop.ToString();
 
                         }
+
                         counter_Excel++;
 
                         initial_CIP_value = puntero_aplicacion.p_mc_in2;
