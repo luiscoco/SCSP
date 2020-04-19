@@ -112,6 +112,7 @@
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -228,7 +229,7 @@
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(650, 313);
+            this.label19.Location = new System.Drawing.Point(648, 339);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(110, 15);
             this.label19.TabIndex = 1306;
@@ -465,7 +466,7 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Parabolic",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox4.Location = new System.Drawing.Point(770, 310);
+            this.comboBox4.Location = new System.Drawing.Point(768, 336);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(191, 21);
             this.comboBox4.TabIndex = 1305;
@@ -500,6 +501,7 @@
             this.button7.TabIndex = 1302;
             this.button7.Text = "Run CIT Optimization";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // checkBox3
             // 
@@ -919,11 +921,24 @@
             this.listBox1.Size = new System.Drawing.Size(67, 95);
             this.listBox1.TabIndex = 0;
             // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Checked = true;
+            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox7.Location = new System.Drawing.Point(813, 307);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(146, 17);
+            this.checkBox7.TabIndex = 1316;
+            this.checkBox7.Text = "Not calculate Solar Fields";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
             // RCMCI_without_ReHeating_Optimization_new_configuration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 519);
+            this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label19);
@@ -1045,5 +1060,6 @@
         public System.Windows.Forms.ListBox listBox3;
         public System.Windows.Forms.ListBox listBox2;
         public System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckBox checkBox7;
     }
 }
