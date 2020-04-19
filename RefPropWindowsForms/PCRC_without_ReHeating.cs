@@ -3583,6 +3583,9 @@ namespace RefPropWindowsForms
                 textBox32.Text = Convert.ToString(working_fluid.CriticalPressure);               
                 textBox31.Text = Convert.ToString(working_fluid.CriticalTemperature);                
                 textBox30.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
         }
 
