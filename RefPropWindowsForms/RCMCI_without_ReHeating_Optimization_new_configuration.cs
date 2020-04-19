@@ -231,7 +231,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                    var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -457,7 +457,7 @@ namespace RefPropWindowsForms
 
                     solver1.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                    var initialValue = new[] { max_recomp_fraction, max_mc1_p_in, (max_mc1_p_in + 500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -683,7 +683,7 @@ namespace RefPropWindowsForms
 
                     solver2.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                    var initialValue = new[] { max_recomp_fraction_1, max_mc1_p_in_1, (max_mc1_p_in_1 + 500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -909,7 +909,7 @@ namespace RefPropWindowsForms
 
                     solver3.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                    var initialValue = new[] { max_recomp_fraction_2, max_mc1_p_in_2, (max_mc1_p_in_2 + 500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1135,7 +1135,7 @@ namespace RefPropWindowsForms
 
                     solver4.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                    var initialValue = new[] { max_recomp_fraction_3, max_mc1_p_in_3, (max_mc1_p_in_3 + 500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1486,7 +1486,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
+                    var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1724,7 +1724,7 @@ namespace RefPropWindowsForms
 
                     solver1.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
+                    var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1962,7 +1962,7 @@ namespace RefPropWindowsForms
 
                     solver1.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
+                    var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -2199,7 +2199,7 @@ namespace RefPropWindowsForms
 
                     solver3.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
+                    var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -2632,7 +2632,7 @@ namespace RefPropWindowsForms
 
                         solver.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0) };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -2861,7 +2861,7 @@ namespace RefPropWindowsForms
 
                         solver1.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0) };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -3087,7 +3087,7 @@ namespace RefPropWindowsForms
 
                         solver2.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0) };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -3313,7 +3313,7 @@ namespace RefPropWindowsForms
 
                         solver3.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0) };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -3530,7 +3530,7 @@ namespace RefPropWindowsForms
 
                         solver4.SetInitialStepSize(new[] { 0.05, 100.0, 100.0 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0) };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0) };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4078,7 +4078,7 @@ namespace RefPropWindowsForms
 
                         solver.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4317,7 +4317,7 @@ namespace RefPropWindowsForms
 
                         solver1.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4554,7 +4554,7 @@ namespace RefPropWindowsForms
 
                         solver1.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4791,7 +4791,7 @@ namespace RefPropWindowsForms
 
                         solver3.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
+                        var initialValue = new[] { 0.25, initial_CIP_value, (initial_CIP_value + 500.0), 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
