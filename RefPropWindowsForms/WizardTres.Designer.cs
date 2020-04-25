@@ -267,6 +267,7 @@
             this.linkLabel10.TabIndex = 170;
             this.linkLabel10.TabStop = true;
             this.linkLabel10.Text = "Design-Point";
+            this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked_1);
             // 
             // linkLabel7
             // 

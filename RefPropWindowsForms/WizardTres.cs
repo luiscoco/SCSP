@@ -115,5 +115,13 @@ namespace RefPropWindowsForms
             puntero.PCRC_with_Two_Intercooling_without_ReHeating_dialog.MdiParent = puntero;
             puntero.PCRC_with_Two_Intercooling_without_ReHeating_dialog.Show();
         }
+
+        private void linkLabel10_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            puntero.RCMCI_with_Two_Intercooling_without_ReHeating_dialog = new RCMCI_with_Two_Intercooling_without_Reheating();
+            puntero.RCMCI_with_Two_Intercooling_without_ReHeating_dialog.MdiParent = puntero;
+            puntero.RCMCI_with_Two_Intercooling_without_ReHeating_dialog.Show();
+        }
     }
 }
