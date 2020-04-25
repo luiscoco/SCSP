@@ -215,7 +215,7 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 2, 0.00001, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value });
+                    solver.SetLowerBounds(new[] { 0.0, initial_CIP_value });
                     solver.SetUpperBounds(new[] { 1.0, 17500.0 });
 
                     solver.SetInitialStepSize(new[] { 0.005, 250.0 });
@@ -421,7 +421,7 @@ namespace RefPropWindowsForms
 
                 using (var solver1 = new NLoptSolver(algorithm_type, 2, 0.00001, 10000))
                 {
-                    solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value });
+                    solver1.SetLowerBounds(new[] { 0.0, initial_CIP_value });
                     solver1.SetUpperBounds(new[] { 1.0, 17500.0 });
 
                     solver1.SetInitialStepSize(new[] { 0.005, 250.0 });
@@ -628,7 +628,7 @@ namespace RefPropWindowsForms
 
                 using (var solver2 = new NLoptSolver(algorithm_type, 2, 0.00001, 10000))
                 {
-                    solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value });
+                    solver2.SetLowerBounds(new[] { 0.0, initial_CIP_value });
                     solver2.SetUpperBounds(new[] { 1.0, 17500.0 });
 
                     solver2.SetInitialStepSize(new[] { 0.005, 250.0 });
@@ -838,7 +838,7 @@ namespace RefPropWindowsForms
 
                 using (var solver3 = new NLoptSolver(algorithm_type, 2, 0.00001, 10000))
                 {
-                    solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value });
+                    solver3.SetLowerBounds(new[] { 0.0, initial_CIP_value });
                     solver3.SetUpperBounds(new[] { 1.0, 17500.0 });
 
                     solver3.SetInitialStepSize(new[] { 0.005, 250.0 });
@@ -1160,7 +1160,7 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 3, 0.000001, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0 });
+                    solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, 0.0 });
                     solver.SetUpperBounds(new[] { 1.0, 17500.0, 1.0 });
 
                     solver.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
@@ -1379,7 +1379,7 @@ namespace RefPropWindowsForms
 
                 using (var solver1 = new NLoptSolver(algorithm_type, 3, 0.000001, 10000))
                 {
-                    solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0 });
+                    solver1.SetLowerBounds(new[] { 0.0, initial_CIP_value, 0.0 });
                     solver1.SetUpperBounds(new[] { 1.0, 17500.0, 1.0 });
 
                     solver1.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
@@ -1600,7 +1600,7 @@ namespace RefPropWindowsForms
 
                 using (var solver2 = new NLoptSolver(algorithm_type, 3, 0.000001, 10000))
                 {
-                    solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0 });
+                    solver2.SetLowerBounds(new[] { 0.0, initial_CIP_value, 0.0 });
                     solver2.SetUpperBounds(new[] { 1.0, 17500.0, 1.0 });
 
                     solver2.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
@@ -1822,7 +1822,7 @@ namespace RefPropWindowsForms
 
                 using (var solver3 = new NLoptSolver(algorithm_type, 3, 0.000001, 10000))
                 {
-                    solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0 });
+                    solver3.SetLowerBounds(new[] { 0.0, initial_CIP_value, 0.0 });
                     solver3.SetUpperBounds(new[] { 1.0, 17500.0, 1.0 });
 
                     solver3.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
