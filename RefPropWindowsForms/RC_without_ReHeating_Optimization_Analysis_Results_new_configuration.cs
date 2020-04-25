@@ -2430,12 +2430,12 @@ namespace RefPropWindowsForms
 
                     using (var solver = new NLoptSolver(algorithm_type, 2, 0.00001, 10000))
                     {
-                        solver.SetLowerBounds(new[] { 0.1, initial_CIP_value });
-                        solver.SetUpperBounds(new[] { 1.0, 12500.0 });
+                        solver.SetLowerBounds(new[] { 0.0, initial_CIP_value });
+                        solver.SetUpperBounds(new[] { 1.0, 17500.0 });
 
                         solver.SetInitialStepSize(new[] { 0.005, 250.0 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value};
+                        var initialValue = new[] { 0.1, initial_CIP_value + 4500.0 };
 
                         Func<double[], double> funcion = delegate (double[] variables1)
                         {
@@ -2639,12 +2639,13 @@ namespace RefPropWindowsForms
 
                     using (var solver1 = new NLoptSolver(algorithm_type, 2, 0.00001, 10000))
                     {
-                        solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value });
-                        solver1.SetUpperBounds(new[] { 1.0, 12500.0 });
+                        solver1.SetLowerBounds(new[] { 0.0, initial_CIP_value });
+                        solver1.SetUpperBounds(new[] { 1.0, 17500.0 });
 
-                        solver1.SetInitialStepSize(new[] { 0.005, 50.0 });
+                        solver1.SetInitialStepSize(new[] { 0.005, 250.0 });
 
-                        var initialValue = new[] { max_recomp_fraction, max_mc_p_in };
+                        //var initialValue = new[] { max_recomp_fraction, max_mc_p_in };
+                        var initialValue = new[] { 0.1, initial_CIP_value + 4500.0 };
 
                         Func<double[], double> funcion = delegate (double[] variables2)
                         {
@@ -2799,8 +2800,8 @@ namespace RefPropWindowsForms
                         //Copy results as design-point inputs
                         if (checkBox3.Checked == true)
                         {
-                            puntero_aplicacion.textBox15.Text = recomp_frac2_list[maxIndex].ToString();
-                            puntero_aplicacion.textBox3.Text = p_mc_in2_list[maxIndex].ToString();
+                            puntero_aplicacion.textBox15.Text = recomp_frac2_list_segunda_llamada[maxIndex].ToString();
+                            puntero_aplicacion.textBox3.Text = p_mc_in2_list_segunda_llamada[maxIndex].ToString();
                             //puntero_aplicacion.textBox7.Text = p_rhx_in2_list[maxIndex].ToString();
                         }
 
@@ -2852,12 +2853,13 @@ namespace RefPropWindowsForms
 
                     using (var solver2 = new NLoptSolver(algorithm_type, 2, 0.00001, 10000))
                     {
-                        solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value });
-                        solver2.SetUpperBounds(new[] { 1.0, 12500.0 });
+                        solver2.SetLowerBounds(new[] { 0.0, initial_CIP_value });
+                        solver2.SetUpperBounds(new[] { 1.0, 17500.0 });
 
-                        solver2.SetInitialStepSize(new[] { 0.005, 50.0 });
+                        solver2.SetInitialStepSize(new[] { 0.005, 250.0 });
 
-                        var initialValue = new[] { max_recomp_fraction_1, max_mc_p_in_1 };
+                        //var initialValue = new[] { max_recomp_fraction_1, max_mc_p_in_1 };
+                        var initialValue = new[] { 0.1, initial_CIP_value + 4500.0 };
 
                         Func<double[], double> funcion = delegate (double[] variables3)
                         {
@@ -3061,12 +3063,13 @@ namespace RefPropWindowsForms
 
                     using (var solver3 = new NLoptSolver(algorithm_type, 2, 0.00001, 10000))
                     {
-                        solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value });
-                        solver3.SetUpperBounds(new[] { 1.0, 12500.0 });
+                        solver3.SetLowerBounds(new[] { 0.0, initial_CIP_value });
+                        solver3.SetUpperBounds(new[] { 1.0, 17500.0 });
 
-                        solver3.SetInitialStepSize(new[] { 0.005, 50.0 });
+                        solver3.SetInitialStepSize(new[] { 0.005, 250.0 });
 
-                        var initialValue = new[] { max_recomp_fraction_2, max_mc_p_in_2 };
+                        var initialValue = new[] { 0.1, initial_CIP_value + 4500.0 };
+                        //var initialValue = new[] { max_recomp_fraction_2, max_mc_p_in_2 };
 
                         Func<double[], double> funcion = delegate (double[] variables4)
                         {
@@ -3572,12 +3575,12 @@ namespace RefPropWindowsForms
 
                     using (var solver = new NLoptSolver(algorithm_type, 3, 0.000001, 10000))
                     {
-                        solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0 });
-                        solver.SetUpperBounds(new[] { 1.0, 12500.0, 1.0 });
+                        solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, 0.0 });
+                        solver.SetUpperBounds(new[] { 1.0, 17500.0, 1.0 });
 
                         solver.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value, 0.5 };
+                        var initialValue = new[] { 0.1, initial_CIP_value + 4500.0, 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -3793,12 +3796,12 @@ namespace RefPropWindowsForms
 
                     using (var solver1 = new NLoptSolver(algorithm_type, 3, 0.000001, 10000))
                     {
-                        solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0 });
-                        solver1.SetUpperBounds(new[] { 1.0, 12500.0, 1.0 });
+                        solver1.SetLowerBounds(new[] { 0.0, initial_CIP_value, 0.0 });
+                        solver1.SetUpperBounds(new[] { 1.0, 17500.0, 1.0 });
 
-                        solver1.SetInitialStepSize(new[] { 0.005, 50.0, 0.05 });
+                        solver1.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
 
-                        var initialValue = new[] { max_recomp_fraction, max_mc_p_in, 0.5 };
+                        var initialValue = new[] { 0.1, initial_CIP_value + 4500.0, 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4014,12 +4017,12 @@ namespace RefPropWindowsForms
 
                     using (var solver2 = new NLoptSolver(algorithm_type, 3, 0.000001, 10000))
                     {
-                        solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0 });
-                        solver2.SetUpperBounds(new[] { 1.0, 12500.0, 1.0 });
+                        solver2.SetLowerBounds(new[] { 0.0, initial_CIP_value, 0.0 });
+                        solver2.SetUpperBounds(new[] { 1.0, 17500.0, 1.0 });
 
-                        solver2.SetInitialStepSize(new[] { 0.005, 50.0, 0.05 });
+                        solver2.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
 
-                        var initialValue = new[] { max_recomp_fraction_1, max_mc_p_in_1, 0.5 };
+                        var initialValue = new[] { 0.1, initial_CIP_value + 4500.0, 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4236,12 +4239,12 @@ namespace RefPropWindowsForms
 
                     using (var solver3 = new NLoptSolver(algorithm_type, 3, 0.000001, 10000))
                     {
-                        solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0 });
-                        solver3.SetUpperBounds(new[] { 1.0, 12500.0, 1.0 });
+                        solver3.SetLowerBounds(new[] { 0.0, initial_CIP_value, 0.0 });
+                        solver3.SetUpperBounds(new[] { 1.0, 17500.0, 1.0 });
 
-                        solver3.SetInitialStepSize(new[] { 0.005, 50.0, 0.05 });
+                        solver3.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
 
-                        var initialValue = new[] { max_recomp_fraction_2, max_mc_p_in_2, 0.5 };
+                        var initialValue = new[] { 0.1, initial_CIP_value + 4500.0, 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
