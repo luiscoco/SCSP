@@ -233,12 +233,12 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0 });
-                    solver.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
+                    solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0) });
+                    solver.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
 
-                    solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0 });
+                    solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 3500.0), 11000.0 };
+                    var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -471,12 +471,12 @@ namespace RefPropWindowsForms
 
                 using (var solver1 = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                 {
-                    solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0 });
-                    solver1.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
+                    solver1.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0) });
+                    solver1.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
 
-                    solver1.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0 });
+                    solver1.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 3500.0), 11000.0 };
+                    var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -711,12 +711,12 @@ namespace RefPropWindowsForms
 
                 using (var solver2 = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                 {
-                    solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0 });
-                    solver2.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
+                    solver2.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0) });
+                    solver2.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
 
-                    solver2.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0 });
+                    solver2.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 3500.0), 11000.0 };
+                    var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -951,12 +951,12 @@ namespace RefPropWindowsForms
 
                 using (var solver3 = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                 {
-                    solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0 });
-                    solver3.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
+                    solver3.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0) });
+                    solver3.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
 
-                    solver3.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0 });
+                    solver3.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 3500.0), 11000.0 };
+                    var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0) };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1322,12 +1322,12 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0, 0.0 });
-                    solver.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
+                    solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0), 0.0 });
+                    solver.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
 
-                    solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0, 0.05 });
+                    solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 3500.0), 11000.0, 0.5 };
+                    var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0),0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1570,12 +1570,12 @@ namespace RefPropWindowsForms
 
                 using (var solver1 = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                 {
-                    solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0, 0.0 });
-                    solver1.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
+                    solver1.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0), 0.0 });
+                    solver1.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
 
-                    solver1.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0, 0.05 });
+                    solver1.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 3500.0), 11000.0, 0.5 };
+                    var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0), 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1815,12 +1815,12 @@ namespace RefPropWindowsForms
 
                 using (var solver2 = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                 {
-                    solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0, 0.0 });
-                    solver2.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
+                    solver2.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0), 0.0 });
+                    solver2.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
 
-                    solver2.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0, 0.05 });
+                    solver2.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 3500.0), 11000.0, 0.5 };
+                    var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0), 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -2060,12 +2060,12 @@ namespace RefPropWindowsForms
 
                 using (var solver3 = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                 {
-                    solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0, 0.0 });
-                    solver3.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
+                    solver3.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0), 0.0 });
+                    solver3.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
 
-                    solver3.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0, 0.05 });
+                    solver3.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 3500.0), 11000.0, 0.5 };
+                    var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0), 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -2512,12 +2512,12 @@ namespace RefPropWindowsForms
 
                     using (var solver = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                     {
-                        solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0 });
-                        solver.SetUpperBounds(new[] { 1.0, 12500, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
+                        solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1500.0) });
+                        solver.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
 
                         solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value +1000.0, (initial_CIP_value + 1500.0), (initial_CIP_value + 8000.0) };
+                        var initialValue = new[] { 0.2, initial_CIP_value + 3500.0, (initial_CIP_value + 4500.0), (initial_CIP_value + 8000.0) };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -2751,12 +2751,12 @@ namespace RefPropWindowsForms
 
                     using (var solver1 = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                     {
-                        solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0 });
-                        solver1.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
+                        solver1.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0)});
+                        solver1.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0});
 
-                        solver1.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 100.0 });
+                        solver1.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0});
 
-                        var initialValue = new[] { 0.2, initial_CIP_value + 1000.0, (initial_CIP_value + 1500.0), (initial_CIP_value + 8000.0) };
+                        var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0)};
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -2988,12 +2988,12 @@ namespace RefPropWindowsForms
 
                     using (var solver2 = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                     {
-                        solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0 });
-                        solver2.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
+                        solver2.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0)});
+                        solver2.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0});
 
-                        solver2.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 100.0 });
+                        solver2.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0});
 
-                        var initialValue = new[] { 0.2, initial_CIP_value + 1000.0, (initial_CIP_value + 1500.0), (initial_CIP_value + 8000.0) };
+                        var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0)};
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -3225,12 +3225,12 @@ namespace RefPropWindowsForms
 
                     using (var solver3 = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                     {
-                        solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0 });
-                        solver3.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0 });
+                        solver3.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0)});
+                        solver3.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0});
 
-                        solver3.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 100.0 });
+                        solver3.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0});
 
-                        var initialValue = new[] { 0.2, initial_CIP_value + 1000.0, (initial_CIP_value + 1500.0), (initial_CIP_value + 8000.0) };
+                        var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0)};
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -3801,12 +3801,12 @@ namespace RefPropWindowsForms
 
                     using (var solver = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                     {
-                        solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0, 0.0 });
-                        solver.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
+                        solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0), 0.0 });
+                        solver.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
 
-                        solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 100.0, 0.05 });
+                        solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value + 1000.0, (initial_CIP_value + 1500.0), (initial_CIP_value + 8000.0), 0.5 };
+                        var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0), 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4052,12 +4052,12 @@ namespace RefPropWindowsForms
 
                     using (var solver1 = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                     {
-                        solver1.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0, 0.0 });
-                        solver1.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
+                        solver1.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0), 0.0 });
+                        solver1.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
 
-                        solver1.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 100.0, 0.05 });
+                        solver1.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value + 1000.0, (initial_CIP_value + 1500.0), (initial_CIP_value + 8000.0), 0.5 };
+                        var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0), 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4297,12 +4297,12 @@ namespace RefPropWindowsForms
 
                     using (var solver2 = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                     {
-                        solver2.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0, 0.0 });
-                        solver2.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
+                        solver2.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0), 0.0 });
+                        solver2.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
 
-                        solver2.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 100.0, 0.05 });
+                        solver2.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value + 1000.0, (initial_CIP_value + 1500.0), (initial_CIP_value + 8000.0), 0.5 };
+                        var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0), 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
@@ -4542,12 +4542,12 @@ namespace RefPropWindowsForms
 
                     using (var solver3 = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                     {
-                        solver3.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 200.0), 11000.0, 0.0 });
-                        solver3.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
+                        solver3.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0), (initial_CIP_value + 1000.0), 0.0 });
+                        solver3.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5), 22000.0, 1.0 });
 
-                        solver3.SetInitialStepSize(new[] { 0.05, 50.0, 50.0, 100.0, 0.05 });
+                        solver3.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 0.05 });
 
-                        var initialValue = new[] { 0.2, initial_CIP_value + 1000.0, (initial_CIP_value + 1500.0), (initial_CIP_value + 8000.0), 0.5 };
+                        var initialValue = new[] { 0.25, initial_CIP_value + 3500.0, (initial_CIP_value + 6500.0), (initial_CIP_value + 9500.0), 0.5 };
 
                         Func<double[], double> funcion = delegate (double[] variables)
                         {
