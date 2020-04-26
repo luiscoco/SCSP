@@ -1159,5 +1159,11 @@ namespace RefPropWindowsForms
                 textBox4.Text = "648.15";
             }
         }
+
+        //Optimization Analysis button
+        private void button34_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
