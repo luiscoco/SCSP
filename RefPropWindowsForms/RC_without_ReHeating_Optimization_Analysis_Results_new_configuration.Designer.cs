@@ -33,6 +33,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -112,12 +118,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -182,6 +182,57 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Optimization inputs";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(16, 157);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(32, 13);
+            this.label22.TabIndex = 1255;
+            this.label22.Text = "Step:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(48, 154);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(45, 20);
+            this.textBox5.TabIndex = 1254;
+            this.textBox5.Text = "5000";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(93, 133);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(23, 13);
+            this.label23.TabIndex = 1253;
+            this.label23.Text = "To:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(116, 130);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(43, 20);
+            this.textBox6.TabIndex = 1252;
+            this.textBox6.Text = "10000";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(10, 133);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(33, 13);
+            this.label24.TabIndex = 1251;
+            this.label24.Text = "From:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(48, 130);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(45, 20);
+            this.textBox7.TabIndex = 1250;
+            this.textBox7.Text = "10000";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -220,7 +271,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(17, 72);
+            this.checkBox2.Location = new System.Drawing.Point(17, 77);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(84, 17);
             this.checkBox2.TabIndex = 1231;
@@ -931,57 +982,6 @@
             this.checkBox7.TabIndex = 1292;
             this.checkBox7.Text = "Not calculate Solar Fields";
             this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(16, 157);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(32, 13);
-            this.label22.TabIndex = 1255;
-            this.label22.Text = "Step:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(48, 154);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(45, 20);
-            this.textBox5.TabIndex = 1254;
-            this.textBox5.Text = "5000";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(93, 133);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(23, 13);
-            this.label23.TabIndex = 1253;
-            this.label23.Text = "To:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(116, 130);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(43, 20);
-            this.textBox6.TabIndex = 1252;
-            this.textBox6.Text = "10000";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(10, 133);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(33, 13);
-            this.label24.TabIndex = 1251;
-            this.label24.Text = "From:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(48, 130);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(45, 20);
-            this.textBox7.TabIndex = 1250;
-            this.textBox7.Text = "10000";
             // 
             // RC_without_ReHeating_Optimization_Analysis_Results_new_configuration
             // 
