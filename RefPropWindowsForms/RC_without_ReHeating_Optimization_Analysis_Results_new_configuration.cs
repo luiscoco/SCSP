@@ -199,12 +199,11 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Cells[4, 3] = "LT UA(kW/K)";
                 xlWorkSheet1.Cells[4, 4] = "HT UA(kW/K)";
                 xlWorkSheet1.Cells[4, 5] = "Rec.Frac.";
-                xlWorkSheet1.Cells[4, 6] = "P_rhx_in(kPa)";
-                xlWorkSheet1.Cells[4, 7] = "Eff.(%)";
-                xlWorkSheet1.Cells[4, 8] = "LTR Eff.(%)";
-                xlWorkSheet1.Cells[4, 9] = "LTR Pinch(ºC)";
-                xlWorkSheet1.Cells[4, 10] = "HTR Eff.(%)";
-                xlWorkSheet1.Cells[4, 11] = "HTR Pinch(ºC)";
+                xlWorkSheet1.Cells[4, 6] = "Eff.(%)";
+                xlWorkSheet1.Cells[4, 7] = "LTR Eff.(%)";
+                xlWorkSheet1.Cells[4, 8] = "LTR Pinch(ºC)";
+                xlWorkSheet1.Cells[4, 9] = "HTR Eff.(%)";
+                xlWorkSheet1.Cells[4, 10] = "HTR Pinch(ºC)";
 
                 //PRIMERA LLAMADA para la optimización
                 double max_recomp_fraction = 0.0;
@@ -325,18 +324,16 @@ namespace RefPropWindowsForms
                         xlWorkSheet1.Cells[counter_Excel + 1, 4] = Convert.ToString(puntero_aplicacion.ua_ht2);
                         //Rec.Frac.
                         xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();
-                        //P_rhx_in(kPa)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.p_mc_in2.ToString();
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
-                        //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = cicloRC_withRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        //LTR Eff.(%
+                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = cicloRC_withRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = cicloRC_withRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = cicloRC_withRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
@@ -530,19 +527,17 @@ namespace RefPropWindowsForms
                         //HT UA(kW/K)
                         xlWorkSheet1.Cells[counter_Excel + 1, 4] = Convert.ToString(puntero_aplicacion.ua_ht2);
                         //Rec.Frac.
-                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();
-                        //P_rhx_in(kPa)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.p_mc_in2.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();                     
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
                         //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = cicloRC_withRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = cicloRC_withRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = cicloRC_withRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = cicloRC_withRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
@@ -743,19 +738,17 @@ namespace RefPropWindowsForms
                         //HT UA(kW/K)
                         xlWorkSheet1.Cells[counter_Excel + 1, 4] = Convert.ToString(puntero_aplicacion.ua_ht2);
                         //Rec.Frac.
-                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();
-                        //P_rhx_in(kPa)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.p_mc_in2.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();                       
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
                         //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = cicloRC_withRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = cicloRC_withRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = cicloRC_withRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = cicloRC_withRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
@@ -947,19 +940,17 @@ namespace RefPropWindowsForms
                         //HT UA(kW/K)
                         xlWorkSheet1.Cells[counter_Excel + 1, 4] = Convert.ToString(puntero_aplicacion.ua_ht2);
                         //Rec.Frac.
-                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();
-                        //P_rhx_in(kPa)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.p_mc_in2.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();                       
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
                         //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = cicloRC_withRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = cicloRC_withRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = cicloRC_withRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = cicloRC_withRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
@@ -1143,13 +1134,12 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Cells[4, 2] = "CIT(K)";
                 xlWorkSheet1.Cells[4, 3] = "LT UA(kW/K)";
                 xlWorkSheet1.Cells[4, 4] = "HT UA(kW/K)";
-                xlWorkSheet1.Cells[4, 5] = "Rec.Frac.";
-                xlWorkSheet1.Cells[4, 6] = "P_rhx_in(kPa)";
-                xlWorkSheet1.Cells[4, 7] = "Eff.(%)";
-                xlWorkSheet1.Cells[4, 8] = "LTR Eff.(%)";
-                xlWorkSheet1.Cells[4, 9] = "LTR Pinch(ºC)";
-                xlWorkSheet1.Cells[4, 10] = "HTR Eff.(%)";
-                xlWorkSheet1.Cells[4, 11] = "HTR Pinch(ºC)";
+                xlWorkSheet1.Cells[4, 5] = "Rec.Frac.";              
+                xlWorkSheet1.Cells[4, 6] = "Eff.(%)";
+                xlWorkSheet1.Cells[4, 7] = "LTR Eff.(%)";
+                xlWorkSheet1.Cells[4, 8] = "LTR Pinch(ºC)";
+                xlWorkSheet1.Cells[4, 9] = "HTR Eff.(%)";
+                xlWorkSheet1.Cells[4, 10] = "HTR Pinch(ºC)";
 
                 //PRIMERA LLAMADA para la optimización
                 double max_recomp_fraction = 0.0;
@@ -1276,19 +1266,17 @@ namespace RefPropWindowsForms
                         //HT UA(kW/K)
                         xlWorkSheet1.Cells[counter_Excel + 1, 4] = puntero_aplicacion.ua_ht2.ToString();
                         //Rec.Frac.
-                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();
-                        //P_rhx_in
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.p_mc_in2.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();                       
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
                         //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = cicloRC_withRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = cicloRC_withRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = cicloRC_withRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = cicloRC_withRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
@@ -1496,19 +1484,17 @@ namespace RefPropWindowsForms
                         //HT UA(kW/K)
                         xlWorkSheet1.Cells[counter_Excel + 1, 4] = puntero_aplicacion.ua_ht2.ToString();
                         //Rec.Frac.
-                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();
-                        //P_rhx_in
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.p_mc_in2.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();                       
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
                         //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = cicloRC_withRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = cicloRC_withRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = cicloRC_withRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = cicloRC_withRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
@@ -1716,19 +1702,17 @@ namespace RefPropWindowsForms
                         //HT UA(kW/K)
                         xlWorkSheet1.Cells[counter_Excel + 1, 4] = puntero_aplicacion.ua_ht2.ToString();
                         //Rec.Frac.
-                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();
-                        //P_rhx_in
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.p_mc_in2.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();                      
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
                         //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = cicloRC_withRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = cicloRC_withRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = cicloRC_withRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = cicloRC_withRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
@@ -1939,19 +1923,17 @@ namespace RefPropWindowsForms
                         //HT UA(kW/K)
                         xlWorkSheet1.Cells[counter_Excel + 1, 4] = puntero_aplicacion.ua_ht2.ToString();
                         //Rec.Frac.
-                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();
-                        //P_rhx_in
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.p_mc_in2.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 5] = puntero_aplicacion.recomp_frac2.ToString();                       
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
                         //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = cicloRC_withRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 7] = cicloRC_withRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 8] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = cicloRC_withRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 9] = cicloRC_withRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
