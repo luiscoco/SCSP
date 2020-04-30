@@ -1360,6 +1360,8 @@ namespace RefPropWindowsForms
                 List<Double> p_mc_in2_list_segunda_llamada = new List<Double>();
                 List<Double> eta_thermal2_list_segunda_llamada = new List<Double>();
                 List<Double> p_rhx_in2_list_segunda_llamada = new List<Double>();
+                List<Double> ua_LT_list_segunda_llamada = new List<Double>();
+                List<Double> ua_HT_list_segunda_llamada = new List<Double>();
 
                 xlWorkBook1 = xlApp1.Workbooks.Open(textBox3.Text + "RC_without_ReHeating_newproposedconfiguration" + ".xls");
                 xlWorkSheet1 = xlWorkBook1.Worksheets[1];
@@ -1372,7 +1374,7 @@ namespace RefPropWindowsForms
 
                     solver1.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
 
-                    var initialValue = new[] { max_recomp_fraction, max_mc_p_in, 0.5 };
+                    var initialValue = new[] { max_recomp_fraction, max_mc_p_in + 3500.0, 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1454,8 +1456,8 @@ namespace RefPropWindowsForms
                         p_mc_in2_list_segunda_llamada.Add(puntero_aplicacion.p_mc_in2);
                         //p_rhx_in2_list.Add(puntero_aplicacion.p_rhx_in2);
                         temp5_list_segunda.Add(puntero_aplicacion.temp25);
-                        ua_LT_list.Add(puntero_aplicacion.ua_lt2);
-                        ua_HT_list.Add(puntero_aplicacion.ua_ht2);
+                        ua_LT_list_segunda_llamada.Add(puntero_aplicacion.ua_lt2);
+                        ua_HT_list_segunda_llamada.Add(puntero_aplicacion.ua_ht2);
 
                         listBox1.Items.Add(counter.ToString());
                         listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
@@ -1520,8 +1522,8 @@ namespace RefPropWindowsForms
                     textBox90.Text = recomp_frac2_list_segunda_llamada[maxIndex].ToString();
                     //textBox2.Text = p_rhx_in2_list[maxIndex].ToString();
                     textBox86.Text = eta_thermal2_list_segunda_llamada[maxIndex].ToString();
-                    textBox82.Text = ua_LT_list[maxIndex].ToString();
-                    textBox83.Text = ua_HT_list[maxIndex].ToString();
+                    textBox82.Text = ua_LT_list_segunda_llamada[maxIndex].ToString();
+                    textBox83.Text = ua_HT_list_segunda_llamada[maxIndex].ToString();
 
                     max_recomp_fraction_1 = recomp_frac2_list_segunda_llamada[maxIndex];
                     max_mc_p_in_1 = p_mc_in2_list_segunda_llamada[maxIndex];
@@ -1533,8 +1535,8 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.textBox15.Text = recomp_frac2_list_segunda_llamada[maxIndex].ToString();
                         puntero_aplicacion.textBox3.Text = p_mc_in2_list_segunda_llamada[maxIndex].ToString();
                         //puntero_aplicacion.textBox7.Text = p_rhx_in2_list[maxIndex].ToString();
-                        puntero_aplicacion.textBox17.Text = ua_LT_list[maxIndex].ToString();
-                        puntero_aplicacion.textBox16.Text = ua_HT_list[maxIndex].ToString();
+                        puntero_aplicacion.textBox17.Text = ua_LT_list_segunda_llamada[maxIndex].ToString();
+                        puntero_aplicacion.textBox16.Text = ua_HT_list_segunda_llamada[maxIndex].ToString();
                     }
 
                     //Closing Excel Book
@@ -1579,6 +1581,9 @@ namespace RefPropWindowsForms
                 List<Double> p_mc_in2_list_tercera_llamada = new List<Double>();
                 List<Double> eta_thermal2_list_tercera_llamada = new List<Double>();
                 List<Double> p_rhx_in2_list_tercera_llamada = new List<Double>();
+                List<Double> ua_LT_list_tercera_llamada = new List<Double>();
+                List<Double> ua_HT_list_tercera_llamada = new List<Double>();
+
 
                 xlWorkBook1 = xlApp1.Workbooks.Open(textBox3.Text + "RC_without_ReHeating_newproposedconfiguration" + ".xls");
                 xlWorkSheet1 = xlWorkBook1.Worksheets[1];
@@ -1591,7 +1596,7 @@ namespace RefPropWindowsForms
 
                     solver2.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
 
-                    var initialValue = new[] { max_recomp_fraction_1, max_mc_p_in_1, 0.5 };
+                    var initialValue = new[] { max_recomp_fraction_1, max_mc_p_in_1 + 3500.0, 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1672,8 +1677,8 @@ namespace RefPropWindowsForms
                         p_mc_in2_list_tercera_llamada.Add(puntero_aplicacion.p_mc_in2);
                         //p_rhx_in2_list.Add(puntero_aplicacion.p_rhx_in2);
                         temp5_list_tercera.Add(puntero_aplicacion.temp25);
-                        ua_LT_list.Add(puntero_aplicacion.ua_lt2);
-                        ua_HT_list.Add(puntero_aplicacion.ua_ht2);
+                        ua_LT_list_tercera_llamada.Add(puntero_aplicacion.ua_lt2);
+                        ua_HT_list_tercera_llamada.Add(puntero_aplicacion.ua_ht2);
 
                         listBox1.Items.Add(counter.ToString());
                         listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
@@ -1738,8 +1743,8 @@ namespace RefPropWindowsForms
                     textBox90.Text = recomp_frac2_list_tercera_llamada[maxIndex].ToString();
                     //textBox2.Text = p_rhx_in2_list[maxIndex].ToString();
                     textBox86.Text = eta_thermal2_list_tercera_llamada[maxIndex].ToString();
-                    textBox82.Text = ua_LT_list[maxIndex].ToString();
-                    textBox83.Text = ua_HT_list[maxIndex].ToString();
+                    textBox82.Text = ua_LT_list_tercera_llamada[maxIndex].ToString();
+                    textBox83.Text = ua_HT_list_tercera_llamada[maxIndex].ToString();
 
                     max_recomp_fraction_2 = recomp_frac2_list_tercera_llamada[maxIndex];
                     max_mc_p_in_2 = p_mc_in2_list_tercera_llamada[maxIndex];
@@ -1751,8 +1756,8 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.textBox15.Text = recomp_frac2_list_tercera_llamada[maxIndex].ToString();
                         puntero_aplicacion.textBox3.Text = p_mc_in2_list_tercera_llamada[maxIndex].ToString();
                         //puntero_aplicacion.textBox7.Text = p_rhx_in2_list[maxIndex].ToString();
-                        puntero_aplicacion.textBox17.Text = ua_LT_list[maxIndex].ToString();
-                        puntero_aplicacion.textBox16.Text = ua_HT_list[maxIndex].ToString();
+                        puntero_aplicacion.textBox17.Text = ua_LT_list_tercera_llamada[maxIndex].ToString();
+                        puntero_aplicacion.textBox16.Text = ua_HT_list_tercera_llamada[maxIndex].ToString();
                     }
 
                     //Closing Excel Book
@@ -1799,6 +1804,8 @@ namespace RefPropWindowsForms
                 List<Double> lt_fraction_cuarta_llamada = new List<Double>();
                 List<Double> eta_thermal2_list_cuarta_llamada = new List<Double>();
                 List<Double> p_rhx_in2_list_cuarta_llamada = new List<Double>();
+                List<Double> ua_LT_list_cuarta_llamada = new List<Double>();
+                List<Double> ua_HT_list_cuarta_llamada = new List<Double>();
 
                 xlWorkBook1 = xlApp1.Workbooks.Open(textBox3.Text + "RC_without_ReHeating_newproposedconfiguration" + ".xls");
                 xlWorkSheet1 = xlWorkBook1.Worksheets[1];
@@ -1811,7 +1818,7 @@ namespace RefPropWindowsForms
 
                     solver3.SetInitialStepSize(new[] { 0.005, 250.0, 0.05 });
 
-                    var initialValue = new[] { max_recomp_fraction_2, max_mc_p_in_2, 0.5 };
+                    var initialValue = new[] { max_recomp_fraction_2, max_mc_p_in_2 + 3500.0, 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -1893,8 +1900,8 @@ namespace RefPropWindowsForms
                         lt_fraction_cuarta_llamada.Add(LT_fraction);
                         //p_rhx_in2_list.Add(puntero_aplicacion.p_rhx_in2);
                         temp5_list_cuarta.Add(puntero_aplicacion.temp25);
-                        ua_LT_list.Add(puntero_aplicacion.ua_lt2);
-                        ua_HT_list.Add(puntero_aplicacion.ua_ht2);
+                        ua_LT_list_cuarta_llamada.Add(puntero_aplicacion.ua_lt2);
+                        ua_HT_list_cuarta_llamada.Add(puntero_aplicacion.ua_ht2);
 
                         listBox1.Items.Add(counter.ToString());
                         listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
@@ -1959,8 +1966,8 @@ namespace RefPropWindowsForms
                     textBox90.Text = recomp_frac2_list_cuarta_llamada[maxIndex].ToString();
                     //textBox2.Text = p_rhx_in2_list[maxIndex].ToString();
                     textBox86.Text = eta_thermal2_list_cuarta_llamada[maxIndex].ToString();
-                    textBox82.Text = ua_LT_list[maxIndex].ToString();
-                    textBox83.Text = ua_HT_list[maxIndex].ToString();
+                    textBox82.Text = ua_LT_list_cuarta_llamada[maxIndex].ToString();
+                    textBox83.Text = ua_HT_list_cuarta_llamada[maxIndex].ToString();
 
                     max_recomp_fraction_3 = recomp_frac2_list_cuarta_llamada[maxIndex];
                     max_mc_p_in_3 = p_mc_in2_list_cuarta_llamada[maxIndex];
@@ -1973,8 +1980,8 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.textBox15.Text = recomp_frac2_list_cuarta_llamada[maxIndex].ToString();
                         puntero_aplicacion.textBox3.Text = p_mc_in2_list_cuarta_llamada[maxIndex].ToString();
                         //puntero_aplicacion.textBox7.Text = p_rhx_in2_list[maxIndex].ToString();
-                        puntero_aplicacion.textBox17.Text = ua_LT_list[maxIndex].ToString();
-                        puntero_aplicacion.textBox16.Text = ua_HT_list[maxIndex].ToString();
+                        puntero_aplicacion.textBox17.Text = ua_LT_list_cuarta_llamada[maxIndex].ToString();
+                        puntero_aplicacion.textBox16.Text = ua_HT_list_cuarta_llamada[maxIndex].ToString();
                     }
 
                     //Closing Excel Book
@@ -3151,6 +3158,8 @@ namespace RefPropWindowsForms
                                 t8_list.Add(puntero_aplicacion.temp28);
                                 t9_list.Add(puntero_aplicacion.temp29);
                                 t10_list.Add(puntero_aplicacion.temp210);
+                                t11_list.Add(puntero_aplicacion.temp211);
+                                t12_list.Add(puntero_aplicacion.temp212);
 
                                 p1_list.Add(puntero_aplicacion.pres21);
                                 p2_list.Add(puntero_aplicacion.pres22);
@@ -3162,8 +3171,10 @@ namespace RefPropWindowsForms
                                 p8_list.Add(puntero_aplicacion.pres28);
                                 p9_list.Add(puntero_aplicacion.pres29);
                                 p10_list.Add(puntero_aplicacion.pres210);
+                                p11_list.Add(puntero_aplicacion.pres211);
+                                p12_list.Add(puntero_aplicacion.pres212);
 
-                                PHX_Q2_list.Add(cicloRC_withRH_cuarta_llamada.PHX.Q_dot);
+                                PHX_Q2_list.Add(cicloRC_withRH_cuarta_llamada.RHX.Q_dot);
 
                                 HT_Eff_list.Add(cicloRC_withRH_cuarta_llamada.HT.eff);
                                 LT_Eff_list.Add(cicloRC_withRH_cuarta_llamada.LT.eff);
@@ -3278,10 +3289,10 @@ namespace RefPropWindowsForms
 
                                 PTC.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
                                 PTC.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                PTC.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                PTC.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                PTC.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                PTC.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
+                                PTC.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                PTC.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                PTC.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                PTC.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                                 PTC.textBox107.Text = Convert.ToString(10);
                                 PTC.button1_Click(this, e);
                                 puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC.ReflectorApertureAreaResult;
@@ -3297,10 +3308,10 @@ namespace RefPropWindowsForms
                                 //LF.textBox36.Text = this.textBox36.Text;
                                 LF.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
                                 LF.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                LF.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                LF.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                LF.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                LF.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
+                                LF.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                LF.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                LF.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                LF.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                                 LF.textBox107.Text = Convert.ToString(10);
                                 LF.button1_Click(this, e);
                                 puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF.ReflectorApertureAreaResult;
@@ -4217,6 +4228,9 @@ namespace RefPropWindowsForms
                         List<Double> lt_fraction_cuarta_llamada = new List<Double>();
                         List<Double> eta_thermal2_list_cuarta_llamada = new List<Double>();
                         List<Double> p_rhx_in2_list_cuarta_llamada = new List<Double>();
+                        List<Double> ua_LT_list_cuarta_llamada = new List<Double>();
+                        List<Double> ua_HT_list_cuarta_llamada = new List<Double>();
+                        
 
                         xlWorkBook1 = xlApp1.Workbooks.Open(textBox3.Text + "RC_without_ReHeating_newproposedconfiguration" + ".xls");
                         xlWorkSheet1 = xlWorkBook1.Worksheets[1];
@@ -4313,8 +4327,8 @@ namespace RefPropWindowsForms
                                 lt_fraction_cuarta_llamada.Add(LT_fraction);
                                 p_rhx_in2_list_cuarta_llamada.Add(puntero_aplicacion.p_rhx_in2);
                                 temp5_list_cuarta.Add(puntero_aplicacion.temp25);
-                                ua_LT_list.Add(puntero_aplicacion.ua_lt2);
-                                ua_HT_list.Add(puntero_aplicacion.ua_ht2);
+                                ua_LT_list_cuarta_llamada.Add(puntero_aplicacion.ua_lt2);
+                                ua_HT_list_cuarta_llamada.Add(puntero_aplicacion.ua_ht2);
 
                                 t1_list.Add(puntero_aplicacion.temp21);
                                 t2_list.Add(puntero_aplicacion.temp22);
@@ -4326,6 +4340,8 @@ namespace RefPropWindowsForms
                                 t8_list.Add(puntero_aplicacion.temp28);
                                 t9_list.Add(puntero_aplicacion.temp29);
                                 t10_list.Add(puntero_aplicacion.temp210);
+                                t11_list.Add(puntero_aplicacion.temp211);
+                                t12_list.Add(puntero_aplicacion.temp212);
 
                                 p1_list.Add(puntero_aplicacion.pres21);
                                 p2_list.Add(puntero_aplicacion.pres22);
@@ -4337,8 +4353,10 @@ namespace RefPropWindowsForms
                                 p8_list.Add(puntero_aplicacion.pres28);
                                 p9_list.Add(puntero_aplicacion.pres29);
                                 p10_list.Add(puntero_aplicacion.pres210);
+                                p11_list.Add(puntero_aplicacion.pres211);
+                                p12_list.Add(puntero_aplicacion.pres212);
 
-                                PHX_Q2_list.Add(cicloRC_withRH_Cuarta_llamada.PHX.Q_dot);
+                                PHX_Q2_list.Add(cicloRC_withRH_Cuarta_llamada.RHX.Q_dot);
 
                                 HT_Eff_list.Add(cicloRC_withRH_Cuarta_llamada.HT.eff);
                                 LT_Eff_list.Add(cicloRC_withRH_Cuarta_llamada.LT.eff);
@@ -4401,15 +4419,15 @@ namespace RefPropWindowsForms
 
                             var maxIndex = eta_thermal2_list_cuarta_llamada.IndexOf(eta_thermal2_list_cuarta_llamada.Max());
 
-                            puntero_aplicacion.ua_lt2 = UA_Total * LT_fraction;
-                            puntero_aplicacion.ua_ht2 = UA_Total * (1 - LT_fraction);
+                            //puntero_aplicacion.ua_lt2 = UA_Total * LT_fraction;
+                            //puntero_aplicacion.ua_ht2 = UA_Total * (1 - LT_fraction);
 
                             textBox91.Text = p_mc_in2_list_cuarta_llamada[maxIndex].ToString();
                             textBox90.Text = recomp_frac2_list_cuarta_llamada[maxIndex].ToString();
                             textBox2.Text = p_rhx_in2_list_cuarta_llamada[maxIndex].ToString();
                             textBox86.Text = eta_thermal2_list_cuarta_llamada[maxIndex].ToString();
-                            textBox82.Text = ua_LT_list[maxIndex].ToString();
-                            textBox83.Text = ua_HT_list[maxIndex].ToString();
+                            textBox82.Text = ua_LT_list_cuarta_llamada[maxIndex].ToString();
+                            textBox83.Text = ua_HT_list_cuarta_llamada[maxIndex].ToString();
 
                             max_recomp_fraction_3 = recomp_frac2_list_cuarta_llamada[maxIndex];
                             max_mc_p_in_3 = p_mc_in2_list_cuarta_llamada[maxIndex];
@@ -4422,8 +4440,8 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.textBox15.Text = recomp_frac2_list_cuarta_llamada[maxIndex].ToString();
                                 puntero_aplicacion.textBox3.Text = p_mc_in2_list_cuarta_llamada[maxIndex].ToString();
                                 //puntero_aplicacion.textBox7.Text = p_rhx_in2_list[maxIndex].ToString();
-                                puntero_aplicacion.textBox17.Text = ua_LT_list[maxIndex].ToString();
-                                puntero_aplicacion.textBox16.Text = ua_HT_list[maxIndex].ToString();
+                                puntero_aplicacion.textBox17.Text = ua_LT_list_cuarta_llamada[maxIndex].ToString();
+                                puntero_aplicacion.textBox16.Text = ua_HT_list_cuarta_llamada[maxIndex].ToString();
                             }
 
                             //The variable 'i' is the loop counter for the CIT
@@ -4434,8 +4452,8 @@ namespace RefPropWindowsForms
                             listBox10.Items.Add(p_rhx_in2_list_cuarta_llamada[maxIndex].ToString());
                             listBox11.Items.Add(t5_list[maxIndex].ToString());
                             listBox12.Items.Add(t6_list[maxIndex].ToString());
-                            listBox13.Items.Add(ua_HT_list[maxIndex].ToString());
-                            listBox14.Items.Add(ua_LT_list[maxIndex].ToString());
+                            listBox13.Items.Add(ua_HT_list_cuarta_llamada[maxIndex].ToString());
+                            listBox14.Items.Add(ua_LT_list_cuarta_llamada[maxIndex].ToString());
 
                             if (checkBox7.Checked == false)
                             {
@@ -4462,10 +4480,10 @@ namespace RefPropWindowsForms
 
                                 PTC.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
                                 PTC.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                PTC.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                PTC.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                PTC.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                PTC.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
+                                PTC.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                PTC.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                PTC.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                PTC.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                                 PTC.textBox107.Text = Convert.ToString(10);
                                 PTC.button1_Click(this, e);
                                 puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC.ReflectorApertureAreaResult;
@@ -4481,10 +4499,10 @@ namespace RefPropWindowsForms
                                 //LF.textBox36.Text = this.textBox36.Text;
                                 LF.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
                                 LF.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                LF.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                LF.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                LF.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                LF.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
+                                LF.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                LF.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                LF.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                LF.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                                 LF.textBox107.Text = Convert.ToString(10);
                                 LF.button1_Click(this, e);
                                 puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF.ReflectorApertureAreaResult;
@@ -4505,9 +4523,9 @@ namespace RefPropWindowsForms
                             //CIT
                             xlWorkSheet1.Cells[counter_Excel + 1, 2] = Convert.ToString(i - 273.15);
                             //LT UA(kW/K)
-                            xlWorkSheet1.Cells[counter_Excel + 1, 3] = puntero_aplicacion.ua_lt2.ToString();
+                            xlWorkSheet1.Cells[counter_Excel + 1, 3] = ua_LT_list_cuarta_llamada[maxIndex].ToString();
                             //HT UA(kW/K)
-                            xlWorkSheet1.Cells[counter_Excel + 1, 4] = puntero_aplicacion.ua_ht2.ToString();
+                            xlWorkSheet1.Cells[counter_Excel + 1, 4] = ua_HT_list_cuarta_llamada[maxIndex].ToString();
                             //Rec.Frac.
                             xlWorkSheet1.Cells[counter_Excel + 1, 5] = recomp_frac2_list_cuarta_llamada[maxIndex].ToString();
                             //Eff.(%)
@@ -4750,8 +4768,6 @@ namespace RefPropWindowsForms
                         //    releaseObject(xlApp1);
 
                         //} //Fin de la QUINTA LLAMADA para optimización  
-
-
                     }
 
                 }// end For CIT

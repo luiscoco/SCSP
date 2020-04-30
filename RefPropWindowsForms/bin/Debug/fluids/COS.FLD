@@ -73,7 +73,7 @@ FEQ    !Helmholtz equation of state for carbonyl sulfide of Lemmon and Span (200
 ?
 !```````````````````````````````````````````````````````````````````````````````
 134.3              !Lower temperature limit [K]
-650.0              !Upper temperature limit [K]
+1000.0              !Upper temperature limit [K]
 50000.0            !Upper pressure limit [kPa]
 22.52              !Maximum density [mol/L]
 CPP                                    !Pointer to Cp0 model
@@ -187,7 +187,7 @@ ECS    !Extended Corresponding States model (Propane reference) fit to extremely
 ?
 !```````````````````````````````````````````````````````````````````````````````
 134.3              !Lower temperature limit [K]
-650.0              !Upper temperature limit [K]
+1000.0              !Upper temperature limit [K]
 50000.0            !Upper pressure limit [kPa]
 22.52              !Maximum density [mol/L]
 FEQ PROPANE.FLD
