@@ -2277,12 +2277,13 @@
             this.button6.Enabled = false;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(230, 422);
+            this.button6.Location = new System.Drawing.Point(230, 423);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(117, 41);
             this.button6.TabIndex = 1336;
             this.button6.Text = "Precooler";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
@@ -2290,12 +2291,13 @@
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(470, 422);
+            this.button4.Location = new System.Drawing.Point(470, 423);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 41);
             this.button4.TabIndex = 1335;
             this.button4.Text = "Precooler";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -2319,6 +2321,7 @@
             this.button11.TabIndex = 1333;
             this.button11.Text = "PreComp";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -2329,6 +2332,7 @@
             this.button12.TabIndex = 1332;
             this.button12.Text = "Recom Comp";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button10
             // 
@@ -2339,6 +2343,7 @@
             this.button10.TabIndex = 1331;
             this.button10.Text = "Turbine";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -2349,26 +2354,29 @@
             this.button9.TabIndex = 1330;
             this.button9.Text = "Main Comp";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button7
             // 
             this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(798, 422);
+            this.button7.Location = new System.Drawing.Point(787, 422);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 37);
+            this.button7.Size = new System.Drawing.Size(115, 37);
             this.button7.TabIndex = 1329;
             this.button7.Text = "High Temperature Recuperator";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button15
             // 
             this.button15.Enabled = false;
-            this.button15.Location = new System.Drawing.Point(620, 421);
+            this.button15.Location = new System.Drawing.Point(613, 422);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(103, 37);
+            this.button15.Size = new System.Drawing.Size(119, 37);
             this.button15.TabIndex = 1328;
             this.button15.Text = "Low Temperature Recuperator";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -3177,7 +3185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1357, 673);
+            this.ClientSize = new System.Drawing.Size(1354, 673);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.button34);
             this.Controls.Add(this.button29);

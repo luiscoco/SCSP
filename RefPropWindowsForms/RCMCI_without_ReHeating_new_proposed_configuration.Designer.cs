@@ -2097,6 +2097,7 @@
             this.button8.TabIndex = 1354;
             this.button8.Text = "Precooler";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button4
             // 
@@ -2110,6 +2111,7 @@
             this.button4.TabIndex = 1353;
             this.button4.Text = "Precooler";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button15
             // 
@@ -2627,6 +2629,7 @@
             this.button5.TabIndex = 1293;
             this.button5.Text = "Comp";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button12
             // 
@@ -2637,6 +2640,7 @@
             this.button12.TabIndex = 1292;
             this.button12.Text = "Recom Comp";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button10
             // 
@@ -2647,6 +2651,7 @@
             this.button10.TabIndex = 1291;
             this.button10.Text = "Turbine";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -2657,6 +2662,7 @@
             this.button9.TabIndex = 1290;
             this.button9.Text = "Main Comp";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button7
             // 
@@ -2667,6 +2673,7 @@
             this.button7.TabIndex = 1289;
             this.button7.Text = "High Temperature Recuperator";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -2677,6 +2684,7 @@
             this.button6.TabIndex = 1288;
             this.button6.Text = "Low Temperature Recuperator";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label67
             // 
