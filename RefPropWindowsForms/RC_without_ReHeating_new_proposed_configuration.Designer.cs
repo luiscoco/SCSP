@@ -2129,6 +2129,7 @@
             this.button5.TabIndex = 1350;
             this.button5.Text = "Precooler";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -2179,6 +2180,7 @@
             this.button12.TabIndex = 1345;
             this.button12.Text = "Recom Comp";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button10
             // 
@@ -2189,6 +2191,7 @@
             this.button10.TabIndex = 1343;
             this.button10.Text = "Turbine";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -2199,6 +2202,7 @@
             this.button9.TabIndex = 1342;
             this.button9.Text = "Main Comp";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button7
             // 

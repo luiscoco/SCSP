@@ -220,7 +220,7 @@ namespace RefPropWindowsForms
         public Double ReHeating_Turbine_Pin, ReHeating_Turbine_Tin, ReHeating_Turbine_Pout, ReHeating_Turbine_Tout;
 
         public Double ReHeating_Turbine_Flow, ReHeating_Turbine_Rotary_Velocity, ReHeating_Turbine_Diameter, ReHeating_Turbine_Efficiency, ReHeating_Turbine_Anozzle;
-
+        
         public Double ReHeating_Turbine_nu, ReHeating_Turbine_w_Tip_Ratio;
 
         //LTR results 
@@ -1466,6 +1466,30 @@ namespace RefPropWindowsForms
             RC_with_ReHeating_Optimization_Analysis_Results_new_configuration_window.Show();
         }
 
+        //Pre-Cooler calculation button
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Recompressor calculation button
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Turbine Calculation button
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Main Compressor calculation button
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

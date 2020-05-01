@@ -99,6 +99,13 @@
             this.label18 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
             this.listBox20 = new System.Windows.Forms.ListBox();
@@ -119,13 +126,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -759,7 +759,7 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(150, 15);
             this.label19.TabIndex = 1310;
-            this.label19.Text = "RHX1 Solar Field Collectors:";
+            this.label19.Text = "Main Solar Field Collectors:";
             // 
             // label18
             // 
@@ -797,6 +797,66 @@
             this.groupBox4.TabIndex = 1306;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Optimization inputs";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(17, 156);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(32, 13);
+            this.label25.TabIndex = 1262;
+            this.label25.Text = "Step:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(49, 153);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(45, 20);
+            this.textBox6.TabIndex = 1261;
+            this.textBox6.Text = "5000";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(94, 132);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(23, 13);
+            this.label26.TabIndex = 1260;
+            this.label26.Text = "To:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(117, 129);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(43, 20);
+            this.textBox7.TabIndex = 1259;
+            this.textBox7.Text = "10000";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(11, 132);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(33, 13);
+            this.label27.TabIndex = 1258;
+            this.label27.Text = "From:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(49, 129);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(45, 20);
+            this.textBox8.TabIndex = 1257;
+            this.textBox8.Text = "10000";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(15, 108);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(60, 13);
+            this.label28.TabIndex = 1256;
+            this.label28.Text = "UA (kW/K)";
             // 
             // groupBox5
             // 
@@ -991,9 +1051,9 @@
             // 
             this.label20.Location = new System.Drawing.Point(746, 421);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(150, 15);
+            this.label20.Size = new System.Drawing.Size(193, 15);
             this.label20.TabIndex = 1314;
-            this.label20.Text = "RHX2 Solar Field Collectors:";
+            this.label20.Text = "ReHeating Solar Field Collectors:";
             // 
             // checkBox7
             // 
@@ -1006,66 +1066,6 @@
             this.checkBox7.TabIndex = 1315;
             this.checkBox7.Text = "Not calculate Solar Fields";
             this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(17, 156);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(32, 13);
-            this.label25.TabIndex = 1262;
-            this.label25.Text = "Step:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(49, 153);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(45, 20);
-            this.textBox6.TabIndex = 1261;
-            this.textBox6.Text = "5000";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(94, 132);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(23, 13);
-            this.label26.TabIndex = 1260;
-            this.label26.Text = "To:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(117, 129);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(43, 20);
-            this.textBox7.TabIndex = 1259;
-            this.textBox7.Text = "10000";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(11, 132);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(33, 13);
-            this.label27.TabIndex = 1258;
-            this.label27.Text = "From:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(49, 129);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(45, 20);
-            this.textBox8.TabIndex = 1257;
-            this.textBox8.Text = "10000";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(15, 108);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 13);
-            this.label28.TabIndex = 1256;
-            this.label28.Text = "UA (kW/K)";
             // 
             // RC_with_ReHeating_Optimization_Analysis_Results_new_configuration
             // 
