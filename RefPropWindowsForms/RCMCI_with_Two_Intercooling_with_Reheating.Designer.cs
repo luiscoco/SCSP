@@ -3369,10 +3369,11 @@
             this.button4.Enabled = false;
             this.button4.Location = new System.Drawing.Point(275, 180);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 29);
+            this.button4.Size = new System.Drawing.Size(41, 29);
             this.button4.TabIndex = 1421;
-            this.button4.Text = "Comp2";
+            this.button4.Text = "C2";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -3386,6 +3387,7 @@
             this.button6.TabIndex = 1420;
             this.button6.Text = "Precooler";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -3399,6 +3401,7 @@
             this.button7.TabIndex = 1419;
             this.button7.Text = "Precooler";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button19
             // 
@@ -3418,12 +3421,13 @@
             this.button8.Enabled = false;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(214, 399);
+            this.button8.Location = new System.Drawing.Point(214, 397);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(85, 28);
             this.button8.TabIndex = 1417;
             this.button8.Text = "Precooler";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button15
             // 
@@ -3443,10 +3447,11 @@
             this.button9.Enabled = false;
             this.button9.Location = new System.Drawing.Point(419, 181);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(48, 29);
+            this.button9.Size = new System.Drawing.Size(38, 29);
             this.button9.TabIndex = 1415;
-            this.button9.Text = "Comp1";
+            this.button9.Text = "C1";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button12
             // 
@@ -3457,6 +3462,7 @@
             this.button12.TabIndex = 1414;
             this.button12.Text = "Recomp";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button10
             // 
@@ -3467,6 +3473,7 @@
             this.button10.TabIndex = 1413;
             this.button10.Text = "Turbine";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -3477,6 +3484,7 @@
             this.button11.TabIndex = 1411;
             this.button11.Text = "HTR";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button13
             // 
@@ -3487,16 +3495,18 @@
             this.button13.TabIndex = 1410;
             this.button13.Text = "LTR";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
             this.button14.Enabled = false;
-            this.button14.Location = new System.Drawing.Point(213, 180);
+            this.button14.Location = new System.Drawing.Point(224, 180);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(48, 30);
+            this.button14.Size = new System.Drawing.Size(35, 30);
             this.button14.TabIndex = 1412;
-            this.button14.Text = "Comp3";
+            this.button14.Text = "C3";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button31
             // 
@@ -3507,6 +3517,7 @@
             this.button31.TabIndex = 1422;
             this.button31.Text = "Turbine";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button32
             // 
