@@ -238,6 +238,7 @@ namespace RefPropWindowsForms
         //Pre-Compressor2 results
         public Double Pre_Compressor2_Pin, Pre_Compressor2_Tin, Pre_Compressor2_Pout, Pre_Compressor2_Tout;
         public Double Pre_Compressor2_Flow, Pre_Compressor2_Diameter1, Pre_Compressor2_Diameter2, Pre_Compressor2_Rotation_Velocity;
+         
         public Double Pre_Compressor2_Efficiency, Pre_Compressor2_Phi; //Pre_Compressor_Phi is the Compressor Flow Factor
         public Boolean Pre_Compressor2_Surge;
 
@@ -821,6 +822,183 @@ namespace RefPropWindowsForms
             textBox48.Text = Convert.ToString(w_dot_net2);
             textBox49.Text = Convert.ToString(massflow2);
             textBox50.Text = Convert.ToString(eta_thermal2 * 100);
+
+            toolTip1.SetToolTip(label55, point1_state);
+            toolTip2.SetToolTip(label57, point2_state);
+            toolTip3.SetToolTip(label59, point3_state);
+            toolTip4.SetToolTip(label60, point4_state);
+            toolTip5.SetToolTip(label61, point5_state);
+            toolTip6.SetToolTip(label62, point6_state);
+            toolTip7.SetToolTip(label63, point7_state);
+            toolTip8.SetToolTip(label65, point8_state);
+            toolTip9.SetToolTip(label66, point9_state);
+            toolTip10.SetToolTip(label67, point10_state);
+
+            //If High temperature checkBox is unchecked
+            if (checkBox1.Checked == false)
+            {
+                PHX1 = cicloPCRC_withTwoIntercoolingwithTwoRH.PHX.Q_dot;
+
+                LT_Q = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.Q_dot;
+                LT_mdotc = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.m_dot_design[0];
+                LT_mdoth = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.m_dot_design[1];
+                LT_Tcin = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.T_c_in;
+                LT_Thin = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.T_h_in;
+                LT_Pcin = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.P_c_in;
+                LT_Phin = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.P_h_in;
+                LT_Pcout = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.P_c_out;
+                LT_Phout = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.P_h_out;
+                LT_Effc = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.eff;
+
+                HT_Q = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.Q_dot;
+                HT_mdotc = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.m_dot_design[0];
+                HT_mdoth = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.m_dot_design[1];
+                HT_Tcin = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.T_c_in;
+                HT_Thin = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.T_h_in;
+                HT_Pcin = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.P_c_in;
+                HT_Phin = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.P_h_in;
+                HT_Pcout = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.P_c_out;
+                HT_Phout = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.P_h_out;
+                HT_Effc = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.eff;
+
+                PC11 = cicloPCRC_withTwoIntercoolingwithTwoRH.PC1.Q_dot;
+                PC21 = cicloPCRC_withTwoIntercoolingwithTwoRH.PC2.Q_dot;
+                PC31 = cicloPCRC_withTwoIntercoolingwithTwoRH.COOLER.Q_dot;
+
+                //PTC_SF_Calculation PTC = new PTC_SF_Calculation();
+                //PTC.calledForSensingAnalysis = true;
+                //PTC.comboBox1.Text = "Solar Salt";
+                //PTC.comboBox2.Text = "NewMixture";
+                //PTC.comboBox13.Text = this.comboBox2.Text;
+                //PTC.comboBox14.Text = this.comboBox6.Text;
+                ////PTC.textBox31.Text = this.textBox31.Text;
+                ////PTC.textBox36.Text = this.textBox36.Text;
+
+                //if (comboBox4.Text == "Parabolic")
+                //{
+                //    PTC.textBox7.Text = "0.141";
+                //    PTC.textBox8.Text = "6.48e-9";
+                //}
+
+                //else if (comboBox4.Text == "Parabolic with cavity receiver (Norwich)")
+                //{
+                //    PTC.textBox7.Text = "0.3";
+                //    PTC.textBox8.Text = "3.25e-9";
+                //}
+
+                //PTC.textBox1.Text = Convert.ToString(PHX_Q2);
+                //PTC.textBox2.Text = Convert.ToString(massflow2);
+                //PTC.textBox3.Text = Convert.ToString(temp25);
+                //PTC.textBox6.Text = Convert.ToString(temp26);
+                //PTC.textBox4.Text = Convert.ToString(pres25);
+                //PTC.textBox5.Text = Convert.ToString(pres26);
+                //PTC.textBox107.Text = Convert.ToString(10);
+                //PTC.SF_PHX.PTC_Solar_Field_ciclo_RC_Design_withoutReHeating(this, 4, "Main_SF");
+                //PTC.button1_Click(this, e);
+                //PTC_Main_SF_Effective_Apperture_Area = PTC.ReflectorApertureAreaResult;
+                //PTC_Main_SF_Pressure_drop = PTC.Total_Pressure_DropResult;
+
+                //LF_SF_Calculation LF = new LF_SF_Calculation();
+                //LF.calledForSensingAnalysis = true;
+                //LF.comboBox1.Text = "Solar Salt";
+                //LF.comboBox2.Text = "NewMixture";
+                //LF.comboBox13.Text = this.comboBox2.Text;
+                //LF.comboBox14.Text = this.comboBox6.Text;
+                ////LF.textBox31.Text = this.textBox31.Text;
+                ////LF.textBox36.Text = this.textBox36.Text;
+                //LF.textBox1.Text = Convert.ToString(PHX_Q2);
+                //LF.textBox2.Text = Convert.ToString(massflow2);
+                //LF.textBox3.Text = Convert.ToString(temp25);
+                //LF.textBox6.Text = Convert.ToString(temp26);
+                //LF.textBox4.Text = Convert.ToString(pres25);
+                //LF.textBox5.Text = Convert.ToString(pres26);
+                //LF.SF_PHX.LF_Solar_Field_ciclo_RC_Design_withoutReHeating(this, 4, "Main_SF");
+                //LF.textBox107.Text = Convert.ToString(10);
+                //LF.button1_Click(this, e);
+                //LF_Main_SF_Effective_Apperture_Area = LF.ReflectorApertureAreaResult;
+                //LF_Main_SF_Pressure_drop = LF.Total_Pressure_DropResult;
+
+                //if (comboBox4.Text == "Dual-Loop")
+                //{
+                //    //Main SF
+                //    comboBox9.Enabled = true;
+                //    comboBox11.Enabled = true;
+                //    comboBox8.Enabled = true;
+                //    comboBox10.Enabled = true;
+                //    button17.Enabled = true;
+                //    button18.Enabled = true;
+
+                //    button4.Enabled = false;
+                //}
+
+                //else if ((comboBox4.Text == "Parabolic") || (comboBox4.Text == "Fresnel"))
+                //{
+                //    //Main SF
+                //    comboBox9.Enabled = false;
+                //    comboBox11.Enabled = false;
+                //    comboBox8.Enabled = false;
+                //    comboBox10.Enabled = false;
+                //    button17.Enabled = false;
+                //    button18.Enabled = false;
+
+                //    button4.Enabled = true;
+                //}
+
+                button7.Enabled = true;
+                button15.Enabled = true;
+                button28.Enabled = true;
+                button4.Enabled = true;
+                button6.Enabled = true;
+                button9.Enabled = true;
+                button11.Enabled = true;
+                button19.Enabled = true;
+                button12.Enabled = true;
+                button5.Enabled = true;
+            }
+
+            else
+            {
+                PHX1 = cicloPCRC_withTwoIntercoolingwithTwoRH.PHX.Q_dot;
+
+                LT_Q = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.Q_dot;
+                LT_mdotc = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.m_dot_design[0];
+                LT_mdoth = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.m_dot_design[1];
+                LT_Tcin = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.T_c_in;
+                LT_Thin = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.T_h_in;
+                LT_Pcin = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.P_c_in;
+                LT_Phin = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.P_h_in;
+                LT_Pcout = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.P_c_out;
+                LT_Phout = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.P_h_out;
+                LT_Effc = cicloPCRC_withTwoIntercoolingwithTwoRH.LT.eff;
+
+                HT_Q = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.Q_dot;
+                HT_mdotc = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.m_dot_design[0];
+                HT_mdoth = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.m_dot_design[1];
+                HT_Tcin = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.T_c_in;
+                HT_Thin = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.T_h_in;
+                HT_Pcin = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.P_c_in;
+                HT_Phin = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.P_h_in;
+                HT_Pcout = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.P_c_out;
+                HT_Phout = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.P_h_out;
+                HT_Effc = cicloPCRC_withTwoIntercoolingwithTwoRH.HT.eff;
+
+                PC11 = cicloPCRC_withTwoIntercoolingwithTwoRH.PC1.Q_dot;
+                PC21 = cicloPCRC_withTwoIntercoolingwithTwoRH.PC2.Q_dot;
+                PC31 = cicloPCRC_withTwoIntercoolingwithTwoRH.COOLER.Q_dot;
+            }
+
+            button7.Enabled = true;
+            button15.Enabled = true;
+            button28.Enabled = true;
+            button4.Enabled = true;
+            button6.Enabled = true;
+            button9.Enabled = true;
+            button11.Enabled = true;
+            button19.Enabled = true;
+            button12.Enabled = true;
+            button5.Enabled = true;
+            button30.Enabled = true;
+            button33.Enabled = true;         
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -856,6 +1034,232 @@ namespace RefPropWindowsForms
                 textBox31.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox30.Text = Convert.ToString(working_fluid.CriticalDensity);
             }
+        }
+
+        //PreCooler_1 calculation button
+        private void button28_Click(object sender, EventArgs e)
+        {
+            Precooler_dialog1 = new PreeCooler();
+            Precooler_dialog1.textBox2.Text = Convert.ToString(PC11);
+            Precooler_dialog1.textBox4.Text = Convert.ToString(massflow2);
+            Precooler_dialog1.textBox6.Text = Convert.ToString(temp29);
+            Precooler_dialog1.textBox12.Text = Convert.ToString(pres29);
+            Precooler_dialog1.textBox8.Text = Convert.ToString(pres211);
+            Precooler_dialog1.PreeCooler1(luis);
+            Precooler_dialog1.Calculate_Cooler();
+            Precooler_dialog1.Show();
+        }
+
+        //PreCooler_2 calculation button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Precooler_dialog2 = new PreeCooler();
+            Precooler_dialog2.textBox2.Text = Convert.ToString(PC21);
+            Precooler_dialog2.textBox4.Text = Convert.ToString(massflow2);
+            Precooler_dialog2.textBox6.Text = Convert.ToString(temp212);
+            Precooler_dialog2.textBox12.Text = Convert.ToString(pres212);
+            Precooler_dialog2.textBox8.Text = Convert.ToString(pres213);
+            Precooler_dialog2.PreeCooler1(luis);
+            Precooler_dialog2.Calculate_Cooler();
+            Precooler_dialog2.Show();
+        }
+
+        //PreCooler_3 calculation button
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Precooler_dialog3 = new PreeCooler();
+            Precooler_dialog3.textBox2.Text = Convert.ToString(PC31);
+            Precooler_dialog3.textBox4.Text = Convert.ToString(massflow2 * (1 - recomp_frac2));
+            Precooler_dialog3.textBox6.Text = Convert.ToString(temp214);
+            Precooler_dialog3.textBox12.Text = Convert.ToString(pres214);
+            Precooler_dialog3.textBox8.Text = Convert.ToString(pres21);
+            Precooler_dialog3.PreeCooler1(luis);
+            Precooler_dialog3.Calculate_Cooler();
+            Precooler_dialog3.Show();
+        }
+
+        //Recompressor calculation button
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ReCompressor = new snl_compressor_tsr();
+            ReCompressor.textBox1.Text = Convert.ToString(pres214);
+            ReCompressor.textBox2.Text = Convert.ToString(temp214);
+            ReCompressor.textBox6.Text = Convert.ToString(pres210);
+            ReCompressor.textBox5.Text = Convert.ToString(temp210);
+
+            ReCompressor.textBox9.Text = Convert.ToString(massflow2);
+            ReCompressor.textBox8.Text = Convert.ToString(recomp_frac2);
+
+            ReCompressor.button2.Enabled = false;
+            ReCompressor.button4.Enabled = false;
+
+            ReCompressor.Show();
+        }
+
+        //PreCompressor C2 calculation button
+        private void button19_Click(object sender, EventArgs e)
+        {
+            ReCompressor = new snl_compressor_tsr();
+            ReCompressor.textBox1.Text = Convert.ToString(pres211);
+            ReCompressor.textBox2.Text = Convert.ToString(temp211);
+            ReCompressor.textBox6.Text = Convert.ToString(pres212);
+            ReCompressor.textBox5.Text = Convert.ToString(temp212);
+
+            ReCompressor.textBox9.Text = Convert.ToString(massflow2);
+            ReCompressor.textBox8.Text = Convert.ToString(1.0);
+
+            ReCompressor.button2.Enabled = false;
+            ReCompressor.button4.Enabled = false;
+
+            ReCompressor.Show();
+        }
+
+        //PreCompressor C1 calculation button
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ReCompressor = new snl_compressor_tsr();
+            ReCompressor.textBox1.Text = Convert.ToString(pres213);
+            ReCompressor.textBox2.Text = Convert.ToString(temp213);
+            ReCompressor.textBox6.Text = Convert.ToString(pres214);
+            ReCompressor.textBox5.Text = Convert.ToString(temp214);
+
+            ReCompressor.textBox9.Text = Convert.ToString(massflow2);
+            ReCompressor.textBox8.Text = Convert.ToString(1.0);
+
+            ReCompressor.button2.Enabled = false;
+            ReCompressor.button4.Enabled = false;
+
+            ReCompressor.Show();
+        }
+
+        //PreCompressor C3 calculation button
+        private void button9_Click(object sender, EventArgs e)
+        {
+            button10.Enabled = true;
+            button29.Enabled = true;
+            button32.Enabled = true;
+
+            Main_Compressor = new snl_compressor_tsr();
+            Main_Compressor.textBox1.Text = Convert.ToString(pres21);
+            Main_Compressor.textBox2.Text = Convert.ToString(temp21);
+            Main_Compressor.textBox6.Text = Convert.ToString(pres22);
+            Main_Compressor.textBox5.Text = Convert.ToString(temp22);
+
+            Main_Compressor.textBox9.Text = Convert.ToString(massflow2);
+            Main_Compressor.textBox8.Text = Convert.ToString(recomp_frac2);
+
+            Main_Compressor.button3.Enabled = false;
+            Main_Compressor.button5.Enabled = false;
+            Main_Compressor.button6.Enabled = false;
+            Main_Compressor.button7.Enabled = false;
+
+            Main_Compressor.Calculate_Main_Compressor();
+
+            N_design_Main_Compressor = Convert.ToDouble(Main_Compressor.textBox11.Text);
+
+            textBox6.Text = Convert.ToString(N_design_Main_Compressor);
+
+            Main_Compressor.Show();
+        }
+
+        //Turbine_1 calculation button
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Main_Turbine = new Radial_Turbine();
+            Main_Turbine.textBox1.Text = Convert.ToString(pres26);
+            Main_Turbine.textBox6.Text = Convert.ToString(pres215);
+            Main_Turbine.textBox2.Text = Convert.ToString(temp26);
+            Main_Turbine.textBox5.Text = Convert.ToString(temp215);
+
+            Main_Turbine.textBox9.Text = Convert.ToString(massflow2);
+            Main_Turbine.textBox8.Text = Convert.ToString(recomp_frac2);
+
+            Main_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
+
+            // MessageBox.Show("Not forget to set the Turbine Rotation speed (rpm)");
+
+            Main_Turbine.calculate_Radial_Turbine();
+            Main_Turbine.Show();
+        }
+
+        //Turbine_2 calculation button
+        private void button32_Click(object sender, EventArgs e)
+        {
+            Main_Turbine = new Radial_Turbine();
+            Main_Turbine.textBox1.Text = Convert.ToString(pres216);
+            Main_Turbine.textBox6.Text = Convert.ToString(pres217);
+            Main_Turbine.textBox2.Text = Convert.ToString(temp216);
+            Main_Turbine.textBox5.Text = Convert.ToString(temp217);
+
+            Main_Turbine.textBox9.Text = Convert.ToString(massflow2);
+            Main_Turbine.textBox8.Text = Convert.ToString(recomp_frac2);
+
+            Main_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
+
+            // MessageBox.Show("Not forget to set the Turbine Rotation speed (rpm)");
+
+            Main_Turbine.calculate_Radial_Turbine();
+            Main_Turbine.Show();
+        }
+
+        //Turbine_3 calculation button
+        private void button29_Click(object sender, EventArgs e)
+        {
+            Main_Turbine = new Radial_Turbine();
+            Main_Turbine.textBox1.Text = Convert.ToString(pres218);
+            Main_Turbine.textBox6.Text = Convert.ToString(pres27);
+            Main_Turbine.textBox2.Text = Convert.ToString(temp218);
+            Main_Turbine.textBox5.Text = Convert.ToString(temp27);
+
+            Main_Turbine.textBox9.Text = Convert.ToString(massflow2);
+            Main_Turbine.textBox8.Text = Convert.ToString(recomp_frac2);
+
+            Main_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
+
+            // MessageBox.Show("Not forget to set the Turbine Rotation speed (rpm)");
+
+            Main_Turbine.calculate_Radial_Turbine();
+            Main_Turbine.Show();
+        }
+
+        //LTR calculation button
+        private void button15_Click(object sender, EventArgs e)
+        {
+            LT_Recuperator = new HeatExchangerUA();
+            LT_Recuperator.textBox2.Text = Convert.ToString(LT_Q);
+            LT_Recuperator.textBox3.Text = Convert.ToString(LT_mdotc);
+            LT_Recuperator.textBox4.Text = Convert.ToString(LT_mdoth);
+            LT_Recuperator.textBox7.Text = Convert.ToString(LT_Tcin);
+            LT_Recuperator.textBox6.Text = Convert.ToString(LT_Thin);
+            LT_Recuperator.textBox5.Text = Convert.ToString(LT_Pcin);
+            LT_Recuperator.textBox8.Text = Convert.ToString(LT_Phin);
+            LT_Recuperator.textBox9.Text = Convert.ToString(LT_Pcout);
+            LT_Recuperator.textBox12.Text = Convert.ToString(LT_Phout);
+            LT_Recuperator.textBox13.Text = Convert.ToString(LT_Effc);
+
+            LT_Recuperator.HeatExchangerUA1(luis);
+            LT_Recuperator.Calculate_HX();
+            LT_Recuperator.Show();
+        }
+
+        //HTR calculation button
+        private void button7_Click(object sender, EventArgs e)
+        {
+            HT_Recuperator = new HeatExchangerUA();
+            HT_Recuperator.textBox2.Text = Convert.ToString(HT_Q);
+            HT_Recuperator.textBox3.Text = Convert.ToString(HT_mdotc);
+            HT_Recuperator.textBox4.Text = Convert.ToString(HT_mdoth);
+            HT_Recuperator.textBox7.Text = Convert.ToString(HT_Tcin);
+            HT_Recuperator.textBox6.Text = Convert.ToString(HT_Thin);
+            HT_Recuperator.textBox5.Text = Convert.ToString(HT_Pcin);
+            HT_Recuperator.textBox8.Text = Convert.ToString(HT_Phin);
+            HT_Recuperator.textBox9.Text = Convert.ToString(HT_Pcout);
+            HT_Recuperator.textBox12.Text = Convert.ToString(HT_Phout);
+            HT_Recuperator.textBox13.Text = Convert.ToString(HT_Effc);
+
+            HT_Recuperator.HeatExchangerUA1(luis);
+            HT_Recuperator.Calculate_HX();
+            HT_Recuperator.Show();
         }
     }
 }

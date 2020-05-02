@@ -369,6 +369,7 @@
             this.button28.TabIndex = 1581;
             this.button28.Text = "Precooler";
             this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // textBox84
             // 
@@ -479,8 +480,9 @@
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(58, 26);
             this.button19.TabIndex = 1568;
-            this.button19.Text = "PreComp";
+            this.button19.Text = "C2";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button7
             // 
@@ -491,6 +493,7 @@
             this.button7.TabIndex = 1472;
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button15
             // 
@@ -501,6 +504,7 @@
             this.button15.TabIndex = 1471;
             this.button15.Text = "LTR";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // textBox28
             // 
@@ -880,8 +884,9 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(58, 26);
             this.button11.TabIndex = 1476;
-            this.button11.Text = "PreComp";
+            this.button11.Text = "C1";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -892,6 +897,7 @@
             this.button12.TabIndex = 1475;
             this.button12.Text = "Recomp";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button10
             // 
@@ -902,6 +908,7 @@
             this.button10.TabIndex = 1474;
             this.button10.Text = "Turbine";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -910,8 +917,9 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(44, 23);
             this.button9.TabIndex = 1473;
-            this.button9.Text = "Comp";
+            this.button9.Text = "C3";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button14
             // 
@@ -3200,6 +3208,7 @@
             this.button6.TabIndex = 1479;
             this.button6.Text = "Precooler";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
@@ -3213,6 +3222,7 @@
             this.button4.TabIndex = 1478;
             this.button4.Text = "Precooler";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button29
             // 
@@ -3223,6 +3233,7 @@
             this.button29.TabIndex = 1586;
             this.button29.Text = "Turbine";
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
