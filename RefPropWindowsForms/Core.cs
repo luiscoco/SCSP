@@ -21129,12 +21129,12 @@ namespace RefPropWindowsForms
             cicloRCMCI_withTwoIntercoolingWithoutRH.PHX.DP_design2 = 0.0;
             //recomp_cycle%PHX%m_dot_design = [m_dot_t, 0.0_dp]
 
-            cicloRCMCI_withTwoIntercoolingWithoutRH.PC1.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
+            cicloRCMCI_withTwoIntercoolingWithoutRH.PC1.Q_dot = (m_dot_mc * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
             cicloRCMCI_withTwoIntercoolingWithoutRH.PC1.DP_design1 = 0.0;
             cicloRCMCI_withTwoIntercoolingWithoutRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
 
-            cicloRCMCI_withTwoIntercoolingWithoutRH.PC2.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloRCMCI_withTwoIntercoolingWithoutRH.PC2.Q_dot = (m_dot_mc * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloRCMCI_withTwoIntercoolingWithoutRH.PC2.DP_design1 = 0.0;
             cicloRCMCI_withTwoIntercoolingWithoutRH.PC2.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[13 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
@@ -22938,12 +22938,12 @@ namespace RefPropWindowsForms
             cicloRCMCI_withTwoIntercoolingWithRH.RHX.DP_design2 = 0.0;
             //recomp_cycle%PHX%m_dot_design = [m_dot_t, 0.0_dp]
 
-            cicloRCMCI_withTwoIntercoolingWithRH.PC1.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
+            cicloRCMCI_withTwoIntercoolingWithRH.PC1.Q_dot = (m_dot_mc * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
             cicloRCMCI_withTwoIntercoolingWithRH.PC1.DP_design1 = 0.0;
             cicloRCMCI_withTwoIntercoolingWithRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
 
-            cicloRCMCI_withTwoIntercoolingWithRH.PC2.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloRCMCI_withTwoIntercoolingWithRH.PC2.Q_dot = (m_dot_mc * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloRCMCI_withTwoIntercoolingWithRH.PC2.DP_design1 = 0.0;
             cicloRCMCI_withTwoIntercoolingWithRH.PC2.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[13 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
@@ -24827,12 +24827,12 @@ namespace RefPropWindowsForms
             cicloRCMCI_withTwoIntercoolingWithTwoRH.RHX2.DP_design2 = 0.0;
             //recomp_cycle%PHX%m_dot_design = [m_dot_t, 0.0_dp]
 
-            cicloRCMCI_withTwoIntercoolingWithTwoRH.PC1.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
+            cicloRCMCI_withTwoIntercoolingWithTwoRH.PC1.Q_dot = (m_dot_mc * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
             cicloRCMCI_withTwoIntercoolingWithTwoRH.PC1.DP_design1 = 0.0;
             cicloRCMCI_withTwoIntercoolingWithTwoRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
 
-            cicloRCMCI_withTwoIntercoolingWithTwoRH.PC2.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloRCMCI_withTwoIntercoolingWithTwoRH.PC2.Q_dot = (m_dot_mc * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloRCMCI_withTwoIntercoolingWithTwoRH.PC2.DP_design1 = 0.0;
             cicloRCMCI_withTwoIntercoolingWithTwoRH.PC2.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[13 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
@@ -26671,15 +26671,15 @@ namespace RefPropWindowsForms
             cicloPCRCMCI_withoutRH.PHX.DP_design1 = m_pres_last[5 - cpp_offset] - m_pres_last[6 - cpp_offset];
             cicloPCRCMCI_withoutRH.PHX.DP_design2 = 0.0;
 
-            cicloPCRCMCI_withoutRH.PC1.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
+            cicloPCRCMCI_withoutRH.PC1.Q_dot = (m_dot_mc * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
             cicloPCRCMCI_withoutRH.PC1.DP_design1 = 0.0;
             cicloPCRCMCI_withoutRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
 
-            cicloPCRCMCI_withoutRH.PC2.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[1 - cpp_offset]));
+            cicloPCRCMCI_withoutRH.PC2.Q_dot = (m_dot_mc * (m_enth_last[12 - cpp_offset] - m_enth_last[1 - cpp_offset]));
             cicloPCRCMCI_withoutRH.PC2.DP_design1 = 0.0;
             cicloPCRCMCI_withoutRH.PC2.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[1 - cpp_offset];
 
-            cicloPCRCMCI_withoutRH.PC3.Q_dot = (m_dot_t * (m_enth_last[2 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloPCRCMCI_withoutRH.PC3.Q_dot = (m_dot_mc * (m_enth_last[2 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloPCRCMCI_withoutRH.PC3.DP_design1 = 0.0;
             cicloPCRCMCI_withoutRH.PC3.DP_design2 = m_pres_last[2 - cpp_offset] - m_pres_last[13 - cpp_offset];
 
