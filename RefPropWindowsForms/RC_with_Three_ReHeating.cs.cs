@@ -262,12 +262,18 @@ namespace RefPropWindowsForms
 
         public Double[] RHX3_Effec_local = new Double[25];
         public Double[] RHX3_C_dot_c_local = new Double[25];
-        public Double[] RHX3_C_dot_h_local = new Double[25];
 
-        public Double[] RHX3_UA_local_module = new Double[25];
-        public Double[] RHX3_NTU_local_module = new Double[25];
+      
+
+        public Double[] RHX3_C_dot_h_local = new Double[25];                
+
+        public Double[] RHX3_UA_local_module = new Double[25];        
+
+        public Double[] RHX3_NTU_local_module = new Double[25];        
+
         public Double[] RHX3_CR_local_module = new Double[25];
-        public Double[] RHX3_Effec_local_module = new Double[25];
+        public Double[] RHX3_Effec_local_module = new Double[25];     
+
         public Double[] RHX3_C_dot_c_local_module = new Double[25];
         public Double[] RHX3_C_dot_h_local_module = new Double[25];
 
@@ -1075,6 +1081,162 @@ namespace RefPropWindowsForms
             {
                 GC.Collect();
             }
+        }
+
+        //HTR calculation button
+        private void button7_Click(object sender, EventArgs e)
+        {
+            HT_Recuperator = new HeatExchangerUA();
+            HT_Recuperator.textBox2.Text = Convert.ToString(HT_Q);
+            HT_Recuperator.textBox3.Text = Convert.ToString(HT_mdotc);
+            HT_Recuperator.textBox4.Text = Convert.ToString(HT_mdoth);
+            HT_Recuperator.textBox7.Text = Convert.ToString(HT_Tcin);
+            HT_Recuperator.textBox6.Text = Convert.ToString(HT_Thin);
+            HT_Recuperator.textBox5.Text = Convert.ToString(HT_Pcin);
+            HT_Recuperator.textBox8.Text = Convert.ToString(HT_Phin);
+            HT_Recuperator.textBox9.Text = Convert.ToString(HT_Pcout);
+            HT_Recuperator.textBox12.Text = Convert.ToString(HT_Phout);
+            HT_Recuperator.textBox13.Text = Convert.ToString(HT_Effc);
+            HT_Recuperator.HeatExchangerUA1(luis);
+            HT_Recuperator.Calculate_HX();
+            HT_Recuperator.Show();
+        }
+
+        //LTR calculation button
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LT_Recuperator = new HeatExchangerUA();
+            LT_Recuperator.textBox2.Text = Convert.ToString(LT_Q);
+            LT_Recuperator.textBox3.Text = Convert.ToString(LT_mdotc);
+            LT_Recuperator.textBox4.Text = Convert.ToString(LT_mdoth);
+            LT_Recuperator.textBox7.Text = Convert.ToString(LT_Tcin);
+            LT_Recuperator.textBox6.Text = Convert.ToString(LT_Thin);
+            LT_Recuperator.textBox5.Text = Convert.ToString(LT_Pcin);
+            LT_Recuperator.textBox8.Text = Convert.ToString(LT_Phin);
+            LT_Recuperator.textBox9.Text = Convert.ToString(LT_Pcout);
+            LT_Recuperator.textBox12.Text = Convert.ToString(LT_Phout);
+            LT_Recuperator.textBox13.Text = Convert.ToString(LT_Effc);
+            LT_Recuperator.HeatExchangerUA1(luis);
+            LT_Recuperator.Calculate_HX();
+            LT_Recuperator.Show();
+        }
+
+        //Pre-Cooler calculation button
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Precooler_dialog = new PreeCooler();
+            Precooler_dialog.textBox2.Text = Convert.ToString(PC_Q2);
+            Precooler_dialog.textBox4.Text = Convert.ToString(massflow2 * (1 - recomp_frac2));
+            Precooler_dialog.textBox6.Text = Convert.ToString(temp29);
+            Precooler_dialog.textBox12.Text = Convert.ToString(pres29);
+            Precooler_dialog.textBox8.Text = Convert.ToString(pres21);
+            Precooler_dialog.PreeCooler1(luis);
+            Precooler_dialog.Calculate_Cooler();
+            Precooler_dialog.Show();
+        }
+
+        //Main Compressor calculation button
+        private void button9_Click(object sender, EventArgs e)
+        {
+            button10.Enabled = true;
+            button11.Enabled = true;
+            button31.Enabled = true;
+            button33.Enabled = true;
+
+            Main_Compressor = new snl_compressor_tsr();
+            Main_Compressor.textBox1.Text = Convert.ToString(pres21);
+            Main_Compressor.textBox2.Text = Convert.ToString(temp21);
+            Main_Compressor.textBox6.Text = Convert.ToString(pres22);
+            Main_Compressor.textBox5.Text = Convert.ToString(temp22);
+            Main_Compressor.textBox9.Text = Convert.ToString(massflow2);
+            Main_Compressor.textBox8.Text = Convert.ToString(recomp_frac2);
+            Main_Compressor.button3.Enabled = false;
+            Main_Compressor.button5.Enabled = false;
+            Main_Compressor.button6.Enabled = false;
+            Main_Compressor.button7.Enabled = false;
+            Main_Compressor.Calculate_Main_Compressor();
+            N_design_Main_Compressor = Convert.ToDouble(Main_Compressor.textBox11.Text);
+            Main_Compressor.Show();
+        }
+
+        //Recompressor calculation button
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ReCompressor = new snl_compressor_tsr();
+            ReCompressor.textBox1.Text = Convert.ToString(pres29);
+            ReCompressor.textBox2.Text = Convert.ToString(temp29);
+            ReCompressor.textBox6.Text = Convert.ToString(pres210);
+            ReCompressor.textBox5.Text = Convert.ToString(temp210);
+            ReCompressor.textBox9.Text = Convert.ToString(massflow2);
+            ReCompressor.textBox8.Text = Convert.ToString(recomp_frac2);
+            ReCompressor.button2.Enabled = false;
+            ReCompressor.button4.Enabled = false;
+            ReCompressor.button3_Click(this, e);
+            ReCompressor.Show();
+        }
+
+        //Turbine_1
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Main_Turbine = new Radial_Turbine();
+            Main_Turbine.textBox1.Text = Convert.ToString(pres26);
+            Main_Turbine.textBox6.Text = Convert.ToString(pres211);
+            Main_Turbine.textBox2.Text = Convert.ToString(temp26);
+            Main_Turbine.textBox5.Text = Convert.ToString(temp211);
+            Main_Turbine.textBox9.Text = Convert.ToString(massflow2);
+            Main_Turbine.textBox8.Text = Convert.ToString(recomp_frac2);
+            Main_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
+            // MessageBox.Show("Not forget to set the Turbine Rotation speed (rpm)");
+            Main_Turbine.calculate_Radial_Turbine();
+            Main_Turbine.Show();
+        }
+
+        //Turbine_2
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ReHeating1_Turbine = new Radial_Turbine();
+            ReHeating1_Turbine.textBox1.Text = Convert.ToString(pres212);
+            ReHeating1_Turbine.textBox6.Text = Convert.ToString(pres213);
+            ReHeating1_Turbine.textBox2.Text = Convert.ToString(temp212);
+            ReHeating1_Turbine.textBox5.Text = Convert.ToString(temp213);
+            ReHeating1_Turbine.textBox9.Text = Convert.ToString(massflow2);
+            ReHeating1_Turbine.textBox8.Text = Convert.ToString(recomp_frac2);
+            ReHeating1_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
+            // MessageBox.Show("Not forget to set the Turbine Rotation speed (rpm)");
+            ReHeating1_Turbine.calculate_Radial_Turbine();
+            ReHeating1_Turbine.Show();
+        }
+
+        //Turbine_3
+        private void button31_Click(object sender, EventArgs e)
+        {
+            ReHeating2_Turbine = new Radial_Turbine();
+            ReHeating2_Turbine.textBox1.Text = Convert.ToString(pres214);
+            ReHeating2_Turbine.textBox6.Text = Convert.ToString(pres215);
+            ReHeating2_Turbine.textBox2.Text = Convert.ToString(temp214);
+            ReHeating2_Turbine.textBox5.Text = Convert.ToString(temp215);
+            ReHeating2_Turbine.textBox9.Text = Convert.ToString(massflow2);
+            ReHeating2_Turbine.textBox8.Text = Convert.ToString(recomp_frac2);
+            ReHeating2_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
+            // MessageBox.Show("Not forget to set the Turbine Rotation speed (rpm)");
+            ReHeating2_Turbine.calculate_Radial_Turbine();
+            ReHeating2_Turbine.Show();
+        }
+
+        //Turbine_4
+        private void button33_Click(object sender, EventArgs e)
+        {
+            ReHeating2_Turbine = new Radial_Turbine();
+            ReHeating2_Turbine.textBox1.Text = Convert.ToString(pres216);
+            ReHeating2_Turbine.textBox6.Text = Convert.ToString(pres27);
+            ReHeating2_Turbine.textBox2.Text = Convert.ToString(temp216);
+            ReHeating2_Turbine.textBox5.Text = Convert.ToString(temp27);
+            ReHeating2_Turbine.textBox9.Text = Convert.ToString(massflow2);
+            ReHeating2_Turbine.textBox8.Text = Convert.ToString(recomp_frac2);
+            ReHeating2_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
+            // MessageBox.Show("Not forget to set the Turbine Rotation speed (rpm)");
+            ReHeating2_Turbine.calculate_Radial_Turbine();
+            ReHeating2_Turbine.Show();
         }
     }
 }

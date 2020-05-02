@@ -3428,6 +3428,7 @@
             this.button31.TabIndex = 1518;
             this.button31.Text = "Turbine";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button23
             // 
@@ -3466,6 +3467,7 @@
             this.button5.TabIndex = 1515;
             this.button5.Text = "Precooler";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -3489,6 +3491,7 @@
             this.button12.TabIndex = 1513;
             this.button12.Text = "Recom Comp";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -3499,6 +3502,7 @@
             this.button11.TabIndex = 1512;
             this.button11.Text = "Turbine";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -3509,6 +3513,7 @@
             this.button10.TabIndex = 1511;
             this.button10.Text = "Turbine";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -3519,6 +3524,7 @@
             this.button9.TabIndex = 1510;
             this.button9.Text = "Main Comp";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -3542,6 +3548,7 @@
             this.button7.TabIndex = 1508;
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -3552,6 +3559,7 @@
             this.button6.TabIndex = 1507;
             this.button6.Text = "LTR";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button32
             // 
@@ -3575,6 +3583,7 @@
             this.button33.TabIndex = 1520;
             this.button33.Text = "Turbine";
             this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // button36
             // 
