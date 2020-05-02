@@ -11511,14 +11511,14 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoIntercooling_withoutRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
 
-            cicloPCRC_withTwoIntercooling_withoutRH.PC1.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
-            cicloPCRC_withTwoIntercooling_withoutRH.PC1.DP_design1 = 0.0;
-            cicloPCRC_withTwoIntercooling_withoutRH.PC1.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[13 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withoutRH.PC2.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloPCRC_withTwoIntercooling_withoutRH.PC2.DP_design1 = 0.0;
+            cicloPCRC_withTwoIntercooling_withoutRH.PC2.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[13 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
 
-            cicloPCRC_withTwoIntercooling_withoutRH.COOLER.Q_dot = (m_dot_mc * (m_enth_last[12 - cpp_offset] - m_enth_last[1 - cpp_offset]));
+            cicloPCRC_withTwoIntercooling_withoutRH.COOLER.Q_dot = (m_dot_mc * (m_enth_last[14 - cpp_offset] - m_enth_last[1 - cpp_offset]));
             cicloPCRC_withTwoIntercooling_withoutRH.COOLER.DP_design1 = 0.0;
-            cicloPCRC_withTwoIntercooling_withoutRH.COOLER.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[1 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withoutRH.COOLER.DP_design2 = m_pres_last[14 - cpp_offset] - m_pres_last[1 - cpp_offset];
 
             // Calculate cycle performance metrics.
             cicloPCRC_withTwoIntercooling_withoutRH.recomp_frac = m_recomp_frac;
