@@ -25467,14 +25467,14 @@ namespace RefPropWindowsForms
             cicloRCMCI_withThreeRH.RHX3.DP_design1 = m_pres_last[17 - cpp_offset] - m_pres_last[18 - cpp_offset];
             cicloRCMCI_withThreeRH.RHX3.DP_design2 = 0.0;
 
-            cicloRCMCI_withThreeRH.PC.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
+            cicloRCMCI_withThreeRH.PC.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloRCMCI_withThreeRH.PC.DP_design1 = 0.0;
-            cicloRCMCI_withThreeRH.PC.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
+            cicloRCMCI_withThreeRH.PC.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[13 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
 
-            cicloRCMCI_withThreeRH.COOLER.Q_dot = (m_dot_mc * (m_enth_last[12 - cpp_offset] - m_enth_last[1 - cpp_offset]));
+            cicloRCMCI_withThreeRH.COOLER.Q_dot = (m_dot_mc * (m_enth_last[14 - cpp_offset] - m_enth_last[1 - cpp_offset]));
             cicloRCMCI_withThreeRH.COOLER.DP_design1 = 0.0;
-            cicloRCMCI_withThreeRH.COOLER.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[1 - cpp_offset];
+            cicloRCMCI_withThreeRH.COOLER.DP_design2 = m_pres_last[14 - cpp_offset] - m_pres_last[1 - cpp_offset];
 
             // Calculate cycle performance metrics.
             cicloRCMCI_withThreeRH.recomp_frac = m_recomp_frac;

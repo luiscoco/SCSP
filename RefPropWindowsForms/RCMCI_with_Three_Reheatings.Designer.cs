@@ -1390,7 +1390,7 @@
             this.textBox39.Name = "textBox39";
             this.textBox39.Size = new System.Drawing.Size(38, 20);
             this.textBox39.TabIndex = 1500;
-            this.textBox39.Text = "17300";
+            this.textBox39.Text = "14300";
             // 
             // label41
             // 
@@ -3499,7 +3499,7 @@
             this.textBox107.Name = "textBox107";
             this.textBox107.Size = new System.Drawing.Size(38, 20);
             this.textBox107.TabIndex = 1634;
-            this.textBox107.Text = "17300";
+            this.textBox107.Text = "11300";
             // 
             // label133
             // 
@@ -3630,6 +3630,7 @@
             this.button33.TabIndex = 1658;
             this.button33.Text = "Turb";
             this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // button19
             // 
@@ -3655,6 +3656,7 @@
             this.button14.TabIndex = 1655;
             this.button14.Text = "Precooler";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -3668,6 +3670,7 @@
             this.button13.TabIndex = 1654;
             this.button13.Text = "Precooler";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button15
             // 
@@ -3691,6 +3694,7 @@
             this.button4.TabIndex = 1652;
             this.button4.Text = "Comp";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button12
             // 
@@ -3701,6 +3705,7 @@
             this.button12.TabIndex = 1651;
             this.button12.Text = "Recomp";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -3711,6 +3716,7 @@
             this.button11.TabIndex = 1650;
             this.button11.Text = "Turb";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -3721,6 +3727,7 @@
             this.button10.TabIndex = 1649;
             this.button10.Text = "Turb";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -3731,6 +3738,7 @@
             this.button9.TabIndex = 1648;
             this.button9.Text = "Comp";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -3754,6 +3762,7 @@
             this.button7.TabIndex = 1646;
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -3764,6 +3773,7 @@
             this.button6.TabIndex = 1645;
             this.button6.Text = "LTR";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button34
             // 
@@ -3800,6 +3810,7 @@
             this.button35.TabIndex = 1661;
             this.button35.Text = "Turbine";
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
