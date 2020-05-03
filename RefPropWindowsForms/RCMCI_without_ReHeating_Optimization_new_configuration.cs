@@ -2515,16 +2515,14 @@ namespace RefPropWindowsForms
                         double UA_Total = puntero_aplicacion.ua_lt2 + puntero_aplicacion.ua_ht2;
 
                         double LT_fraction = 0.1;
-
-                        List<Double> massflow2_list = new List<Double>();
+                       
                         List<Double> recomp_frac2_list = new List<Double>();
                         List<Double> p_mc1_in2_list = new List<Double>();
                         List<Double> p_mc1_out2_list = new List<Double>();
                         List<Double> p_rhx_in2_list = new List<Double>();
-                        List<Double> eta_thermal2_list = new List<Double>();
-                        List<Double> PHX_Q2_list = new List<Double>();
+                        List<Double> eta_thermal2_list = new List<Double>();                        
                         List<Double> ua_lt_list = new List<Double>();
-                        List<Double> ua_ht_list = new List<Double>();
+                        List<Double> ua_ht_list = new List<Double>();                      
 
                         List<Double> t1_list = new List<Double>();
                         List<Double> t2_list = new List<Double>();
@@ -3512,6 +3510,8 @@ namespace RefPropWindowsForms
                         double temp5_max_eff_4 = 0.0;
 
                         List<Double> temp5_list_quinta = new List<Double>();
+                        List<Double> massflow2_list = new List<Double>();
+                        List<Double> PHX_Q2_list = new List<Double>();
 
                         core.RCMCIwithReheating cicloRCMCI_withRH_Quinta_llamada = new core.RCMCIwithReheating();
 
@@ -3658,7 +3658,7 @@ namespace RefPropWindowsForms
                                 p13_list.Add(puntero_aplicacion.pres213);
                                 p14_list.Add(puntero_aplicacion.pres214);
 
-                                PHX_Q2_list.Add(cicloRCMCI_withRH_Cuarta_llamada.PHX.Q_dot);
+                                PHX_Q2_list.Add(cicloRCMCI_withRH_Cuarta_llamada.RHX.Q_dot);
 
                                 HT_Eff_list.Add(cicloRCMCI_withRH_Cuarta_llamada.HT.eff);
                                 LT_Eff_list.Add(cicloRCMCI_withRH_Cuarta_llamada.LT.eff);
@@ -3780,10 +3780,10 @@ namespace RefPropWindowsForms
 
                                 PTC.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
                                 PTC.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                PTC.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                PTC.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                PTC.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                PTC.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
+                                PTC.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                PTC.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                PTC.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                PTC.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                                 PTC.textBox107.Text = Convert.ToString(10);
                                 PTC.button1_Click(this, e);
                                 puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC.ReflectorApertureAreaResult;
@@ -3799,10 +3799,10 @@ namespace RefPropWindowsForms
                                 //LF.textBox36.Text = this.textBox36.Text;
                                 LF.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
                                 LF.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                LF.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                LF.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                LF.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                LF.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
+                                LF.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                LF.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                LF.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                LF.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                                 LF.textBox107.Text = Convert.ToString(10);
                                 LF.button1_Click(this, e);
                                 puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF.ReflectorApertureAreaResult;
@@ -3959,9 +3959,8 @@ namespace RefPropWindowsForms
 
                         double UA_Total = puntero_aplicacion.ua_lt2 + puntero_aplicacion.ua_ht2;
 
-                        double LT_fraction = 0.1;
+                        double LT_fraction = 0.1;                       
 
-                        List<Double> massflow2_list = new List<Double>();
                         List<Double> recomp_frac2_list = new List<Double>();
                         List<Double> p_mc1_in2_list = new List<Double>();
                         List<Double> p_mc1_out2_list = new List<Double>();
@@ -4001,9 +4000,7 @@ namespace RefPropWindowsForms
                         List<Double> p14_list = new List<Double>();
 
                         List<Double> HT_Eff_list = new List<Double>();
-                        List<Double> LT_Eff_list = new List<Double>();
-
-                        List<Double> PHX_Q2_list = new List<Double>();
+                        List<Double> LT_Eff_list = new List<Double>();                       
 
                         NLoptAlgorithm algorithm_type = NLoptAlgorithm.LN_BOBYQA;
 
@@ -4781,6 +4778,8 @@ namespace RefPropWindowsForms
                         List<Double> p_rhx_in2_list_cuarta_llamada = new List<Double>();
                         List<Double> ua_LT_list_cuarta_llamada = new List<Double>();
                         List<Double> ua_HT_list_cuarta_llamada = new List<Double>();
+                        List<Double> massflow2_list = new List<Double>();
+                        List<Double> PHX_Q2_list = new List<Double>();
 
                         xlWorkBook1 = xlApp1.Workbooks.Open(textBox3.Text + "RCMCI_without_ReHeating_newproposedconfiguration" + ".xls");
                         xlWorkSheet1 = xlWorkBook1.Worksheets[1];
@@ -4913,7 +4912,7 @@ namespace RefPropWindowsForms
                                 p9_list.Add(puntero_aplicacion.pres29);
                                 p10_list.Add(puntero_aplicacion.pres210);
 
-                                PHX_Q2_list.Add(cicloRCMCI_withRH_Cuarta_llamada.PHX.Q_dot);
+                                PHX_Q2_list.Add(cicloRCMCI_withRH_Cuarta_llamada.RHX.Q_dot);
 
                                 HT_Eff_list.Add(cicloRCMCI_withRH_Cuarta_llamada.HT.eff);
                                 LT_Eff_list.Add(cicloRCMCI_withRH_Cuarta_llamada.LT.eff);
@@ -5038,10 +5037,10 @@ namespace RefPropWindowsForms
 
                                 PTC.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
                                 PTC.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                PTC.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                PTC.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                PTC.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                PTC.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
+                                PTC.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                PTC.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                PTC.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                PTC.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                                 PTC.textBox107.Text = Convert.ToString(10);
                                 PTC.button1_Click(this, e);
                                 puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC.ReflectorApertureAreaResult;
@@ -5057,10 +5056,10 @@ namespace RefPropWindowsForms
                                 //LF.textBox36.Text = this.textBox36.Text;
                                 LF.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
                                 LF.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                LF.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                LF.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                LF.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                LF.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
+                                LF.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                LF.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                LF.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                LF.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                                 LF.textBox107.Text = Convert.ToString(10);
                                 LF.button1_Click(this, e);
                                 puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF.ReflectorApertureAreaResult;

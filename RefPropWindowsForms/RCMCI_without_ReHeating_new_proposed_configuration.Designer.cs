@@ -2091,7 +2091,7 @@
             this.button8.Enabled = false;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(226, 436);
+            this.button8.Location = new System.Drawing.Point(226, 438);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(117, 41);
             this.button8.TabIndex = 1354;
@@ -2105,7 +2105,7 @@
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(394, 436);
+            this.button4.Location = new System.Drawing.Point(394, 438);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 41);
             this.button4.TabIndex = 1353;
@@ -2125,6 +2125,7 @@
             this.button15.TabIndex = 1352;
             this.button15.Text = "PHX and SF";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
