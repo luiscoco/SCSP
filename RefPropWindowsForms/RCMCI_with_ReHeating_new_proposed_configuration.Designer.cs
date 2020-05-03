@@ -2872,14 +2872,15 @@
             // 
             this.button15.BackColor = System.Drawing.Color.Maroon;
             this.button15.Enabled = false;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
             this.button15.Location = new System.Drawing.Point(1082, 262);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(43, 107);
+            this.button15.Size = new System.Drawing.Size(60, 107);
             this.button15.TabIndex = 1322;
             this.button15.Text = "RHX2 and SF";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // label40
             // 
@@ -2970,6 +2971,7 @@
             this.button8.TabIndex = 1314;
             this.button8.Text = "RHX1 and SF";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
