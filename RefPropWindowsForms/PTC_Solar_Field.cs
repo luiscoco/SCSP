@@ -117,6 +117,7 @@ namespace RefPropWindowsForms
         public PCRC_without_ReHeating Punterociclo_8;
         public PCRC_with_Two_ReHeating Punterociclo_17;
         public PCRC_with_Three_ReHeating Punterociclo_18;
+        public PCRC_without_ReHeating_new_proposed_configuration Punterociclo_25;
 
         public RCMCI_optimal Punterociclo_9;
         public RCMCI Punterociclo_10;
@@ -338,6 +339,14 @@ namespace RefPropWindowsForms
             SF_Type_variable = SF_Type;
             Brayton_cycle_type_variable = Brayton_cycle_type;
             Punterociclo_8 = Punterociclo8;
+        }
+
+        // PCRC_Design_WithoutReHeating new configuration: Brayton_cycle_type_variable = 25
+        public void PTC_Solar_Field_ciclo_PCRC_Design_withoutReHeating_new_configuration(PCRC_without_ReHeating_new_proposed_configuration Punterociclo25, Double Brayton_cycle_type, String SF_Type)
+        {
+            SF_Type_variable = SF_Type;
+            Brayton_cycle_type_variable = Brayton_cycle_type;
+            Punterociclo_25 = Punterociclo25;
         }
 
         // RC_Design_WithTwoReHeating: Brayton_cycle_type_variable = 17
@@ -606,7 +615,7 @@ namespace RefPropWindowsForms
             {
                 if (this.SF_Type_variable == "Main_SF")
                 {
-                    textBox37.Text = Convert.ToString(Punterociclo_21.temp27 + Convert.ToDouble(textBox107.Text));
+                    textBox37.Text = Convert.ToString(Punterociclo_21.temp212 + Convert.ToDouble(textBox107.Text));
                 }
 
                 else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
@@ -616,7 +625,7 @@ namespace RefPropWindowsForms
 
                 else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
                 {
-                    textBox37.Text = Convert.ToString(Punterociclo_21.temp27 + Convert.ToDouble(textBox107.Text));
+                    textBox37.Text = Convert.ToString(Punterociclo_21.temp212 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -625,7 +634,7 @@ namespace RefPropWindowsForms
             {
                 if (this.SF_Type_variable == "Main_SF")
                 {
-                    textBox37.Text = Convert.ToString(Punterociclo_22.temp27 + Convert.ToDouble(textBox107.Text));
+                    textBox37.Text = Convert.ToString(Punterociclo_22.temp212 + Convert.ToDouble(textBox107.Text));
                 }
 
                 else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
@@ -635,7 +644,7 @@ namespace RefPropWindowsForms
 
                 else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
                 {
-                    textBox37.Text = Convert.ToString(Punterociclo_22.temp27 + Convert.ToDouble(textBox107.Text));
+                    textBox37.Text = Convert.ToString(Punterociclo_22.temp212 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -826,6 +835,25 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
                 {
                     textBox37.Text = Convert.ToString(Punterociclo_8.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
+            // PCRC_Design_WithoutReHeating: Brayton_cycle_type_variable = 25
+            else if (this.Brayton_cycle_type_variable == 25)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_25.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_25.PHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_25.temp212 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -2943,6 +2971,32 @@ namespace RefPropWindowsForms
                 }
             }
 
+            // PCRC_Design_WithoutReHeating new configuration: Brayton_cycle_type_variable = 25
+            else if (this.Brayton_cycle_type_variable == 25)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_25.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF")
+                {
+                    Punterociclo_25.ReHeating_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    Punterociclo_25.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                    Punterociclo_25.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1 = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    Punterociclo_25.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption + Punterociclo_25.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1;
+                    Punterociclo_25.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_2 = Electrical_Consumption;
+                }
+            }
+
             // RCMCI_Optimization_WithReHeating: Brayton_cycle_type_variable = 9
             else if (this.Brayton_cycle_type_variable == 9)
             {
@@ -3283,6 +3337,15 @@ namespace RefPropWindowsForms
                 if (this.SF_Type_variable == "Main_SF")
                 {
                     Punterociclo_8.PTC_Main_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+            }
+
+            //PCRC_Design_withReHeating new configuration
+            else if (this.Brayton_cycle_type_variable == 25)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_25.PTC_Main_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
                 }
             }
 

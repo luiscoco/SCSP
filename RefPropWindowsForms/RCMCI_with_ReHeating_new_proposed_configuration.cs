@@ -1500,6 +1500,7 @@ namespace RefPropWindowsForms
                 SF_PHX_LF.button3_Click(this, e);
                 SF_PHX_LF.Show();
             }
+        
         }
 
         //Solar Field_2
@@ -1646,6 +1647,7 @@ namespace RefPropWindowsForms
                 SF_PHX_LF.button3_Click(this, e);
                 SF_PHX_LF.Show();
             }
+        
         }
     }
 }
