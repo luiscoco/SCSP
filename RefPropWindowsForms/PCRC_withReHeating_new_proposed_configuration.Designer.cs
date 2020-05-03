@@ -2727,6 +2727,7 @@
             this.button13.TabIndex = 1315;
             this.button13.Text = "PHX and SF";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label58
             // 
@@ -3018,6 +3019,7 @@
             this.button8.TabIndex = 1287;
             this.button8.Text = "RHX and SF";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 

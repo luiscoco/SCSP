@@ -116,6 +116,7 @@ namespace RefPropWindowsForms
         public PCRC_with_Two_ReHeating Punterociclo_17;
         public PCRC_with_Three_ReHeating Punterociclo_18;
         public PCRC_without_ReHeating_new_proposed_configuration Punterociclo_25;
+        public PCRC_withReHeating_new_proposed_configuration Punterociclo_26;
 
         public RCMCI_optimal Punterociclo_9;
         public RCMCI Punterociclo_10;
@@ -245,6 +246,14 @@ namespace RefPropWindowsForms
             SF_Type_variable = SF_Type;
             Brayton_cycle_type_variable = Brayton_cycle_type;
             Punterociclo_5 = Punterociclo5;
+        }
+
+        // PCRC_Optimization_WithReHeating new configuration: Brayton_cycle_type_variable = 26
+        public void LF_Solar_Field_ciclo_PCRC_Optimization_withReHeating_new_configuration(PCRC_withReHeating_new_proposed_configuration Punterociclo26, Double Brayton_cycle_type, String SF_Type)
+        {
+            SF_Type_variable = SF_Type;
+            Brayton_cycle_type_variable = Brayton_cycle_type;
+            Punterociclo_26 = Punterociclo26;
         }
 
         // PCRC_Design_WithReHeating: Brayton_cycle_type_variable = 6
@@ -637,6 +646,39 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "ReHeating_SF2_Dual_Loop")
                 {
                     textBox37.Text = Convert.ToString(Punterociclo_5.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
+            else if (this.Brayton_cycle_type_variable == 26)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_26.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_26.PHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_26.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_26.temp216 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_26.RHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_26.temp216 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -2217,6 +2259,31 @@ namespace RefPropWindowsForms
                 }
             }
 
+            else if (this.Brayton_cycle_type_variable == 26)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_26.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF")
+                {
+                    Punterociclo_26.ReHeating_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    Punterociclo_26.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                    Punterociclo_26.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_1 = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    Punterociclo_26.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption + Punterociclo_26.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_1;
+                    Punterociclo_26.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_2 = Electrical_Consumption;
+                }
+            }
+
             else if (this.Brayton_cycle_type_variable == 6)
             {
                 if (this.SF_Type_variable == "Main_SF")
@@ -2662,6 +2729,20 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "ReHeating_SF")
                 {
                     Punterociclo_5.LF_ReHeating_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+            }
+
+            //PCRC_Optimization_withReHeating new configuration
+            else if (this.Brayton_cycle_type_variable == 26)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_26.LF_Main_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF")
+                {
+                    Punterociclo_26.LF_ReHeating_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
                 }
             }
 
