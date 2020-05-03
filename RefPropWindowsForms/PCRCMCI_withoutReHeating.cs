@@ -647,8 +647,7 @@ namespace RefPropWindowsForms
             button10.Enabled = true;
             button11.Enabled = true;
             button12.Enabled = true;
-            button14.Enabled = true;
-            button19.Enabled = true;
+            button14.Enabled = true;            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -834,7 +833,8 @@ namespace RefPropWindowsForms
         //Compressor C1
         private void button10_Click(object sender, EventArgs e)
         {
-            button10.Enabled = true;
+            button19.Enabled = true;
+            
             Main_Compressor1 = new snl_compressor_tsr();
             Main_Compressor1.textBox1.Text = Convert.ToString(pres21);
             Main_Compressor1.textBox2.Text = Convert.ToString(temp21);

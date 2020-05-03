@@ -718,9 +718,7 @@ namespace RefPropWindowsForms
                     button10.Enabled = true;
                     button11.Enabled = true;
                     button12.Enabled = true;
-                    button14.Enabled = true;
-                    button19.Enabled = true;
-                    button31.Enabled = true; 
+                    button14.Enabled = true;                   
             }
         }
 

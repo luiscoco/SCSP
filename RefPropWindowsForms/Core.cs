@@ -1495,6 +1495,7 @@ namespace RefPropWindowsForms
         }
 
 
+        //OK reviewed
         public void RecompCycledesign_newproposed(core luis, ref core.RecompCycle recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                             Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt_in, Double m_T_rt_in, Double DP_LT_c, Double DP_HT_c,
                             Double DP_PC, Double DP_PHX, Double DP_RHX, Double DP_LT_h, Double DP_HT_h, Double UA_LT, Double UA_HT, Double m_recomp_frac,
@@ -2093,6 +2094,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign_withReheating_newproposed(core luis, ref core.RecompCycleTwoReheating recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                            Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt1_in, Double m_T_rt1_in, Double m_P_rt2_in, Double m_T_rt2_in,
                            Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_RHX1, Double DP_RHX2, Double DP_LT_h, Double DP_HT_h,
@@ -2697,6 +2699,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign(core luis, ref core.RecompCycle_withoutRH recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                              Double m_T_t_in, Double P_mc_in, Double m_P_mc_out, Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX,
                              Double DP_LT_h, Double DP_HT_h, Double UA_LT, Double UA_HT, Double m_recomp_frac, Double m_eta_mc,
@@ -3255,7 +3258,8 @@ namespace RefPropWindowsForms
 
             return;
         }
-                
+
+        //OK reviewed
         public void RecompCycledesign_for_Optimization(core luis, ref core.RecompCycle_withoutRH recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                             Double m_T_t_in, Double P_mc_in, Double m_P_mc_out, Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX,
                             Double DP_LT_h, Double DP_HT_h, Double LT_fraction, Double UA_Total, Double m_recomp_frac, Double m_eta_mc,
@@ -3817,7 +3821,8 @@ namespace RefPropWindowsForms
 
             return;
         }
-                                    
+
+        //OK reviewed
         public void RecompCycledesign_withReheating(core luis, ref core.RecompCycle recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                             Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt_in, Double m_T_rt_in, Double DP_LT_c, Double DP_HT_c,
                             Double DP_PC, Double DP_PHX, Double DP_RHX, Double DP_LT_h, Double DP_HT_h, Double UA_LT, Double UA_HT, Double m_recomp_frac,
@@ -4399,6 +4404,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign_withReheating_for_Optimization(core luis, ref core.RecompCycle recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                            Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt_in, Double m_T_rt_in, Double DP_LT_c, Double DP_HT_c,
                            Double DP_PC, Double DP_PHX, Double DP_RHX, Double DP_LT_h, Double DP_HT_h, Double LT_fraction, Double UA_Total, Double m_recomp_frac,
@@ -4983,6 +4989,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign_newproposed_for_Optimization(core luis, ref core.RecompCycle recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                            Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt_in, Double m_T_rt_in, Double DP_LT_c, Double DP_HT_c,
                            Double DP_PC, Double DP_PHX, Double DP_RHX, Double DP_LT_h, Double DP_HT_h, Double LT_fraction, Double UA_Total, Double m_recomp_frac,
@@ -5584,6 +5591,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign_withReheating_newproposed_for_Optimization(core luis, ref core.RecompCycleTwoReheating recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                            Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt1_in, Double m_T_rt1_in, Double m_P_rt2_in, Double m_T_rt2_in,
                            Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_RHX1, Double DP_RHX2, Double DP_LT_h, Double DP_HT_h,
@@ -6191,6 +6199,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign_withTwoReheating(core luis, ref core.RecompCycleTwoReheating recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                            Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt1_in, Double m_T_rt1_in, Double m_P_rt2_in, Double m_T_rt2_in,
                            Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_RHX1, Double DP_RHX2, Double DP_LT_h, Double DP_HT_h, 
@@ -6779,6 +6788,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign_withTwoReheating_for_Optimization(core luis, ref core.RecompCycleTwoReheating recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                            Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt1_in, Double m_T_rt1_in, Double m_P_rt2_in, Double m_T_rt2_in,
                            Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_RHX1, Double DP_RHX2, Double DP_LT_h, Double DP_HT_h,
@@ -7370,6 +7380,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign_withThreeReheating(core luis, ref core.RecompCycleThreeReheating recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                            Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt1_in, Double m_T_rt1_in, Double m_P_rt2_in, Double m_T_rt2_in, Double m_P_rt3_in, Double m_T_rt3_in,
                            Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_RHX1, Double DP_RHX2, Double DP_RHX3, Double DP_LT_h, Double DP_HT_h,
@@ -7985,6 +7996,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //OK reviewed
         public void RecompCycledesign_withThreeReheating_for_Optimization(core luis, ref core.RecompCycleThreeReheating recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                            Double m_T_mt_in, Double P_mc_in, Double m_P_mc_out, Double m_P_rt1_in, Double m_T_rt1_in, Double m_P_rt2_in, Double m_T_rt2_in, Double m_P_rt3_in, Double m_T_rt3_in,
                            Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_RHX1, Double DP_RHX2, Double DP_RHX3, Double DP_LT_h, Double DP_HT_h,
@@ -8603,6 +8615,7 @@ namespace RefPropWindowsForms
             return;
         }
 
+
         public void RecompCycle_PCRC_without_Reheating(core luis, ref core.PCRCwithoutReheating cicloPCRC_withoutRH, Double m_W_dot_net,
             Double m_T_mc2_in, Double m_T_t_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
             Double UA_LT, Double UA_HT, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_t, Int64 m_N_sub_hxrs,
@@ -9168,6 +9181,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withoutRH.m_dot_turbine = m_dot_t;
             cicloPCRC_withoutRH.conv_tol = m_tol;
         }
+
 
         public void RecompCycle_PCRC_without_Reheating_newproposed(core luis, ref core.PCRCwithReheating cicloPCRC_withRH, Double m_W_dot_net,
             Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh_in, Double m_P_trh_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
@@ -9752,6 +9766,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withRH.m_dot_turbine = m_dot_t;
             cicloPCRC_withRH.conv_tol = m_tol;
         }
+
 
         public void RecompCycle_PCRC_withReheating_newproposed(core luis, ref core.PCRCwithTwoReheating cicloPCRC_withTwoRH, Double m_W_dot_net,
            Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh1_in, Double m_P_trh1_in, Double m_T_trh2_in, Double m_P_trh2_in, Double P_mc2_in,
@@ -10366,6 +10381,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_without_Reheating_for_Optimization(core luis, ref core.PCRCwithoutReheating cicloPCRC_withoutRH, Double m_W_dot_net,
            Double m_T_mc2_in, Double m_T_t_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
            Double LT_fraction, Double UA_Total, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_t, Int64 m_N_sub_hxrs,
@@ -10935,6 +10951,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withoutRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_withTwoIntercooling_without_Reheating(core luis, ref core.PCRCwithTwoIntercoolingWithoutReheating cicloPCRC_withTwoIntercooling_withoutRH, Double m_W_dot_net,
            Double m_T_t_in, Double m_T_mc2_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out, Double m_P_mc3_in, Double m_T_mc3_in, Double m_P_mc3_out,
            Double UA_LT, Double UA_HT, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_mc3, Double m_eta_t, Int64 m_N_sub_hxrs,
@@ -11531,6 +11548,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoIntercooling_withoutRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_withTwoIntercooling_without_Reheating_for_Optimization(core luis, ref core.PCRCwithTwoIntercoolingWithoutReheating cicloPCRC_withTwoIntercooling_withoutRH, Double m_W_dot_net,
            Double m_T_t_in, Double m_T_mc2_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out, Double m_P_mc3_in, Double m_T_mc3_in, Double m_P_mc3_out,
            Double LT_fraction, Double UA_Total, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_mc3, Double m_eta_t, Int64 m_N_sub_hxrs,
@@ -12129,7 +12147,8 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoIntercooling_withoutRH.m_dot_turbine = m_dot_t;
             cicloPCRC_withTwoIntercooling_withoutRH.conv_tol = m_tol;
         }
-        
+
+        //OK reviewed
         public void RecompCycle_PCRC_withTwoIntercooling_with_Reheating(core luis, ref core.PCRCwithTwoIntercoolingWithReheating cicloPCRC_withTwoIntercooling_withRH, Double m_W_dot_net,
            Double m_T_t_in, Double m_P_trh_in, Double m_T_trh_in, Double m_T_mc2_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out, 
            Double m_P_mc3_in, Double m_T_mc3_in, Double m_P_mc3_out, Double UA_LT, Double UA_HT, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_mc3, Double m_eta_t,
@@ -12743,6 +12762,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoIntercooling_withRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_withTwoIntercooling_withTwoReheating(core luis, ref core.PCRCwithTwoIntercoolingWithTwoReheating cicloPCRC_withTwoIntercooling_withTwoRH, Double m_W_dot_net,
            Double m_T_t_in, Double m_P_trh1_in, Double m_T_trh1_in, Double m_P_trh2_in, Double m_T_trh2_in, Double m_T_mc2_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
            Double m_P_mc3_in, Double m_T_mc3_in, Double m_P_mc3_out, Double UA_LT, Double UA_HT, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_mc3, Double m_eta_t,
@@ -13378,6 +13398,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoIntercooling_withTwoRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_with_Reheating(core luis, ref core.PCRCwithReheating cicloPCRC_withRH, Double m_W_dot_net,
             Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh_in, Double m_P_trh_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
             Double UA_LT, Double UA_HT, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_t, Double m_eta_trh, Int64 m_N_sub_hxrs,
@@ -13947,6 +13968,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_with_Reheating_for_Optimization(core luis, ref core.PCRCwithReheating cicloPCRC_withRH, Double m_W_dot_net,
             Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh_in, Double m_P_trh_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
             Double LT_fraction, Double UA_Total, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_t, Double m_eta_trh, Int64 m_N_sub_hxrs,
@@ -14518,7 +14540,8 @@ namespace RefPropWindowsForms
             cicloPCRC_withRH.m_dot_turbine = m_dot_t;
             cicloPCRC_withRH.conv_tol = m_tol;
         }
-                                   
+
+        //OK reviewed
         public void RecompCycle_PCRC_withTwoReheating(core luis, ref core.PCRCwithTwoReheating cicloPCRC_withTwoRH, Double m_W_dot_net,
             Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh1_in, Double m_P_trh1_in, Double m_T_trh2_in, Double m_P_trh2_in, Double P_mc2_in,
             Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out, Double UA_LT, Double UA_HT, Double m_eta_mc2, 
@@ -15114,6 +15137,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_withTwoReheating_for_Optimization(core luis, ref core.PCRCwithTwoReheating cicloPCRC_withTwoRH, Double m_W_dot_net,
            Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh1_in, Double m_P_trh1_in, Double m_T_trh2_in, Double m_P_trh2_in, Double P_mc2_in,
            Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out, Double LT_fraction, Double UA_Total, Double m_eta_mc2,
@@ -15712,6 +15736,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_withThreeReheating(core luis, ref core.PCRCwithThreeReheating cicloPCRC_withThreeRH, Double m_W_dot_net,
             Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh1_in, Double m_P_trh1_in, Double m_T_trh2_in, Double m_P_trh2_in, Double m_T_trh3_in, Double m_P_trh3_in, Double P_mc2_in,
             Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out, Double UA_LT, Double UA_HT, Double m_eta_mc2,
@@ -16330,6 +16355,7 @@ namespace RefPropWindowsForms
             cicloPCRC_withThreeRH.conv_tol = m_tol;
         }
 
+        //OK reviewed
         public void RecompCycle_PCRC_withThreeReheating_for_Optimization(core luis, ref core.PCRCwithThreeReheating cicloPCRC_withThreeRH, Double m_W_dot_net,
            Double m_T_mc2_in, Double m_T_t_in, Double m_T_trh1_in, Double m_P_trh1_in, Double m_T_trh2_in, Double m_P_trh2_in, Double m_T_trh3_in, Double m_P_trh3_in, Double P_mc2_in,
            Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out, Double LT_fraction, Double UA_Total, Double m_eta_mc2,
@@ -16950,7 +16976,8 @@ namespace RefPropWindowsForms
             cicloPCRC_withThreeRH.m_dot_turbine = m_dot_t;
             cicloPCRC_withThreeRH.conv_tol = m_tol;
         }
-                     
+           
+        
         public void RecompCycle_RCMCI_without_Reheating(core luis, ref core.RCMCIwithoutReheating cicloRCMCI_withoutRH, Double m_W_dot_net,
            Double m_T_mc2_in, Double m_T_t_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
            Double UA_LT, Double UA_HT, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_t, Int64 m_N_sub_hxrs,
@@ -23560,7 +23587,7 @@ namespace RefPropWindowsForms
             cicloRCMCI_withTwoRH.RHX2.DP_design1 = m_pres_last[15 - cpp_offset] - m_pres_last[16 - cpp_offset];
             cicloRCMCI_withTwoRH.RHX2.DP_design2 = 0.0;
 
-            cicloRCMCI_withTwoRH.PC.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloRCMCI_withTwoRH.PC.Q_dot = (m_dot_mc * (m_enth_last[9 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloRCMCI_withTwoRH.PC.DP_design1 = 0.0;
             cicloRCMCI_withTwoRH.PC.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[13 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
@@ -24174,7 +24201,7 @@ namespace RefPropWindowsForms
             cicloRCMCI_withTwoRH.RHX2.DP_design1 = m_pres_last[15 - cpp_offset] - m_pres_last[16 - cpp_offset];
             cicloRCMCI_withTwoRH.RHX2.DP_design2 = 0.0;
 
-            cicloRCMCI_withTwoRH.PC.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloRCMCI_withTwoRH.PC.Q_dot = (m_dot_mc * (m_enth_last[9 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloRCMCI_withTwoRH.PC.DP_design1 = 0.0;
             cicloRCMCI_withTwoRH.PC.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[13 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
@@ -25467,7 +25494,7 @@ namespace RefPropWindowsForms
             cicloRCMCI_withThreeRH.RHX3.DP_design1 = m_pres_last[17 - cpp_offset] - m_pres_last[18 - cpp_offset];
             cicloRCMCI_withThreeRH.RHX3.DP_design2 = 0.0;
 
-            cicloRCMCI_withThreeRH.PC.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloRCMCI_withThreeRH.PC.Q_dot = (m_dot_mc * (m_enth_last[9 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloRCMCI_withThreeRH.PC.DP_design1 = 0.0;
             cicloRCMCI_withThreeRH.PC.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[13 - cpp_offset];
             //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
@@ -26671,7 +26698,7 @@ namespace RefPropWindowsForms
             cicloPCRCMCI_withoutRH.PHX.DP_design1 = m_pres_last[5 - cpp_offset] - m_pres_last[6 - cpp_offset];
             cicloPCRCMCI_withoutRH.PHX.DP_design2 = 0.0;
 
-            cicloPCRCMCI_withoutRH.PC1.Q_dot = (m_dot_mc * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
+            cicloPCRCMCI_withoutRH.PC1.Q_dot = (m_dot_t* (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
             cicloPCRCMCI_withoutRH.PC1.DP_design1 = 0.0;
             cicloPCRCMCI_withoutRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
 
@@ -28469,11 +28496,11 @@ namespace RefPropWindowsForms
             cicloPCRCMCI_withRH.PC1.DP_design1 = 0.0;
             cicloPCRCMCI_withRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
 
-            cicloPCRCMCI_withRH.PC2.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[1 - cpp_offset]));
+            cicloPCRCMCI_withRH.PC2.Q_dot = (m_dot_mc * (m_enth_last[12 - cpp_offset] - m_enth_last[1 - cpp_offset]));
             cicloPCRCMCI_withRH.PC2.DP_design1 = 0.0;
             cicloPCRCMCI_withRH.PC2.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[1 - cpp_offset];
 
-            cicloPCRCMCI_withRH.PC3.Q_dot = (m_dot_t * (m_enth_last[2 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloPCRCMCI_withRH.PC3.Q_dot = (m_dot_mc * (m_enth_last[2 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloPCRCMCI_withRH.PC3.DP_design1 = 0.0;
             cicloPCRCMCI_withRH.PC3.DP_design2 = m_pres_last[2 - cpp_offset] - m_pres_last[13 - cpp_offset];
             
@@ -29083,11 +29110,11 @@ namespace RefPropWindowsForms
             cicloPCRCMCI_withTwoRH.PC1.DP_design1 = 0.0;
             cicloPCRCMCI_withTwoRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
 
-            cicloPCRCMCI_withTwoRH.PC2.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[1 - cpp_offset]));
+            cicloPCRCMCI_withTwoRH.PC2.Q_dot = (m_dot_mc * (m_enth_last[12 - cpp_offset] - m_enth_last[1 - cpp_offset]));
             cicloPCRCMCI_withTwoRH.PC2.DP_design1 = 0.0;
             cicloPCRCMCI_withTwoRH.PC2.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[1 - cpp_offset];
 
-            cicloPCRCMCI_withTwoRH.PC3.Q_dot = (m_dot_t * (m_enth_last[2 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloPCRCMCI_withTwoRH.PC3.Q_dot = (m_dot_mc * (m_enth_last[2 - cpp_offset] - m_enth_last[13 - cpp_offset]));
             cicloPCRCMCI_withTwoRH.PC3.DP_design1 = 0.0;
             cicloPCRCMCI_withTwoRH.PC3.DP_design2 = m_pres_last[2 - cpp_offset] - m_pres_last[13 - cpp_offset];
 
@@ -32548,8 +32575,6 @@ namespace RefPropWindowsForms
             gradi1 = angolo1 * 180 / Math.PI;
             return gradi1;
         }
-
-
 
     }    
 }
