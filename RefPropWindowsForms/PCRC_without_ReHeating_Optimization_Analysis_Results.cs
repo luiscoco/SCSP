@@ -1131,7 +1131,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC = new PTC_SF_Calculation();
                         PTC.calledForSensingAnalysis = true;
                         PTC.comboBox1.Text = "Solar Salt";
-                        PTC.comboBox2.Text = "NewMixture";
+                        PTC.comboBox2.Text = "PureFluid";
                         PTC.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC.comboBox14.Text = puntero_aplicacion.comboBox6.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1162,7 +1162,7 @@ namespace RefPropWindowsForms
                         LF_SF_Calculation LF = new LF_SF_Calculation();
                         LF.calledForSensingAnalysis = true;
                         LF.comboBox1.Text = "Solar Salt";
-                        LF.comboBox2.Text = "NewMixture";
+                        LF.comboBox2.Text = "PureFluid";
                         LF.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF.comboBox14.Text = puntero_aplicacion.comboBox6.Text;
                         //LF.textBox31.Text = this.textBox31.Text;
@@ -1583,7 +1583,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC = new PTC_SF_Calculation();
                         PTC.calledForSensingAnalysis = true;
                         PTC.comboBox1.Text = "Solar Salt";
-                        PTC.comboBox2.Text = "NewMixture";
+                        PTC.comboBox2.Text = "PureFluid";
                         PTC.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC.comboBox14.Text = puntero_aplicacion.comboBox6.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1614,7 +1614,7 @@ namespace RefPropWindowsForms
                         LF_SF_Calculation LF = new LF_SF_Calculation();
                         LF.calledForSensingAnalysis = true;
                         LF.comboBox1.Text = "Solar Salt";
-                        LF.comboBox2.Text = "NewMixture";
+                        LF.comboBox2.Text = "PureFluid";
                         LF.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF.comboBox14.Text = puntero_aplicacion.comboBox6.Text;
                         //LF.textBox31.Text = this.textBox31.Text;

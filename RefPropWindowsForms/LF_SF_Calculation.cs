@@ -28,6 +28,8 @@ namespace RefPropWindowsForms
         public LF_SF_Calculation()
         {
             InitializeComponent();
+
+            SF_PHX.SF_Type_variable = "Main_SF";
         }
 
         public void button1_Click(object sender, EventArgs e)
@@ -81,7 +83,6 @@ namespace RefPropWindowsForms
             SF_PHX.textBox36.Text = textBox4.Text;
             SF_PHX.textBox35.Text = textBox5.Text;
             SF_PHX.LF_Solar_Field_uno(luis);
-            SF_PHX.SF_Type_variable = "Main_SF";
             SF_PHX.textBox37.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) + Convert.ToDouble(textBox107.Text));
             SF_PHX.Load_ComboBox7();
             SF_PHX.button3_Click(this, e);

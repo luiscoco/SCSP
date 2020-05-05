@@ -1145,7 +1145,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC = new PTC_SF_Calculation();
                         PTC.calledForSensingAnalysis = true;
                         PTC.comboBox1.Text = "Solar Salt";
-                        PTC.comboBox2.Text = "NewMixture";
+                        PTC.comboBox2.Text = "PureFluid";
                         PTC.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC.comboBox14.Text = puntero_aplicacion.comboBox16.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1176,7 +1176,7 @@ namespace RefPropWindowsForms
                         LF_SF_Calculation LF = new LF_SF_Calculation();
                         LF.calledForSensingAnalysis = true;
                         LF.comboBox1.Text = "Solar Salt";
-                        LF.comboBox2.Text = "NewMixture";
+                        LF.comboBox2.Text = "PureFluid";
                         LF.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF.comboBox14.Text = puntero_aplicacion.comboBox16.Text;
                         //LF.textBox31.Text = this.textBox31.Text;
@@ -1196,7 +1196,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC_RHX = new PTC_SF_Calculation();
                         PTC_RHX.calledForSensingAnalysis = true;
                         PTC_RHX.comboBox1.Text = "Solar Salt";
-                        PTC_RHX.comboBox2.Text = "NewMixture";
+                        PTC_RHX.comboBox2.Text = "PureFluid";
                         PTC_RHX.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC_RHX.comboBox14.Text = puntero_aplicacion.comboBox16.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1227,7 +1227,7 @@ namespace RefPropWindowsForms
                         LF_SF_Calculation LF_RHX = new LF_SF_Calculation();
                         LF_RHX.calledForSensingAnalysis = true;
                         LF_RHX.comboBox1.Text = "Solar Salt";
-                        LF_RHX.comboBox2.Text = "NewMixture";
+                        LF_RHX.comboBox2.Text = "PureFluid";
                         LF_RHX.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF_RHX.comboBox14.Text = puntero_aplicacion.comboBox16.Text;
                         //LF.textBox31.Text = this.textBox31.Text;
@@ -1681,7 +1681,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC = new PTC_SF_Calculation();
                         PTC.calledForSensingAnalysis = true;
                         PTC.comboBox1.Text = "Solar Salt";
-                        PTC.comboBox2.Text = "NewMixture";
+                        PTC.comboBox2.Text = "PureFluid";
                         PTC.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC.comboBox14.Text = puntero_aplicacion.comboBox16.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1712,7 +1712,7 @@ namespace RefPropWindowsForms
                         LF_SF_Calculation LF = new LF_SF_Calculation();
                         LF.calledForSensingAnalysis = true;
                         LF.comboBox1.Text = "Solar Salt";
-                        LF.comboBox2.Text = "NewMixture";
+                        LF.comboBox2.Text = "PureFluid";
                         LF.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF.comboBox14.Text = puntero_aplicacion.comboBox16.Text;
                         //LF.textBox31.Text = this.textBox31.Text;
@@ -1732,7 +1732,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC_RHX = new PTC_SF_Calculation();
                         PTC_RHX.calledForSensingAnalysis = true;
                         PTC_RHX.comboBox1.Text = "Solar Salt";
-                        PTC_RHX.comboBox2.Text = "NewMixture";
+                        PTC_RHX.comboBox2.Text = "PureFluid";
                         PTC_RHX.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC_RHX.comboBox14.Text = puntero_aplicacion.comboBox16.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1763,7 +1763,7 @@ namespace RefPropWindowsForms
                         LF_SF_Calculation LF_RHX = new LF_SF_Calculation();
                         LF_RHX.calledForSensingAnalysis = true;
                         LF_RHX.comboBox1.Text = "Solar Salt";
-                        LF_RHX.comboBox2.Text = "NewMixture";
+                        LF_RHX.comboBox2.Text = "PureFluid";
                         LF_RHX.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF_RHX.comboBox14.Text = puntero_aplicacion.comboBox16.Text;
                         //LF.textBox31.Text = this.textBox31.Text;

@@ -29,6 +29,8 @@ namespace RefPropWindowsForms
         public PTC_SF_Calculation()
         {
             InitializeComponent();
+
+            SF_PHX.SF_Type_variable = "Main_SF";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,34 +55,34 @@ namespace RefPropWindowsForms
                 luis.core1(this.comboBox13.Text + "=" + textBox31.Text + "," + this.comboBox14.Text + "=" + textBox36.Text, category);
             }           
 
-                if (comboBox1.Text == "Solar Salt")
-                {
-                    SF_PHX.comboBox1.Text = "Solar Salt";
-                }
-                else if (comboBox1.Text == "Hitec XL")
-                {
-                    SF_PHX.comboBox1.Text = "Hitec XL";
-                }
-                else if (comboBox1.Text == "Therminol VP1")
-                {
-                    SF_PHX.comboBox1.Text = "Therminol VP1";
-                }
-                else if (comboBox1.Text == "Syltherm_800")
-                {
-                    SF_PHX.comboBox1.Text = "Syltherm_800";
-                }
-                else if (comboBox1.Text == "Dowtherm_A")
-                {
-                    SF_PHX.comboBox1.Text = "Dowtherm_A";
-                }
-                else if (comboBox1.Text == "Therminol_75")
-                {
-                    SF_PHX.comboBox1.Text = "Therminol_75";
-                }
-                else if (comboBox1.Text == "Liquid Sodium")
-                {
-                    SF_PHX.comboBox1.Text = "Liquid Sodium";
-                }
+            if (comboBox1.Text == "Solar Salt")
+            {
+                SF_PHX.comboBox1.Text = "Solar Salt";
+            }
+            else if (comboBox1.Text == "Hitec XL")
+            {
+                SF_PHX.comboBox1.Text = "Hitec XL";
+            }
+            else if (comboBox1.Text == "Therminol VP1")
+            {
+                SF_PHX.comboBox1.Text = "Therminol VP1";
+            }
+            else if (comboBox1.Text == "Syltherm_800")
+            {
+                SF_PHX.comboBox1.Text = "Syltherm_800";
+            }
+            else if (comboBox1.Text == "Dowtherm_A")
+            {
+                SF_PHX.comboBox1.Text = "Dowtherm_A";
+            }
+            else if (comboBox1.Text == "Therminol_75")
+            {
+                SF_PHX.comboBox1.Text = "Therminol_75";
+            }
+            else if (comboBox1.Text == "Liquid Sodium")
+            {
+                SF_PHX.comboBox1.Text = "Liquid Sodium";
+            }
 
                 SF_PHX.textBox27.Text = textBox7.Text;
                 SF_PHX.textBox28.Text = textBox8.Text;
@@ -90,10 +92,8 @@ namespace RefPropWindowsForms
                 SF_PHX.textBox38.Text = textBox3.Text;
                 SF_PHX.textBox36.Text = textBox4.Text;
                 SF_PHX.textBox35.Text = textBox5.Text;
-                SF_PHX.PTC_Solar_Field_uno(luis);
-                SF_PHX.SF_Type_variable = "Main_SF";
+                SF_PHX.PTC_Solar_Field_uno(luis);                
                 SF_PHX.textBox37.Text = Convert.ToString(Convert.ToDouble(textBox6.Text) + Convert.ToDouble(textBox107.Text));
-                
                 SF_PHX.button3_Click(this, e);
                 ReflectorApertureAreaResult = SF_PHX.ReflectorApertureArea;
                 Total_Pressure_DropResult = SF_PHX.Total_Pressure_Drop;

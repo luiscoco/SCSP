@@ -1213,7 +1213,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC = new PTC_SF_Calculation();
                         PTC.calledForSensingAnalysis = true;
                         PTC.comboBox1.Text = "Solar Salt";
-                        PTC.comboBox2.Text = "NewMixture";
+                        PTC.comboBox2.Text = "PureFluid";
                         PTC.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1244,7 +1244,7 @@ namespace RefPropWindowsForms
                         LF_SF_Calculation LF = new LF_SF_Calculation();
                         LF.calledForSensingAnalysis = true;
                         LF.comboBox1.Text = "Solar Salt";
-                        LF.comboBox2.Text = "NewMixture";
+                        LF.comboBox2.Text = "PureFluid";
                         LF.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                         //LF.textBox31.Text = this.textBox31.Text;
@@ -1264,7 +1264,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC_RHX = new PTC_SF_Calculation();
                         PTC_RHX.calledForSensingAnalysis = true;
                         PTC_RHX.comboBox1.Text = "Solar Salt";
-                        PTC_RHX.comboBox2.Text = "NewMixture";
+                        PTC_RHX.comboBox2.Text = "PureFluid";
                         PTC_RHX.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC_RHX.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1289,13 +1289,13 @@ namespace RefPropWindowsForms
                         PTC_RHX.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                         PTC_RHX.textBox107.Text = Convert.ToString(10);
                         PTC_RHX.button1_Click(this, e);
-                        puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC_RHX.ReflectorApertureAreaResult;
-                        puntero_aplicacion.PTC_Main_SF_Pressure_drop = PTC_RHX.Total_Pressure_DropResult;
+                        puntero_aplicacion.PTC_ReHeating_SF_Effective_Apperture_Area = PTC_RHX.ReflectorApertureAreaResult;
+                        puntero_aplicacion.PTC_ReHeating_SF_Pressure_drop = PTC_RHX.Total_Pressure_DropResult;
 
                         LF_SF_Calculation LF_RHX = new LF_SF_Calculation();
                         LF_RHX.calledForSensingAnalysis = true;
                         LF_RHX.comboBox1.Text = "Solar Salt";
-                        LF_RHX.comboBox2.Text = "NewMixture";
+                        LF_RHX.comboBox2.Text = "PureFluid";
                         LF_RHX.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF_RHX.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                         //LF.textBox31.Text = this.textBox31.Text;
@@ -1308,8 +1308,8 @@ namespace RefPropWindowsForms
                         LF_RHX.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                         LF_RHX.textBox107.Text = Convert.ToString(10);
                         LF_RHX.button1_Click(this, e);
-                        puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF_RHX.ReflectorApertureAreaResult;
-                        puntero_aplicacion.LF_Main_SF_Pressure_drop = LF_RHX.Total_Pressure_DropResult;
+                        puntero_aplicacion.LF_ReHeating_SF_Effective_Apperture_Area = LF_RHX.ReflectorApertureAreaResult;
+                        puntero_aplicacion.LF_ReHeating_SF_Pressure_drop = LF_RHX.Total_Pressure_DropResult;
 
                         //Copy results to EXCEL
                         double LTR_min_DT_1 = t8_list[maxIndex] - t3_list[maxIndex];
@@ -1739,7 +1739,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC = new PTC_SF_Calculation();
                         PTC.calledForSensingAnalysis = true;
                         PTC.comboBox1.Text = "Solar Salt";
-                        PTC.comboBox2.Text = "NewMixture";
+                        PTC.comboBox2.Text = "PureFluid";
                         PTC.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1770,7 +1770,7 @@ namespace RefPropWindowsForms
                         LF_SF_Calculation LF = new LF_SF_Calculation();
                         LF.calledForSensingAnalysis = true;
                         LF.comboBox1.Text = "Solar Salt";
-                        LF.comboBox2.Text = "NewMixture";
+                        LF.comboBox2.Text = "PureFluid";
                         LF.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                         //LF.textBox31.Text = this.textBox31.Text;
@@ -1790,7 +1790,7 @@ namespace RefPropWindowsForms
                         PTC_SF_Calculation PTC_RHX = new PTC_SF_Calculation();
                         PTC_RHX.calledForSensingAnalysis = true;
                         PTC_RHX.comboBox1.Text = "Solar Salt";
-                        PTC_RHX.comboBox2.Text = "NewMixture";
+                        PTC_RHX.comboBox2.Text = "PureFluid";
                         PTC_RHX.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         PTC_RHX.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                         //PTC.textBox31.Text = this.textBox31.Text;
@@ -1815,13 +1815,13 @@ namespace RefPropWindowsForms
                         PTC_RHX.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                         PTC_RHX.textBox107.Text = Convert.ToString(10);
                         PTC_RHX.button1_Click(this, e);
-                        puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC_RHX.ReflectorApertureAreaResult;
-                        puntero_aplicacion.PTC_Main_SF_Pressure_drop = PTC_RHX.Total_Pressure_DropResult;
+                        puntero_aplicacion.PTC_ReHeating_SF_Effective_Apperture_Area = PTC_RHX.ReflectorApertureAreaResult;
+                        puntero_aplicacion.PTC_ReHeating_SF_Pressure_drop = PTC_RHX.Total_Pressure_DropResult;
 
                         LF_SF_Calculation LF_RHX = new LF_SF_Calculation();
                         LF_RHX.calledForSensingAnalysis = true;
                         LF_RHX.comboBox1.Text = "Solar Salt";
-                        LF_RHX.comboBox2.Text = "NewMixture";
+                        LF_RHX.comboBox2.Text = "PureFluid";
                         LF_RHX.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
                         LF_RHX.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                         //LF.textBox31.Text = this.textBox31.Text;
@@ -1834,8 +1834,8 @@ namespace RefPropWindowsForms
                         LF_RHX.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
                         LF_RHX.textBox107.Text = Convert.ToString(10);
                         LF_RHX.button1_Click(this, e);
-                        puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF_RHX.ReflectorApertureAreaResult;
-                        puntero_aplicacion.LF_Main_SF_Pressure_drop = LF_RHX.Total_Pressure_DropResult;
+                        puntero_aplicacion.LF_ReHeating_SF_Effective_Apperture_Area = LF_RHX.ReflectorApertureAreaResult;
+                        puntero_aplicacion.LF_ReHeating_SF_Pressure_drop = LF_RHX.Total_Pressure_DropResult;
 
                         //Copy results to EXCEL
                         double LTR_min_DT_1 = t8_list[maxIndex] - t3_list[maxIndex];
