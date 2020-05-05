@@ -2934,6 +2934,7 @@ namespace RefPropWindowsForms
 
                         core.RecompCycleTwoReheating cicloRC_withTwoRH_cuarta_llamada = new core.RecompCycleTwoReheating();
 
+                        List<Double> massflow2_list_cuarta_llamada = new List<Double>();
                         List<Double> recomp_frac2_list_cuarta_llamada = new List<Double>();
                         List<Double> p_mc_in2_list_cuarta_llamada = new List<Double>();
                         List<Double> eta_thermal2_list_cuarta_llamada = new List<Double>();
@@ -2974,9 +2975,7 @@ namespace RefPropWindowsForms
                         List<Double> RHX2_Q2_list = new List<Double>();
 
                         List<Double> HT_Eff_list = new List<Double>();
-                        List<Double> LT_Eff_list = new List<Double>();
-
-                        List<Double> massflow2_list = new List<Double>();
+                        List<Double> LT_Eff_list = new List<Double>();                        
 
                         xlWorkBook1 = xlApp1.Workbooks.Open(textBox3.Text + "RC_with_ReHeating_newproposedconfiguration" + ".xls");
                         xlWorkSheet1 = xlWorkBook1.Worksheets[1];
@@ -3072,7 +3071,7 @@ namespace RefPropWindowsForms
 
                                 puntero_aplicacion.PC_Q2 = cicloRC_withTwoRH_cuarta_llamada.PC.Q_dot;
 
-                                massflow2_list.Add(puntero_aplicacion.massflow2);
+                                massflow2_list_cuarta_llamada.Add(puntero_aplicacion.massflow2);
                                 eta_thermal2_list_cuarta_llamada.Add(puntero_aplicacion.eta_thermal2);
                                 recomp_frac2_list_cuarta_llamada.Add(puntero_aplicacion.recomp_frac2);
                                 p_mc_in2_list_cuarta_llamada.Add(puntero_aplicacion.p_mc_in2);
@@ -3227,7 +3226,7 @@ namespace RefPropWindowsForms
                                 //PTC.textBox31.Text = this.textBox31.Text;
                                 //PTC.textBox36.Text = this.textBox36.Text;
                                 PTC_RHX1.textBox1.Text = Convert.ToString(RHX1_Q2_list[maxIndex]);
-                                PTC_RHX1.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
+                                PTC_RHX1.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
                                 PTC_RHX1.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
                                 PTC_RHX1.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
                                 PTC_RHX1.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
@@ -3246,7 +3245,7 @@ namespace RefPropWindowsForms
                                 //LF.textBox31.Text = this.textBox31.Text;
                                 //LF.textBox36.Text = this.textBox36.Text;
                                 LF_RHX1.textBox1.Text = Convert.ToString(RHX1_Q2_list[maxIndex]);
-                                LF_RHX1.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
+                                LF_RHX1.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
                                 LF_RHX1.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
                                 LF_RHX1.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
                                 LF_RHX1.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
@@ -3266,7 +3265,7 @@ namespace RefPropWindowsForms
                                 //PTC.textBox31.Text = this.textBox31.Text;
                                 //PTC.textBox36.Text = this.textBox36.Text;
                                 PTC_RHX2.textBox1.Text = Convert.ToString(RHX2_Q2_list[maxIndex]);
-                                PTC_RHX2.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
+                                PTC_RHX2.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
                                 PTC_RHX2.textBox3.Text = Convert.ToString(t13_list[maxIndex]);
                                 PTC_RHX2.textBox6.Text = Convert.ToString(t14_list[maxIndex]);
                                 PTC_RHX2.textBox4.Text = Convert.ToString(p13_list[maxIndex]);
@@ -3285,7 +3284,7 @@ namespace RefPropWindowsForms
                                 //LF.textBox31.Text = this.textBox31.Text;
                                 //LF.textBox36.Text = this.textBox36.Text;
                                 LF_RHX2.textBox1.Text = Convert.ToString(RHX2_Q2_list[maxIndex]);
-                                LF_RHX2.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
+                                LF_RHX2.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
                                 LF_RHX2.textBox3.Text = Convert.ToString(t13_list[maxIndex]);
                                 LF_RHX2.textBox6.Text = Convert.ToString(t14_list[maxIndex]);
                                 LF_RHX2.textBox4.Text = Convert.ToString(p13_list[maxIndex]);
@@ -3458,8 +3457,7 @@ namespace RefPropWindowsForms
                         double UA_Total = puntero_aplicacion.ua_lt2 + puntero_aplicacion.ua_ht2;
 
                         double LT_fraction = 0.1;
-
-                        List<Double> massflow2_list = new List<Double>();
+                        
                         List<Double> recomp_frac2_list = new List<Double>();
                         List<Double> p_mc_in2_list = new List<Double>();
                         List<Double> eta_thermal2_list = new List<Double>();
@@ -4216,6 +4214,7 @@ namespace RefPropWindowsForms
 
                         core.RecompCycleTwoReheating cicloRC_withTwoRH_cuarta_llamada = new core.RecompCycleTwoReheating();
 
+                        List<Double> massflow2_list_cuarta = new List<Double>();
                         List<Double> recomp_frac2_list_cuarta = new List<Double>();
                         List<Double> p_mc_in2_list_cuarta = new List<Double>();
                         List<Double> eta_thermal2_list_cuarta = new List<Double>();
@@ -4358,7 +4357,7 @@ namespace RefPropWindowsForms
 
                                 puntero_aplicacion.PC_Q2 = cicloRC_withTwoRH_cuarta_llamada.PC.Q_dot;
 
-                                massflow2_list.Add(puntero_aplicacion.massflow2);
+                                massflow2_list_cuarta.Add(puntero_aplicacion.massflow2);
                                 eta_thermal2_list_cuarta.Add(puntero_aplicacion.eta_thermal2);
                                 recomp_frac2_list_cuarta.Add(puntero_aplicacion.recomp_frac2);
                                 p_mc_in2_list_cuarta.Add(puntero_aplicacion.p_mc_in2);
@@ -4509,7 +4508,7 @@ namespace RefPropWindowsForms
                                 //PTC.textBox31.Text = this.textBox31.Text;
                                 //PTC.textBox36.Text = this.textBox36.Text;
                                 PTC_RHX1.textBox1.Text = Convert.ToString(RHX1_Q2_list[maxIndex]);
-                                PTC_RHX1.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
+                                PTC_RHX1.textBox2.Text = Convert.ToString(massflow2_list_cuarta[maxIndex]);
                                 PTC_RHX1.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
                                 PTC_RHX1.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
                                 PTC_RHX1.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
@@ -4528,7 +4527,7 @@ namespace RefPropWindowsForms
                                 //LF.textBox31.Text = this.textBox31.Text;
                                 //LF.textBox36.Text = this.textBox36.Text;
                                 LF_RHX1.textBox1.Text = Convert.ToString(RHX1_Q2_list[maxIndex]);
-                                LF_RHX1.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
+                                LF_RHX1.textBox2.Text = Convert.ToString(massflow2_list_cuarta[maxIndex]);
                                 LF_RHX1.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
                                 LF_RHX1.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
                                 LF_RHX1.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
@@ -4548,7 +4547,7 @@ namespace RefPropWindowsForms
                                 //PTC.textBox31.Text = this.textBox31.Text;
                                 //PTC.textBox36.Text = this.textBox36.Text;
                                 PTC_RHX2.textBox1.Text = Convert.ToString(RHX2_Q2_list[maxIndex]);
-                                PTC_RHX2.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
+                                PTC_RHX2.textBox2.Text = Convert.ToString(massflow2_list_cuarta[maxIndex]);
                                 PTC_RHX2.textBox3.Text = Convert.ToString(t13_list[maxIndex]);
                                 PTC_RHX2.textBox6.Text = Convert.ToString(t14_list[maxIndex]);
                                 PTC_RHX2.textBox4.Text = Convert.ToString(p13_list[maxIndex]);
@@ -4567,7 +4566,7 @@ namespace RefPropWindowsForms
                                 //LF.textBox31.Text = this.textBox31.Text;
                                 //LF.textBox36.Text = this.textBox36.Text;
                                 LF_RHX2.textBox1.Text = Convert.ToString(RHX2_Q2_list[maxIndex]);
-                                LF_RHX2.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
+                                LF_RHX2.textBox2.Text = Convert.ToString(massflow2_list_cuarta[maxIndex]);
                                 LF_RHX2.textBox3.Text = Convert.ToString(t13_list[maxIndex]);
                                 LF_RHX2.textBox6.Text = Convert.ToString(t14_list[maxIndex]);
                                 LF_RHX2.textBox4.Text = Convert.ToString(p13_list[maxIndex]);

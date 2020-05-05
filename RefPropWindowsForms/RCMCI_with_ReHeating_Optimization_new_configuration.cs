@@ -2397,14 +2397,12 @@ namespace RefPropWindowsForms
 
                         double LT_fraction = 0.1;
 
-                        List<Double> massflow2_list = new List<Double>();
                         List<Double> recomp_frac2_list = new List<Double>();
                         List<Double> p_mc1_in2_list = new List<Double>();
                         List<Double> p_mc1_out2_list = new List<Double>();
                         List<Double> p_rhx1_in2_list = new List<Double>();
                         List<Double> p_rhx2_in2_list = new List<Double>();
                         List<Double> eta_thermal2_list = new List<Double>();
-                        List<Double> PHX_Q2_list = new List<Double>();
                         List<Double> ua_lt_list = new List<Double>();
                         List<Double> ua_ht_list = new List<Double>();
 
@@ -2501,10 +2499,14 @@ namespace RefPropWindowsForms
 
                             if (checkBox7.Checked == false)
                             {
-                                xlWorkSheet1.Cells[4, 13] = "PTC_Apperture_Area(m2)";
-                                xlWorkSheet1.Cells[4, 14] = "PTC_Pressure_Drop(bar)";
-                                xlWorkSheet1.Cells[4, 15] = "LF_Apperture_Area(m2)";
-                                xlWorkSheet1.Cells[4, 16] = "LF_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 13] = "Main PTC_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 14] = "Main PTC_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 15] = "Main LF_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 16] = "Main LF_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 17] = "ReHeating PTC_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 18] = "ReHeating PTC_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 19] = "ReHeating LF_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 20] = "ReHeating LF_Pressure_Drop(bar)";
                             }
                         }
 
@@ -3223,6 +3225,9 @@ namespace RefPropWindowsForms
                         List<Double> eta_thermal2_list_cuarta_llamada = new List<Double>();
                         List<Double> p_rhx1_in2_list_cuarta_llamada = new List<Double>();
                         List<Double> p_rhx2_in2_list_cuarta_llamada = new List<Double>();
+                        List<Double> massflow2_list_cuarta_llamada = new List<Double>();
+                        List<Double> RHX1_Q2_list = new List<Double>();
+                        List<Double> RHX2_Q2_list = new List<Double>();
 
                         xlWorkBook1 = xlApp1.Workbooks.Open(textBox3.Text + "RCMCI_with_ReHeating_newproposedconfiguration" + ".xls");
                         xlWorkSheet1 = xlWorkBook1.Worksheets[1];
@@ -3328,7 +3333,7 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.PC11 = -cicloRCMCIwithTwoReheating_Cuarta_llamada.PC.Q_dot;
                                 puntero_aplicacion.PC21 = -cicloRCMCIwithTwoReheating_Cuarta_llamada.COOLER.Q_dot;
 
-                                massflow2_list.Add(puntero_aplicacion.massflow2);
+                                massflow2_list_cuarta_llamada.Add(puntero_aplicacion.massflow2);
                                 eta_thermal2_list_cuarta_llamada.Add(puntero_aplicacion.eta_thermal2);
                                 recomp_frac2_list_cuarta_llamada.Add(puntero_aplicacion.recomp_frac2);
                                 p_mc1_in2_list_cuarta_llamada.Add(puntero_aplicacion.p_mc1_in2);
@@ -3373,7 +3378,8 @@ namespace RefPropWindowsForms
                                 p15_list.Add(puntero_aplicacion.pres215);
                                 p16_list.Add(puntero_aplicacion.pres216);
 
-                                PHX_Q2_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.PHX.Q_dot);
+                                RHX1_Q2_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.RHX1.Q_dot);
+                                RHX2_Q2_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.RHX2.Q_dot);
 
                                 HT_Eff_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.HT.eff);
                                 LT_Eff_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.LT.eff);
@@ -3471,59 +3477,86 @@ namespace RefPropWindowsForms
                             listBox13.Items.Add(puntero_aplicacion.ua_ht2.ToString());
                             listBox14.Items.Add(puntero_aplicacion.ua_lt2.ToString());
 
+                            //Solar Fields calculation
                             if (checkBox7.Checked == false)
                             {
-
-                                //Calculo del campo solar
-                                PTC_SF_Calculation PTC = new PTC_SF_Calculation();
-                                PTC.calledForSensingAnalysis = true;
-                                PTC.comboBox1.Text = "Solar Salt";
-                                PTC.comboBox2.Text = "NewMixture";
-                                PTC.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
-                                PTC.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
+                                //REHEATING_1 SOLAR FIELD CALCULATION
+                                PTC_SF_Calculation PTC_RHX1 = new PTC_SF_Calculation();
+                                PTC_RHX1.calledForSensingAnalysis = true;
+                                PTC_RHX1.comboBox1.Text = "Solar Salt";
+                                PTC_RHX1.comboBox2.Text = "PureFluid";
+                                PTC_RHX1.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
+                                PTC_RHX1.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                                 //PTC.textBox31.Text = this.textBox31.Text;
                                 //PTC.textBox36.Text = this.textBox36.Text;
+                                PTC_RHX1.textBox1.Text = Convert.ToString(RHX1_Q2_list[maxIndex]);
+                                PTC_RHX1.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
+                                PTC_RHX1.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                PTC_RHX1.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                PTC_RHX1.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                PTC_RHX1.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
+                                PTC_RHX1.textBox107.Text = Convert.ToString(10);
+                                PTC_RHX1.button1_Click(this, e);
+                                puntero_aplicacion.PTC_ReHeating1_SF_Effective_Apperture_Area = PTC_RHX1.ReflectorApertureAreaResult;
+                                puntero_aplicacion.PTC_ReHeating1_SF_Pressure_drop = PTC_RHX1.Total_Pressure_DropResult;
 
-                                if (comboBox4.Text == "Parabolic")
-                                {
-                                    PTC.textBox7.Text = "0.141";
-                                    PTC.textBox8.Text = "6.48e-9";
-                                }
-                                else if (comboBox4.Text == "Parabolic with cavity receiver (Norwich)")
-                                {
-                                    PTC.textBox7.Text = "0.3";
-                                    PTC.textBox8.Text = "3.25e-9";
-                                }
-
-                                PTC.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
-                                PTC.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                PTC.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                PTC.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                PTC.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                PTC.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
-                                PTC.textBox107.Text = Convert.ToString(10);
-                                PTC.button1_Click(this, e);
-                                puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC.ReflectorApertureAreaResult;
-                                puntero_aplicacion.PTC_Main_SF_Pressure_drop = PTC.Total_Pressure_DropResult;
-
-                                LF_SF_Calculation LF = new LF_SF_Calculation();
-                                LF.calledForSensingAnalysis = true;
-                                LF.comboBox1.Text = "Solar Salt";
-                                LF.comboBox2.Text = "NewMixture";
-                                LF.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
-                                LF.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
+                                LF_SF_Calculation LF_RHX1 = new LF_SF_Calculation();
+                                LF_RHX1.calledForSensingAnalysis = true;
+                                LF_RHX1.comboBox1.Text = "Solar Salt";
+                                LF_RHX1.comboBox2.Text = "PureFluid";
+                                LF_RHX1.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
+                                LF_RHX1.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                                 //LF.textBox31.Text = this.textBox31.Text;
                                 //LF.textBox36.Text = this.textBox36.Text;
-                                LF.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
-                                LF.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                LF.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                LF.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                LF.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                LF.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
-                                LF.textBox107.Text = Convert.ToString(10);
-                                LF.button1_Click(this, e);
-                                puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF.ReflectorApertureAreaResult;
-                                puntero_aplicacion.LF_Main_SF_Pressure_drop = LF.Total_Pressure_DropResult;
+                                LF_RHX1.textBox1.Text = Convert.ToString(RHX1_Q2_list[maxIndex]);
+                                LF_RHX1.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
+                                LF_RHX1.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                LF_RHX1.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                LF_RHX1.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                LF_RHX1.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
+                                LF_RHX1.textBox107.Text = Convert.ToString(10);
+                                LF_RHX1.button1_Click(this, e);
+                                puntero_aplicacion.LF_ReHeating1_SF_Effective_Apperture_Area = LF_RHX1.ReflectorApertureAreaResult;
+                                puntero_aplicacion.LF_ReHeating1_SF_Pressure_drop = LF_RHX1.Total_Pressure_DropResult;
+
+                                //REHEATING_2 SOLAR FIELD CALCULATION
+                                PTC_SF_Calculation PTC_RHX2 = new PTC_SF_Calculation();
+                                PTC_RHX2.calledForSensingAnalysis = true;
+                                PTC_RHX2.comboBox1.Text = "Solar Salt";
+                                PTC_RHX2.comboBox2.Text = "PureFluid";
+                                PTC_RHX2.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
+                                PTC_RHX2.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
+                                //PTC.textBox31.Text = this.textBox31.Text;
+                                //PTC.textBox36.Text = this.textBox36.Text;
+                                PTC_RHX2.textBox1.Text = Convert.ToString(RHX2_Q2_list[maxIndex]);
+                                PTC_RHX2.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
+                                PTC_RHX2.textBox3.Text = Convert.ToString(t15_list[maxIndex]);
+                                PTC_RHX2.textBox6.Text = Convert.ToString(t16_list[maxIndex]);
+                                PTC_RHX2.textBox4.Text = Convert.ToString(p15_list[maxIndex]);
+                                PTC_RHX2.textBox5.Text = Convert.ToString(p16_list[maxIndex]);
+                                PTC_RHX2.textBox107.Text = Convert.ToString(10);
+                                PTC_RHX2.button1_Click(this, e);
+                                puntero_aplicacion.PTC_ReHeating2_SF_Effective_Apperture_Area = PTC_RHX2.ReflectorApertureAreaResult;
+                                puntero_aplicacion.PTC_ReHeating2_SF_Pressure_drop = PTC_RHX2.Total_Pressure_DropResult;
+
+                                LF_SF_Calculation LF_RHX2 = new LF_SF_Calculation();
+                                LF_RHX2.calledForSensingAnalysis = true;
+                                LF_RHX2.comboBox1.Text = "Solar Salt";
+                                LF_RHX2.comboBox2.Text = "PureFluid";
+                                LF_RHX2.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
+                                LF_RHX2.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
+                                //LF.textBox31.Text = this.textBox31.Text;
+                                //LF.textBox36.Text = this.textBox36.Text;
+                                LF_RHX2.textBox1.Text = Convert.ToString(RHX2_Q2_list[maxIndex]);
+                                LF_RHX2.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
+                                LF_RHX2.textBox3.Text = Convert.ToString(t15_list[maxIndex]);
+                                LF_RHX2.textBox6.Text = Convert.ToString(t16_list[maxIndex]);
+                                LF_RHX2.textBox4.Text = Convert.ToString(p15_list[maxIndex]);
+                                LF_RHX2.textBox5.Text = Convert.ToString(p16_list[maxIndex]);
+                                LF_RHX2.textBox107.Text = Convert.ToString(10);
+                                LF_RHX2.button1_Click(this, e);
+                                puntero_aplicacion.LF_ReHeating2_SF_Effective_Apperture_Area = LF_RHX2.ReflectorApertureAreaResult;
+                                puntero_aplicacion.LF_ReHeating2_SF_Pressure_drop = LF_RHX2.Total_Pressure_DropResult;
                             }
 
                             //Copy results to EXCEL
@@ -3563,14 +3596,21 @@ namespace RefPropWindowsForms
                             if (checkBox7.Checked == false)
                             {
                                 //PTC_Apperture_Area(m2)
-                                xlWorkSheet1.Cells[counter_Excel + 1, 13] = puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area.ToString();
+                                xlWorkSheet1.Cells[counter_Excel + 1, 13] = puntero_aplicacion.PTC_ReHeating1_SF_Effective_Apperture_Area.ToString();
                                 //PTC_Pressure_Drop(bar)
-                                xlWorkSheet1.Cells[counter_Excel + 1, 14] = puntero_aplicacion.PTC_Main_SF_Pressure_drop.ToString();
+                                xlWorkSheet1.Cells[counter_Excel + 1, 14] = puntero_aplicacion.PTC_ReHeating1_SF_Pressure_drop.ToString();
                                 //LF_Apperture_Area(m2)
-                                xlWorkSheet1.Cells[counter_Excel + 1, 15] = puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area.ToString();
+                                xlWorkSheet1.Cells[counter_Excel + 1, 15] = puntero_aplicacion.LF_ReHeating1_SF_Effective_Apperture_Area.ToString();
                                 //LF_Pressure_Drop(bar)
-                                xlWorkSheet1.Cells[counter_Excel + 1, 16] = puntero_aplicacion.LF_Main_SF_Pressure_drop.ToString();
-
+                                xlWorkSheet1.Cells[counter_Excel + 1, 16] = puntero_aplicacion.LF_ReHeating1_SF_Pressure_drop.ToString();
+                                //PTC_Apperture_Area(m2)
+                                xlWorkSheet1.Cells[counter_Excel + 1, 17] = puntero_aplicacion.PTC_ReHeating2_SF_Effective_Apperture_Area.ToString();
+                                //PTC_Pressure_Drop(bar)
+                                xlWorkSheet1.Cells[counter_Excel + 1, 18] = puntero_aplicacion.PTC_ReHeating2_SF_Pressure_drop.ToString();
+                                //LF_Apperture_Area(m2)
+                                xlWorkSheet1.Cells[counter_Excel + 1, 19] = puntero_aplicacion.LF_ReHeating2_SF_Effective_Apperture_Area.ToString();
+                                //LF_Pressure_Drop(bar)
+                                xlWorkSheet1.Cells[counter_Excel + 1, 20] = puntero_aplicacion.LF_ReHeating2_SF_Pressure_drop.ToString();
                             }
 
                             counter_Excel++;
@@ -3688,8 +3728,7 @@ namespace RefPropWindowsForms
                         double UA_Total = puntero_aplicacion.ua_lt2 + puntero_aplicacion.ua_ht2;
 
                         double LT_fraction = 0.1;
-
-                        List<Double> massflow2_list = new List<Double>();
+                        
                         List<Double> recomp_frac2_list = new List<Double>();
                         List<Double> p_mc1_in2_list = new List<Double>();
                         List<Double> p_mc1_out2_list = new List<Double>();
@@ -3697,8 +3736,7 @@ namespace RefPropWindowsForms
                         List<Double> p_rhx2_in2_list = new List<Double>();
                         List<Double> eta_thermal2_list = new List<Double>();
                         List<Double> ua_LT_list = new List<Double>();
-                        List<Double> ua_HT_list = new List<Double>();
-                        List<Double> PHX_Q2_list = new List<Double>();
+                        List<Double> ua_HT_list = new List<Double>();                        
 
                         List<Double> t1_list = new List<Double>();
                         List<Double> t2_list = new List<Double>();
@@ -3793,10 +3831,14 @@ namespace RefPropWindowsForms
 
                             if (checkBox7.Checked == false)
                             {
-                                xlWorkSheet1.Cells[4, 13] = "PTC_Apperture_Area(m2)";
-                                xlWorkSheet1.Cells[4, 14] = "PTC_Pressure_Drop(bar)";
-                                xlWorkSheet1.Cells[4, 15] = "LF_Apperture_Area(m2)";
-                                xlWorkSheet1.Cells[4, 16] = "LF_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 13] = "Main PTC_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 14] = "Main PTC_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 15] = "Main LF_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 16] = "Main LF_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 17] = "ReHeating PTC_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 18] = "ReHeating PTC_Pressure_Drop(bar)";
+                                xlWorkSheet1.Cells[4, 19] = "ReHeating LF_Apperture_Area(m2)";
+                                xlWorkSheet1.Cells[4, 20] = "ReHeating LF_Pressure_Drop(bar)";
                             }
                         }
 
@@ -4535,6 +4577,7 @@ namespace RefPropWindowsForms
 
                         core.RCMCIwithTwoReheating cicloRCMCIwithTwoReheating_Cuarta_llamada = new core.RCMCIwithTwoReheating();
 
+                        List<Double> massflow2_list_cuarta_llamada = new List<Double>();
                         List<Double> recomp_frac2_list_cuarta_llamada = new List<Double>();
                         List<Double> p_mc1_in2_list_cuarta_llamada = new List<Double>();
                         List<Double> p_mc1_out2_list_cuarta_llamada = new List<Double>();
@@ -4543,6 +4586,8 @@ namespace RefPropWindowsForms
                         List<Double> p_rhx2_in2_list_cuarta_llamada = new List<Double>();
                         List<Double> ua_LT_list_cuarta_llamada = new List<Double>();
                         List<Double> ua_HT_list_cuarta_llamada = new List<Double>();
+                        List<Double> RHX1_Q2_list = new List<Double>();
+                        List<Double> RHX2_Q2_list = new List<Double>();
 
                         xlWorkBook1 = xlApp1.Workbooks.Open(textBox3.Text + "RCMCI_with_ReHeating_newproposedconfiguration" + ".xls");
                         xlWorkSheet1 = xlWorkBook1.Worksheets[1];
@@ -4648,6 +4693,7 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.PC11 = -cicloRCMCIwithTwoReheating_Cuarta_llamada.PC.Q_dot;
                                 puntero_aplicacion.PC21 = -cicloRCMCIwithTwoReheating_Cuarta_llamada.COOLER.Q_dot;
 
+                                massflow2_list_cuarta_llamada.Add(puntero_aplicacion.massflow2);
                                 eta_thermal2_list_cuarta_llamada.Add(puntero_aplicacion.eta_thermal2);
                                 recomp_frac2_list_cuarta_llamada.Add(puntero_aplicacion.recomp_frac2);
                                 p_mc1_in2_list_cuarta_llamada.Add(puntero_aplicacion.p_mc1_in2);
@@ -4692,7 +4738,9 @@ namespace RefPropWindowsForms
                                 p15_list.Add(puntero_aplicacion.pres215);
                                 p16_list.Add(puntero_aplicacion.pres216);
 
-                                PHX_Q2_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.PHX.Q_dot);
+                                //PHX_Q2_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.PHX.Q_dot);
+                                RHX1_Q2_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.RHX1.Q_dot);
+                                RHX2_Q2_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.RHX2.Q_dot);
 
                                 HT_Eff_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.HT.eff);
                                 LT_Eff_list.Add(cicloRCMCIwithTwoReheating_Cuarta_llamada.LT.eff);
@@ -4794,59 +4842,86 @@ namespace RefPropWindowsForms
                             listBox13.Items.Add(puntero_aplicacion.ua_ht2.ToString());
                             listBox14.Items.Add(puntero_aplicacion.ua_lt2.ToString());
 
+                            //Solar Fields calculation
                             if (checkBox7.Checked == false)
                             {
-
-                                //Calculo del campo solar
-                                PTC_SF_Calculation PTC = new PTC_SF_Calculation();
-                                PTC.calledForSensingAnalysis = true;
-                                PTC.comboBox1.Text = "Solar Salt";
-                                PTC.comboBox2.Text = "NewMixture";
-                                PTC.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
-                                PTC.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
+                                //REHEATING_1 SOLAR FIELD CALCULATION
+                                PTC_SF_Calculation PTC_RHX1 = new PTC_SF_Calculation();
+                                PTC_RHX1.calledForSensingAnalysis = true;
+                                PTC_RHX1.comboBox1.Text = "Solar Salt";
+                                PTC_RHX1.comboBox2.Text = "PureFluid";
+                                PTC_RHX1.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
+                                PTC_RHX1.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                                 //PTC.textBox31.Text = this.textBox31.Text;
                                 //PTC.textBox36.Text = this.textBox36.Text;
+                                PTC_RHX1.textBox1.Text = Convert.ToString(RHX1_Q2_list[maxIndex]);
+                                PTC_RHX1.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
+                                PTC_RHX1.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                PTC_RHX1.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                PTC_RHX1.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                PTC_RHX1.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
+                                PTC_RHX1.textBox107.Text = Convert.ToString(10);
+                                PTC_RHX1.button1_Click(this, e);
+                                puntero_aplicacion.PTC_ReHeating1_SF_Effective_Apperture_Area = PTC_RHX1.ReflectorApertureAreaResult;
+                                puntero_aplicacion.PTC_ReHeating1_SF_Pressure_drop = PTC_RHX1.Total_Pressure_DropResult;
 
-                                if (comboBox4.Text == "Parabolic")
-                                {
-                                    PTC.textBox7.Text = "0.141";
-                                    PTC.textBox8.Text = "6.48e-9";
-                                }
-                                else if (comboBox4.Text == "Parabolic with cavity receiver (Norwich)")
-                                {
-                                    PTC.textBox7.Text = "0.3";
-                                    PTC.textBox8.Text = "3.25e-9";
-                                }
-
-                                PTC.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
-                                PTC.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                PTC.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                PTC.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                PTC.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                PTC.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
-                                PTC.textBox107.Text = Convert.ToString(10);
-                                PTC.button1_Click(this, e);
-                                puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC.ReflectorApertureAreaResult;
-                                puntero_aplicacion.PTC_Main_SF_Pressure_drop = PTC.Total_Pressure_DropResult;
-
-                                LF_SF_Calculation LF = new LF_SF_Calculation();
-                                LF.calledForSensingAnalysis = true;
-                                LF.comboBox1.Text = "Solar Salt";
-                                LF.comboBox2.Text = "NewMixture";
-                                LF.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
-                                LF.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
+                                LF_SF_Calculation LF_RHX1 = new LF_SF_Calculation();
+                                LF_RHX1.calledForSensingAnalysis = true;
+                                LF_RHX1.comboBox1.Text = "Solar Salt";
+                                LF_RHX1.comboBox2.Text = "PureFluid";
+                                LF_RHX1.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
+                                LF_RHX1.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
                                 //LF.textBox31.Text = this.textBox31.Text;
                                 //LF.textBox36.Text = this.textBox36.Text;
-                                LF.textBox1.Text = Convert.ToString(PHX_Q2_list[maxIndex]);
-                                LF.textBox2.Text = Convert.ToString(massflow2_list[maxIndex]);
-                                LF.textBox3.Text = Convert.ToString(t5_list[maxIndex]);
-                                LF.textBox6.Text = Convert.ToString(t6_list[maxIndex]);
-                                LF.textBox4.Text = Convert.ToString(p5_list[maxIndex]);
-                                LF.textBox5.Text = Convert.ToString(p6_list[maxIndex]);
-                                LF.textBox107.Text = Convert.ToString(10);
-                                LF.button1_Click(this, e);
-                                puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF.ReflectorApertureAreaResult;
-                                puntero_aplicacion.LF_Main_SF_Pressure_drop = LF.Total_Pressure_DropResult;
+                                LF_RHX1.textBox1.Text = Convert.ToString(RHX1_Q2_list[maxIndex]);
+                                LF_RHX1.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
+                                LF_RHX1.textBox3.Text = Convert.ToString(t11_list[maxIndex]);
+                                LF_RHX1.textBox6.Text = Convert.ToString(t12_list[maxIndex]);
+                                LF_RHX1.textBox4.Text = Convert.ToString(p11_list[maxIndex]);
+                                LF_RHX1.textBox5.Text = Convert.ToString(p12_list[maxIndex]);
+                                LF_RHX1.textBox107.Text = Convert.ToString(10);
+                                LF_RHX1.button1_Click(this, e);
+                                puntero_aplicacion.LF_ReHeating1_SF_Effective_Apperture_Area = LF_RHX1.ReflectorApertureAreaResult;
+                                puntero_aplicacion.LF_ReHeating1_SF_Pressure_drop = LF_RHX1.Total_Pressure_DropResult;
+
+                                //REHEATING_2 SOLAR FIELD CALCULATION
+                                PTC_SF_Calculation PTC_RHX2 = new PTC_SF_Calculation();
+                                PTC_RHX2.calledForSensingAnalysis = true;
+                                PTC_RHX2.comboBox1.Text = "Solar Salt";
+                                PTC_RHX2.comboBox2.Text = "PureFluid";
+                                PTC_RHX2.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
+                                PTC_RHX2.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
+                                //PTC.textBox31.Text = this.textBox31.Text;
+                                //PTC.textBox36.Text = this.textBox36.Text;
+                                PTC_RHX2.textBox1.Text = Convert.ToString(RHX2_Q2_list[maxIndex]);
+                                PTC_RHX2.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
+                                PTC_RHX2.textBox3.Text = Convert.ToString(t15_list[maxIndex]);
+                                PTC_RHX2.textBox6.Text = Convert.ToString(t16_list[maxIndex]);
+                                PTC_RHX2.textBox4.Text = Convert.ToString(p15_list[maxIndex]);
+                                PTC_RHX2.textBox5.Text = Convert.ToString(p16_list[maxIndex]);
+                                PTC_RHX2.textBox107.Text = Convert.ToString(10);
+                                PTC_RHX2.button1_Click(this, e);
+                                puntero_aplicacion.PTC_ReHeating2_SF_Effective_Apperture_Area = PTC_RHX2.ReflectorApertureAreaResult;
+                                puntero_aplicacion.PTC_ReHeating2_SF_Pressure_drop = PTC_RHX2.Total_Pressure_DropResult;
+
+                                LF_SF_Calculation LF_RHX2 = new LF_SF_Calculation();
+                                LF_RHX2.calledForSensingAnalysis = true;
+                                LF_RHX2.comboBox1.Text = "Solar Salt";
+                                LF_RHX2.comboBox2.Text = "PureFluid";
+                                LF_RHX2.comboBox13.Text = puntero_aplicacion.comboBox2.Text;
+                                LF_RHX2.comboBox14.Text = puntero_aplicacion.comboBox1.Text;
+                                //LF.textBox31.Text = this.textBox31.Text;
+                                //LF.textBox36.Text = this.textBox36.Text;
+                                LF_RHX2.textBox1.Text = Convert.ToString(RHX2_Q2_list[maxIndex]);
+                                LF_RHX2.textBox2.Text = Convert.ToString(massflow2_list_cuarta_llamada[maxIndex]);
+                                LF_RHX2.textBox3.Text = Convert.ToString(t15_list[maxIndex]);
+                                LF_RHX2.textBox6.Text = Convert.ToString(t16_list[maxIndex]);
+                                LF_RHX2.textBox4.Text = Convert.ToString(p15_list[maxIndex]);
+                                LF_RHX2.textBox5.Text = Convert.ToString(p16_list[maxIndex]);
+                                LF_RHX2.textBox107.Text = Convert.ToString(10);
+                                LF_RHX2.button1_Click(this, e);
+                                puntero_aplicacion.LF_ReHeating2_SF_Effective_Apperture_Area = LF_RHX2.ReflectorApertureAreaResult;
+                                puntero_aplicacion.LF_ReHeating2_SF_Pressure_drop = LF_RHX2.Total_Pressure_DropResult;
                             }
 
                             //Copy results to EXCEL
@@ -4886,13 +4961,21 @@ namespace RefPropWindowsForms
                             if (checkBox7.Checked == false)
                             {
                                 //PTC_Apperture_Area(m2)
-                                xlWorkSheet1.Cells[counter_Excel + 1, 13] = puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area.ToString();
+                                xlWorkSheet1.Cells[counter_Excel + 1, 13] = puntero_aplicacion.PTC_ReHeating1_SF_Effective_Apperture_Area.ToString();
                                 //PTC_Pressure_Drop(bar)
-                                xlWorkSheet1.Cells[counter_Excel + 1, 14] = puntero_aplicacion.PTC_Main_SF_Pressure_drop.ToString();
+                                xlWorkSheet1.Cells[counter_Excel + 1, 14] = puntero_aplicacion.PTC_ReHeating1_SF_Pressure_drop.ToString();
                                 //LF_Apperture_Area(m2)
-                                xlWorkSheet1.Cells[counter_Excel + 1, 15] = puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area.ToString();
+                                xlWorkSheet1.Cells[counter_Excel + 1, 15] = puntero_aplicacion.LF_ReHeating1_SF_Effective_Apperture_Area.ToString();
                                 //LF_Pressure_Drop(bar)
-                                xlWorkSheet1.Cells[counter_Excel + 1, 16] = puntero_aplicacion.LF_Main_SF_Pressure_drop.ToString();
+                                xlWorkSheet1.Cells[counter_Excel + 1, 16] = puntero_aplicacion.LF_ReHeating1_SF_Pressure_drop.ToString();
+                                //PTC_Apperture_Area(m2)
+                                xlWorkSheet1.Cells[counter_Excel + 1, 17] = puntero_aplicacion.PTC_ReHeating2_SF_Effective_Apperture_Area.ToString();
+                                //PTC_Pressure_Drop(bar)
+                                xlWorkSheet1.Cells[counter_Excel + 1, 18] = puntero_aplicacion.PTC_ReHeating2_SF_Pressure_drop.ToString();
+                                //LF_Apperture_Area(m2)
+                                xlWorkSheet1.Cells[counter_Excel + 1, 19] = puntero_aplicacion.LF_ReHeating2_SF_Effective_Apperture_Area.ToString();
+                                //LF_Pressure_Drop(bar)
+                                xlWorkSheet1.Cells[counter_Excel + 1, 20] = puntero_aplicacion.LF_ReHeating2_SF_Pressure_drop.ToString();
                             }
 
                             counter_Excel++;
