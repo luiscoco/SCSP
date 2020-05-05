@@ -224,7 +224,7 @@ namespace RefPropWindowsForms
 
                 List<Double> temp5_list_primera = new List<Double>();
 
-                using (var solver = new NLoptSolver(algorithm_type, 3, 0.01, 10000))
+                using (var solver = new NLoptSolver(algorithm_type, 3, 0.00001, 10000))
                 {
                     solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 200.0) });
                     solver.SetUpperBounds(new[] { 1.0, 18500.0, (puntero_aplicacion.p_mc2_out2 / 1.5) });

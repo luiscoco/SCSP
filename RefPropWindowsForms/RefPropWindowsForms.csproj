@@ -621,6 +621,12 @@
     <Compile Include="PCRC_Sensing_Analysis_Results.Designer.cs">
       <DependentUpon>PCRC_Sensing_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCRC_withoutReHeating_Optimization_new_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_withoutReHeating_Optimization_new_configuration.Designer.cs">
+      <DependentUpon>PCRC_withoutReHeating_Optimization_new_configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCRC_without_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -644,6 +650,12 @@
     </Compile>
     <Compile Include="PCRC_withReHeating_new_proposed_configuration.Designer.cs">
       <DependentUpon>PCRC_withReHeating_new_proposed_configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_withReHeating_Optimization_new_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_withReHeating_Optimization_new_configuration.Designer.cs">
+      <DependentUpon>PCRC_withReHeating_Optimization_new_configuration.cs</DependentUpon>
     </Compile>
     <Compile Include="PCRC_with_ReHeating.cs">
       <SubType>Form</SubType>
@@ -1255,6 +1267,9 @@
     <EmbeddedResource Include="PCRC_Sensing_Analysis_Results.resx">
       <DependentUpon>PCRC_Sensing_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_withoutReHeating_Optimization_new_configuration.resx">
+      <DependentUpon>PCRC_withoutReHeating_Optimization_new_configuration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCRC_without_ReHeating.resx">
       <DependentUpon>PCRC_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
@@ -1266,6 +1281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PCRC_withReHeating_new_proposed_configuration.resx">
       <DependentUpon>PCRC_withReHeating_new_proposed_configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_withReHeating_Optimization_new_configuration.resx">
+      <DependentUpon>PCRC_withReHeating_Optimization_new_configuration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PCRC_with_ReHeating.resx">
       <DependentUpon>PCRC_with_ReHeating.cs</DependentUpon>

@@ -262,6 +262,7 @@ namespace RefPropWindowsForms
 
         //Main Compressor2 results
         public Double Main_Compressor_Pin, Main_Compressor_Tin, Main_Compressor_Pout, Main_Compressor_Tout;
+
         public Double Main_Compressor_Flow, Main_Compressor_Diameter, Main_Compressor_Rotation_Velocity;
         public Double Main_Compressor_Efficiency, Main_Compressor_Phi; //Main_Compressor_Phi is the Compressor Flow Factor   
 
@@ -510,6 +511,9 @@ namespace RefPropWindowsForms
                 textBox69.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox68.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox51.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
         }
 
@@ -1658,6 +1662,12 @@ namespace RefPropWindowsForms
                 SF_PHX_LF.button3_Click(this, e);
                 SF_PHX_LF.Show();
             }
+        }
+
+        //Optimization Analysis
+        private void button35_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -933,6 +933,9 @@ namespace RefPropWindowsForms
                 textBox32.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox31.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox30.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
         }
 
@@ -1164,7 +1167,8 @@ namespace RefPropWindowsForms
         //Optimization Analysis button
         private void button34_Click(object sender, EventArgs e)
         {
-
+            PCRC_withoutReHeating_Optimization_new_configuration PCRC_withoutReHeating_Optimization_new_configuration_window = new PCRC_withoutReHeating_Optimization_new_configuration(this);
+            PCRC_withoutReHeating_Optimization_new_configuration_window.Show();
         }
 
         //Pre-cooler_1 calculation button
