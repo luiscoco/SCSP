@@ -1604,6 +1604,9 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.p_mc1_out2 = variables[2];
                         puntero_aplicacion.p_rhx2_in2 = variables[1];
                         puntero_aplicacion.p_rhx1_in2 = variables[3];
+                        LT_fraction = variables[4];
+                        puntero_aplicacion.ua_lt2 = UA_Total * LT_fraction;
+                        puntero_aplicacion.ua_ht2 = UA_Total * (1 - LT_fraction);
 
                         puntero_aplicacion.temp21 = cicloRCMCIwithTwoReheating_Segunda_llamada.temp[0];
                         puntero_aplicacion.temp22 = cicloRCMCIwithTwoReheating_Segunda_llamada.temp[1];
@@ -1849,6 +1852,9 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.p_mc1_out2 = variables[2];
                         puntero_aplicacion.p_rhx2_in2 = variables[1];
                         puntero_aplicacion.p_rhx1_in2 = variables[3];
+                        LT_fraction = variables[4];
+                        puntero_aplicacion.ua_lt2 = UA_Total * LT_fraction;
+                        puntero_aplicacion.ua_ht2 = UA_Total * (1 - LT_fraction);
 
                         puntero_aplicacion.temp21 = cicloRCMCIwithTwoReheating_Tercera_llamada.temp[0];
                         puntero_aplicacion.temp22 = cicloRCMCIwithTwoReheating_Tercera_llamada.temp[1];
@@ -2094,6 +2100,9 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.p_mc1_out2 = variables[2];
                         puntero_aplicacion.p_rhx2_in2 = variables[1];
                         puntero_aplicacion.p_rhx1_in2 = variables[3];
+                        LT_fraction = variables[4];
+                        puntero_aplicacion.ua_lt2 = UA_Total * LT_fraction;
+                        puntero_aplicacion.ua_ht2 = UA_Total * (1 - LT_fraction);
 
                         puntero_aplicacion.temp21 = cicloRCMCIwithTwoReheating_Cuarta_llamada.temp[0];
                         puntero_aplicacion.temp22 = cicloRCMCIwithTwoReheating_Cuarta_llamada.temp[1];
@@ -4136,6 +4145,9 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.p_mc1_out2 = variables[2];
                                 puntero_aplicacion.p_rhx2_in2 = variables[1];
                                 puntero_aplicacion.p_rhx1_in2 = variables[3];
+                                LT_fraction = variables[4];
+                                puntero_aplicacion.ua_lt2 = UA_Total * LT_fraction;
+                                puntero_aplicacion.ua_ht2 = UA_Total * (1 - LT_fraction);
 
                                 puntero_aplicacion.temp21 = cicloRCMCIwithTwoReheating_Segunda_llamada.temp[0];
                                 puntero_aplicacion.temp22 = cicloRCMCIwithTwoReheating_Segunda_llamada.temp[1];
@@ -4381,6 +4393,9 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.p_mc1_out2 = variables[2];
                                 puntero_aplicacion.p_rhx2_in2 = variables[1];
                                 puntero_aplicacion.p_rhx1_in2 = variables[3];
+                                LT_fraction = variables[4];
+                                puntero_aplicacion.ua_lt2 = UA_Total * LT_fraction;
+                                puntero_aplicacion.ua_ht2 = UA_Total * (1 - LT_fraction);
 
                                 puntero_aplicacion.temp21 = cicloRCMCIwithTwoReheating_Tercera_llamada.temp[0];
                                 puntero_aplicacion.temp22 = cicloRCMCIwithTwoReheating_Tercera_llamada.temp[1];
@@ -4629,6 +4644,9 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.p_mc1_out2 = variables[2];
                                 puntero_aplicacion.p_rhx2_in2 = variables[1];
                                 puntero_aplicacion.p_rhx1_in2 = variables[3];
+                                LT_fraction = variables[4];
+                                puntero_aplicacion.ua_lt2 = UA_Total * LT_fraction;
+                                puntero_aplicacion.ua_ht2 = UA_Total * (1 - LT_fraction);
 
                                 puntero_aplicacion.temp21 = cicloRCMCIwithTwoReheating_Cuarta_llamada.temp[0];
                                 puntero_aplicacion.temp22 = cicloRCMCIwithTwoReheating_Cuarta_llamada.temp[1];
