@@ -22,6 +22,7 @@ namespace RefPropWindowsForms
     public partial class PCRC_without_ReHeating_Optimization_Analysis_Results : Form
     {
         PCRC_without_ReHeating puntero_aplicacion;
+
         public PCRC_without_ReHeating_Optimization_Analysis_Results(PCRC_without_ReHeating puntero1)
         {
             puntero_aplicacion = puntero1;

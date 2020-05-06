@@ -1667,7 +1667,8 @@ namespace RefPropWindowsForms
         //Optimization Analysis
         private void button35_Click(object sender, EventArgs e)
         {
-
+            PCRC_withReHeating_Optimization_new_configuration PCRC_withReHeating_Optimization_new_configuration_window = new PCRC_withReHeating_Optimization_new_configuration(this);
+            PCRC_withReHeating_Optimization_new_configuration_window.Show();
         }
     }
 }

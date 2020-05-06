@@ -2182,9 +2182,6 @@ namespace RefPropWindowsForms
 
             }// Fin CheckBox Optimize UA
 
-
-
-
         }
 
 
