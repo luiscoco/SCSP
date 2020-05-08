@@ -2446,7 +2446,7 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.p_mc_in2 = variables1[1];
                             //puntero_aplicacion.p_rhx_in2 = variables[2];
 
-                            puntero_aplicacion.temp21 = cicloRC_withRH.temp[0];
+                                puntero_aplicacion.temp21 = cicloRC_withRH.temp[0];
                                 puntero_aplicacion.temp22 = cicloRC_withRH.temp[1];
                                 puntero_aplicacion.temp23 = cicloRC_withRH.temp[2];
                                 puntero_aplicacion.temp24 = cicloRC_withRH.temp[3];
@@ -2503,9 +2503,9 @@ namespace RefPropWindowsForms
                                 recomp_frac2_list.Add(puntero_aplicacion.recomp_frac2);
                                 p_mc_in2_list.Add(puntero_aplicacion.p_mc_in2);
                                 temp5_list_primera.Add(puntero_aplicacion.temp25);
-                            //p_rhx_in2_list.Add(puntero_aplicacion.p_rhx_in2);
+                                //p_rhx_in2_list.Add(puntero_aplicacion.p_rhx_in2);
 
-                            listBox1.Items.Add(counter.ToString());
+                                listBox1.Items.Add(counter.ToString());
                                 listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
                                 listBox3.Items.Add(puntero_aplicacion.recomp_frac2.ToString());
                                 listBox4.Items.Add(puntero_aplicacion.p_mc_in2.ToString());
@@ -2513,9 +2513,9 @@ namespace RefPropWindowsForms
                                 listBox6.Items.Add(puntero_aplicacion.ua_ht2.ToString());
                                 listBox7.Items.Add(puntero_aplicacion.temp25.ToString());
                                 listBox8.Items.Add(puntero_aplicacion.temp26.ToString());
-                            //listBox9.Items.Add(puntero_aplicacion.p_rhx_in2.ToString());
+                                //listBox9.Items.Add(puntero_aplicacion.p_rhx_in2.ToString());
 
-                            double LTR_min_DT_1 = cicloRC_withRH.temp[7] - cicloRC_withRH.temp[2];
+                                double LTR_min_DT_1 = cicloRC_withRH.temp[7] - cicloRC_withRH.temp[2];
                                 double LTR_min_DT_2 = cicloRC_withRH.temp[8] - cicloRC_withRH.temp[1];
                                 double LTR_min_DT_paper = Math.Min(LTR_min_DT_1, LTR_min_DT_2);
 
@@ -2660,9 +2660,9 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.eta_thermal2 = cicloRC_withRH_Segunda_llamada.eta_thermal;
                                 puntero_aplicacion.recomp_frac2 = variables2[0];
                                 puntero_aplicacion.p_mc_in2 = variables2[1];
-                            //puntero_aplicacion.p_rhx_in2 = variables[2];
+                                //puntero_aplicacion.p_rhx_in2 = variables[2];
 
-                            puntero_aplicacion.temp21 = cicloRC_withRH_Segunda_llamada.temp[0];
+                                puntero_aplicacion.temp21 = cicloRC_withRH_Segunda_llamada.temp[0];
                                 puntero_aplicacion.temp22 = cicloRC_withRH_Segunda_llamada.temp[1];
                                 puntero_aplicacion.temp23 = cicloRC_withRH_Segunda_llamada.temp[2];
                                 puntero_aplicacion.temp24 = cicloRC_withRH_Segunda_llamada.temp[3];
