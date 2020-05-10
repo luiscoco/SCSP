@@ -3459,9 +3459,7 @@ namespace RefPropWindowsForms
 
                     }// Fin CheckBox Optimize UA
 
-
                     //Optimize UA true
-                    //Optimize UA
                     else if (checkBox2.Checked == true)
                     {
                         //PureFluid
@@ -4744,7 +4742,6 @@ namespace RefPropWindowsForms
                     }// Fin CheckBox Optimize UA
 
                 }// end For CIT
-
             }// end For UA
         }
     }
