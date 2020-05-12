@@ -68,7 +68,7 @@ namespace RefPropWindowsForms
 
             double initial_CIP_value = 0;
 
-            //Optimize UA
+            //Optimize UA false
             if (checkBox2.Checked == false)
             {
                 //PureFluid
@@ -82,10 +82,10 @@ namespace RefPropWindowsForms
                 if (puntero_aplicacion.comboBox1.Text == "NewMixture")
                 {
                     puntero_aplicacion.category = RefrigerantCategory.NewMixture;
-                    puntero_aplicacion.luis.core1(puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox68.Text + "," +
-                                                  puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox69.Text + "," +
-                                                  puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox33.Text + "," +
-                                                  puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox34.Text, puntero_aplicacion.category);
+                    puntero_aplicacion.luis.core1(puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox33.Text + "," +
+                                                  puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox34.Text + "," +
+                                                  puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox68.Text + "," +
+                                                  puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox69.Text, puntero_aplicacion.category);
                 }
 
                 if (puntero_aplicacion.comboBox1.Text == "PredefinedMixture")
@@ -185,7 +185,7 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
 
                                          //puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox69.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox34.Text
-                xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox69.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox34.Text;
+                xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox34.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox69.Text;
                 xlWorkSheet1.Cells[1, 2] = "Pcrit(kPa)";
                 xlWorkSheet1.Cells[1, 3] = "Tcrit(ºC)";
 
@@ -360,6 +360,7 @@ namespace RefPropWindowsForms
             }
             //-------------------------------------------------------------------------
 
+            //Optimize UA true
             else if (checkBox2.Checked == true)
             {
                 //PureFluid
@@ -374,13 +375,13 @@ namespace RefPropWindowsForms
                 {
                     puntero_aplicacion.category = RefrigerantCategory.NewMixture;
                     puntero_aplicacion.luis.core1(puntero_aplicacion.comboBox2.Text + "=" +
-                                                  puntero_aplicacion.textBox68.Text + "," +
-                                                  puntero_aplicacion.comboBox6.Text + "=" +
-                                                  puntero_aplicacion.textBox69.Text + "," +
-                                                  puntero_aplicacion.comboBox12.Text + "=" +
                                                   puntero_aplicacion.textBox33.Text + "," +
+                                                  puntero_aplicacion.comboBox6.Text + "=" +
+                                                  puntero_aplicacion.textBox34.Text + "," +
+                                                  puntero_aplicacion.comboBox12.Text + "=" +
+                                                  puntero_aplicacion.textBox68.Text + "," +
                                                   puntero_aplicacion.comboBox7.Text + "=" +
-                                                  puntero_aplicacion.textBox34.Text, puntero_aplicacion.category);
+                                                  puntero_aplicacion.textBox69.Text, puntero_aplicacion.category);
                 }
 
                 if (puntero_aplicacion.comboBox1.Text == "PredefinedMixture")
@@ -482,7 +483,7 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
 
                                          //puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox69.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox34.Text
-                xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox69.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox34.Text;
+                xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox34.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox69.Text;
                 xlWorkSheet1.Cells[1, 2] = "Pcrit(kPa)";
                 xlWorkSheet1.Cells[1, 3] = "Tcrit(ºC)";
 
@@ -673,7 +674,7 @@ namespace RefPropWindowsForms
                     }
 
                     //Closing Excel Book
-                    xlWorkBook1.SaveAs(textBox3.Text + "SolarPaces2019_Paper_Results_RCMCI_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+                    xlWorkBook1.SaveAs(textBox3.Text + "RCMCI_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
                     xlWorkBook1.Close(true, misValue1, misValue1);
                     xlApp1.Quit();
@@ -717,6 +718,7 @@ namespace RefPropWindowsForms
             {
                 counter = 0;
 
+                //UA optimization false
                 if (checkBox2.Checked == false)
                 {
                     //PureFluid
@@ -730,7 +732,7 @@ namespace RefPropWindowsForms
                     if (puntero_aplicacion.comboBox1.Text == "NewMixture")
                     {
                         puntero_aplicacion.category = RefrigerantCategory.NewMixture;
-                        puntero_aplicacion.luis.core1(puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox69.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox34.Text, puntero_aplicacion.category);
+                        puntero_aplicacion.luis.core1(puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox34.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox69.Text, puntero_aplicacion.category);
                     }
 
                     if (puntero_aplicacion.comboBox1.Text == "PredefinedMixture")
@@ -870,7 +872,7 @@ namespace RefPropWindowsForms
                         xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
 
 
-                        xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox69.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox34.Text;
+                        xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox34.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox69.Text;
                         xlWorkSheet1.Cells[1, 2] = "Pcrit(kPa)";
                         xlWorkSheet1.Cells[1, 3] = "Tcrit(ºC)";
 
@@ -1158,6 +1160,7 @@ namespace RefPropWindowsForms
                     }
                 }
 
+                //UA optimization true
                 else if (checkBox2.Checked == true)
                 {
                     //PureFluid
@@ -1171,7 +1174,7 @@ namespace RefPropWindowsForms
                     if (puntero_aplicacion.comboBox1.Text == "NewMixture")
                     {
                         puntero_aplicacion.category = RefrigerantCategory.NewMixture;
-                        puntero_aplicacion.luis.core1(puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox69.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox34.Text, puntero_aplicacion.category);
+                        puntero_aplicacion.luis.core1(puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox6.Text + "=" + puntero_aplicacion.textBox34.Text + "," + puntero_aplicacion.comboBox12.Text + "=" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox7.Text + "=" + puntero_aplicacion.textBox69.Text, puntero_aplicacion.category);
                     }
 
                     if (puntero_aplicacion.comboBox1.Text == "PredefinedMixture")
@@ -1307,7 +1310,7 @@ namespace RefPropWindowsForms
 
                         xlWorkSheet1.Name = puntero_aplicacion.comboBox2.Text + " Mixture";
 
-                        xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox69.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox34.Text;
+                        xlWorkSheet1.Cells[1, 1] = puntero_aplicacion.comboBox2.Text + ":" + puntero_aplicacion.textBox33.Text + "," + puntero_aplicacion.comboBox6.Text + ":" + puntero_aplicacion.textBox34.Text + "," + puntero_aplicacion.comboBox12.Text + ":" + puntero_aplicacion.textBox68.Text + "," + puntero_aplicacion.comboBox7.Text + ":" + puntero_aplicacion.textBox69.Text;
                         xlWorkSheet1.Cells[1, 2] = "Pcrit(kPa)";
                         xlWorkSheet1.Cells[1, 3] = "Tcrit(ºC)";
 
@@ -1610,7 +1613,7 @@ namespace RefPropWindowsForms
             } //loop for CIT optimization analysis
         
                 //Closing Excel Book
-                xlWorkBook1.SaveAs(textBox3.Text + "SolarPaces2019_Paper_CIT_Optimization_RCMCI_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+                xlWorkBook1.SaveAs(textBox3.Text + "CIT_Optimization_RCMCI_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
                 xlWorkBook1.Close(true, misValue1, misValue1);
                 xlApp1.Quit();

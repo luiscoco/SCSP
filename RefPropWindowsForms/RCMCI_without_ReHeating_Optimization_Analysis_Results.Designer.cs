@@ -89,6 +89,8 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.listBox15 = new System.Windows.Forms.ListBox();
             this.listBox16 = new System.Windows.Forms.ListBox();
             this.listBox17 = new System.Windows.Forms.ListBox();
@@ -106,8 +108,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -705,6 +705,24 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "CIT Optimization Results";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(319, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 13);
+            this.label12.TabIndex = 1238;
+            this.label12.Text = "P_mc1_out (kPa)";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(241, 17);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(82, 13);
+            this.label16.TabIndex = 1237;
+            this.label16.Text = "P_mc1_in (kPa)";
+            // 
             // listBox15
             // 
             this.listBox15.FormattingEnabled = true;
@@ -842,7 +860,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(487, 20);
             this.textBox3.TabIndex = 1284;
-            this.textBox3.Text = "C:\\Users\\luisc\\Desktop\\SolarPaces 2019\\";
+            this.textBox3.Text = "C:\\SolarPaces_2020\\";
             // 
             // comboBox4
             // 
@@ -863,24 +881,6 @@
             this.label19.Size = new System.Drawing.Size(110, 15);
             this.label19.TabIndex = 1287;
             this.label19.Text = "Solar Field Collectors:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(319, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(89, 13);
-            this.label12.TabIndex = 1238;
-            this.label12.Text = "P_mc1_out (kPa)";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(241, 17);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(82, 13);
-            this.label16.TabIndex = 1237;
-            this.label16.Text = "P_mc1_in (kPa)";
             // 
             // RCMCI_without_ReHeating_Optimization_Analysis_Results
             // 
