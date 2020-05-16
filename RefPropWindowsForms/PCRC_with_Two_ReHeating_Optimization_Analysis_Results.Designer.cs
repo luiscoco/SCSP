@@ -118,7 +118,6 @@
             this.label75 = new System.Windows.Forms.Label();
             this.textBox55 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label77 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -126,6 +125,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -996,15 +996,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CIT Optimization inputs";
             // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(134, 29);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(23, 13);
-            this.label77.TabIndex = 1245;
-            this.label77.Text = "To:";
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -1064,6 +1055,15 @@
             this.label29.Size = new System.Drawing.Size(60, 13);
             this.label29.TabIndex = 1279;
             this.label29.Text = "UA (kW/K)";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(134, 29);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(23, 13);
+            this.label77.TabIndex = 1245;
+            this.label77.Text = "To:";
             // 
             // PCRC_with_Two_ReHeating_Optimization_Analysis_Results
             // 
