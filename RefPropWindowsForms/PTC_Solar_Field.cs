@@ -358,7 +358,7 @@ namespace RefPropWindowsForms
             Punterociclo_25 = Punterociclo25;
         }
 
-        // RC_Design_WithTwoReHeating: Brayton_cycle_type_variable = 17
+        // PCRC_Design_WithTwoReHeating: Brayton_cycle_type_variable = 17
         public void PTC_Solar_Field_ciclo_PCRC_with_Two_ReHeating(PCRC_with_Two_ReHeating Punterociclo17, Double Brayton_cycle_type, String SF_Type)
         {
             SF_Type_variable = SF_Type;
@@ -693,6 +693,45 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "ReHeating_SF2_Dual_Loop")
                 {
                     textBox37.Text = Convert.ToString(Punterociclo_15.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
+            // PCRC_Design_WithTwoReHeating: Brayton_cycle_type_variable = 17
+            else if (this.Brayton_cycle_type_variable == 17)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.PHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp216 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.RHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp212 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -2514,8 +2553,6 @@ namespace RefPropWindowsForms
 
             }
 
-
-
             //Reynolds Number calculation
             for (int j = 0; j < Convert.ToInt64(Number_Of_Temperatures); j++)
             {
@@ -2878,7 +2915,6 @@ namespace RefPropWindowsForms
                 }
             }
 
-
             // RC_Design_WithTwoReHeating: Brayton_cycle_type_variable = 15
             else if (this.Brayton_cycle_type_variable == 15)
             {
@@ -2909,7 +2945,38 @@ namespace RefPropWindowsForms
                     Punterociclo_15.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_2 = Electrical_Consumption;
                 }
             }
-            
+
+            // PCRC_Design_WithTwoReHeating: Brayton_cycle_type_variable = 17
+            else if (this.Brayton_cycle_type_variable == 17)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_17.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    Punterociclo_17.ReHeating1_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    Punterociclo_17.ReHeating2_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    Punterociclo_17.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                    Punterociclo_17.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1 = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    Punterociclo_17.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption + Punterociclo_17.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1;
+                    Punterociclo_17.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_2 = Electrical_Consumption;
+                }
+            }
+
             // PCRC_Optimization_WithReHeating: Brayton_cycle_type_variable = 5
             else if (this.Brayton_cycle_type_variable == 5)
             {
@@ -3363,6 +3430,23 @@ namespace RefPropWindowsForms
                 }
             }
 
+            //PCRC_Design_withTwoReHeating
+            else if (this.Brayton_cycle_type_variable == 17)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_17.PTC_Main_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    Punterociclo_17.PTC_ReHeating1_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    Punterociclo_17.PTC_ReHeating2_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+            }
+
             //PCRC_Optimization_withReHeating
             else if (this.Brayton_cycle_type_variable == 5)
             {
@@ -3405,7 +3489,7 @@ namespace RefPropWindowsForms
                 }
             }
 
-                  //PCRC_Optimization_withReHeating
+            //PCRC_Optimization_withReHeating
             else if (this.Brayton_cycle_type_variable == 7)
             {
                 if (this.SF_Type_variable == "Main_SF")

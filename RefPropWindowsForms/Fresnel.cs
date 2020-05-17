@@ -615,7 +615,46 @@ namespace RefPropWindowsForms
                     textBox37.Text = Convert.ToString(Punterociclo_15.temp212 + Convert.ToDouble(textBox107.Text));
                 }
             }
-            
+
+            //PCRC with Two ReHeating DESIGN
+            else if (this.Brayton_cycle_type_variable == 17)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.PHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp216 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.RHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_17.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
             else if (this.Brayton_cycle_type_variable == 5)
             {
                 if (this.SF_Type_variable == "Main_SF")
@@ -2234,6 +2273,36 @@ namespace RefPropWindowsForms
                 }
             }
 
+            else if (this.Brayton_cycle_type_variable == 17)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_17.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    Punterociclo_17.ReHeating1_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    Punterociclo_17.ReHeating2_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    Punterociclo_17.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                    Punterociclo_17.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_1 = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    Punterociclo_17.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption + Punterociclo_17.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_1;
+                    Punterociclo_17.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_2 = Electrical_Consumption;
+                }
+            }
+
             else if (this.Brayton_cycle_type_variable == 5)
             {
                 if (this.SF_Type_variable == "Main_SF")
@@ -2718,6 +2787,25 @@ namespace RefPropWindowsForms
                 }
             }
 
+            //PCRC_Design_withTwoReHeating
+            else if (this.Brayton_cycle_type_variable == 17)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_17.LF_Main_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    Punterociclo_17.LF_ReHeating1_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    Punterociclo_17.LF_ReHeating2_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+            }
+
             //PCRC_Optimization_withReHeating
             else if (this.Brayton_cycle_type_variable == 5)
             {
@@ -2905,7 +2993,6 @@ namespace RefPropWindowsForms
 
             if (comboBox7.Text == "Thermoflow 21, Novatec Biosol, Fresnel")
             {
-
                 string[] IAM_values;
                 IAM_values = new string[] { "Degress", "Longitudinal", "Transverse" };
                 dataGridView6.Rows.Add(IAM_values);
