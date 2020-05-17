@@ -3684,6 +3684,7 @@
             this.button15.TabIndex = 1653;
             this.button15.Text = "PHX SF";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button4
             // 
@@ -3752,6 +3753,7 @@
             this.button8.TabIndex = 1647;
             this.button8.Text = "RHX1 SF";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -3787,6 +3789,7 @@
             this.button34.TabIndex = 1659;
             this.button34.Text = "RHX2 SF";
             this.button34.UseVisualStyleBackColor = false;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
             // 
             // button32
             // 
@@ -3800,6 +3803,7 @@
             this.button32.TabIndex = 1660;
             this.button32.Text = "RHX3 SF";
             this.button32.UseVisualStyleBackColor = false;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // button35
             // 

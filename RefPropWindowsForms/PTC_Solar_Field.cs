@@ -422,7 +422,7 @@ namespace RefPropWindowsForms
             Punterociclo_19 = Punterociclo19;
         }
 
-        // RC_Design_WithoutReHeating: Brayton_cycle_type_variable = 20
+        // RCMCI_Design_WithThreeReHeating: Brayton_cycle_type_variable = 20
         public void PTC_Solar_Field_ciclo_RCMCI_with_Three_Reheatings(RCMCI_with_Three_Reheatings Punterociclo20, Double Brayton_cycle_type, String SF_Type)
         {
             SF_Type_variable = SF_Type;
@@ -1152,6 +1152,30 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "ReHeating_SF2_Dual_Loop")
                 {
                     textBox37.Text = Convert.ToString(Punterociclo_19.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
+            // RCMCI_Design_WithThreeReHeating: Brayton_cycle_type_variable = 20
+            else if (this.Brayton_cycle_type_variable == 20)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_20.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_20.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_20.temp216 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating3_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_20.temp218 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -3371,6 +3395,30 @@ namespace RefPropWindowsForms
                 }
             }
 
+            // RCMCI_Design_WithThreeReHeating: Brayton_cycle_type_variable = 20
+            else if (this.Brayton_cycle_type_variable == 20)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_20.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    Punterociclo_20.ReHeating1_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    Punterociclo_20.ReHeating2_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating3_SF")
+                {
+                    Punterociclo_20.ReHeating2_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+            }
+
             Name_Plate_Design_Point_Load = Convert.ToDouble(textBox95.Text);
                 textBox96.Text = Convert.ToString(Electrical_Consumption * Name_Plate_Design_Point_Load);
 
@@ -3699,6 +3747,28 @@ namespace RefPropWindowsForms
                     Punterociclo_19.PTC_ReHeating2_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
                 }
             }
+
+            //RCMCI_Design_withThreeReHeating
+            else if (this.Brayton_cycle_type_variable == 20)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_20.PTC_Main_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    Punterociclo_20.PTC_ReHeating1_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    Punterociclo_20.PTC_ReHeating2_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+                else if (this.SF_Type_variable == "ReHeating3_SF")
+                {
+                    Punterociclo_20.PTC_ReHeating3_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+            }
+
             this.Dispose();
         }
 
