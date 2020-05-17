@@ -679,6 +679,30 @@ namespace RefPropWindowsForms
                 }
             }
 
+            //PCRC with Three ReHeating DESIGN
+            else if (this.Brayton_cycle_type_variable == 18)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_18.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_18.temp212 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_18.temp216 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "ReHeating3_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_18.temp218 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
             else if (this.Brayton_cycle_type_variable == 5)
             {
                 if (this.SF_Type_variable == "Main_SF")
@@ -2350,6 +2374,29 @@ namespace RefPropWindowsForms
                 }
             }
 
+            else if (this.Brayton_cycle_type_variable == 18)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_18.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    Punterociclo_18.ReHeating1_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    Punterociclo_18.ReHeating2_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating3_SF")
+                {
+                    Punterociclo_18.ReHeating3_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+            }
+
             else if (this.Brayton_cycle_type_variable == 5)
             {
                 if (this.SF_Type_variable == "Main_SF")
@@ -2874,6 +2921,30 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "ReHeating2_SF")
                 {
                     Punterociclo_17.LF_ReHeating2_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+            }
+
+            //PCRC_Design_withThreeReHeating
+            else if (this.Brayton_cycle_type_variable == 18)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_18.LF_Main_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating1_SF")
+                {
+                    Punterociclo_18.LF_ReHeating1_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating2_SF")
+                {
+                    Punterociclo_18.LF_ReHeating2_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating3_SF")
+                {
+                    Punterociclo_18.LF_ReHeating3_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
                 }
             }
 
