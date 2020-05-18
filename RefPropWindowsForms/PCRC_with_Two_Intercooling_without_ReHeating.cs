@@ -209,7 +209,8 @@ namespace RefPropWindowsForms
 
         //LTR results 
         public Double LTR_Qdot, LTR_Num_HXs, LTR_mdot_c, LTR_mdot_h, LTR_cold_Pin, LTR_cold_Tin, LTR_cold_Pout, LTR_cold_Tout;
-        public Double LTR_hot_Pin, LTR_hot_Tin, LTR_hot_Pout, LTR_hot_Tout;
+        public Double LTR_hot_Pin, LTR_hot_Tin, LTR_hot_Pout, LTR_hot_Tout;        
+
         public Double LTR_UA, LTR_NTU, LTR_CR, LTR_min_DT, LTR_Effectiveness, LTR_Q_per_module, LTR_number_modules;
         public Double LTR_mdot_h_module, LTR_mdot_c_module, LTR_UA_module, LTR_NTU_module, LTR_CR_module, LTR_min_DT_module, LTR_Effectiveness_module;
 
@@ -1103,5 +1104,10 @@ namespace RefPropWindowsForms
             Main_Turbine.Show();
         }
 
+        //Main_Solar_Field
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

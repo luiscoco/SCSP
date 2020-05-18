@@ -81,6 +81,7 @@ namespace RefPropWindowsForms
 
             double initial_CIP_value = 0;
 
+            //Optimization UA false
             if (checkBox2.Checked == false)
             {
                 //PureFluid
@@ -397,7 +398,7 @@ namespace RefPropWindowsForms
                     }
 
                     //Closing Excel Book
-                    xlWorkBook1.SaveAs(textBox3.Text + "SolarPaces2019_Paper_Results_PCRC_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+                    xlWorkBook1.SaveAs(textBox3.Text + "PCRC_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
                     xlWorkBook1.Close(true, misValue1, misValue1);
                     xlApp1.Quit();
@@ -411,6 +412,7 @@ namespace RefPropWindowsForms
 
             //-------------------------------------------------------------------------
 
+            //Optimization UA true
             else if (checkBox2.Checked == true)
             {
                 //PureFluid
@@ -712,7 +714,7 @@ namespace RefPropWindowsForms
                     }
 
                     //Closing Excel Book
-                    xlWorkBook1.SaveAs(textBox3.Text + "SolarPaces2019_Paper_Results_PCRC_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+                    xlWorkBook1.SaveAs(textBox3.Text + "PCRC_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
                     xlWorkBook1.Close(true, misValue1, misValue1);
                     xlApp1.Quit();
@@ -1692,7 +1694,7 @@ namespace RefPropWindowsForms
             }//loop for UA optimization analysis
 
             //Closing Excel Book
-            xlWorkBook1.SaveAs(textBox3.Text + "SolarPaces2019_Paper_CIT_Optimization_PCRC_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+            xlWorkBook1.SaveAs(textBox3.Text + "CIT_Optimization_PCRC_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
             xlWorkBook1.Close(true, misValue1, misValue1);
             xlApp1.Quit();

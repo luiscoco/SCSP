@@ -866,7 +866,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(485, 20);
             this.textBox4.TabIndex = 1332;
-            this.textBox4.Text = "C:\\Users\\luisc\\Desktop\\SolarPaces 2019\\";
+            this.textBox4.Text = "C:\\SolarPaces_2020\\";
             // 
             // checkBox3
             // 
