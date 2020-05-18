@@ -356,6 +356,26 @@ namespace RefPropWindowsForms
                     textBox90.Text = recomp_frac2_list[maxIndex].ToString();
                     textBox2.Text = p_mc1_out2_list[maxIndex].ToString();
                     textBox86.Text = eta_thermal2_list[maxIndex].ToString();
+
+                    //Copy results as design-point inputs
+                    if (checkBox3.Checked == true)
+                    {
+                        puntero_aplicacion.textBox15.Text = recomp_frac2_list[maxIndex].ToString();
+                        puntero_aplicacion.textBox3.Text = p_mc1_in2_list[maxIndex].ToString();
+                        puntero_aplicacion.textBox8.Text = p_mc1_out2_list[maxIndex].ToString();
+                        puntero_aplicacion.textBox23.Text = p_mc1_out2_list[maxIndex].ToString();
+                    }
+
+                    //Closing Excel Book
+                    xlWorkBook1.SaveAs(textBox3.Text + "RCMCI_without_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+
+                    xlWorkBook1.Close(true, misValue1, misValue1);
+                    xlApp1.Quit();
+
+                    releaseObject(xlWorkSheet1);
+                    //releaseObject(xlWorkSheet2);
+                    releaseObject(xlWorkBook1);
+                    releaseObject(xlApp1);
                 }
             }
             //-------------------------------------------------------------------------
@@ -685,6 +705,7 @@ namespace RefPropWindowsForms
                     releaseObject(xlApp1);
                 }
             }
+        
         }
 
         //Run CIT Optimization button

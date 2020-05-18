@@ -23,6 +23,9 @@ namespace RefPropWindowsForms
 {
     public partial class RCMCI_with_Two_Intercooling_without_Reheating : Form
     {
+        public double MixtureCriticalPressure = 0.0;
+        public double MixtureCriticalTemperature = 0.0;
+
         public core luis = new core();
 
         public Net_Power Net_Power_dialog;
@@ -190,6 +193,7 @@ namespace RefPropWindowsForms
         public Double HTR_Qdot, HTR_Num_HXs, HTR_mdot_c, HTR_mdot_h, HTR_cold_Pin, HTR_cold_Tin, HTR_cold_Pout, HTR_cold_Tout;
 
         public Double HTR_hot_Pin, HTR_hot_Tin, HTR_hot_Pout, HTR_hot_Tout;
+
         public Double HTR_UA, HTR_NTU, HTR_CR, HTR_min_DT, HTR_Effectiveness, HTR_Q_per_module, HTR_number_modules;
         public Double HTR_mdot_h_module, HTR_mdot_c_module, HTR_UA_module, HTR_NTU_module, HTR_CR_module, HTR_min_DT_module, HTR_Effectiveness_module;
 
@@ -738,13 +742,17 @@ namespace RefPropWindowsForms
                 textBox32.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox51.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox31.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
         }
 
         //NLopt Optimization window
         private void Button36_Click(object sender, EventArgs e)
         {
-
+            RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results_window = new RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results(this);
+            RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results_window.Show();
         }
 
         //Compressor C1 calculation button
@@ -922,6 +930,111 @@ namespace RefPropWindowsForms
             HT_Recuperator.HeatExchangerUA1(luis);
             HT_Recuperator.Calculate_HX();
             HT_Recuperator.Show();
+        }
+
+        //Set critical conditions
+        private void button25_Click(object sender, EventArgs e)
+        {
+            double option1 = 0.0;
+            double option2 = 0.0;
+            double option3 = 0.0;
+            double option4 = 0.0;
+
+            option1 = Convert.ToDouble(this.textBox33.Text);
+            option2 = Convert.ToDouble(this.textBox34.Text);
+            option3 = Convert.ToDouble(this.textBox68.Text);
+            option4 = Convert.ToDouble(this.textBox69.Text);
+
+            if ((option1 == 1) || (option2 == 1) || (option3 == 1) || (option4 == 1))
+            {
+                Refrigerant working_fluid = new Refrigerant(RefrigerantCategory.NewMixture,
+                           this.comboBox2.Text + "=" + textBox33.Text + "," +
+                           this.comboBox6.Text + "=" + textBox34.Text + "," +
+                           this.comboBox12.Text + "=" + textBox68.Text + "," +
+                           this.comboBox7.Text + "=" + textBox69.Text, ReferenceState.DEF);
+
+                textBox32.Text = Convert.ToString(working_fluid.CriticalPressure);
+                textBox51.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox31.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                textBox3.Text = Convert.ToString(working_fluid.CriticalPressure);
+                textBox2.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox28.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox85.Text = Convert.ToString(working_fluid.CriticalTemperature);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+            }
+
+            else
+            {
+                Excel.Application xlApp;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                xlApp = new Excel.Application();
+
+                xlWorkBook = xlApp.Workbooks.Open("C:\\SCSP\\RefPropWindowsForms\\bin\\Debug\\REFPROP.xls");
+
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(9);
+
+                //Fluids selection
+                xlWorkSheet.Cells[13, 6] = this.comboBox2.Text;
+                xlWorkSheet.Cells[14, 6] = this.comboBox6.Text;
+                xlWorkSheet.Cells[15, 6] = this.comboBox12.Text;
+                xlWorkSheet.Cells[16, 6] = this.comboBox7.Text;
+
+                // % Compositions
+                xlWorkSheet.Cells[13, 7] = this.textBox33.Text;
+                xlWorkSheet.Cells[14, 7] = this.textBox34.Text;
+                xlWorkSheet.Cells[15, 7] = this.textBox68.Text;
+                xlWorkSheet.Cells[16, 7] = this.textBox69.Text;
+
+                //MessageBox.Show(xlWorkSheet.get_Range("D68", "D68").Value2.ToString());
+                this.textBox3.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox2.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox28.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox85.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+
+                MixtureCriticalPressure = xlWorkSheet.get_Range("D69", "D69").Value;
+                MixtureCriticalTemperature = xlWorkSheet.get_Range("D68", "D68").Value2;
+
+                this.textBox32.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox51.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox31.Text = xlWorkSheet.get_Range("D70", "D70").Value2.ToString();
+
+                //xlWorkBook.SaveAs("C:\\SCSP_Gitlab\\RefPropWindowsForms\\Copia de REFPROP.xlS", 
+                //Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, 
+                //Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, 
+                //misValue);
+
+                xlWorkBook.Close(false, misValue, misValue);
+
+                xlApp.Quit();
+
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
+            }
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
         }
     }
 }

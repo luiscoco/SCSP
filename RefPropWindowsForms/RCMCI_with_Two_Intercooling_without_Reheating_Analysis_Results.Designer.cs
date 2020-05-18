@@ -70,6 +70,10 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.listBox19 = new System.Windows.Forms.ListBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.listBox18 = new System.Windows.Forms.ListBox();
             this.label127 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -80,6 +84,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.listBox20 = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.listBox9 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -104,12 +110,6 @@
             this.label123 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.listBox20 = new System.Windows.Forms.ListBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.listBox19 = new System.Windows.Forms.ListBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
@@ -299,7 +299,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(487, 20);
             this.textBox3.TabIndex = 1301;
-            this.textBox3.Text = "C:\\Users\\luisc\\Desktop\\SolarPaces 2019\\";
+            this.textBox3.Text = "C:\\SolarPaces_2020\\";
             // 
             // label17
             // 
@@ -510,6 +510,38 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "CIT Optimization Results";
             // 
+            // listBox19
+            // 
+            this.listBox19.FormattingEnabled = true;
+            this.listBox19.Location = new System.Drawing.Point(402, 46);
+            this.listBox19.Name = "listBox19";
+            this.listBox19.Size = new System.Drawing.Size(66, 82);
+            this.listBox19.TabIndex = 1306;
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(399, 11);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 30);
+            this.label12.TabIndex = 1305;
+            this.label12.Text = "P_mc2_out (kPa)";
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(322, 12);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(68, 29);
+            this.label16.TabIndex = 1304;
+            this.label16.Text = "P_mc1_out (kPa)";
+            // 
+            // label19
+            // 
+            this.label19.Location = new System.Drawing.Point(255, 11);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(58, 30);
+            this.label19.TabIndex = 1303;
+            this.label19.Text = "P_mc1_in (kPa)";
+            // 
             // listBox18
             // 
             this.listBox18.FormattingEnabled = true;
@@ -588,6 +620,7 @@
             this.button3.TabIndex = 1288;
             this.button3.Text = "Run Optimization";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -626,6 +659,22 @@
             this.groupBox3.TabIndex = 1286;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Optimization Intermediate Results";
+            // 
+            // label20
+            // 
+            this.label20.Location = new System.Drawing.Point(401, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(65, 30);
+            this.label20.TabIndex = 1238;
+            this.label20.Text = "P_mc2_out (kPa)";
+            // 
+            // listBox20
+            // 
+            this.listBox20.FormattingEnabled = true;
+            this.listBox20.Location = new System.Drawing.Point(400, 39);
+            this.listBox20.Name = "listBox20";
+            this.listBox20.Size = new System.Drawing.Size(66, 95);
+            this.listBox20.TabIndex = 1237;
             // 
             // label7
             // 
@@ -786,6 +835,7 @@
             this.button7.TabIndex = 1300;
             this.button7.Text = "Run CIT Optimization";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // checkBox3
             // 
@@ -847,54 +897,6 @@
             this.groupBox1.TabIndex = 1294;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Optmization Results";
-            // 
-            // label20
-            // 
-            this.label20.Location = new System.Drawing.Point(401, 9);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(65, 30);
-            this.label20.TabIndex = 1238;
-            this.label20.Text = "P_mc2_out (kPa)";
-            // 
-            // listBox20
-            // 
-            this.listBox20.FormattingEnabled = true;
-            this.listBox20.Location = new System.Drawing.Point(400, 39);
-            this.listBox20.Name = "listBox20";
-            this.listBox20.Size = new System.Drawing.Size(66, 95);
-            this.listBox20.TabIndex = 1237;
-            // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(399, 11);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 30);
-            this.label12.TabIndex = 1305;
-            this.label12.Text = "P_mc2_out (kPa)";
-            // 
-            // label16
-            // 
-            this.label16.Location = new System.Drawing.Point(322, 12);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 29);
-            this.label16.TabIndex = 1304;
-            this.label16.Text = "P_mc1_out (kPa)";
-            // 
-            // label19
-            // 
-            this.label19.Location = new System.Drawing.Point(255, 11);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(58, 30);
-            this.label19.TabIndex = 1303;
-            this.label19.Text = "P_mc1_in (kPa)";
-            // 
-            // listBox19
-            // 
-            this.listBox19.FormattingEnabled = true;
-            this.listBox19.Location = new System.Drawing.Point(402, 46);
-            this.listBox19.Name = "listBox19";
-            this.listBox19.Size = new System.Drawing.Size(66, 82);
-            this.listBox19.TabIndex = 1306;
             // 
             // label21
             // 
