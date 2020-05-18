@@ -117,6 +117,7 @@ namespace RefPropWindowsForms
         public PCRC_with_Three_ReHeating Punterociclo_18;
         public PCRC_without_ReHeating_new_proposed_configuration Punterociclo_25;
         public PCRC_withReHeating_new_proposed_configuration Punterociclo_26;
+        public PCRC_with_Two_Intercooling_without_ReHeating Punterociclo_27;
 
         public RCMCI_optimal Punterociclo_9;
         public RCMCI Punterociclo_10;
@@ -278,6 +279,14 @@ namespace RefPropWindowsForms
             SF_Type_variable = SF_Type;
             Brayton_cycle_type_variable = Brayton_cycle_type;
             Punterociclo_8 = Punterociclo8;
+        }
+
+        // PCRC_with_Two_Intercooling_without_ReHeating: Brayton_cycle_type_variable = 27
+        public void LF_Solar_Field_ciclo_PCRC_with_Two_Intercooling_without_ReHeating(PCRC_with_Two_Intercooling_without_ReHeating Punterociclo27, Double Brayton_cycle_type, String SF_Type)
+        {
+            SF_Type_variable = SF_Type;
+            Brayton_cycle_type_variable = Brayton_cycle_type;
+            Punterociclo_27 = Punterociclo27;
         }
 
         // PCRC_Design_WithoutReHeating new configuration: Brayton_cycle_type_variable = 25
@@ -835,6 +844,24 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
                 {
                     textBox37.Text = Convert.ToString(Punterociclo_8.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
+            else if (this.Brayton_cycle_type_variable == 27)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_27.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_27.PHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_27.temp26 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -2544,6 +2571,26 @@ namespace RefPropWindowsForms
                 }
             }
 
+            else if (this.Brayton_cycle_type_variable == 27)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_27.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    Punterociclo_27.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                    Punterociclo_27.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_1 = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    Punterociclo_27.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption + Punterociclo_27.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_1;
+                    Punterociclo_27.Dual_Loop_LF_Main_SF_Pump_Motor_Elec_Consump_2 = Electrical_Consumption;
+                }
+            }
+
             else if (this.Brayton_cycle_type_variable == 25)
             {
                 if (this.SF_Type_variable == "Main_SF")
@@ -3050,6 +3097,15 @@ namespace RefPropWindowsForms
                 if (this.SF_Type_variable == "Main_SF")
                 {
                     Punterociclo_8.LF_Main_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
+                }
+            }
+
+            //PCRC_Design_with_Two_Intercooling_withoutReHeating
+            else if (this.Brayton_cycle_type_variable == 27)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_27.LF_Main_SF_Effective_Apperture_Area = LF_SF_Effective_Apperture_Area;
                 }
             }
 
