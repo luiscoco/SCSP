@@ -854,6 +854,12 @@
     <Compile Include="RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.Designer.cs">
       <DependentUpon>RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_withReheating_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_Intercooling_withReheating_Analysis_Results.Designer.cs">
+      <DependentUpon>RCMCI_with_Two_Intercooling_withReheating_Analysis_Results.cs</DependentUpon>
+    </Compile>
     <Compile Include="RCMCI_with_Two_Intercooling_with_Reheating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1393,6 +1399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.resx">
       <DependentUpon>RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Two_Intercooling_withReheating_Analysis_Results.resx">
+      <DependentUpon>RCMCI_with_Two_Intercooling_withReheating_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_with_Two_Intercooling_with_Reheating.resx">
       <DependentUpon>RCMCI_with_Two_Intercooling_with_Reheating.cs</DependentUpon>

@@ -126,6 +126,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1057,11 +1059,33 @@
             this.button8.Text = "Run Design-Point";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Parabolic",
+            "Parabolic with cavity receiver (Norwich)"});
+            this.comboBox1.Location = new System.Drawing.Point(836, 429);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(191, 21);
+            this.comboBox1.TabIndex = 1358;
+            this.comboBox1.Text = "Parabolic";
+            // 
+            // label30
+            // 
+            this.label30.Location = new System.Drawing.Point(834, 411);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(110, 15);
+            this.label30.TabIndex = 1359;
+            this.label30.Text = "Solar Field Collectors:";
+            // 
             // PCRC_with_Two_Intercooling_withReheating_Analysis_Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 560);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label30);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.groupBox5);
@@ -1201,5 +1225,7 @@
         public System.Windows.Forms.ListBox listBox20;
         public System.Windows.Forms.Label label19;
         public System.Windows.Forms.ListBox listBox19;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.Label label30;
     }
 }
