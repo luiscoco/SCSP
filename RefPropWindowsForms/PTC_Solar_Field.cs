@@ -129,6 +129,7 @@ namespace RefPropWindowsForms
         public RCMCI_with_Three_Reheatings Punterociclo_20;
         public RCMCI_without_ReHeating_new_proposed_configuration Punterociclo_22;
         public RCMCI_with_ReHeating_new_proposed_configuration Punterociclo_24;
+        public RCMCI_with_Two_Intercooling_without_Reheating Punterociclo_28;
 
         //public PCRCMCI_optimal Punterociclo_13;
         public PCRCMCI Punterociclo_14;
@@ -421,6 +422,14 @@ namespace RefPropWindowsForms
             SF_Type_variable = SF_Type;
             Brayton_cycle_type_variable = Brayton_cycle_type;
             Punterociclo_12 = Punterociclo12;
+        }
+
+        // RCMCI_with_Two_Intercooling_without_Reheating: Brayton_cycle_type_variable = 28
+        public void PTC_Solar_Field_ciclo_RCMCI_with_Two_Intercooling_without_Reheating(RCMCI_with_Two_Intercooling_without_Reheating Punterociclo28, Double Brayton_cycle_type, String SF_Type)
+        {
+            SF_Type_variable = SF_Type;
+            Brayton_cycle_type_variable = Brayton_cycle_type;
+            Punterociclo_28 = Punterociclo28;
         }
 
         // RC_Design_WithTwoReHeating: Brayton_cycle_type_variable = 19
@@ -1107,6 +1116,25 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
                 {
                     textBox37.Text = Convert.ToString(Punterociclo_12.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
+            // RCMCI_Design_with_Two_Intercooling_WithoutReHeating: Brayton_cycle_type_variable = 28
+            else if (this.Brayton_cycle_type_variable == 28)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_28.temp26 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_28.PHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_28.temp26 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -3382,6 +3410,27 @@ namespace RefPropWindowsForms
                 }
             }
 
+            // RCMCI_Design_with_Two_Intercooling_WithoutReHeating: Brayton_cycle_type_variable = 28
+            else if (this.Brayton_cycle_type_variable == 28)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_28.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    Punterociclo_28.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                    Punterociclo_28.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1 = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    Punterociclo_28.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption + Punterociclo_28.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1;
+                    Punterociclo_28.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_2 = Electrical_Consumption;
+                }
+            }
+
             // PCRCMCI_Design_withReHeating: Brayton_cycle_type_variable = 14
             else if (this.Brayton_cycle_type_variable == 14)
             {
@@ -3761,12 +3810,21 @@ namespace RefPropWindowsForms
                 }
             }
 
-            //PCRC_Design_withReHeating
+            //RCMCI_Design_withoutReHeating
             else if (this.Brayton_cycle_type_variable == 12)
             {
                 if (this.SF_Type_variable == "Main_SF")
                 {
                     Punterociclo_12.PTC_Main_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+            }
+
+            //RCMCI_Design_with_Two_Intercooling_withoutReHeating
+            else if (this.Brayton_cycle_type_variable == 28)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_28.PTC_Main_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
                 }
             }
 
