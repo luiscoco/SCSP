@@ -502,11 +502,11 @@
             // textBox68
             // 
             this.textBox68.Enabled = false;
-            this.textBox68.Location = new System.Drawing.Point(58, 147);
+            this.textBox68.Location = new System.Drawing.Point(146, 146);
             this.textBox68.Name = "textBox68";
             this.textBox68.Size = new System.Drawing.Size(34, 20);
             this.textBox68.TabIndex = 1341;
-            this.textBox68.Text = "1.0";
+            this.textBox68.Text = "0.0";
             // 
             // label100
             // 
@@ -733,7 +733,7 @@
             // textBox69
             // 
             this.textBox69.Enabled = false;
-            this.textBox69.Location = new System.Drawing.Point(58, 169);
+            this.textBox69.Location = new System.Drawing.Point(146, 168);
             this.textBox69.Name = "textBox69";
             this.textBox69.Size = new System.Drawing.Size(34, 20);
             this.textBox69.TabIndex = 1339;
@@ -932,6 +932,7 @@
             this.button25.TabIndex = 1332;
             this.button25.Text = "Set Critical Conditions";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // groupBox3
             // 
@@ -1482,11 +1483,11 @@
             // textBox33
             // 
             this.textBox33.Enabled = false;
-            this.textBox33.Location = new System.Drawing.Point(153, 147);
+            this.textBox33.Location = new System.Drawing.Point(54, 147);
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new System.Drawing.Size(39, 20);
             this.textBox33.TabIndex = 1278;
-            this.textBox33.Text = "0.0";
+            this.textBox33.Text = "1.0";
             // 
             // label79
             // 
@@ -1500,7 +1501,7 @@
             // textBox34
             // 
             this.textBox34.Enabled = false;
-            this.textBox34.Location = new System.Drawing.Point(153, 169);
+            this.textBox34.Location = new System.Drawing.Point(54, 169);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(39, 20);
             this.textBox34.TabIndex = 1276;

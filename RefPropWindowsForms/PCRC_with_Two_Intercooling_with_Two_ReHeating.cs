@@ -245,7 +245,9 @@ namespace RefPropWindowsForms
         //Recompressor results
         public Double ReCompressor_Pin, ReCompressor_Tin, ReCompressor_Pout, ReCompressor_Tout;
         public Double ReCompressor_Flow, ReCompressor_Diameter1, ReCompressor_Diameter2, ReCompressor_Rotation_Velocity;
+
         public Double ReCompressor_Efficiency, ReCompressor_Phi; //Main_Compressor_Phi is the Compressor Flow Factor
+
         public Boolean ReCompressor_Surge;
 
         //Main Turbine results
@@ -1260,6 +1262,42 @@ namespace RefPropWindowsForms
             HT_Recuperator.HeatExchangerUA1(luis);
             HT_Recuperator.Calculate_HX();
             HT_Recuperator.Show();
+        }
+
+        //Set Critical Conditions
+        private void button25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Optimization Analysis
+        private void button36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Main_Solar_Field
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //ReHeating_Solar_Field_1
+        private void button30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //ReHeating_Solar_Field_2
+        private void button33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Reset button
+        private void button14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
