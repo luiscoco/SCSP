@@ -47,6 +47,8 @@
             this.label123 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.listBox20 = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -97,6 +99,8 @@
             this.comboBox19 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.listBox19 = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.listBox9 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -122,10 +126,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.listBox19 = new System.Windows.Forms.ListBox();
-            this.listBox20 = new System.Windows.Forms.ListBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -312,6 +312,22 @@
             this.groupBox5.TabIndex = 1349;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "CIT Optimization Results";
+            // 
+            // label29
+            // 
+            this.label29.Location = new System.Drawing.Point(482, 26);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(65, 18);
+            this.label29.TabIndex = 1247;
+            this.label29.Text = "P_rhx (kPa)";
+            // 
+            // listBox20
+            // 
+            this.listBox20.FormattingEnabled = true;
+            this.listBox20.Location = new System.Drawing.Point(482, 44);
+            this.listBox20.Name = "listBox20";
+            this.listBox20.Size = new System.Drawing.Size(66, 95);
+            this.listBox20.TabIndex = 1246;
             // 
             // label12
             // 
@@ -643,6 +659,7 @@
             this.button3.TabIndex = 1341;
             this.button3.Text = "Run Optimization";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
@@ -798,6 +815,22 @@
             this.groupBox3.TabIndex = 1339;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Optimization Intermediate Results";
+            // 
+            // label19
+            // 
+            this.label19.Location = new System.Drawing.Point(482, 22);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(65, 18);
+            this.label19.TabIndex = 1244;
+            this.label19.Text = "P_rhx (kPa)";
+            // 
+            // listBox19
+            // 
+            this.listBox19.FormattingEnabled = true;
+            this.listBox19.Location = new System.Drawing.Point(482, 40);
+            this.listBox19.Name = "listBox19";
+            this.listBox19.Size = new System.Drawing.Size(66, 95);
+            this.listBox19.TabIndex = 1243;
             // 
             // label7
             // 
@@ -1023,38 +1056,6 @@
             this.button8.TabIndex = 1352;
             this.button8.Text = "Run Design-Point";
             this.button8.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.Location = new System.Drawing.Point(482, 22);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 18);
-            this.label19.TabIndex = 1244;
-            this.label19.Text = "P_rhx (kPa)";
-            // 
-            // listBox19
-            // 
-            this.listBox19.FormattingEnabled = true;
-            this.listBox19.Location = new System.Drawing.Point(482, 40);
-            this.listBox19.Name = "listBox19";
-            this.listBox19.Size = new System.Drawing.Size(66, 95);
-            this.listBox19.TabIndex = 1243;
-            // 
-            // listBox20
-            // 
-            this.listBox20.FormattingEnabled = true;
-            this.listBox20.Location = new System.Drawing.Point(482, 44);
-            this.listBox20.Name = "listBox20";
-            this.listBox20.Size = new System.Drawing.Size(66, 95);
-            this.listBox20.TabIndex = 1246;
-            // 
-            // label29
-            // 
-            this.label29.Location = new System.Drawing.Point(482, 26);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(65, 18);
-            this.label29.TabIndex = 1247;
-            this.label29.Text = "P_rhx (kPa)";
             // 
             // PCRC_with_Two_Intercooling_withReheating_Analysis_Results
             // 
