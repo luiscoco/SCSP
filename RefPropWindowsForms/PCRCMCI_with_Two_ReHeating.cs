@@ -30,6 +30,9 @@ namespace RefPropWindowsForms
 
         public Double wmm;
 
+        public double MixtureCriticalPressure = 0.0;
+        public double MixtureCriticalTemperature = 0.0;
+
         public core luis = new core();
 
         public Net_Power Net_Power_dialog;
@@ -257,6 +260,9 @@ namespace RefPropWindowsForms
 
         public Double PTC_ReHeating1_SF_Pump_Calculated_Power, PTC_ReHeating1_SF_Pump_isoentropic_eff, PTC_ReHeating1_SF_Pump_Hydraulic_Power, PTC_ReHeating1_SF_Pump_Mechanical_eff;
         public Double PTC_ReHeating1_SF_Pump_Shaft_Work, PTC_ReHeating1_SF_Pump_Motor_eff, PTC_ReHeating1_SF_Pump_Motor_Elec_Consump, PTC_ReHeating1_SF_Pump_Motor_NamePlate_Design, PTC_ReHeating1_SF_Pump_Motor_NamePlate;
+
+       
+
         public Double Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1, Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_2;
 
         public Double LF_ReHeating1_Solar_Impinging_flowpath, LF_ReHeating1_Solar_Energy_Absorbed_flowpath, LF_ReHeating1_Energy_Loss_flowpath, LF_ReHeating1_Net_Absorbed_flowpath;
@@ -1058,6 +1064,107 @@ namespace RefPropWindowsForms
             Main_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
             Main_Turbine.calculate_Radial_Turbine();
             Main_Turbine.Show();
+        }
+
+        //Set critical conditions
+        private void button38_Click(object sender, EventArgs e)
+        {
+            double option1 = 0.0;
+            double option2 = 0.0;
+            double option3 = 0.0;
+            double option4 = 0.0;
+
+            option1 = Convert.ToDouble(this.textBox35.Text);
+            option2 = Convert.ToDouble(this.textBox36.Text);
+            option3 = Convert.ToDouble(this.textBox69.Text);
+            option4 = Convert.ToDouble(this.textBox70.Text);
+
+            if ((option1 == 1) || (option2 == 1) || (option3 == 1) || (option4 == 1))
+            {
+                Refrigerant working_fluid = new Refrigerant(RefrigerantCategory.NewMixture, this.comboBox2.Text + "=" + textBox35.Text + "," + this.comboBox16.Text + "=" + textBox36.Text + "," + this.comboBox18.Text + "=" + textBox69.Text + "," + this.comboBox17.Text + "=" + textBox70.Text, ReferenceState.DEF);
+
+                textBox34.Text = Convert.ToString(working_fluid.CriticalPressure);
+                textBox68.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox51.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                textBox2.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox28.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox102.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox103.Text = Convert.ToString(working_fluid.CriticalPressure);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+            }
+
+            else
+            {
+                Excel.Application xlApp;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                xlApp = new Excel.Application();
+
+                xlWorkBook = xlApp.Workbooks.Open("C:\\SCSP\\RefPropWindowsForms\\bin\\Debug\\REFPROP.xls");
+
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(9);
+
+                //Fluids selection
+                xlWorkSheet.Cells[13, 6] = this.comboBox2.Text;
+                xlWorkSheet.Cells[14, 6] = this.comboBox16.Text;
+                xlWorkSheet.Cells[15, 6] = this.comboBox18.Text;
+                xlWorkSheet.Cells[16, 6] = this.comboBox17.Text;
+
+                // % Compositions
+                xlWorkSheet.Cells[13, 7] = this.textBox35.Text;
+                xlWorkSheet.Cells[14, 7] = this.textBox36.Text;
+                xlWorkSheet.Cells[15, 7] = this.textBox69.Text;
+                xlWorkSheet.Cells[16, 7] = this.textBox70.Text;
+
+                //MessageBox.Show(xlWorkSheet.get_Range("D68", "D68").Value2.ToString());
+                this.textBox103.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox2.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox28.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox102.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+
+                this.textBox34.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox68.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox51.Text = xlWorkSheet.get_Range("D70", "D70").Value2.ToString();
+
+                MixtureCriticalPressure = xlWorkSheet.get_Range("D69", "D69").Value2;
+                MixtureCriticalTemperature = xlWorkSheet.get_Range("D68", "D68").Value2;
+
+                //xlWorkBook.SaveAs("C:\\SCSP_Gitlab\\RefPropWindowsForms\\Copia de REFPROP.xlS", 
+                //Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, 
+                //Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, 
+                //misValue);
+
+                xlWorkBook.Close(false, misValue, misValue);
+
+                xlApp.Quit();
+
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
+            }
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
         }
     }
 }
