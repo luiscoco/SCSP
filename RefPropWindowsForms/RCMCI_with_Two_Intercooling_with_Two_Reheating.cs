@@ -23,6 +23,9 @@ namespace RefPropWindowsForms
 {
     public partial class RCMCI_with_Two_Intercooling_with_Two_Reheating : Form
     {
+        public double MixtureCriticalPressure = 0.0;
+        public double MixtureCriticalTemperature = 0.0;
+
         public core luis = new core();
 
         public Net_Power Net_Power_dialog;
@@ -255,6 +258,7 @@ namespace RefPropWindowsForms
         public Double ReCompressor_Pin, ReCompressor_Tin, ReCompressor_Pout, ReCompressor_Tout;
 
         public Double ReCompressor_Flow, ReCompressor_Diameter1, ReCompressor_Diameter2, ReCompressor_Rotation_Velocity;
+
         public Double ReCompressor_Efficiency, ReCompressor_Phi; //Main_Compressor_Phi is the Compressor Flow Factor
         public Boolean ReCompressor_Surge;
 
@@ -986,6 +990,9 @@ namespace RefPropWindowsForms
                 textBox34.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox68.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox51.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
         }
 
@@ -1196,6 +1203,136 @@ namespace RefPropWindowsForms
             Main_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
             Main_Turbine.calculate_Radial_Turbine();
             Main_Turbine.Show();
+        }
+
+        //Set critical conditions
+        private void button35_Click(object sender, EventArgs e)
+        {
+            double option1 = 0.0;
+            double option2 = 0.0;
+            double option3 = 0.0;
+            double option4 = 0.0;
+
+            option1 = Convert.ToDouble(this.textBox35.Text);
+            option2 = Convert.ToDouble(this.textBox36.Text);
+            option3 = Convert.ToDouble(this.textBox69.Text);
+            option4 = Convert.ToDouble(this.textBox70.Text);
+
+            if ((option1 == 1) || (option2 == 1) || (option3 == 1) || (option4 == 1))
+            {
+                Refrigerant working_fluid = new Refrigerant(RefrigerantCategory.NewMixture,
+                           this.comboBox2.Text + "=" + textBox35.Text + "," +
+                           this.comboBox16.Text + "=" + textBox36.Text + "," +
+                           this.comboBox18.Text + "=" + textBox69.Text + "," +
+                           this.comboBox17.Text + "=" + textBox70.Text, ReferenceState.DEF);
+
+                textBox34.Text = Convert.ToString(working_fluid.CriticalPressure);
+                textBox68.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox51.Text = Convert.ToString(working_fluid.CriticalDensity);
+
+                textBox3.Text = Convert.ToString(working_fluid.CriticalPressure);
+                textBox2.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox28.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox93.Text = Convert.ToString(working_fluid.CriticalTemperature);
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+            }
+
+            else
+            {
+                Excel.Application xlApp;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                xlApp = new Excel.Application();
+
+                xlWorkBook = xlApp.Workbooks.Open("C:\\SCSP\\RefPropWindowsForms\\bin\\Debug\\REFPROP.xls");
+
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(9);
+
+                //Fluids selection
+                xlWorkSheet.Cells[13, 6] = this.comboBox2.Text;
+                xlWorkSheet.Cells[14, 6] = this.comboBox16.Text;
+                xlWorkSheet.Cells[15, 6] = this.comboBox18.Text;
+                xlWorkSheet.Cells[16, 6] = this.comboBox17.Text;
+
+                // % Compositions
+                xlWorkSheet.Cells[13, 7] = this.textBox35.Text;
+                xlWorkSheet.Cells[14, 7] = this.textBox36.Text;
+                xlWorkSheet.Cells[15, 7] = this.textBox69.Text;
+                xlWorkSheet.Cells[16, 7] = this.textBox70.Text;
+
+                //MessageBox.Show(xlWorkSheet.get_Range("D68", "D68").Value2.ToString());
+                this.textBox3.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox2.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox28.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox93.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+
+                MixtureCriticalPressure = xlWorkSheet.get_Range("D69", "D69").Value;
+                MixtureCriticalTemperature = xlWorkSheet.get_Range("D68", "D68").Value2;
+
+                this.textBox34.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox68.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox51.Text = xlWorkSheet.get_Range("D70", "D70").Value2.ToString();
+
+                //xlWorkBook.SaveAs("C:\\SCSP_Gitlab\\RefPropWindowsForms\\Copia de REFPROP.xlS", 
+                //Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, 
+                //Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, 
+                //misValue);
+
+                xlWorkBook.Close(false, misValue, misValue);
+
+                xlApp.Quit();
+
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
+            }
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
+        //Optimization Analysis
+        private void button36_Click(object sender, EventArgs e)
+        {
+            RCMCI_with_Two_Intercooling_with_Two_Reheating_Analysis_Results RCMCI_with_Two_Intercooling_with_Two_Reheating_Analysis_Results_window = new RCMCI_with_Two_Intercooling_with_Two_Reheating_Analysis_Results(this);
+            RCMCI_with_Two_Intercooling_with_Two_Reheating_Analysis_Results_window.Show();
+        }
+
+        //Main_Solar_Field
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //ReHeating_Solar_Field_1
+        private void button33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //ReHeating_Solar_Field_2
+        private void button32_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
