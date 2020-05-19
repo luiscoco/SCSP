@@ -112,6 +112,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -319,8 +328,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.label111);
             this.groupBox2.Controls.Add(this.label75);
             this.groupBox2.Controls.Add(this.textBox55);
@@ -330,7 +344,7 @@
             this.groupBox2.Controls.Add(this.textBox57);
             this.groupBox2.Location = new System.Drawing.Point(12, 307);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(215, 135);
+            this.groupBox2.Size = new System.Drawing.Size(215, 184);
             this.groupBox2.TabIndex = 1295;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CIT Optimization inputs";
@@ -338,7 +352,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(12, 109);
+            this.checkBox5.Location = new System.Drawing.Point(707, 396);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(177, 17);
             this.checkBox5.TabIndex = 1246;
@@ -348,7 +362,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(12, 88);
+            this.checkBox4.Location = new System.Drawing.Point(707, 369);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(138, 17);
             this.checkBox4.TabIndex = 1244;
@@ -454,7 +468,7 @@
             this.groupBox4.Controls.Add(this.checkBox2);
             this.groupBox4.Location = new System.Drawing.Point(239, 307);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(166, 136);
+            this.groupBox4.Size = new System.Drawing.Size(166, 184);
             this.groupBox4.TabIndex = 1297;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Optimization inputs";
@@ -914,12 +928,96 @@
             this.textBox4.Size = new System.Drawing.Size(88, 20);
             this.textBox4.TabIndex = 1224;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(9, 134);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(32, 13);
+            this.label23.TabIndex = 1278;
+            this.label23.Text = "Step:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(48, 131);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(45, 20);
+            this.textBox9.TabIndex = 1277;
+            this.textBox9.Text = "5000";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(93, 110);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(23, 13);
+            this.label24.TabIndex = 1276;
+            this.label24.Text = "To:";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(116, 107);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(43, 20);
+            this.textBox10.TabIndex = 1275;
+            this.textBox10.Text = "10000";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(10, 110);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(33, 13);
+            this.label25.TabIndex = 1274;
+            this.label25.Text = "From:";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(48, 107);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(45, 20);
+            this.textBox11.TabIndex = 1273;
+            this.textBox11.Text = "10000";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(9, 86);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(60, 13);
+            this.label26.TabIndex = 1272;
+            this.label26.Text = "UA (kW/K)";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Parabolic",
+            "Parabolic with cavity receiver (Norwich)"});
+            this.comboBox4.Location = new System.Drawing.Point(707, 333);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(191, 21);
+            this.comboBox4.TabIndex = 1303;
+            this.comboBox4.Text = "Parabolic";
+            // 
+            // label22
+            // 
+            this.label22.Location = new System.Drawing.Point(705, 315);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(110, 15);
+            this.label22.TabIndex = 1304;
+            this.label22.Text = "Solar Field Collectors:";
+            // 
             // RCMCI_with_Two_Intercooling_without_Reheating_Analysis_Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 547);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);
@@ -1039,5 +1137,14 @@
         public System.Windows.Forms.Label label19;
         public System.Windows.Forms.Label label21;
         public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.Label label23;
+        public System.Windows.Forms.TextBox textBox9;
+        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.TextBox textBox10;
+        public System.Windows.Forms.Label label25;
+        public System.Windows.Forms.TextBox textBox11;
+        public System.Windows.Forms.Label label26;
+        public System.Windows.Forms.ComboBox comboBox4;
+        public System.Windows.Forms.Label label22;
     }
 }

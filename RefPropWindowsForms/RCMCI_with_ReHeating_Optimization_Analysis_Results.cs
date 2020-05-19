@@ -1132,7 +1132,6 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.textBox7.Text = p_rhx_in2_list[maxIndex].ToString();
                             }
 
-
                             //The variable 'i' is the loop counter for the CIT
                             listBox18.Items.Add(i.ToString());
                             listBox17.Items.Add(eta_thermal2_list[maxIndex].ToString());
