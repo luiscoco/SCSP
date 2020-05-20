@@ -224,7 +224,7 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 500), 11000});
+                    solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 500), 11000});
                     solver.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc_out2 / 1.5), 18000 });
 
                     solver.SetInitialStepSize(new[] { 0.05, 100, 100, 500 });
@@ -552,7 +552,7 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 500), 11000, 0.2 });
+                    solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, (initial_CIP_value + 500), 11000, 0.2 });
                     solver.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc_out2 / 1.5), 18000, 0.8 });
 
                     solver.SetInitialStepSize(new[] { 0.05, 100, 100, 500, 0.05 });
@@ -976,7 +976,7 @@ namespace RefPropWindowsForms
 
                         using (var solver = new NLoptSolver(algorithm_type, 4, 0.01, 10000))
                         {
-                            solver.SetLowerBounds(new[] { 0.1, initial_pc_in_value, initial_pc_out_value, 11000 });
+                            solver.SetLowerBounds(new[] { 0.0, initial_pc_in_value, initial_pc_out_value, 11000 });
                             solver.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc_out2 / 1.5), 18000 });
 
                             solver.SetInitialStepSize(new[] { 0.05, 100, 100, 500 });
@@ -1504,7 +1504,7 @@ namespace RefPropWindowsForms
 
                         using (var solver = new NLoptSolver(algorithm_type, 5, 0.01, 10000))
                         {
-                            solver.SetLowerBounds(new[] { 0.1, initial_pc_in_value, initial_pc_out_value, 11000, 0.2 });
+                            solver.SetLowerBounds(new[] { 0.0, initial_pc_in_value, initial_pc_out_value, 11000, 0.2 });
                             solver.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc_out2 / 1.5), 18000, 0.8 });
 
                             solver.SetInitialStepSize(new[] { 0.05, 100, 100, 500, 0.05 });

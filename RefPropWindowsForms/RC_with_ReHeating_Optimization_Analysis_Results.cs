@@ -278,8 +278,8 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 3, optimization_error_tolerance, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 11000 });
-                    solver.SetUpperBounds(new[] { 1.0, 125000, 18000 });
+                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 11000.0 });
+                    solver.SetUpperBounds(new[] { 1.0, 18500.0, 25000.0 });
 
                     solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, ReHeating_Inlet_Pressure_step_size });
 
@@ -619,8 +619,8 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 4, optimization_error_tolerance, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, 11000 });
-                    solver.SetUpperBounds(new[] { 1.0, 125000, 0.8, 18000 });
+                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, 11000.0 });
+                    solver.SetUpperBounds(new[] { 1.0, 18500.0, 0.8, 25000.0 });
 
                     solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, LT_fraction_step_size, ReHeating_Inlet_Pressure_step_size });
 
@@ -1086,8 +1086,8 @@ namespace RefPropWindowsForms
 
                         using (var solver = new NLoptSolver(algorithm_type, 3, optimization_error_tolerance, 10000))
                         {
-                            solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 11000 });
-                            solver.SetUpperBounds(new[] { 1.0, 125000, 18000 });
+                            solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 11000.0 });
+                            solver.SetUpperBounds(new[] { 1.0, 18500.0, 25000.0 });
 
                             solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, ReHeating_Inlet_Pressure_step_size });
 
@@ -1598,8 +1598,8 @@ namespace RefPropWindowsForms
 
                         using (var solver = new NLoptSolver(algorithm_type, 4, optimization_error_tolerance, 10000))
                         {
-                            solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, 11000 });
-                            solver.SetUpperBounds(new[] { 1.0, 125000, 0.8, 18000 });
+                            solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, 11000.0 });
+                            solver.SetUpperBounds(new[] { 1.0, 18500.0, 0.8, 25000.0 });
 
                             solver.SetInitialStepSize(new[] { recomp_frac_step_size, CIP_step_size, LT_fraction_step_size, ReHeating_Inlet_Pressure_step_size });
 

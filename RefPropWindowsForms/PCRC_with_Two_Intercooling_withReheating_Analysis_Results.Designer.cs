@@ -128,6 +128,9 @@
             this.button8 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -211,7 +214,7 @@
             // 
             // textBox82
             // 
-            this.textBox82.Location = new System.Drawing.Point(132, 138);
+            this.textBox82.Location = new System.Drawing.Point(132, 159);
             this.textBox82.Name = "textBox82";
             this.textBox82.Size = new System.Drawing.Size(88, 20);
             this.textBox82.TabIndex = 1208;
@@ -228,7 +231,7 @@
             // label124
             // 
             this.label124.AutoSize = true;
-            this.label124.Location = new System.Drawing.Point(44, 141);
+            this.label124.Location = new System.Drawing.Point(44, 162);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(82, 13);
             this.label124.TabIndex = 1213;
@@ -253,7 +256,7 @@
             // 
             // textBox83
             // 
-            this.textBox83.Location = new System.Drawing.Point(132, 161);
+            this.textBox83.Location = new System.Drawing.Point(132, 182);
             this.textBox83.Name = "textBox83";
             this.textBox83.Size = new System.Drawing.Size(88, 20);
             this.textBox83.TabIndex = 1209;
@@ -270,7 +273,7 @@
             // label123
             // 
             this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(41, 164);
+            this.label123.Location = new System.Drawing.Point(41, 185);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(84, 13);
             this.label123.TabIndex = 1214;
@@ -500,7 +503,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label31);
             this.groupBox1.Controls.Add(this.label28);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -516,7 +521,7 @@
             this.groupBox1.Controls.Add(this.label123);
             this.groupBox1.Location = new System.Drawing.Point(411, 314);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(230, 196);
+            this.groupBox1.Size = new System.Drawing.Size(230, 209);
             this.groupBox1.TabIndex = 1347;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Optmization Results";
@@ -681,7 +686,7 @@
             this.groupBox2.Controls.Add(this.textBox57);
             this.groupBox2.Location = new System.Drawing.Point(11, 314);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(215, 196);
+            this.groupBox2.Size = new System.Drawing.Size(215, 209);
             this.groupBox2.TabIndex = 1348;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CIT Optimization inputs";
@@ -1036,19 +1041,17 @@
             this.groupBox4.Controls.Add(this.checkBox2);
             this.groupBox4.Location = new System.Drawing.Point(238, 314);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(166, 136);
+            this.groupBox4.Size = new System.Drawing.Size(166, 209);
             this.groupBox4.TabIndex = 1350;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Optimization inputs";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(928, 233);
+            this.button7.Location = new System.Drawing.Point(0, 0);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(99, 40);
-            this.button7.TabIndex = 1353;
-            this.button7.Text = "Run CIT Optimization";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 1360;
             // 
             // button8
             // 
@@ -1079,11 +1082,38 @@
             this.label30.TabIndex = 1359;
             this.label30.Text = "Solar Field Collectors:";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(928, 233);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 41);
+            this.button2.TabIndex = 1361;
+            this.button2.Text = "CIT Optimization Analysis";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(61, 138);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(62, 13);
+            this.label31.TabIndex = 1363;
+            this.label31.Text = "P_rhx(kPa):";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(132, 135);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(88, 20);
+            this.textBox1.TabIndex = 1362;
+            // 
             // PCRC_with_Two_Intercooling_withReheating_Analysis_Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 560);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.comboBox4);
@@ -1227,5 +1257,8 @@
         public System.Windows.Forms.ListBox listBox19;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.Label label30;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Label label31;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

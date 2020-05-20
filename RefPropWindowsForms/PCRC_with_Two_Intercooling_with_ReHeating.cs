@@ -487,10 +487,10 @@ namespace RefPropWindowsForms
             //increasingCIP:
 
             luis.RecompCycle_PCRC_withTwoIntercooling_with_Reheating(luis, ref cicloPCRC_withTwoIntercoolingwithRH, w_dot_net2,
-                t_t_in2, p_rhx_in2, t_rht_in2, t_mc_in2, p_mc_in2, p_mc_out2, p_pc1_in2, t_pc1_in2, p_pc1_out2, p_pc2_in2, t_pc2_in2, p_pc2_out2,
-                ua_lt2, ua_ht2, eta_mc2, eta_rc2, eta_pc12, eta_pc22, eta_t2, eta_trh2, n_sub_hxrs2, recomp_frac2, tol2, eta_thermal2,
-                -dp2_lt1, -dp2_lt2, -dp2_ht1, -dp2_ht2, -dp2_pc11, -dp2_pc12, -dp2_pc21, -dp2_pc22,
-                -dp2_phx1, -dp2_phx2, -dp2_rhx1, -dp2_rhx2, -dp2_cooler1, -dp2_cooler2);
+            t_t_in2, p_rhx_in2, t_rht_in2, t_mc_in2, p_mc_in2, p_mc_out2, p_pc1_in2, t_pc1_in2, p_pc1_out2, p_pc2_in2, t_pc2_in2, 
+            p_pc2_out2, ua_lt2, ua_ht2, eta_mc2, eta_rc2, eta_pc12, eta_pc22, eta_t2, eta_trh2, n_sub_hxrs2, recomp_frac2, tol2, 
+            eta_thermal2, -dp2_lt1, -dp2_lt2, -dp2_ht1, -dp2_ht2, -dp2_pc11, -dp2_pc12, -dp2_pc21, -dp2_pc22,
+            -dp2_phx1, -dp2_phx2, -dp2_rhx1, -dp2_rhx2, -dp2_cooler1, -dp2_cooler2);
 
             //if (cicloPCRC_withoutRH.eta_thermal == 0)
             //{
