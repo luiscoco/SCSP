@@ -621,6 +621,12 @@
     <Compile Include="PCRCMCI_with_Two_ReHeating.Designer.cs">
       <DependentUpon>PCRCMCI_with_Two_ReHeating.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCRCMCI_with_Two_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRCMCI_with_Two_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRCMCI_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCRC_optimal_withoutReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1302,6 +1308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PCRCMCI_with_Two_ReHeating.resx">
       <DependentUpon>PCRCMCI_with_Two_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRCMCI_with_Two_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>PCRCMCI_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PCRC_optimal_withoutReHeating.resx">
       <DependentUpon>PCRC_optimal_withoutReHeating.cs</DependentUpon>
