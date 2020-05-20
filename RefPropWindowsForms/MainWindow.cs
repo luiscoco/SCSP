@@ -28,6 +28,7 @@ namespace RefPropWindowsForms
         public WizardDiez WizardDiez_dialog;
         public WizardOnce WizardOnce_dialog;
         public WizardDoce WizardDoce_dialog;
+        public WizardTrece WizardTrece_dialog;
 
         public AdobePDFViewer AdobePDFViewer_dialog;
         public ChartsExample ChartsExample_dialog;
@@ -796,6 +797,13 @@ namespace RefPropWindowsForms
             RC_without_ReHeating_new_configuration_window = new RC_without_ReHeating_new_proposed_configuration();
             RC_without_ReHeating_new_configuration_window.MdiParent = this;
             RC_without_ReHeating_new_configuration_window.Show();
+        }
+
+        private void configurations58ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WizardTrece_dialog = new WizardTrece(this);
+            WizardTrece_dialog.MdiParent = this;
+            WizardTrece_dialog.Show();
         }
     }
 }

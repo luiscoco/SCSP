@@ -132,6 +132,7 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurations58ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,6 +171,7 @@
             this.configurations3840ToolStripMenuItem,
             this.configurationsToolStripMenuItem,
             this.configurations5257ToolStripMenuItem,
+            this.configurations58ToolStripMenuItem,
             this.adobePDFViewerToolStripMenuItem,
             this.chartsExampleToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
@@ -961,6 +963,13 @@
             this.configurationToolStripMenuItem.Text = "Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
+            // configurations58ToolStripMenuItem
+            // 
+            this.configurations58ToolStripMenuItem.Name = "configurations58ToolStripMenuItem";
+            this.configurations58ToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.configurations58ToolStripMenuItem.Text = "Configurations 58-63";
+            this.configurations58ToolStripMenuItem.Click += new System.EventHandler(this.configurations58ToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1087,5 +1096,6 @@
         public System.Windows.Forms.ToolStripMenuItem chartsExampleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem receiverForristalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurations5257ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurations58ToolStripMenuItem;
     }
 }
