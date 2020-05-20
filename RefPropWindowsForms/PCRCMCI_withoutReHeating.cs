@@ -220,6 +220,7 @@ namespace RefPropWindowsForms
         public Double LF_Main_calculated_Row_length;
 
         public Double LF_Main_SF_Pump_Calculated_Power, LF_Main_SF_Pump_isoentropic_eff, LF_Main_SF_Pump_Hydraulic_Power, LF_Main_SF_Pump_Mechanical_eff;
+
         public Double LF_Main_SF_Pump_Shaft_Work, LF_Main_SF_Pump_Motor_eff, LF_Main_SF_Pump_Motor_Elec_Consump, LF_Main_SF_Pump_Motor_NamePlate_Design, LF_Main_SF_Pump_Motor_NamePlate;
 
         //Generator Information
@@ -996,6 +997,13 @@ namespace RefPropWindowsForms
 
         //Optimization analysis
         private void button37_Click(object sender, EventArgs e)
+        {
+            PCRCMCI_without_ReHeating_Optimization_Analysis_Results PCRCMCI_without_ReHeating_Optimization_Analysis_Results_window = new PCRCMCI_without_ReHeating_Optimization_Analysis_Results(this);
+            PCRCMCI_without_ReHeating_Optimization_Analysis_Results_window.Show();
+        }
+
+        //Main_Solar_Field
+        private void button15_Click(object sender, EventArgs e)
         {
 
         }

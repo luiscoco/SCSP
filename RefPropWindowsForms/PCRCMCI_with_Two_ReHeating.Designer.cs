@@ -749,6 +749,7 @@
             this.button9.TabIndex = 1649;
             this.button9.Text = "RHX2 and SF";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button15
             // 
@@ -762,6 +763,7 @@
             this.button15.TabIndex = 1648;
             this.button15.Text = "PHX and SF";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button8
             // 
@@ -3816,6 +3818,7 @@
             this.button36.TabIndex = 1692;
             this.button36.Text = "RHX1 and SF";
             this.button36.UseVisualStyleBackColor = false;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // button37
             // 
@@ -4016,6 +4019,7 @@
             this.button39.TabIndex = 1848;
             this.button39.Text = "Optimization Analysis";
             this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
             // PCRCMCI_with_Two_ReHeating
             // 

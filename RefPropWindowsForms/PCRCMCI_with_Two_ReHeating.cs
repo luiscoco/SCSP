@@ -261,8 +261,6 @@ namespace RefPropWindowsForms
         public Double PTC_ReHeating1_SF_Pump_Calculated_Power, PTC_ReHeating1_SF_Pump_isoentropic_eff, PTC_ReHeating1_SF_Pump_Hydraulic_Power, PTC_ReHeating1_SF_Pump_Mechanical_eff;
         public Double PTC_ReHeating1_SF_Pump_Shaft_Work, PTC_ReHeating1_SF_Pump_Motor_eff, PTC_ReHeating1_SF_Pump_Motor_Elec_Consump, PTC_ReHeating1_SF_Pump_Motor_NamePlate_Design, PTC_ReHeating1_SF_Pump_Motor_NamePlate;
 
-       
-
         public Double Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1, Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_2;
 
         public Double LF_ReHeating1_Solar_Impinging_flowpath, LF_ReHeating1_Solar_Energy_Absorbed_flowpath, LF_ReHeating1_Energy_Loss_flowpath, LF_ReHeating1_Net_Absorbed_flowpath;
@@ -1165,6 +1163,30 @@ namespace RefPropWindowsForms
             {
                 GC.Collect();
             }
+        }
+
+        //Optimization analysis
+        private void button39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Main_Solar_Field
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //ReHeating_Solar_Field_1
+        private void button36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //ReHeating_Solar_Field_2
+        private void button9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
