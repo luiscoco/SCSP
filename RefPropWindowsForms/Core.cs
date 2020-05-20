@@ -11584,7 +11584,6 @@ namespace RefPropWindowsForms
             cicloPCRC_withTwoRH.conv_tol = m_tol;
         }
 
-
         //OK reviewed
         public void RecompCycle_PCRC_without_Reheating_for_Optimization(core luis, ref core.PCRCwithoutReheating cicloPCRC_withoutRH, Double m_W_dot_net,
            Double m_T_mc2_in, Double m_T_t_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
@@ -13573,6 +13572,623 @@ namespace RefPropWindowsForms
             }
 
             if (w_mc1 + w_mc2 + w_mc3 + w_rc + w_t + w_trh<= 0.0)
+            {
+                return;
+            }
+
+            // Outer iteration loop : temp(8), checking against UA_HT
+            double T8_lower_bound = 0.0;
+            double T8_upper_bound = 0.0;
+            double last_HT_residual = 0.0;
+            double last_T8_guess = 0.0;
+            if (UA_HT < 1.0E-12)            // No high-temp recuperator
+            {
+                T8_lower_bound = m_temp_last[7 - cpp_offset];       // No iteration necessary
+                T8_upper_bound = m_temp_last[7 - cpp_offset];       // No iteration necessary
+                m_temp_last[8 - cpp_offset] = m_temp_last[7 - cpp_offset];
+                UA_HT_calc = 0.0;
+                last_HT_residual = 0.0;
+                last_T8_guess = m_temp_last[7 - cpp_offset];
+            }
+            else
+            {
+                T8_lower_bound = m_temp_last[2 - cpp_offset];       // The lower possible value of temp(8)
+                T8_upper_bound = m_temp_last[7 - cpp_offset];       // The highest possible value of temp(8)
+                m_temp_last[8 - cpp_offset] = (T8_lower_bound + T8_upper_bound) * 0.5;  // Bisect bounds for first guess
+                UA_HT_calc = -1.0;
+                last_HT_residual = UA_HT;                   // know a priori that with T8 = T7, UA_calc = 0 therefore residual is UA_HT-0
+                last_T8_guess = m_temp_last[7 - cpp_offset];
+            }
+
+            int property_error_code = 0;
+            int T8_iter = 0;
+
+            // T8_loop
+            for (T8_iter = 1; T8_iter <= max_iter; T8_iter++)
+            {
+                //property_error_code = CO2_TP(m_temp_last[8 - cpp_offset], m_pres_last[8 - cpp_offset]);     // fully define state 8
+                working_fluid.FindStateWithTP(m_temp_last[8 - cpp_offset], m_pres_last[8 - cpp_offset]);
+
+                if (property_error_code != 0)
+                {
+                    return;
+                }
+                m_enth_last[8 - cpp_offset] = working_fluid.Enthalpy;
+                m_entr_last[8 - cpp_offset] = working_fluid.Entropy;
+                m_dens_last[8 - cpp_offset] = working_fluid.Density;
+
+                // Inner iteration loop: temp(9), checking against UA_LT
+                double T9_lower_bound, T9_upper_bound, last_LT_residual, last_T9_guess;
+                T9_lower_bound = T9_upper_bound = last_LT_residual = last_T9_guess = 0.0;
+                if (UA_LT < 1E-12)   // no low-temp recuperator
+                {
+                    T9_lower_bound = m_temp_last[8 - cpp_offset];           // no iteration necessary
+                    T9_upper_bound = m_temp_last[8 - cpp_offset];           // no iteration necessary
+                    m_temp_last[9 - cpp_offset] = m_temp_last[8 - cpp_offset];
+                    UA_LT_calc = 0.0;
+                    last_LT_residual = 0.0;
+                    last_T9_guess = m_temp_last[8 - cpp_offset];
+                }
+                else
+                {
+                    T9_lower_bound = m_temp_last[2 - cpp_offset];       // the lower possible value for T9
+                    T9_upper_bound = m_temp_last[8 - cpp_offset];       // the highest possible value for T9
+                    m_temp_last[9 - cpp_offset] = (T9_lower_bound + T9_upper_bound) * 0.5;  // bisect bounds for first guess
+                    UA_LT_calc = -1.0;
+                    last_LT_residual = UA_LT;       // know a priori that with T9=T8, UA_calc = 0 therefore residual is UA_LT - 0
+                    last_T9_guess = m_temp_last[8 - cpp_offset];
+                }
+
+                // T9_loop
+                int T9_iter = 0;
+                for (T9_iter = 1; T9_iter <= max_iter; T9_iter++)
+                {
+                    // Determine the outlet state of the recompressor and its specific work
+                    if (m_recomp_frac >= 1E-12)
+                    {
+                        int sub_error_code_5 = 0;
+
+                        calculate_turbomachinery_outlet_nuevo(m_temp_last[14 - cpp_offset], m_pres_last[14 - cpp_offset], m_pres_last[10 - cpp_offset], m_eta_rc,
+                            true, ref sub_error_code_5, ref m_enth_last[14 - cpp_offset], ref m_entr_last[14 - cpp_offset], ref m_dens_last[14 - cpp_offset], ref m_temp_last[10 - cpp_offset],
+                            ref m_enth_last[10 - cpp_offset], ref m_entr_last[10 - cpp_offset], ref m_dens_last[10 - cpp_offset], ref w_rc);
+
+                        if (sub_error_code_5 != 0)
+                        {
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        w_rc = 0.0;     // the recompressor does not exist
+
+                        //call CO2_TP(T=temp(14), P=pres(14), error_code=error_code, enth=enth(14), entr=entr(14), dens=dens(14));  // fully define state 14
+                        luis.working_fluid.FindStateWithTP(m_temp_last[14 - cpp_offset], m_pres_last[14 - cpp_offset]);
+
+                        if (property_error_code != 0)
+                        {
+                            //error_code = 28;
+                            return;
+                        }
+                        m_temp_last[14 - cpp_offset] = m_temp_last[14 - cpp_offset];                 // Assume state(10) is the same as state(14)
+                        m_enth_last[14 - cpp_offset] = m_enth_last[10 - cpp_offset] = luis.working_fluid.Enthalpy;
+                        m_entr_last[14 - cpp_offset] = m_entr_last[10 - cpp_offset] = luis.working_fluid.Entropy;
+                        m_dens_last[14 - cpp_offset] = m_dens_last[10 - cpp_offset] = luis.working_fluid.Density;
+                    }
+
+                    // Knowing the specific work of the the recompressing compressor, the required mass flow rate can be determined.
+                    m_dot_t = m_W_dot_net / (w_mc2 * (1.0 - m_recomp_frac) + w_rc * m_recomp_frac + w_t + w_trh + w_mc1 + w_mc3);           // total mass flow rate(through turbine)
+                    if (m_dot_t < 0.0)              // positive power output is not possible with these inputs
+                    {
+                        return;
+                    }
+                    m_dot_rc = m_dot_t * m_recomp_frac;
+                    m_dot_mc = m_dot_t - m_dot_rc;
+
+                    //property_error_code = CO2_TP(m_temp_last[9 - cpp_offset], m_pres_last[9 - cpp_offset]);
+                    working_fluid.FindStateWithTP(m_temp_last[9 - cpp_offset], m_pres_last[9 - cpp_offset]);
+                    m_enth_last[9 - cpp_offset] = working_fluid.Enthalpy;
+
+                    // Calculate the UA value of the low-temperature recuperator.
+                    if (UA_LT < 1E-12)           // no low-temp recuperator (this check is necessary to prevent pressure drops with UA=0 from causing problems)
+                        Q_dot_LT = 0.0;
+                    else
+                        Q_dot_LT = m_dot_t * (m_enth_last[8 - cpp_offset] - m_enth_last[9 - cpp_offset]);
+
+                    int sub_error_code_6 = 0;
+                    calculate_hxr_UA_nuevo(m_N_sub_hxrs, Q_dot_LT, m_dot_mc, m_dot_t, m_temp_last[2 - cpp_offset], m_temp_last[8 - cpp_offset],
+                        m_pres_last[2 - cpp_offset], m_pres_last[3 - cpp_offset], m_pres_last[8 - cpp_offset], m_pres_last[9 - cpp_offset],
+                        ref sub_error_code_6, ref UA_LT_calc, ref min_DT_LT);
+
+                    if (sub_error_code_6 > 0)
+                    {
+                        if (sub_error_code_6 == 11)     // second - law violation in hxr, therefore temp(9) is too low
+                        {
+                            T9_lower_bound = m_temp_last[9 - cpp_offset];
+                            m_temp_last[9 - cpp_offset] = (T9_lower_bound + T9_upper_bound) * 0.5;      // bisect bounds for next guess
+                            continue;       // cycle T9_loop
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+
+                    // Check for convergence and adjust T9 appropriately.
+                    double UA_LT_residual = UA_LT - UA_LT_calc;
+                    if (Math.Abs(UA_LT_residual) < 1E-12)
+                        break;      // 'exit T9_loop' catches no LT case
+
+                    double secant_guess1 = m_temp_last[9 - cpp_offset] - UA_LT_residual * (last_T9_guess - m_temp_last[9 - cpp_offset]) / (last_LT_residual - UA_LT_residual);   // next guess predicted using secant method
+
+                    if (UA_LT_residual < 0.0)           // UA_LT_calc is too big, temp(9) needs to be higher
+                    {
+                        if (Math.Abs(UA_LT_residual) / UA_LT < m_tol)
+                            break;  // 'exit T9_loop' UA_LT converged (residual is negative)
+                        T9_lower_bound = m_temp_last[9 - cpp_offset];
+                    }
+                    else            // UA_LT_calc is too small, temp(9) needs to be lower
+                    {
+                        if (UA_LT_residual / UA_LT < m_tol)
+                            break; // 'exit T9_loop' UA_LT converged
+                        T9_upper_bound = m_temp_last[9 - cpp_offset];
+                    }
+                    last_LT_residual = UA_LT_residual;              // reset last stored residual value
+                    last_T9_guess = m_temp_last[9 - cpp_offset];            // reset last stored guess value
+
+                    // Check if the secant method overshoots and fall back to bisection if it does.
+                    if (secant_guess1 <= T9_lower_bound || secant_guess1 >= T9_upper_bound || secant_guess1 != secant_guess1)
+                        m_temp_last[9 - cpp_offset] = (T9_lower_bound + T9_upper_bound) * 0.5;
+                    else
+                        m_temp_last[9 - cpp_offset] = secant_guess1;
+
+                }       // End iteration T9
+
+                // Check that T9_loop converged.
+                if (T9_iter >= max_iter)
+                {
+                    return;
+                }
+
+                // State 3 can now be fully defined.
+                m_enth_last[3 - cpp_offset] = m_enth_last[2 - cpp_offset] + Q_dot_LT / m_dot_mc;        // energy balance on cold stream of low-temp recuperator
+
+                //property_error_code = CO2_PH(m_pres_last[3 - cpp_offset], m_enth_last[3 - cpp_offset]);
+                wmm = working_fluid.MolecularWeight;
+                working_fluid.FindStatueWithPH(m_pres_last[3 - cpp_offset], m_enth_last[3 - cpp_offset] * wmm);
+
+                if (property_error_code != 0)
+                {
+                    return;
+                }
+
+                m_temp_last[3 - cpp_offset] = working_fluid.Temperature;
+                m_entr_last[3 - cpp_offset] = working_fluid.Entropy;
+                m_dens_last[3 - cpp_offset] = working_fluid.Density;
+
+                // Go through mixing valve
+                if (m_recomp_frac >= 1E-12)
+                {
+                    m_enth_last[4 - cpp_offset] = (1.0 - m_recomp_frac) * m_enth_last[3 - cpp_offset] + m_recomp_frac * m_enth_last[10 - cpp_offset];       // conservation of energy (both sides divided by m_dot_t
+
+                    //property_error_code = CO2_PH(m_pres_last[4 - cpp_offset], m_enth_last[4 - cpp_offset]);
+                    wmm = working_fluid.MolecularWeight;
+                    working_fluid.FindStatueWithPH(m_pres_last[4 - cpp_offset], m_enth_last[4 - cpp_offset] * wmm);
+
+                    if (property_error_code != 0)
+                    {
+                        return;
+                    }
+                    m_temp_last[4 - cpp_offset] = working_fluid.Temperature;
+                    m_entr_last[4 - cpp_offset] = working_fluid.Entropy;
+                    m_dens_last[4 - cpp_offset] = working_fluid.Density;
+                }
+                else        // no mixing value, therefore (4) is equal to (3)
+                {
+                    m_temp_last[4 - cpp_offset] = m_temp_last[3 - cpp_offset];
+                    m_enth_last[4 - cpp_offset] = m_enth_last[3 - cpp_offset];
+                    m_entr_last[4 - cpp_offset] = m_entr_last[3 - cpp_offset];
+                    m_dens_last[4 - cpp_offset] = m_dens_last[3 - cpp_offset];
+                }
+
+                // Check for a second law violation at the outlet of the high-temp recuperator.
+                if (m_temp_last[4 - cpp_offset] >= m_temp_last[8 - cpp_offset])     // temp(8) is not valid; it must be higher than it is
+                {
+                    T8_lower_bound = m_temp_last[8 - cpp_offset];
+                    m_temp_last[8 - cpp_offset] = (T8_lower_bound + T8_upper_bound) * 0.5;
+                    continue;       // cycle T8_loop
+                }
+
+                // Calculate the UA value of the high-temperature recuperator.
+                if (UA_HT < 1E-12)       // no high-temp recuperator (this check is necessary to prevent pressure drops with UA=0 from causing problems)
+                    Q_dot_HT = 0.0;
+                else
+                    Q_dot_HT = m_dot_t * (m_enth_last[7 - cpp_offset] - m_enth_last[8 - cpp_offset]);
+
+                int sub_error_code_7 = 0;
+                calculate_hxr_UA_nuevo(m_N_sub_hxrs, Q_dot_HT, m_dot_t, m_dot_t, m_temp_last[4 - cpp_offset], m_temp_last[7 - cpp_offset],
+                    m_pres_last[4 - cpp_offset], m_pres_last[5 - cpp_offset], m_pres_last[7 - cpp_offset], m_pres_last[8 - cpp_offset],
+                    ref sub_error_code_7, ref UA_HT_calc, ref min_DT_HT);
+
+                if (sub_error_code_7 > 0)
+                {
+                    if (sub_error_code_7 == 1)      // 2nd law violation in hxr, therefore temp(8) is too low
+                    {
+                        T8_lower_bound = m_temp_last[8 - cpp_offset];
+                        m_temp_last[8 - cpp_offset] = (T8_lower_bound + T8_upper_bound) * 0.5;  // bisect bounds for next guess
+                        continue;   // cycle T8_loop
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+
+                // Check for convergence and adjust T8 appropriately.
+                double UA_HT_residual = UA_HT - UA_HT_calc;
+
+                if (Math.Abs(UA_HT_residual) < 1E-12)
+                    break;          // exit T8_loop  !catches no HT case
+
+                double secant_guess = m_temp_last[8 - cpp_offset] - UA_HT_residual * (last_T8_guess - m_temp_last[8 - cpp_offset]) / (last_HT_residual - UA_HT_residual);       // next guess predicted using secant method
+
+                if (UA_HT_residual < 0.0)           // UA_HT_calc is too big, temp(8) needs to be higher
+                {
+                    if (Math.Abs(UA_HT_residual) / UA_HT < m_tol)
+                        break;      // exit T8_loop    UA_HT converged (residual is negative)
+                    T8_lower_bound = m_temp_last[8 - cpp_offset];
+                }
+                else                                // UA_HT_calc is too small, temp(8) needs to be larger
+                {
+                    if (UA_HT_residual / UA_HT < m_tol)
+                        break;      // exit T8_loop    UA_HT converged
+                    T8_upper_bound = m_temp_last[8 - cpp_offset];
+                }
+                last_HT_residual = UA_HT_residual;          // reset last stored residual value
+                last_T8_guess = m_temp_last[8 - cpp_offset];        // reset last stored guess value
+
+                // Check if the secant method overshoots and fall back to bisection if it does.
+                if (secant_guess <= T8_lower_bound || secant_guess >= T8_upper_bound)       // secant method overshot, use bisection
+                    m_temp_last[8 - cpp_offset] = (T8_lower_bound + T8_upper_bound) * 0.5;
+                else
+                    m_temp_last[8 - cpp_offset] = secant_guess;
+
+            }       // End iteration on T8
+
+            // Check that T8_loop converged
+            if (T8_iter >= max_iter)
+            {
+                return;
+            }
+
+            // State 5 can now be fully defined
+            m_enth_last[5 - cpp_offset] = m_enth_last[4 - cpp_offset] + Q_dot_HT / m_dot_t;     // Energy balance on cold stream of high-temp recuperator
+
+            //property_error_code = CO2_PH(m_pres_last[5 - cpp_offset], m_enth_last[5 - cpp_offset]);
+            wmm = working_fluid.MolecularWeight;
+            working_fluid.FindStatueWithPH(m_pres_last[5 - cpp_offset], m_enth_last[5 - cpp_offset] * wmm);
+
+            m_temp_last[5 - cpp_offset] = working_fluid.Temperature;
+            m_entr_last[5 - cpp_offset] = working_fluid.Entropy;
+            m_dens_last[5 - cpp_offset] = working_fluid.Density;
+
+            // Recompression Cycle
+            double Q_dot_PHX = m_dot_t * (m_enth_last[6 - cpp_offset] - m_enth_last[5 - cpp_offset]);
+            double Q_dot_RHX = m_dot_t * (m_enth_last[16 - cpp_offset] - m_enth_last[15 - cpp_offset]);
+            double m_W_dot_net_last = w_mc2 * m_dot_mc + w_rc * m_dot_rc + w_t * m_dot_t + w_trh * m_dot_t + w_mc1 * m_dot_t + w_mc3 * m_dot_t;
+            double m_eta_thermal_last = m_W_dot_net_last / (Q_dot_PHX + Q_dot_RHX);
+
+            // Set cycle state point properties.
+            cicloPCRC_withTwoIntercooling_withRH.temp = m_temp_last;
+            cicloPCRC_withTwoIntercooling_withRH.pres = m_pres_last;
+            cicloPCRC_withTwoIntercooling_withRH.enth = m_enth_last;
+            cicloPCRC_withTwoIntercooling_withRH.entr = m_entr_last;
+            cicloPCRC_withTwoIntercooling_withRH.dens = m_dens_last;
+
+            // Calculate performance metrics for LTR low-temperature recuperator.
+            cicloPCRC_withTwoIntercooling_withRH.LT.C_dot_hot = m_dot_t * (m_enth_last[8 - cpp_offset] - m_enth_last[9 - cpp_offset]) / (m_temp_last[8 - cpp_offset] - m_temp_last[9 - cpp_offset]);   // LT recuperator hot stream capacitance rate
+            cicloPCRC_withTwoIntercooling_withRH.LT.C_dot_cold = m_dot_mc * (m_enth_last[3 - cpp_offset] - m_enth_last[2 - cpp_offset]) / (m_temp_last[3 - cpp_offset] - m_temp_last[2 - cpp_offset]);  // LT recuperator cold stream capacitance rate
+            double C_dot_min_LT = Math.Min(cicloPCRC_withTwoIntercooling_withRH.LT.C_dot_hot, cicloPCRC_withTwoIntercooling_withRH.LT.C_dot_cold);
+            double Q_dot_max_LT = C_dot_min_LT * (m_temp_last[8 - cpp_offset] - m_temp_last[2 - cpp_offset]);
+            cicloPCRC_withTwoIntercooling_withRH.LT.eff = Q_dot_LT / Q_dot_max_LT;  // definition of effectiveness
+            cicloPCRC_withTwoIntercooling_withRH.LT.UA_design = UA_LT_calc;
+            cicloPCRC_withTwoIntercooling_withRH.LT.UA = UA_LT_calc;
+            cicloPCRC_withTwoIntercooling_withRH.LT.DP_design1 = m_pres_last[2 - cpp_offset] - m_pres_last[3 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.LT.DP_design2 = m_pres_last[8 - cpp_offset] - m_pres_last[9 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.LT.m_dot_design[0] = m_dot_mc;
+            cicloPCRC_withTwoIntercooling_withRH.LT.m_dot_design[1] = m_dot_t;
+            cicloPCRC_withTwoIntercooling_withRH.LT.T_c_in = m_temp_last[2 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.LT.T_h_in = m_temp_last[8 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.LT.P_c_in = m_pres_last[2 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.LT.P_h_in = m_pres_last[8 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.LT.P_c_out = m_pres_last[3 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.LT.P_h_out = m_pres_last[9 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.LT.Q_dot = Q_dot_LT;
+            cicloPCRC_withTwoIntercooling_withRH.LT.min_DT = min_DT_LT;
+            cicloPCRC_withTwoIntercooling_withRH.LT.N_sub = m_N_sub_hxrs;
+
+            //Calculate performance metrics for HTR high-temperature recuperator.
+            cicloPCRC_withTwoIntercooling_withRH.HT.C_dot_hot = m_dot_t * (m_enth_last[7 - cpp_offset] - m_enth_last[8 - cpp_offset]) / (m_temp_last[7 - cpp_offset] - m_temp_last[8 - cpp_offset]);   // HT recuperator hot stream capacitance rate
+            cicloPCRC_withTwoIntercooling_withRH.HT.C_dot_cold = m_dot_t * (m_enth_last[5 - cpp_offset] - m_enth_last[4 - cpp_offset]) / (m_temp_last[5 - cpp_offset] - m_temp_last[4 - cpp_offset]);  // HT recuperator cold stream capacitance rate
+            double C_dot_min_HT = Math.Min(cicloPCRC_withTwoIntercooling_withRH.HT.C_dot_hot, cicloPCRC_withTwoIntercooling_withRH.HT.C_dot_cold);
+            double Q_dot_max_HT = C_dot_min_HT * (m_temp_last[7 - cpp_offset] - m_temp_last[4 - cpp_offset]);
+            cicloPCRC_withTwoIntercooling_withRH.HT.eff = Q_dot_HT / Q_dot_max_HT;  // definition of effectiveness
+            cicloPCRC_withTwoIntercooling_withRH.HT.UA_design = UA_HT_calc;
+            cicloPCRC_withTwoIntercooling_withRH.HT.UA = UA_HT_calc;
+            cicloPCRC_withTwoIntercooling_withRH.HT.DP_design1 = m_pres_last[4 - cpp_offset] - m_pres_last[5 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.HT.DP_design2 = m_pres_last[7 - cpp_offset] - m_pres_last[8 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.HT.m_dot_design[0] = m_dot_t;
+            cicloPCRC_withTwoIntercooling_withRH.HT.m_dot_design[1] = m_dot_t;
+            cicloPCRC_withTwoIntercooling_withRH.HT.T_c_in = m_temp_last[4 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.HT.T_h_in = m_temp_last[7 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.HT.P_c_in = m_pres_last[4 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.HT.P_h_in = m_pres_last[7 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.HT.P_c_out = m_pres_last[5 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.HT.P_h_out = m_pres_last[8 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.HT.Q_dot = Q_dot_HT;
+            cicloPCRC_withTwoIntercooling_withRH.HT.min_DT = min_DT_HT;
+            cicloPCRC_withTwoIntercooling_withRH.HT.N_sub = m_N_sub_hxrs;
+
+            // Set relevant values for other heat exchangers (PHX, RHX, PC).
+            cicloPCRC_withTwoIntercooling_withRH.PHX.Q_dot = m_dot_t * (m_enth_last[6 - cpp_offset] - m_enth_last[5 - cpp_offset]);
+            cicloPCRC_withTwoIntercooling_withRH.PHX.DP_design1 = m_pres_last[5 - cpp_offset] - m_pres_last[6 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.PHX.DP_design2 = 0.0;
+            //recomp_cycle%PHX%m_dot_design = [m_dot_t, 0.0_dp]
+
+            // Set relevant values for other heat exchangers (PHX, RHX, PC).
+            cicloPCRC_withTwoIntercooling_withRH.RHX.Q_dot = m_dot_t * (m_enth_last[16 - cpp_offset] - m_enth_last[15 - cpp_offset]);
+            cicloPCRC_withTwoIntercooling_withRH.RHX.DP_design1 = m_pres_last[15 - cpp_offset] - m_pres_last[16 - cpp_offset];
+            cicloPCRC_withTwoIntercooling_withRH.RHX.DP_design2 = 0.0;
+            //recomp_cycle%PHX%m_dot_design = [m_dot_t, 0.0_dp]
+
+            cicloPCRC_withTwoIntercooling_withRH.PC1.Q_dot = (m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[11 - cpp_offset]));
+            cicloPCRC_withTwoIntercooling_withRH.PC1.DP_design1 = 0.0;
+            cicloPCRC_withTwoIntercooling_withRH.PC1.DP_design2 = m_pres_last[9 - cpp_offset] - m_pres_last[11 - cpp_offset];
+            //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
+
+            cicloPCRC_withTwoIntercooling_withRH.PC2.Q_dot = (m_dot_t * (m_enth_last[12 - cpp_offset] - m_enth_last[13 - cpp_offset]));
+            cicloPCRC_withTwoIntercooling_withRH.PC2.DP_design1 = 0.0;
+            cicloPCRC_withTwoIntercooling_withRH.PC2.DP_design2 = m_pres_last[12 - cpp_offset] - m_pres_last[13 - cpp_offset];
+            //recomp_cycle%PC%m_dot_design = [0.0_dp, m_dot_mc]
+
+            cicloPCRC_withTwoIntercooling_withRH.COOLER.Q_dot = (m_dot_mc * (m_enth_last[14 - cpp_offset] - m_enth_last[1 - cpp_offset]));
+            cicloPCRC_withTwoIntercooling_withRH.COOLER.DP_design1 = 0.0;
+            cicloPCRC_withTwoIntercooling_withRH.COOLER.DP_design2 = m_pres_last[14 - cpp_offset] - m_pres_last[1 - cpp_offset];
+
+            // Calculate cycle performance metrics.
+            cicloPCRC_withTwoIntercooling_withRH.recomp_frac = m_recomp_frac;
+
+            cicloPCRC_withTwoIntercooling_withRH.W_dot_net = w_mc2 * m_dot_mc + w_rc * m_dot_rc + w_t * m_dot_t + w_trh * m_dot_t + w_mc1 * m_dot_t + w_mc3 * m_dot_t;
+
+            cicloPCRC_withTwoIntercooling_withRH.eta_thermal = cicloPCRC_withTwoIntercooling_withRH.W_dot_net / (cicloPCRC_withTwoIntercooling_withRH.PHX.Q_dot + cicloPCRC_withTwoIntercooling_withRH.RHX.Q_dot);
+
+            cicloPCRC_withTwoIntercooling_withRH.m_dot_turbine = m_dot_t;
+            cicloPCRC_withTwoIntercooling_withRH.conv_tol = m_tol;
+        }
+
+
+        public void RecompCycle_PCRC_withTwoIntercooling_with_Reheating_for_optimization(core luis, ref core.PCRCwithTwoIntercoolingWithReheating cicloPCRC_withTwoIntercooling_withRH, Double m_W_dot_net,
+          Double m_T_t_in, Double m_P_trh_in, Double m_T_trh_in, Double m_T_mc2_in, Double P_mc2_in, Double m_P_mc2_out, Double m_P_mc1_in, Double m_T_mc1_in, Double m_P_mc1_out,
+          Double m_P_mc3_in, Double m_T_mc3_in, Double m_P_mc3_out, Double LT_fraction, Double UA_Total, Double m_eta_mc2, Double m_eta_rc, Double m_eta_mc1, Double m_eta_mc3, Double m_eta_t,
+          Double m_eta_trh, Int64 m_N_sub_hxrs, Double m_recomp_frac, Double m_tol, Double eta_thermal2, Double dp2_lt1, Double dp2_lt2, Double dp2_ht1, Double dp2_ht2,
+          Double dp2_pc1, Double dp2_pc2, Double dp2_pc3, Double dp2_pc4, Double dp2_phx1, Double dp2_phx2, Double dp2_rhx1, Double dp2_rhx2, Double dp2_cooler1, Double dp2_cooler2)
+        {
+            double UA_LT = UA_Total * LT_fraction;
+            double UA_HT = UA_Total * (1 - LT_fraction);
+
+            int cpp_offset = 1;
+            double[] m_temp_last = new double[16];
+            double[] m_pres_last = new double[16];
+            double[] m_entr_last = new double[16];
+            double[] m_enth_last = new double[16];
+            double[] m_dens_last = new double[16];
+
+            double[] m_DP_HT = new double[2];
+            m_DP_HT[0] = dp2_ht1;
+            m_DP_HT[1] = dp2_ht2;
+
+            double[] m_DP_LT = new double[2];
+            m_DP_LT[0] = dp2_lt1;
+            m_DP_LT[1] = dp2_lt2;
+
+            double[] m_DP_PC1 = new double[2];
+            m_DP_PC1[1] = dp2_pc1;
+
+            double[] m_DP_PC2 = new double[2];
+            m_DP_PC2[1] = dp2_cooler2;
+
+            double[] m_DP_PC3 = new double[2];
+            m_DP_PC3[1] = dp2_pc3;
+
+            double[] m_DP_PHX = new double[2];
+            m_DP_PHX[0] = dp2_phx1;
+
+            double[] m_DP_RHX = new double[2];
+            m_DP_RHX[0] = dp2_rhx1;
+
+
+            int max_iter = 100;
+
+            //	// Set RecompCycle member variable
+            //	W_dot_net   = I_W_dot_net;		
+            //	conv_tol    = tol;
+            //	recomp_frac = I_recomp_frac;
+
+            // Set other variables that need to reported at end of this function
+            double min_DT_LT = 0.0;
+            double min_DT_HT = 0.0;
+
+            double m_dot_t = 0.0;
+            double m_dot_mc = 0.0;
+            double m_dot_rc = 0.0;
+            double w_mc1 = 0.0;
+            double w_mc2 = 0.0;
+            double w_mc3 = 0.0;
+            double w_rc = 0.0;
+            double w_t = 0.0;
+            double w_trh = 0.0;
+            double Q_dot_LT = 0.0;
+            double Q_dot_HT = 0.0;
+            double UA_LT_calc = 0.0;
+            double UA_HT_calc = 0.0;
+            //double m_recomp_frac = 0.25;
+
+            //double m_T_mc1_in = 32 + 273.15; 
+            //double m_P_mc1_in = 7400;
+            //double m_P_mc1_out = 25000;
+            //double m_P_mc2_out = 25000;
+            //double m_PR_mc1 = 2.427184466019417;
+            //double m_T_t_in = 550 + 273.15;
+            //double m_T_mc2_in = 32 + 273.15;
+            //double m_UA_rec_total = 10000;
+            //double m_LT_frac = 0.5;
+            //double m_W_dot_net = 50000;
+            //double m_eta_mc1 = 0.89;
+            //double m_eta_mc2 = 0.89;
+            //double m_eta_rc = 0.89;
+            //double m_eta_t = 0.93;
+            //double m_tol = 0.00001;
+            //Int64 m_N_sub_hxrs = 15;
+
+            m_temp_last[1 - cpp_offset] = m_T_mc2_in;
+            m_temp_last[13 - cpp_offset] = m_T_mc1_in;
+            m_pres_last[13 - cpp_offset] = m_P_mc1_in;
+            m_pres_last[14 - cpp_offset] = m_P_mc1_out;
+            m_temp_last[11 - cpp_offset] = m_T_mc3_in;
+            m_pres_last[11 - cpp_offset] = m_P_mc3_in;
+            m_pres_last[12 - cpp_offset] = m_P_mc3_out;
+            //double P_mc2_in = m_P_mc1_out / m_PR_mc1;
+            m_pres_last[1 - cpp_offset] = P_mc2_in;
+            m_pres_last[2 - cpp_offset] = m_P_mc2_out;
+            m_temp_last[6 - cpp_offset] = m_T_t_in;
+            m_temp_last[16 - cpp_offset] = m_T_trh_in;
+            m_pres_last[16 - cpp_offset] = m_P_trh_in;
+
+            // Apply pressure drops to heat exchangers, fully defining the pressures at all stages
+            if (m_DP_LT[1 - cpp_offset] < 0.0)
+                m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset] - m_pres_last[2 - cpp_offset] * Math.Abs(m_DP_LT[1 - cpp_offset]);     // Relative pressure drop specified for LT recuperator (cold stream)
+            else
+                m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset] - m_DP_LT[1 - cpp_offset];                                    // Absolute pressure drop specified for LT recuperator (cold stream)
+
+            //double UA_LT = m_UA_rec_total * m_LT_frac;
+            //double UA_HT = m_UA_rec_total * (1 - m_LT_frac);
+
+            if (UA_LT < 1E-12)
+                m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset];      // if there is no LT recuperator, there is no pressure drop
+
+            m_pres_last[4 - cpp_offset] = m_pres_last[3 - cpp_offset];          // No pressure drop in mixing value
+            m_pres_last[10 - cpp_offset] = m_pres_last[3 - cpp_offset];         // No pressure drop in mixing value
+
+            if (m_DP_HT[1 - cpp_offset] < 0.0)
+                m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset] - m_pres_last[4 - cpp_offset] * Math.Abs(m_DP_HT[1 - cpp_offset]); // relative pressure drop specified for HT recuperator (cold stream)
+            else
+                m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset] - m_DP_HT[1 - cpp_offset];                                // absolute pressure drop specified for HT recuperator (cold stream)
+
+            if (UA_HT < 1E-12)
+                m_pres_last[5 - cpp_offset] = m_pres_last[4 - cpp_offset];      // if there is no HT recuperator, there is no pressure drop
+
+            if (m_DP_PHX[1 - cpp_offset] < 0.0)
+                m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_pres_last[5 - cpp_offset] * Math.Abs(m_DP_PHX[1 - cpp_offset]);    // relative pressure drop specified for PHX
+            else
+                m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset] - m_DP_PHX[1 - cpp_offset];                               // absolute pressure drop specified for PHX
+
+            if (m_DP_RHX[1 - cpp_offset] < 0.0)
+                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_pres_last[16 - cpp_offset] * Math.Abs(m_DP_RHX[1 - cpp_offset]);    // relative pressure drop specified for RHX
+            else
+                m_pres_last[15 - cpp_offset] = m_pres_last[16 - cpp_offset] + m_DP_RHX[1 - cpp_offset];                               // absolute pressure drop specified for RHX
+
+            if (m_DP_PC1[2 - cpp_offset] < 0.0)
+                m_pres_last[9 - cpp_offset] = m_pres_last[11 - cpp_offset] / (1.0 - Math.Abs(m_DP_PC1[2 - cpp_offset]));         // relative pressure drop specified for precooler [P1 = P9 - P9*rel_DP => P1 = P9*(1-rel_DP)
+            else
+                m_pres_last[9 - cpp_offset] = m_pres_last[11 - cpp_offset] + m_DP_PC1[2 - cpp_offset];                                      // absolute pressure drop specified for precooler
+
+            if (m_DP_PC2[2 - cpp_offset] < 0.0)
+                m_pres_last[12 - cpp_offset] = m_pres_last[13 - cpp_offset] / (1.0 - Math.Abs(m_DP_PC2[2 - cpp_offset]));         // relative pressure drop specified for precooler [P1 = P9 - P9*rel_DP => P1 = P9*(1-rel_DP)
+            else
+                m_pres_last[12 - cpp_offset] = m_pres_last[13 - cpp_offset] + m_DP_PC2[2 - cpp_offset];
+
+            if (m_DP_PC3[2 - cpp_offset] < 0.0)
+                m_pres_last[14 - cpp_offset] = m_pres_last[1 - cpp_offset] / (1.0 - Math.Abs(m_DP_PC3[2 - cpp_offset]));         // relative pressure drop specified for precooler [P1 = P9 - P9*rel_DP => P1 = P9*(1-rel_DP)
+            else
+                m_pres_last[14 - cpp_offset] = m_pres_last[1 - cpp_offset] + m_DP_PC3[2 - cpp_offset];
+
+            if (m_DP_LT[2 - cpp_offset] < 0.0)
+                m_pres_last[8 - cpp_offset] = m_pres_last[9 - cpp_offset] / (1.0 - Math.Abs(m_DP_LT[2 - cpp_offset]));           // relative pressure drop specified for LT recuperator (hot stream)
+            else
+                m_pres_last[8 - cpp_offset] = m_pres_last[9 - cpp_offset] + m_DP_LT[2 - cpp_offset];                        // absolute pressure drop specified for LT recuperator (hot stream)
+
+            if (UA_LT < 1E-12)
+                m_pres_last[8 - cpp_offset] = m_pres_last[9 - cpp_offset];      // if there is no LT recup, there is no pressure drop
+
+            if (m_DP_HT[2 - cpp_offset] < 0.0)
+                m_pres_last[7 - cpp_offset] = m_pres_last[8 - cpp_offset] / (1.0 - Math.Abs(m_DP_HT[2 - cpp_offset]));           // relative pressure drop specified for HT recup
+            else
+                m_pres_last[7 - cpp_offset] = m_pres_last[8 - cpp_offset] + m_DP_HT[2 - cpp_offset];                        // absolute pressure drop specified for HT recup
+
+            if (UA_HT < 1E-12)
+                m_pres_last[7 - cpp_offset] = m_pres_last[8 - cpp_offset];
+
+            int sub_error_code_1 = 0;
+            // Determine the outlet states of the main compressor1 and turbine and their specific works
+            calculate_turbomachinery_outlet_nuevo(m_temp_last[13 - cpp_offset], m_pres_last[13 - cpp_offset], m_pres_last[14 - cpp_offset], m_eta_mc1,
+                true, ref sub_error_code_1, ref m_enth_last[13 - cpp_offset], ref m_entr_last[13 - cpp_offset], ref m_dens_last[13 - cpp_offset],
+                ref m_temp_last[14 - cpp_offset], ref m_enth_last[14 - cpp_offset], ref m_entr_last[14 - cpp_offset], ref m_dens_last[14 - cpp_offset], ref w_mc1);
+
+            //if (sub_error_code_1 != 0)
+            //{
+            //    m_errors.SetError(22);
+            //    m_errors.SetError(sub_error_code_1);
+            //    return false;
+            //}
+
+            int sub_error_code_2 = 0;
+            // Determine the outlet states of the main compressor2 and turbine and their specific works
+            calculate_turbomachinery_outlet_nuevo(m_temp_last[1 - cpp_offset], m_pres_last[1 - cpp_offset], m_pres_last[2 - cpp_offset], m_eta_mc2,
+                true, ref sub_error_code_2, ref m_enth_last[1 - cpp_offset], ref m_entr_last[1 - cpp_offset], ref m_dens_last[1 - cpp_offset],
+                ref m_temp_last[2 - cpp_offset], ref m_enth_last[2 - cpp_offset], ref m_entr_last[2 - cpp_offset], ref m_dens_last[2 - cpp_offset], ref w_mc2);
+
+            //if (sub_error_code_2 != 0)
+            //{
+            //    m_errors.SetError(22);
+            //    m_errors.SetError(sub_error_code_2);
+            //    return false;
+            //}
+
+            int sub_error_code_21 = 0;
+            // Determine the outlet states of the main compressor3 and turbine and their specific works
+            calculate_turbomachinery_outlet_nuevo(m_temp_last[11 - cpp_offset], m_pres_last[11 - cpp_offset], m_pres_last[12 - cpp_offset], m_eta_mc3,
+                true, ref sub_error_code_21, ref m_enth_last[11 - cpp_offset], ref m_entr_last[11 - cpp_offset], ref m_dens_last[11 - cpp_offset],
+                ref m_temp_last[12 - cpp_offset], ref m_enth_last[12 - cpp_offset], ref m_entr_last[12 - cpp_offset], ref m_dens_last[12 - cpp_offset], ref w_mc3);
+
+            //if (sub_error_code_2 != 0)
+            //{
+            //    m_errors.SetError(22);
+            //    m_errors.SetError(sub_error_code_2);
+            //    return false;
+            //}
+
+            int sub_error_code_31 = 0;
+            calculate_turbomachinery_outlet_nuevo(m_temp_last[6 - cpp_offset], m_pres_last[6 - cpp_offset], m_pres_last[15 - cpp_offset], m_eta_t,
+                false, ref sub_error_code_31, ref m_enth_last[6 - cpp_offset], ref m_entr_last[6 - cpp_offset], ref m_dens_last[6 - cpp_offset],
+                ref m_temp_last[15 - cpp_offset], ref m_enth_last[15 - cpp_offset], ref m_entr_last[15 - cpp_offset], ref m_dens_last[15 - cpp_offset], ref w_t);
+
+            int sub_error_code_32 = 0;
+            calculate_turbomachinery_outlet_nuevo(m_temp_last[16 - cpp_offset], m_pres_last[16 - cpp_offset], m_pres_last[7 - cpp_offset], m_eta_trh,
+                false, ref sub_error_code_32, ref m_enth_last[16 - cpp_offset], ref m_entr_last[16 - cpp_offset], ref m_dens_last[16 - cpp_offset],
+                ref m_temp_last[7 - cpp_offset], ref m_enth_last[7 - cpp_offset], ref m_entr_last[7 - cpp_offset], ref m_dens_last[7 - cpp_offset], ref w_trh);
+
+            // Check to ensure this cycle can produce power under the best conditions(ie, temp(9) = temp(2) if there is a recompressing compressor).
+            w_rc = 0.0;
+
+            if (m_recomp_frac >= 1E-12)
+            {
+                double[] dummy = new double[7];
+
+                int sub_error_code_4 = 0;
+                calculate_turbomachinery_outlet_nuevo(m_temp_last[14 - cpp_offset], m_pres_last[14 - cpp_offset], m_pres_last[10 - cpp_offset], m_eta_rc,
+                    true, ref sub_error_code_4, ref dummy[0], ref dummy[1], ref dummy[2], ref dummy[3], ref dummy[4], ref dummy[5], ref dummy[6], ref w_rc);
+            }
+
+            if (w_mc1 + w_mc2 + w_mc3 + w_rc + w_t + w_trh <= 0.0)
             {
                 return;
             }
