@@ -2578,7 +2578,8 @@ namespace RefPropWindowsForms
         //Optimization analysis
         private void button37_Click(object sender, EventArgs e)
         {
-
+            PCRCMCI_with_ReHeating_Optimization_Analysis_Results PCRCMCI_with_ReHeating_Optimization_Analysis_Results_window = new PCRCMCI_with_ReHeating_Optimization_Analysis_Results(this);
+            PCRCMCI_with_ReHeating_Optimization_Analysis_Results_window.Show();
         }
     }
 }
