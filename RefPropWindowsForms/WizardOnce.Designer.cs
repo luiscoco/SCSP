@@ -38,10 +38,16 @@
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,7 +91,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel1.Location = new System.Drawing.Point(479, 320);
+            this.linkLabel1.Location = new System.Drawing.Point(479, 310);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(75, 15);
             this.linkLabel1.TabIndex = 185;
@@ -96,7 +102,7 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel2.Location = new System.Drawing.Point(479, 305);
+            this.linkLabel2.Location = new System.Drawing.Point(479, 295);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(79, 15);
             this.linkLabel2.TabIndex = 184;
@@ -107,7 +113,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(78, 261);
+            this.label2.Location = new System.Drawing.Point(78, 251);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(285, 44);
             this.label2.TabIndex = 182;
@@ -125,12 +131,77 @@
             // 
             this.linkLabel6.AutoSize = true;
             this.linkLabel6.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel6.Location = new System.Drawing.Point(479, 335);
+            this.linkLabel6.Location = new System.Drawing.Point(479, 325);
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.Size = new System.Drawing.Size(64, 15);
             this.linkLabel6.TabIndex = 187;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Reference";
+            // 
+            // linkLabel7
+            // 
+            this.linkLabel7.Location = new System.Drawing.Point(0, 0);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(100, 23);
+            this.linkLabel7.TabIndex = 192;
+            // 
+            // linkLabel8
+            // 
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel8.Location = new System.Drawing.Point(479, 566);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(64, 15);
+            this.linkLabel8.TabIndex = 197;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "Reference";
+            // 
+            // linkLabel9
+            // 
+            this.linkLabel9.AutoSize = true;
+            this.linkLabel9.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel9.Location = new System.Drawing.Point(479, 551);
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.Size = new System.Drawing.Size(75, 15);
+            this.linkLabel9.TabIndex = 196;
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.Text = "Optimization";
+            // 
+            // linkLabel10
+            // 
+            this.linkLabel10.AutoSize = true;
+            this.linkLabel10.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel10.Location = new System.Drawing.Point(479, 536);
+            this.linkLabel10.Name = "linkLabel10";
+            this.linkLabel10.Size = new System.Drawing.Size(79, 15);
+            this.linkLabel10.TabIndex = 195;
+            this.linkLabel10.TabStop = true;
+            this.linkLabel10.Text = "Design-Point";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(24, 492);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(449, 44);
+            this.label3.TabIndex = 193;
+            this.label3.Text = "PAPER UPM: Thermodynamic analysis of multi-heating cycles working around the crit" +
+    "ical (Luis González Portillo)\r\n";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.Image = global::RefPropWindowsForms.Properties.Resources.Paper_Luis_Gonzalez_Portillo_UPM;
+            this.pictureBox5.Location = new System.Drawing.Point(27, 536);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(446, 183);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 194;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -158,7 +229,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::RefPropWindowsForms.Properties.Resources.RC_with_PreHeating_in_parallel_with_LTR_and_Three_Recuperators_Small;
-            this.pictureBox2.Location = new System.Drawing.Point(24, 306);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 296);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(449, 196);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -184,6 +255,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.Controls.Add(this.linkLabel8);
+            this.Controls.Add(this.linkLabel9);
+            this.Controls.Add(this.linkLabel10);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.linkLabel7);
@@ -199,6 +275,7 @@
             this.Controls.Add(this.label1);
             this.Name = "WizardOnce";
             this.Text = "WizardOnce";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -223,5 +300,10 @@
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.LinkLabel linkLabel9;
+        private System.Windows.Forms.LinkLabel linkLabel10;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label3;
     }
 }
