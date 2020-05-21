@@ -741,8 +741,7 @@ namespace RefPropWindowsForms
                     releaseObject(xlWorkBook1);
                     releaseObject(xlApp1);
                 }
-            } //UA optimization true
-        
+            } //UA optimization true        
         }
 
         //CIT Optimization
