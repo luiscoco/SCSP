@@ -924,7 +924,6 @@ namespace RefPropWindowsForms
 
                         if (i == Convert.ToDouble(textBox57.Text))
                         {
-
                             if (checkBox6.Checked == true)
                             {
                                 initial_CIP_value = Convert.ToDouble(textBox1.Text);
