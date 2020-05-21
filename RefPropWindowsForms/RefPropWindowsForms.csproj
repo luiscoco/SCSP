@@ -1823,6 +1823,10 @@
     <None Include="Resources\PCRC with ReHeating ICAI proposed configuration Small.jpg" />
     <None Include="Resources\PCRC with ReHeating ICAI proposed configuration.jpg" />
     <None Include="Resources\Paper_Luis_Gonzalez_Portillo_UPM.jpg" />
+    <None Include="Resources\Ladislav_Veseley_DEMO_Fusion_1.jpg" />
+    <None Include="Resources\Ladislav_Veseley_DEMO_Fusion_2.jpg" />
+    <None Include="Resources\Ladislav_Veseley_DEMO_Fusion_3.jpg" />
+    <None Include="Resources\Ladislav_Veseley_DEMO_Fusion_4.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\PCRC with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Two Reheating Stages.jpg" />

@@ -223,6 +223,46 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ladislav_Veseley_DEMO_Fusion_1 {
+            get {
+                object obj = ResourceManager.GetObject("Ladislav_Veseley_DEMO_Fusion_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ladislav_Veseley_DEMO_Fusion_2 {
+            get {
+                object obj = ResourceManager.GetObject("Ladislav_Veseley_DEMO_Fusion_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ladislav_Veseley_DEMO_Fusion_3 {
+            get {
+                object obj = ResourceManager.GetObject("Ladislav_Veseley_DEMO_Fusion_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ladislav_Veseley_DEMO_Fusion_4 {
+            get {
+                object obj = ResourceManager.GetObject("Ladislav_Veseley_DEMO_Fusion_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LF_Collector_Details_Tab {
             get {
                 object obj = ResourceManager.GetObject("LF_Collector_Details_Tab", resourceCulture);
