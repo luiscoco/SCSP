@@ -2699,6 +2699,8 @@ namespace RefPropWindowsForms
             return;
         }
 
+        //IMPORTANTO PARA ANALIZAR!!!
+
         //OK reviewed
         public void RecompCycledesign(core luis, ref core.RecompCycle_withoutRH recomp_cycle, Double m_W_dot_net, Double m_T_mc_in,
                              Double m_T_t_in, Double P_mc_in, Double m_P_mc_out, Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX,
@@ -2768,11 +2770,18 @@ namespace RefPropWindowsForms
 
             double secant_guess;
 
+
+            //1. CONDICIONES INICIALES
+
             m_temp_last[1 - cpp_offset] = m_T_mc_in;
             //double P_mc_in = m_P_mc_out / m_PR_mc;
             m_pres_last[1 - cpp_offset] = P_mc_in;
             m_pres_last[2 - cpp_offset] = m_P_mc_out;
             m_temp_last[6 - cpp_offset] = m_T_t_in;
+
+
+
+            //2. CÁLCULO DE PRESIONES
 
             // Apply pressure drops to heat exchangers, fully defining the pressures at all stages
             if (m_DP_LT[1 - cpp_offset] < 0.0)
@@ -2825,6 +2834,9 @@ namespace RefPropWindowsForms
 
             int sub_error_code = 0;
 
+
+            //3. CALCULO DE TURBOMÁQUINAS
+
             // Determine the outlet states of the main compressor and turbine and their specific works
             calculate_turbomachinery_outlet_nuevo(m_temp_last[1 - cpp_offset], m_pres_last[1 - cpp_offset], m_pres_last[2 - cpp_offset], m_eta_mc,
                 true, ref sub_error_code, ref m_enth_last[1 - cpp_offset], ref m_entr_last[1 - cpp_offset], ref m_dens_last[1 - cpp_offset],
@@ -2872,11 +2884,14 @@ namespace RefPropWindowsForms
                 return;
             }
 
+            //4. BUCLE EXTERIOR DE T8
+
             // Outer iteration loop : temp(8), checking against UA_HT
             double T8_lower_bound = 0.0;
             double T8_upper_bound = 0.0;
             double last_HT_residual = 0.0;
             double last_T8_guess = 0.0;
+
             if (UA_HT < 1.0E-12)            // No high-temp recuperator
             {
                 T8_lower_bound = m_temp_last[7 - cpp_offset];       // No iteration necessary
@@ -2897,7 +2912,9 @@ namespace RefPropWindowsForms
             }
 
             int property_error_code = 0;
+
             int T8_iter = 0;
+
             // T8_loop
             for (T8_iter = 1; T8_iter <= max_iter; T8_iter++)
             {
@@ -2912,6 +2929,16 @@ namespace RefPropWindowsForms
                 m_enth_last[8 - cpp_offset] = luis.working_fluid.Enthalpy;
                 m_entr_last[8 - cpp_offset] = luis.working_fluid.Entropy;
                 m_dens_last[8 - cpp_offset] = luis.working_fluid.Density;
+
+
+                //------------------------------------------------------------------------------------------------------------------------
+                //------------------------------------------------------------------------------------------------------------------------
+
+
+
+                //5. BUCLE EXTERIOR DE T9
+
+                // 5.0. CONDICIONES INICIALES DE T9
 
                 // Inner iteration loop: temp(9), checking against UA_LT
                 double T9_lower_bound, T9_upper_bound, last_LT_residual, last_T9_guess;
@@ -2935,12 +2962,13 @@ namespace RefPropWindowsForms
                     last_LT_residual = UA_LT;       // know a priori that with T9=T8, UA_calc = 0 therefore residual is UA_LT - 0
                     last_T9_guess = m_temp_last[8 - cpp_offset];
                 }
+               
 
-                // T9_loop
                 int T9_iter = 0;
+                
                 for (T9_iter = 1; T9_iter <= max_iter; T9_iter++)
                 {
-                    // Determine the outlet state of the recompressor and its specific work
+                    // 5.1. CALCULO DEL RECOMPRESOR: Determine the outlet state of the recompressor and its specific work
                     if (m_recomp_frac >= 1E-12)
                     {
                         calculate_turbomachinery_outlet_nuevo(m_temp_last[9 - cpp_offset], m_pres_last[9 - cpp_offset], m_pres_last[10 - cpp_offset], m_eta_rc,
@@ -2954,6 +2982,8 @@ namespace RefPropWindowsForms
                             return;
                         }
                     }
+
+                    //5.1 LA FRACCIÓN DEL RECOMPRESIÓN ES CERO. No hay que calcular las condicones a la salida del recompresor.
                     else
                     {
                         w_rc = 0.0;     // the recompressor does not exist
@@ -2972,17 +3002,20 @@ namespace RefPropWindowsForms
                         m_dens_last[9 - cpp_offset] = m_dens_last[10 - cpp_offset] = luis.working_fluid.Density;
                     }
 
-                    // Knowing the specific work of the the recompressing compressor, the required mass flow rate can be determined.
+                    // 5.2 Knowing the specific work of the the recompressing compressor, the required mass flow rate can be determined.
                     m_dot_t = m_W_dot_net / (w_mc * (1.0 - m_recomp_frac) + w_rc * m_recomp_frac + w_t);            // total mass flow rate(through turbine)
+                    
                     if (m_dot_t < 0.0)              // positive power output is not possible with these inputs
                     {
                         error_code = 29;
                         return;
                     }
+                    
                     m_dot_rc = m_dot_t * m_recomp_frac;
+                    
                     m_dot_mc = m_dot_t - m_dot_rc;
 
-                    // Calculate the UA value of the low-temperature recuperator.
+                    // 5.3. Calculate the UA value of the low-temperature recuperator (LTR).
                     if (UA_LT < 1E-12)           // no low-temp recuperator (this check is necessary to prevent pressure drops with UA=0 from causing problems)
                         Q_dot_LT = 0.0;
                     else
@@ -2991,7 +3024,8 @@ namespace RefPropWindowsForms
                     calculate_hxr_UA_nuevo(m_N_sub_hxrs, Q_dot_LT, m_dot_mc, m_dot_t, m_temp_last[2 - cpp_offset], m_temp_last[8 - cpp_offset],
                         m_pres_last[2 - cpp_offset], m_pres_last[3 - cpp_offset], m_pres_last[8 - cpp_offset], m_pres_last[9 - cpp_offset],
                         ref sub_error_code, ref UA_LT_calc, ref min_DT_LT);
-
+                    
+                    // 5.4. Comprobar que ha dado error el cálculo del LTR 
                     if (sub_error_code > 0)
                     {
                         if (sub_error_code == 11)       // second - law violation in hxr, therefore temp(9) is too low
@@ -3007,8 +3041,9 @@ namespace RefPropWindowsForms
                         }
                     }
 
-                    // Check for convergence and adjust T9 appropriately.
+                    // 5.5. Check for convergence and adjust T9 appropriately.
                     double UA_LT_residual = UA_LT - UA_LT_calc;
+                   
                     if (Math.Abs(UA_LT_residual) < 1E-12)
                         break;      // 'exit T9_loop' catches no LT case
 
@@ -3035,22 +3070,30 @@ namespace RefPropWindowsForms
                     else
                         m_temp_last[9 - cpp_offset] = secant_guess1;
 
-                }       // End iteration T9
+                }       // 5.6 FINAL DEL BUCLE DE T9. End iteration T9
 
-                // Check that T9_loop converged.
+                // 5.7. Check that T9_loop converged.
                 if (T9_iter >= max_iter)
                 {
                     error_code = 31;
                     return;
                 }
 
-                // State 3 can now be fully defined.
+
+                //------------------------------------------------------------------------------------------------------------------------
+                //------------------------------------------------------------------------------------------------------------------------
+
+
+
+                // 6. CÁCULO DEL PUNTO 3. State 3 can now be fully defined.
                 m_enth_last[3 - cpp_offset] = m_enth_last[2 - cpp_offset] + Q_dot_LT / m_dot_mc;        // energy balance on cold stream of low-temp recuperator
 
                 //property_error_code = CO2_PH(m_pres_last[3 - cpp_offset], m_enth_last[3 - cpp_offset], &co2_props);
 
                 wmm = luis.working_fluid.MolecularWeight;
+
                 luis.working_fluid.FindStatueWithPH(m_pres_last[3 - cpp_offset], m_enth_last[3 - cpp_offset] * wmm);
+                
                 //call CO2_PH(P=pres(3), H=enth(3), error_code=error_code, temp=temp(3), entr=entr(3), dens=dens(3))
 
                 if (property_error_code != 0)
@@ -3063,7 +3106,10 @@ namespace RefPropWindowsForms
                 m_entr_last[3 - cpp_offset] = luis.working_fluid.Entropy;
                 m_dens_last[3 - cpp_offset] = luis.working_fluid.Density;
 
-                // Go through mixing valve
+
+
+
+                // 7. Go through MIXING VALVE
                 if (m_recomp_frac >= 1E-12)
                 {
                     m_enth_last[4 - cpp_offset] = (1.0 - m_recomp_frac) * m_enth_last[3 - cpp_offset] + m_recomp_frac * m_enth_last[10 - cpp_offset];       // conservation of energy (both sides divided by m_dot_t
@@ -3082,7 +3128,9 @@ namespace RefPropWindowsForms
                     m_entr_last[4 - cpp_offset] = luis.working_fluid.Entropy;
                     m_dens_last[4 - cpp_offset] = luis.working_fluid.Density;
                 }
-                else        // no mixing value, therefore (4) is equal to (3)
+
+                // NO MIXING VALVE, therefore (4) is equal to (3)
+                else
                 {
                     m_temp_last[4 - cpp_offset] = m_temp_last[3 - cpp_offset];
                     m_enth_last[4 - cpp_offset] = m_enth_last[3 - cpp_offset];
