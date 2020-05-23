@@ -230,7 +230,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 1000.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, initial_CIP_value + 1500.0, initial_CIP_value + 2500.0, 11000.0 };
+                    var initialValue = new[] { 0.2, initial_CIP_value + 3500.0, initial_CIP_value + 4500.0, initial_CIP_value + 5500.0, 11000.0 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -596,8 +596,8 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 1000.0 , 0.05});
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, initial_CIP_value + 1500.0, initial_CIP_value + 2500.0, 11000.0, 0.5 };
-
+                    var initialValue = new[] { 0.2, initial_CIP_value + 3500.0, initial_CIP_value + 4500.0, initial_CIP_value + 5500.0, 11000.0, 0.5 };
+                     
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
                         puntero_aplicacion.luis.RecompCycle_RCMCI_with_Two_Intercooling_with_Reheating_for_optimization(puntero_aplicacion.luis,

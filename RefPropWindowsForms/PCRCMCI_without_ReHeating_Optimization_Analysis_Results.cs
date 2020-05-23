@@ -237,7 +237,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, initial_CIP_value + 1000.0, initial_CIP_value + 2500.0 };
+                    var initialValue = new[] { 0.2, initial_CIP_value + 3000.0, initial_CIP_value + 4500.0, initial_CIP_value + 5500.0 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -424,28 +424,6 @@ namespace RefPropWindowsForms
                     releaseObject(xlWorkBook1);
                     releaseObject(xlApp1);
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
 
             //Optimization UA true
@@ -616,7 +594,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0 , 0.05});
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, initial_CIP_value + 1000.0, initial_CIP_value + 2500.0, 0.5 };
+                    var initialValue = new[] { 0.2, initial_CIP_value + 3000.0, initial_CIP_value + 4500.0, initial_CIP_value + 5500.0, 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
