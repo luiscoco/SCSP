@@ -1079,6 +1079,10 @@ namespace RefPropWindowsForms
                             xlWorkSheet1.Cells[4, 15] = "PTC_Pressure_Drop(bar)";
                             xlWorkSheet1.Cells[4, 16] = "LF_Apperture_Area(m2)";
                             xlWorkSheet1.Cells[4, 17] = "LF_Pressure_Drop(bar)";
+                            xlWorkSheet1.Cells[4, 18] = "ReHeating1_PTC_Apperture_Area(m2)";
+                            xlWorkSheet1.Cells[4, 19] = "ReHeating1_PTC_Pressure_Drop(bar)";
+                            xlWorkSheet1.Cells[4, 20] = "ReHeating1_LF_Apperture_Area(m2)";
+                            xlWorkSheet1.Cells[4, 21] = "ReHeating1_LF_Pressure_Drop(bar)";
                         }
 
                         using (var solver = new NLoptSolver(algorithm_type, 5, 0.000001, 10000))
@@ -1412,8 +1416,8 @@ namespace RefPropWindowsForms
                             PTC_RHX.textBox5.Text = Convert.ToString(puntero_aplicacion.pres216);
                             PTC_RHX.textBox107.Text = Convert.ToString(10);
                             PTC_RHX.button1_Click(this, e);
-                            puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC_RHX.ReflectorApertureAreaResult;
-                            puntero_aplicacion.PTC_Main_SF_Pressure_drop = PTC_RHX.Total_Pressure_DropResult;
+                            puntero_aplicacion.PTC_ReHeating_SF_Effective_Apperture_Area = PTC_RHX.ReflectorApertureAreaResult;
+                            puntero_aplicacion.PTC_ReHeating_SF_Pressure_drop = PTC_RHX.Total_Pressure_DropResult;
 
                             LF_SF_Calculation LF_RHX = new LF_SF_Calculation();
                             LF_RHX.calledForSensingAnalysis = true;
@@ -1431,8 +1435,8 @@ namespace RefPropWindowsForms
                             LF_RHX.textBox5.Text = Convert.ToString(puntero_aplicacion.pres216);
                             LF_RHX.textBox107.Text = Convert.ToString(10);
                             LF_RHX.button1_Click(this, e);
-                            puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF_RHX.ReflectorApertureAreaResult;
-                            puntero_aplicacion.LF_Main_SF_Pressure_drop = LF_RHX.Total_Pressure_DropResult;
+                            puntero_aplicacion.LF_ReHeating_SF_Effective_Apperture_Area = LF_RHX.ReflectorApertureAreaResult;
+                            puntero_aplicacion.LF_ReHeating_SF_Pressure_drop = LF_RHX.Total_Pressure_DropResult;
 
                             //Copy results to EXCEL
                             double LTR_min_DT_1 = t8_list[maxIndex] - t3_list[maxIndex];
@@ -1477,6 +1481,14 @@ namespace RefPropWindowsForms
                             xlWorkSheet1.Cells[counter_Excel + 1, 16] = puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area.ToString();
                             //LF_Pressure_Drop(bar)
                             xlWorkSheet1.Cells[counter_Excel + 1, 17] = puntero_aplicacion.LF_Main_SF_Pressure_drop.ToString();
+                            //PTC_ReHeating_1_Apperture_Area(m2)
+                            xlWorkSheet1.Cells[counter_Excel + 1, 18] = puntero_aplicacion.PTC_ReHeating_SF_Effective_Apperture_Area.ToString();
+                            //PTC_ReHeating_1_Pressure_Drop(bar)
+                            xlWorkSheet1.Cells[counter_Excel + 1, 19] = puntero_aplicacion.PTC_ReHeating_SF_Pressure_drop.ToString();
+                            //LF_ReHeating_1_Apperture_Area(m2)
+                            xlWorkSheet1.Cells[counter_Excel + 1, 20] = puntero_aplicacion.LF_ReHeating_SF_Effective_Apperture_Area.ToString();
+                            //LF_ReHeating_1_Pressure_Drop(bar)
+                            xlWorkSheet1.Cells[counter_Excel + 1, 21] = puntero_aplicacion.LF_ReHeating_SF_Pressure_drop.ToString();
 
                             counter_Excel++;
 
@@ -1689,6 +1701,14 @@ namespace RefPropWindowsForms
                             xlWorkSheet1.Cells[4, 11] = "LTR Pinch(ºC)";
                             xlWorkSheet1.Cells[4, 12] = "HTR Eff.(%)";
                             xlWorkSheet1.Cells[4, 13] = "HTR Pinch(ºC)";
+                            xlWorkSheet1.Cells[4, 14] = "PTC_Apperture_Area(m2)";
+                            xlWorkSheet1.Cells[4, 15] = "PTC_Pressure_Drop(bar)";
+                            xlWorkSheet1.Cells[4, 16] = "LF_Apperture_Area(m2)";
+                            xlWorkSheet1.Cells[4, 17] = "LF_Pressure_Drop(bar)";
+                            xlWorkSheet1.Cells[4, 18] = "ReHeating1_PTC_Apperture_Area(m2)";
+                            xlWorkSheet1.Cells[4, 19] = "ReHeating1_PTC_Pressure_Drop(bar)";
+                            xlWorkSheet1.Cells[4, 20] = "ReHeating1_LF_Apperture_Area(m2)";
+                            xlWorkSheet1.Cells[4, 21] = "ReHeating1_LF_Pressure_Drop(bar)";
                         }
 
                         using (var solver = new NLoptSolver(algorithm_type, 6, 0.000001, 10000))
@@ -2026,8 +2046,8 @@ namespace RefPropWindowsForms
                             PTC_RHX.textBox5.Text = Convert.ToString(puntero_aplicacion.pres216);
                             PTC_RHX.textBox107.Text = Convert.ToString(10);
                             PTC_RHX.button1_Click(this, e);
-                            puntero_aplicacion.PTC_Main_SF_Effective_Apperture_Area = PTC_RHX.ReflectorApertureAreaResult;
-                            puntero_aplicacion.PTC_Main_SF_Pressure_drop = PTC_RHX.Total_Pressure_DropResult;
+                            puntero_aplicacion.PTC_ReHeating_SF_Effective_Apperture_Area = PTC_RHX.ReflectorApertureAreaResult;
+                            puntero_aplicacion.PTC_ReHeating_SF_Pressure_drop = PTC_RHX.Total_Pressure_DropResult;
 
                             LF_SF_Calculation LF_RHX = new LF_SF_Calculation();
                             LF_RHX.calledForSensingAnalysis = true;
@@ -2045,8 +2065,8 @@ namespace RefPropWindowsForms
                             LF_RHX.textBox5.Text = Convert.ToString(puntero_aplicacion.pres216);
                             LF_RHX.textBox107.Text = Convert.ToString(10);
                             LF_RHX.button1_Click(this, e);
-                            puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area = LF_RHX.ReflectorApertureAreaResult;
-                            puntero_aplicacion.LF_Main_SF_Pressure_drop = LF_RHX.Total_Pressure_DropResult;
+                            puntero_aplicacion.LF_ReHeating_SF_Effective_Apperture_Area = LF_RHX.ReflectorApertureAreaResult;
+                            puntero_aplicacion.LF_ReHeating_SF_Pressure_drop = LF_RHX.Total_Pressure_DropResult;
 
                             //Copy results to EXCEL
                             double LTR_min_DT_1 = t8_list[maxIndex] - t3_list[maxIndex];
@@ -2091,6 +2111,15 @@ namespace RefPropWindowsForms
                             xlWorkSheet1.Cells[counter_Excel + 1, 16] = puntero_aplicacion.LF_Main_SF_Effective_Apperture_Area.ToString();
                             //LF_Pressure_Drop(bar)
                             xlWorkSheet1.Cells[counter_Excel + 1, 17] = puntero_aplicacion.LF_Main_SF_Pressure_drop.ToString();
+                            //PTC_Apperture_Area(m2)
+                            xlWorkSheet1.Cells[counter_Excel + 1, 18] = puntero_aplicacion.PTC_ReHeating_SF_Effective_Apperture_Area.ToString();
+                            //PTC_Pressure_Drop(bar)
+                            xlWorkSheet1.Cells[counter_Excel + 1, 19] = puntero_aplicacion.PTC_ReHeating_SF_Pressure_drop.ToString();
+                            //LF_Apperture_Area(m2)
+                            xlWorkSheet1.Cells[counter_Excel + 1, 20] = puntero_aplicacion.LF_ReHeating_SF_Effective_Apperture_Area.ToString();
+                            //LF_Pressure_Drop(bar)
+                            xlWorkSheet1.Cells[counter_Excel + 1, 21] = puntero_aplicacion.LF_ReHeating_SF_Pressure_drop.ToString();
+
 
                             counter_Excel++;
 
