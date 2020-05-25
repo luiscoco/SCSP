@@ -33,9 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
@@ -45,6 +42,9 @@
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +60,7 @@
             this.button1.TabIndex = 99;
             this.button1.Text = "Close Wizard";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -96,6 +97,108 @@
             this.label4.Text = "23. PARTIAL COOLING WITH RECOMPRESSION AND TWO COMPRESSION INTERCOOLING (PCRCMCI)" +
     " WITHOUT REHEATING STAGES";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel1.Location = new System.Drawing.Point(1009, 61);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(75, 15);
+            this.linkLabel1.TabIndex = 165;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Optimization";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel2.Location = new System.Drawing.Point(1009, 46);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(79, 15);
+            this.linkLabel2.TabIndex = 164;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Design-Point";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel3.Location = new System.Drawing.Point(973, 315);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(75, 15);
+            this.linkLabel3.TabIndex = 167;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Optimization";
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel4.Location = new System.Drawing.Point(974, 300);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(79, 15);
+            this.linkLabel4.TabIndex = 166;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Design-Point";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel5.Location = new System.Drawing.Point(1004, 559);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(75, 15);
+            this.linkLabel5.TabIndex = 169;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Optimization";
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel6.Location = new System.Drawing.Point(1004, 544);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(79, 15);
+            this.linkLabel6.TabIndex = 168;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "Design-Point";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
+            // 
+            // linkLabel7
+            // 
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel7.Location = new System.Drawing.Point(1009, 76);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(64, 15);
+            this.linkLabel7.TabIndex = 187;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "Reference";
+            // 
+            // linkLabel8
+            // 
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel8.Location = new System.Drawing.Point(973, 330);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(64, 15);
+            this.linkLabel8.TabIndex = 188;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "Reference";
+            // 
+            // linkLabel9
+            // 
+            this.linkLabel9.AutoSize = true;
+            this.linkLabel9.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel9.Location = new System.Drawing.Point(1004, 574);
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.Size = new System.Drawing.Size(64, 15);
+            this.linkLabel9.TabIndex = 189;
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.Text = "Reference";
             // 
             // pictureBox4
             // 
@@ -135,105 +238,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 123;
             this.pictureBox1.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel1.Location = new System.Drawing.Point(1009, 61);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(75, 15);
-            this.linkLabel1.TabIndex = 165;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Optimization";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel2.Location = new System.Drawing.Point(1009, 46);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(79, 15);
-            this.linkLabel2.TabIndex = 164;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Design-Point";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel3.Location = new System.Drawing.Point(973, 315);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(75, 15);
-            this.linkLabel3.TabIndex = 167;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Optimization";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel4.Location = new System.Drawing.Point(974, 300);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(79, 15);
-            this.linkLabel4.TabIndex = 166;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Design-Point";
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel5.Location = new System.Drawing.Point(1004, 559);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(75, 15);
-            this.linkLabel5.TabIndex = 169;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Optimization";
-            // 
-            // linkLabel6
-            // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel6.Location = new System.Drawing.Point(1004, 544);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(79, 15);
-            this.linkLabel6.TabIndex = 168;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "Design-Point";
-            // 
-            // linkLabel7
-            // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel7.Location = new System.Drawing.Point(1009, 76);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(64, 15);
-            this.linkLabel7.TabIndex = 187;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "Reference";
-            // 
-            // linkLabel8
-            // 
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel8.Location = new System.Drawing.Point(973, 330);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(64, 15);
-            this.linkLabel8.TabIndex = 188;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "Reference";
-            // 
-            // linkLabel9
-            // 
-            this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel9.Location = new System.Drawing.Point(1004, 574);
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.Size = new System.Drawing.Size(64, 15);
-            this.linkLabel9.TabIndex = 189;
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.Text = "Reference";
             // 
             // WizardCinco
             // 

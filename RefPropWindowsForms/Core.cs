@@ -907,6 +907,113 @@ namespace RefPropWindowsForms
 
             }
         }
+        
+        //-----------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------
+        public class Two_PC_RCMCI_withoutReheating : core
+        {
+            public Double W_dot_net;                        //net power output of the cycle (kW)
+            public Double eta_thermal;                      //thermal efficiency of the cycle (-)
+            public Double recomp_frac;                      //amount of flow that bypasses the precooler and is compressed in the recompressor (-)
+            public Double m_dot_turbine;                    //mass flow rate through the turbine (kg/s)
+            public Double high_pressure_limit;              //maximum allowable high-side pressure (kPa)
+            public Double conv_tol;                         //relative convergence tolerance used during iteration loops involving this cycle (-)
+            public Turbine t = new Turbine();                 //turbine user-defined type
+            public Compressor mc1 = new Compressor();        //compressor1 
+            public Compressor mc2 = new Compressor();        //compressor2 
+            public Compressor pc1 = new Compressor();        //pre-compressor1 user-defined types
+            public Compressor pc2 = new Compressor();        //pre-compressor2 user-defined types
+            public Compressor rc = new Compressor();        //compressor and recompressor user-defined types
+            public HeatExchanger LT = new HeatExchanger();  //heat exchanger Low Temperature Recuperator
+            public HeatExchanger HT = new HeatExchanger();  //heat exchanger High Temperature Recuperator
+            public HeatExchanger PHX = new HeatExchanger();  //heat exchanger Primary Heat Exchanger          
+            public HeatExchanger PC1 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC2 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC3 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC4 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public Double[] temp = new Double[16];          //thermodynamic properties at the state points of the cycle (K, kPa, kJ/kg, kJ/kg-K, kg/m3)
+            public Double[] pres = new Double[16];
+            public Double[] enth = new Double[16];
+            public Double[] entr = new Double[16];
+            public Double[] dens = new Double[16];
+
+            public Two_PC_RCMCI_withoutReheating()
+            {
+
+            }
+        }
+
+        public class PC_Two_RCMCI_withoutReheating : core
+        {
+            public Double W_dot_net;                        //net power output of the cycle (kW)
+            public Double eta_thermal;                      //thermal efficiency of the cycle (-)
+            public Double recomp_frac;                      //amount of flow that bypasses the precooler and is compressed in the recompressor (-)
+            public Double m_dot_turbine;                    //mass flow rate through the turbine (kg/s)
+            public Double high_pressure_limit;              //maximum allowable high-side pressure (kPa)
+            public Double conv_tol;                         //relative convergence tolerance used during iteration loops involving this cycle (-)
+            public Turbine t = new Turbine();                 //turbine user-defined type
+            public Compressor mc1 = new Compressor();        //compressor1 
+            public Compressor mc2 = new Compressor();        //compressor2 
+            public Compressor mc3 = new Compressor();        //compressor3 
+            public Compressor pc = new Compressor();        //compressor and pre-compressor user-defined types
+            public Compressor rc = new Compressor();        //compressor and recompressor user-defined types
+            public HeatExchanger LT = new HeatExchanger();  //heat exchanger Low Temperature Recuperator
+            public HeatExchanger HT = new HeatExchanger();  //heat exchanger High Temperature Recuperator
+            public HeatExchanger PHX = new HeatExchanger();  //heat exchanger Primary Heat Exchanger          
+            public HeatExchanger PC1 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC2 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC3 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC4 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public Double[] temp = new Double[16];          //thermodynamic properties at the state points of the cycle (K, kPa, kJ/kg, kJ/kg-K, kg/m3)
+            public Double[] pres = new Double[16];
+            public Double[] enth = new Double[16];
+            public Double[] entr = new Double[16];
+            public Double[] dens = new Double[16];
+
+            public PC_Two_RCMCI_withoutReheating()
+            {
+
+            }
+        }
+
+        public class Two_PC_Two_RCMCI_withoutReheating : core
+        {
+            public Double W_dot_net;                        //net power output of the cycle (kW)
+            public Double eta_thermal;                      //thermal efficiency of the cycle (-)
+            public Double recomp_frac;                      //amount of flow that bypasses the precooler and is compressed in the recompressor (-)
+            public Double m_dot_turbine;                    //mass flow rate through the turbine (kg/s)
+            public Double high_pressure_limit;              //maximum allowable high-side pressure (kPa)
+            public Double conv_tol;                         //relative convergence tolerance used during iteration loops involving this cycle (-)
+            public Turbine t = new Turbine();                 //turbine user-defined type
+            public Compressor mc1 = new Compressor();        //compressor1 
+            public Compressor mc2 = new Compressor();        //compressor2 
+            public Compressor mc3 = new Compressor();        //compressor3 
+            public Compressor pc1 = new Compressor();        //pre-compressor1 user-defined types
+            public Compressor pc2 = new Compressor();        //pre-compressor2 user-defined types
+            public Compressor rc = new Compressor();        //compressor and recompressor user-defined types
+            public HeatExchanger LT = new HeatExchanger();  //heat exchanger Low Temperature Recuperator
+            public HeatExchanger HT = new HeatExchanger();  //heat exchanger High Temperature Recuperator
+            public HeatExchanger PHX = new HeatExchanger();  //heat exchanger Primary Heat Exchanger          
+            public HeatExchanger PC1 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC2 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC3 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC4 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public HeatExchanger PC5 = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public Double[] temp = new Double[18];          //thermodynamic properties at the state points of the cycle (K, kPa, kJ/kg, kJ/kg-K, kg/m3)
+            public Double[] pres = new Double[18];
+            public Double[] enth = new Double[18];
+            public Double[] entr = new Double[18];
+            public Double[] dens = new Double[18];
+
+            public Two_PC_Two_RCMCI_withoutReheating()
+            {
+
+            }
+        }
+
+
+        //---------------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------------
 
         public class ErrorTrace : core
         {

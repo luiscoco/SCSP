@@ -693,6 +693,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PCRCMCI_with_Two_Intercooling_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("PCRCMCI with Two Intercooling without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRCMCI_with_Two_Intercooling_without_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRCMCI with Two Intercooling without ReHeating Small", resourceCulture);
@@ -775,9 +785,29 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PCRCMCI_with_Two_Partial_Cooling_with_Two_Intercooling_with_Two_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("PCRCMCI with Two Partial Cooling with Two Intercooling with Two ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRCMCI_with_Two_Partial_Cooling_with_Two_Intercooling_with_Two_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRCMCI with Two Partial Cooling with Two Intercooling with Two ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCRCMCI_with_Two_Partial_Cooling_with_Two_Intercooling_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("PCRCMCI with Two Partial Cooling with Two Intercooling without ReHeating", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -808,6 +838,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap PCRCMCI_with_Two_Partial_Cooling_with_Two_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRCMCI with Two Partial Cooling with Two ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCRCMCI_with_Two_Partial_Cooling_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("PCRCMCI with Two Partial Cooling without ReHeating", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

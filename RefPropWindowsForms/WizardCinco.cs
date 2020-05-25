@@ -26,5 +26,33 @@ namespace RefPropWindowsForms
         {
 
         }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.Two_PC_Two_RCMCI_withoutReheating_dialog = new Two_PC_Two_RCMCI_withoutReheating();
+            puntero.Two_PC_Two_RCMCI_withoutReheating_dialog.MdiParent = puntero;
+            puntero.Two_PC_Two_RCMCI_withoutReheating_dialog.Show();
+        }
+
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.Two_PC_RCMCI_withoutReheating_dialog = new Two_PC_RCMCI_withoutReheating();
+            puntero.Two_PC_RCMCI_withoutReheating_dialog.MdiParent = puntero;
+            puntero.Two_PC_RCMCI_withoutReheating_dialog.Show();
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.PC_Two_RCMCI_withoutReheating_dialog = new PC_Two_RCMCI_withoutReheating();
+            puntero.PC_Two_RCMCI_withoutReheating_dialog.MdiParent = puntero;
+            puntero.PC_Two_RCMCI_withoutReheating_dialog.Show();
+        }
+
+        //Close Wizard
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
