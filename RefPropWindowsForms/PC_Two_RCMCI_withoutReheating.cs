@@ -503,8 +503,8 @@ namespace RefPropWindowsForms
             p_pc_in,  p_pc_out,  p_mc4_in,  p_mc4_out,  p_mc3_in,  p_mc3_out,
             p_mc2_in, p_mc2_out,  ua_lt,  ua_ht,  m_eta_mc4,  m_eta_pc,  m_eta_rc,
             m_eta_mc3,  m_eta_mc2,  m_eta_t, n_sub_hxrs,  m_recomp_frac,  tol,  eta_thermal,
-            dp_lt1,  dp_lt2,  dp_ht1,  dp_ht2,  dp_pc1,  dp_pc4,  dp_pc3,  dp_pc2,
-            dp_phx);
+            -dp_lt1,  -dp_lt2,  -dp_ht1,  -dp_ht2,  -dp_pc1,  -dp_pc4,  -dp_pc3,  -dp_pc2,
+            -dp_phx);
 
             massflow2 = cicloPC_Two_RCMCI_withoutReheating.m_dot_turbine;
             w_dot_net2 = cicloPC_Two_RCMCI_withoutReheating.W_dot_net;
@@ -835,7 +835,8 @@ namespace RefPropWindowsForms
         //Optimization Analysis
         private void button37_Click(object sender, EventArgs e)
         {
-
+            PC_Two_RCMCI_without_ReHeating_Optimization_Analysis_Results PC_Two_RCMCI_without_ReHeating_Optimization_Analysis_Results_window = new PC_Two_RCMCI_without_ReHeating_Optimization_Analysis_Results(this);
+            PC_Two_RCMCI_without_ReHeating_Optimization_Analysis_Results_window.Show();
         }
 
         //OK button
