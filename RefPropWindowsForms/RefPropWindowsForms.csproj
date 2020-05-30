@@ -1099,6 +1099,12 @@
     <Compile Include="Two_PC_RCMCI_withoutReheating.Designer.cs">
       <DependentUpon>Two_PC_RCMCI_withoutReheating.cs</DependentUpon>
     </Compile>
+    <Compile Include="Two_PC_RCMCI_withoutReheating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Two_PC_RCMCI_withoutReheating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>Two_PC_RCMCI_withoutReheating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
     <Compile Include="Two_PC_Two_RCMCI_withoutReheating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1578,6 +1584,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Two_PC_RCMCI_withoutReheating.resx">
       <DependentUpon>Two_PC_RCMCI_withoutReheating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Two_PC_RCMCI_withoutReheating_Optimization_Analysis_Results.resx">
+      <DependentUpon>Two_PC_RCMCI_withoutReheating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Two_PC_Two_RCMCI_withoutReheating.resx">
       <DependentUpon>Two_PC_Two_RCMCI_withoutReheating.cs</DependentUpon>

@@ -177,6 +177,8 @@
             this.label52 = new System.Windows.Forms.Label();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox99 = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
             this.button36 = new System.Windows.Forms.Button();
@@ -309,7 +311,6 @@
             this.textBox38 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -330,8 +331,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.textBox98 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox99 = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -578,6 +578,7 @@
             this.button37.TabIndex = 2086;
             this.button37.Text = "Optimization Analysis";
             this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // label119
             // 
@@ -2309,6 +2310,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // textBox99
+            // 
+            this.textBox99.Location = new System.Drawing.Point(231, 114);
+            this.textBox99.Name = "textBox99";
+            this.textBox99.Size = new System.Drawing.Size(48, 20);
+            this.textBox99.TabIndex = 373;
+            this.textBox99.Text = "0.0";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(148, 117);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(79, 13);
+            this.label57.TabIndex = 372;
+            this.label57.Text = "DP_PC4 (kPa):";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1210, 12);
@@ -2334,6 +2352,7 @@
             this.button36.TabIndex = 2087;
             this.button36.Text = "Set Critical Conditions";
             this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // label155
             // 
@@ -3517,16 +3536,6 @@
             this.textBox27.TabIndex = 1907;
             this.textBox27.Text = "0.89";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRCMCI_with_Two_Partial_Cooling_without_ReHeating;
-            this.pictureBox1.Location = new System.Drawing.Point(249, 124);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(836, 314);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1848;
-            this.pictureBox1.TabStop = false;
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3712,22 +3721,15 @@
             this.label40.TabIndex = 2106;
             this.label40.Text = "eta_pc2:";
             // 
-            // textBox99
+            // pictureBox1
             // 
-            this.textBox99.Location = new System.Drawing.Point(231, 114);
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(48, 20);
-            this.textBox99.TabIndex = 373;
-            this.textBox99.Text = "0.0";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(148, 117);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(79, 13);
-            this.label57.TabIndex = 372;
-            this.label57.Text = "DP_PC4 (kPa):";
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRCMCI_with_Two_Partial_Cooling_without_ReHeating;
+            this.pictureBox1.Location = new System.Drawing.Point(249, 124);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(836, 314);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1848;
+            this.pictureBox1.TabStop = false;
             // 
             // Two_PC_RCMCI_withoutReheating
             // 
