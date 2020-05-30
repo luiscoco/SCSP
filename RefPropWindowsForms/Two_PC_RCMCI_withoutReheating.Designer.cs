@@ -330,6 +330,8 @@
             this.label34 = new System.Windows.Forms.Label();
             this.textBox98 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
+            this.textBox99 = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -541,6 +543,7 @@
             this.comboBox1.Size = new System.Drawing.Size(72, 21);
             this.comboBox1.TabIndex = 2085;
             this.comboBox1.Text = "PureFluid";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button30
             // 
@@ -1246,7 +1249,7 @@
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(40, 20);
             this.textBox23.TabIndex = 1881;
-            this.textBox23.Text = "10300";
+            this.textBox23.Text = "15000";
             // 
             // label28
             // 
@@ -1391,7 +1394,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(40, 20);
             this.textBox8.TabIndex = 1863;
-            this.textBox8.Text = "10300";
+            this.textBox8.Text = "15000";
             // 
             // label11
             // 
@@ -1408,7 +1411,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(40, 20);
             this.textBox3.TabIndex = 1861;
-            this.textBox3.Text = "8500";
+            this.textBox3.Text = "12000";
             // 
             // label29
             // 
@@ -1508,7 +1511,7 @@
             // label151
             // 
             this.label151.AutoSize = true;
-            this.label151.Location = new System.Drawing.Point(6, 143);
+            this.label151.Location = new System.Drawing.Point(148, 94);
             this.label151.Name = "label151";
             this.label151.Size = new System.Drawing.Size(79, 13);
             this.label151.TabIndex = 370;
@@ -1635,7 +1638,7 @@
             // 
             // textBox107
             // 
-            this.textBox107.Location = new System.Drawing.Point(89, 140);
+            this.textBox107.Location = new System.Drawing.Point(231, 91);
             this.textBox107.Name = "textBox107";
             this.textBox107.Size = new System.Drawing.Size(48, 20);
             this.textBox107.TabIndex = 371;
@@ -2129,6 +2132,7 @@
             this.button20.TabIndex = 1926;
             this.button20.Text = "Mixtures Calculation";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // comboBox7
             // 
@@ -2229,7 +2233,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(990, 60);
+            this.label54.Location = new System.Drawing.Point(988, 104);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(92, 13);
             this.label54.TabIndex = 1916;
@@ -2238,7 +2242,7 @@
             // textBox50
             // 
             this.textBox50.BackColor = System.Drawing.Color.Ivory;
-            this.textBox50.Location = new System.Drawing.Point(1087, 57);
+            this.textBox50.Location = new System.Drawing.Point(1085, 101);
             this.textBox50.Name = "textBox50";
             this.textBox50.Size = new System.Drawing.Size(46, 20);
             this.textBox50.TabIndex = 1915;
@@ -2246,7 +2250,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(990, 83);
+            this.label53.Location = new System.Drawing.Point(988, 82);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(91, 13);
             this.label53.TabIndex = 1914;
@@ -2255,7 +2259,7 @@
             // textBox49
             // 
             this.textBox49.BackColor = System.Drawing.Color.Ivory;
-            this.textBox49.Location = new System.Drawing.Point(1087, 79);
+            this.textBox49.Location = new System.Drawing.Point(1085, 78);
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new System.Drawing.Size(46, 20);
             this.textBox49.TabIndex = 1913;
@@ -2263,7 +2267,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(1015, 102);
+            this.label52.Location = new System.Drawing.Point(1012, 57);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(66, 13);
             this.label52.TabIndex = 1912;
@@ -2272,7 +2276,7 @@
             // textBox48
             // 
             this.textBox48.BackColor = System.Drawing.Color.Ivory;
-            this.textBox48.Location = new System.Drawing.Point(1087, 102);
+            this.textBox48.Location = new System.Drawing.Point(1085, 54);
             this.textBox48.Name = "textBox48";
             this.textBox48.Size = new System.Drawing.Size(46, 20);
             this.textBox48.TabIndex = 1911;
@@ -2280,6 +2284,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox99);
+            this.groupBox1.Controls.Add(this.label57);
             this.groupBox1.Controls.Add(this.textBox107);
             this.groupBox1.Controls.Add(this.label151);
             this.groupBox1.Controls.Add(this.textBox24);
@@ -2499,7 +2505,7 @@
             this.textBox104.Name = "textBox104";
             this.textBox104.Size = new System.Drawing.Size(40, 20);
             this.textBox104.TabIndex = 2064;
-            this.textBox104.Text = "8500";
+            this.textBox104.Text = "12000";
             // 
             // label148
             // 
@@ -2516,7 +2522,7 @@
             this.textBox103.Name = "textBox103";
             this.textBox103.Size = new System.Drawing.Size(40, 20);
             this.textBox103.TabIndex = 2062;
-            this.textBox103.Text = "7400";
+            this.textBox103.Text = "8500";
             // 
             // label147
             // 
@@ -3706,6 +3712,23 @@
             this.label40.TabIndex = 2106;
             this.label40.Text = "eta_pc2:";
             // 
+            // textBox99
+            // 
+            this.textBox99.Location = new System.Drawing.Point(231, 114);
+            this.textBox99.Name = "textBox99";
+            this.textBox99.Size = new System.Drawing.Size(48, 20);
+            this.textBox99.TabIndex = 373;
+            this.textBox99.Text = "0.0";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(148, 117);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(79, 13);
+            this.label57.TabIndex = 372;
+            this.label57.Text = "DP_PC4 (kPa):";
+            // 
             // Two_PC_RCMCI_withoutReheating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4285,5 +4308,7 @@
         public System.Windows.Forms.Label label34;
         public System.Windows.Forms.TextBox textBox98;
         public System.Windows.Forms.Label label40;
+        public System.Windows.Forms.TextBox textBox99;
+        public System.Windows.Forms.Label label57;
     }
 }
