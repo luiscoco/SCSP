@@ -2653,6 +2653,7 @@
             this.button6.TabIndex = 2050;
             this.button6.Text = "Precooler 1";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
@@ -2664,6 +2665,7 @@
             this.button4.TabIndex = 2048;
             this.button4.Text = "LTR";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button7
             // 
@@ -2675,6 +2677,7 @@
             this.button7.TabIndex = 2047;
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label138
             // 
@@ -3558,6 +3561,7 @@
             this.button9.TabIndex = 2089;
             this.button9.Text = "Precooler 2";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -3571,6 +3575,7 @@
             this.button8.TabIndex = 2090;
             this.button8.Text = "Precooler 4";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button13
             // 
@@ -3584,6 +3589,7 @@
             this.button13.TabIndex = 2091;
             this.button13.Text = "Precooler 3";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label9
             // 

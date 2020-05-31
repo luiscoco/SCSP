@@ -854,7 +854,6 @@ namespace RefPropWindowsForms
                 {
                     counter = 0;
 
-
                     //UA optimization false
                     if (checkBox2.Checked == false)
                     {

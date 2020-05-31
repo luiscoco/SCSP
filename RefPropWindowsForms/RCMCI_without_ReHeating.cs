@@ -2287,7 +2287,7 @@ namespace RefPropWindowsForms
             ReCompressor.Show();
         }
 
-        //HTR Design
+        //LTR Design
         private void button6_Click(object sender, EventArgs e)
         {
             LT_Recuperator = new HeatExchangerUA();

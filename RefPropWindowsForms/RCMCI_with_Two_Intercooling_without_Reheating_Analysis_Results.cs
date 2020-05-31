@@ -1779,9 +1779,9 @@ namespace RefPropWindowsForms
                             //CIT
                             xlWorkSheet1.Cells[counter_Excel + 1, 4] = Convert.ToString(i - 273.15);
                             //LT UA(kW/K)
-                            xlWorkSheet1.Cells[counter_Excel + 1, 5] = Convert.ToString(puntero_aplicacion.ua_lt2);
+                            xlWorkSheet1.Cells[counter_Excel + 1, 5] = ua_LT_list[maxIndex].ToString();
                             //HT UA(kW/K)
-                            xlWorkSheet1.Cells[counter_Excel + 1, 6] = Convert.ToString(puntero_aplicacion.ua_ht2);
+                            xlWorkSheet1.Cells[counter_Excel + 1, 6] = ua_HT_list[maxIndex].ToString();
                             //Rec.Frac.
                             xlWorkSheet1.Cells[counter_Excel + 1, 7] = recomp_frac2_list[maxIndex].ToString();
                             //Eff.(%)
