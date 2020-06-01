@@ -766,6 +766,7 @@ namespace RefPropWindowsForms
                 PC1 = -cicloPC_Two_RCMCI_withoutReheating.PC1.Q_dot;
                 PC2 = -cicloPC_Two_RCMCI_withoutReheating.PC2.Q_dot;
                 PC3 = -cicloPC_Two_RCMCI_withoutReheating.PC3.Q_dot;
+                PC4 = -cicloPC_Two_RCMCI_withoutReheating.PC4.Q_dot;
 
                 //    if (comboBox4.Text == "Dual-Loop")
                 //    {

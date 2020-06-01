@@ -563,6 +563,7 @@
             this.comboBox1.Size = new System.Drawing.Size(72, 21);
             this.comboBox1.TabIndex = 2085;
             this.comboBox1.Text = "PureFluid";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button30
             // 
@@ -1473,7 +1474,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 1856;
-            this.label5.Text = "T_mc3_in (K):";
+            this.label5.Text = "T_mc5_in (K):";
             // 
             // textBox1
             // 
@@ -2151,6 +2152,7 @@
             this.button20.TabIndex = 1926;
             this.button20.Text = "Mixtures Calculation";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // comboBox7
             // 
@@ -2388,6 +2390,7 @@
             this.button36.TabIndex = 2087;
             this.button36.Text = "Set Critical Conditions";
             this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // label155
             // 
@@ -2659,7 +2662,7 @@
             this.button15.Enabled = false;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(1081, 234);
+            this.button15.Location = new System.Drawing.Point(1084, 234);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(34, 70);
             this.button15.TabIndex = 2052;
@@ -2672,7 +2675,7 @@
             this.button6.Enabled = false;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(770, 355);
+            this.button6.Location = new System.Drawing.Point(771, 356);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(71, 31);
             this.button6.TabIndex = 2050;
@@ -2694,7 +2697,7 @@
             // 
             this.button7.Enabled = false;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(990, 354);
+            this.button7.Location = new System.Drawing.Point(991, 355);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(68, 24);
             this.button7.TabIndex = 2047;
@@ -3923,7 +3926,7 @@
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(73, 13);
             this.label67.TabIndex = 2125;
-            this.label67.Text = "T_mc5_in (K):";
+            this.label67.Text = "T_mc3_in (K):";
             // 
             // Two_PC_Two_RCMCI_withoutReheating
             // 

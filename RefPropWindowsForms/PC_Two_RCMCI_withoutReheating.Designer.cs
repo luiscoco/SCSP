@@ -177,6 +177,8 @@
             this.label52 = new System.Windows.Forms.Label();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox99 = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
             this.button36 = new System.Windows.Forms.Button();
@@ -330,8 +332,6 @@
             this.button13 = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
             this.textBox98 = new System.Windows.Forms.TextBox();
-            this.textBox99 = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -2312,6 +2312,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // textBox99
+            // 
+            this.textBox99.Location = new System.Drawing.Point(218, 116);
+            this.textBox99.Name = "textBox99";
+            this.textBox99.Size = new System.Drawing.Size(48, 20);
+            this.textBox99.TabIndex = 373;
+            this.textBox99.Text = "0.0";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(140, 119);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(79, 13);
+            this.label57.TabIndex = 372;
+            this.label57.Text = "DP_PC4 (kPa):";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1207, 12);
@@ -2627,7 +2644,7 @@
             this.button8.Enabled = false;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(717, 365);
+            this.button8.Location = new System.Drawing.Point(717, 366);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(77, 29);
             this.button8.TabIndex = 2051;
@@ -3722,23 +3739,6 @@
             this.textBox98.Size = new System.Drawing.Size(40, 20);
             this.textBox98.TabIndex = 2108;
             this.textBox98.Text = "0.89";
-            // 
-            // textBox99
-            // 
-            this.textBox99.Location = new System.Drawing.Point(218, 116);
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(48, 20);
-            this.textBox99.TabIndex = 373;
-            this.textBox99.Text = "0.0";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(140, 119);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(79, 13);
-            this.label57.TabIndex = 372;
-            this.label57.Text = "DP_PC4 (kPa):";
             // 
             // PC_Two_RCMCI_withoutReheating
             // 
