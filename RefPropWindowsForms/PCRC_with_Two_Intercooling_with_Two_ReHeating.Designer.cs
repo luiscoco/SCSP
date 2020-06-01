@@ -3632,7 +3632,7 @@
             // button32
             // 
             this.button32.Enabled = false;
-            this.button32.Location = new System.Drawing.Point(961, 212);
+            this.button32.Location = new System.Drawing.Point(960, 188);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(51, 23);
             this.button32.TabIndex = 1839;

@@ -237,7 +237,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 1000.0, 1000.0 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value + 2000.0, initial_CIP_value + 3000.0, initial_CIP_value + 4000.0, initial_CIP_value + 5000.0, initial_CIP_value + 6000.0 };
+                    var initialValue = new[] { 0.2, initial_CIP_value + 2000.0, initial_CIP_value + 3000.0, initial_CIP_value + 4000.0, initial_CIP_value + 6000.0, initial_CIP_value + 5000.0 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -623,7 +623,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 1000.0, 1000.0, 0.05 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value + 2000.0, initial_CIP_value + 3000.0, initial_CIP_value + 4000.0, initial_CIP_value + 5000.0, initial_CIP_value + 6000.0, 0.5 };
+                    var initialValue = new[] { 0.2, initial_CIP_value + 2000.0, initial_CIP_value + 3000.0, initial_CIP_value + 4000.0, initial_CIP_value + 6000.0, initial_CIP_value + 5000.0, 0.5 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -846,7 +846,6 @@ namespace RefPropWindowsForms
                     releaseObject(xlApp1);
                 }
             } //end UA optimization false
-
         }
 
         //Run CIT Optimization
@@ -891,7 +890,6 @@ namespace RefPropWindowsForms
                     //Optimize UA false
                     if (checkBox2.Checked == false)
                     {
-
                         //PureFluid
                         if (puntero_aplicacion.comboBox1.Text == "PureFluid")
                         {
@@ -1107,7 +1105,7 @@ namespace RefPropWindowsForms
 
                             solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 1000.0, 1000.0 });
 
-                            var initialValue = new[] { 0.2, initial_CIP_value + 2000.0, initial_CIP_value + 3000.0, initial_CIP_value + 4000.0, initial_CIP_value + 5000.0, initial_CIP_value + 6000.0 };
+                            var initialValue = new[] { 0.2, initial_CIP_value + 2000.0, initial_CIP_value + 3000.0, initial_CIP_value + 4000.0, initial_CIP_value + 6000.0, initial_CIP_value + 5000.0 };
 
                             Func<double[], double> funcion = delegate (double[] variables)
                             {
@@ -1815,7 +1813,7 @@ namespace RefPropWindowsForms
 
                             solver.SetInitialStepSize(new[] { 0.05, 250.0, 250.0, 250.0, 1000.0, 1000.0, 0.05 });
 
-                            var initialValue = new[] { 0.2, initial_CIP_value + 2000.0, initial_CIP_value + 3000.0, initial_CIP_value + 4000.0, initial_CIP_value + 5000.0, initial_CIP_value + 6000.0, 0.5 };
+                            var initialValue = new[] { 0.2, initial_CIP_value + 2000.0, initial_CIP_value + 3000.0, initial_CIP_value + 4000.0, initial_CIP_value + 6000.0, initial_CIP_value + 5000.0, 0.5 };
 
                             Func<double[], double> funcion = delegate (double[] variables)
                             {
