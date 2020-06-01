@@ -996,7 +996,6 @@ namespace RefPropWindowsForms
 
                         if (i == Convert.ToDouble(textBox57.Text))
                         {
-
                             if (checkBox6.Checked == true)
                             {
                                 initial_CIP_value = Convert.ToDouble(textBox1.Text);
@@ -1187,6 +1186,9 @@ namespace RefPropWindowsForms
                                 p15_list.Add(puntero_aplicacion.pres215);
                                 p16_list.Add(puntero_aplicacion.pres216);
 
+                                HT_Eff_list.Add(cicloRCMCI_withTwoIntercooling_withRH.HT.eff);
+                                LT_Eff_list.Add(cicloRCMCI_withTwoIntercooling_withRH.LT.eff);
+
                                 listBox1.Items.Add(counter.ToString());
                                 listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
                                 listBox3.Items.Add(puntero_aplicacion.recomp_frac2.ToString());
@@ -1356,13 +1358,13 @@ namespace RefPropWindowsForms
 
                             if (comboBox4.Text == "Parabolic")
                             {
-                                PTC.textBox7.Text = "0.141";
-                                PTC.textBox8.Text = "6.48e-9";
+                                PTC_RHX.textBox7.Text = "0.141";
+                                PTC_RHX.textBox8.Text = "6.48e-9";
                             }
                             else if (comboBox4.Text == "Parabolic with cavity receiver (Norwich)")
                             {
-                                PTC.textBox7.Text = "0.3";
-                                PTC.textBox8.Text = "3.25e-9";
+                                PTC_RHX.textBox7.Text = "0.3";
+                                PTC_RHX.textBox8.Text = "3.25e-9";
                             }
 
                             PTC_RHX.textBox1.Text = Convert.ToString(puntero_aplicacion.RHX1);
@@ -1799,6 +1801,9 @@ namespace RefPropWindowsForms
                                 p15_list.Add(puntero_aplicacion.pres215);
                                 p16_list.Add(puntero_aplicacion.pres216);
 
+                                HT_Eff_list.Add(cicloRCMCI_withTwoIntercooling_withRH.HT.eff);
+                                LT_Eff_list.Add(cicloRCMCI_withTwoIntercooling_withRH.LT.eff);
+
                                 listBox1.Items.Add(counter.ToString());
                                 listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
                                 listBox3.Items.Add(puntero_aplicacion.recomp_frac2.ToString());
@@ -1968,13 +1973,13 @@ namespace RefPropWindowsForms
 
                             if (comboBox4.Text == "Parabolic")
                             {
-                                PTC.textBox7.Text = "0.141";
-                                PTC.textBox8.Text = "6.48e-9";
+                                PTC_RHX.textBox7.Text = "0.141";
+                                PTC_RHX.textBox8.Text = "6.48e-9";
                             }
                             else if (comboBox4.Text == "Parabolic with cavity receiver (Norwich)")
                             {
-                                PTC.textBox7.Text = "0.3";
-                                PTC.textBox8.Text = "3.25e-9";
+                                PTC_RHX.textBox7.Text = "0.3";
+                                PTC_RHX.textBox8.Text = "3.25e-9";
                             }
 
                             PTC_RHX.textBox1.Text = Convert.ToString(puntero_aplicacion.RHX1);

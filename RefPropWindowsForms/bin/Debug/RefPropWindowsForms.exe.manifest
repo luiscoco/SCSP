@@ -138,14 +138,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="21371864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="21406680">
       <assemblyIdentity name="RefPropWindowsForms" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sTNUN12qKS2u9a74nk+KeCW2N//KNEsOzG4bSZFqetk=</dsig:DigestValue>
+        <dsig:DigestValue>qrgf12HCJnhL+YUS/YKeyu1j0Dk/+NYCTqLCxLJU+1E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -302,13 +302,13 @@
       <dsig:DigestValue>43wSuNtvD7ZEtUVFOT+SiXBDc3aoQwt3eADwQUzkwgw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" size="67537">
+  <file name="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" size="67014">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>B7xkUFyDrAZgFa1SRQARAnh81l0O90kHdzv0zbO6Xi0=</dsig:DigestValue>
+      <dsig:DigestValue>n8Q2GohFBoEfTMLZZBVJHxcup7a2J0KkDYoew9lXouU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\RCMCI with ReHeating with Two Reheating Stages.jpg" size="77287">
