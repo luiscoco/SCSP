@@ -882,5 +882,13 @@ namespace RefPropWindowsForms
             button12.Enabled = true;
             button14.Enabled = true;
         }
+
+        //Optimization Analysis
+        private void button37_Click(object sender, EventArgs e)
+        {
+            Two_PC_Two_RCMCI_withoutReheating_Optimization_Analysis_Results Two_PC_Two_RCMCI_withoutReheating_Optimization_Analysis_Results_dialog = new Two_PC_Two_RCMCI_withoutReheating_Optimization_Analysis_Results(this);
+            Two_PC_Two_RCMCI_withoutReheating_Optimization_Analysis_Results_dialog.Show();
+        }
+
     }
 }

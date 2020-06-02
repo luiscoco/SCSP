@@ -598,6 +598,7 @@
             this.button37.TabIndex = 2086;
             this.button37.Text = "Optimization Analysis";
             this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // label119
             // 
