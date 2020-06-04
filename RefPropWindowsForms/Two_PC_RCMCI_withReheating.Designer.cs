@@ -351,6 +351,8 @@
             this.label85 = new System.Windows.Forms.Label();
             this.textBox117 = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.textBox118 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -2492,6 +2494,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label67);
+            this.groupBox1.Controls.Add(this.textBox118);
             this.groupBox1.Controls.Add(this.textBox99);
             this.groupBox1.Controls.Add(this.label57);
             this.groupBox1.Controls.Add(this.textBox107);
@@ -2613,7 +2617,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(146, 144);
+            this.label13.Location = new System.Drawing.Point(4, 143);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(81, 13);
             this.label13.TabIndex = 256;
@@ -2621,7 +2625,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(231, 141);
+            this.textBox10.Location = new System.Drawing.Point(89, 140);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(48, 20);
             this.textBox10.TabIndex = 257;
@@ -3932,6 +3936,23 @@
             this.label66.TabIndex = 2383;
             this.label66.Text = "eta_trh:";
             // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(146, 142);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(82, 13);
+            this.label67.TabIndex = 374;
+            this.label67.Text = "DP_RHX (kPa):";
+            // 
+            // textBox118
+            // 
+            this.textBox118.Location = new System.Drawing.Point(231, 139);
+            this.textBox118.Name = "textBox118";
+            this.textBox118.Size = new System.Drawing.Size(48, 20);
+            this.textBox118.TabIndex = 375;
+            this.textBox118.Text = "0.0";
+            // 
             // Two_PC_RCMCI_withReheating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4551,5 +4572,7 @@
         public System.Windows.Forms.Label label85;
         public System.Windows.Forms.TextBox textBox117;
         public System.Windows.Forms.Label label66;
+        public System.Windows.Forms.Label label67;
+        public System.Windows.Forms.TextBox textBox118;
     }
 }
