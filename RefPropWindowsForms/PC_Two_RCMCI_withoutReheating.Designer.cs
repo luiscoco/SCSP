@@ -310,7 +310,6 @@
             this.textBox38 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -332,6 +331,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
             this.textBox98 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -3533,16 +3533,6 @@
             this.textBox27.TabIndex = 1907;
             this.textBox27.Text = "0.89";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRCMCI_with_Two_Intercooling_without_ReHeating;
-            this.pictureBox1.Location = new System.Drawing.Point(240, 113);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(836, 314);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1848;
-            this.pictureBox1.TabStop = false;
-            // 
             // button2
             // 
             this.button2.Enabled = false;
@@ -3739,6 +3729,16 @@
             this.textBox98.Size = new System.Drawing.Size(40, 20);
             this.textBox98.TabIndex = 2108;
             this.textBox98.Text = "0.89";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRCMCI_with_Two_Intercooling_without_ReHeating;
+            this.pictureBox1.Location = new System.Drawing.Point(240, 113);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(836, 314);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1848;
+            this.pictureBox1.TabStop = false;
             // 
             // PC_Two_RCMCI_withoutReheating
             // 

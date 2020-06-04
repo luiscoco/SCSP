@@ -759,6 +759,12 @@
     <Compile Include="PC_Two_RCMCI_without_ReHeating_Optimization_Analysis_Results.Designer.cs">
       <DependentUpon>PC_Two_RCMCI_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="PC_Two_RCMCI_withReheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC_Two_RCMCI_withReheating.Designer.cs">
+      <DependentUpon>PC_Two_RCMCI_withReheating.cs</DependentUpon>
+    </Compile>
     <Compile Include="PreeCooler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1105,6 +1111,12 @@
     <Compile Include="Two_PC_RCMCI_withoutReheating_Optimization_Analysis_Results.Designer.cs">
       <DependentUpon>Two_PC_RCMCI_withoutReheating_Optimization_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="Two_PC_RCMCI_withReheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Two_PC_RCMCI_withReheating.Designer.cs">
+      <DependentUpon>Two_PC_RCMCI_withReheating.cs</DependentUpon>
+    </Compile>
     <Compile Include="Two_PC_Two_RCMCI_withoutReheating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1116,6 +1128,12 @@
     </Compile>
     <Compile Include="Two_PC_Two_RCMCI_withoutReheating_Optimization_Analysis_Results.Designer.cs">
       <DependentUpon>Two_PC_Two_RCMCI_withoutReheating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Two_PC_Two_RCMCI_withReheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Two_PC_Two_RCMCI_withReheating.Designer.cs">
+      <DependentUpon>Two_PC_Two_RCMCI_withReheating.cs</DependentUpon>
     </Compile>
     <Compile Include="Wizard.cs">
       <SubType>Form</SubType>
@@ -1419,6 +1437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PC_Two_RCMCI_without_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>PC_Two_RCMCI_without_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC_Two_RCMCI_withReheating.resx">
+      <DependentUpon>PC_Two_RCMCI_withReheating.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PreeCooler.resx">
       <DependentUpon>PreeCooler.cs</DependentUpon>
@@ -1939,6 +1960,7 @@
     <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling without ReHeating.jpg" />
     <None Include="Resources\PCRCMCI with Two Partial Cooling without ReHeating.jpg" />
     <None Include="Resources\PCRCMCI with Two Intercooling without ReHeating.jpg" />
+    <None Include="Resources\PCRCMCI with Two Intercooling with ReHeating.jpg" />
     <Content Include="Resources\RC with Three ReHeating Stages.jpg" />
     <Content Include="Resources\RC with Three RH Small.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />

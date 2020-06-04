@@ -777,7 +777,8 @@ namespace RefPropWindowsForms
                 textBox2.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox28.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox102.Text = Convert.ToString(working_fluid.CriticalTemperature);
-                textBox103.Text = Convert.ToString(working_fluid.CriticalPressure);
+                textBox88.Text = Convert.ToString(working_fluid.CriticalTemperature);
+                textBox87.Text = Convert.ToString(working_fluid.CriticalPressure);
 
                 MixtureCriticalPressure = working_fluid.CriticalPressure;
                 MixtureCriticalTemperature = working_fluid.CriticalTemperature;
@@ -809,10 +810,11 @@ namespace RefPropWindowsForms
                 xlWorkSheet.Cells[16, 7] = this.textBox70.Text;
 
                 //MessageBox.Show(xlWorkSheet.get_Range("D68", "D68").Value2.ToString());
-                this.textBox103.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
+                this.textBox87.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
                 this.textBox2.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
                 this.textBox28.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
                 this.textBox102.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
+                this.textBox88.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
 
                 this.textBox34.Text = xlWorkSheet.get_Range("D69", "D69").Value2.ToString();
                 this.textBox68.Text = xlWorkSheet.get_Range("D68", "D68").Value2.ToString();
