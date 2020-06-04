@@ -352,6 +352,8 @@
             this.label66 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label85 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.textBox118 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -433,7 +435,7 @@
             // 
             // textBox99
             // 
-            this.textBox99.Location = new System.Drawing.Point(218, 116);
+            this.textBox99.Location = new System.Drawing.Point(227, 116);
             this.textBox99.Name = "textBox99";
             this.textBox99.Size = new System.Drawing.Size(48, 20);
             this.textBox99.TabIndex = 373;
@@ -442,7 +444,7 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(140, 119);
+            this.label57.Location = new System.Drawing.Point(149, 119);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(79, 13);
             this.label57.TabIndex = 372;
@@ -2251,6 +2253,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label67);
+            this.groupBox1.Controls.Add(this.textBox118);
             this.groupBox1.Controls.Add(this.textBox99);
             this.groupBox1.Controls.Add(this.label57);
             this.groupBox1.Controls.Add(this.textBox107);
@@ -2269,9 +2273,9 @@
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Location = new System.Drawing.Point(177, 497);
+            this.groupBox1.Location = new System.Drawing.Point(165, 497);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(271, 173);
+            this.groupBox1.Size = new System.Drawing.Size(283, 173);
             this.groupBox1.TabIndex = 2169;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
@@ -2295,7 +2299,7 @@
             // 
             // textBox24
             // 
-            this.textBox24.Location = new System.Drawing.Point(218, 90);
+            this.textBox24.Location = new System.Drawing.Point(227, 90);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(48, 20);
             this.textBox24.TabIndex = 369;
@@ -2406,7 +2410,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(140, 93);
+            this.label29.Location = new System.Drawing.Point(149, 93);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(79, 13);
             this.label29.TabIndex = 368;
@@ -3951,6 +3955,23 @@
             this.label85.TabIndex = 2386;
             this.label85.Text = "ReHeating SF Collectors:";
             // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(141, 145);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(82, 13);
+            this.label67.TabIndex = 374;
+            this.label67.Text = "DP_RHX (kPa):";
+            // 
+            // textBox118
+            // 
+            this.textBox118.Location = new System.Drawing.Point(227, 142);
+            this.textBox118.Name = "textBox118";
+            this.textBox118.Size = new System.Drawing.Size(48, 20);
+            this.textBox118.TabIndex = 375;
+            this.textBox118.Text = "0.0";
+            // 
             // PC_Two_RCMCI_withReheating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4572,5 +4593,7 @@
         public System.Windows.Forms.Label label66;
         public System.Windows.Forms.ComboBox comboBox5;
         public System.Windows.Forms.Label label85;
+        public System.Windows.Forms.Label label67;
+        public System.Windows.Forms.TextBox textBox118;
     }
 }
