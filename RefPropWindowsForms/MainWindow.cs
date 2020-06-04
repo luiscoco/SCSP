@@ -102,7 +102,6 @@ namespace RefPropWindowsForms
         public Two_PC_RCMCI_withoutReheating Two_PC_RCMCI_withoutReheating_dialog;
         public PC_Two_RCMCI_withoutReheating PC_Two_RCMCI_withoutReheating_dialog;
         public Two_PC_Two_RCMCI_withoutReheating Two_PC_Two_RCMCI_withoutReheating_dialog;
-
         public Two_PC_RCMCI_withReheating Two_PC_RCMCI_withReheating_dialog;
         public PC_Two_RCMCI_withReheating PC_Two_RCMCI_withReheating_dialog;
         public Two_PC_Two_RCMCI_withReheating Two_PC_Two_RCMCI_withReheating_dialog;

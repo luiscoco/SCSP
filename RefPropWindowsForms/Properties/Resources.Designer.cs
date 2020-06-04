@@ -723,6 +723,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PCRCMCI_with_Two_Partial_Cooling_with_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("PCRCMCI with Two Partial Cooling with ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRCMCI_with_Two_Partial_Cooling_with_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRCMCI with Two Partial Cooling with ReHeating Small", resourceCulture);
