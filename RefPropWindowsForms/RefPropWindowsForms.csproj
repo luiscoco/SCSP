@@ -1135,83 +1135,125 @@
     <Compile Include="Two_PC_Two_RCMCI_withReheating.Designer.cs">
       <DependentUpon>Two_PC_Two_RCMCI_withReheating.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wizard.cs">
+    <Compile Include="WizardEighteen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Wizard.Designer.cs">
-      <DependentUpon>Wizard.cs</DependentUpon>
+    <Compile Include="WizardEighteen.Designer.cs">
+      <DependentUpon>WizardEighteen.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardCinco.cs">
+    <Compile Include="WizardNineteen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardCinco.Designer.cs">
-      <DependentUpon>WizardCinco.cs</DependentUpon>
+    <Compile Include="WizardNineteen.Designer.cs">
+      <DependentUpon>WizardNineteen.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardCuatro.cs">
+    <Compile Include="WizardOne.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardCuatro.Designer.cs">
-      <DependentUpon>WizardCuatro.cs</DependentUpon>
+    <Compile Include="WizardOne.Designer.cs">
+      <DependentUpon>WizardOne.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardDiez.cs">
+    <Compile Include="WizardFourteen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardDiez.Designer.cs">
-      <DependentUpon>WizardDiez.cs</DependentUpon>
+    <Compile Include="WizardFourteen.Designer.cs">
+      <DependentUpon>WizardFourteen.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardDoce.cs">
+    <Compile Include="WizardFive.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardDoce.Designer.cs">
-      <DependentUpon>WizardDoce.cs</DependentUpon>
+    <Compile Include="WizardFive.Designer.cs">
+      <DependentUpon>WizardFive.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardDos.cs">
+    <Compile Include="WizardFour.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardDos.Designer.cs">
-      <DependentUpon>WizardDos.cs</DependentUpon>
+    <Compile Include="WizardFour.Designer.cs">
+      <DependentUpon>WizardFour.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardNueve.cs">
+    <Compile Include="WizardSeventeen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardNueve.Designer.cs">
-      <DependentUpon>WizardNueve.cs</DependentUpon>
+    <Compile Include="WizardSeventeen.Designer.cs">
+      <DependentUpon>WizardSeventeen.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardOcho.cs">
+    <Compile Include="WizardSixteen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardOcho.Designer.cs">
-      <DependentUpon>WizardOcho.cs</DependentUpon>
+    <Compile Include="WizardSixteen.Designer.cs">
+      <DependentUpon>WizardSixteen.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardOnce.cs">
+    <Compile Include="WizardTen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardOnce.Designer.cs">
-      <DependentUpon>WizardOnce.cs</DependentUpon>
+    <Compile Include="WizardTen.Designer.cs">
+      <DependentUpon>WizardTen.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardSeis.cs">
+    <Compile Include="WizardTwenty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardSeis.Designer.cs">
-      <DependentUpon>WizardSeis.cs</DependentUpon>
+    <Compile Include="WizardTwenty.Designer.cs">
+      <DependentUpon>WizardTwenty.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardSiete.cs">
+    <Compile Include="WizardTweleve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardSiete.Designer.cs">
-      <DependentUpon>WizardSiete.cs</DependentUpon>
+    <Compile Include="WizardTweleve.Designer.cs">
+      <DependentUpon>WizardTweleve.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardTrece.cs">
+    <Compile Include="WizardTwo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardTrece.Designer.cs">
-      <DependentUpon>WizardTrece.cs</DependentUpon>
+    <Compile Include="WizardTwo.Designer.cs">
+      <DependentUpon>WizardTwo.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardTres.cs">
+    <Compile Include="WizardNine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardTres.Designer.cs">
-      <DependentUpon>WizardTres.cs</DependentUpon>
+    <Compile Include="WizardNine.Designer.cs">
+      <DependentUpon>WizardNine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardEight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardEight.Designer.cs">
+      <DependentUpon>WizardEight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardEleven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardEleven.Designer.cs">
+      <DependentUpon>WizardEleven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardFifteen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardFifteen.Designer.cs">
+      <DependentUpon>WizardFifteen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardSix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardSix.Designer.cs">
+      <DependentUpon>WizardSix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardSeven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardSeven.Designer.cs">
+      <DependentUpon>WizardSeven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardThirdteen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardThirdteen.Designer.cs">
+      <DependentUpon>WizardThirdteen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardThree.Designer.cs">
+      <DependentUpon>WizardThree.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
@@ -1627,44 +1669,65 @@
     <EmbeddedResource Include="Two_PC_Two_RCMCI_withReheating.resx">
       <DependentUpon>Two_PC_Two_RCMCI_withReheating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizard.resx">
-      <DependentUpon>Wizard.cs</DependentUpon>
+    <EmbeddedResource Include="WizardEighteen.resx">
+      <DependentUpon>WizardEighteen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardCinco.resx">
-      <DependentUpon>WizardCinco.cs</DependentUpon>
+    <EmbeddedResource Include="WizardFifteen.resx">
+      <DependentUpon>WizardFifteen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardCuatro.resx">
-      <DependentUpon>WizardCuatro.cs</DependentUpon>
+    <EmbeddedResource Include="WizardFourteen.resx">
+      <DependentUpon>WizardFourteen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardDiez.resx">
-      <DependentUpon>WizardDiez.cs</DependentUpon>
+    <EmbeddedResource Include="WizardNineteen.resx">
+      <DependentUpon>WizardNineteen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardDoce.resx">
-      <DependentUpon>WizardDoce.cs</DependentUpon>
+    <EmbeddedResource Include="WizardOne.resx">
+      <DependentUpon>WizardOne.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardDos.resx">
-      <DependentUpon>WizardDos.cs</DependentUpon>
+    <EmbeddedResource Include="WizardFive.resx">
+      <DependentUpon>WizardFive.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardNueve.resx">
-      <DependentUpon>WizardNueve.cs</DependentUpon>
+    <EmbeddedResource Include="WizardFour.resx">
+      <DependentUpon>WizardFour.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardOcho.resx">
-      <DependentUpon>WizardOcho.cs</DependentUpon>
+    <EmbeddedResource Include="WizardSeventeen.resx">
+      <DependentUpon>WizardSeventeen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardOnce.resx">
-      <DependentUpon>WizardOnce.cs</DependentUpon>
+    <EmbeddedResource Include="WizardSixteen.resx">
+      <DependentUpon>WizardSixteen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardSeis.resx">
-      <DependentUpon>WizardSeis.cs</DependentUpon>
+    <EmbeddedResource Include="WizardTen.resx">
+      <DependentUpon>WizardTen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardSiete.resx">
-      <DependentUpon>WizardSiete.cs</DependentUpon>
+    <EmbeddedResource Include="WizardTweleve.resx">
+      <DependentUpon>WizardTweleve.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardTrece.resx">
-      <DependentUpon>WizardTrece.cs</DependentUpon>
+    <EmbeddedResource Include="WizardTwenty.resx">
+      <DependentUpon>WizardTwenty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardTres.resx">
-      <DependentUpon>WizardTres.cs</DependentUpon>
+    <EmbeddedResource Include="WizardTwo.resx">
+      <DependentUpon>WizardTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardNine.resx">
+      <DependentUpon>WizardNine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardEight.resx">
+      <DependentUpon>WizardEight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardEleven.resx">
+      <DependentUpon>WizardEleven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardSix.resx">
+      <DependentUpon>WizardSix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardSeven.resx">
+      <DependentUpon>WizardSeven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardThirdteen.resx">
+      <DependentUpon>WizardThirdteen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardThree.resx">
+      <DependentUpon>WizardThree.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
