@@ -1971,6 +1971,8 @@
     <None Include="Resources\Ladislav_Veseley_DEMO_Fusion_2.jpg" />
     <None Include="Resources\Ladislav_Veseley_DEMO_Fusion_3.jpg" />
     <None Include="Resources\Ladislav_Veseley_DEMO_Fusion_4.jpg" />
+    <None Include="Resources\PCRC with ReHeating with Four Reheating Stages_Small.jpg" />
+    <None Include="Resources\PCRC with ReHeating with Five Reheating Stages_Small.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\PCRC with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Two Reheating Stages.jpg" />
@@ -1986,6 +1988,8 @@
     <None Include="Resources\PCRC with Two Intercooling Without Reheating.jpg" />
     <None Include="Resources\PCRC with Two Intercooling and Reheating Stages.jpg" />
     <None Include="Resources\PCRC with Two Intercooling and Two Reheating Stages.jpg" />
+    <None Include="Resources\PCRC with Two Intercooling and Three Reheating Stages_Small.jpg" />
+    <None Include="Resources\PCRC with Two ReHeating ICAI proposed configuration_Small.jpg" />
     <Content Include="Resources\PCRC with Two RH.jpg" />
     <None Include="Resources\PCRCMCI without RH Small.jpg" />
     <None Include="Resources\PCRCMCI with RH Small.jpg" />
@@ -2032,9 +2036,12 @@
     <None Include="Resources\PCRCMCI with Two Intercooling with ReHeating.jpg" />
     <None Include="Resources\PCRCMCI with Two Partial Cooling with ReHeating.jpg" />
     <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with ReHeating.jpg" />
+    <None Include="Resources\RC with Four ReHeating Stages_Small.jpg" />
+    <None Include="Resources\RC with Five ReHeating Stages_Small.jpg" />
     <Content Include="Resources\RC with Three ReHeating Stages.jpg" />
     <Content Include="Resources\RC with Three RH Small.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />
+    <None Include="Resources\RC with Two ReHeating ICAI proposed configuration_Small.jpg" />
     <Content Include="Resources\RC with Two ReHeating Stages.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages_Icon.jpg" />
     <Content Include="Resources\RC with Two RH Small.jpg" />
@@ -2048,6 +2055,8 @@
     <None Include="Resources\RCMCI with ReHeating ICAI proposed configuration Small.jpg" />
     <None Include="Resources\RCMCI with ReHeating ICAI proposed configuration Small luis.jpg" />
     <None Include="Resources\RCMCI with ReHeating ICAI proposed configuration.jpg" />
+    <None Include="Resources\RCMCI with ReHeating with Four Reheating Stages_Small.jpg" />
+    <None Include="Resources\RCMCI with ReHeating with Five Reheating Stages_Small.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\RCMCI with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Two Reheating Stages.jpg" />
@@ -2061,6 +2070,8 @@
     <None Include="Resources\RCMCI with Two Intercooling and ReHeating.jpg" />
     <None Include="Resources\RCMCI with Two Intercooling and Two Reheating Stages.jpg" />
     <None Include="Resources\RCMCI with Two Intercooling without ReHeating_Icon.jpg" />
+    <None Include="Resources\RCMCI with Two Intercooling and Three Reheating Stages_Small.jpg" />
+    <None Include="Resources\RCMCI with Two ReHeating ICAI proposed configuration_Small.jpg" />
     <Content Include="Resources\RCMCI with Two ReHeating Small2.jpg" />
   </ItemGroup>
   <ItemGroup>

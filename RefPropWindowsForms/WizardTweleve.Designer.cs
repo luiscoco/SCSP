@@ -88,11 +88,11 @@
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(62, 2);
+            this.label1.Location = new System.Drawing.Point(115, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 26);
+            this.label1.Size = new System.Drawing.Size(291, 26);
             this.label1.TabIndex = 182;
-            this.label1.Text = "RC WITHOUT REHEATING ICAI CONFIGURATION";
+            this.label1.Text = "49. RC WITHOUT REHEATING ICAI CONFIGURATION";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
@@ -122,11 +122,11 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(73, 501);
+            this.label2.Location = new System.Drawing.Point(111, 500);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(364, 23);
+            this.label2.Size = new System.Drawing.Size(323, 23);
             this.label2.TabIndex = 186;
-            this.label2.Text = "RCMCI WITHOUT REHEATING ICAI CONFIGURATION";
+            this.label2.Text = "53. RCMCI WITHOUT REHEATING ICAI CONFIGURATION";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel5
@@ -156,11 +156,11 @@
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(69, 271);
+            this.label3.Location = new System.Drawing.Point(84, 274);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(364, 26);
+            this.label3.Size = new System.Drawing.Size(364, 18);
             this.label3.TabIndex = 190;
-            this.label3.Text = "PCRC WITHOUT REHEATING ICAI CONFIGURATION";
+            this.label3.Text = "51. PCRC WITHOUT REHEATING ICAI CONFIGURATION";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel7
@@ -190,11 +190,11 @@
             // 
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(640, 252);
+            this.label4.Location = new System.Drawing.Point(691, 255);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(364, 26);
+            this.label4.Size = new System.Drawing.Size(298, 20);
             this.label4.TabIndex = 202;
-            this.label4.Text = "PCRC WITH REHEATING ICAI CONFIGURATION";
+            this.label4.Text = "52. PCRC WITH REHEATING ICAI CONFIGURATION";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel9
@@ -224,11 +224,11 @@
             // 
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(640, 500);
+            this.label5.Location = new System.Drawing.Point(691, 500);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(364, 23);
+            this.label5.Size = new System.Drawing.Size(300, 23);
             this.label5.TabIndex = 198;
-            this.label5.Text = "RCMCI WITH REHEATING ICAI CONFIGURATION";
+            this.label5.Text = "54. RCMCI WITH REHEATING ICAI CONFIGURATION";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel11
@@ -258,11 +258,11 @@
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(630, 2);
+            this.label6.Location = new System.Drawing.Point(691, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(364, 26);
+            this.label6.Size = new System.Drawing.Size(294, 20);
             this.label6.TabIndex = 194;
-            this.label6.Text = "RC WITH REHEATING ICAI CONFIGURATION";
+            this.label6.Text = "50. RC WITH REHEATING ICAI CONFIGURATION";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox4

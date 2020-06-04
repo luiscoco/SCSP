@@ -35,9 +35,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
@@ -80,11 +78,11 @@
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(38, 1);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 44);
+            this.label1.Size = new System.Drawing.Size(390, 34);
             this.label1.TabIndex = 178;
-            this.label1.Text = "SB WITH PREHEATING IN PARALLEL WITH LTR AND HTR WITHOUT REHEATING";
+            this.label1.Text = "62. SB WITH PREHEATING IN PARALLEL WITH LTR AND HTR WITHOUT REHEATING";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
@@ -113,19 +111,12 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(78, 251);
+            this.label2.Location = new System.Drawing.Point(24, 273);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 44);
+            this.label2.Size = new System.Drawing.Size(449, 22);
             this.label2.TabIndex = 182;
-            this.label2.Text = "RC WITH PREHEATING IN PARALLEL WITH LTR AND THREE RECUPERATORS";
+            this.label2.Text = "63.RC WITH PREHEATING IN PARALLEL WITH LTR AND THREE RECUPERATORS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.Location = new System.Drawing.Point(0, 0);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(100, 23);
-            this.linkLabel5.TabIndex = 188;
             // 
             // linkLabel6
             // 
@@ -137,13 +128,6 @@
             this.linkLabel6.TabIndex = 187;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Reference";
-            // 
-            // linkLabel7
-            // 
-            this.linkLabel7.Location = new System.Drawing.Point(0, 0);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(100, 23);
-            this.linkLabel7.TabIndex = 192;
             // 
             // linkLabel8
             // 
@@ -182,12 +166,12 @@
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(24, 492);
+            this.label3.Location = new System.Drawing.Point(38, 495);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(449, 44);
+            this.label3.Size = new System.Drawing.Size(435, 38);
             this.label3.TabIndex = 193;
-            this.label3.Text = "PAPER UPM: Thermodynamic analysis of multi-heating cycles working around the crit" +
-    "ical (Luis González Portillo)\r\n";
+            this.label3.Text = "64. PAPER UPM: Thermodynamic analysis of multi-heating cycles working around the " +
+    "critical (Luis González Portillo)\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox5
@@ -263,9 +247,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.linkLabel7);
             this.Controls.Add(this.linkLabel6);
-            this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.pictureBox2);
@@ -297,9 +279,7 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.LinkLabel linkLabel6;
-        private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.LinkLabel linkLabel8;

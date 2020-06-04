@@ -70,7 +70,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(534, 52);
             this.label1.TabIndex = 122;
-            this.label1.Text = "22. TWO PARTIAL COOLING WITH RECOMPRESSION AND MAIN COMPRESSION INTERCOOLING (PCR" +
+            this.label1.Text = "31. TWO PARTIAL COOLING WITH RECOMPRESSION AND MAIN COMPRESSION INTERCOOLING (PCR" +
     "CMCI) WITHOUT REHEATING STAGES";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -82,7 +82,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(492, 41);
             this.label2.TabIndex = 124;
-            this.label2.Text = "24. TWO PARTIAL COOLING WITH RECOMPRESSION AND TWO COMPRESSION INTERCOOLING (PCRC" +
+            this.label2.Text = "33. TWO PARTIAL COOLING WITH RECOMPRESSION AND TWO COMPRESSION INTERCOOLING (PCRC" +
     "MCI) WITHOUT REHEATING STAGES";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -94,7 +94,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(513, 49);
             this.label4.TabIndex = 126;
-            this.label4.Text = "23. PARTIAL COOLING WITH RECOMPRESSION AND TWO COMPRESSION INTERCOOLING (PCRCMCI)" +
+            this.label4.Text = "32. PARTIAL COOLING WITH RECOMPRESSION AND TWO COMPRESSION INTERCOOLING (PCRCMCI)" +
     " WITHOUT REHEATING STAGES";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

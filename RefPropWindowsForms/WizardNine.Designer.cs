@@ -72,11 +72,11 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(48, -9);
+            this.label2.Location = new System.Drawing.Point(79, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(459, 44);
+            this.label2.Size = new System.Drawing.Size(459, 15);
             this.label2.TabIndex = 159;
-            this.label2.Text = "34. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE LTR";
+            this.label2.Text = "43. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE LTR";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -87,7 +87,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(504, 19);
             this.label3.TabIndex = 163;
-            this.label3.Text = "38. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE LTR AND HTR";
+            this.label3.Text = "47. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE LTR AND HTR";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button5
@@ -105,11 +105,11 @@
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 205);
+            this.label1.Location = new System.Drawing.Point(79, 228);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(453, 70);
+            this.label1.Size = new System.Drawing.Size(453, 20);
             this.label1.TabIndex = 168;
-            this.label1.Text = "36. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE HTR";
+            this.label1.Text = "45. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE HTR";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel2
@@ -204,11 +204,11 @@
             // 
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(664, -9);
+            this.label4.Location = new System.Drawing.Point(692, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(427, 44);
+            this.label4.Size = new System.Drawing.Size(427, 17);
             this.label4.TabIndex = 178;
-            this.label4.Text = "35. RECOMPRESSION (RC) WITH REHEATING AND PREHEATING IN THE LTR";
+            this.label4.Text = "44. RECOMPRESSION (RC) WITH REHEATING AND PREHEATING IN THE LTR";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel9
@@ -237,11 +237,11 @@
             // 
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(643, 234);
+            this.label5.Location = new System.Drawing.Point(692, 258);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(450, 70);
+            this.label5.Size = new System.Drawing.Size(450, 23);
             this.label5.TabIndex = 182;
-            this.label5.Text = "37. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE HTR";
+            this.label5.Text = "46. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE HTR";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel11
@@ -274,7 +274,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(495, 19);
             this.label6.TabIndex = 186;
-            this.label6.Text = "39. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE LTR AND HTR";
+            this.label6.Text = "48. RECOMPRESSION (RC) WITHOUT REHEATING AND PREHEATING IN THE LTR AND HTR";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox6

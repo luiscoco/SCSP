@@ -373,6 +373,46 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PCRC_with_ReHeating_with_Five_Reheating_Stages_Small {
+            get {
+                object obj = ResourceManager.GetObject("PCRC with ReHeating with Five Reheating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCRC_with_ReHeating_with_Four_Reheating_Stages_Small {
+            get {
+                object obj = ResourceManager.GetObject("PCRC with ReHeating with Four Reheating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCRC_with_ReHeating_with_Four_Reheating_Stages_Small1 {
+            get {
+                object obj = ResourceManager.GetObject("PCRC with ReHeating with Four Reheating Stages_Small1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCRC_with_ReHeating_with_Four_Reheating_Stages_Small2 {
+            get {
+                object obj = ResourceManager.GetObject("PCRC with ReHeating with Four Reheating Stages_Small2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRC_with_ReHeating_with_Three_Reheating_Stages {
             get {
                 object obj = ResourceManager.GetObject("PCRC with ReHeating with Three Reheating Stages", resourceCulture);
@@ -463,6 +503,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PCRC_with_Two_Intercooling_and_Three_Reheating_Stages_Small {
+            get {
+                object obj = ResourceManager.GetObject("PCRC with Two Intercooling and Three Reheating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRC_with_Two_Intercooling_and_Two_Reheating {
             get {
                 object obj = ResourceManager.GetObject("PCRC with Two Intercooling and Two Reheating", resourceCulture);
@@ -516,6 +566,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap PCRC_with_Two_Intercooling_Without_Reheating_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRC with Two Intercooling Without Reheating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCRC_with_Two_ReHeating_ICAI_proposed_configuration_Small {
+            get {
+                object obj = ResourceManager.GetObject("PCRC with Two ReHeating ICAI proposed configuration_Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -646,6 +706,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap PCRCMCI_with_Three_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRCMCI with Three ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCRCMCI_with_Three_ReHeating_Small1 {
+            get {
+                object obj = ResourceManager.GetObject("PCRCMCI with Three ReHeating Small1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1075,6 +1145,46 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RC_with_Five_ReHeating_Stages_Small {
+            get {
+                object obj = ResourceManager.GetObject("RC with Five ReHeating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_Five_ReHeating_Stages_Small1 {
+            get {
+                object obj = ResourceManager.GetObject("RC with Five ReHeating Stages_Small1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_Five_ReHeating_Stages_Small2 {
+            get {
+                object obj = ResourceManager.GetObject("RC with Five ReHeating Stages_Small2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_Four_ReHeating_Stages_Small {
+            get {
+                object obj = ResourceManager.GetObject("RC with Four ReHeating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_HTR_without_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("RC with PreHeating in parallel with HTR without ReHeating Small", resourceCulture);
@@ -1248,6 +1358,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap RC_with_Three_RH_Small {
             get {
                 object obj = ResourceManager.GetObject("RC with Three RH Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_Two_ReHeating_ICAI_proposed_configuration_Small {
+            get {
+                object obj = ResourceManager.GetObject("RC with Two ReHeating ICAI proposed configuration_Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1495,6 +1615,26 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RCMCI_with_ReHeating_with_Five_Reheating_Stages_Small {
+            get {
+                object obj = ResourceManager.GetObject("RCMCI with ReHeating with Five Reheating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RCMCI_with_ReHeating_with_Four_Reheating_Stages_Small {
+            get {
+                object obj = ResourceManager.GetObject("RCMCI with ReHeating with Four Reheating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RCMCI_with_ReHeating_with_Three_Reheating_Stages {
             get {
                 object obj = ResourceManager.GetObject("RCMCI with ReHeating with Three Reheating Stages", resourceCulture);
@@ -1575,6 +1715,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RCMCI_with_Two_Intercooling_and_Three_Reheating_Stages_Small {
+            get {
+                object obj = ResourceManager.GetObject("RCMCI with Two Intercooling and Three Reheating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RCMCI_with_Two_Intercooling_and_Two_ReHeating_Small2 {
             get {
                 object obj = ResourceManager.GetObject("RCMCI with Two Intercooling and Two ReHeating Small2", resourceCulture);
@@ -1638,6 +1788,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap RCMCI_with_Two_Intercooling_without_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("RCMCI with Two Intercooling without ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RCMCI_with_Two_ReHeating_ICAI_proposed_configuration_Small {
+            get {
+                object obj = ResourceManager.GetObject("RCMCI with Two ReHeating ICAI proposed configuration_Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
