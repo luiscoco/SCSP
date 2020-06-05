@@ -353,6 +353,8 @@
             this.label52 = new System.Windows.Forms.Label();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label142 = new System.Windows.Forms.Label();
+            this.textBox124 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button39 = new System.Windows.Forms.Button();
             this.label68 = new System.Windows.Forms.Label();
@@ -369,12 +371,11 @@
             this.label132 = new System.Windows.Forms.Label();
             this.comboBox20 = new System.Windows.Forms.ComboBox();
             this.label133 = new System.Windows.Forms.Label();
-            this.label142 = new System.Windows.Forms.Label();
-            this.textBox124 = new System.Windows.Forms.TextBox();
             this.textBox125 = new System.Windows.Forms.TextBox();
             this.label143 = new System.Windows.Forms.Label();
             this.textBox126 = new System.Windows.Forms.TextBox();
             this.label144 = new System.Windows.Forms.Label();
+            this.button40 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -761,11 +762,11 @@
             this.button38.Enabled = false;
             this.button38.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button38.ForeColor = System.Drawing.Color.White;
-            this.button38.Location = new System.Drawing.Point(810, 207);
+            this.button38.Location = new System.Drawing.Point(803, 207);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(67, 25);
+            this.button38.Size = new System.Drawing.Size(76, 25);
             this.button38.TabIndex = 2646;
-            this.button38.Text = "RHX and SF";
+            this.button38.Text = "RHX1 and SF";
             this.button38.UseVisualStyleBackColor = false;
             // 
             // button31
@@ -3983,6 +3984,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Location = new System.Drawing.Point(143, 171);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(88, 13);
+            this.label142.TabIndex = 376;
+            this.label142.Text = "DP_RHX2 (kPa):";
+            // 
+            // textBox124
+            // 
+            this.textBox124.Location = new System.Drawing.Point(231, 168);
+            this.textBox124.Name = "textBox124";
+            this.textBox124.Size = new System.Drawing.Size(48, 20);
+            this.textBox124.TabIndex = 377;
+            this.textBox124.Text = "0.0";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRCMCI_with_Two_Intercooling_with_Two_ReHeating;
@@ -4139,23 +4157,6 @@
             this.label133.TabIndex = 2677;
             this.label133.Text = "ReHeating2 SF HTF:";
             // 
-            // label142
-            // 
-            this.label142.AutoSize = true;
-            this.label142.Location = new System.Drawing.Point(143, 171);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(88, 13);
-            this.label142.TabIndex = 376;
-            this.label142.Text = "DP_RHX2 (kPa):";
-            // 
-            // textBox124
-            // 
-            this.textBox124.Location = new System.Drawing.Point(231, 168);
-            this.textBox124.Name = "textBox124";
-            this.textBox124.Size = new System.Drawing.Size(48, 20);
-            this.textBox124.TabIndex = 377;
-            this.textBox124.Text = "0.0";
-            // 
             // textBox125
             // 
             this.textBox125.Location = new System.Drawing.Point(116, 323);
@@ -4190,11 +4191,25 @@
             this.label144.TabIndex = 2680;
             this.label144.Text = "P_rhx2_in (kPa):";
             // 
+            // button40
+            // 
+            this.button40.BackColor = System.Drawing.Color.Maroon;
+            this.button40.Enabled = false;
+            this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button40.ForeColor = System.Drawing.Color.White;
+            this.button40.Location = new System.Drawing.Point(959, 207);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(76, 25);
+            this.button40.TabIndex = 2684;
+            this.button40.Text = "RHX2 and SF";
+            this.button40.UseVisualStyleBackColor = false;
+            // 
             // PC_Two_RCMCI_with_Two_Reheating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 719);
+            this.Controls.Add(this.button40);
             this.Controls.Add(this.textBox125);
             this.Controls.Add(this.label143);
             this.Controls.Add(this.textBox126);
@@ -4853,5 +4868,6 @@
         public System.Windows.Forms.Label label143;
         public System.Windows.Forms.TextBox textBox126;
         public System.Windows.Forms.Label label144;
+        public System.Windows.Forms.Button button40;
     }
 }

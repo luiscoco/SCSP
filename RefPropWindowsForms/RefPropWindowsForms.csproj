@@ -1147,6 +1147,12 @@
     <Compile Include="Two_PC_Two_RCMCI_withReheating.Designer.cs">
       <DependentUpon>Two_PC_Two_RCMCI_withReheating.cs</DependentUpon>
     </Compile>
+    <Compile Include="Two_PC_Two_RCMCI_with_Two_Reheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Two_PC_Two_RCMCI_with_Two_Reheating.Designer.cs">
+      <DependentUpon>Two_PC_Two_RCMCI_with_Two_Reheating.cs</DependentUpon>
+    </Compile>
     <Compile Include="WizardEighteen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1686,6 +1692,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Two_PC_Two_RCMCI_withReheating.resx">
       <DependentUpon>Two_PC_Two_RCMCI_withReheating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Two_PC_Two_RCMCI_with_Two_Reheating.resx">
+      <DependentUpon>Two_PC_Two_RCMCI_with_Two_Reheating.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardEighteen.resx">
       <DependentUpon>WizardEighteen.cs</DependentUpon>
