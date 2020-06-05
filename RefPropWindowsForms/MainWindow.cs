@@ -115,6 +115,9 @@ namespace RefPropWindowsForms
         public PC_Two_RCMCI_with_Two_Reheating PC_Two_RCMCI_with_Two_Reheating_dialog;
         public Two_PC_RCMCI_with_Two_Reheating Two_PC_RCMCI_with_Two_Reheating_dialog;
         public Two_PC_Two_RCMCI_with_Two_Reheating Two_PC_Two_RCMCI_with_Two_Reheating_dialog;
+        public PC_Two_RCMCI_with_Three_Reheating PC_Two_RCMCI_with_Three_Reheating_dialog;
+        public Two_PC_RCMCI_with_Three_Reheating Two_PC_RCMCI_with_Three_Reheating_dialog;
+        public Two_PC_Two_RCMCI_with_Three_Reheating Two_PC_Two_RCMCI_with_Three_Reheating_dialog;
 
         public snl_compressor_tsr SNL_Compressor;
         public snl_radial_turbine SNL_Turbine;
