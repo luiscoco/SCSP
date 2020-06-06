@@ -101,6 +101,7 @@ namespace RefPropWindowsForms
         public PCRC_with_Two_Intercooling_without_ReHeating PCRC_with_Two_Intercooling_without_ReHeating_dialog;
         public PCRC_with_Two_Intercooling_with_ReHeating PCRC_with_Two_Intercooling_with_ReHeating_dialog;
         public PCRC_with_Two_Intercooling_with_Two_ReHeating PCRC_with_Two_Intercooling_with_Two_ReHeating_dialog;
+        public PCRC_with_Two_Intercooling_with_Three_ReHeating PCRC_with_Two_Intercooling_with_Three_ReHeating_dialog;
         //public PCRC_with_Two_Intercooling_with_Three_ReHeating PCRC_with_Two_Intercooling_with_Three_ReHeating_dialog;
         public RCMCI_with_Two_Intercooling_without_Reheating RCMCI_with_Two_Intercooling_without_ReHeating_dialog;
         public RCMCI_with_Two_Intercooling_with_Reheating RCMCI_with_Two_Intercooling_with_ReHeating_dialog;

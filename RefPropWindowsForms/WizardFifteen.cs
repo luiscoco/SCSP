@@ -36,7 +36,9 @@ namespace RefPropWindowsForms
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            puntero.PCRC_with_Two_Intercooling_with_Three_ReHeating_dialog = new PCRC_with_Two_Intercooling_with_Three_ReHeating();
+            puntero.PCRC_with_Two_Intercooling_with_Three_ReHeating_dialog.MdiParent = puntero;
+            puntero.PCRC_with_Two_Intercooling_with_Three_ReHeating_dialog.Show();
         }
     }
 }
