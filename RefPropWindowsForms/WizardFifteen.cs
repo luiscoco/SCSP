@@ -19,5 +19,24 @@ namespace RefPropWindowsForms
             puntero = puntero1;
             InitializeComponent();
         }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.PCRCMCI_with_Three_ReHeating_dialog = new PCRCMCI_with_Three_ReHeating();
+            puntero.PCRCMCI_with_Three_ReHeating_dialog.MdiParent = puntero;
+            puntero.PCRCMCI_with_Three_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RCMCI_with_Two_Intercooling_with_Three_ReHeating_dialog = new RCMCI_with_Two_Intercooling_with_Three_Reheating();
+            puntero.RCMCI_with_Two_Intercooling_with_Three_ReHeating_dialog.MdiParent = puntero;
+            puntero.RCMCI_with_Two_Intercooling_with_Three_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

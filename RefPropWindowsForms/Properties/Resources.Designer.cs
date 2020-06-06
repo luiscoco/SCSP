@@ -703,6 +703,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PCRCMCI_with_Three_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("PCRCMCI with Three ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRCMCI_with_Three_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRCMCI with Three ReHeating Small", resourceCulture);
@@ -1748,6 +1758,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap RCMCI_with_Two_Intercooling_and_ReHeating_Small2 {
             get {
                 object obj = ResourceManager.GetObject("RCMCI with Two Intercooling and ReHeating Small2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RCMCI_with_Two_Intercooling_and_Three_Reheating_Stages {
+            get {
+                object obj = ResourceManager.GetObject("RCMCI with Two Intercooling and Three Reheating Stages", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
