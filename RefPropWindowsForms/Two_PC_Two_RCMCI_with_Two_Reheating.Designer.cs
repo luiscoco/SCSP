@@ -375,7 +375,6 @@
             this.textBox110 = new System.Windows.Forms.TextBox();
             this.label157 = new System.Windows.Forms.Label();
             this.textBox111 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
             this.label144 = new System.Windows.Forms.Label();
@@ -392,6 +391,11 @@
             this.label163 = new System.Windows.Forms.Label();
             this.label164 = new System.Windows.Forms.Label();
             this.textBox135 = new System.Windows.Forms.TextBox();
+            this.comboBox19 = new System.Windows.Forms.ComboBox();
+            this.label165 = new System.Windows.Forms.Label();
+            this.comboBox20 = new System.Windows.Forms.ComboBox();
+            this.label166 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -639,7 +643,7 @@
             "Parabolic",
             "Fresnel",
             "Dual-Loop"});
-            this.comboBox5.Location = new System.Drawing.Point(557, 56);
+            this.comboBox5.Location = new System.Drawing.Point(557, 49);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(122, 21);
             this.comboBox5.TabIndex = 2711;
@@ -648,11 +652,11 @@
             // label126
             // 
             this.label126.BackColor = System.Drawing.SystemColors.Control;
-            this.label126.Location = new System.Drawing.Point(428, 57);
+            this.label126.Location = new System.Drawing.Point(420, 50);
             this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(129, 18);
+            this.label126.Size = new System.Drawing.Size(135, 18);
             this.label126.TabIndex = 2712;
-            this.label126.Text = "ReHeating SF Collectors:";
+            this.label126.Text = "ReHeating1 SF Collectors:";
             // 
             // comboBox6
             // 
@@ -666,7 +670,7 @@
             "Dowtherm_A",
             "Therminol_75",
             "Liquid Sodium"});
-            this.comboBox6.Location = new System.Drawing.Point(557, 81);
+            this.comboBox6.Location = new System.Drawing.Point(557, 71);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(122, 21);
             this.comboBox6.TabIndex = 2709;
@@ -675,11 +679,11 @@
             // label127
             // 
             this.label127.BackColor = System.Drawing.SystemColors.Control;
-            this.label127.Location = new System.Drawing.Point(456, 84);
+            this.label127.Location = new System.Drawing.Point(446, 74);
             this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(104, 18);
+            this.label127.Size = new System.Drawing.Size(113, 18);
             this.label127.TabIndex = 2710;
-            this.label127.Text = "ReHeating SF HTF:";
+            this.label127.Text = "ReHeating1 SF HTF:";
             // 
             // label68
             // 
@@ -3941,7 +3945,7 @@
             "Dowtherm_A",
             "Therminol_75",
             "Liquid Sodium"});
-            this.comboBox7.Location = new System.Drawing.Point(557, 31);
+            this.comboBox7.Location = new System.Drawing.Point(557, 27);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(122, 21);
             this.comboBox7.TabIndex = 2499;
@@ -3950,7 +3954,7 @@
             // label35
             // 
             this.label35.BackColor = System.Drawing.SystemColors.Control;
-            this.label35.Location = new System.Drawing.Point(479, 33);
+            this.label35.Location = new System.Drawing.Point(479, 29);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(84, 18);
             this.label35.TabIndex = 2500;
@@ -4189,16 +4193,6 @@
             this.textBox111.TabIndex = 2651;
             this.textBox111.Text = "12500";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRCMCI_with_Two_Partial_Cooling_with_Two_Intercooling_with_Two_ReHeating1;
-            this.pictureBox1.Location = new System.Drawing.Point(161, 91);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(977, 349);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2423;
-            this.pictureBox1.TabStop = false;
-            // 
             // button41
             // 
             this.button41.BackColor = System.Drawing.Color.Maroon;
@@ -4341,11 +4335,75 @@
             this.textBox135.TabIndex = 2732;
             this.textBox135.Text = "17300";
             // 
+            // comboBox19
+            // 
+            this.comboBox19.BackColor = System.Drawing.Color.White;
+            this.comboBox19.FormattingEnabled = true;
+            this.comboBox19.Items.AddRange(new object[] {
+            "Parabolic",
+            "Fresnel",
+            "Dual-Loop"});
+            this.comboBox19.Location = new System.Drawing.Point(557, 93);
+            this.comboBox19.Name = "comboBox19";
+            this.comboBox19.Size = new System.Drawing.Size(122, 21);
+            this.comboBox19.TabIndex = 2737;
+            this.comboBox19.Text = "Parabolic";
+            // 
+            // label165
+            // 
+            this.label165.BackColor = System.Drawing.SystemColors.Control;
+            this.label165.Location = new System.Drawing.Point(420, 94);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(135, 18);
+            this.label165.TabIndex = 2738;
+            this.label165.Text = "ReHeating2 SF Collectors:";
+            // 
+            // comboBox20
+            // 
+            this.comboBox20.BackColor = System.Drawing.Color.White;
+            this.comboBox20.FormattingEnabled = true;
+            this.comboBox20.Items.AddRange(new object[] {
+            "Solar Salt",
+            "Hitec XL",
+            "Therminol VP1",
+            "Syltherm_800",
+            "Dowtherm_A",
+            "Therminol_75",
+            "Liquid Sodium"});
+            this.comboBox20.Location = new System.Drawing.Point(557, 115);
+            this.comboBox20.Name = "comboBox20";
+            this.comboBox20.Size = new System.Drawing.Size(122, 21);
+            this.comboBox20.TabIndex = 2735;
+            this.comboBox20.Text = "Solar Salt";
+            // 
+            // label166
+            // 
+            this.label166.BackColor = System.Drawing.SystemColors.Control;
+            this.label166.Location = new System.Drawing.Point(446, 118);
+            this.label166.Name = "label166";
+            this.label166.Size = new System.Drawing.Size(113, 18);
+            this.label166.TabIndex = 2736;
+            this.label166.Text = "ReHeating1 SF HTF:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRCMCI_with_Two_Partial_Cooling_with_Two_Intercooling_with_Two_ReHeating1;
+            this.pictureBox1.Location = new System.Drawing.Point(161, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(977, 349);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2423;
+            this.pictureBox1.TabStop = false;
+            // 
             // Two_PC_Two_RCMCI_with_Two_Reheating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 706);
+            this.Controls.Add(this.comboBox19);
+            this.Controls.Add(this.label165);
+            this.Controls.Add(this.comboBox20);
+            this.Controls.Add(this.label166);
             this.Controls.Add(this.textBox134);
             this.Controls.Add(this.label163);
             this.Controls.Add(this.label164);
@@ -5036,5 +5094,9 @@
         public System.Windows.Forms.Label label163;
         public System.Windows.Forms.Label label164;
         public System.Windows.Forms.TextBox textBox135;
+        public System.Windows.Forms.ComboBox comboBox19;
+        public System.Windows.Forms.Label label165;
+        public System.Windows.Forms.ComboBox comboBox20;
+        public System.Windows.Forms.Label label166;
     }
 }

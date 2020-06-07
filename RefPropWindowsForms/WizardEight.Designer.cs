@@ -240,7 +240,7 @@
             // 
             this.linkLabel9.AutoSize = true;
             this.linkLabel9.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel9.Location = new System.Drawing.Point(1258, 517);
+            this.linkLabel9.Location = new System.Drawing.Point(1259, 517);
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.Size = new System.Drawing.Size(64, 15);
             this.linkLabel9.TabIndex = 196;

@@ -1735,6 +1735,9 @@
     <EmbeddedResource Include="Two_PC_Two_RCMCI_withReheating.resx">
       <DependentUpon>Two_PC_Two_RCMCI_withReheating.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Two_PC_Two_RCMCI_with_Three_Reheating.resx">
+      <DependentUpon>Two_PC_Two_RCMCI_with_Three_Reheating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Two_PC_Two_RCMCI_with_Two_Reheating.resx">
       <DependentUpon>Two_PC_Two_RCMCI_with_Two_Reheating.cs</DependentUpon>
     </EmbeddedResource>
@@ -2112,6 +2115,8 @@
     <None Include="Resources\PCRCMCI with Two Partial Cooling with Two ReHeating.jpg" />
     <None Include="Resources\PCRCMCI with Two Intercooling with Three ReHeating.jpg" />
     <None Include="Resources\PCRCMCI with Three ReHeating.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Three ReHeating.jpg" />
+    <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with Three ReHeating.jpg" />
     <Content Include="Resources\RC with Three ReHeating Stages.jpg" />
     <Content Include="Resources\RC with Three RH Small.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />
