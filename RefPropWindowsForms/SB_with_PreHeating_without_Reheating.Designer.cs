@@ -268,6 +268,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -309,6 +310,7 @@
             this.button34.TabIndex = 1444;
             this.button34.Text = "Optimization Analysis";
             this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
             // 
             // button27
             // 
@@ -1400,6 +1402,7 @@
             this.button13.TabIndex = 1355;
             this.button13.Text = "Set Critical Point ";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label78
             // 
@@ -1617,6 +1620,7 @@
             this.button11.TabIndex = 1348;
             this.button11.Text = "Mixture Calculation";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // groupBox2
             // 
@@ -2025,7 +2029,7 @@
             this.button10.Enabled = false;
             this.button10.Location = new System.Drawing.Point(805, 134);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(52, 40);
+            this.button10.Size = new System.Drawing.Size(56, 40);
             this.button10.TabIndex = 1330;
             this.button10.Text = "Radial\r\nTurbine";
             this.button10.UseVisualStyleBackColor = true;
@@ -2033,9 +2037,9 @@
             // button9
             // 
             this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(288, 134);
+            this.button9.Location = new System.Drawing.Point(283, 134);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(48, 40);
+            this.button9.Size = new System.Drawing.Size(58, 40);
             this.button9.TabIndex = 1329;
             this.button9.Text = "Main Comp";
             this.button9.UseVisualStyleBackColor = true;
@@ -2732,6 +2736,7 @@
             this.comboBox1.Size = new System.Drawing.Size(80, 21);
             this.comboBox1.TabIndex = 1233;
             this.comboBox1.Text = "PureFluid";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -2947,11 +2952,25 @@
             this.pictureBox1.TabIndex = 1316;
             this.pictureBox1.TabStop = false;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Maroon;
+            this.button7.Enabled = false;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(402, 258);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(117, 36);
+            this.button7.TabIndex = 1446;
+            this.button7.Text = "Preheating Heat Exchanger";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
             // SB_with_PreHeating_without_Reheating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 691);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.button34);
             this.Controls.Add(this.button27);
@@ -3408,5 +3427,6 @@
         public System.Windows.Forms.TextBox textBox17;
         public System.Windows.Forms.Label label20;
         public System.Windows.Forms.TextBox textBox13;
+        public System.Windows.Forms.Button button7;
     }
 }
