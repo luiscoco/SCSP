@@ -1087,6 +1087,12 @@
     <Compile Include="PTC_SF_PHX_Data_Input.Designer.cs">
       <DependentUpon>PTC_SF_PHX_Data_Input.cs</DependentUpon>
     </Compile>
+    <Compile Include="SB_with_PreHeating_without_Reheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SB_with_PreHeating_without_Reheating.Designer.cs">
+      <DependentUpon>SB_with_PreHeating_without_Reheating.cs</DependentUpon>
+    </Compile>
     <Compile Include="snl_compressor_tsr.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1695,6 +1701,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REFPROP_Interface_Mixture.resx">
       <DependentUpon>REFPROP_Interface_Mixture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SB_with_PreHeating_without_Reheating.resx">
+      <DependentUpon>SB_with_PreHeating_without_Reheating.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="snl_compressor_tsr.resx">
       <DependentUpon>snl_compressor_tsr.cs</DependentUpon>

@@ -1995,6 +1995,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SB_with_PreHeating_in_parallel_with_LTR_without_ReHeating1 {
+            get {
+                object obj = ResourceManager.GetObject("SB with PreHeating in parallel with LTR without ReHeating1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SNL_compressor_Performance_Map {
             get {
                 object obj = ResourceManager.GetObject("SNL compressor Performance Map", resourceCulture);
