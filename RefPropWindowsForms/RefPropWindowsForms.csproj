@@ -1723,6 +1723,9 @@
     <EmbeddedResource Include="Two_PC_RCMCI_withReheating.resx">
       <DependentUpon>Two_PC_RCMCI_withReheating.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Two_PC_RCMCI_with_Three_Reheating.resx">
+      <DependentUpon>Two_PC_RCMCI_with_Three_Reheating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Two_PC_RCMCI_with_Two_Reheating.resx">
       <DependentUpon>Two_PC_RCMCI_with_Two_Reheating.cs</DependentUpon>
     </EmbeddedResource>

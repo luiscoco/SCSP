@@ -249,7 +249,6 @@ namespace RefPropWindowsForms
         public Double Main_SF_Pump_Electrical_Consumption;
         public Double UHS_Water_Pump, ACHE_fans;
 
-
         public Two_PC_RCMCI_with_Two_Reheating()
         {
             InitializeComponent();
