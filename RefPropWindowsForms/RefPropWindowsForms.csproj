@@ -992,6 +992,12 @@
     <Compile Include="RC_withReHeating_new_proposed_configuration.Designer.cs">
       <DependentUpon>RC_withReHeating_new_proposed_configuration.cs</DependentUpon>
     </Compile>
+    <Compile Include="RC_with_LTR_PreHeating_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_LTR_PreHeating_without_ReHeating.Designer.cs">
+      <DependentUpon>RC_with_LTR_PreHeating_without_ReHeating.cs</DependentUpon>
+    </Compile>
     <Compile Include="RC_with_ReHeating_Optimization_Analysis_Results.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1652,6 +1658,9 @@
     <EmbeddedResource Include="RC_withReHeating_new_proposed_configuration.resx">
       <DependentUpon>RC_withReHeating_new_proposed_configuration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_LTR_PreHeating_without_ReHeating.resx">
+      <DependentUpon>RC_with_LTR_PreHeating_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RC_with_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>RC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
@@ -2129,6 +2138,7 @@
     <None Include="Resources\PCRCMCI with Three ReHeating.jpg" />
     <None Include="Resources\PCRCMCI with Two Partial Cooling with Three ReHeating.jpg" />
     <None Include="Resources\PCRCMCI with Two Partial Cooling with Two Intercooling with Three ReHeating.jpg" />
+    <None Include="Resources\RC with PreHeating in parallel with LTR without ReHeating .jpg" />
     <Content Include="Resources\RC with Three ReHeating Stages.jpg" />
     <Content Include="Resources\RC with Three RH Small.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />
