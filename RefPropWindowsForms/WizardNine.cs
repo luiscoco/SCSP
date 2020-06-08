@@ -28,5 +28,40 @@ namespace RefPropWindowsForms
            puntero.RC_with_LTR_PreHeating_without_ReHeating_dialog.MdiParent = puntero;
            puntero.RC_with_LTR_PreHeating_without_ReHeating_dialog.Show();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RC_with_HTR_PreHeating_without_ReHeating_dialog = new RC_with_HTR_PreHeating_without_ReHeating();
+            puntero.RC_with_HTR_PreHeating_without_ReHeating_dialog.MdiParent = puntero;
+            puntero.RC_with_HTR_PreHeating_without_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RC_with_HTR_and_LTR_PreHeating_without_ReHeating_dialog = new RC_with_HTR_and_LTR_PreHeating_without_ReHeating();
+            puntero.RC_with_HTR_and_LTR_PreHeating_without_ReHeating_dialog.MdiParent = puntero;
+            puntero.RC_with_HTR_and_LTR_PreHeating_without_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RC_with_LTR_PreHeating_with_ReHeating_dialog = new RC_with_LTR_PreHeating_with_ReHeating();
+            puntero.RC_with_LTR_PreHeating_with_ReHeating_dialog.MdiParent = puntero;
+            puntero.RC_with_LTR_PreHeating_with_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RC_with_HTR_PreHeating_with_ReHeating_dialog = new RC_with_HTR_PreHeating_with_ReHeating();
+            puntero.RC_with_HTR_PreHeating_with_ReHeating_dialog.MdiParent = puntero;
+            puntero.RC_with_HTR_PreHeating_with_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel12_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RC_with_HTR_and_LTR_PreHeating_with_ReHeating_dialog = new RC_with_HTR_and_LTR_PreHeating_with_ReHeating();
+            puntero.RC_with_HTR_and_LTR_PreHeating_with_ReHeating_dialog.MdiParent = puntero;
+            puntero.RC_with_HTR_and_LTR_PreHeating_with_ReHeating_dialog.Show();
+        }
     }
 }

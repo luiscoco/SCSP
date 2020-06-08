@@ -1285,9 +1285,79 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_HTR_with_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with HTR with ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_HTR_with_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with HTR with ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_HTR_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with HTR without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_HTR_without_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("RC with PreHeating in parallel with HTR without ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_LTR_and_HTR_with_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with LTR and HTR with ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_LTR_and_HTR_with_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with LTR and HTR with ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_LTR_and_HTR_with_ReHeating_Small1 {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with LTR and HTR with ReHeating Small1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_LTR_and_HTR_without_ReHeating_ {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with LTR and HTR without ReHeating ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1315,6 +1385,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_LTR_with_ReHeating_ {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with LTR with ReHeating ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_LTR_with_ReHeating_Small {
             get {
                 object obj = ResourceManager.GetObject("RC with PreHeating in parallel with LTR with ReHeating Small", resourceCulture);
@@ -1328,6 +1408,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_LTR_without_ReHeating_ {
             get {
                 object obj = ResourceManager.GetObject("RC with PreHeating in parallel with LTR without ReHeating ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_PreHeating_in_parallel_with_LTR_without_ReHeating_1 {
+            get {
+                object obj = ResourceManager.GetObject("RC with PreHeating in parallel with LTR without ReHeating 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
