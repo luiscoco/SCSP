@@ -1691,6 +1691,9 @@
     <EmbeddedResource Include="RC_with_HTR_and_LTR_PreHeating_without_ReHeating.resx">
       <DependentUpon>RC_with_HTR_and_LTR_PreHeating_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_HTR_and_LTR_PreHeating_with_ReHeating.resx">
+      <DependentUpon>RC_with_HTR_and_LTR_PreHeating_with_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RC_with_HTR_PreHeating_without_ReHeating.resx">
       <DependentUpon>RC_with_HTR_PreHeating_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
