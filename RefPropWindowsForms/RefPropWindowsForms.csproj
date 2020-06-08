@@ -675,6 +675,18 @@
     <Compile Include="PCRC_withReHeating_Optimization_new_configuration.Designer.cs">
       <DependentUpon>PCRC_withReHeating_Optimization_new_configuration.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCRC_with_Five_ReHeatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Five_ReHeatings.Designer.cs">
+      <DependentUpon>PCRC_with_Five_ReHeatings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Four_ReHeatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Four_ReHeatings.Designer.cs">
+      <DependentUpon>PCRC_with_Four_ReHeatings.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCRC_with_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -865,6 +877,18 @@
     </Compile>
     <Compile Include="RCMCI_without_ReHeating_Optimization_new_configuration.Designer.cs">
       <DependentUpon>RCMCI_without_ReHeating_Optimization_new_configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Five_Reheatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Five_Reheatings.Designer.cs">
+      <DependentUpon>RCMCI_with_Five_Reheatings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Four_Reheatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Four_Reheatings.Designer.cs">
+      <DependentUpon>RCMCI_with_Four_Reheatings.cs</DependentUpon>
     </Compile>
     <Compile Include="RCMCI_with_ReHeating_new_proposed_configuration.cs">
       <SubType>Form</SubType>
@@ -1543,6 +1567,12 @@
     <EmbeddedResource Include="PCRC_withReHeating_Optimization_new_configuration.resx">
       <DependentUpon>PCRC_withReHeating_Optimization_new_configuration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Five_ReHeatings.resx">
+      <DependentUpon>PCRC_with_Five_ReHeatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Four_ReHeatings.resx">
+      <DependentUpon>PCRC_with_Four_ReHeatings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCRC_with_ReHeating.resx">
       <DependentUpon>PCRC_with_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
@@ -2129,6 +2159,8 @@
     <None Include="Resources\Ladislav_Veseley_DEMO_Fusion_4.jpg" />
     <None Include="Resources\PCRC with ReHeating with Four Reheating Stages_Small.jpg" />
     <None Include="Resources\PCRC with ReHeating with Five Reheating Stages_Small.jpg" />
+    <None Include="Resources\PCRC with ReHeating with Five Reheating Stages.jpg" />
+    <None Include="Resources\PCRC with ReHeating with Four Reheating Stages.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\PCRC with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Two Reheating Stages.jpg" />

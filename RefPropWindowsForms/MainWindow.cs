@@ -94,8 +94,12 @@ namespace RefPropWindowsForms
         public RC_with_Five_ReHeating RC_with_Five_ReHeating_dialog;
         public PCRC_with_Two_ReHeating PCRC_with_Two_ReHeating_dialog;
         public PCRC_with_Three_ReHeating PCRC_with_Three_ReHeating_dialog;
+        public PCRC_with_Four_ReHeatings PCRC_with_Four_ReHeating_dialog;
+        public PCRC_with_Five_ReHeatings PCRC_with_Five_ReHeating_dialog;
         public RCMCI_with_Two_Reheatings RCMCI_with_Two_ReHeating_dialog;
         public RCMCI_with_Three_Reheatings RCMCI_with_Three_ReHeating_dialog;
+        public RCMCI_with_Four_Reheatings RCMCI_with_Four_ReHeating_dialog;
+        public RCMCI_with_Five_Reheatings RCMCI_with_Five_ReHeating_dialog;
         public PCRCMCI_withoutReHeating PCRCMCI_without_ReHeating_dialog;
         public PCRCMCI PCRCMCI_withReHeating_dialog;
         public PCRCMCI_with_Two_ReHeating PCRCMCI_with_Two_ReHeating_dialog;

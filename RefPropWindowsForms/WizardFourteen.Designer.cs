@@ -148,6 +148,7 @@
             this.linkLabel7.TabIndex = 203;
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Text = "Design-Point";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
             // label2
             // 
@@ -180,6 +181,7 @@
             this.linkLabel9.TabIndex = 207;
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "Design-Point";
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
             // 
             // linkLabel10
             // 
@@ -202,6 +204,7 @@
             this.linkLabel11.TabIndex = 211;
             this.linkLabel11.TabStop = true;
             this.linkLabel11.Text = "Design-Point";
+            this.linkLabel11.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel11_LinkClicked);
             // 
             // linkLabel14
             // 
@@ -224,6 +227,7 @@
             this.linkLabel15.TabIndex = 215;
             this.linkLabel15.TabStop = true;
             this.linkLabel15.Text = "Design-Point";
+            this.linkLabel15.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel15_LinkClicked);
             // 
             // pictureBox6
             // 

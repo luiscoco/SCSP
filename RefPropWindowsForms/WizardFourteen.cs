@@ -33,5 +33,33 @@ namespace RefPropWindowsForms
             puntero.RC_with_Five_ReHeating_dialog.MdiParent = puntero;
             puntero.RC_with_Five_ReHeating_dialog.Show();
         }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.PCRC_with_Four_ReHeating_dialog = new PCRC_with_Four_ReHeatings();
+            puntero.PCRC_with_Four_ReHeating_dialog.MdiParent = puntero;
+            puntero.PCRC_with_Four_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.PCRC_with_Five_ReHeating_dialog = new PCRC_with_Five_ReHeatings();
+            puntero.PCRC_with_Five_ReHeating_dialog.MdiParent = puntero;
+            puntero.PCRC_with_Five_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RCMCI_with_Four_ReHeating_dialog = new RCMCI_with_Four_Reheatings();
+            puntero.RCMCI_with_Four_ReHeating_dialog.MdiParent = puntero;
+            puntero.RCMCI_with_Four_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.RCMCI_with_Five_ReHeating_dialog = new RCMCI_with_Five_Reheatings();
+            puntero.RCMCI_with_Five_ReHeating_dialog.MdiParent = puntero;
+            puntero.RCMCI_with_Five_ReHeating_dialog.Show();
+        }
     }
 }

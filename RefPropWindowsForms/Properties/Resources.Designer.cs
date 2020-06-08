@@ -373,9 +373,29 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PCRC_with_ReHeating_with_Five_Reheating_Stages {
+            get {
+                object obj = ResourceManager.GetObject("PCRC with ReHeating with Five Reheating Stages", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRC_with_ReHeating_with_Five_Reheating_Stages_Small {
             get {
                 object obj = ResourceManager.GetObject("PCRC with ReHeating with Five Reheating Stages_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCRC_with_ReHeating_with_Four_Reheating_Stages {
+            get {
+                object obj = ResourceManager.GetObject("PCRC with ReHeating with Four Reheating Stages", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
