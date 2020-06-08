@@ -509,6 +509,7 @@ namespace RefPropWindowsForms
             InitializeComponent();
         }
 
+        //Set Critical conditions
         private void button30_Click(object sender, EventArgs e)
         {
             double option1 = 0.0;

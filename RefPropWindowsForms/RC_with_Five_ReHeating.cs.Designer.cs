@@ -1646,11 +1646,12 @@
             this.button30.TabIndex = 1617;
             this.button30.Text = "Set Compressor Inlet Critical Point";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(643, 95);
+            this.checkBox1.Location = new System.Drawing.Point(643, 78);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(81, 17);
             this.checkBox1.TabIndex = 1616;
@@ -1670,7 +1671,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(728, 95);
+            this.checkBox2.Location = new System.Drawing.Point(643, 97);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(96, 17);
             this.checkBox2.TabIndex = 1614;
@@ -3630,6 +3631,7 @@
             this.comboBox16.Size = new System.Drawing.Size(80, 21);
             this.comboBox16.TabIndex = 1531;
             this.comboBox16.Text = "PureFluid";
+            this.comboBox16.SelectedIndexChanged += new System.EventHandler(this.comboBox16_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
