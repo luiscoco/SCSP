@@ -508,7 +508,6 @@ namespace RefPropWindowsForms
             InitializeComponent();
         }
 
-
         private void button22_Click(object sender, EventArgs e)
         {
             int maxIterations = 100;

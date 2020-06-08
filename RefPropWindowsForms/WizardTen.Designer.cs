@@ -30,20 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WizardTen));
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel11 = new System.Windows.Forms.LinkLabel();
             this.linkLabel12 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -59,24 +55,12 @@
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 44);
+            this.label1.Size = new System.Drawing.Size(479, 19);
             this.label1.TabIndex = 159;
-            this.label1.Text = "58. TWO PARTIAL COOLING WITH RECOMPRESSION AND MAIN COMPRESSION INTERCOOLING (PCR" +
-    "CMCI) WITH THREE REHEATING STAGES";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel3.Location = new System.Drawing.Point(491, 51);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(75, 15);
-            this.linkLabel3.TabIndex = 177;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Optimization";
+            this.label1.Text = "58. RECOMPRESSION WITH THREE RECUPERATORS AND WITHOUT REHEATING";
             // 
             // linkLabel4
             // 
@@ -93,12 +77,11 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(778, 15);
+            this.label2.Location = new System.Drawing.Point(776, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(398, 23);
+            this.label2.Size = new System.Drawing.Size(398, 21);
             this.label2.TabIndex = 181;
             this.label2.Text = "59. SB WITH PREHEATING IN PARALLEL WITH LTR WITHOUT REHEATING";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -115,18 +98,17 @@
             // 
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(68, 287);
+            this.label4.Location = new System.Drawing.Point(12, 285);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(252, 19);
             this.label4.TabIndex = 183;
             this.label4.Text = "60. CASCADE CYCLE WITH REHEATING";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
             this.linkLabel5.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel5.Location = new System.Drawing.Point(491, 66);
+            this.linkLabel5.Location = new System.Drawing.Point(491, 53);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(64, 15);
             this.linkLabel5.TabIndex = 187;
@@ -137,23 +119,12 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel1.Location = new System.Drawing.Point(1176, 68);
+            this.linkLabel1.Location = new System.Drawing.Point(1176, 53);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(64, 15);
             this.linkLabel1.TabIndex = 190;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Reference";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel2.Location = new System.Drawing.Point(1176, 53);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(75, 15);
-            this.linkLabel2.TabIndex = 189;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Optimization";
             // 
             // linkLabel6
             // 
@@ -178,22 +149,11 @@
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Text = "Reference";
             // 
-            // linkLabel8
-            // 
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel8.Location = new System.Drawing.Point(392, 289);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(75, 15);
-            this.linkLabel8.TabIndex = 192;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "Optimization";
-            // 
             // linkLabel9
             // 
             this.linkLabel9.AutoSize = true;
             this.linkLabel9.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel9.Location = new System.Drawing.Point(315, 289);
+            this.linkLabel9.Location = new System.Drawing.Point(388, 289);
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.Size = new System.Drawing.Size(79, 15);
             this.linkLabel9.TabIndex = 191;
@@ -211,22 +171,11 @@
             this.linkLabel10.TabStop = true;
             this.linkLabel10.Text = "Reference";
             // 
-            // linkLabel11
-            // 
-            this.linkLabel11.AutoSize = true;
-            this.linkLabel11.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel11.Location = new System.Drawing.Point(1206, 291);
-            this.linkLabel11.Name = "linkLabel11";
-            this.linkLabel11.Size = new System.Drawing.Size(75, 15);
-            this.linkLabel11.TabIndex = 195;
-            this.linkLabel11.TabStop = true;
-            this.linkLabel11.Text = "Optimization";
-            // 
             // linkLabel12
             // 
             this.linkLabel12.AutoSize = true;
             this.linkLabel12.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel12.Location = new System.Drawing.Point(1129, 291);
+            this.linkLabel12.Location = new System.Drawing.Point(1201, 291);
             this.linkLabel12.Name = "linkLabel12";
             this.linkLabel12.Size = new System.Drawing.Size(79, 15);
             this.linkLabel12.TabIndex = 194;
@@ -293,13 +242,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1362, 733);
             this.Controls.Add(this.linkLabel10);
-            this.Controls.Add(this.linkLabel11);
             this.Controls.Add(this.linkLabel12);
             this.Controls.Add(this.linkLabel7);
-            this.Controls.Add(this.linkLabel8);
             this.Controls.Add(this.linkLabel9);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel6);
             this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.label4);
@@ -308,7 +254,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -327,7 +272,6 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -337,13 +281,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.LinkLabel linkLabel7;
-        private System.Windows.Forms.LinkLabel linkLabel8;
         private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.LinkLabel linkLabel10;
-        private System.Windows.Forms.LinkLabel linkLabel11;
         private System.Windows.Forms.LinkLabel linkLabel12;
     }
 }

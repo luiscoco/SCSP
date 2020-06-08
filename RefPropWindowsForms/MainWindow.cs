@@ -90,6 +90,8 @@ namespace RefPropWindowsForms
         public Effec_CIT_PCRC_withReHeating Effec_CIT_PCRC_withReHeating_Dialog;
         public RC_with_Two_ReHeating RC_with_Two_ReHeating_dialog;
         public RC_with_Three_ReHeating RC_with_Three_ReHeating_dialog;
+        public RC_with_Four_ReHeating RC_with_Four_ReHeating_dialog;
+        public RC_with_Five_ReHeating RC_with_Five_ReHeating_dialog;
         public PCRC_with_Two_ReHeating PCRC_with_Two_ReHeating_dialog;
         public PCRC_with_Three_ReHeating PCRC_with_Three_ReHeating_dialog;
         public RCMCI_with_Two_Reheatings RCMCI_with_Two_ReHeating_dialog;

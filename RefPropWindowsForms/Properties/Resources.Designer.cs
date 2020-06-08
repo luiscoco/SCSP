@@ -1245,6 +1245,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RC_with_Five_ReHeating_Stages {
+            get {
+                object obj = ResourceManager.GetObject("RC with Five ReHeating Stages", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RC_with_Five_ReHeating_Stages_Small {
             get {
                 object obj = ResourceManager.GetObject("RC with Five ReHeating Stages_Small", resourceCulture);
@@ -1268,6 +1278,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap RC_with_Five_ReHeating_Stages_Small2 {
             get {
                 object obj = ResourceManager.GetObject("RC with Five ReHeating Stages_Small2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RC_with_Four_ReHeating_Stages {
+            get {
+                object obj = ResourceManager.GetObject("RC with Four ReHeating Stages", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
