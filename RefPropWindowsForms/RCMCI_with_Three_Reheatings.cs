@@ -517,6 +517,7 @@ namespace RefPropWindowsForms
             InitializeComponent();
         }
 
+        //Mixtures calculation
         private void button20_Click(object sender, EventArgs e)
         {
             int maxIterations = 5;
@@ -1048,6 +1049,7 @@ namespace RefPropWindowsForms
             RCMCI_with_Three_ReHeating_Optimization_Analysis_Results_window.Show();
         }
 
+        //Set Critical conditions
         private void Button31_Click(object sender, EventArgs e)
         {
             double option1 = 0.0;

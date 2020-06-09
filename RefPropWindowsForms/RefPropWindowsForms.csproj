@@ -1667,6 +1667,12 @@
     <EmbeddedResource Include="RCMCI_without_ReHeating_Optimization_new_configuration.resx">
       <DependentUpon>RCMCI_without_ReHeating_Optimization_new_configuration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Five_Reheatings.resx">
+      <DependentUpon>RCMCI_with_Five_Reheatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Four_Reheatings.resx">
+      <DependentUpon>RCMCI_with_Four_Reheatings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_with_ReHeating_new_proposed_configuration.resx">
       <DependentUpon>RCMCI_with_ReHeating_new_proposed_configuration.cs</DependentUpon>
     </EmbeddedResource>
@@ -2262,6 +2268,8 @@
     <None Include="Resources\RCMCI with ReHeating ICAI proposed configuration.jpg" />
     <None Include="Resources\RCMCI with ReHeating with Four Reheating Stages_Small.jpg" />
     <None Include="Resources\RCMCI with ReHeating with Five Reheating Stages_Small.jpg" />
+    <None Include="Resources\RCMCI with ReHeating with Five Reheating Stages.jpg" />
+    <None Include="Resources\RCMCI with ReHeating with Four Reheating Stages.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\RCMCI with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\RCMCI with ReHeating with Two Reheating Stages.jpg" />
