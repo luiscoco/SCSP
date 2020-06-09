@@ -1366,7 +1366,7 @@
             // 
             // label74
             // 
-            this.label74.Location = new System.Drawing.Point(225, 12);
+            this.label74.Location = new System.Drawing.Point(301, 10);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(99, 15);
             this.label74.TabIndex = 1351;
@@ -1374,7 +1374,7 @@
             // 
             // label75
             // 
-            this.label75.Location = new System.Drawing.Point(198, 39);
+            this.label75.Location = new System.Drawing.Point(274, 33);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(133, 14);
             this.label75.TabIndex = 1352;
@@ -1430,7 +1430,7 @@
             // 
             // label69
             // 
-            this.label69.Location = new System.Drawing.Point(513, 37);
+            this.label69.Location = new System.Drawing.Point(513, 33);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(102, 14);
             this.label69.TabIndex = 1360;
@@ -1449,7 +1449,7 @@
             "Liquid Sodium"});
             this.comboBox7.Location = new System.Drawing.Point(614, 8);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(116, 21);
+            this.comboBox7.Size = new System.Drawing.Size(103, 21);
             this.comboBox7.TabIndex = 1357;
             this.comboBox7.Text = "Solar Salt";
             // 
@@ -1464,9 +1464,9 @@
             "Dowtherm_A",
             "Therminol_75",
             "Liquid Sodium"});
-            this.comboBox6.Location = new System.Drawing.Point(614, 34);
+            this.comboBox6.Location = new System.Drawing.Point(614, 30);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(116, 21);
+            this.comboBox6.Size = new System.Drawing.Size(103, 21);
             this.comboBox6.TabIndex = 1359;
             this.comboBox6.Text = "Solar Salt";
             // 
@@ -3416,9 +3416,9 @@
             "Fresnel",
             "Dual-Loop",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox4.Location = new System.Drawing.Point(322, 8);
+            this.comboBox4.Location = new System.Drawing.Point(398, 6);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(191, 21);
+            this.comboBox4.Size = new System.Drawing.Size(107, 21);
             this.comboBox4.TabIndex = 1459;
             this.comboBox4.Text = "Parabolic";
             // 
@@ -3430,9 +3430,9 @@
             "Fresnel",
             "Dual-Loop",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox5.Location = new System.Drawing.Point(322, 34);
+            this.comboBox5.Location = new System.Drawing.Point(398, 28);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(191, 21);
+            this.comboBox5.Size = new System.Drawing.Size(107, 21);
             this.comboBox5.TabIndex = 1460;
             this.comboBox5.Text = "Parabolic";
             // 

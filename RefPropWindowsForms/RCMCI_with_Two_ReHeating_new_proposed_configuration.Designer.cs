@@ -150,6 +150,8 @@
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.textBox99 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -259,10 +261,6 @@
             this.label52 = new System.Windows.Forms.Label();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -310,8 +308,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
-            this.label59 = new System.Windows.Forms.Label();
-            this.textBox99 = new System.Windows.Forms.TextBox();
             this.textBox100 = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
             this.textBox101 = new System.Windows.Forms.TextBox();
@@ -320,6 +316,10 @@
             this.label62 = new System.Windows.Forms.Label();
             this.textBox103 = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -992,6 +992,7 @@
             this.button35.TabIndex = 1722;
             this.button35.Text = "Optimization Analysis";
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
@@ -1079,6 +1080,7 @@
             this.button31.TabIndex = 1712;
             this.button31.Text = "Set Critical condition";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // label128
             // 
@@ -1729,6 +1731,7 @@
             this.button20.TabIndex = 1637;
             this.button20.Text = "Mixtures Calculation";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // groupBox2
             // 
@@ -2101,6 +2104,23 @@
             this.groupBox1.TabIndex = 1635;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(2, 145);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(88, 13);
+            this.label59.TabIndex = 370;
+            this.label59.Text = "DP_RHX3 (kPa):";
+            // 
+            // textBox99
+            // 
+            this.textBox99.Location = new System.Drawing.Point(90, 142);
+            this.textBox99.Name = "textBox99";
+            this.textBox99.Size = new System.Drawing.Size(33, 20);
+            this.textBox99.TabIndex = 371;
+            this.textBox99.Text = "0.0";
             // 
             // textBox24
             // 
@@ -3080,40 +3100,6 @@
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(491, 483);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(46, 20);
-            this.textBox21.TabIndex = 1524;
-            this.textBox21.Text = "0.00001";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(462, 486);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(25, 13);
-            this.label24.TabIndex = 1523;
-            this.label24.Text = "Tol:";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(500, 462);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(37, 20);
-            this.textBox20.TabIndex = 1522;
-            this.textBox20.Text = "15";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(430, 465);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(66, 13);
-            this.label23.TabIndex = 1521;
-            this.label23.Text = "N_sub_hxrs:";
-            // 
             // textBox18
             // 
             this.textBox18.Location = new System.Drawing.Point(99, 629);
@@ -3406,6 +3392,7 @@
             this.comboBox1.Size = new System.Drawing.Size(72, 21);
             this.comboBox1.TabIndex = 1488;
             this.comboBox1.Text = "PureFluid";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -3541,23 +3528,6 @@
             this.button34.Text = "RHX2 and SF";
             this.button34.UseVisualStyleBackColor = false;
             // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(2, 145);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(88, 13);
-            this.label59.TabIndex = 370;
-            this.label59.Text = "DP_RHX3 (kPa):";
-            // 
-            // textBox99
-            // 
-            this.textBox99.Location = new System.Drawing.Point(90, 142);
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(33, 20);
-            this.textBox99.TabIndex = 371;
-            this.textBox99.Text = "0.0";
-            // 
             // textBox100
             // 
             this.textBox100.Location = new System.Drawing.Point(99, 650);
@@ -3626,11 +3596,49 @@
             this.label63.TabIndex = 1747;
             this.label63.Text = "T_rht3_in (K):";
             // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(418, 471);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(46, 20);
+            this.textBox21.TabIndex = 1752;
+            this.textBox21.Text = "0.00001";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(389, 474);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(25, 13);
+            this.label24.TabIndex = 1751;
+            this.label24.Text = "Tol:";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(347, 471);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(37, 20);
+            this.textBox20.TabIndex = 1750;
+            this.textBox20.Text = "15";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(277, 474);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(66, 13);
+            this.label23.TabIndex = 1749;
+            this.label23.Text = "N_sub_hxrs:";
+            // 
             // RCMCI_with_Two_ReHeating_new_proposed_configuration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 682);
+            this.Controls.Add(this.textBox21);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.textBox20);
+            this.Controls.Add(this.label23);
             this.Controls.Add(this.textBox103);
             this.Controls.Add(this.label63);
             this.Controls.Add(this.textBox101);
@@ -3839,10 +3847,6 @@
             this.Controls.Add(this.label52);
             this.Controls.Add(this.textBox48);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.label23);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.textBox19);
@@ -4123,10 +4127,6 @@
         public System.Windows.Forms.Label label52;
         public System.Windows.Forms.TextBox textBox48;
         public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox textBox21;
-        public System.Windows.Forms.Label label24;
-        public System.Windows.Forms.TextBox textBox20;
-        public System.Windows.Forms.Label label23;
         public System.Windows.Forms.TextBox textBox18;
         public System.Windows.Forms.Label label21;
         public System.Windows.Forms.TextBox textBox19;
@@ -4183,5 +4183,9 @@
         public System.Windows.Forms.Label label62;
         public System.Windows.Forms.TextBox textBox103;
         public System.Windows.Forms.Label label63;
+        public System.Windows.Forms.TextBox textBox21;
+        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.TextBox textBox20;
+        public System.Windows.Forms.Label label23;
     }
 }
