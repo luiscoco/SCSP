@@ -759,6 +759,12 @@
     <Compile Include="PCRC_with_Two_ReHeating.Designer.cs">
       <DependentUpon>PCRC_with_Two_ReHeating.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCRC_with_Two_ReHeating_new_proposed_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Two_ReHeating_new_proposed_configuration.Designer.cs">
+      <DependentUpon>PCRC_with_Two_ReHeating_new_proposed_configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCRC_with_Two_ReHeating_Optimization_Analysis_Results.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -968,6 +974,12 @@
     <Compile Include="RCMCI_with_Two_Reheatings.Designer.cs">
       <DependentUpon>RCMCI_with_Two_Reheatings.cs</DependentUpon>
     </Compile>
+    <Compile Include="RCMCI_with_Two_ReHeating_new_proposed_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Two_ReHeating_new_proposed_configuration.Designer.cs">
+      <DependentUpon>RCMCI_with_Two_ReHeating_new_proposed_configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="RCMCI_with_Two_ReHeating_Optimization_Analysis_Results.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1105,6 +1117,12 @@
     </Compile>
     <Compile Include="RC_with_Two_ReHeating.cs.Designer.cs">
       <DependentUpon>RC_with_Two_ReHeating.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_Two_ReHeating_new_proposed_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_Two_ReHeating_new_proposed_configuration.Designer.cs">
+      <DependentUpon>RC_with_Two_ReHeating_new_proposed_configuration.cs</DependentUpon>
     </Compile>
     <Compile Include="RC_with_Two_ReHeating_Optimization_Analysis_Results.cs">
       <SubType>Form</SubType>
@@ -1609,6 +1627,9 @@
     <EmbeddedResource Include="PCRC_with_Two_ReHeating.resx">
       <DependentUpon>PCRC_with_Two_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Two_ReHeating_new_proposed_configuration.resx">
+      <DependentUpon>PCRC_with_Two_ReHeating_new_proposed_configuration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCRC_with_Two_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>PCRC_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
@@ -1712,6 +1733,9 @@
     <EmbeddedResource Include="RCMCI_with_Two_Reheatings.resx">
       <DependentUpon>RCMCI_with_Two_Reheatings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Two_ReHeating_new_proposed_configuration.resx">
+      <DependentUpon>RCMCI_with_Two_ReHeating_new_proposed_configuration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_with_Two_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>RCMCI_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
@@ -1780,6 +1804,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RC_with_Two_ReHeating.cs.resx">
       <DependentUpon>RC_with_Two_ReHeating.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_Two_ReHeating_new_proposed_configuration.resx">
+      <DependentUpon>RC_with_Two_ReHeating_new_proposed_configuration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RC_with_Two_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>RC_with_Two_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
@@ -2185,6 +2212,7 @@
     <None Include="Resources\PCRC with Two Intercooling and Three Reheating Stages_Small.jpg" />
     <None Include="Resources\PCRC with Two ReHeating ICAI proposed configuration_Small.jpg" />
     <None Include="Resources\PCRC with Two Intercooling and Three Reheating Stages.jpg" />
+    <None Include="Resources\PCRC with Two ReHeating ICAI proposed configuration.jpg" />
     <Content Include="Resources\PCRC with Two RH.jpg" />
     <None Include="Resources\PCRCMCI without RH Small.jpg" />
     <None Include="Resources\PCRCMCI with RH Small.jpg" />
@@ -2253,6 +2281,7 @@
     <Content Include="Resources\RC with Three RH Small.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages Small.jpg" />
     <None Include="Resources\RC with Two ReHeating ICAI proposed configuration_Small.jpg" />
+    <None Include="Resources\RC with Two ReHeating ICAI proposed configuration.jpg" />
     <Content Include="Resources\RC with Two ReHeating Stages.jpg" />
     <None Include="Resources\RC with Two ReHeating Stages_Icon.jpg" />
     <Content Include="Resources\RC with Two RH Small.jpg" />
@@ -2286,6 +2315,7 @@
     <None Include="Resources\RCMCI with Two Intercooling and Three Reheating Stages_Small.jpg" />
     <None Include="Resources\RCMCI with Two ReHeating ICAI proposed configuration_Small.jpg" />
     <None Include="Resources\RCMCI with Two Intercooling and Three Reheating Stages.jpg" />
+    <None Include="Resources\RCMCI with Two ReHeating ICAI proposed configuration.jpg" />
     <Content Include="Resources\RCMCI with Two ReHeating Small2.jpg" />
   </ItemGroup>
   <ItemGroup>

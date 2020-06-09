@@ -53,6 +53,10 @@ namespace RefPropWindowsForms
         public PCRC_withReHeating_new_proposed_configuration PCRC_withReHeating_new_configuration_window;
         public RCMCI_with_ReHeating_new_proposed_configuration RCMCI_with_ReHeating_new_configuration_window;
 
+        public RC_with_Two_ReHeating_new_proposed_configuration RC_with_Two_ReHeating_new_configuration_window;
+        public PCRC_with_Two_ReHeating_new_proposed_configuration PCRC_with_Two_ReHeating_new_configuration_window;
+        public RCMCI_with_Two_ReHeating_new_proposed_configuration RCMCI_with_Two_ReHeating_new_configuration_window;
+
         public Effec_Recomp_Fract Sensing_Effec_Recomp_Frac;
         public Effec_CIT Sensing_Effect_CIT;
         public Effec_TIP Sensing_Effect_TIP;
@@ -890,6 +894,14 @@ namespace RefPropWindowsForms
             WizardVeinte_dialog = new WizardTwenty(this);
             WizardVeinte_dialog.MdiParent = this;
             WizardVeinte_dialog.Show();
+        }
+
+        private void tesisDeFranciscoCrespiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdobePDFViewer_dialog = new AdobePDFViewer();
+            AdobePDFViewer_dialog.MdiParent = this;
+            AdobePDFViewer_dialog.axAcroPDF1.src = "C:\\SCSP\\PhD-Crespi-Final-1.pdf";
+            AdobePDFViewer_dialog.Show();
         }
     }
 }

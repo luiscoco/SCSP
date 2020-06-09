@@ -140,6 +140,8 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tesisDeFranciscoCrespiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tesisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,7 +189,9 @@
             this.configurations9499ToolStripMenuItem,
             this.configurations100105ToolStripMenuItem,
             this.adobePDFViewerToolStripMenuItem,
-            this.chartsExampleToolStripMenuItem});
+            this.chartsExampleToolStripMenuItem,
+            this.tesisDeFranciscoCrespiToolStripMenuItem,
+            this.tesisToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(133, 20);
             this.toolStripMenuItem2.Text = "Cycles configurations";
@@ -1033,6 +1037,19 @@
             this.configurationToolStripMenuItem.Text = "Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
+            // tesisDeFranciscoCrespiToolStripMenuItem
+            // 
+            this.tesisDeFranciscoCrespiToolStripMenuItem.Name = "tesisDeFranciscoCrespiToolStripMenuItem";
+            this.tesisDeFranciscoCrespiToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.tesisDeFranciscoCrespiToolStripMenuItem.Text = "Tesis de Francesco Crespi";
+            this.tesisDeFranciscoCrespiToolStripMenuItem.Click += new System.EventHandler(this.tesisDeFranciscoCrespiToolStripMenuItem_Click);
+            // 
+            // tesisToolStripMenuItem
+            // 
+            this.tesisToolStripMenuItem.Name = "tesisToolStripMenuItem";
+            this.tesisToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.tesisToolStripMenuItem.Text = "Tesis de J.Dyreby";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1167,5 +1184,7 @@
         private System.Windows.Forms.ToolStripMenuItem configurations8893ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurations9499ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurations100105ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tesisDeFranciscoCrespiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tesisToolStripMenuItem;
     }
 }

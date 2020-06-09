@@ -67,6 +67,7 @@
             this.linkLabel12.TabIndex = 200;
             this.linkLabel12.TabStop = true;
             this.linkLabel12.Text = "Design-Point";
+            this.linkLabel12.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel12_LinkClicked);
             // 
             // label6
             // 
@@ -100,6 +101,7 @@
             this.linkLabel8.TabIndex = 212;
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "Design-Point";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
             // 
             // label4
             // 
@@ -144,6 +146,7 @@
             this.linkLabel2.TabIndex = 214;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Design-Point";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // pictureBox4
             // 
@@ -190,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel7);
