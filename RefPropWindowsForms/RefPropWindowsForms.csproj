@@ -1867,6 +1867,9 @@
     <EmbeddedResource Include="REFPROP_Interface_Mixture.resx">
       <DependentUpon>REFPROP_Interface_Mixture.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SB_with_Four_Recuperators_without_ReHeating.resx">
+      <DependentUpon>SB_with_Four_Recuperators_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SB_with_Three_Recuperators_without_ReHeating.resx">
       <DependentUpon>SB_with_Three_Recuperators_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
@@ -2210,6 +2213,7 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SB with Four Recuperators without ReHeating.jpg" />
     <None Include="Resources\SB with Four Recuperators without ReHeating Small.jpg" />
     <None Include="Resources\SB with Two Recuperators and Additional HX without ReHeating Small.jpg" />
     <None Include="Resources\SB with Three Recuperators without ReHeating Small.jpg" />

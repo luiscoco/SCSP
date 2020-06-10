@@ -43,7 +43,9 @@ namespace RefPropWindowsForms
 
         private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            puntero.SB_with_Four_Recuperators_without_ReHeating_dialog = new SB_with_Four_Recuperators_without_ReHeating();
+            puntero.SB_with_Four_Recuperators_without_ReHeating_dialog.MdiParent = puntero;
+            puntero.SB_with_Four_Recuperators_without_ReHeating_dialog.Show();
         }
 
         private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
