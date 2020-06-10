@@ -454,6 +454,7 @@
             this.button36.TabIndex = 1760;
             this.button36.Text = "Optimization Analysis";
             this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // button37
             // 
@@ -1680,6 +1681,7 @@
             this.button22.TabIndex = 1615;
             this.button22.Text = "Mixture Design";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // checkBox2
             // 

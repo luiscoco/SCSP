@@ -46,10 +46,12 @@ namespace RefPropWindowsForms
         public PTC_Solar_Field SF_RHX1;
         public PTC_Solar_Field SF_RHX2;
         public PTC_Solar_Field SF_RHX3;
+        public PTC_Solar_Field SF_RHX4;
         public Fresnel SF_PHX_LF;
         public Fresnel SF_RHX1_LF;
         public Fresnel SF_RHX2_LF;
         public Fresnel SF_RHX3_LF;
+        public Fresnel SF_RHX4_LF;
 
         //Dual-Loop option
         public Double PHX1_temp_out = 0;
@@ -85,6 +87,7 @@ namespace RefPropWindowsForms
         public Radial_Turbine ReHeating1_Turbine;
         public Radial_Turbine ReHeating2_Turbine;
         public Radial_Turbine ReHeating3_Turbine;
+        public Radial_Turbine ReHeating4_Turbine;
 
         //First calculate the Main Compressor Rotational speed and after send that value to the Turbines
         public Double N_design_Main_Compressor;
@@ -101,6 +104,7 @@ namespace RefPropWindowsForms
         public String Collector_Type_ReHeating1_SF;
         public String Collector_Type_ReHeating2_SF;
         public String Collector_Type_ReHeating3_SF;
+        public String Collector_Type_ReHeating4_SF;
 
         //Main Solar Field 
         public Double PTC_Main_SF_Effective_Apperture_Area;
@@ -158,7 +162,7 @@ namespace RefPropWindowsForms
         public Double LF_ReHeating2_SF_Pump_Calculated_Power, LF_ReHeating2_SF_Pump_isoentropic_eff, LF_ReHeating2_SF_Pump_Hydraulic_Power, LF_ReHeating2_SF_Pump_Mechanical_eff;
         public Double LF_ReHeating2_SF_Pump_Shaft_Work, LF_ReHeating2_SF_Pump_Motor_eff, LF_ReHeating2_SF_Pump_Motor_Elec_Consump, LF_ReHeating2_SF_Pump_Motor_NamePlate_Design, LF_ReHeating2_SF_Pump_Motor_NamePlate;
 
-        //ReHeating3Solar Field
+        //ReHeating3 Solar Field
         public Double PTC_ReHeating3_SF_Effective_Apperture_Area;
         public Double LF_ReHeating3_SF_Effective_Apperture_Area;
 
@@ -175,6 +179,24 @@ namespace RefPropWindowsForms
 
         public Double LF_ReHeating3_SF_Pump_Calculated_Power, LF_ReHeating3_SF_Pump_isoentropic_eff, LF_ReHeating3_SF_Pump_Hydraulic_Power, LF_ReHeating3_SF_Pump_Mechanical_eff;
         public Double LF_ReHeating3_SF_Pump_Shaft_Work, LF_ReHeating3_SF_Pump_Motor_eff, LF_ReHeating3_SF_Pump_Motor_Elec_Consump, LF_ReHeating3_SF_Pump_Motor_NamePlate_Design, LF_ReHeating3_SF_Pump_Motor_NamePlate;
+
+        //ReHeating4 Solar Field
+        public Double PTC_ReHeating4_SF_Effective_Apperture_Area;
+        public Double LF_ReHeating4_SF_Effective_Apperture_Area;
+
+        public Double PTC_ReHeating4_Solar_Impinging_flowpath, PTC_ReHeating4_Solar_Energy_Absorbed_flowpath, PTC_ReHeating4_Energy_Loss_flowpath, PTC_ReHeating4_Net_Absorbed_flowpath;
+        public Double PTC_ReHeating4_Net_Absorbed_SF, PTC_ReHeating4_Collector_Efficiency, PTC_ReHeating4_SF_Pressure_drop, PTC_ReHeating4_calculated_mass_flux, PTC_ReHeating4_calculated_Number_Rows;
+        public Double PTC_ReHeating4_calculated_Row_length;
+
+        public Double PTC_ReHeating4_SF_Pump_Calculated_Power, PTC_ReHeating4_SF_Pump_isoentropic_eff, PTC_ReHeating4_SF_Pump_Hydraulic_Power, PTC_ReHeating4_SF_Pump_Mechanical_eff;
+        public Double PTC_ReHeating4_SF_Pump_Shaft_Work, PTC_ReHeating4_SF_Pump_Motor_eff, PTC_ReHeating4_SF_Pump_Motor_Elec_Consump, PTC_ReHeating4_SF_Pump_Motor_NamePlate_Design, PTC_ReHeating4_SF_Pump_Motor_NamePlate;
+
+        public Double LF_ReHeating4_Solar_Impinging_flowpath, LF_ReHeating4_Solar_Energy_Absorbed_flowpath, LF_ReHeating4_Energy_Loss_flowpath, LF_ReHeating4_Net_Absorbed_flowpath;
+        public Double LF_ReHeating4_Net_Absorbed_SF, LF_ReHeating4_Collector_Efficiency, LF_ReHeating4_SF_Pressure_drop, LF_ReHeating4_calculated_mass_flux, LF_ReHeating4_calculated_Number_Rows;
+        public Double LF_ReHeating4_calculated_Row_length;
+
+        public Double LF_ReHeating4_SF_Pump_Calculated_Power, LF_ReHeating4_SF_Pump_isoentropic_eff, LF_ReHeating4_SF_Pump_Hydraulic_Power, LF_ReHeating4_SF_Pump_Mechanical_eff;
+        public Double LF_ReHeating4_SF_Pump_Shaft_Work, LF_ReHeating4_SF_Pump_Motor_eff, LF_ReHeating4_SF_Pump_Motor_Elec_Consump, LF_ReHeating4_SF_Pump_Motor_NamePlate_Design, LF_ReHeating4_SF_Pump_Motor_NamePlate;
 
         //Primary Heat Exchanger (PHX) 
         public Double PHX_Qdot, PHX_Num_HXs, PHX_mdot_c, PHX_mdot_h, PHX_cold_Pin, PHX_cold_Tin, PHX_cold_Pout, PHX_cold_Tout;
@@ -275,6 +297,36 @@ namespace RefPropWindowsForms
         public Double[] RHX3_C_dot_c_local_module = new Double[25];
         public Double[] RHX3_C_dot_h_local_module = new Double[25];
 
+        //ReHeating Heat Exchanger4 (RHX4)
+        public Double RHX4_Qdot, RHX4_Num_HXs, RHX4_mdot_c, RHX4_mdot_h, RHX4_cold_Pin, RHX4_cold_Tin, RHX4_cold_Pout, RHX4_cold_Tout;
+        public Double RHX4_hot_Pin, RHX4_hot_Tin, RHX4_hot_Pout, RHX4_hot_Tout;
+        public Double RHX4_UA, RHX4_NTU, RHX4_CR, RHX4_min_DT, RHX4_Effectiveness, RHX4_Q_per_module, RHX4_number_modules, RHX4_min_DT_input;
+
+        public Double RHX4_mdot_h_module, RHX4_mdot_c_module, RHX4_UA_module, RHX4_NTU_module, RHX4_CR_module, RHX4_min_DT_module, RHX4_Effectiveness_module;
+
+        public Double[] RHX4_T_cold = new Double[25];
+        public Double[] RHX4_T_hot = new Double[25];
+
+        public Double[] RHX4_UA_local = new Double[25];
+        public Double[] RHX4_NTU_local = new Double[25];
+
+        public Double[] RHX4_CR_local = new Double[25];
+
+        public Double[] RHX4_Effec_local = new Double[25];
+        public Double[] RHX4_C_dot_c_local = new Double[25];
+
+        public Double[] RHX4_C_dot_h_local = new Double[25];
+
+        public Double[] RHX4_UA_local_module = new Double[25];
+
+        public Double[] RHX4_NTU_local_module = new Double[25];
+
+        public Double[] RHX4_CR_local_module = new Double[25];
+        public Double[] RHX4_Effec_local_module = new Double[25];
+
+        public Double[] RHX4_C_dot_c_local_module = new Double[25];
+        public Double[] RHX4_C_dot_h_local_module = new Double[25];
+
         //Generator Information
         public Double Generator_Name_Plate_Power, Generator_Power_Output, Generator_Total_Loss;
 
@@ -316,6 +368,11 @@ namespace RefPropWindowsForms
         public Double ReHeating3_Turbine_Pin, ReHeating3_Turbine_Tin, ReHeating3_Turbine_Pout, ReHeating3_Turbine_Tout;
         public Double ReHeating3_Turbine_Flow, ReHeating3_Turbine_Rotary_Velocity, ReHeating3_Turbine_Diameter, ReHeating3_Turbine_Efficiency, ReHeating3_Turbine_Anozzle;
         public Double ReHeating3_Turbine_nu, ReHeating3_Turbine_w_Tip_Ratio;
+
+        //ReHeating4 Turbine results
+        public Double ReHeating4_Turbine_Pin, ReHeating4_Turbine_Tin, ReHeating4_Turbine_Pout, ReHeating4_Turbine_Tout;
+        public Double ReHeating4_Turbine_Flow, ReHeating4_Turbine_Rotary_Velocity, ReHeating4_Turbine_Diameter, ReHeating4_Turbine_Efficiency, ReHeating4_Turbine_Anozzle;
+        public Double ReHeating4_Turbine_nu, ReHeating4_Turbine_w_Tip_Ratio;
 
         //LTR results 
         public Double LTR_Qdot, LTR_Num_HXs, LTR_mdot_c, LTR_mdot_h, LTR_cold_Pin, LTR_cold_Tin, LTR_cold_Pout, LTR_cold_Tout;
@@ -371,6 +428,7 @@ namespace RefPropWindowsForms
         public Double specific_work_reheating1_turbine = 0;
         public Double specific_work_reheating2_turbine = 0;
         public Double specific_work_reheating3_turbine = 0;
+        public Double specific_work_reheating4_turbine = 0;
         public Double specific_work_compressor1 = 0;
         public Double specific_work_compressor2 = 0;
 
@@ -386,6 +444,8 @@ namespace RefPropWindowsForms
         public Double t_rht2_in2;
         public Double p_rhx3_in2;
         public Double t_rht3_in2;
+        public Double p_rhx4_in2;
+        public Double t_rht4_in2;
         public Double ua_lt2, ua_ht2;
         public Double eta_mc2;
         public Double eta_rc2;
@@ -393,6 +453,7 @@ namespace RefPropWindowsForms
         public Double eta_trh12;
         public Double eta_trh22;
         public Double eta_trh32;
+        public Double eta_trh42;
         public Int64 n_sub_hxrs2;
         public Double p_mc_in2;
         public Double p_mc_out2;
@@ -407,6 +468,7 @@ namespace RefPropWindowsForms
         public Double dp2_rhx11, dp2_rhx12;
         public Double dp2_rhx21, dp2_rhx22;
         public Double dp2_rhx31, dp2_rhx32;
+        public Double dp2_rhx41, dp2_rhx42;
 
         public Double temp21;
         public Double temp22;
@@ -488,13 +550,14 @@ namespace RefPropWindowsForms
         public Double LT_mdoth, LT_mdotc, LT_Tcin, LT_Thin, LT_Pcin, LT_Phin;
         public Double LT_Pcout, LT_Phout, LT_Q, HT_mdoth, HT_mdotc, HT_Tcin, HT_Thin;
         public Double HT_Pcin, HT_Phin, HT_Pcout, HT_Phout, HT_Q, LT_UA, HT_UA;
-        public Double PHX_Q2, RHX1_Q2, RHX2_Q2, RHX3_Q2, PC_Q2;
+        public Double PHX_Q2, RHX1_Q2, RHX2_Q2, RHX3_Q2, RHX4_Q2, PC_Q2;
         public Double LT_Effc, HT_Effc;
         public Double N_design2 = 0;
 
         public Double dp2_rhx1;
         public Double dp2_rhx2;
         public Double dp2_rhx3;
+        public Double dp2_rhx4;
 
         public Double recomp_frac;
         public Double eta_mc;
@@ -503,6 +566,7 @@ namespace RefPropWindowsForms
         public Double eta_trh1;
         public Double eta_trh2;
         public Double eta_trh3;
+        public Double eta_trh4;
 
         public RC_with_Four_ReHeating()
         {
@@ -646,6 +710,18 @@ namespace RefPropWindowsForms
                 MixtureCriticalPressure = working_fluid.CriticalPressure;
                 MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
+        }
+
+        //Mixtures calculations
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Optimization analysis
+        private void button36_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
