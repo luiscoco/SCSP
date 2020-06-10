@@ -40,8 +40,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -103,11 +101,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
@@ -116,7 +111,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.button34 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
@@ -254,7 +248,6 @@
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.textBox32 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -264,6 +257,7 @@
             this.label41 = new System.Windows.Forms.Label();
             this.textBox38 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -390,23 +384,6 @@
             this.button14.TabIndex = 1727;
             this.button14.Text = "RESET";
             this.button14.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(130, 635);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(57, 20);
-            this.textBox6.TabIndex = 1726;
-            this.textBox6.Text = "0.00001";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(44, 639);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 13);
-            this.label9.TabIndex = 1725;
-            this.label9.Text = "N_design (rpm):";
             // 
             // button10
             // 
@@ -1008,6 +985,7 @@
             this.comboBox1.Size = new System.Drawing.Size(80, 21);
             this.comboBox1.TabIndex = 1650;
             this.comboBox1.Text = "PureFluid";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -1061,7 +1039,7 @@
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(130, 661);
+            this.textBox21.Location = new System.Drawing.Point(130, 583);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(57, 20);
             this.textBox21.TabIndex = 1683;
@@ -1070,7 +1048,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(101, 664);
+            this.label24.Location = new System.Drawing.Point(101, 586);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(25, 13);
             this.label24.TabIndex = 1682;
@@ -1078,7 +1056,7 @@
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(130, 609);
+            this.textBox20.Location = new System.Drawing.Point(130, 557);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(57, 20);
             this.textBox20.TabIndex = 1681;
@@ -1087,32 +1065,15 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(60, 611);
+            this.label23.Location = new System.Drawing.Point(60, 559);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(66, 13);
             this.label23.TabIndex = 1680;
             this.label23.Text = "N_sub_hxrs:";
             // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(130, 583);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(57, 20);
-            this.textBox18.TabIndex = 1679;
-            this.textBox18.Text = "0.93";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(81, 585);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(43, 13);
-            this.label21.TabIndex = 1678;
-            this.label21.Text = "eta_trh:";
-            // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(130, 557);
+            this.textBox19.Location = new System.Drawing.Point(130, 531);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(57, 20);
             this.textBox19.TabIndex = 1677;
@@ -1121,20 +1082,11 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(89, 562);
+            this.label22.Location = new System.Drawing.Point(89, 536);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(34, 13);
             this.label22.TabIndex = 1676;
             this.label22.Text = "eta_t:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(84, 532);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 13);
-            this.label16.TabIndex = 1674;
-            this.label16.Text = "eta_rc:";
             // 
             // textBox14
             // 
@@ -1203,14 +1155,6 @@
             this.label20.Size = new System.Drawing.Size(82, 13);
             this.label20.TabIndex = 1666;
             this.label20.Text = "UA_LT (kW/K):";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(130, 531);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(57, 20);
-            this.textBox13.TabIndex = 1675;
-            this.textBox13.Text = "0.89";
             // 
             // checkBox3
             // 
@@ -2482,6 +2426,7 @@
             this.button11.TabIndex = 1741;
             this.button11.Text = "Mixture Calculation";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // groupBox2
             // 
@@ -2668,6 +2613,7 @@
             this.button13.TabIndex = 1748;
             this.button13.Text = "Set Critical Point ";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label78
             // 
@@ -2820,17 +2766,6 @@
             this.checkBox2.Text = "Simple Brayton";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.SB_with_Two_Recuperators_without_ReHeating;
-            this.pictureBox1.Location = new System.Drawing.Point(239, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(812, 388);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1721;
-            this.pictureBox1.TabStop = false;
-            // 
             // label35
             // 
             this.label35.AutoSize = true;
@@ -2909,6 +2844,17 @@
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.SB_with_Two_Recuperators_without_ReHeating;
+            this.pictureBox1.Location = new System.Drawing.Point(239, 106);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(805, 388);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1721;
+            this.pictureBox1.TabStop = false;
+            // 
             // SB_with_Two_Recuperators_without_ReHeating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2934,8 +2880,6 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button14);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button6);
@@ -2997,11 +2941,8 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.textBox15);
@@ -3010,7 +2951,6 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.textBox17);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox13);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.button34);
             this.Controls.Add(this.button27);
@@ -3138,8 +3078,6 @@
         public System.Windows.Forms.Button button5;
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button button14;
-        public System.Windows.Forms.TextBox textBox6;
-        public System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button button10;
         public System.Windows.Forms.Button button9;
         public System.Windows.Forms.Button button6;
@@ -3201,11 +3139,8 @@
         public System.Windows.Forms.Label label24;
         public System.Windows.Forms.TextBox textBox20;
         public System.Windows.Forms.Label label23;
-        public System.Windows.Forms.TextBox textBox18;
-        public System.Windows.Forms.Label label21;
         public System.Windows.Forms.TextBox textBox19;
         public System.Windows.Forms.Label label22;
-        public System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox textBox14;
         public System.Windows.Forms.Label label17;
         public System.Windows.Forms.TextBox textBox15;
@@ -3214,7 +3149,6 @@
         public System.Windows.Forms.Label label19;
         public System.Windows.Forms.TextBox textBox17;
         public System.Windows.Forms.Label label20;
-        public System.Windows.Forms.TextBox textBox13;
         public System.Windows.Forms.CheckBox checkBox3;
         public System.Windows.Forms.Button button34;
         public System.Windows.Forms.Button button27;
