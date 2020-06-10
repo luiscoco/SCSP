@@ -469,7 +469,7 @@
             this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(359, 159);
+            this.button19.Location = new System.Drawing.Point(359, 200);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(88, 49);
             this.button19.TabIndex = 1754;
@@ -482,9 +482,9 @@
             this.button5.Enabled = false;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(231, 383);
+            this.button5.Location = new System.Drawing.Point(231, 388);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(74, 28);
+            this.button5.Size = new System.Drawing.Size(74, 23);
             this.button5.TabIndex = 1753;
             this.button5.Text = "Precooler";
             this.button5.UseVisualStyleBackColor = false;
@@ -495,9 +495,9 @@
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(533, 229);
+            this.button4.Location = new System.Drawing.Point(532, 262);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(39, 83);
+            this.button4.Size = new System.Drawing.Size(39, 69);
             this.button4.TabIndex = 1752;
             this.button4.Text = "PHX and SF";
             this.button4.UseVisualStyleBackColor = false;
@@ -505,7 +505,7 @@
             // button12
             // 
             this.button12.Enabled = false;
-            this.button12.Location = new System.Drawing.Point(336, 256);
+            this.button12.Location = new System.Drawing.Point(336, 282);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(35, 31);
             this.button12.TabIndex = 1751;
@@ -515,7 +515,7 @@
             // button10
             // 
             this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(520, 167);
+            this.button10.Location = new System.Drawing.Point(521, 208);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(34, 27);
             this.button10.TabIndex = 1749;
@@ -525,7 +525,7 @@
             // button9
             // 
             this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(238, 164);
+            this.button9.Location = new System.Drawing.Point(238, 205);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(36, 34);
             this.button9.TabIndex = 1748;
@@ -538,7 +538,7 @@
             this.button8.Enabled = false;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(577, 141);
+            this.button8.Location = new System.Drawing.Point(577, 188);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(69, 27);
             this.button8.TabIndex = 1747;
@@ -548,9 +548,9 @@
             // button7
             // 
             this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(438, 382);
+            this.button7.Location = new System.Drawing.Point(437, 388);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(70, 27);
+            this.button7.Size = new System.Drawing.Size(70, 23);
             this.button7.TabIndex = 1746;
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
@@ -558,9 +558,9 @@
             // button6
             // 
             this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(336, 382);
+            this.button6.Location = new System.Drawing.Point(336, 388);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 28);
+            this.button6.Size = new System.Drawing.Size(70, 23);
             this.button6.TabIndex = 1745;
             this.button6.Text = "LTR";
             this.button6.UseVisualStyleBackColor = true;
@@ -3732,9 +3732,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.RC_with_Four_ReHeating_Stages;
-            this.pictureBox1.Location = new System.Drawing.Point(211, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(211, 159);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(958, 311);
+            this.pictureBox1.Size = new System.Drawing.Size(958, 256);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1596;
             this.pictureBox1.TabStop = false;
@@ -3776,7 +3776,7 @@
             // button11
             // 
             this.button11.Enabled = false;
-            this.button11.Location = new System.Drawing.Point(672, 167);
+            this.button11.Location = new System.Drawing.Point(671, 208);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(34, 27);
             this.button11.TabIndex = 1782;
@@ -3786,7 +3786,7 @@
             // button31
             // 
             this.button31.Enabled = false;
-            this.button31.Location = new System.Drawing.Point(821, 166);
+            this.button31.Location = new System.Drawing.Point(820, 208);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(34, 27);
             this.button31.TabIndex = 1783;
@@ -3796,7 +3796,7 @@
             // button33
             // 
             this.button33.Enabled = false;
-            this.button33.Location = new System.Drawing.Point(969, 166);
+            this.button33.Location = new System.Drawing.Point(969, 208);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(34, 27);
             this.button33.TabIndex = 1784;
@@ -3809,7 +3809,7 @@
             this.button23.Enabled = false;
             this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.ForeColor = System.Drawing.Color.White;
-            this.button23.Location = new System.Drawing.Point(726, 141);
+            this.button23.Location = new System.Drawing.Point(726, 188);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(69, 27);
             this.button23.TabIndex = 1785;
@@ -3822,7 +3822,7 @@
             this.button32.Enabled = false;
             this.button32.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button32.ForeColor = System.Drawing.Color.White;
-            this.button32.Location = new System.Drawing.Point(874, 140);
+            this.button32.Location = new System.Drawing.Point(875, 188);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(69, 27);
             this.button32.TabIndex = 1786;
@@ -3835,7 +3835,7 @@
             this.button34.Enabled = false;
             this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button34.ForeColor = System.Drawing.Color.White;
-            this.button34.Location = new System.Drawing.Point(1022, 139);
+            this.button34.Location = new System.Drawing.Point(1023, 187);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(69, 27);
             this.button34.TabIndex = 1787;
@@ -3888,7 +3888,7 @@
             // button35
             // 
             this.button35.Enabled = false;
-            this.button35.Location = new System.Drawing.Point(1118, 166);
+            this.button35.Location = new System.Drawing.Point(1118, 208);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(34, 27);
             this.button35.TabIndex = 1797;
