@@ -1177,6 +1177,30 @@
     <Compile Include="PTC_SF_PHX_Data_Input.Designer.cs">
       <DependentUpon>PTC_SF_PHX_Data_Input.cs</DependentUpon>
     </Compile>
+    <Compile Include="SB with Three Recuperators without ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SB with Three Recuperators without ReHeating.Designer.cs">
+      <DependentUpon>SB with Three Recuperators without ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SB with Two Recuperators and Additional HX without ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SB with Two Recuperators and Additional HX without ReHeating.Designer.cs">
+      <DependentUpon>SB with Two Recuperators and Additional HX without ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SB with Two Recuperators without ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SB with Two Recuperators without ReHeating.Designer.cs">
+      <DependentUpon>SB with Two Recuperators without ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SB_without_Reheating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SB_without_Reheating.Designer.cs">
+      <DependentUpon>SB_without_Reheating.cs</DependentUpon>
+    </Compile>
     <Compile Include="SB_with_PreHeating_without_Reheating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1339,11 +1363,11 @@
     <Compile Include="WizardTwenty.Designer.cs">
       <DependentUpon>WizardTwenty.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardTweleve.cs">
+    <Compile Include="WizardTwelve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardTweleve.Designer.cs">
-      <DependentUpon>WizardTweleve.cs</DependentUpon>
+    <Compile Include="WizardTwelve.Designer.cs">
+      <DependentUpon>WizardTwelve.cs</DependentUpon>
     </Compile>
     <Compile Include="WizardTwo.cs">
       <SubType>Form</SubType>
@@ -1837,6 +1861,18 @@
     <EmbeddedResource Include="REFPROP_Interface_Mixture.resx">
       <DependentUpon>REFPROP_Interface_Mixture.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SB with Three Recuperators without ReHeating.resx">
+      <DependentUpon>SB with Three Recuperators without ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SB with Two Recuperators and Additional HX without ReHeating.resx">
+      <DependentUpon>SB with Two Recuperators and Additional HX without ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SB with Two Recuperators without ReHeating.resx">
+      <DependentUpon>SB with Two Recuperators without ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SB_without_Reheating.resx">
+      <DependentUpon>SB_without_Reheating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SB_with_PreHeating_without_Reheating.resx">
       <DependentUpon>SB_with_PreHeating_without_Reheating.cs</DependentUpon>
     </EmbeddedResource>
@@ -1918,8 +1954,8 @@
     <EmbeddedResource Include="WizardTen.resx">
       <DependentUpon>WizardTen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardTweleve.resx">
-      <DependentUpon>WizardTweleve.cs</DependentUpon>
+    <EmbeddedResource Include="WizardTwelve.resx">
+      <DependentUpon>WizardTwelve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTwenty.resx">
       <DependentUpon>WizardTwenty.cs</DependentUpon>
@@ -2168,6 +2204,15 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SB with Four Recuperators without ReHeating Small.jpg" />
+    <None Include="Resources\SB with Two Recuperators and Additional HX without ReHeating Small.jpg" />
+    <None Include="Resources\SB with Three Recuperators without ReHeating Small.jpg" />
+    <None Include="Resources\SB with Two Recuperators without ReHeating Small.jpg" />
+    <None Include="Resources\SB without ReHeating Small.jpg" />
+    <None Include="Resources\SB with Two Recuperators and Additional HX without ReHeating.jpg" />
+    <None Include="Resources\SB with Three Recuperators without ReHeating.jpg" />
+    <None Include="Resources\SB with Two Recuperators without ReHeating.jpg" />
+    <None Include="Resources\SB without ReHeating.jpg" />
     <None Include="Resources\RCMCI without ReHeating ICAI proposed configuration.jpg" />
     <None Include="Resources\RCMCI without ReHeating ICAI proposed configuration Small.jpg" />
     <None Include="Resources\TwoDimensionHeatEquation.png" />

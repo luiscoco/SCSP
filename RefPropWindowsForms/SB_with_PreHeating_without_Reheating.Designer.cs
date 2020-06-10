@@ -173,7 +173,6 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label61 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label54 = new System.Windows.Forms.Label();
             this.textBox50 = new System.Windows.Forms.TextBox();
@@ -2054,16 +2053,6 @@
             this.button6.Text = "Recuperator";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // label61
-            // 
-            this.label61.BackColor = System.Drawing.Color.White;
-            this.label61.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(746, 375);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(16, 19);
-            this.label61.TabIndex = 1321;
-            this.label61.Text = "5";
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(775, 3);
@@ -3088,7 +3077,6 @@
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.label61);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label54);
@@ -3332,7 +3320,6 @@
         public System.Windows.Forms.Button button10;
         public System.Windows.Forms.Button button9;
         public System.Windows.Forms.Button button6;
-        public System.Windows.Forms.Label label61;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.Label label54;

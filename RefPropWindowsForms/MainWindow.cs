@@ -27,7 +27,7 @@ namespace RefPropWindowsForms
         public WizardNine WizardNueve_dialog;
         public WizardTen WizardDiez_dialog;
         public WizardEleven WizardOnce_dialog;
-        public WizardTweleve WizardDoce_dialog;
+        public WizardTwelve WizardDoce_dialog;
         public WizardThirdteen WizardTrece_dialog;
         public WizardFourteen WizardCatorce_dialog;
         public WizardFifteen WizardQuince_dialog;
@@ -799,7 +799,7 @@ namespace RefPropWindowsForms
 
         private void configurations5257ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WizardDoce_dialog = new WizardTweleve(this);
+            WizardDoce_dialog = new WizardTwelve(this);
             WizardDoce_dialog.MdiParent = this;
             WizardDoce_dialog.Show();
         }

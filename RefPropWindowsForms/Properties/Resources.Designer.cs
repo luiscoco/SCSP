@@ -2155,6 +2155,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Four_Recuperators_without_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB with Four Recuperators without ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SB_with_PreHeating_in_parallel_with_LTR_and_HTR_without_ReHeating {
             get {
                 object obj = ResourceManager.GetObject("SB with PreHeating in parallel with LTR and HTR without ReHeating", resourceCulture);
@@ -2198,6 +2208,86 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap SB_with_PreHeating_in_parallel_with_LTR_without_ReHeating1 {
             get {
                 object obj = ResourceManager.GetObject("SB with PreHeating in parallel with LTR without ReHeating1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Three_Recuperators_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("SB with Three Recuperators without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Three_Recuperators_without_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB with Three Recuperators without ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Two_Recuperators_and_Additional_HX_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("SB with Two Recuperators and Additional HX without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Two_Recuperators_and_Additional_HX_without_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB with Two Recuperators and Additional HX without ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Two_Recuperators_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("SB with Two Recuperators without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Two_Recuperators_without_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB with Two Recuperators without ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("SB without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_without_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB without ReHeating Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
