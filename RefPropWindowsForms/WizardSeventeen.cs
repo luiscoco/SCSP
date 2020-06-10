@@ -19,5 +19,38 @@ namespace RefPropWindowsForms
             puntero = puntero1;
             InitializeComponent();
         }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.SB_without_Reheating_dialog = new SB_without_Reheating();
+            puntero.SB_without_Reheating_dialog.MdiParent = puntero;
+            puntero.SB_without_Reheating_dialog.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.SB_with_Two_Recuperators_without_ReHeating_dialog = new SB_with_Two_Recuperators_without_ReHeating();
+            puntero.SB_with_Two_Recuperators_without_ReHeating_dialog.MdiParent = puntero;
+            puntero.SB_with_Two_Recuperators_without_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.SB_with_Three_Recuperators_without_ReHeating_dialog = new SB_with_Three_Recuperators_without_ReHeating();
+            puntero.SB_with_Three_Recuperators_without_ReHeating_dialog.MdiParent = puntero;
+            puntero.SB_with_Three_Recuperators_without_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.SB_with_Two_Recuperators_and_Additional_HX_without_ReHeating_dialog = new SB_with_Two_Recuperators_and_Additional_HX_without_ReHeating();
+            puntero.SB_with_Two_Recuperators_and_Additional_HX_without_ReHeating_dialog.MdiParent = puntero;
+            puntero.SB_with_Two_Recuperators_and_Additional_HX_without_ReHeating_dialog.Show();
+        }
     }
 }
