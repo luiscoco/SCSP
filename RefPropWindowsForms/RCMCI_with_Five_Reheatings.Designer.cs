@@ -2087,7 +2087,6 @@
             this.button2.TabIndex = 1924;
             this.button2.Text = "Design-Point";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox3
             // 
