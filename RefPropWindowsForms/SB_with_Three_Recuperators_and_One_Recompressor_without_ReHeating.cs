@@ -365,7 +365,6 @@ namespace RefPropWindowsForms
         public Double LT_Effc, MT_Effc, HT_Effc;
         public Double N_design2 = 0;
 
-
         public SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating(MainWindow punteroMainWindow1)
         {
             punteroMainWindow = punteroMainWindow1;
