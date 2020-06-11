@@ -1567,6 +1567,5 @@ namespace RefPropWindowsForms
             HT_Recuperator.Calculate_HX();
             HT_Recuperator.Show();
         }
-
     }
 }

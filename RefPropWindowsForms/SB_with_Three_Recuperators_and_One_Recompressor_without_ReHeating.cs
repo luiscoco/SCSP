@@ -78,6 +78,7 @@ namespace RefPropWindowsForms
         public PreeCooler Precooler_dialog;
 
         public HeatExchangerUA LT_Recuperator;
+        public HeatExchangerUA MT_Recuperator;
         public HeatExchangerUA HT_Recuperator;
 
         public Radial_Turbine Main_Turbine;
@@ -213,7 +214,7 @@ namespace RefPropWindowsForms
         public Double Main_Turbine_Flow, Main_Turbine_Rotary_Velocity, Main_Turbine_Diameter, Main_Turbine_Efficiency, Main_Turbine_Anozzle;
 
         public Double Main_Turbine_nu, Main_Turbine_w_Tip_Ratio;
-
+        
         //ReHeating Turbine results
         public Double ReHeating_Turbine_Pin, ReHeating_Turbine_Tin, ReHeating_Turbine_Pout, ReHeating_Turbine_Tout;
         public Double ReHeating_Turbine_Flow, ReHeating_Turbine_Rotary_Velocity, ReHeating_Turbine_Diameter, ReHeating_Turbine_Efficiency, ReHeating_Turbine_Anozzle;
@@ -356,10 +357,12 @@ namespace RefPropWindowsForms
 
         public Double massflow2;
         public Double LT_mdoth, LT_mdotc, LT_Tcin, LT_Thin, LT_Pcin, LT_Phin;
+        public Double MT_mdoth, MT_mdotc, MT_Tcin, MT_Thin, MT_Pcin, MT_Phin;
         public Double LT_Pcout, LT_Phout, LT_Q, HT_mdoth, HT_mdotc, HT_Tcin, HT_Thin;
-        public Double HT_Pcin, HT_Phin, HT_Pcout, HT_Phout, HT_Q, LT_UA, HT_UA;
-        public Double PHX_Q2, RHX_Q2, PC_Q2;
-        public Double LT_Effc, HT_Effc;
+        public Double MT_Pcout, MT_Phout, MT_Q;
+        public Double HT_Pcin, HT_Phin, HT_Pcout, HT_Phout, HT_Q, LT_UA, MT_UA, HT_UA;
+        public Double PHX_Q2,  PC_Q2;
+        public Double LT_Effc, MT_Effc, HT_Effc;
         public Double N_design2 = 0;
 
 
@@ -424,6 +427,7 @@ namespace RefPropWindowsForms
             Double t_t_in2 = Convert.ToDouble(textBox4.Text);
             Double p_mc_in2 = Convert.ToDouble(textBox3.Text);
             Double p_mc_out2 = Convert.ToDouble(textBox8.Text);
+            Double recomp_frac = Convert.ToDouble(textBox87.Text);
             Double ua_lt2 = Convert.ToDouble(textBox17.Text);
             Double ua_mt2 = Convert.ToDouble(textBox84.Text);
             Double ua_ht2 = Convert.ToDouble(textBox16.Text);
@@ -438,18 +442,19 @@ namespace RefPropWindowsForms
             Double dp2_phx1 = Convert.ToDouble(textBox10.Text);
 
             Double eta_mc2 = Convert.ToDouble(textBox14.Text);
+            Double eta_rc2 = Convert.ToDouble(textBox86.Text);
             Double eta_t2 = Convert.ToDouble(textBox19.Text);
             long n_sub_hxrs2 = Convert.ToInt64(textBox20.Text);
             Double tol2 = Convert.ToDouble(textBox21.Text);
 
             luis.wmm = luis.working_fluid.MolecularWeight;
 
-            core.RecompCycle_with_Three_Recuperatos_withoutRH cicloRC = new core.RecompCycle_with_Three_Recuperatos_withoutRH();
+            core.RecompCycle_with_Three_Recuperatos_with_One_RC_withoutRH cicloRC = new core.RecompCycle_with_Three_Recuperatos_with_One_RC_withoutRH();
 
             luis.SimpleBrayton_with_Three_Recuperators_One_RC_without_ReHeating(luis, ref cicloRC,
-            w_dot_net2, t_mc_in2, t_t_in2, p_mc_in2, p_mc_out2, -dp2_lt1, -dp2_mt1,
+            w_dot_net2, t_mc_in2, t_t_in2, p_mc_in2, p_mc_out2, recomp_frac, -dp2_lt1, -dp2_mt1,
             -dp2_ht1, -dp2_pc2, -dp2_phx1, -dp2_lt2, -dp2_mt2, -dp2_ht2, ua_lt2, ua_mt2, ua_ht2,
-            eta_mc2, eta_t2, n_sub_hxrs2, tol2);
+            eta_mc2, eta_rc2, eta_t2, n_sub_hxrs2, tol2);
 
             massflow2 = cicloRC.m_dot_turbine;
             w_dot_net2 = cicloRC.W_dot_net;
@@ -466,6 +471,8 @@ namespace RefPropWindowsForms
             temp28 = cicloRC.temp[7];
             temp29 = cicloRC.temp[8];
             temp210 = cicloRC.temp[9];
+            temp211 = cicloRC.temp[10];
+            temp212 = cicloRC.temp[11];
 
             pres21 = cicloRC.pres[0];
             pres22 = cicloRC.pres[1];
@@ -477,8 +484,8 @@ namespace RefPropWindowsForms
             pres28 = cicloRC.pres[7];
             pres29 = cicloRC.pres[8];
             pres210 = cicloRC.pres[9];
-
-            textBox50.Text = Convert.ToString(cicloRC.eta_thermal);
+            pres211 = cicloRC.pres[10];
+            pres212 = cicloRC.pres[11];
 
             textBox22.Text = Convert.ToString(pres21);
             textBox23.Text = Convert.ToString(pres22);
@@ -490,6 +497,8 @@ namespace RefPropWindowsForms
             textBox38.Text = Convert.ToString(pres28);
             textBox34.Text = Convert.ToString(pres29);
             textBox40.Text = Convert.ToString(pres210);
+            textBox85.Text = Convert.ToString(pres211);
+            textBox15.Text = Convert.ToString(pres212);
 
             textBox47.Text = Convert.ToString(temp21);
             textBox46.Text = Convert.ToString(temp22);
@@ -501,10 +510,57 @@ namespace RefPropWindowsForms
             textBox33.Text = Convert.ToString(temp28);
             textBox32.Text = Convert.ToString(temp29);
             textBox39.Text = Convert.ToString(temp210);
+            textBox18.Text = Convert.ToString(temp211);
+            textBox13.Text = Convert.ToString(temp212);
 
             textBox48.Text = Convert.ToString(w_dot_net2);
             textBox49.Text = Convert.ToString(massflow2);
             textBox50.Text = Convert.ToString(eta_thermal2 * 100);
+
+            //High temperature check box
+            if (checkBox1.Checked == false)
+            {
+                PHX_Q2 = cicloRC.PHX.Q_dot;
+
+                LT_Q = cicloRC.LT.Q_dot;
+                LT_mdotc = cicloRC.LT.m_dot_design[0];
+                LT_mdoth = cicloRC.LT.m_dot_design[1];
+                LT_Tcin = cicloRC.LT.T_c_in;
+                LT_Thin = cicloRC.LT.T_h_in;
+                LT_Pcin = cicloRC.LT.P_c_in;
+                LT_Phin = cicloRC.LT.P_h_in;
+                LT_Pcout = cicloRC.LT.P_c_out;
+                LT_Phout = cicloRC.LT.P_h_out;
+                LT_Effc = cicloRC.LT.eff;
+
+                MT_Q = cicloRC.MT.Q_dot;
+                MT_mdotc = cicloRC.MT.m_dot_design[0];
+                MT_mdoth = cicloRC.MT.m_dot_design[1];
+                MT_Tcin = cicloRC.MT.T_c_in;
+                MT_Thin = cicloRC.MT.T_h_in;
+                MT_Pcin = cicloRC.MT.P_c_in;
+                MT_Phin = cicloRC.MT.P_h_in;
+                MT_Pcout = cicloRC.MT.P_c_out;
+                MT_Phout = cicloRC.MT.P_h_out;
+                MT_Effc = cicloRC.MT.eff;
+
+                HT_Q = cicloRC.HT.Q_dot;
+                HT_mdotc = cicloRC.HT.m_dot_design[0];
+                HT_mdoth = cicloRC.HT.m_dot_design[1];
+                HT_Tcin = cicloRC.HT.T_c_in;
+                HT_Thin = cicloRC.HT.T_h_in;
+                HT_Pcin = cicloRC.HT.P_c_in;
+                HT_Phin = cicloRC.HT.P_h_in;
+                HT_Pcout = cicloRC.HT.P_c_out;
+                HT_Phout = cicloRC.HT.P_h_out;
+                HT_Effc = cicloRC.HT.eff;
+
+                PC_Q2 = cicloRC.PC.Q_dot;
+            }
+
+            button6.Enabled = true;
+            button7.Enabled = true;
+            button12.Enabled = true;
         }
 
         //Set critical conditions
@@ -608,7 +664,6 @@ namespace RefPropWindowsForms
             }
         }
 
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.Text == "PureFluid")
@@ -646,6 +701,63 @@ namespace RefPropWindowsForms
                 MixtureCriticalPressure = working_fluid.CriticalPressure;
                 MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
+        }
+
+        //LTR
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LT_Recuperator = new HeatExchangerUA();
+            LT_Recuperator.textBox2.Text = Convert.ToString(LT_Q);
+            LT_Recuperator.textBox3.Text = Convert.ToString(LT_mdotc);
+            LT_Recuperator.textBox4.Text = Convert.ToString(LT_mdoth);
+            LT_Recuperator.textBox7.Text = Convert.ToString(LT_Tcin);
+            LT_Recuperator.textBox6.Text = Convert.ToString(LT_Thin);
+            LT_Recuperator.textBox5.Text = Convert.ToString(LT_Pcin);
+            LT_Recuperator.textBox8.Text = Convert.ToString(LT_Phin);
+            LT_Recuperator.textBox9.Text = Convert.ToString(LT_Pcout);
+            LT_Recuperator.textBox12.Text = Convert.ToString(LT_Phout);
+            LT_Recuperator.textBox13.Text = Convert.ToString(LT_Effc);
+            LT_Recuperator.HeatExchangerUA1(luis);
+            LT_Recuperator.Calculate_HX();
+            LT_Recuperator.Show();
+        }
+
+        //MTR
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MT_Recuperator = new HeatExchangerUA();
+            MT_Recuperator.textBox2.Text = Convert.ToString(MT_Q);
+            MT_Recuperator.textBox3.Text = Convert.ToString(MT_mdotc);
+            MT_Recuperator.textBox4.Text = Convert.ToString(MT_mdoth);
+            MT_Recuperator.textBox7.Text = Convert.ToString(MT_Tcin);
+            MT_Recuperator.textBox6.Text = Convert.ToString(MT_Thin);
+            MT_Recuperator.textBox5.Text = Convert.ToString(MT_Pcin);
+            MT_Recuperator.textBox8.Text = Convert.ToString(MT_Phin);
+            MT_Recuperator.textBox9.Text = Convert.ToString(MT_Pcout);
+            MT_Recuperator.textBox12.Text = Convert.ToString(MT_Phout);
+            MT_Recuperator.textBox13.Text = Convert.ToString(MT_Effc);
+            MT_Recuperator.HeatExchangerUA1(luis);
+            MT_Recuperator.Calculate_HX();
+            MT_Recuperator.Show();
+        }
+
+        //HTR
+        private void button12_Click(object sender, EventArgs e)
+        {
+            HT_Recuperator = new HeatExchangerUA();
+            HT_Recuperator.textBox2.Text = Convert.ToString(HT_Q);
+            HT_Recuperator.textBox3.Text = Convert.ToString(HT_mdotc);
+            HT_Recuperator.textBox4.Text = Convert.ToString(HT_mdoth);
+            HT_Recuperator.textBox7.Text = Convert.ToString(HT_Tcin);
+            HT_Recuperator.textBox6.Text = Convert.ToString(HT_Thin);
+            HT_Recuperator.textBox5.Text = Convert.ToString(HT_Pcin);
+            HT_Recuperator.textBox8.Text = Convert.ToString(HT_Phin);
+            HT_Recuperator.textBox9.Text = Convert.ToString(HT_Pcout);
+            HT_Recuperator.textBox12.Text = Convert.ToString(HT_Phout);
+            HT_Recuperator.textBox13.Text = Convert.ToString(HT_Effc);
+            HT_Recuperator.HeatExchangerUA1(luis);
+            HT_Recuperator.Calculate_HX();
+            HT_Recuperator.Show();
         }
 
         //Optimization Analysis
