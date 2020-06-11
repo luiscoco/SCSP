@@ -44278,9 +44278,7 @@ namespace RefPropWindowsForms
             recomp_cycle.m_dot_turbine = m_dot_t;
             recomp_cycle.conv_tol = m_tol;
 
-            return;
-
-       
+            return;       
         }
 
 

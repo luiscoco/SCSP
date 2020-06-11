@@ -254,8 +254,10 @@
             this.label78 = new System.Windows.Forms.Label();
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.textBox82 = new System.Windows.Forms.TextBox();
+            this.textBox83 = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -263,11 +265,9 @@
             this.textBox39 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.textBox40 = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.textBox82 = new System.Windows.Forms.TextBox();
-            this.textBox83 = new System.Windows.Forms.TextBox();
             this.textBox84 = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -660,9 +660,9 @@
             this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(643, 141);
+            this.button19.Location = new System.Drawing.Point(608, 125);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(83, 55);
+            this.button19.Size = new System.Drawing.Size(83, 57);
             this.button19.TabIndex = 1932;
             this.button19.Text = "Generator";
             this.button19.UseVisualStyleBackColor = false;
@@ -690,9 +690,9 @@
             this.button5.Enabled = false;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(345, 372);
+            this.button5.Location = new System.Drawing.Point(267, 384);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 28);
+            this.button5.Size = new System.Drawing.Size(96, 30);
             this.button5.TabIndex = 1928;
             this.button5.Text = "Precooler";
             this.button5.UseVisualStyleBackColor = false;
@@ -703,9 +703,9 @@
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(988, 216);
+            this.button4.Location = new System.Drawing.Point(985, 208);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(36, 84);
+            this.button4.Size = new System.Drawing.Size(36, 94);
             this.button4.TabIndex = 1927;
             this.button4.Text = "PHX and SF";
             this.button4.UseVisualStyleBackColor = false;
@@ -739,9 +739,9 @@
             // button9
             // 
             this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(353, 151);
+            this.button9.Location = new System.Drawing.Point(276, 133);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(42, 34);
+            this.button9.Size = new System.Drawing.Size(45, 34);
             this.button9.TabIndex = 1922;
             this.button9.Text = "C1";
             this.button9.UseVisualStyleBackColor = true;
@@ -749,9 +749,9 @@
             // button6
             // 
             this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(473, 372);
+            this.button6.Location = new System.Drawing.Point(411, 383);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 26);
+            this.button6.Size = new System.Drawing.Size(96, 26);
             this.button6.TabIndex = 1921;
             this.button6.Text = "LTR";
             this.button6.UseVisualStyleBackColor = true;
@@ -1631,7 +1631,7 @@
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(832, 445);
+            this.button29.Location = new System.Drawing.Point(832, 449);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(221, 25);
             this.button29.TabIndex = 2020;
@@ -1640,7 +1640,7 @@
             // 
             // button28
             // 
-            this.button28.Location = new System.Drawing.Point(832, 415);
+            this.button28.Location = new System.Drawing.Point(832, 422);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(221, 27);
             this.button28.TabIndex = 2019;
@@ -2828,6 +2828,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressur Drop:";
             // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(24, 59);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(75, 13);
+            this.label55.TabIndex = 283;
+            this.label55.Text = "DP_MT (kPa):";
+            // 
+            // textBox82
+            // 
+            this.textBox82.Location = new System.Drawing.Point(100, 56);
+            this.textBox82.Name = "textBox82";
+            this.textBox82.Size = new System.Drawing.Size(48, 20);
+            this.textBox82.TabIndex = 284;
+            this.textBox82.Text = "0.0";
+            // 
+            // textBox83
+            // 
+            this.textBox83.Location = new System.Drawing.Point(154, 56);
+            this.textBox83.Name = "textBox83";
+            this.textBox83.Size = new System.Drawing.Size(48, 20);
+            this.textBox83.TabIndex = 285;
+            this.textBox83.Text = "0.0";
+            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
@@ -2838,24 +2863,13 @@
             this.checkBox2.Text = "Simple Brayton";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.SB_with_Three_Recuperators_without_ReHeating1;
-            this.pictureBox1.Location = new System.Drawing.Point(320, 128);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(719, 274);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2047;
-            this.pictureBox1.TabStop = false;
-            // 
             // button10
             // 
             this.button10.Enabled = false;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(974, 151);
+            this.button10.Location = new System.Drawing.Point(968, 134);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(40, 34);
+            this.button10.Size = new System.Drawing.Size(46, 34);
             this.button10.TabIndex = 2048;
             this.button10.Text = "T1";
             this.button10.UseVisualStyleBackColor = true;
@@ -2863,9 +2877,9 @@
             // button7
             // 
             this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(640, 372);
+            this.button7.Location = new System.Drawing.Point(602, 383);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(84, 26);
+            this.button7.Size = new System.Drawing.Size(94, 26);
             this.button7.TabIndex = 2049;
             this.button7.Text = "MTR";
             this.button7.UseVisualStyleBackColor = true;
@@ -2873,9 +2887,9 @@
             // button12
             // 
             this.button12.Enabled = false;
-            this.button12.Location = new System.Drawing.Point(792, 372);
+            this.button12.Location = new System.Drawing.Point(780, 383);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(84, 26);
+            this.button12.Size = new System.Drawing.Size(96, 26);
             this.button12.TabIndex = 2050;
             this.button12.Text = "HTR";
             this.button12.UseVisualStyleBackColor = true;
@@ -2914,31 +2928,6 @@
             this.textBox40.Size = new System.Drawing.Size(53, 20);
             this.textBox40.TabIndex = 2051;
             // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(24, 59);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(75, 13);
-            this.label55.TabIndex = 283;
-            this.label55.Text = "DP_MT (kPa):";
-            // 
-            // textBox82
-            // 
-            this.textBox82.Location = new System.Drawing.Point(100, 56);
-            this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(48, 20);
-            this.textBox82.TabIndex = 284;
-            this.textBox82.Text = "0.0";
-            // 
-            // textBox83
-            // 
-            this.textBox83.Location = new System.Drawing.Point(154, 56);
-            this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(48, 20);
-            this.textBox83.TabIndex = 285;
-            this.textBox83.Text = "0.0";
-            // 
             // textBox84
             // 
             this.textBox84.Location = new System.Drawing.Point(130, 427);
@@ -2955,6 +2944,16 @@
             this.label56.Size = new System.Drawing.Size(85, 13);
             this.label56.TabIndex = 2055;
             this.label56.Text = "UA_MT (kW/K):";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.SB_with_Three_Recuperators_without_ReHeating2;
+            this.pictureBox1.Location = new System.Drawing.Point(237, 106);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(804, 310);
+            this.pictureBox1.TabIndex = 2047;
+            this.pictureBox1.TabStop = false;
             // 
             // SB_with_Three_Recuperators_without_ReHeating
             // 
@@ -3401,7 +3400,6 @@
         public System.Windows.Forms.TextBox textBox31;
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.CheckBox checkBox2;
-        public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button button10;
         public System.Windows.Forms.Button button7;
         public System.Windows.Forms.Button button12;
@@ -3414,5 +3412,6 @@
         public System.Windows.Forms.TextBox textBox83;
         public System.Windows.Forms.TextBox textBox84;
         public System.Windows.Forms.Label label56;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
