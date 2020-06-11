@@ -458,8 +458,7 @@ namespace RefPropWindowsForms
             temp25 = cicloRC.temp[4];
             temp26 = cicloRC.temp[5];
             temp27 = cicloRC.temp[6];
-            temp28 = cicloRC.temp[7];
-            temp29 = cicloRC.temp[8];          
+            temp28 = cicloRC.temp[7];                 
 
             pres21 = cicloRC.pres[0];
             pres22 = cicloRC.pres[1];
@@ -468,8 +467,7 @@ namespace RefPropWindowsForms
             pres25 = cicloRC.pres[4];
             pres26 = cicloRC.pres[5];
             pres27 = cicloRC.pres[6];
-            pres28 = cicloRC.pres[7];
-            pres29 = cicloRC.pres[8];           
+            pres28 = cicloRC.pres[7];                
 
             textBox50.Text = Convert.ToString(cicloRC.eta_thermal);
 
@@ -480,8 +478,7 @@ namespace RefPropWindowsForms
             textBox29.Text = Convert.ToString(pres25);
             textBox28.Text = Convert.ToString(pres26);
             textBox41.Text = Convert.ToString(pres27);           
-            textBox38.Text = Convert.ToString(pres28);
-            textBox34.Text = Convert.ToString(pres29);
+            textBox38.Text = Convert.ToString(pres28);           
 
             textBox47.Text = Convert.ToString(temp21);
             textBox46.Text = Convert.ToString(temp22);
@@ -490,8 +487,7 @@ namespace RefPropWindowsForms
             textBox43.Text = Convert.ToString(temp25);
             textBox42.Text = Convert.ToString(temp26);
             textBox35.Text = Convert.ToString(temp27);           
-            textBox33.Text = Convert.ToString(temp28);
-            textBox32.Text = Convert.ToString(temp29);          
+            textBox33.Text = Convert.ToString(temp28);                    
 
             textBox48.Text = Convert.ToString(w_dot_net2);
             textBox49.Text = Convert.ToString(massflow2);
