@@ -219,22 +219,18 @@ namespace RefPropWindowsForms
             public HeatExchanger PHX = new HeatExchanger();  //heat exchanger Primary Heat Exchanger
             public HeatExchanger AHX = new HeatExchanger();  //heat exchanger ReHeating Heat Exchanger
             public HeatExchanger PC = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
-            public Double[] temp = new Double[10];          //thermodynamic properties at the state points of the cycle (K, kPa, kJ/kg, kJ/kg-K, kg/m3)
-            public Double[] pres = new Double[10];
-            public Double[] enth = new Double[10];
-            public Double[] entr = new Double[10];
-            public Double[] dens = new Double[10];
+            public Double[] temp = new Double[12];          //thermodynamic properties at the state points of the cycle (K, kPa, kJ/kg, kJ/kg-K, kg/m3)
+            public Double[] pres = new Double[12];
+            public Double[] enth = new Double[12];
+            public Double[] entr = new Double[12];
+            public Double[] dens = new Double[12];
 
             public RecompCycle_LTR_PreHeating_withoutRH()
             {
 
             }
         }
-
-        
-
-
-
+                
         public class RecompCycle : core
         {
             public Double W_dot_net;                        //net power output of the cycle (kW)
@@ -45674,10 +45670,10 @@ namespace RefPropWindowsForms
         }
 
         public void SimpleBrayton_with_Two_Recuperators_LTR_PreHeating_without_ReHeating(core luis,
-       ref core.RecompCycle_LTR_PreHeating_withoutRH recomp_cycle, Double m_W_dot_net, Double m_T_mc_in, Double m_T_t_in,
-       Double P_mc_in, Double m_P_mc_out, Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_AHX,
-       Double DP_LT_h, Double DP_HT_h, Double UA_LT, Double UA_HT, Double additional_HX_frac, Double m_T_ahx_in,
-       Double m_eta_mc, Double m_eta_t, Int64 m_N_sub_hxrs, Double m_tol)
+        ref core.RecompCycle_LTR_PreHeating_withoutRH recomp_cycle, Double m_W_dot_net, Double m_T_mc_in, Double m_T_t_in,
+        Double P_mc_in, Double m_P_mc_out, Double DP_LT_c, Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_AHX,
+        Double DP_LT_h, Double DP_HT_h, Double UA_LT, Double UA_HT, Double additional_HX_frac, Double m_T_ahx_in,
+        Double m_eta_mc, Double m_eta_t, Int64 m_N_sub_hxrs, Double m_tol)
         {
             int max_iter = 100;
 
@@ -45811,27 +45807,35 @@ namespace RefPropWindowsForms
                 return;
             }
 
-            //MIXING VALVE_1
+            //SPLITTING VALVE_1
             if (additional_HX_frac >= 1E-12)
             {
                 m_temp_last[4 - cpp_offset] = m_temp_last[2 - cpp_offset];
                 m_enth_last[4 - cpp_offset] = m_enth_last[2 - cpp_offset];
                 m_entr_last[4 - cpp_offset] = m_entr_last[2 - cpp_offset];
                 m_dens_last[4 - cpp_offset] = m_dens_last[2 - cpp_offset];
+                m_pres_last[4 - cpp_offset] = m_pres_last[2 - cpp_offset];
 
                 m_temp_last[3 - cpp_offset] = m_temp_last[2 - cpp_offset];
                 m_enth_last[3 - cpp_offset] = m_enth_last[2 - cpp_offset];
                 m_entr_last[3 - cpp_offset] = m_entr_last[2 - cpp_offset];
                 m_dens_last[3 - cpp_offset] = m_dens_last[2 - cpp_offset];
+                m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset];
             }
 
-            // NO MIXING VALVE, therefore (3) is equal to (2)
+            // NO SPLITTING VALVE, therefore (3) is equal to (2)
             else
             {
                 m_temp_last[3 - cpp_offset] = m_temp_last[2 - cpp_offset];
                 m_enth_last[3 - cpp_offset] = m_enth_last[2 - cpp_offset];
                 m_entr_last[3 - cpp_offset] = m_entr_last[2 - cpp_offset];
                 m_dens_last[3 - cpp_offset] = m_dens_last[2 - cpp_offset];
+                m_pres_last[3 - cpp_offset] = m_pres_last[2 - cpp_offset];
+
+                m_temp_last[4 - cpp_offset] = 0.0;
+                m_enth_last[4 - cpp_offset] = 0.0;
+                m_entr_last[4 - cpp_offset] = 0.0;
+                m_dens_last[4 - cpp_offset] = 0.0;
             }
 
             // Outer iteration loop : temp(11), checking against UA_HT
@@ -45904,13 +45908,13 @@ namespace RefPropWindowsForms
 
                     m_dot_t = m_W_dot_net / (w_mc + w_t);            // total mass flow rate(through turbine)
 
-                    //MIXING VALVE_1
+                    //SPLITTING VALVE_1
                     if (additional_HX_frac >= 1E-12)
                     {
                         m_dot_LTR_cold = m_dot_t * (1 - additional_HX_frac);
                     }
 
-                    // NO MIXING VALVE, therefore (3) is equal to (2)
+                    // NO SPLITTING VALVE_1, therefore (3) is equal to (2)
                     else
                     {
                         m_dot_LTR_cold = m_dot_t;
@@ -46010,6 +46014,11 @@ namespace RefPropWindowsForms
                     m_enth_last[7 - cpp_offset] = m_enth_last[5 - cpp_offset];
                     m_entr_last[7 - cpp_offset] = m_entr_last[5 - cpp_offset];
                     m_dens_last[7 - cpp_offset] = m_dens_last[5 - cpp_offset];
+
+                    m_temp_last[6 - cpp_offset] = 0.0;
+                    m_enth_last[6 - cpp_offset] = 0.0;
+                    m_entr_last[6 - cpp_offset] = 0.0;
+                    m_dens_last[6 - cpp_offset] = 0.0;
                 }
 
                 // Calculate HTR UA 
@@ -46077,10 +46086,10 @@ namespace RefPropWindowsForms
             m_enth_last[8 - cpp_offset] = m_enth_last[7 - cpp_offset] + Q_dot_HT / m_dot_t;     // Energy balance on cold stream of high-temp recuperator
 
             wmm = luis.working_fluid.MolecularWeight;
-            luis.working_fluid.FindStatueWithPH(m_pres_last[7 - cpp_offset], m_enth_last[7 - cpp_offset] * wmm);
-            m_temp_last[7 - cpp_offset] = luis.working_fluid.Temperature;
-            m_entr_last[7 - cpp_offset] = luis.working_fluid.Entropy;
-            m_dens_last[7 - cpp_offset] = luis.working_fluid.Density;
+            luis.working_fluid.FindStatueWithPH(m_pres_last[8 - cpp_offset], m_enth_last[8 - cpp_offset] * wmm);
+            m_temp_last[8 - cpp_offset] = luis.working_fluid.Temperature;
+            m_entr_last[8 - cpp_offset] = luis.working_fluid.Entropy;
+            m_dens_last[8 - cpp_offset] = luis.working_fluid.Density;
 
             double Q_dot_PHX = m_dot_t * (m_enth_last[9 - cpp_offset] - m_enth_last[8 - cpp_offset]);
             double Q_dot_AHX = (m_dot_t * additional_HX_frac) * (m_enth_last[6 - cpp_offset] - m_enth_last[4 - cpp_offset]);

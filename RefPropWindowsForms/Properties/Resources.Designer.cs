@@ -2195,6 +2195,26 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SB_with_PreHeating_in_parallel_with_LTR_and_HTR_without_ReHeating_Small1 {
+            get {
+                object obj = ResourceManager.GetObject("SB with PreHeating in parallel with LTR and HTR without ReHeating Small1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_PreHeating_in_parallel_with_LTR_and_HTR_without_ReHeating1 {
+            get {
+                object obj = ResourceManager.GetObject("SB with PreHeating in parallel with LTR and HTR without ReHeating1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SB_with_PreHeating_in_parallel_with_LTR_without_ReHeating {
             get {
                 object obj = ResourceManager.GetObject("SB with PreHeating in parallel with LTR without ReHeating", resourceCulture);

@@ -1359,9 +1359,9 @@
             // button6
             // 
             this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(419, 487);
+            this.button6.Location = new System.Drawing.Point(416, 485);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(110, 39);
+            this.button6.Size = new System.Drawing.Size(118, 39);
             this.button6.TabIndex = 222;
             this.button6.Text = "Low Temperature Recuperator";
             this.button6.UseVisualStyleBackColor = true;
@@ -1370,9 +1370,9 @@
             // button7
             // 
             this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(593, 487);
+            this.button7.Location = new System.Drawing.Point(590, 485);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(110, 39);
+            this.button7.Size = new System.Drawing.Size(117, 39);
             this.button7.TabIndex = 223;
             this.button7.Text = "High Temperature Recuperator";
             this.button7.UseVisualStyleBackColor = true;
