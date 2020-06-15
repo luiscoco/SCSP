@@ -36,7 +36,11 @@ namespace RefPropWindowsForms
         public WizardEighteen WizardDieciocho_dialog;
         public WizardNineteen WizardDiecinueve_dialog;
         public WizardTwenty WizardVeinte_dialog;
-
+        public WizardTwentyOne WizardVeinteUno_dialog;
+        public WizardTwentyTwo WizardVeinteDos_dialog;
+        public WizardTwentyThree WizardVeinteTres_dialog;
+        public WizardTwentyFour WizardVeinteCuatro_dialog;
+      
         public AdobePDFViewer AdobePDFViewer_dialog;
         public ChartsExample ChartsExample_dialog;
         public Receiver_Forristall Receiver_Forristall_dialog;
@@ -910,6 +914,34 @@ namespace RefPropWindowsForms
             AdobePDFViewer_dialog.MdiParent = this;
             AdobePDFViewer_dialog.axAcroPDF1.src = "C:\\SCSP\\PhD-Crespi-Final-1.pdf";
             AdobePDFViewer_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WizardVeinteUno_dialog = new WizardTwentyOne();
+            WizardVeinteUno_dialog.MdiParent = this;
+            WizardVeinteUno_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            WizardVeinteDos_dialog = new WizardTwentyTwo();
+            WizardVeinteDos_dialog.MdiParent = this;
+            WizardVeinteDos_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            WizardVeinteTres_dialog = new WizardTwentyThree();
+            WizardVeinteTres_dialog.MdiParent = this;
+            WizardVeinteTres_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            WizardVeinteCuatro_dialog = new WizardTwentyFour();
+            WizardVeinteCuatro_dialog.MdiParent = this;
+            WizardVeinteCuatro_dialog.Show();
         }
     }
 }

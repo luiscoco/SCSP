@@ -2405,6 +2405,96 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Superstructure_design_and_optimization_on_supercritical_carbon_dioxide_fig1 {
+            get {
+                object obj = ResourceManager.GetObject("Superstructure design and optimization on supercritical carbon dioxide fig1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Superstructure_design_and_optimization_on_supercritical_carbon_dioxide_fig10 {
+            get {
+                object obj = ResourceManager.GetObject("Superstructure design and optimization on supercritical carbon dioxide fig10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Superstructure_design_and_optimization_on_supercritical_carbon_dioxide_fig8_1 {
+            get {
+                object obj = ResourceManager.GetObject("Superstructure design and optimization on supercritical carbon dioxide fig8-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Superstructure_design_and_optimization_on_supercritical_carbon_dioxide_fig8_2 {
+            get {
+                object obj = ResourceManager.GetObject("Superstructure design and optimization on supercritical carbon dioxide fig8-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Superstructure_design_and_optimization_on_supercritical_carbon_dioxide_fig8_3 {
+            get {
+                object obj = ResourceManager.GetObject("Superstructure design and optimization on supercritical carbon dioxide fig8-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Synergetics_the_cooperative_phenomenon_in_multi_compressions_S_CO2_fig2 {
+            get {
+                object obj = ResourceManager.GetObject("Synergetics the cooperative phenomenon in multi-compressions S-CO2 fig2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Synergetics_the_cooperative_phenomenon_in_multi_compressions_S_CO2_fig6 {
+            get {
+                object obj = ResourceManager.GetObject("Synergetics the cooperative phenomenon in multi-compressions S-CO2 fig6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Synergetics_the_cooperative_phenomenon_in_multi_compressions_S_CO2_fig8 {
+            get {
+                object obj = ResourceManager.GetObject("Synergetics the cooperative phenomenon in multi-compressions S-CO2 fig8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Three_Recuperators_Muhammad_Ehtisham_Siddiqui_and_Khalid_H__Almitani {
+            get {
+                object obj = ResourceManager.GetObject("Three Recuperators Muhammad Ehtisham Siddiqui and Khalid H. Almitani", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Titulo_Turbina {
             get {
                 object obj = ResourceManager.GetObject("Titulo_Turbina", resourceCulture);
