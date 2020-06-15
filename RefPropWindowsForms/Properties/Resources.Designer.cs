@@ -2485,6 +2485,56 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Thermal_performance_and_economic_analysis_fig1 {
+            get {
+                object obj = ResourceManager.GetObject("Thermal performance and economic analysis fig1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Thermal_performance_and_economic_analysis_fig11 {
+            get {
+                object obj = ResourceManager.GetObject("Thermal performance and economic analysis fig11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Thermal_performance_and_economic_analysis_fig14 {
+            get {
+                object obj = ResourceManager.GetObject("Thermal performance and economic analysis fig14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Thermal_performance_and_economic_analysis_fig5 {
+            get {
+                object obj = ResourceManager.GetObject("Thermal performance and economic analysis fig5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Thermal_performance_and_economic_analysis_fig8 {
+            get {
+                object obj = ResourceManager.GetObject("Thermal performance and economic analysis fig8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Three_Recuperators_Muhammad_Ehtisham_Siddiqui_and_Khalid_H__Almitani {
             get {
                 object obj = ResourceManager.GetObject("Three Recuperators Muhammad Ehtisham Siddiqui and Khalid H. Almitani", resourceCulture);

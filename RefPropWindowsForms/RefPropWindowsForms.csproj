@@ -1393,6 +1393,12 @@
     <Compile Include="WizardTwelve.Designer.cs">
       <DependentUpon>WizardTwelve.cs</DependentUpon>
     </Compile>
+    <Compile Include="WizardTwentyFive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardTwentyFive.Designer.cs">
+      <DependentUpon>WizardTwentyFive.cs</DependentUpon>
+    </Compile>
     <Compile Include="WizardTwentyFour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1404,6 +1410,12 @@
     </Compile>
     <Compile Include="WizardTwentyOne.Designer.cs">
       <DependentUpon>WizardTwentyOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardTwentySix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardTwentySix.Designer.cs">
+      <DependentUpon>WizardTwentySix.cs</DependentUpon>
     </Compile>
     <Compile Include="WizardTwentyThree.cs">
       <SubType>Form</SubType>
@@ -2020,11 +2032,17 @@
     <EmbeddedResource Include="WizardTwenty.resx">
       <DependentUpon>WizardTwenty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WizardTwentyFive.resx">
+      <DependentUpon>WizardTwentyFive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WizardTwentyFour.resx">
       <DependentUpon>WizardTwentyFour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTwentyOne.resx">
       <DependentUpon>WizardTwentyOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardTwentySix.resx">
+      <DependentUpon>WizardTwentySix.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTwentyThree.resx">
       <DependentUpon>WizardTwentyThree.cs</DependentUpon>
@@ -2276,6 +2294,11 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Thermal performance and economic analysis fig14.jpg" />
+    <None Include="Resources\Thermal performance and economic analysis fig11.jpg" />
+    <None Include="Resources\Thermal performance and economic analysis fig8.jpg" />
+    <None Include="Resources\Thermal performance and economic analysis fig5.jpg" />
+    <None Include="Resources\Thermal performance and economic analysis fig1.jpg" />
     <None Include="Resources\Superstructure design and optimization on supercritical carbon dioxide fig10.jpg" />
     <None Include="Resources\Superstructure design and optimization on supercritical carbon dioxide fig8-3.jpg" />
     <None Include="Resources\Superstructure design and optimization on supercritical carbon dioxide fig8-2.jpg" />

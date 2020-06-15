@@ -40,7 +40,9 @@ namespace RefPropWindowsForms
         public WizardTwentyTwo WizardVeinteDos_dialog;
         public WizardTwentyThree WizardVeinteTres_dialog;
         public WizardTwentyFour WizardVeinteCuatro_dialog;
-      
+        public WizardTwentyFive WizardVeinteCinco_dialog;
+        public WizardTwentySix WizardVeinteSeis_dialog;
+
         public AdobePDFViewer AdobePDFViewer_dialog;
         public ChartsExample ChartsExample_dialog;
         public Receiver_Forristall Receiver_Forristall_dialog;
@@ -942,6 +944,20 @@ namespace RefPropWindowsForms
             WizardVeinteCuatro_dialog = new WizardTwentyFour();
             WizardVeinteCuatro_dialog.MdiParent = this;
             WizardVeinteCuatro_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            WizardVeinteCinco_dialog = new WizardTwentyFive();
+            WizardVeinteCinco_dialog.MdiParent = this;
+            WizardVeinteCinco_dialog.Show();
+        }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WizardVeinteSeis_dialog = new WizardTwentySix();
+            WizardVeinteSeis_dialog.MdiParent = this;
+            WizardVeinteSeis_dialog.Show();
         }
     }
 }

@@ -54,6 +54,7 @@
             this.configurationsXXXXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationsXXXXToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationsXXXXToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurationsXXXXToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.adobePDFViewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartsExampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tesisDeFranciscoCrespiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -145,7 +146,9 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configurationsXXXXToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurationsXXXXToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -196,6 +199,9 @@
             this.configurationsXXXXToolStripMenuItem1,
             this.configurationsXXXXToolStripMenuItem2,
             this.configurationsXXXXToolStripMenuItem3,
+            this.configurationsXXXXToolStripMenuItem4,
+            this.cToolStripMenuItem,
+            this.toolStripMenuItem7,
             this.adobePDFViewerToolStripMenuItem,
             this.chartsExampleToolStripMenuItem,
             this.tesisDeFranciscoCrespiToolStripMenuItem,
@@ -370,6 +376,13 @@
             this.configurationsXXXXToolStripMenuItem2.Size = new System.Drawing.Size(229, 22);
             this.configurationsXXXXToolStripMenuItem2.Text = "Configurations XX-XX";
             this.configurationsXXXXToolStripMenuItem2.Click += new System.EventHandler(this.configurationsXXXXToolStripMenuItem2_Click);
+            // 
+            // configurationsXXXXToolStripMenuItem3
+            // 
+            this.configurationsXXXXToolStripMenuItem3.Name = "configurationsXXXXToolStripMenuItem3";
+            this.configurationsXXXXToolStripMenuItem3.Size = new System.Drawing.Size(229, 22);
+            this.configurationsXXXXToolStripMenuItem3.Text = "Configurations XX-XX";
+            this.configurationsXXXXToolStripMenuItem3.Click += new System.EventHandler(this.configurationsXXXXToolStripMenuItem3_Click);
             // 
             // adobePDFViewerToolStripMenuItem
             // 
@@ -1079,12 +1092,25 @@
             this.configurationToolStripMenuItem.Text = "Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
-            // configurationsXXXXToolStripMenuItem3
+            // configurationsXXXXToolStripMenuItem4
             // 
-            this.configurationsXXXXToolStripMenuItem3.Name = "configurationsXXXXToolStripMenuItem3";
-            this.configurationsXXXXToolStripMenuItem3.Size = new System.Drawing.Size(229, 22);
-            this.configurationsXXXXToolStripMenuItem3.Text = "Configurations XX-XX";
-            this.configurationsXXXXToolStripMenuItem3.Click += new System.EventHandler(this.configurationsXXXXToolStripMenuItem3_Click);
+            this.configurationsXXXXToolStripMenuItem4.Name = "configurationsXXXXToolStripMenuItem4";
+            this.configurationsXXXXToolStripMenuItem4.Size = new System.Drawing.Size(229, 22);
+            this.configurationsXXXXToolStripMenuItem4.Text = "Configurations XX-XX";
+            this.configurationsXXXXToolStripMenuItem4.Click += new System.EventHandler(this.configurationsXXXXToolStripMenuItem4_Click);
+            // 
+            // cToolStripMenuItem
+            // 
+            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.cToolStripMenuItem.Text = "Configurations XX-XX";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem7.Text = "Configurations XX-XX";
             // 
             // MainWindow
             // 
@@ -1226,5 +1252,8 @@
         private System.Windows.Forms.ToolStripMenuItem configurationsXXXXToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem configurationsXXXXToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem configurationsXXXXToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem configurationsXXXXToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
     }
 }
