@@ -32,8 +32,8 @@
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel3.Location = new System.Drawing.Point(1214, 104);
+            this.linkLabel3.Location = new System.Drawing.Point(1109, 86);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(64, 15);
             this.linkLabel3.TabIndex = 198;
@@ -52,7 +52,7 @@
             // 
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel4.Location = new System.Drawing.Point(1214, 88);
+            this.linkLabel4.Location = new System.Drawing.Point(1109, 70);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(79, 15);
             this.linkLabel4.TabIndex = 197;
@@ -63,37 +63,37 @@
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(366, 19);
+            this.label1.Location = new System.Drawing.Point(302, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(853, 48);
+            this.label1.Size = new System.Drawing.Size(802, 35);
             this.label1.TabIndex = 196;
-            this.label1.Text = "Proposal and Thermodynamic Assessment of S-CO2\r\nBrayton Cycle Layout for Improved" +
-    " Heat Recovery\r\nMuhammad Ehtisham Siddiqui * and Khalid H. Almitani";
+            this.label1.Text = "Proposal and Thermodynamic Assessment of S-CO2 Brayton Cycle Layout for Improved " +
+    "Heat Recovery\r\nMuhammad Ehtisham Siddiqui * and Khalid H. Almitani";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(302, 338);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(802, 30);
+            this.label2.TabIndex = 200;
+            this.label2.Text = resources.GetString("label2.Text");
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.Three_Recuperators_Muhammad_Ehtisham_Siddiqui_and_Khalid_H__Almitani;
-            this.pictureBox1.Location = new System.Drawing.Point(369, 70);
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRC_with_ReHeating_and_three_recuperators_Small;
+            this.pictureBox1.Location = new System.Drawing.Point(302, 70);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(839, 540);
+            this.pictureBox1.Size = new System.Drawing.Size(802, 265);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 199;
             this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(366, 613);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(853, 48);
-            this.label2.TabIndex = 200;
-            this.label2.Text = resources.GetString("label2.Text");
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WizardNineteen
             // 
