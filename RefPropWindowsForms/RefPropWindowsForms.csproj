@@ -2294,6 +2294,7 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SB with Three Recuperators and Three Recompressor without ReHeating Small.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig14.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig11.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig8.jpg" />
