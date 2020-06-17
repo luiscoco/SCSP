@@ -203,6 +203,39 @@ namespace RefPropWindowsForms
             }
         }
 
+        public class RecompCycle_with_Three_Recuperatos_with_Three_RC_withoutRH : core
+        {
+            public Double W_dot_net;                        //net power output of the cycle (kW)
+            public Double eta_thermal;                      //thermal efficiency of the cycle (-)
+            public Double recomp_frac1;                      //amount of flow that bypasses the precooler and is compressed in the recompressor (-)
+            public Double recomp_frac2;                      //amount of flow that bypasses the precooler and is compressed in the recompressor (-)
+            public Double recomp_frac3;                      //amount of flow that bypasses the precooler and is compressed in the recompressor (-)
+            public Double m_dot_turbine;                    //mass flow rate through the turbine (kg/s)
+            public Double high_pressure_limit;              //maximum allowable high-side pressure (kPa)
+            public Double conv_tol;                         //relative convergence tolerance used during iteration loops involving this cycle (-)
+            public Turbine t = new Turbine();                 //turbine user-defined type
+            public Compressor mc = new Compressor();        //compressor and recompressor user-defined types
+            public Compressor rc1 = new Compressor();        //compressor and recompressor user-defined types
+            public Compressor rc2 = new Compressor();        //compressor and recompressor user-defined types
+            public Compressor rc3 = new Compressor();        //compressor and recompressor user-defined types
+            public HeatExchanger LT = new HeatExchanger();  //heat exchanger Low Temperature Recuperator
+            public HeatExchanger MT1 = new HeatExchanger();  //heat exchanger Medium Temperature Recuperator
+            public HeatExchanger MT2 = new HeatExchanger();  //heat exchanger Medium Temperature Recuperator
+            public HeatExchanger HT = new HeatExchanger();  //heat exchanger High Temperature Recuperator
+            public HeatExchanger PHX = new HeatExchanger();  //heat exchanger Primary Heat Exchanger
+            public HeatExchanger PC = new HeatExchanger();   //heat exchanger Air Cooling Heat Exchanger
+            public Double[] temp = new Double[18];          //thermodynamic properties at the state points of the cycle (K, kPa, kJ/kg, kJ/kg-K, kg/m3)
+            public Double[] pres = new Double[18];
+            public Double[] enth = new Double[18];
+            public Double[] entr = new Double[18];
+            public Double[] dens = new Double[18];
+
+            public RecompCycle_with_Three_Recuperatos_with_Three_RC_withoutRH()
+            {
+
+            }
+        }
+
         public class RecompCycle_LTR_PreHeating_withoutRH : core
         {
             public Double W_dot_net;                        //net power output of the cycle (kW)

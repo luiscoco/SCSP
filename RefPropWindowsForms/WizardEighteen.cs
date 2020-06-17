@@ -22,7 +22,7 @@ namespace RefPropWindowsForms
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            puntero.SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating_dialog = new SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating(puntero);
+            puntero.SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating_dialog = new SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating(puntero);
             puntero.SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating_dialog.MdiParent = puntero;
             puntero.SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating_dialog.Show();
         }
@@ -32,6 +32,13 @@ namespace RefPropWindowsForms
             puntero.SB_with_Two_Recuperators_with_LTR_PreHeating_without_ReHeating_dialog = new SB_with_Two_Recuperators_with_LTR_PreHeating_without_ReHeating(puntero);
             puntero.SB_with_Two_Recuperators_with_LTR_PreHeating_without_ReHeating_dialog.MdiParent = puntero;
             puntero.SB_with_Two_Recuperators_with_LTR_PreHeating_without_ReHeating_dialog.Show();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {           
+            puntero.SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating_dialog = new SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating();
+            puntero.SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating_dialog.MdiParent = puntero;
+            puntero.SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating_dialog.Show();
         }
     }
 }

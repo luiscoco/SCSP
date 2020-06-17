@@ -143,10 +143,11 @@ namespace RefPropWindowsForms
         public SB_with_Two_Recuperators_without_ReHeating SB_with_Two_Recuperators_without_ReHeating_dialog;
         public SB_without_Reheating SB_without_Reheating_dialog;
         public SB_with_Four_Recuperators_without_ReHeating SB_with_Four_Recuperators_without_ReHeating_dialog;
-        public SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating_dialog;
-        public SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating_dialog;
+        public SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating_dialog;
+        public SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating_dialog;
+        public SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating_dialog;
         public SB_with_Two_Recuperators_with_LTR_PreHeating_without_ReHeating SB_with_Two_Recuperators_with_LTR_PreHeating_without_ReHeating_dialog;
-
+        
         public RC_with_LTR_PreHeating_without_ReHeating RC_with_LTR_PreHeating_without_ReHeating_dialog;
         public RC_with_HTR_PreHeating_without_ReHeating RC_with_HTR_PreHeating_without_ReHeating_dialog;
         public RC_with_HTR_and_LTR_PreHeating_without_ReHeating RC_with_HTR_and_LTR_PreHeating_without_ReHeating_dialog;
