@@ -598,12 +598,12 @@ namespace RefPropWindowsForms
                
                 using (var solver = new NLoptSolver(algorithm_type, 6, 0.01, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.2, initial_CIP_value + 3000, initial_CIP_value + 2000, initial_CIP_value + 1000 });
-                    solver.SetUpperBounds(new[] { 1.0, 125000, 0.8, puntero_aplicacion.p_mc_out2 - 1000, puntero_aplicacion.p_mc_out2 - 2000, puntero_aplicacion.p_mc_out2 - 3000 });
+                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, 0.0, initial_CIP_value + 3000, initial_CIP_value + 2000, initial_CIP_value + 1000 });
+                    solver.SetUpperBounds(new[] { 1.0, 125000, 1.0, puntero_aplicacion.p_mc_out2 - 1000, puntero_aplicacion.p_mc_out2 - 2000, puntero_aplicacion.p_mc_out2 - 3000 });
 
                     solver.SetInitialStepSize(new[] { 0.05, 200, 0.05, 1000, 1000, 1000 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, 0.2, 15000, 13000, 11000 };
+                    var initialValue = new[] { 0.2, initial_CIP_value, 0.5, 15000, 13000, 11000 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
