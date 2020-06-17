@@ -1034,11 +1034,23 @@
     <Compile Include="RC_with_Five_ReHeating.cs.Designer.cs">
       <DependentUpon>RC_with_Five_ReHeating.cs.cs</DependentUpon>
     </Compile>
+    <Compile Include="RC_with_Five_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_Five_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_with_Five_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </Compile>
     <Compile Include="RC_with_Four_ReHeating.cs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RC_with_Four_ReHeating.cs.Designer.cs">
       <DependentUpon>RC_with_Four_ReHeating.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RC_with_Four_ReHeating_Optimization_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC_with_Four_ReHeating_Optimization_Analysis_Results.Designer.cs">
+      <DependentUpon>RC_with_Four_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </Compile>
     <Compile Include="RC_with_HTR_and_LTR_PreHeating_without_ReHeating.cs">
       <SubType>Form</SubType>
@@ -1853,8 +1865,14 @@
     <EmbeddedResource Include="RC_with_Five_ReHeating.cs.resx">
       <DependentUpon>RC_with_Five_ReHeating.cs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_Five_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RC_with_Five_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RC_with_Four_ReHeating.cs.resx">
       <DependentUpon>RC_with_Four_ReHeating.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC_with_Four_ReHeating_Optimization_Analysis_Results.resx">
+      <DependentUpon>RC_with_Four_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RC_with_HTR_and_LTR_PreHeating_without_ReHeating.resx">
       <DependentUpon>RC_with_HTR_and_LTR_PreHeating_without_ReHeating.cs</DependentUpon>

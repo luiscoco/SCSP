@@ -1037,7 +1037,7 @@
             this.textBox69.Name = "textBox69";
             this.textBox69.Size = new System.Drawing.Size(44, 20);
             this.textBox69.TabIndex = 1690;
-            this.textBox69.Text = "11000";
+            this.textBox69.Text = "15000";
             // 
             // label68
             // 
@@ -2493,7 +2493,7 @@
             this.textBox63.Name = "textBox63";
             this.textBox63.Size = new System.Drawing.Size(44, 20);
             this.textBox63.TabIndex = 1593;
-            this.textBox63.Text = "14000";
+            this.textBox63.Text = "17500";
             // 
             // label57
             // 
@@ -3876,7 +3876,7 @@
             this.textBox104.Name = "textBox104";
             this.textBox104.Size = new System.Drawing.Size(44, 20);
             this.textBox104.TabIndex = 1790;
-            this.textBox104.Text = "11000";
+            this.textBox104.Text = "12000";
             // 
             // label140
             // 
