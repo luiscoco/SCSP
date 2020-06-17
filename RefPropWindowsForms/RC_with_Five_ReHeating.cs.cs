@@ -1285,7 +1285,8 @@ namespace RefPropWindowsForms
         //Optimziation analysis
         private void button36_Click(object sender, EventArgs e)
         {
-
+            RC_with_Five_ReHeating_Optimization_Analysis_Results RC_with_Five_ReHeating_Optimization_Analysis_Results_dialog = new RC_with_Five_ReHeating_Optimization_Analysis_Results(this);
+            RC_with_Five_ReHeating_Optimization_Analysis_Results_dialog.Show();
         }
     }   
 }
