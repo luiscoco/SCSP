@@ -1566,7 +1566,7 @@ namespace RefPropWindowsForms
                             LF_RHX4.textBox6.Text = Convert.ToString(t18_list[maxIndex]);
                             LF_RHX4.textBox4.Text = Convert.ToString(p17_list[maxIndex]);
                             LF_RHX4.textBox5.Text = Convert.ToString(p18_list[maxIndex]);
-                            LF_RHX3.textBox107.Text = Convert.ToString(10);
+                            LF_RHX4.textBox107.Text = Convert.ToString(10);
                             LF_RHX4.button1_Click(this, e);
                             puntero_aplicacion.LF_ReHeating4_SF_Effective_Apperture_Area = LF_RHX4.ReflectorApertureAreaResult;
                             puntero_aplicacion.LF_ReHeating4_SF_Pressure_drop = LF_RHX4.Total_Pressure_DropResult;
