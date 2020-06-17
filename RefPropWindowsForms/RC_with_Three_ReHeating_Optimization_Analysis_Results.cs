@@ -1237,6 +1237,9 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.textBox7.Text = p_rhx1_in2_list[maxIndex].ToString();
                                 puntero_aplicacion.textBox63.Text = p_rhx2_in2_list[maxIndex].ToString();
                                 puntero_aplicacion.textBox69.Text = p_rhx3_in2_list[maxIndex].ToString();
+                                puntero_aplicacion.textBox17.Text = ua_LT_list[maxIndex].ToString();
+                                puntero_aplicacion.textBox16.Text = ua_HT_list[maxIndex].ToString();
+                                puntero_aplicacion.textBox2.Text = i.ToString();
                             }
 
                             //The variable 'i' is the loop counter for the CIT
@@ -1879,6 +1882,9 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.textBox7.Text = p_rhx1_in2_list[maxIndex].ToString();
                                 puntero_aplicacion.textBox63.Text = p_rhx2_in2_list[maxIndex].ToString();
                                 puntero_aplicacion.textBox69.Text = p_rhx3_in2_list[maxIndex].ToString();
+                                puntero_aplicacion.textBox17.Text = ua_LT_list[maxIndex].ToString();
+                                puntero_aplicacion.textBox16.Text = ua_HT_list[maxIndex].ToString();
+                                puntero_aplicacion.textBox2.Text = i.ToString();
                             }
 
                             //The variable 'i' is the loop counter for the CIT

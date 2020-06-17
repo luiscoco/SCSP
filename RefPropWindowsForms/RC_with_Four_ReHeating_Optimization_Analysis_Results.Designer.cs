@@ -44,6 +44,8 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.listBox24 = new System.Windows.Forms.ListBox();
             this.label23 = new System.Windows.Forms.Label();
             this.listBox22 = new System.Windows.Forms.ListBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -79,6 +81,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.listBox23 = new System.Windows.Forms.ListBox();
             this.listBox7 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox5 = new System.Windows.Forms.ListBox();
@@ -94,6 +98,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -125,12 +131,6 @@
             this.label80 = new System.Windows.Forms.Label();
             this.textBox57 = new System.Windows.Forms.TextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.listBox23 = new System.Windows.Forms.ListBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.listBox24 = new System.Windows.Forms.ListBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -309,6 +309,23 @@
             this.groupBox5.TabIndex = 1314;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "CIT Optimization Results";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(565, 16);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(82, 13);
+            this.label30.TabIndex = 1243;
+            this.label30.Text = "P_rhx4_in (kPa)";
+            // 
+            // listBox24
+            // 
+            this.listBox24.FormattingEnabled = true;
+            this.listBox24.Location = new System.Drawing.Point(573, 33);
+            this.listBox24.Name = "listBox24";
+            this.listBox24.Size = new System.Drawing.Size(66, 95);
+            this.listBox24.TabIndex = 1242;
             // 
             // label23
             // 
@@ -514,6 +531,7 @@
             this.button6.TabIndex = 1311;
             this.button6.Text = "Run CIT Optimization";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button1
             // 
@@ -644,6 +662,23 @@
             this.groupBox3.TabIndex = 1301;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Optimization Intermediate Results";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(565, 16);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(82, 13);
+            this.label29.TabIndex = 1241;
+            this.label29.Text = "P_rhx4_in (kPa)";
+            // 
+            // listBox23
+            // 
+            this.listBox23.FormattingEnabled = true;
+            this.listBox23.Location = new System.Drawing.Point(573, 33);
+            this.listBox23.Name = "listBox23";
+            this.listBox23.Size = new System.Drawing.Size(66, 95);
+            this.listBox23.TabIndex = 1240;
             // 
             // listBox7
             // 
@@ -791,6 +826,22 @@
             this.groupBox1.TabIndex = 1312;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Optmization Results";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(46, 154);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(85, 13);
+            this.label31.TabIndex = 1270;
+            this.label31.Text = "P_rhx4_in (kPa):";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(132, 151);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(88, 20);
+            this.textBox6.TabIndex = 1269;
             // 
             // textBox5
             // 
@@ -1064,56 +1115,6 @@
             this.checkBox3.TabIndex = 1309;
             this.checkBox3.Text = "Copy results as design-point inputs";
             this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(565, 16);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(82, 13);
-            this.label29.TabIndex = 1241;
-            this.label29.Text = "P_rhx4_in (kPa)";
-            // 
-            // listBox23
-            // 
-            this.listBox23.FormattingEnabled = true;
-            this.listBox23.Location = new System.Drawing.Point(573, 33);
-            this.listBox23.Name = "listBox23";
-            this.listBox23.Size = new System.Drawing.Size(66, 95);
-            this.listBox23.TabIndex = 1240;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(565, 16);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(82, 13);
-            this.label30.TabIndex = 1243;
-            this.label30.Text = "P_rhx4_in (kPa)";
-            // 
-            // listBox24
-            // 
-            this.listBox24.FormattingEnabled = true;
-            this.listBox24.Location = new System.Drawing.Point(573, 33);
-            this.listBox24.Name = "listBox24";
-            this.listBox24.Size = new System.Drawing.Size(66, 95);
-            this.listBox24.TabIndex = 1242;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(46, 154);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(85, 13);
-            this.label31.TabIndex = 1270;
-            this.label31.Text = "P_rhx4_in (kPa):";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(132, 151);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(88, 20);
-            this.textBox6.TabIndex = 1269;
             // 
             // RC_with_Four_ReHeating_Optimization_Analysis_Results
             // 
