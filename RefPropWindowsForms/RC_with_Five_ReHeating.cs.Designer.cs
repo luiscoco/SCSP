@@ -3949,7 +3949,7 @@
             this.textBox114.Name = "textBox114";
             this.textBox114.Size = new System.Drawing.Size(44, 20);
             this.textBox114.TabIndex = 1813;
-            this.textBox114.Text = "20000";
+            this.textBox114.Text = "18000";
             // 
             // label151
             // 
@@ -3983,7 +3983,7 @@
             this.textBox116.Name = "textBox116";
             this.textBox116.Size = new System.Drawing.Size(44, 20);
             this.textBox116.TabIndex = 1817;
-            this.textBox116.Text = "20000";
+            this.textBox116.Text = "16000";
             // 
             // label153
             // 
@@ -4017,7 +4017,7 @@
             this.textBox118.Name = "textBox118";
             this.textBox118.Size = new System.Drawing.Size(44, 20);
             this.textBox118.TabIndex = 1821;
-            this.textBox118.Text = "20000";
+            this.textBox118.Text = "14000";
             // 
             // label155
             // 
@@ -4051,7 +4051,7 @@
             this.textBox120.Name = "textBox120";
             this.textBox120.Size = new System.Drawing.Size(44, 20);
             this.textBox120.TabIndex = 1825;
-            this.textBox120.Text = "20000";
+            this.textBox120.Text = "12000";
             // 
             // label157
             // 
