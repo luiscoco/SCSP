@@ -282,7 +282,8 @@ namespace RefPropWindowsForms
 
                         listBox1.Items.Add(counter.ToString());
                         listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
-                        listBox3.Items.Add(puntero_aplicacion.recomp_frac2.ToString());
+                        listBox3.Items.Add(puntero_aplicacion.recomp_frac1.ToString());
+                        listBox9.Items.Add(puntero_aplicacion.recomp_frac2.ToString());
                         listBox4.Items.Add(puntero_aplicacion.p_mc_in2.ToString());
                         listBox5.Items.Add(puntero_aplicacion.ua_lt2.ToString());
                         listBox19.Items.Add(puntero_aplicacion.ua_mt2.ToString());
@@ -522,7 +523,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 0.05, 250.0, 0.05, 0.05 });
 
-                    var initialValue = new[] { 0.0, 0.0, initial_CIP_value, 0.5, 0.25 };
+                    var initialValue = new[] { 0.0, 0.0, initial_CIP_value + 3000.0, 0.5, 0.25 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
@@ -612,7 +613,8 @@ namespace RefPropWindowsForms
 
                         listBox1.Items.Add(counter.ToString());
                         listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
-                        listBox3.Items.Add(puntero_aplicacion.recomp_frac2.ToString());
+                        listBox3.Items.Add(puntero_aplicacion.recomp_frac1.ToString());
+                        listBox9.Items.Add(puntero_aplicacion.recomp_frac2.ToString());
                         listBox4.Items.Add(puntero_aplicacion.p_mc_in2.ToString());
                         listBox5.Items.Add(puntero_aplicacion.ua_lt2.ToString());
                         listBox19.Items.Add(puntero_aplicacion.ua_mt2.ToString());
