@@ -313,6 +313,36 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig1 {
+            get {
+                object obj = ResourceManager.GetObject("On the Conceptual Design of Novel Supercritical CO2 fig1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig3 {
+            get {
+                object obj = ResourceManager.GetObject("On the Conceptual Design of Novel Supercritical CO2 fig3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig5 {
+            get {
+                object obj = ResourceManager.GetObject("On the Conceptual Design of Novel Supercritical CO2 fig5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Paper_Luis_Gonzalez_Portillo_UPM {
             get {
                 object obj = ResourceManager.GetObject("Paper_Luis_Gonzalez_Portillo_UPM", resourceCulture);

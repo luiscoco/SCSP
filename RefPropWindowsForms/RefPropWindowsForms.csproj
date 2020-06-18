@@ -1429,6 +1429,12 @@
     <Compile Include="WizardTwentyOne.Designer.cs">
       <DependentUpon>WizardTwentyOne.cs</DependentUpon>
     </Compile>
+    <Compile Include="WizardTwentySeven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardTwentySeven.Designer.cs">
+      <DependentUpon>WizardTwentySeven.cs</DependentUpon>
+    </Compile>
     <Compile Include="WizardTwentySix.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2068,6 +2074,9 @@
     <EmbeddedResource Include="WizardTwentyOne.resx">
       <DependentUpon>WizardTwentyOne.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WizardTwentySeven.resx">
+      <DependentUpon>WizardTwentySeven.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WizardTwentySix.resx">
       <DependentUpon>WizardTwentySix.cs</DependentUpon>
     </EmbeddedResource>
@@ -2378,6 +2387,9 @@
     <None Include="Resources\PCRC with ReHeating with Five Reheating Stages.jpg" />
     <None Include="Resources\PCRC with ReHeating with Four Reheating Stages.jpg" />
     <None Include="Resources\PCRC with ReHeating and three recuperators Small.jpg" />
+    <None Include="Resources\On the Conceptual Design of Novel Supercritical CO2 fig1.jpg" />
+    <None Include="Resources\On the Conceptual Design of Novel Supercritical CO2 fig3.jpg" />
+    <None Include="Resources\On the Conceptual Design of Novel Supercritical CO2 fig5.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Three Reheating Stages.jpg" />
     <None Include="Resources\PCRC with ReHeating with Two Reheating Stages Small.jpg" />
     <Content Include="Resources\PCRC with ReHeating with Two Reheating Stages.jpg" />

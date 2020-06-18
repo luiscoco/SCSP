@@ -55,6 +55,9 @@
             this.configurationsXXXXToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationsXXXXToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationsXXXXToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurationsXXXXToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.adobePDFViewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartsExampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tesisDeFranciscoCrespiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -146,9 +149,6 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configurationsXXXXToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -383,6 +383,27 @@
             this.configurationsXXXXToolStripMenuItem3.Size = new System.Drawing.Size(229, 22);
             this.configurationsXXXXToolStripMenuItem3.Text = "Configurations XX-XX";
             this.configurationsXXXXToolStripMenuItem3.Click += new System.EventHandler(this.configurationsXXXXToolStripMenuItem3_Click);
+            // 
+            // configurationsXXXXToolStripMenuItem4
+            // 
+            this.configurationsXXXXToolStripMenuItem4.Name = "configurationsXXXXToolStripMenuItem4";
+            this.configurationsXXXXToolStripMenuItem4.Size = new System.Drawing.Size(229, 22);
+            this.configurationsXXXXToolStripMenuItem4.Text = "Configurations XX-XX";
+            this.configurationsXXXXToolStripMenuItem4.Click += new System.EventHandler(this.configurationsXXXXToolStripMenuItem4_Click);
+            // 
+            // cToolStripMenuItem
+            // 
+            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.cToolStripMenuItem.Text = "Configurations XX-XX";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem7.Text = "Configurations XX-XX";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // adobePDFViewerToolStripMenuItem
             // 
@@ -1091,26 +1112,6 @@
             this.configurationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.configurationToolStripMenuItem.Text = "Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
-            // 
-            // configurationsXXXXToolStripMenuItem4
-            // 
-            this.configurationsXXXXToolStripMenuItem4.Name = "configurationsXXXXToolStripMenuItem4";
-            this.configurationsXXXXToolStripMenuItem4.Size = new System.Drawing.Size(229, 22);
-            this.configurationsXXXXToolStripMenuItem4.Text = "Configurations XX-XX";
-            this.configurationsXXXXToolStripMenuItem4.Click += new System.EventHandler(this.configurationsXXXXToolStripMenuItem4_Click);
-            // 
-            // cToolStripMenuItem
-            // 
-            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.cToolStripMenuItem.Text = "Configurations XX-XX";
-            this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(229, 22);
-            this.toolStripMenuItem7.Text = "Configurations XX-XX";
             // 
             // MainWindow
             // 
