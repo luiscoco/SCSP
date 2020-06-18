@@ -1405,6 +1405,24 @@
     <Compile Include="WizardTen.Designer.cs">
       <DependentUpon>WizardTen.cs</DependentUpon>
     </Compile>
+    <Compile Include="WizardThirty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardThirty.Designer.cs">
+      <DependentUpon>WizardThirty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardThirtyOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardThirtyOne.Designer.cs">
+      <DependentUpon>WizardThirtyOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardThirtyTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardThirtyTwo.Designer.cs">
+      <DependentUpon>WizardThirtyTwo.cs</DependentUpon>
+    </Compile>
     <Compile Include="WizardTwenty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1417,6 +1435,12 @@
     <Compile Include="WizardTwelve.Designer.cs">
       <DependentUpon>WizardTwelve.cs</DependentUpon>
     </Compile>
+    <Compile Include="WizardTwentyEight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardTwentyEight.Designer.cs">
+      <DependentUpon>WizardTwentyEight.cs</DependentUpon>
+    </Compile>
     <Compile Include="WizardTwentyFive.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1428,6 +1452,12 @@
     </Compile>
     <Compile Include="WizardTwentyFour.Designer.cs">
       <DependentUpon>WizardTwentyFour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardTwentyNine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardTwentyNine.Designer.cs">
+      <DependentUpon>WizardTwentyNine.cs</DependentUpon>
     </Compile>
     <Compile Include="WizardTwentyOne.cs">
       <SubType>Form</SubType>
@@ -2068,17 +2098,32 @@
     <EmbeddedResource Include="WizardTen.resx">
       <DependentUpon>WizardTen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WizardThirty.resx">
+      <DependentUpon>WizardThirty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardThirtyOne.resx">
+      <DependentUpon>WizardThirtyOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardThirtyTwo.resx">
+      <DependentUpon>WizardThirtyTwo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WizardTwelve.resx">
       <DependentUpon>WizardTwelve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTwenty.resx">
       <DependentUpon>WizardTwenty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WizardTwentyEight.resx">
+      <DependentUpon>WizardTwentyEight.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WizardTwentyFive.resx">
       <DependentUpon>WizardTwentyFive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTwentyFour.resx">
       <DependentUpon>WizardTwentyFour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardTwentyNine.resx">
+      <DependentUpon>WizardTwentyNine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTwentyOne.resx">
       <DependentUpon>WizardTwentyOne.cs</DependentUpon>
@@ -2339,6 +2384,11 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Three Recuperators fig2.18 tesis Francesco Crespi.jpg" />
+    <None Include="Resources\Three Recuperators fig2.17 tesis Francesco Crespi.jpg" />
+    <None Include="Resources\Three Recuperators fig2.16 tesis Francesco Crespi.jpg" />
+    <None Include="Resources\Three Recuperators fig2.15 tesis Francesco Crespi.jpg" />
+    <None Include="Resources\Turbine Split Flow tesis Francesco Crespi.jpg" />
     <None Include="Resources\SB with Three Recuperators and Three Recompressor without ReHeating.jpg" />
     <None Include="Resources\SB with Three Recuperators and Three Recompressor without ReHeating Small.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig14.jpg" />

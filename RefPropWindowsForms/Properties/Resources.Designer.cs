@@ -2595,6 +2595,46 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Three_Recuperators_fig2_15_tesis_Francesco_Crespi {
+            get {
+                object obj = ResourceManager.GetObject("Three Recuperators fig2.15 tesis Francesco Crespi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Three_Recuperators_fig2_16_tesis_Francesco_Crespi {
+            get {
+                object obj = ResourceManager.GetObject("Three Recuperators fig2.16 tesis Francesco Crespi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Three_Recuperators_fig2_17_tesis_Francesco_Crespi {
+            get {
+                object obj = ResourceManager.GetObject("Three Recuperators fig2.17 tesis Francesco Crespi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Three_Recuperators_fig2_18_tesis_Francesco_Crespi {
+            get {
+                object obj = ResourceManager.GetObject("Three Recuperators fig2.18 tesis Francesco Crespi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Three_Recuperators_Muhammad_Ehtisham_Siddiqui_and_Khalid_H__Almitani {
             get {
                 object obj = ResourceManager.GetObject("Three Recuperators Muhammad Ehtisham Siddiqui and Khalid H. Almitani", resourceCulture);
@@ -2648,6 +2688,16 @@ namespace RefPropWindowsForms.Properties {
         internal static System.Drawing.Bitmap Turbine_Results_Summary1 {
             get {
                 object obj = ResourceManager.GetObject("Turbine Results Summary1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Turbine_Split_Flow_tesis_Francesco_Crespi {
+            get {
+                object obj = ResourceManager.GetObject("Turbine Split Flow tesis Francesco Crespi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
