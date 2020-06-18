@@ -523,7 +523,7 @@ namespace RefPropWindowsForms
 
                     solver.SetInitialStepSize(new[] { 0.05, 0.05, 250.0, 0.05, 0.05 });
 
-                    var initialValue = new[] { 0.0, 0.0, initial_CIP_value + 3000.0, 0.5, 0.25 };
+                    var initialValue = new[] { 0.0, 0.0, initial_CIP_value, 0.5, 0.25 };
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
