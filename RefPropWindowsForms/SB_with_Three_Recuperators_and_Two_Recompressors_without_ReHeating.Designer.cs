@@ -698,7 +698,7 @@
             this.textBox84.Name = "textBox84";
             this.textBox84.Size = new System.Drawing.Size(57, 20);
             this.textBox84.TabIndex = 2469;
-            this.textBox84.Text = "2500";
+            this.textBox84.Text = "4000";
             // 
             // label56
             // 
@@ -1701,7 +1701,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(57, 20);
             this.textBox16.TabIndex = 2290;
-            this.textBox16.Text = "2500";
+            this.textBox16.Text = "1000";
             // 
             // label19
             // 
@@ -3209,7 +3209,7 @@
             this.pictureBox1.TabIndex = 2460;
             this.pictureBox1.TabStop = false;
             // 
-            // SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating
+            // SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -3440,7 +3440,7 @@
             this.Controls.Add(this.textBox36);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating";
+            this.Name = "SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating";
             this.Text = "SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
