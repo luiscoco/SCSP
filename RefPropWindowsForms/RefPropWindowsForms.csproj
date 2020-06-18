@@ -1411,11 +1411,29 @@
     <Compile Include="WizardThirty.Designer.cs">
       <DependentUpon>WizardThirty.cs</DependentUpon>
     </Compile>
+    <Compile Include="WizardThirtyFive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardThirtyFive.Designer.cs">
+      <DependentUpon>WizardThirtyFive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardThirtyFour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardThirtyFour.Designer.cs">
+      <DependentUpon>WizardThirtyFour.cs</DependentUpon>
+    </Compile>
     <Compile Include="WizardThirtyOne.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WizardThirtyOne.Designer.cs">
       <DependentUpon>WizardThirtyOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardThirtyThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardThirtyThree.Designer.cs">
+      <DependentUpon>WizardThirtyThree.cs</DependentUpon>
     </Compile>
     <Compile Include="WizardThirtyTwo.cs">
       <SubType>Form</SubType>
@@ -2101,8 +2119,17 @@
     <EmbeddedResource Include="WizardThirty.resx">
       <DependentUpon>WizardThirty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WizardThirtyFive.resx">
+      <DependentUpon>WizardThirtyFive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardThirtyFour.resx">
+      <DependentUpon>WizardThirtyFour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WizardThirtyOne.resx">
       <DependentUpon>WizardThirtyOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardThirtyThree.resx">
+      <DependentUpon>WizardThirtyThree.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardThirtyTwo.resx">
       <DependentUpon>WizardThirtyTwo.cs</DependentUpon>

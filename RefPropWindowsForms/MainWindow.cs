@@ -43,6 +43,14 @@ namespace RefPropWindowsForms
         public WizardTwentyFive WizardVeinteCinco_dialog;
         public WizardTwentySix WizardVeinteSeis_dialog;
         public WizardTwentySeven WizardVeinteSiete_dialog;
+        public WizardTwentyEight WizardVeinteOcho_dialog;
+        public WizardTwentyNine WizardVeinteNueve_dialog;
+        public WizardThirty WizardTreinta_dialog;
+        public WizardThirtyOne WizardTreintaUno_dialog;
+        public WizardThirtyTwo WizardTreintaDos_dialog;
+        public WizardThirtyThree WizardTreintaTres_dialog;
+        public WizardThirtyFour WizardTreintaCuatro_dialog;
+        public WizardThirtyFive WizardTreintaCinco_dialog;
 
         public AdobePDFViewer AdobePDFViewer_dialog;
         public ChartsExample ChartsExample_dialog;
@@ -967,6 +975,92 @@ namespace RefPropWindowsForms
             WizardVeinteSiete_dialog = new WizardTwentySeven();
             WizardVeinteSiete_dialog.MdiParent = this;
             WizardVeinteSiete_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            WizardVeinteOcho_dialog = new WizardTwentyEight();
+            WizardVeinteOcho_dialog.MdiParent = this;
+            WizardVeinteOcho_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            WizardVeinteNueve_dialog = new WizardTwentyNine();
+            WizardVeinteNueve_dialog.MdiParent = this;
+            WizardVeinteNueve_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            WizardTreinta_dialog = new WizardThirty();
+            WizardTreinta_dialog.MdiParent = this;
+            WizardTreinta_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            WizardTreintaUno_dialog = new WizardThirtyOne();
+            WizardTreintaUno_dialog.MdiParent = this;
+            WizardTreintaUno_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            WizardTreintaDos_dialog = new WizardThirtyTwo();
+            WizardTreintaDos_dialog.MdiParent = this;
+            WizardTreintaDos_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            WizardTreintaTres_dialog = new WizardThirtyThree();
+            WizardTreintaTres_dialog.MdiParent = this;
+            WizardTreintaTres_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            WizardTreintaCuatro_dialog = new WizardThirtyFour();
+            WizardTreintaCuatro_dialog.MdiParent = this;
+            WizardTreintaCuatro_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem12_Click(object sender, EventArgs e)
+        {
+            WizardTreintaCinco_dialog = new WizardThirtyFive();
+            WizardTreintaCinco_dialog.MdiParent = this;
+            WizardTreintaCinco_dialog.Show();
+        }
+
+        private void configurationsXXXXToolStripMenuItem13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void configurationsXXXXToolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void configurationsXXXXToolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void configurationsXXXXToolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void configurationsXXXXToolStripMenuItem17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void configurationsXXXXToolStripMenuItem18_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
