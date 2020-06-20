@@ -2225,6 +2225,26 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Four_Recuperators_and_Three_Recompressor_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("SB with Four Recuperators and Three Recompressor without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Four_Recuperators_and_Three_Recompressor_without_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB with Four Recuperators and Three Recompressor without ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SB_with_Four_Recuperators_without_ReHeating {
             get {
                 object obj = ResourceManager.GetObject("SB with Four Recuperators without ReHeating", resourceCulture);

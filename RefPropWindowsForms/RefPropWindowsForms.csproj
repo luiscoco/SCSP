@@ -1201,11 +1201,11 @@
     <Compile Include="SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.Designer.cs">
       <DependentUpon>SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.cs</DependentUpon>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating.cs">
+    <Compile Include="SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating.Designer.cs">
-      <DependentUpon>SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating.cs</DependentUpon>
+    <Compile Include="SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.Designer.cs">
+      <DependentUpon>SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs</DependentUpon>
     </Compile>
     <Compile Include="SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs">
       <SubType>Form</SubType>
@@ -2011,8 +2011,8 @@
     <EmbeddedResource Include="SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.resx">
       <DependentUpon>SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating.resx">
-      <DependentUpon>SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating.cs</DependentUpon>
+    <EmbeddedResource Include="SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.resx">
+      <DependentUpon>SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.resx">
       <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs</DependentUpon>
@@ -2411,6 +2411,8 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SB with Four Recuperators and Three Recompressor without ReHeating Small.jpg" />
+    <None Include="Resources\SB with Four Recuperators and Three Recompressor without ReHeating.jpg" />
     <None Include="Resources\Three Recuperators fig2.18 tesis Francesco Crespi.jpg" />
     <None Include="Resources\Three Recuperators fig2.17 tesis Francesco Crespi.jpg" />
     <None Include="Resources\Three Recuperators fig2.16 tesis Francesco Crespi.jpg" />

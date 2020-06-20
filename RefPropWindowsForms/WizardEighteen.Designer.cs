@@ -145,7 +145,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(515, 20);
             this.label3.TabIndex = 200;
-            this.label3.Text = "SB_WITH_THREE_RECUPERATOS_AND_THREE_RECOMPRESSORS_WITHOUT_REHEATING";
+            this.label3.Text = "SB_WITH_FOUR_RECUPERATOS_AND_THREE_RECOMPRESSORS_WITHOUT_REHEATING";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
@@ -153,7 +153,7 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::RefPropWindowsForms.Properties.Resources.SB_with_Three_Recuperators_and_Three_Recompressor_without_ReHeating_Small;
+            this.pictureBox3.Image = global::RefPropWindowsForms.Properties.Resources.SB_with_Four_Recuperators_and_Three_Recompressor_without_ReHeating_Small;
             this.pictureBox3.Location = new System.Drawing.Point(619, 59);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(721, 219);
