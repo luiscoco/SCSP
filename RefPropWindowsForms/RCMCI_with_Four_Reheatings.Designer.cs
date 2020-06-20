@@ -121,6 +121,8 @@
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label142 = new System.Windows.Forms.Label();
+            this.textBox112 = new System.Windows.Forms.TextBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -346,8 +348,6 @@
             this.button35 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
-            this.label142 = new System.Windows.Forms.Label();
-            this.textBox112 = new System.Windows.Forms.TextBox();
             this.textBox113 = new System.Windows.Forms.TextBox();
             this.label143 = new System.Windows.Forms.Label();
             this.textBox114 = new System.Windows.Forms.TextBox();
@@ -803,7 +803,7 @@
             this.textBox107.Name = "textBox107";
             this.textBox107.Size = new System.Drawing.Size(38, 20);
             this.textBox107.TabIndex = 1895;
-            this.textBox107.Text = "11300";
+            this.textBox107.Text = "15000";
             // 
             // label133
             // 
@@ -868,7 +868,7 @@
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(1185, 425);
+            this.label65.Location = new System.Drawing.Point(1185, 421);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(29, 13);
             this.label65.TabIndex = 1887;
@@ -1487,6 +1487,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Location = new System.Drawing.Point(148, 165);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(88, 13);
+            this.label142.TabIndex = 374;
+            this.label142.Text = "DP_RHX4 (kPa):";
+            // 
+            // textBox112
+            // 
+            this.textBox112.Location = new System.Drawing.Point(236, 162);
+            this.textBox112.Name = "textBox112";
+            this.textBox112.Size = new System.Drawing.Size(48, 20);
+            this.textBox112.TabIndex = 375;
+            this.textBox112.Text = "0.0";
+            // 
             // comboBox7
             // 
             this.comboBox7.BackColor = System.Drawing.Color.White;
@@ -1937,7 +1954,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(38, 20);
             this.textBox7.TabIndex = 1682;
-            this.textBox7.Text = "17300";
+            this.textBox7.Text = "20000";
             // 
             // label10
             // 
@@ -3296,7 +3313,7 @@
             this.textBox39.Name = "textBox39";
             this.textBox39.Size = new System.Drawing.Size(38, 20);
             this.textBox39.TabIndex = 1761;
-            this.textBox39.Text = "14300";
+            this.textBox39.Text = "17500";
             // 
             // label41
             // 
@@ -3936,23 +3953,6 @@
             this.button39.Text = "RHX4 SF";
             this.button39.UseVisualStyleBackColor = false;
             // 
-            // label142
-            // 
-            this.label142.AutoSize = true;
-            this.label142.Location = new System.Drawing.Point(148, 165);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(88, 13);
-            this.label142.TabIndex = 374;
-            this.label142.Text = "DP_RHX4 (kPa):";
-            // 
-            // textBox112
-            // 
-            this.textBox112.Location = new System.Drawing.Point(236, 162);
-            this.textBox112.Name = "textBox112";
-            this.textBox112.Size = new System.Drawing.Size(48, 20);
-            this.textBox112.TabIndex = 375;
-            this.textBox112.Text = "0.0";
-            // 
             // textBox113
             // 
             this.textBox113.Location = new System.Drawing.Point(468, 445);
@@ -3993,7 +3993,7 @@
             this.textBox115.Name = "textBox115";
             this.textBox115.Size = new System.Drawing.Size(38, 20);
             this.textBox115.TabIndex = 1943;
-            this.textBox115.Text = "11300";
+            this.textBox115.Text = "12000";
             // 
             // label145
             // 
