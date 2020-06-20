@@ -235,6 +235,7 @@
             this.label55 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox111 = new System.Windows.Forms.TextBox();
             this.label139 = new System.Windows.Forms.Label();
             this.textBox110 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -341,7 +342,6 @@
             this.textBox108 = new System.Windows.Forms.TextBox();
             this.textBox109 = new System.Windows.Forms.TextBox();
             this.label128 = new System.Windows.Forms.Label();
-            this.textBox111 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label140 = new System.Windows.Forms.Label();
             this.textBox112 = new System.Windows.Forms.TextBox();
@@ -672,7 +672,7 @@
             this.textBox100.Name = "textBox100";
             this.textBox100.Size = new System.Drawing.Size(41, 20);
             this.textBox100.TabIndex = 1850;
-            this.textBox100.Text = "11300";
+            this.textBox100.Text = "15000";
             // 
             // label71
             // 
@@ -2220,7 +2220,7 @@
             this.textBox91.Name = "textBox91";
             this.textBox91.Size = new System.Drawing.Size(41, 20);
             this.textBox91.TabIndex = 1724;
-            this.textBox91.Text = "14300";
+            this.textBox91.Text = "17500";
             // 
             // label55
             // 
@@ -2298,6 +2298,14 @@
             this.groupBox1.TabIndex = 1721;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop";
+            // 
+            // textBox111
+            // 
+            this.textBox111.Location = new System.Drawing.Point(258, 15);
+            this.textBox111.Name = "textBox111";
+            this.textBox111.Size = new System.Drawing.Size(39, 20);
+            this.textBox111.TabIndex = 254;
+            this.textBox111.Text = "0.0";
             // 
             // label139
             // 
@@ -2630,7 +2638,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(41, 20);
             this.textBox7.TabIndex = 1684;
-            this.textBox7.Text = "17300";
+            this.textBox7.Text = "20000";
             // 
             // label10
             // 
@@ -3865,14 +3873,6 @@
             this.label128.TabIndex = 1903;
             this.label128.Text = "eta_trh4:";
             // 
-            // textBox111
-            // 
-            this.textBox111.Location = new System.Drawing.Point(258, 15);
-            this.textBox111.Name = "textBox111";
-            this.textBox111.Size = new System.Drawing.Size(39, 20);
-            this.textBox111.TabIndex = 254;
-            this.textBox111.Text = "0.0";
-            // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(105, 374);
@@ -3896,7 +3896,7 @@
             this.textBox112.Name = "textBox112";
             this.textBox112.Size = new System.Drawing.Size(41, 20);
             this.textBox112.TabIndex = 1906;
-            this.textBox112.Text = "11300";
+            this.textBox112.Text = "12000";
             // 
             // label141
             // 

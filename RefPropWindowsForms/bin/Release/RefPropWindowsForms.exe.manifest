@@ -133,19 +133,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>M8qPSdHfz6lia7zADbQoJaeugZHBtR5vqPoE6nZqwxc=</dsig:DigestValue>
+        <dsig:DigestValue>BGPGkMpprFFvMYoP28LOGsqjiT1RzsgibDR934/p6qI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="20312536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="31108096">
       <assemblyIdentity name="RefPropWindowsForms" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UR9K0la8q5Tnpm8KnhB6JHMCVoKlWiHPFQA9vIlXMdM=</dsig:DigestValue>
+        <dsig:DigestValue>LZrZem1XW6tRxzdYhYzWBVC8mEkT0KKSN65kHyfunbo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -302,13 +302,13 @@
       <dsig:DigestValue>43wSuNtvD7ZEtUVFOT+SiXBDc3aoQwt3eADwQUzkwgw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" size="67537">
+  <file name="Resources\RCMCI with ReHeating with Three Reheating Stages.jpg" size="67014">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>B7xkUFyDrAZgFa1SRQARAnh81l0O90kHdzv0zbO6Xi0=</dsig:DigestValue>
+      <dsig:DigestValue>n8Q2GohFBoEfTMLZZBVJHxcup7a2J0KkDYoew9lXouU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\RCMCI with ReHeating with Two Reheating Stages.jpg" size="77287">

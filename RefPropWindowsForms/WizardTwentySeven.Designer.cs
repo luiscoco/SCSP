@@ -68,7 +68,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(6, 356);
+            this.label3.Location = new System.Drawing.Point(6, 324);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(546, 35);
             this.label3.TabIndex = 234;
@@ -81,11 +81,10 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::RefPropWindowsForms.Properties.Resources.On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig5;
-            this.pictureBox2.Location = new System.Drawing.Point(72, 394);
+            this.pictureBox2.Image = global::RefPropWindowsForms.Properties.Resources.On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig5_FINAL_Small;
+            this.pictureBox2.Location = new System.Drawing.Point(67, 362);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(381, 289);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.Size = new System.Drawing.Size(397, 324);
             this.pictureBox2.TabIndex = 233;
             this.pictureBox2.TabStop = false;
             // 
@@ -94,10 +93,10 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig3;
-            this.pictureBox1.Location = new System.Drawing.Point(743, 42);
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig3_FINAL_Small;
+            this.pictureBox1.Location = new System.Drawing.Point(766, 42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(466, 353);
+            this.pictureBox1.Size = new System.Drawing.Size(395, 329);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 231;
             this.pictureBox1.TabStop = false;
@@ -107,10 +106,10 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::RefPropWindowsForms.Properties.Resources.On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig1;
-            this.pictureBox3.Location = new System.Drawing.Point(27, 42);
+            this.pictureBox3.Image = global::RefPropWindowsForms.Properties.Resources.On_the_Conceptual_Design_of_Novel_Supercritical_CO2_fig1_FINAL_Small;
+            this.pictureBox3.Location = new System.Drawing.Point(41, 42);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(497, 295);
+            this.pictureBox3.Size = new System.Drawing.Size(472, 270);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 229;
             this.pictureBox3.TabStop = false;
@@ -121,7 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 685);
+            this.ClientSize = new System.Drawing.Size(1362, 702);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
