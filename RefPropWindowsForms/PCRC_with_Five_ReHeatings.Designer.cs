@@ -370,6 +370,8 @@
             this.button38 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
+            this.textBox120 = new System.Windows.Forms.TextBox();
+            this.label153 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -691,7 +693,7 @@
             this.textBox100.Name = "textBox100";
             this.textBox100.Size = new System.Drawing.Size(41, 20);
             this.textBox100.TabIndex = 1850;
-            this.textBox100.Text = "11300";
+            this.textBox100.Text = "16000";
             // 
             // label71
             // 
@@ -2247,7 +2249,7 @@
             this.textBox91.Name = "textBox91";
             this.textBox91.Size = new System.Drawing.Size(41, 20);
             this.textBox91.TabIndex = 1724;
-            this.textBox91.Text = "14300";
+            this.textBox91.Text = "18000";
             // 
             // label55
             // 
@@ -2398,7 +2400,7 @@
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(535, 469);
+            this.textBox20.Location = new System.Drawing.Point(626, 464);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(41, 20);
             this.textBox20.TabIndex = 1716;
@@ -2407,7 +2409,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(491, 472);
+            this.label23.Location = new System.Drawing.Point(582, 467);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(43, 13);
             this.label23.TabIndex = 1715;
@@ -2678,7 +2680,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(41, 20);
             this.textBox7.TabIndex = 1684;
-            this.textBox7.Text = "17300";
+            this.textBox7.Text = "20000";
             // 
             // label10
             // 
@@ -3916,7 +3918,7 @@
             this.textBox115.Name = "textBox115";
             this.textBox115.Size = new System.Drawing.Size(41, 20);
             this.textBox115.TabIndex = 1906;
-            this.textBox115.Text = "11300";
+            this.textBox115.Text = "14000";
             // 
             // label144
             // 
@@ -4055,7 +4057,7 @@
             this.textBox118.Name = "textBox118";
             this.textBox118.Size = new System.Drawing.Size(41, 20);
             this.textBox118.TabIndex = 1919;
-            this.textBox118.Text = "11300";
+            this.textBox118.Text = "12000";
             // 
             // label151
             // 
@@ -4173,11 +4175,30 @@
             this.button40.Text = "T6";
             this.button40.UseVisualStyleBackColor = true;
             // 
+            // textBox120
+            // 
+            this.textBox120.Location = new System.Drawing.Point(535, 469);
+            this.textBox120.Name = "textBox120";
+            this.textBox120.Size = new System.Drawing.Size(32, 20);
+            this.textBox120.TabIndex = 1932;
+            this.textBox120.Text = "0.93";
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(490, 472);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(49, 13);
+            this.label153.TabIndex = 1931;
+            this.label153.Text = "eta_trh5:";
+            // 
             // PCRC_with_Five_ReHeatings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 662);
+            this.Controls.Add(this.textBox120);
+            this.Controls.Add(this.label153);
             this.Controls.Add(this.button40);
             this.Controls.Add(this.button39);
             this.Controls.Add(this.button38);
@@ -4824,5 +4845,7 @@
         public System.Windows.Forms.Button button38;
         public System.Windows.Forms.Button button39;
         public System.Windows.Forms.Button button40;
+        public System.Windows.Forms.TextBox textBox120;
+        public System.Windows.Forms.Label label153;
     }
 }

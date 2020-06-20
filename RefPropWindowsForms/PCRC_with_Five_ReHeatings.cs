@@ -803,7 +803,522 @@ namespace RefPropWindowsForms
         //Mixtures calculation
         private void button20_Click(object sender, EventArgs e)
         {
+            int maxIterations = 5;
+            int numIterations = 0;
 
+            //PureFluid
+            if (comboBox1.Text == "PureFluid")
+            {
+                category = RefrigerantCategory.PureFluid;
+                luis.core1(this.comboBox2.Text, category);
+            }
+
+            //NewMixture
+            if (comboBox1.Text == "NewMixture")
+            {
+                category = RefrigerantCategory.NewMixture;
+                luis.core1(this.comboBox2.Text + "=" + textBox35.Text + "," +
+                           this.comboBox16.Text + "=" + textBox36.Text + "," +
+                           this.comboBox18.Text + "=" + textBox87.Text + "," +
+                           this.comboBox17.Text + "=" + textBox88.Text, category);
+            }
+
+            if (comboBox1.Text == "PredefinedMixture")
+            {
+                category = RefrigerantCategory.PredefinedMixture;
+            }
+
+            if (comboBox1.Text == "PseudoPureFluid")
+            {
+                category = RefrigerantCategory.PseudoPureFluid;
+            }
+
+            if (comboBox3.Text == "DEF")
+            {
+                referencestate = ReferenceState.DEF;
+            }
+            if (comboBox3.Text == "ASH")
+            {
+                referencestate = ReferenceState.ASH;
+            }
+            if (comboBox3.Text == "IIR")
+            {
+                referencestate = ReferenceState.IIR;
+            }
+            if (comboBox3.Text == "NBP")
+            {
+                referencestate = ReferenceState.NBP;
+            }
+
+            luis.working_fluid.Category = category;
+            luis.working_fluid.reference = referencestate;
+
+            //Store Input Data from Graphical User Interface GUI into variables
+            m_w_dot_net2 = Convert.ToDouble(textBox1.Text);
+            t_mc_in2 = Convert.ToDouble(textBox2.Text);
+            t_t_in2 = Convert.ToDouble(textBox4.Text);
+            p_mc_in2 = Convert.ToDouble(textBox3.Text);
+            p_mc_out2 = Convert.ToDouble(textBox28.Text);
+            p_pc_in2 = Convert.ToDouble(textBox23.Text);
+            p_pc_out2 = Convert.ToDouble(textBox8.Text);
+            t_pc_in2 = Convert.ToDouble(textBox22.Text);
+            p_rhx1_in2 = Convert.ToDouble(textBox7.Text);
+            t_rht1_in2 = Convert.ToDouble(textBox6.Text);
+            p_rhx2_in2 = Convert.ToDouble(textBox91.Text);
+            t_rht2_in2 = Convert.ToDouble(textBox90.Text);
+            p_rhx3_in2 = Convert.ToDouble(textBox100.Text);
+            t_rht3_in2 = Convert.ToDouble(textBox99.Text);
+            p_rhx4_in2 = Convert.ToDouble(textBox115.Text);
+            t_rht4_in2 = Convert.ToDouble(textBox114.Text);
+            p_rhx5_in2 = Convert.ToDouble(textBox118.Text);
+            t_rht5_in2 = Convert.ToDouble(textBox117.Text);
+            dp2_lt1 = Convert.ToDouble(textBox5.Text);
+            dp2_ht1 = Convert.ToDouble(textBox12.Text);
+            dp2_pc1 = Convert.ToDouble(textBox11.Text);
+            dp2_phx1 = Convert.ToDouble(textBox10.Text);
+            dp2_rhx11 = Convert.ToDouble(textBox9.Text);
+            dp2_rhx21 = Convert.ToDouble(textBox89.Text);
+            dp2_rhx31 = Convert.ToDouble(textBox98.Text);
+            dp2_rhx41 = Convert.ToDouble(textBox116.Text);
+            dp2_rhx51 = Convert.ToDouble(textBox119.Text);
+            dp2_lt2 = Convert.ToDouble(textBox26.Text);
+            dp2_ht2 = Convert.ToDouble(textBox25.Text);
+            dp2_cooler2 = Convert.ToDouble(textBox27.Text);
+            ua_lt2 = Convert.ToDouble(textBox17.Text);
+            ua_ht2 = Convert.ToDouble(textBox16.Text);
+            m_recomp_frac2 = Convert.ToDouble(textBox15.Text);
+            m_eta_mc2 = Convert.ToDouble(textBox14.Text);
+            m_eta_rc2 = Convert.ToDouble(textBox13.Text);
+            m_eta_pc2 = Convert.ToDouble(textBox24.Text);
+            m_eta_t2 = Convert.ToDouble(textBox19.Text);
+            m_eta_trh12 = Convert.ToDouble(textBox18.Text);
+            m_eta_trh22 = Convert.ToDouble(textBox92.Text);
+            m_eta_trh32 = Convert.ToDouble(textBox97.Text);
+            m_eta_trh42 = Convert.ToDouble(textBox113.Text);
+            m_eta_trh52 = Convert.ToDouble(textBox120.Text);
+            n_sub_hxrs2 = Convert.ToInt64(textBox20.Text);
+            tol2 = Convert.ToDouble(textBox21.Text);
+
+            luis.wmm = luis.working_fluid.MolecularWeight;
+
+            core.PCRCwithFiveReheating cicloPCRC_withFiveRH = new core.PCRCwithFiveReheating();
+
+            luis.RecompCycle_PCRC_withFiveReheating(luis, ref cicloPCRC_withFiveRH,
+            m_w_dot_net2, t_mc_in2, t_t_in2, t_rht1_in2, p_rhx1_in2, t_rht2_in2,
+            p_rhx2_in2, t_rht3_in2, p_rhx3_in2, t_rht4_in2, p_rhx4_in2, t_rht5_in2, 
+            p_rhx5_in2, p_mc_in2, p_mc_out2, p_pc_in2, t_pc_in2, p_pc_out2, ua_lt2,
+            ua_ht2, m_eta_mc2, m_eta_rc2, m_eta_pc2, m_eta_t2, m_eta_trh12, m_eta_trh22,
+            m_eta_trh32, m_eta_trh42, m_eta_trh52, n_sub_hxrs2, m_recomp_frac2, tol2,
+            eta_thermal2, -dp2_lt1, -dp2_lt2, -dp2_ht1, -dp2_ht2, -dp2_pc1, -dp2_pc2, 
+            -dp2_phx1, -dp2_phx2, -dp2_rhx11, -dp2_rhx12, -dp2_rhx21, -dp2_rhx22, 
+            -dp2_rhx31, -dp2_rhx32, -dp2_rhx41, -dp2_rhx42, -dp2_rhx51, -dp2_rhx52, 
+            -dp2_cooler1, -dp2_cooler2);
+
+            massflow2 = cicloPCRC_withFiveRH.m_dot_turbine;
+            w_dot_net2 = cicloPCRC_withFiveRH.W_dot_net;
+            eta_thermal2 = cicloPCRC_withFiveRH.eta_thermal;
+
+            eta_mc2 = m_eta_mc2;
+            eta_rc2 = m_eta_rc2;
+            eta_pc2 = m_eta_pc2;
+            eta_t2 = m_eta_t2;
+            eta_trh12 = m_eta_trh12;
+            eta_trh22 = m_eta_trh22;
+            eta_trh32 = m_eta_trh32;
+            eta_trh42 = m_eta_trh42;
+
+            temp21 = cicloPCRC_withFiveRH.temp[0];
+            temp22 = cicloPCRC_withFiveRH.temp[1];
+            temp23 = cicloPCRC_withFiveRH.temp[2];
+            temp24 = cicloPCRC_withFiveRH.temp[3];
+            temp25 = cicloPCRC_withFiveRH.temp[4];
+            temp26 = cicloPCRC_withFiveRH.temp[5];
+            temp27 = cicloPCRC_withFiveRH.temp[6];
+            temp28 = cicloPCRC_withFiveRH.temp[7];
+            temp29 = cicloPCRC_withFiveRH.temp[8];
+            temp210 = cicloPCRC_withFiveRH.temp[9];
+            temp211 = cicloPCRC_withFiveRH.temp[10];
+            temp212 = cicloPCRC_withFiveRH.temp[11];
+            temp213 = cicloPCRC_withFiveRH.temp[12];
+            temp214 = cicloPCRC_withFiveRH.temp[13];
+            temp215 = cicloPCRC_withFiveRH.temp[14];
+            temp216 = cicloPCRC_withFiveRH.temp[15];
+            temp217 = cicloPCRC_withFiveRH.temp[16];
+            temp218 = cicloPCRC_withFiveRH.temp[17];
+            temp219 = cicloPCRC_withFiveRH.temp[18];
+            temp220 = cicloPCRC_withFiveRH.temp[19];
+
+            pres21 = cicloPCRC_withFiveRH.pres[0];
+            pres22 = cicloPCRC_withFiveRH.pres[1];
+            pres23 = cicloPCRC_withFiveRH.pres[2];
+            pres24 = cicloPCRC_withFiveRH.pres[3];
+            pres25 = cicloPCRC_withFiveRH.pres[4];
+            pres26 = cicloPCRC_withFiveRH.pres[5];
+            pres27 = cicloPCRC_withFiveRH.pres[6];
+            pres28 = cicloPCRC_withFiveRH.pres[7];
+            pres29 = cicloPCRC_withFiveRH.pres[8];
+            pres210 = cicloPCRC_withFiveRH.pres[9];
+            pres211 = cicloPCRC_withFiveRH.pres[10];
+            pres212 = cicloPCRC_withFiveRH.pres[11];
+            pres213 = cicloPCRC_withFiveRH.pres[12];
+            pres214 = cicloPCRC_withFiveRH.pres[13];
+            pres215 = cicloPCRC_withFiveRH.pres[14];
+            pres216 = cicloPCRC_withFiveRH.pres[15];
+            pres217 = cicloPCRC_withFiveRH.pres[16];
+            pres218 = cicloPCRC_withFiveRH.pres[17];
+            pres219 = cicloPCRC_withFiveRH.pres[18];
+            pres220 = cicloPCRC_withFiveRH.pres[19];
+
+            textBox47.Text = Convert.ToString(temp21);
+            textBox46.Text = Convert.ToString(temp22);
+            textBox45.Text = Convert.ToString(temp23);
+            textBox44.Text = Convert.ToString(temp24);
+            textBox43.Text = Convert.ToString(temp25);
+            textBox42.Text = Convert.ToString(temp26);
+            textBox39.Text = Convert.ToString(temp27);
+            textBox38.Text = Convert.ToString(temp28);
+            textBox37.Text = Convert.ToString(temp29);
+            textBox29.Text = Convert.ToString(temp210);
+            textBox57.Text = Convert.ToString(temp211);
+            textBox56.Text = Convert.ToString(temp212);
+            textBox65.Text = Convert.ToString(temp213);
+            textBox64.Text = Convert.ToString(temp214);
+            textBox94.Text = Convert.ToString(temp215);
+            textBox93.Text = Convert.ToString(temp216);
+            textBox102.Text = Convert.ToString(temp217);
+            textBox101.Text = Convert.ToString(temp218);
+            textBox106.Text = Convert.ToString(temp219);
+            textBox105.Text = Convert.ToString(temp220);
+            textBox110.Text = Convert.ToString(temp221);
+            textBox109.Text = Convert.ToString(temp222);
+
+            textBox63.Text = Convert.ToString(pres21);
+            textBox62.Text = Convert.ToString(pres22);
+            textBox61.Text = Convert.ToString(pres23);
+            textBox60.Text = Convert.ToString(pres24);
+            textBox30.Text = Convert.ToString(pres25);
+            textBox54.Text = Convert.ToString(pres26);
+            textBox53.Text = Convert.ToString(pres27);
+            textBox52.Text = Convert.ToString(pres28);
+            textBox41.Text = Convert.ToString(pres29);
+            textBox40.Text = Convert.ToString(pres210);
+            textBox59.Text = Convert.ToString(pres211);
+            textBox58.Text = Convert.ToString(pres212);
+            textBox67.Text = Convert.ToString(pres213);
+            textBox66.Text = Convert.ToString(pres214);
+            textBox96.Text = Convert.ToString(pres215);
+            textBox95.Text = Convert.ToString(pres216);
+            textBox104.Text = Convert.ToString(pres217);
+            textBox103.Text = Convert.ToString(pres218);
+            textBox108.Text = Convert.ToString(pres219);
+            textBox107.Text = Convert.ToString(pres220);
+            textBox112.Text = Convert.ToString(pres221);
+            textBox111.Text = Convert.ToString(pres222);
+
+            String point1_state, point2_state, point3_state, point4_state, point5_state, point6_state;
+            String point7_state, point8_state, point9_state, point10_state, point11_state, point12_state;
+            String point13_state, point14_state, point15_state, point16_state, point17_state, point18_state,
+                   point19_state, point20_state, point21_state, point22_state;
+
+            luis.working_fluid.FindStateWithTP(temp21, pres21);
+            enth21 = luis.working_fluid.Enthalpy;
+            entr21 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp22, pres22);
+            enth22 = luis.working_fluid.Enthalpy;
+            entr22 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp23, pres23);
+            enth23 = luis.working_fluid.Enthalpy;
+            entr23 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp24, pres24);
+            enth24 = luis.working_fluid.Enthalpy;
+            entr24 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp25, pres25);
+            enth25 = luis.working_fluid.Enthalpy;
+            entr25 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp26, pres26);
+            enth26 = luis.working_fluid.Enthalpy;
+            entr26 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp27, pres27);
+            enth27 = luis.working_fluid.Enthalpy;
+            entr27 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp28, pres28);
+            enth28 = luis.working_fluid.Enthalpy;
+            entr28 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp29, pres29);
+            enth29 = luis.working_fluid.Enthalpy;
+            entr29 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp210, pres210);
+            enth210 = luis.working_fluid.Enthalpy;
+            entr210 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp211, pres211);
+            enth211 = luis.working_fluid.Enthalpy;
+            entr211 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp212, pres212);
+            enth212 = luis.working_fluid.Enthalpy;
+            entr212 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp213, pres213);
+            enth213 = luis.working_fluid.Enthalpy;
+            entr213 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp214, pres214);
+            enth214 = luis.working_fluid.Enthalpy;
+            entr214 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp215, pres215);
+            enth215 = luis.working_fluid.Enthalpy;
+            entr215 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp216, pres216);
+            enth216 = luis.working_fluid.Enthalpy;
+            entr216 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp217, pres217);
+            enth217 = luis.working_fluid.Enthalpy;
+            entr217 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp218, pres218);
+            enth218 = luis.working_fluid.Enthalpy;
+            entr218 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp219, pres219);
+            enth219 = luis.working_fluid.Enthalpy;
+            entr219 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp220, pres220);
+            enth220 = luis.working_fluid.Enthalpy;
+            entr220 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp221, pres221);
+            enth221 = luis.working_fluid.Enthalpy;
+            entr221 = luis.working_fluid.Entropy;
+
+            luis.working_fluid.FindStateWithTP(temp222, pres222);
+            enth222 = luis.working_fluid.Enthalpy;
+            entr222 = luis.working_fluid.Entropy;
+
+            point1_state = "Pressure (kPa):" + Convert.ToString(pres21) + Environment.NewLine +
+                          "Temperature (K):" + Convert.ToString(temp21) + Environment.NewLine +
+                          "Entalphy (kJ/kg):" + Convert.ToString(enth21) + Environment.NewLine +
+                          "Entrophy (kJ/kg K):" + Convert.ToString(entr21) + Environment.NewLine;
+
+            point2_state = "Pressure (kPa):" + Convert.ToString(pres22) + Environment.NewLine +
+                         "Temperature (K):" + Convert.ToString(temp22) + Environment.NewLine +
+                         "Entalphy (kJ/kg):" + Convert.ToString(enth22) + Environment.NewLine +
+                         "Entrophy (kJ/kg K):" + Convert.ToString(entr22) + Environment.NewLine;
+
+            point3_state = "Pressure (kPa):" + Convert.ToString(pres23) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp23) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth23) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr23) + Environment.NewLine;
+
+            point4_state = "Pressure (kPa):" + Convert.ToString(pres24) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp24) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth24) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr24) + Environment.NewLine;
+
+            point5_state = "Pressure (kPa):" + Convert.ToString(pres25) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp25) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth25) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr25) + Environment.NewLine;
+
+            point6_state = "Pressure (kPa):" + Convert.ToString(pres26) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp26) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth26) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr26) + Environment.NewLine;
+
+            point7_state = "Pressure (kPa):" + Convert.ToString(pres27) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp27) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth27) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr27) + Environment.NewLine;
+
+            point8_state = "Pressure (kPa):" + Convert.ToString(pres28) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp28) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth28) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr28) + Environment.NewLine;
+
+            point9_state = "Pressure (kPa):" + Convert.ToString(pres29) + Environment.NewLine +
+                     "Temperature (K):" + Convert.ToString(temp29) + Environment.NewLine +
+                     "Entalphy (kJ/kg):" + Convert.ToString(enth29) + Environment.NewLine +
+                     "Entrophy (kJ/kg K):" + Convert.ToString(entr29) + Environment.NewLine;
+
+            point10_state = "Pressure (kPa):" + Convert.ToString(pres210) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp210) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth210) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr210) + Environment.NewLine;
+
+            point11_state = "Pressure (kPa):" + Convert.ToString(pres211) + Environment.NewLine +
+                     "Temperature (K):" + Convert.ToString(temp211) + Environment.NewLine +
+                     "Entalphy (kJ/kg):" + Convert.ToString(enth211) + Environment.NewLine +
+                     "Entrophy (kJ/kg K):" + Convert.ToString(entr211) + Environment.NewLine;
+
+            point12_state = "Pressure (kPa):" + Convert.ToString(pres212) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp212) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth212) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr212) + Environment.NewLine;
+
+            point13_state = "Pressure (kPa):" + Convert.ToString(pres213) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp213) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth213) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr213) + Environment.NewLine;
+
+            point14_state = "Pressure (kPa):" + Convert.ToString(pres214) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp214) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth214) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr214) + Environment.NewLine;
+
+            point15_state = "Pressure (kPa):" + Convert.ToString(pres215) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp215) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth215) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr215) + Environment.NewLine;
+
+            point16_state = "Pressure (kPa):" + Convert.ToString(pres216) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp216) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth216) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr216) + Environment.NewLine;
+
+            point17_state = "Pressure (kPa):" + Convert.ToString(pres217) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp217) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth217) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr217) + Environment.NewLine;
+
+            point18_state = "Pressure (kPa):" + Convert.ToString(pres218) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp218) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth218) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr218) + Environment.NewLine;
+
+            point19_state = "Pressure (kPa):" + Convert.ToString(pres219) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp219) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth219) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr219) + Environment.NewLine;
+
+            point20_state = "Pressure (kPa):" + Convert.ToString(pres220) + Environment.NewLine +
+                      "Temperature (K):" + Convert.ToString(temp220) + Environment.NewLine +
+                      "Entalphy (kJ/kg):" + Convert.ToString(enth220) + Environment.NewLine +
+                      "Entrophy (kJ/kg K):" + Convert.ToString(entr220) + Environment.NewLine;
+
+            point21_state = "Pressure (kPa):" + Convert.ToString(pres221) + Environment.NewLine +
+                     "Temperature (K):" + Convert.ToString(temp221) + Environment.NewLine +
+                     "Entalphy (kJ/kg):" + Convert.ToString(enth221) + Environment.NewLine +
+                     "Entrophy (kJ/kg K):" + Convert.ToString(entr221) + Environment.NewLine;
+
+            point22_state = "Pressure (kPa):" + Convert.ToString(pres222) + Environment.NewLine +
+                     "Temperature (K):" + Convert.ToString(temp222) + Environment.NewLine +
+                     "Entalphy (kJ/kg):" + Convert.ToString(enth222) + Environment.NewLine +
+                     "Entrophy (kJ/kg K):" + Convert.ToString(entr222) + Environment.NewLine;
+
+            textBox48.Text = Convert.ToString(w_dot_net2);
+            textBox49.Text = Convert.ToString(massflow2);
+            textBox50.Text = Convert.ToString(eta_thermal2 * 100);
+
+            if (checkBox1.Checked == false)
+            {
+                PHX1 = cicloPCRC_withFiveRH.PHX.Q_dot;
+                RHX1 = cicloPCRC_withFiveRH.RHX1.Q_dot;
+                RHX2 = cicloPCRC_withFiveRH.RHX2.Q_dot;
+                recomp_frac2 = cicloPCRC_withFiveRH.recomp_frac;
+
+                LT_Q = cicloPCRC_withFiveRH.LT.Q_dot;
+                LT_mdotc = cicloPCRC_withFiveRH.LT.m_dot_design[0];
+                LT_mdoth = cicloPCRC_withFiveRH.LT.m_dot_design[1];
+                LT_Tcin = cicloPCRC_withFiveRH.LT.T_c_in;
+                LT_Thin = cicloPCRC_withFiveRH.LT.T_h_in;
+                LT_Pcin = cicloPCRC_withFiveRH.LT.P_c_in;
+                LT_Phin = cicloPCRC_withFiveRH.LT.P_h_in;
+                LT_Pcout = cicloPCRC_withFiveRH.LT.P_c_out;
+                LT_Phout = cicloPCRC_withFiveRH.LT.P_h_out;
+                LT_Effc = cicloPCRC_withFiveRH.LT.eff;
+
+                HT_Q = cicloPCRC_withFiveRH.HT.Q_dot;
+                HT_mdotc = cicloPCRC_withFiveRH.HT.m_dot_design[0];
+                HT_mdoth = cicloPCRC_withFiveRH.HT.m_dot_design[1];
+                HT_Tcin = cicloPCRC_withFiveRH.HT.T_c_in;
+                HT_Thin = cicloPCRC_withFiveRH.HT.T_h_in;
+                HT_Pcin = cicloPCRC_withFiveRH.HT.P_c_in;
+                HT_Phin = cicloPCRC_withFiveRH.HT.P_h_in;
+                HT_Pcout = cicloPCRC_withFiveRH.HT.P_c_out;
+                HT_Phout = cicloPCRC_withFiveRH.HT.P_h_out;
+                HT_Effc = cicloPCRC_withFiveRH.HT.eff;
+
+                PC1 = -cicloPCRC_withFiveRH.PC.Q_dot;
+                COOLER1 = -cicloPCRC_withFiveRH.COOLER.Q_dot;
+
+                //if (comboBox4.Text == "Dual-Loop")
+                //{
+                //    //Main SF
+                //    comboBox9.Enabled = true;
+                //    comboBox11.Enabled = true;
+                //    comboBox8.Enabled = true;
+                //    comboBox10.Enabled = true;
+                //    button24.Enabled = true;
+                //    button25.Enabled = true;
+
+                //    button13.Enabled = false;
+                //}
+
+                //else if ((comboBox4.Text == "Parabolic") || (comboBox4.Text == "Fresnel"))
+                //{
+                //    //Main SF
+                //    comboBox9.Enabled = false;
+                //    comboBox11.Enabled = false;
+                //    comboBox8.Enabled = false;
+                //    comboBox10.Enabled = false;
+                //    button24.Enabled = false;
+                //    button25.Enabled = false;
+
+                //    button13.Enabled = true;
+                //}
+
+                //if (comboBox5.Text == "Dual-Loop")
+                //{
+                //    //ReHeating1 SF
+                //    comboBox12.Enabled = true;
+                //    comboBox13.Enabled = true;
+                //    comboBox14.Enabled = true;
+                //    comboBox15.Enabled = true;
+                //    button22.Enabled = true;
+                //    button23.Enabled = true;
+
+                //    button8.Enabled = false;
+                //    button31.Enabled = false;
+                //}
+
+                //else if ((comboBox5.Text == "Parabolic") || (comboBox5.Text == "Fresnel"))
+                //{
+                //    //ReHeaing1 SF
+                //    comboBox12.Enabled = false;
+                //    comboBox13.Enabled = false;
+                //    comboBox14.Enabled = false;
+                //    comboBox15.Enabled = false;
+                //    button22.Enabled = false;
+                //    button23.Enabled = false;
+
+                //    button8.Enabled = true;
+                //    button31.Enabled = true;
+                //}
+
+                button31.Enabled = true;
+                button33.Enabled = true;
+                button6.Enabled = true;
+                button7.Enabled = true;
+                button4.Enabled = true;
+                button16.Enabled = true;
+                button9.Enabled = true;
+                button11.Enabled = true;
+                button12.Enabled = true;
+                button15.Enabled = true;
+            }
         }
     }
 }

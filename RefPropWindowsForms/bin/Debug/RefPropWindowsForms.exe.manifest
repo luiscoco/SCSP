@@ -138,14 +138,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="31814144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="31823872">
       <assemblyIdentity name="RefPropWindowsForms" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7h868jlfN0ba4xn5uO5fa0zTjhLgHQoTzSFKz13wl88=</dsig:DigestValue>
+        <dsig:DigestValue>MX2aYmAT+5NDo41/qe/snsTEL1Hce2dflI/Bn2BQ+78=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
