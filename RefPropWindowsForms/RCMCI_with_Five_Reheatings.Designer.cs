@@ -99,6 +99,10 @@
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label154 = new System.Windows.Forms.Label();
+            this.textBox120 = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.textBox116 = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
             this.textBox105 = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -346,8 +350,6 @@
             this.textBox115 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.label146 = new System.Windows.Forms.Label();
-            this.textBox116 = new System.Windows.Forms.TextBox();
             this.textBox117 = new System.Windows.Forms.TextBox();
             this.label147 = new System.Windows.Forms.Label();
             this.textBox118 = new System.Windows.Forms.TextBox();
@@ -372,8 +374,6 @@
             this.button39 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.button41 = new System.Windows.Forms.Button();
-            this.label154 = new System.Windows.Forms.Label();
-            this.textBox120 = new System.Windows.Forms.TextBox();
             this.textBox121 = new System.Windows.Forms.TextBox();
             this.label155 = new System.Windows.Forms.Label();
             this.textBox122 = new System.Windows.Forms.TextBox();
@@ -618,7 +618,7 @@
             this.textBox107.Name = "textBox107";
             this.textBox107.Size = new System.Drawing.Size(38, 20);
             this.textBox107.TabIndex = 2155;
-            this.textBox107.Text = "11300";
+            this.textBox107.Text = "16000";
             // 
             // label133
             // 
@@ -1321,6 +1321,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(147, 164);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(88, 13);
+            this.label154.TabIndex = 376;
+            this.label154.Text = "DP_RHX5 (kPa):";
+            // 
+            // textBox120
+            // 
+            this.textBox120.Location = new System.Drawing.Point(235, 161);
+            this.textBox120.Name = "textBox120";
+            this.textBox120.Size = new System.Drawing.Size(48, 20);
+            this.textBox120.TabIndex = 377;
+            this.textBox120.Text = "0.0";
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(147, 139);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(88, 13);
+            this.label146.TabIndex = 374;
+            this.label146.Text = "DP_RHX3 (kPa):";
+            // 
+            // textBox116
+            // 
+            this.textBox116.Location = new System.Drawing.Point(235, 136);
+            this.textBox116.Name = "textBox116";
+            this.textBox116.Size = new System.Drawing.Size(48, 20);
+            this.textBox116.TabIndex = 375;
+            this.textBox116.Text = "0.0";
+            // 
             // label68
             // 
             this.label68.AutoSize = true;
@@ -1941,7 +1975,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(38, 20);
             this.textBox7.TabIndex = 1942;
-            this.textBox7.Text = "17300";
+            this.textBox7.Text = "20000";
             // 
             // label10
             // 
@@ -3300,7 +3334,7 @@
             this.textBox39.Name = "textBox39";
             this.textBox39.Size = new System.Drawing.Size(38, 20);
             this.textBox39.TabIndex = 2021;
-            this.textBox39.Text = "14300";
+            this.textBox39.Text = "18000";
             // 
             // label41
             // 
@@ -3938,23 +3972,6 @@
             this.button11.Text = "Precooler";
             this.button11.UseVisualStyleBackColor = false;
             // 
-            // label146
-            // 
-            this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(147, 139);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(88, 13);
-            this.label146.TabIndex = 374;
-            this.label146.Text = "DP_RHX3 (kPa):";
-            // 
-            // textBox116
-            // 
-            this.textBox116.Location = new System.Drawing.Point(235, 136);
-            this.textBox116.Name = "textBox116";
-            this.textBox116.Size = new System.Drawing.Size(48, 20);
-            this.textBox116.TabIndex = 375;
-            this.textBox116.Text = "0.0";
-            // 
             // textBox117
             // 
             this.textBox117.Location = new System.Drawing.Point(536, 429);
@@ -3995,7 +4012,7 @@
             this.textBox119.Name = "textBox119";
             this.textBox119.Size = new System.Drawing.Size(38, 20);
             this.textBox119.TabIndex = 2205;
-            this.textBox119.Text = "11300";
+            this.textBox119.Text = "14000";
             // 
             // label149
             // 
@@ -4218,23 +4235,6 @@
             this.button41.Text = "RHX5 SF";
             this.button41.UseVisualStyleBackColor = false;
             // 
-            // label154
-            // 
-            this.label154.AutoSize = true;
-            this.label154.Location = new System.Drawing.Point(147, 164);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(88, 13);
-            this.label154.TabIndex = 376;
-            this.label154.Text = "DP_RHX5 (kPa):";
-            // 
-            // textBox120
-            // 
-            this.textBox120.Location = new System.Drawing.Point(235, 161);
-            this.textBox120.Name = "textBox120";
-            this.textBox120.Size = new System.Drawing.Size(48, 20);
-            this.textBox120.TabIndex = 377;
-            this.textBox120.Text = "0.0";
-            // 
             // textBox121
             // 
             this.textBox121.Location = new System.Drawing.Point(536, 450);
@@ -4275,7 +4275,7 @@
             this.textBox123.Name = "textBox123";
             this.textBox123.Size = new System.Drawing.Size(38, 20);
             this.textBox123.TabIndex = 2229;
-            this.textBox123.Text = "11300";
+            this.textBox123.Text = "12000";
             // 
             // label157
             // 
