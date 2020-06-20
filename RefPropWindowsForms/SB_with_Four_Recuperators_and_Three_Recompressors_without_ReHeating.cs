@@ -284,19 +284,25 @@ namespace RefPropWindowsForms
         public Double t_t_in2;
         public Double p_rhx_in2;
         public Double t_rht_in2;
-        public Double ua_lt2, ua_ht2;
+        public Double ua_lt2, ua_mt1, ua_mt2, ua_ht2;
         public Double eta_mc2;
+        public Double eta_rc1;
         public Double eta_rc2;
+        public Double eta_rc3;
         public Double eta_t2;
         public Double eta_trh2;
         public Int64 n_sub_hxrs2;
         public Double p_mc_in2;
         public Double p_mc_out2;
+        public Double recomp_frac1;
         public Double recomp_frac2;
+        public Double recomp_frac3;
         public Double tol2;
         public Double eta_thermal2;
 
         public Double dp2_lt1, dp2_lt2;
+        public Double dp2_mt11, dp2_mt12;
+        public Double dp2_mt21, dp2_mt22;
         public Double dp2_ht1, dp2_ht2;
         public Double dp2_pc1, dp2_pc2;
         public Double dp2_phx1, dp2_phx2;
@@ -774,7 +780,8 @@ namespace RefPropWindowsForms
         //Optimization analysis
         private void button34_Click(object sender, EventArgs e)
         {
-
+            SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis_dialog = new SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis(this);
+            SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis_dialog.Show();
         }
     }
 }
