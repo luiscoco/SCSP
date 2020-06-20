@@ -316,6 +316,10 @@ namespace RefPropWindowsForms
         public Double temp212;
         public Double temp213;
         public Double temp214;
+        public Double temp215;
+        public Double temp216;
+        public Double temp217;
+        public Double temp218;
 
         public Double pres21;
         public Double pres22;
@@ -331,6 +335,10 @@ namespace RefPropWindowsForms
         public Double pres212;
         public Double pres213;
         public Double pres214;
+        public Double pres215;
+        public Double pres216;
+        public Double pres217;
+        public Double pres218;
 
         public Double enth21;
         public Double enth22;
@@ -346,6 +354,10 @@ namespace RefPropWindowsForms
         public Double enth212;
         public Double enth213;
         public Double enth214;
+        public Double enth215;
+        public Double enth216;
+        public Double enth217;
+        public Double enth218;
 
         public Double entr21;
         public Double entr22;
@@ -361,15 +373,21 @@ namespace RefPropWindowsForms
         public Double entr212;
         public Double entr213;
         public Double entr214;
+        public Double entr215;
+        public Double entr216;
+        public Double entr217;
+        public Double entr218;
 
         public Double massflow2;
         public Double LT_mdoth, LT_mdotc, LT_Tcin, LT_Thin, LT_Pcin, LT_Phin;
-        public Double MT_mdoth, MT_mdotc, MT_Tcin, MT_Thin, MT_Pcin, MT_Phin;
+        public Double MT1_mdoth, MT1_mdotc, MT1_Tcin, MT1_Thin, MT1_Pcin, MT1_Phin;
+        public Double MT2_mdoth, MT2_mdotc, MT2_Tcin, MT2_Thin, MT2_Pcin, MT2_Phin;
         public Double LT_Pcout, LT_Phout, LT_Q, HT_mdoth, HT_mdotc, HT_Tcin, HT_Thin;
-        public Double MT_Pcout, MT_Phout, MT_Q;
-        public Double HT_Pcin, HT_Phin, HT_Pcout, HT_Phout, HT_Q, LT_UA, MT_UA, HT_UA;
+        public Double MT1_Pcout, MT1_Phout, MT1_Q;
+        public Double MT2_Pcout, MT2_Phout, MT2_Q;
+        public Double HT_Pcin, HT_Phin, HT_Pcout, HT_Phout, HT_Q, LT_UA, MT1_UA, MT2_UA, HT_UA;
         public Double PHX_Q2, PC_Q2;
-        public Double LT_Effc, MT_Effc, HT_Effc;
+        public Double LT_Effc, MT1_Effc, MT2_Effc, HT_Effc;
         public Double N_design2 = 0;
 
         public SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating()
@@ -380,7 +398,237 @@ namespace RefPropWindowsForms
         //Mixtures calculations
         private void button11_Click(object sender, EventArgs e)
         {
+            int maxIterations = 100;
+            int numIterations = 0;
 
+            //PureFluid
+            if (comboBox1.Text == "PureFluid")
+            {
+                category = RefrigerantCategory.PureFluid;
+                luis.core1(this.comboBox2.Text, category);
+            }
+
+            //NewMixture
+            if (comboBox1.Text == "NewMixture")
+            {
+                category = RefrigerantCategory.NewMixture;
+                luis.core1(this.comboBox2.Text + "=" + textBox31.Text + "," + this.comboBox6.Text + "=" + textBox36.Text + "," + this.comboBox7.Text + "=" + textBox67.Text + "," + this.comboBox12.Text + "=" + textBox68.Text, category);
+            }
+
+            if (comboBox1.Text == "PredefinedMixture")
+            {
+                category = RefrigerantCategory.PredefinedMixture;
+            }
+
+            if (comboBox1.Text == "PseudoPureFluid")
+            {
+                category = RefrigerantCategory.PseudoPureFluid;
+            }
+
+            if (comboBox3.Text == "DEF")
+            {
+                referencestate = ReferenceState.DEF;
+            }
+            if (comboBox3.Text == "ASH")
+            {
+                referencestate = ReferenceState.ASH;
+            }
+            if (comboBox3.Text == "IIR")
+            {
+                referencestate = ReferenceState.IIR;
+            }
+            if (comboBox3.Text == "NBP")
+            {
+                referencestate = ReferenceState.NBP;
+            }
+
+            luis.working_fluid.Category = category;
+            luis.working_fluid.reference = referencestate;
+
+            Double w_dot_net2 = Convert.ToDouble(textBox1.Text);
+            Double t_mc_in2 = Convert.ToDouble(textBox2.Text);
+            Double t_t_in2 = Convert.ToDouble(textBox4.Text);
+            Double p_mc_in2 = Convert.ToDouble(textBox3.Text);
+            Double p_mc_out2 = Convert.ToDouble(textBox8.Text);
+            Double recomp_frac1 = Convert.ToDouble(textBox87.Text);
+            Double recomp_frac2 = Convert.ToDouble(textBox93.Text);
+            Double recomp_frac3 = Convert.ToDouble(textBox105.Text);
+            Double ua_lt2 = Convert.ToDouble(textBox17.Text);
+            Double ua_mt1 = Convert.ToDouble(textBox84.Text);
+            Double ua_mt2 = Convert.ToDouble(textBox104.Text);
+            Double ua_ht2 = Convert.ToDouble(textBox16.Text);
+
+            Double dp2_lt1 = Convert.ToDouble(textBox5.Text);
+            Double dp2_lt2 = Convert.ToDouble(textBox26.Text);
+            Double dp2_mt11 = Convert.ToDouble(textBox82.Text);
+            Double dp2_mt12 = Convert.ToDouble(textBox83.Text);
+            Double dp2_mt21 = Convert.ToDouble(textBox94.Text);
+            Double dp2_mt22 = Convert.ToDouble(textBox95.Text);
+            Double dp2_ht1 = Convert.ToDouble(textBox12.Text);
+            Double dp2_ht2 = Convert.ToDouble(textBox25.Text);
+            Double dp2_pc2 = Convert.ToDouble(textBox11.Text);
+            Double dp2_phx1 = Convert.ToDouble(textBox10.Text);
+
+            Double eta_mc2 = Convert.ToDouble(textBox14.Text);
+            Double eta_rc1 = Convert.ToDouble(textBox86.Text);
+            Double eta_rc2 = Convert.ToDouble(textBox92.Text);
+            Double eta_rc3 = Convert.ToDouble(textBox106.Text);
+            Double eta_t2 = Convert.ToDouble(textBox19.Text);
+            long n_sub_hxrs2 = Convert.ToInt64(textBox20.Text);
+            Double tol2 = Convert.ToDouble(textBox21.Text);
+
+            luis.wmm = luis.working_fluid.MolecularWeight;
+
+            core.RecompCycle_with_Four_Recuperatos_with_Three_RC_withoutRH cicloRC = new core.RecompCycle_with_Four_Recuperatos_with_Three_RC_withoutRH();
+
+            luis.SimpleBrayton_with_Four_Recup_Three_RC_without_RH(luis, ref cicloRC,
+            w_dot_net2, t_mc_in2, t_t_in2, p_mc_in2, p_mc_out2, recomp_frac1, recomp_frac2,
+            recomp_frac3, -dp2_lt1, -dp2_mt11, -dp2_mt21, -dp2_ht1, -dp2_pc2, -dp2_phx1, -dp2_lt2,
+            -dp2_mt12, -dp2_mt22, -dp2_ht2, ua_lt2, ua_mt1, ua_mt2, ua_ht2, eta_mc2, eta_rc1, eta_rc2,
+            eta_rc3, eta_t2, n_sub_hxrs2, tol2);
+
+            massflow2 = cicloRC.m_dot_turbine;
+            w_dot_net2 = cicloRC.W_dot_net;
+            eta_thermal2 = cicloRC.eta_thermal;
+            recomp_frac1 = cicloRC.recomp_frac1;
+            recomp_frac2 = cicloRC.recomp_frac2;
+            recomp_frac3 = cicloRC.recomp_frac3;
+
+            temp21 = cicloRC.temp[0];
+            temp22 = cicloRC.temp[1];
+            temp23 = cicloRC.temp[2];
+            temp24 = cicloRC.temp[3];
+            temp25 = cicloRC.temp[4];
+            temp26 = cicloRC.temp[5];
+            temp27 = cicloRC.temp[6];
+            temp28 = cicloRC.temp[7];
+            temp29 = cicloRC.temp[8];
+            temp210 = cicloRC.temp[9];
+            temp211 = cicloRC.temp[10];
+            temp212 = cicloRC.temp[11];
+            temp213 = cicloRC.temp[12];
+            temp214 = cicloRC.temp[13];
+            temp215 = cicloRC.temp[14];
+            temp216 = cicloRC.temp[15];
+            temp217 = cicloRC.temp[16];
+            temp218 = cicloRC.temp[17];
+
+            pres21 = cicloRC.pres[0];
+            pres22 = cicloRC.pres[1];
+            pres23 = cicloRC.pres[2];
+            pres24 = cicloRC.pres[3];
+            pres25 = cicloRC.pres[4];
+            pres26 = cicloRC.pres[5];
+            pres27 = cicloRC.pres[6];
+            pres28 = cicloRC.pres[7];
+            pres29 = cicloRC.pres[8];
+            pres210 = cicloRC.pres[9];
+            pres211 = cicloRC.pres[10];
+            pres212 = cicloRC.pres[11];
+            pres213 = cicloRC.pres[12];
+            pres214 = cicloRC.pres[13];
+            pres215 = cicloRC.pres[14];
+            pres216 = cicloRC.pres[15];
+            pres217 = cicloRC.pres[16];
+            pres218 = cicloRC.pres[17];
+
+            textBox22.Text = Convert.ToString(pres21);
+            textBox23.Text = Convert.ToString(pres22);
+            textBox27.Text = Convert.ToString(pres23);
+            textBox24.Text = Convert.ToString(pres24);
+            textBox29.Text = Convert.ToString(pres25);
+            textBox28.Text = Convert.ToString(pres26);
+            textBox41.Text = Convert.ToString(pres27);
+            textBox38.Text = Convert.ToString(pres28);
+            textBox34.Text = Convert.ToString(pres29);
+            textBox40.Text = Convert.ToString(pres210);
+            textBox85.Text = Convert.ToString(pres211);
+            textBox15.Text = Convert.ToString(pres212);
+            textBox91.Text = Convert.ToString(pres213);
+            textBox89.Text = Convert.ToString(pres214);
+            textBox103.Text = Convert.ToString(pres215);
+            textBox101.Text = Convert.ToString(pres216);
+            textBox99.Text = Convert.ToString(pres217);
+            textBox97.Text = Convert.ToString(pres218);
+
+            textBox47.Text = Convert.ToString(temp21);
+            textBox46.Text = Convert.ToString(temp22);
+            textBox45.Text = Convert.ToString(temp23);
+            textBox44.Text = Convert.ToString(temp24);
+            textBox43.Text = Convert.ToString(temp25);
+            textBox42.Text = Convert.ToString(temp26);
+            textBox35.Text = Convert.ToString(temp27);
+            textBox33.Text = Convert.ToString(temp28);
+            textBox32.Text = Convert.ToString(temp29);
+            textBox39.Text = Convert.ToString(temp210);
+            textBox18.Text = Convert.ToString(temp211);
+            textBox13.Text = Convert.ToString(temp212);
+            textBox90.Text = Convert.ToString(temp213);
+            textBox88.Text = Convert.ToString(temp214);
+            textBox102.Text = Convert.ToString(temp215);
+            textBox100.Text = Convert.ToString(temp216);
+            textBox98.Text = Convert.ToString(temp217);
+            textBox96.Text = Convert.ToString(temp218);
+
+            textBox48.Text = Convert.ToString(w_dot_net2);
+            textBox49.Text = Convert.ToString(massflow2);
+            textBox50.Text = Convert.ToString(eta_thermal2 * 100);
+
+            //High temperature check box
+            if (checkBox1.Checked == false)
+            {
+                PHX_Q2 = cicloRC.PHX.Q_dot;
+
+                LT_Q = cicloRC.LT.Q_dot;
+                LT_mdotc = cicloRC.LT.m_dot_design[0];
+                LT_mdoth = cicloRC.LT.m_dot_design[1];
+                LT_Tcin = cicloRC.LT.T_c_in;
+                LT_Thin = cicloRC.LT.T_h_in;
+                LT_Pcin = cicloRC.LT.P_c_in;
+                LT_Phin = cicloRC.LT.P_h_in;
+                LT_Pcout = cicloRC.LT.P_c_out;
+                LT_Phout = cicloRC.LT.P_h_out;
+                LT_Effc = cicloRC.LT.eff;
+
+                MT1_Q = cicloRC.MT1.Q_dot;
+                MT1_mdotc = cicloRC.MT1.m_dot_design[0];
+                MT1_mdoth = cicloRC.MT1.m_dot_design[1];
+                MT1_Tcin = cicloRC.MT1.T_c_in;
+                MT1_Thin = cicloRC.MT1.T_h_in;
+                MT1_Pcin = cicloRC.MT1.P_c_in;
+                MT1_Phin = cicloRC.MT1.P_h_in;
+                MT1_Pcout = cicloRC.MT1.P_c_out;
+                MT1_Phout = cicloRC.MT1.P_h_out;
+                MT1_Effc = cicloRC.MT1.eff;
+
+                MT2_Q = cicloRC.MT2.Q_dot;
+                MT2_mdotc = cicloRC.MT2.m_dot_design[0];
+                MT2_mdoth = cicloRC.MT2.m_dot_design[1];
+                MT2_Tcin = cicloRC.MT2.T_c_in;
+                MT2_Thin = cicloRC.MT2.T_h_in;
+                MT2_Pcin = cicloRC.MT2.P_c_in;
+                MT2_Phin = cicloRC.MT2.P_h_in;
+                MT2_Pcout = cicloRC.MT2.P_c_out;
+                MT2_Phout = cicloRC.MT2.P_h_out;
+                MT2_Effc = cicloRC.MT2.eff;
+
+                HT_Q = cicloRC.HT.Q_dot;
+                HT_mdotc = cicloRC.HT.m_dot_design[0];
+                HT_mdoth = cicloRC.HT.m_dot_design[1];
+                HT_Tcin = cicloRC.HT.T_c_in;
+                HT_Thin = cicloRC.HT.T_h_in;
+                HT_Pcin = cicloRC.HT.P_c_in;
+                HT_Phin = cicloRC.HT.P_h_in;
+                HT_Pcout = cicloRC.HT.P_c_out;
+                HT_Phout = cicloRC.HT.P_h_out;
+                HT_Effc = cicloRC.HT.eff;
+
+                PC_Q2 = cicloRC.PC.Q_dot;
+            }
+
+            button6.Enabled = true;
+            button7.Enabled = true;
+            button12.Enabled = true;
         }
 
         //Set critical conditions

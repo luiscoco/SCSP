@@ -47819,7 +47819,7 @@ namespace RefPropWindowsForms
 
             //Mixing Valve_2
             m_pres_last[6 - cpp_offset] = m_pres_last[5 - cpp_offset];          // No pressure drop in mixing value
-            m_pres_last[14 - cpp_offset] = m_pres_last[5 - cpp_offset];         // No pressure drop in mixing value
+            m_pres_last[17 - cpp_offset] = m_pres_last[5 - cpp_offset];         // No pressure drop in mixing value
 
             //MTR2 cold side
             if (m_DP_MT2[1 - cpp_offset] < 0.0)
@@ -47914,7 +47914,7 @@ namespace RefPropWindowsForms
             {
                 double[] dummy = new double[7];
 
-                calculate_turbomachinery_outlet_nuevo(m_temp_last[2 - cpp_offset], m_pres_last[16 - cpp_offset], m_pres_last[16 - cpp_offset],
+                calculate_turbomachinery_outlet_nuevo(m_temp_last[2 - cpp_offset], m_pres_last[15 - cpp_offset], m_pres_last[16 - cpp_offset],
                     m_eta_rc1, true, ref sub_error_code, ref dummy[0], ref dummy[1], ref dummy[2], ref dummy[3], ref dummy[4], ref dummy[5],
                     ref dummy[6], ref w_rc1);
             }
@@ -47924,7 +47924,7 @@ namespace RefPropWindowsForms
             {
                 double[] dummy = new double[7];
 
-                calculate_turbomachinery_outlet_nuevo(m_temp_last[2 - cpp_offset], m_pres_last[17 - cpp_offset], m_pres_last[17 - cpp_offset],
+                calculate_turbomachinery_outlet_nuevo(m_temp_last[2 - cpp_offset], m_pres_last[14 - cpp_offset], m_pres_last[17 - cpp_offset],
                     m_eta_rc2, true, ref sub_error_code, ref dummy[0], ref dummy[1], ref dummy[2], ref dummy[3], ref dummy[4], ref dummy[5],
                     ref dummy[6], ref w_rc2);
             }
@@ -47934,7 +47934,7 @@ namespace RefPropWindowsForms
             {
                 double[] dummy = new double[7];
 
-                calculate_turbomachinery_outlet_nuevo(m_temp_last[2 - cpp_offset], m_pres_last[18 - cpp_offset], m_pres_last[18 - cpp_offset],
+                calculate_turbomachinery_outlet_nuevo(m_temp_last[2 - cpp_offset], m_pres_last[13 - cpp_offset], m_pres_last[18 - cpp_offset],
                     m_eta_rc2, true, ref sub_error_code, ref dummy[0], ref dummy[1], ref dummy[2], ref dummy[3], ref dummy[4], ref dummy[5],
                     ref dummy[6], ref w_rc3);
             }
