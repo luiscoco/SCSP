@@ -48643,6 +48643,30 @@ namespace RefPropWindowsForms
                 return;
             }
 
+            if (UA_LT < 1000.0)
+            {
+                recomp_cycle.eta_thermal = 0.0;
+                return;
+            }
+
+            if (UA_MT1 < 1000.0)
+            {
+                recomp_cycle.eta_thermal = 0.0;
+                return;
+            }
+
+            if (UA_MT2 < 1000.0)
+            {
+                recomp_cycle.eta_thermal = 0.0;
+                return;
+            }
+
+            if (UA_HT < 1000.0)
+            {
+                recomp_cycle.eta_thermal = 0.0;
+                return;
+            }
+
             int max_iter = 100;
 
             // Set other variables that need to reported at end of this function
@@ -49021,7 +49045,7 @@ namespace RefPropWindowsForms
                             T15_upper_bound = m_temp_last[14 - cpp_offset];       // the highest possible value for T12
                             m_temp_last[15 - cpp_offset] = (T15_lower_bound + T15_upper_bound) * 0.5;  // bisect bounds for first guess
                             UA_LT_calc = -1.0;
-                            last_LT_residual = UA_LT;       // know a priori that with T15=T14, UA_calc = 0 therefore residual is UA_MT - 0
+                            last_LT_residual = UA_LT;       // know a priori that with T15 = T14, UA_calc = 0 therefore residual is UA_MT - 0
                             last_T15_guess = m_temp_last[14 - cpp_offset];
                         }
 
