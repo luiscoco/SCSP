@@ -54,10 +54,11 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.Thermal_performance_and_economic_analysis_fig5;
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.Thermal_performance_and_economic_analysis_fig5_FINAL;
             this.pictureBox1.Location = new System.Drawing.Point(681, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(673, 366);
+            this.pictureBox1.Size = new System.Drawing.Size(673, 297);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 226;
             this.pictureBox1.TabStop = false;
             // 
@@ -66,10 +67,11 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::RefPropWindowsForms.Properties.Resources.Thermal_performance_and_economic_analysis_fig1;
+            this.pictureBox3.Image = global::RefPropWindowsForms.Properties.Resources.Thermal_performance_and_economic_analysis_fig1_FINAL;
             this.pictureBox3.Location = new System.Drawing.Point(4, 47);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(673, 366);
+            this.pictureBox3.Size = new System.Drawing.Size(673, 297);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 222;
             this.pictureBox3.TabStop = false;
             // 

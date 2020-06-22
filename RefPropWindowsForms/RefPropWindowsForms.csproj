@@ -2420,6 +2420,11 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Thermal performance and economic analysis fig5 FINAL.jpg" />
+    <None Include="Resources\Thermal performance and economic analysis fig1 FINAL.jpg" />
+    <None Include="Resources\Thermal performance and economic analysis fig14 FINAL.jpg" />
+    <None Include="Resources\Thermal performance and economic analysis fig11 FINAL.jpg" />
+    <None Include="Resources\Thermal performance and economic analysis fig8 FINAL.jpg" />
     <None Include="Resources\SB with Four Recuperators and Three Recompressor without ReHeating Small.jpg" />
     <None Include="Resources\SB with Four Recuperators and Three Recompressor without ReHeating.jpg" />
     <None Include="Resources\Three Recuperators fig2.18 tesis Francesco Crespi.jpg" />
