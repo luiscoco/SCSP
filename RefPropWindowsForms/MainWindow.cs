@@ -1069,5 +1069,40 @@ namespace RefPropWindowsForms
             WizardTreintaTres_dialog.MdiParent = this;
             WizardTreintaTres_dialog.Show();
         }
+
+        private void adobePDFViewerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AdobePDFViewer_dialog = new AdobePDFViewer();
+            AdobePDFViewer_dialog.MdiParent = this;
+            AdobePDFViewer_dialog.Show();
+
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.ShowDialog();
+
+            if (dlg.FileName != "")
+            {
+                AdobePDFViewer_dialog.axAcroPDF1.src = dlg.FileName;
+            }
+        }
+
+        private void chartsExampleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ChartsExample_dialog = new ChartsExample();
+            ChartsExample_dialog.MdiParent = this;
+            ChartsExample_dialog.Show();
+        }
+
+        private void tesisFrancescoCrespiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdobePDFViewer_dialog = new AdobePDFViewer();
+            AdobePDFViewer_dialog.MdiParent = this;
+            AdobePDFViewer_dialog.axAcroPDF1.src = "C:\\SCSP\\PhD-Crespi-Final-1.pdf";
+            AdobePDFViewer_dialog.Show();
+        }
+
+        private void tesisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

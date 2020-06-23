@@ -32,9 +32,7 @@ namespace RefPropWindowsForms
                 puntero.configurations3133ToolStripMenuItem.Enabled = true;
                 puntero.configurations3437ToolStripMenuItem.Enabled = true;
                 puntero.configurations3840ToolStripMenuItem.Enabled = true;
-                puntero.configurationsToolStripMenuItem.Enabled = true;
-                puntero.adobePDFViewerToolStripMenuItem.Enabled = true;
-                puntero.chartsExampleToolStripMenuItem.Enabled = true;
+                puntero.configurationsToolStripMenuItem.Enabled = true;               
                 puntero.toolsToolStripMenuItem.Enabled = true;
                 puntero.aboutToolStripMenuItem.Enabled = true;
                 puntero.validationsToolStripMenuItem.Enabled = true;
@@ -51,9 +49,7 @@ namespace RefPropWindowsForms
                 puntero.configurations3133ToolStripMenuItem.Enabled = true;
                 puntero.configurations3437ToolStripMenuItem.Enabled = true;
                 puntero.configurations3840ToolStripMenuItem.Enabled = true;
-                puntero.configurationsToolStripMenuItem.Enabled = true;
-                puntero.adobePDFViewerToolStripMenuItem.Enabled = true;
-                puntero.chartsExampleToolStripMenuItem.Enabled = true;
+                puntero.configurationsToolStripMenuItem.Enabled = true;                
                 puntero.toolsToolStripMenuItem.Enabled = true;
                 puntero.aboutToolStripMenuItem.Enabled = true;
                 puntero.validationsToolStripMenuItem.Enabled = true;
