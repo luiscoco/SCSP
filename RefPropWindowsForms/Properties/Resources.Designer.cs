@@ -2535,6 +2535,17 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Superstructure_design_and_optimization_on_supercritical_carbon_dioxide_fig10___FINAL_Small {
+            get {
+                object obj = ResourceManager.GetObject("Superstructure design and optimization on supercritical carbon dioxide fig10 - FI" +
+                        "NAL Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Superstructure_design_and_optimization_on_supercritical_carbon_dioxide_fig8_1 {
             get {
                 object obj = ResourceManager.GetObject("Superstructure design and optimization on supercritical carbon dioxide fig8-1", resourceCulture);

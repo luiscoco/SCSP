@@ -2420,6 +2420,7 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Superstructure design and optimization on supercritical carbon dioxide fig10 - FINAL Small.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig5 FINAL.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig1 FINAL.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig14 FINAL.jpg" />
