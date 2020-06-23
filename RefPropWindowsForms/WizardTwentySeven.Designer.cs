@@ -35,6 +35,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -114,6 +120,72 @@
             this.pictureBox3.TabIndex = 229;
             this.pictureBox3.TabStop = false;
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel3.Location = new System.Drawing.Point(519, 57);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(64, 15);
+            this.linkLabel3.TabIndex = 236;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Reference";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel2.Location = new System.Drawing.Point(519, 42);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(79, 15);
+            this.linkLabel2.TabIndex = 237;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Design-Point";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel1.Location = new System.Drawing.Point(473, 362);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(79, 15);
+            this.linkLabel1.TabIndex = 239;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Design-Point";
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel4.Location = new System.Drawing.Point(473, 377);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(64, 15);
+            this.linkLabel4.TabIndex = 238;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Reference";
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel5.Location = new System.Drawing.Point(1167, 42);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(79, 15);
+            this.linkLabel5.TabIndex = 241;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Design-Point";
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Font = new System.Drawing.Font("Arial", 9F);
+            this.linkLabel6.Location = new System.Drawing.Point(1167, 57);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(64, 15);
+            this.linkLabel6.TabIndex = 240;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "Reference";
+            // 
             // WizardTwentySeven
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +193,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1362, 702);
+            this.Controls.Add(this.linkLabel5);
+            this.Controls.Add(this.linkLabel6);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabel4);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
@@ -145,5 +223,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.LinkLabel linkLabel6;
     }
 }

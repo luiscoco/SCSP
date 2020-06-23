@@ -40,7 +40,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel1.Location = new System.Drawing.Point(1199, 64);
+            this.linkLabel1.Location = new System.Drawing.Point(1257, 97);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(64, 15);
             this.linkLabel1.TabIndex = 220;
@@ -51,7 +51,7 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel2.Location = new System.Drawing.Point(1114, 64);
+            this.linkLabel2.Location = new System.Drawing.Point(1257, 82);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(79, 15);
             this.linkLabel2.TabIndex = 219;
@@ -77,7 +77,7 @@
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::RefPropWindowsForms.Properties.Resources.Superstructure_design_and_optimization_on_supercritical_carbon_dioxide_fig10___FINAL_Small;
-            this.pictureBox3.Location = new System.Drawing.Point(107, 82);
+            this.pictureBox3.Location = new System.Drawing.Point(95, 82);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1156, 373);
             this.pictureBox3.TabIndex = 218;
