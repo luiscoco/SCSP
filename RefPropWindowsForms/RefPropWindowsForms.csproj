@@ -1555,11 +1555,11 @@
     <Compile Include="WizardSeven.Designer.cs">
       <DependentUpon>WizardSeven.cs</DependentUpon>
     </Compile>
-    <Compile Include="WizardThirdteen.cs">
+    <Compile Include="WizardThirteen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WizardThirdteen.Designer.cs">
-      <DependentUpon>WizardThirdteen.cs</DependentUpon>
+    <Compile Include="WizardThirteen.Designer.cs">
+      <DependentUpon>WizardThirteen.cs</DependentUpon>
     </Compile>
     <Compile Include="WizardThree.cs">
       <SubType>Form</SubType>
@@ -2194,8 +2194,8 @@
     <EmbeddedResource Include="WizardSeven.resx">
       <DependentUpon>WizardSeven.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardThirdteen.resx">
-      <DependentUpon>WizardThirdteen.cs</DependentUpon>
+    <EmbeddedResource Include="WizardThirteen.resx">
+      <DependentUpon>WizardThirteen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardThree.resx">
       <DependentUpon>WizardThree.cs</DependentUpon>

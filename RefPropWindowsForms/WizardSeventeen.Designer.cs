@@ -90,9 +90,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(101, -3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 26);
+            this.label1.Size = new System.Drawing.Size(171, 26);
             this.label1.TabIndex = 186;
-            this.label1.Text = "SB WITHOUT REHEATING";
+            this.label1.Text = "65. SB WITHOUT REHEATING";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
@@ -124,9 +124,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(740, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(308, 26);
+            this.label2.Size = new System.Drawing.Size(335, 26);
             this.label2.TabIndex = 190;
-            this.label2.Text = "SB WITH TWO RECUPERATORS WITHOUT REHEATING";
+            this.label2.Text = "68. SB WITH TWO RECUPERATORS WITHOUT REHEATING";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel5
@@ -156,11 +156,11 @@
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(101, 257);
+            this.label3.Location = new System.Drawing.Point(101, 259);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(320, 26);
+            this.label3.Size = new System.Drawing.Size(343, 26);
             this.label3.TabIndex = 194;
-            this.label3.Text = "SB WITH THREE  RECUPERATORS WITHOUT REHEATING";
+            this.label3.Text = "66. SB WITH THREE  RECUPERATORS WITHOUT REHEATING";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel7
@@ -190,11 +190,11 @@
             // 
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(22, 476);
+            this.label4.Location = new System.Drawing.Point(33, 476);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(437, 13);
+            this.label4.Size = new System.Drawing.Size(383, 13);
             this.label4.TabIndex = 198;
-            this.label4.Text = "SB WITH TWO RECUPERATORS AND ADDITIONAL HX WITHOUT REHEATING";
+            this.label4.Text = "67. SB WITH TWO RECUPERATORS AND ADDITIONAL HX WITHOUT REHEATING";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel9
@@ -226,9 +226,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(740, 262);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(320, 26);
+            this.label5.Size = new System.Drawing.Size(335, 26);
             this.label5.TabIndex = 202;
-            this.label5.Text = "SB WITH FOUR  RECUPERATORS WITHOUT REHEATING";
+            this.label5.Text = "69. SB WITH FOUR  RECUPERATORS WITHOUT REHEATING";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel11
@@ -336,11 +336,11 @@
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(683, 473);
+            this.label6.Location = new System.Drawing.Point(693, 473);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(489, 20);
             this.label6.TabIndex = 210;
-            this.label6.Text = "SB WITH THREE RECUPERATORS AND ONE RECOMPRESOR WITHOUT REHEATING";
+            this.label6.Text = "70. SB WITH THREE RECUPERATORS AND ONE RECOMPRESOR WITHOUT REHEATING";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WizardSeventeen

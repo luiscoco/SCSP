@@ -28,7 +28,7 @@ namespace RefPropWindowsForms
         public WizardTen WizardDiez_dialog;
         public WizardEleven WizardOnce_dialog;
         public WizardTwelve WizardDoce_dialog;
-        public WizardThirdteen WizardTrece_dialog;
+        public WizardThirteen WizardTrece_dialog;
         public WizardFourteen WizardCatorce_dialog;
         public WizardFifteen WizardQuince_dialog;
         public WizardSixteen WizardDieciseis_dialog;
@@ -146,6 +146,7 @@ namespace RefPropWindowsForms
         public Two_PC_RCMCI_with_Three_Reheating Two_PC_RCMCI_with_Three_Reheating_dialog;
         public Two_PC_Two_RCMCI_with_Three_Reheating Two_PC_Two_RCMCI_with_Three_Reheating_dialog;
 
+
         public SB_with_PreHeating_without_Reheating SB_with_PreHeating_without_Reheating_dialog;
         public SB_with_Three_Recuperators_without_ReHeating SB_with_Three_Recuperators_without_ReHeating_dialog;
         public SB_with_Two_Recuperators_and_Additional_HX_without_ReHeating SB_with_Two_Recuperators_and_Additional_HX_without_ReHeating_dialog;
@@ -154,7 +155,7 @@ namespace RefPropWindowsForms
         public SB_with_Four_Recuperators_without_ReHeating SB_with_Four_Recuperators_without_ReHeating_dialog;
         public SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating_dialog;
         public SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating_dialog;
-        public SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating SB_with_Three_Recuperators_and_Three_Recompressors_without_ReHeating_dialog;
+        public SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating_dialog;
         public SB_with_Two_Recuperators_with_LTR_PreHeating_without_ReHeating SB_with_Two_Recuperators_with_LTR_PreHeating_without_ReHeating_dialog;
         
         public RC_with_LTR_PreHeating_without_ReHeating RC_with_LTR_PreHeating_without_ReHeating_dialog;
@@ -866,7 +867,7 @@ namespace RefPropWindowsForms
 
         private void configurations58ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WizardTrece_dialog = new WizardThirdteen(this);
+            WizardTrece_dialog = new WizardThirteen(this);
             WizardTrece_dialog.MdiParent = this;
             WizardTrece_dialog.Show();
         }
@@ -1035,7 +1036,9 @@ namespace RefPropWindowsForms
 
         private void configurationsXXXXToolStripMenuItem13_Click(object sender, EventArgs e)
         {
-
+            WizardTrece_dialog = new WizardThirteen(this);
+            WizardTrece_dialog.MdiParent = this;
+            WizardTrece_dialog.Show();
         }
 
         private void configurationsXXXXToolStripMenuItem14_Click(object sender, EventArgs e)

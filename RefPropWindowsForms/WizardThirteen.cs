@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace RefPropWindowsForms
 {
-    public partial class WizardThirdteen : Form
+    public partial class WizardThirteen : Form
     {
         MainWindow puntero;
 
-        public WizardThirdteen(MainWindow puntero1)
+        public WizardThirteen(MainWindow puntero1)
         {
             puntero = puntero1;
             InitializeComponent();
