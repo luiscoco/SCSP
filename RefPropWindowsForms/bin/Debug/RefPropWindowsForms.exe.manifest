@@ -42,6 +42,42 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Accord.dll" size="131072">
+      <assemblyIdentity name="Accord" version="3.8.0.0" publicKeyToken="FA1A88E29555CCF7" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>02wiWoRBXAG8Ko6ECWWQpyBt/D02Fz48e2pioEwKM6k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Accord.Math.dll" size="2220032">
+      <assemblyIdentity name="Accord.Math" version="3.8.0.0" publicKeyToken="FA1A88E29555CCF7" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>GxxA9jt7mOgoeM6GVjkMEtmi7XLKRR1uety0ZVXMy/I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Accord.Math.Core.dll" size="1441792">
+      <assemblyIdentity name="Accord.Math.Core" version="3.8.0.0" publicKeyToken="FA1A88E29555CCF7" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>d32khJ2PeJehOBjrn6sFsuy4DehIswGar+/TSyj3kag=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.AcroPDFLib.dll" size="8192">
       <assemblyIdentity name="AxInterop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -133,19 +169,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qerHomUKFVXnWWrlPJ7xRvsssyW5gT25pVUOXN9FXW8=</dsig:DigestValue>
+        <dsig:DigestValue>0qx1fbO2KH6cyPJZuEAwj3EYuzUhhEcBqatn2MLU1cA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="33045504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="33101824">
       <assemblyIdentity name="RefPropWindowsForms" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Fg4wIxdniRDI5gc0Fsg5YvIJxc+zUNwk6Fwr9MhIIRc=</dsig:DigestValue>
+        <dsig:DigestValue>esMXSRp5mGUuzdE+6kg7eAaLx1Hsq/JdZksAk0QgGUw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -227,7 +263,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>l/VPfNqUVNQIPyQECM0xWlTJm+DXcPOne6oYsApBDIo=</dsig:DigestValue>
+      <dsig:DigestValue>aGKyVzYln3v9NE5D7qEKcDiFvjge7ip0XOsSkWsBoVg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\PCRC with ReHeating with Three Reheating Stages.jpg" size="62927">
