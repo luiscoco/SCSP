@@ -68,11 +68,11 @@
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(368, 59);
+            this.label1.Location = new System.Drawing.Point(350, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(517, 17);
+            this.label1.Size = new System.Drawing.Size(561, 17);
             this.label1.TabIndex = 190;
-            this.label1.Text = "SB_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITHOUT_REHEATING";
+            this.label1.Text = "71. SB_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITHOUT_REHEATING";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel5
@@ -102,11 +102,11 @@
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(297, 342);
+            this.label3.Location = new System.Drawing.Point(283, 338);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(515, 20);
+            this.label3.Size = new System.Drawing.Size(548, 20);
             this.label3.TabIndex = 200;
-            this.label3.Text = "SB_WITH_FOUR_RECUPERATOS_AND_THREE_RECOMPRESSORS_WITHOUT_REHEATING";
+            this.label3.Text = "72. SB_WITH_FOUR_RECUPERATOS_AND_THREE_RECOMPRESSORS_WITHOUT_REHEATING";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3

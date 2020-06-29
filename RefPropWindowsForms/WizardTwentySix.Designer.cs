@@ -40,13 +40,13 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(294, 18);
+            this.label2.Location = new System.Drawing.Point(294, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(772, 35);
+            this.label2.Size = new System.Drawing.Size(769, 35);
             this.label2.TabIndex = 232;
-            this.label2.Text = "Thermal performance and economic analysis of supercritical Carbon Dioxide cycles " +
-    "in combined cycle power plant\r\nDhinesh Thanganadar, Faisal Asfand, Kumar Patchig" +
-    "olla";
+            this.label2.Text = "80. Thermal performance and economic analysis of supercritical Carbon Dioxide cyc" +
+    "les in combined cycle power plant\r\nDhinesh Thanganadar, Faisal Asfand, Kumar Pat" +
+    "chigolla";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
@@ -89,7 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label2);

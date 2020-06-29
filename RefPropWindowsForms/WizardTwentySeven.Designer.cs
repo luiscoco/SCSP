@@ -50,36 +50,36 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(6, 4);
+            this.label2.Location = new System.Drawing.Point(41, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(546, 35);
+            this.label2.Size = new System.Drawing.Size(472, 35);
             this.label2.TabIndex = 230;
-            this.label2.Text = "On the Conceptual Design of Novel Supercritical CO2 Power Cycles for Waste Heat R" +
-    "ecovery\r\nGiovanni Manente, Mário Costa ";
+            this.label2.Text = "81. On the Conceptual Design of Novel Supercritical CO2 Power Cycles for Waste He" +
+    "at Recovery\r\nGiovanni Manente, Mário Costa ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(699, 4);
+            this.label1.Location = new System.Drawing.Point(766, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(546, 35);
+            this.label1.Size = new System.Drawing.Size(395, 35);
             this.label1.TabIndex = 232;
-            this.label1.Text = "On the Conceptual Design of Novel Supercritical CO2 Power Cycles for Waste Heat R" +
-    "ecovery\r\nGiovanni Manente, Mário Costa ";
+            this.label1.Text = "82. On the Conceptual Design of Novel Supercritical CO2 Power Cycles for Waste He" +
+    "at Recovery\r\nGiovanni Manente, Mário Costa ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(6, 324);
+            this.label3.Location = new System.Drawing.Point(67, 324);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(546, 35);
+            this.label3.Size = new System.Drawing.Size(397, 35);
             this.label3.TabIndex = 234;
-            this.label3.Text = "On the Conceptual Design of Novel Supercritical CO2 Power Cycles for Waste Heat R" +
-    "ecovery\r\nGiovanni Manente, Mário Costa ";
+            this.label3.Text = "83. On the Conceptual Design of Novel Supercritical CO2 Power Cycles for Waste He" +
+    "at Recovery\r\nGiovanni Manente, Mário Costa ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
@@ -192,7 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 702);
+            this.ClientSize = new System.Drawing.Size(1354, 702);
             this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.linkLabel6);
             this.Controls.Add(this.linkLabel1);

@@ -36,6 +36,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -44,13 +45,13 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(219, 23);
+            this.label2.Location = new System.Drawing.Point(204, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(911, 35);
+            this.label2.Size = new System.Drawing.Size(923, 35);
             this.label2.TabIndex = 231;
-            this.label2.Text = "Thermal performance and economic analysis of supercritical Carbon Dioxide cycles " +
-    "in combined cycle power plant\r\nDhinesh Thanganadar, Faisal Asfand, Kumar Patchig" +
-    "olla";
+            this.label2.Text = "78. Thermal performance and economic analysis of supercritical Carbon Dioxide cyc" +
+    "les in combined cycle power plant\r\nDhinesh Thanganadar, Faisal Asfand, Kumar Pat" +
+    "chigolla";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -59,7 +60,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.Thermal_performance_and_economic_analysis_fig11_FINAL_Small;
-            this.pictureBox1.Location = new System.Drawing.Point(207, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(204, 47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(923, 317);
             this.pictureBox1.TabIndex = 233;
@@ -81,7 +82,7 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel2.Location = new System.Drawing.Point(1136, 81);
+            this.linkLabel2.Location = new System.Drawing.Point(1133, 47);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(79, 15);
             this.linkLabel2.TabIndex = 234;
@@ -115,12 +116,25 @@
             // 
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Font = new System.Drawing.Font("Arial", 9F);
-            this.linkLabel4.Location = new System.Drawing.Point(1136, 96);
+            this.linkLabel4.Location = new System.Drawing.Point(1133, 62);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(64, 15);
             this.linkLabel4.TabIndex = 237;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Reference";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(207, 388);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(911, 35);
+            this.label1.TabIndex = 238;
+            this.label1.Text = "79. Thermal performance and economic analysis of supercritical Carbon Dioxide cyc" +
+    "les in combined cycle power plant\r\nDhinesh Thanganadar, Faisal Asfand, Kumar Pat" +
+    "chigolla";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WizardThirtyThree
             // 
@@ -129,6 +143,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1354, 723);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel3);
@@ -154,5 +169,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.Label label1;
     }
 }

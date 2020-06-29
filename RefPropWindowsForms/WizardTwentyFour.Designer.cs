@@ -62,13 +62,13 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(197, 29);
+            this.label2.Location = new System.Drawing.Point(95, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(889, 35);
+            this.label2.Size = new System.Drawing.Size(1156, 35);
             this.label2.TabIndex = 221;
-            this.label2.Text = "Superstructure design and optimization on supercritical carbon dioxide cycle for " +
-    "application in concentrated solar power plant\r\nYuegeng Ma, Tatiana Morosuk, Jing" +
-    " Luo, Ming Liu, Jiping Liu";
+            this.label2.Text = "75. Superstructure design and optimization on supercritical carbon dioxide cycle " +
+    "for application in concentrated solar power plant\r\nYuegeng Ma, Tatiana Morosuk, " +
+    "Jing Luo, Ming Liu, Jiping Liu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
@@ -89,7 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label2);
