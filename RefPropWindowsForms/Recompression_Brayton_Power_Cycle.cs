@@ -4049,7 +4049,8 @@ namespace RefPropWindowsForms
                 button22.Enabled = true;
                 button2.Enabled = false;
 
-                Refrigerant working_fluid = new Refrigerant(RefrigerantCategory.NewMixture, this.comboBox2.Text + "=" + textBox60.Text + "," + this.comboBox1.Text + "=" + textBox61.Text + "," + this.comboBox18.Text + "=" + textBox51.Text + "," + this.comboBox17.Text + "=" + textBox80.Text, ReferenceState.DEF);
+                string fluid_name = this.comboBox2.Text + "=" + textBox60.Text + "," + this.comboBox1.Text + "=" + textBox61.Text + "," + this.comboBox18.Text + "=" + textBox51.Text + "," + this.comboBox17.Text + "=" + textBox80.Text;
+                Refrigerant working_fluid = new Refrigerant(RefrigerantCategory.NewMixture, fluid_name, ReferenceState.DEF);
 
                 textBox59.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox58.Text = Convert.ToString(working_fluid.CriticalTemperature - 273.15);

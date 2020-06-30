@@ -2245,7 +2245,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(80, 21);
             this.comboBox1.TabIndex = 909;
-            this.comboBox1.Text = "C6F14";
+            this.comboBox1.Text = "HELIUM";
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // label88
@@ -3046,7 +3046,7 @@
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(80, 21);
             this.comboBox17.TabIndex = 1145;
-            this.comboBox17.Text = "C6F14";
+            this.comboBox17.Text = "KRYPTON";
             // 
             // label122
             // 
@@ -3213,7 +3213,7 @@
             this.comboBox18.Name = "comboBox18";
             this.comboBox18.Size = new System.Drawing.Size(80, 21);
             this.comboBox18.TabIndex = 1143;
-            this.comboBox18.Text = "CO2";
+            this.comboBox18.Text = "ARGON";
             // 
             // label123
             // 

@@ -2961,59 +2961,6 @@ namespace RefPropWindowsForms
 
                 PC_Q2 = cicloRC_withoutRH.PC.Q_dot;
 
-                PTC_SF_Calculation PTC = new PTC_SF_Calculation();
-                PTC.calledForSensingAnalysis = true;
-                PTC.comboBox1.Text = "Solar Salt";
-                PTC.comboBox2.Text = "NewMixture";
-                PTC.comboBox13.Text = this.comboBox2.Text;
-                PTC.comboBox14.Text = this.comboBox6.Text;
-                //PTC.textBox31.Text = this.textBox31.Text;
-                //PTC.textBox36.Text = this.textBox36.Text;
-
-                if (comboBox4.Text == "Parabolic")
-                {
-                    PTC.textBox7.Text = "0.141";
-                    PTC.textBox8.Text = "6.48e-9";
-                }
-
-                else if (comboBox4.Text == "Parabolic with cavity receiver (Norwich)")
-                {
-                    PTC.textBox7.Text = "0.3";
-                    PTC.textBox8.Text = "3.25e-9";
-                }
-
-                PTC.textBox1.Text = Convert.ToString(PHX_Q2);
-                PTC.textBox2.Text = Convert.ToString(massflow2);
-                PTC.textBox3.Text = Convert.ToString(temp25);
-                PTC.textBox6.Text = Convert.ToString(temp26);
-                PTC.textBox4.Text = Convert.ToString(pres25);
-                PTC.textBox5.Text = Convert.ToString(pres26);
-                PTC.textBox107.Text = Convert.ToString(10);
-                PTC.SF_PHX.PTC_Solar_Field_ciclo_RC_Design_withoutReHeating(this, 4, "Main_SF");
-                PTC.button1_Click(this, e);
-                PTC_Main_SF_Effective_Apperture_Area = PTC.ReflectorApertureAreaResult;
-                PTC_Main_SF_Pressure_drop = PTC.Total_Pressure_DropResult;
-
-                LF_SF_Calculation LF = new LF_SF_Calculation();
-                LF.calledForSensingAnalysis = true;
-                LF.comboBox1.Text = "Solar Salt";
-                LF.comboBox2.Text = "NewMixture";
-                LF.comboBox13.Text = this.comboBox2.Text;
-                LF.comboBox14.Text = this.comboBox6.Text;
-                //LF.textBox31.Text = this.textBox31.Text;
-                //LF.textBox36.Text = this.textBox36.Text;
-                LF.textBox1.Text = Convert.ToString(PHX_Q2);
-                LF.textBox2.Text = Convert.ToString(massflow2);
-                LF.textBox3.Text = Convert.ToString(temp25);
-                LF.textBox6.Text = Convert.ToString(temp26);
-                LF.textBox4.Text = Convert.ToString(pres25);
-                LF.textBox5.Text = Convert.ToString(pres26);
-                LF.SF_PHX.LF_Solar_Field_ciclo_RC_Design_withoutReHeating(this, 4, "Main_SF");
-                LF.textBox107.Text = Convert.ToString(10);
-                LF.button1_Click(this, e);
-                LF_Main_SF_Effective_Apperture_Area = LF.ReflectorApertureAreaResult;
-                LF_Main_SF_Pressure_drop = LF.Total_Pressure_DropResult;
-
                 if (comboBox4.Text == "Dual-Loop")
                 {
                     //Main SF
