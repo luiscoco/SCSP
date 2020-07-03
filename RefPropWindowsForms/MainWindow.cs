@@ -1099,7 +1099,7 @@ namespace RefPropWindowsForms
         {
             AdobePDFViewer_dialog = new AdobePDFViewer();
             AdobePDFViewer_dialog.MdiParent = this;
-            AdobePDFViewer_dialog.axAcroPDF1.src = "C:\\SCSP\\PhD-Crespi-Final-1.pdf";
+            AdobePDFViewer_dialog.axAcroPDF1.src = "C:\\SCSP\\References\\PhD-Crespi-Final-1.pdf";
             AdobePDFViewer_dialog.Show();
         }
 

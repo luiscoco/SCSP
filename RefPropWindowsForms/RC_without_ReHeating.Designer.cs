@@ -3346,7 +3346,6 @@
         public System.Windows.Forms.Label label59;
         public System.Windows.Forms.Label label57;
         public System.Windows.Forms.Label label55;
-        public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.Label label54;
         public System.Windows.Forms.TextBox textBox50;
@@ -3581,5 +3580,6 @@
         public System.Windows.Forms.Button button34;
         public System.Windows.Forms.Button button27;
         public System.Windows.Forms.CheckBox checkBox3;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
