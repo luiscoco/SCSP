@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pTxLCGjXY003porZd3Jad/iHKncuJ5VT4cAqcwQofjA=</dsig:DigestValue>
+        <dsig:DigestValue>cw3hbpj5guwB9cbH3uNCov58nYSOn/o2+voIS3QuEsA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -145,7 +145,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CaLpdnS4uMggPaxnEag1GoA4UZFcy4dM0bNaYlKA5mE=</dsig:DigestValue>
+        <dsig:DigestValue>F73BGCR4n2nuUvNEvV7UxIVPhBkkYPebs8xpAQWLYfo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -163,25 +163,25 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NLoptNet.dll" size="16384">
-      <assemblyIdentity name="NLoptNet" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="NLoptNet" version="1.2.0.0" publicKeyToken="9A2318C5ED945BD3" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nY21lFxfiQ+YWHAvr6MLSzcPQn9SedSbUmKOKuMb0i8=</dsig:DigestValue>
+        <dsig:DigestValue>8MOtv3FX0/8oRHGzOnFzc1OoKtAkoP6gR9D5zUoYvYI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="33101312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="32956928">
       <assemblyIdentity name="RefPropWindowsForms" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>COWVbUczJovnWGgPebiCmPMWQeY9XM6C0LcFo7rm2rs=</dsig:DigestValue>
+        <dsig:DigestValue>qrl5smkYB4HR9xeV/A063glbg9kzo/5YRHsYG3KC01M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -363,6 +363,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>/avuvC4p04mrI372FIor759TFmQKnpfchpFZjmFm1w8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="x32\nlopt.dll" size="681984">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1VEhQJVqW8F91us++F/gTV/9zMPKF6HglYW+i8kg1b4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="x64\nlopt.dll" size="830976">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kSRHj0m+f+ft9Os94PyfhhNCK252ps7JcXC2Y4YYzuc=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

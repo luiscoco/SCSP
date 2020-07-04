@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefPropWindowsForms", "RefPropWindowsForms\RefPropWindowsForms.csproj", "{8784951F-3012-4802-8A11-7DE6A1F34008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLoptNet", "RefPropWindowsForms\NLoptNet\NLoptNet.csproj", "{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,36 +54,6 @@ Global
 		{8784951F-3012-4802-8A11-7DE6A1F34008}.Release|x64.Build.0 = Release|Any CPU
 		{8784951F-3012-4802-8A11-7DE6A1F34008}.Release|x86.ActiveCfg = Release|x86
 		{8784951F-3012-4802-8A11-7DE6A1F34008}.Release|x86.Build.0 = Release|x86
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Debug|x64.ActiveCfg = Debug|x64
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Debug|x64.Build.0 = Debug|x64
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Debug|x86.Build.0 = Debug|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 3.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 3.5|Any CPU.Build.0 = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 3.5|x64.ActiveCfg = Release 3.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 3.5|x64.Build.0 = Release 3.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 3.5|x86.ActiveCfg = Release 3.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 3.5|x86.Build.0 = Release 3.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.0|Any CPU.ActiveCfg = Release 4.0|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.0|Any CPU.Build.0 = Release 4.0|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.0|x64.ActiveCfg = Release 4.0|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.0|x64.Build.0 = Release 4.0|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.0|x86.ActiveCfg = Release 4.0|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.0|x86.Build.0 = Release 4.0|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.5|x64.ActiveCfg = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.5|x64.Build.0 = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.5|x86.ActiveCfg = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release 4.5|x86.Build.0 = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release|Any CPU.ActiveCfg = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release|Any CPU.Build.0 = Release 4.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release|x64.ActiveCfg = Release 4.0|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release|x64.Build.0 = Release 4.0|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release|x86.ActiveCfg = Release 3.5|Any CPU
-		{C9ADE0C4-BCD0-47E1-951A-F7AFEAE82927}.Release|x86.Build.0 = Release 3.5|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

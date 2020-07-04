@@ -112,6 +112,9 @@
     <Reference Include="netchartdir_cp">
       <HintPath>.\netchartdir_cp.dll</HintPath>
     </Reference>
+    <Reference Include="NLoptNet, Version=1.2.0.0, Culture=neutral, PublicKeyToken=9a2318c5ed945bd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLoptNet.1.2.0\lib\net45\NLoptNet.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="SharpDX">
       <HintPath>Accord Libraries\net462\SharpDX.dll</HintPath>
@@ -2221,6 +2224,7 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -2230,6 +2234,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="x32\nlopt.exp" />
+    <None Include="x32\nlopt.lib" />
+    <None Include="x64\nlopt.exp" />
+    <None Include="x64\nlopt.lib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="RefPropWindowsForms_TemporaryKey.pfx" />
@@ -2439,6 +2447,12 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="x32\nlopt.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\nlopt.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Thermal performance and economic analysis fig11 FINAL Small.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig14 FINAL Small.jpg" />
     <None Include="Resources\Thermal performance and economic analysis fig8 FINAL Small.jpg" />
@@ -2643,12 +2657,6 @@
     <None Include="Resources\RCMCI with Two Intercooling and Three Reheating Stages.jpg" />
     <None Include="Resources\RCMCI with Two ReHeating ICAI proposed configuration.jpg" />
     <Content Include="Resources\RCMCI with Two ReHeating Small2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="NLoptNet\NLoptNet.csproj">
-      <Project>{c9ade0c4-bcd0-47e1-951a-f7afeae82927}</Project>
-      <Name>NLoptNet</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
