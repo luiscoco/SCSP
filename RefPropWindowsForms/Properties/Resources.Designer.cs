@@ -383,6 +383,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Paper_Luis_Gonzalez_Portillo_UPM_Figura_con_Torre_Central {
+            get {
+                object obj = ResourceManager.GetObject("Paper_Luis_Gonzalez_Portillo_UPM Figura con Torre Central", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PCRC_with_ReHeating {
             get {
                 object obj = ResourceManager.GetObject("PCRC with ReHeating", resourceCulture);

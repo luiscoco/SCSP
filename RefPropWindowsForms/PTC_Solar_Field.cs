@@ -131,6 +131,8 @@ namespace RefPropWindowsForms
         public RCMCI_with_ReHeating_new_proposed_configuration Punterociclo_24;
         public RCMCI_with_Two_Intercooling_without_Reheating Punterociclo_28;
 
+        public SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating Punterociclo_29;
+
         //public PCRCMCI_optimal Punterociclo_13;
         public PCRCMCI Punterociclo_14;
         //public PCRCMCI_optimal_without_RH Punterociclo_15;
@@ -478,6 +480,14 @@ namespace RefPropWindowsForms
             SF_Type_variable = SF_Type;
             Brayton_cycle_type_variable = Brayton_cycle_type;
             Punterociclo_14 = Punterociclo14;
+        }
+
+        // PTC_Solar_Field_ciclo_SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating: Brayton_cycle_type_variable = 29
+        public void PTC_Solar_Field_ciclo_SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating(SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating Punterociclo29, Double Brayton_cycle_type, String SF_Type)
+        {
+            SF_Type_variable = SF_Type;
+            Brayton_cycle_type_variable = Brayton_cycle_type;
+            Punterociclo_29 = Punterociclo29;
         }
 
         //Calculate PHX Design
@@ -1232,6 +1242,25 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "ReHeating3_SF")
                 {
                     textBox37.Text = Convert.ToString(Punterociclo_20.temp218 + Convert.ToDouble(textBox107.Text));
+                }
+            }
+
+            // SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating: Brayton_cycle_type_variable = 29
+            else if (this.Brayton_cycle_type_variable == 29)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_29.temp28 + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_29.PHX1_temp_out + Convert.ToDouble(textBox107.Text));
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    textBox37.Text = Convert.ToString(Punterociclo_29.temp28 + Convert.ToDouble(textBox107.Text));
                 }
             }
 
@@ -3512,6 +3541,32 @@ namespace RefPropWindowsForms
                 }
             }
 
+            // SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating: Brayton_cycle_type_variable = 29
+            else if (this.Brayton_cycle_type_variable == 29)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_29.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "ReHeating_SF")
+                {
+                    Punterociclo_29.ReHeating_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF1_Dual_Loop")
+                {
+                    Punterociclo_29.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption;
+                    Punterociclo_29.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1 = Electrical_Consumption;
+                }
+
+                else if (this.SF_Type_variable == "Main_SF2_Dual_Loop")
+                {
+                    Punterociclo_29.Main_SF_Pump_Electrical_Consumption = Electrical_Consumption + Punterociclo_4.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_1;
+                    Punterociclo_29.Dual_Loop_PTC_Main_SF_Pump_Motor_Elec_Consump_2 = Electrical_Consumption;
+                }
+            }
+
             Name_Plate_Design_Point_Load = Convert.ToDouble(textBox95.Text);
                 textBox96.Text = Convert.ToString(Electrical_Consumption * Name_Plate_Design_Point_Load);
 
@@ -3877,6 +3932,15 @@ namespace RefPropWindowsForms
                 else if (this.SF_Type_variable == "ReHeating3_SF")
                 {
                     Punterociclo_20.PTC_ReHeating3_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
+                }
+            }
+
+            //SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating
+            else if (this.Brayton_cycle_type_variable == 29)
+            {
+                if (this.SF_Type_variable == "Main_SF")
+                {
+                    Punterociclo_29.PTC_Main_SF_Effective_Apperture_Area = PTC_SF_Effective_Apperture_Area;
                 }
             }
 

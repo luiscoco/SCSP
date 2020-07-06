@@ -581,6 +581,8 @@ namespace RefPropWindowsForms
             button6.Enabled = true;
             button7.Enabled = true;
             button12.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
         }
 
         //Set critical conditions
@@ -785,6 +787,163 @@ namespace RefPropWindowsForms
             LT_Recuperator.HeatExchangerUA1(luis);
             LT_Recuperator.Calculate_HX();
             LT_Recuperator.Show();
+        }
+
+        //Primary Heat Exchanger and Solar Field
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (comboBox4.Text == "Parabolic")
+            {
+                SF_PHX = new PTC_Solar_Field();
+
+                if (comboBox5.Text == "Solar Salt")
+                {
+                    SF_PHX.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox5.Text == "Hitec XL")
+                {
+                    SF_PHX.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox5.Text == "Therminol VP1")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox5.Text == "Syltherm_800")
+                {
+                    SF_PHX.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox5.Text == "Dowtherm_A")
+                {
+                    SF_PHX.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox5.Text == "Therminol_75")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox5.Text == "Liquid Sodium")
+                {
+                    SF_PHX.comboBox1.Text = "Liquid Sodium";
+                }
+
+                SF_PHX.textBox27.Text = "0.141";
+                SF_PHX.textBox28.Text = "6.48e-9";
+
+                SF_PHX.textBox41.Text = Convert.ToString(PHX_Q2);
+                SF_PHX.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX.textBox38.Text = Convert.ToString(temp27);
+                SF_PHX.textBox36.Text = Convert.ToString(pres27);
+                SF_PHX.textBox35.Text = Convert.ToString(pres28);
+                SF_PHX.PTC_Solar_Field_uno(luis);
+                SF_PHX.PTC_Solar_Field_ciclo_SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating(this, 29, "Main_SF");
+                SF_PHX.button3_Click(this, e);
+                SF_PHX.Show();
+            }
+
+            else if (comboBox4.Text == "Parabolic with cavity receiver (Norwich)")
+            {
+                SF_PHX = new PTC_Solar_Field();
+
+                if (comboBox5.Text == "Solar Salt")
+                {
+                    SF_PHX.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox5.Text == "Hitec XL")
+                {
+                    SF_PHX.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox5.Text == "Therminol VP1")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox5.Text == "Syltherm_800")
+                {
+                    SF_PHX.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox5.Text == "Dowtherm_A")
+                {
+                    SF_PHX.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox5.Text == "Therminol_75")
+                {
+                    SF_PHX.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox5.Text == "Liquid Sodium")
+                {
+                    SF_PHX.comboBox1.Text = "Liquid Sodium";
+                }
+
+                SF_PHX.textBox27.Text = "0.3";
+                SF_PHX.textBox28.Text = "3.25e-9";
+
+                SF_PHX.textBox41.Text = Convert.ToString(PHX_Q2);
+                SF_PHX.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX.textBox38.Text = Convert.ToString(temp27);
+                SF_PHX.textBox36.Text = Convert.ToString(pres27);
+                SF_PHX.textBox35.Text = Convert.ToString(pres28);
+                SF_PHX.PTC_Solar_Field_uno(luis);
+                SF_PHX.PTC_Solar_Field_ciclo_SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating(this, 4, "Main_SF");
+                SF_PHX.button3_Click(this, e);
+                SF_PHX.Show();
+            }
+
+            else if (comboBox4.Text == "Fresnel")
+            {
+                SF_PHX_LF = new Fresnel();
+
+                if (comboBox5.Text == "Solar Salt")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Solar Salt";
+                }
+                else if (comboBox5.Text == "Hitec XL")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Hitec XL";
+                }
+                else if (comboBox5.Text == "Therminol VP1")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Therminol VP1";
+                }
+                else if (comboBox5.Text == "Syltherm_800")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Syltherm_800";
+                }
+                else if (comboBox5.Text == "Dowtherm_A")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Dowtherm_A";
+                }
+                else if (comboBox5.Text == "Therminol_75")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Therminol_75";
+                }
+                else if (comboBox5.Text == "Liquid Sodium")
+                {
+                    SF_PHX_LF.comboBox1.Text = "Liquid Sodium";
+                }
+
+                SF_PHX_LF.textBox41.Text = Convert.ToString(PHX_Q2);
+                SF_PHX_LF.textBox40.Text = Convert.ToString(massflow2);
+                SF_PHX_LF.textBox38.Text = Convert.ToString(temp27);
+                SF_PHX_LF.textBox36.Text = Convert.ToString(pres27);
+                SF_PHX_LF.textBox35.Text = Convert.ToString(pres28);
+                SF_PHX_LF.LF_Solar_Field_uno(luis);
+                SF_PHX_LF.LF_Solar_Field_ciclo_SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating(this, 29, "Main_SF");
+                SF_PHX_LF.Load_ComboBox7();
+                SF_PHX_LF.button3_Click(this, e);
+                SF_PHX_LF.Show();
+            }
+        }
+
+        //PreCooler
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Precooler_dialog = new PreeCooler();
+            Precooler_dialog.textBox2.Text = Convert.ToString(PC_Q2);
+            Precooler_dialog.textBox4.Text = Convert.ToString((massflow2 * (1 - recomp_frac1))*(1-recomp_frac2));
+            Precooler_dialog.textBox6.Text = Convert.ToString(temp212);
+            Precooler_dialog.textBox12.Text = Convert.ToString(pres212);
+            Precooler_dialog.textBox8.Text = Convert.ToString(pres21);
+            Precooler_dialog.PreeCooler1(luis);
+            Precooler_dialog.Calculate_Cooler();
+            Precooler_dialog.Show();
         }
     }
 }

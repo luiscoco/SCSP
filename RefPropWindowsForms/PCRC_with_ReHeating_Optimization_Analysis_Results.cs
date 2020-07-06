@@ -233,11 +233,18 @@ namespace RefPropWindowsForms
 
                     Func<double[], double> funcion = delegate (double[] variables)
                     {
-                        puntero_aplicacion.luis.RecompCycle_PCRC_with_Reheating(puntero_aplicacion.luis, ref cicloPCRC_withRH, puntero_aplicacion.w_dot_net2,
-                        puntero_aplicacion.t_mc_in2, puntero_aplicacion.t_t_in2, puntero_aplicacion.t_rht_in2, variables[3], puntero_aplicacion.p_mc_in2, puntero_aplicacion.p_mc_out2, variables[1], puntero_aplicacion.t_pc_in2, variables[2],
-                        puntero_aplicacion.ua_lt2, puntero_aplicacion.ua_ht2, puntero_aplicacion.eta_mc2, puntero_aplicacion.eta_rc2, puntero_aplicacion.eta_pc2, puntero_aplicacion.eta_t2, puntero_aplicacion.eta_trh2, puntero_aplicacion.n_sub_hxrs2,
-                        variables[0], puntero_aplicacion.tol2, puntero_aplicacion.eta_thermal2, -puntero_aplicacion.dp2_lt1, -puntero_aplicacion.dp2_lt2, -puntero_aplicacion.dp2_ht1, -puntero_aplicacion.dp2_ht2,
-                        -puntero_aplicacion.dp2_pc1, -puntero_aplicacion.dp2_pc2, -puntero_aplicacion.dp2_phx1, -puntero_aplicacion.dp2_phx2, -puntero_aplicacion.dp2_rhx1, -puntero_aplicacion.dp2_rhx2, -puntero_aplicacion.dp2_cooler1, -puntero_aplicacion.dp2_cooler2);
+                        puntero_aplicacion.luis.RecompCycle_PCRC_with_Reheating(puntero_aplicacion.luis, ref cicloPCRC_withRH,
+                        puntero_aplicacion.w_dot_net2, puntero_aplicacion.t_mc_in2, puntero_aplicacion.t_t_in2, 
+                        puntero_aplicacion.t_rht_in2, variables[3], puntero_aplicacion.p_mc_in2, puntero_aplicacion.p_mc_out2,
+                        variables[1], puntero_aplicacion.t_pc_in2, variables[2],
+                        puntero_aplicacion.ua_lt2, puntero_aplicacion.ua_ht2, puntero_aplicacion.eta_mc2, 
+                        puntero_aplicacion.eta_rc2, puntero_aplicacion.eta_pc2, puntero_aplicacion.eta_t2, 
+                        puntero_aplicacion.eta_trh2, puntero_aplicacion.n_sub_hxrs2,
+                        variables[0], puntero_aplicacion.tol2, puntero_aplicacion.eta_thermal2, 
+                        -puntero_aplicacion.dp2_lt1, -puntero_aplicacion.dp2_lt2, -puntero_aplicacion.dp2_ht1,
+                        -puntero_aplicacion.dp2_ht2, -puntero_aplicacion.dp2_pc1, -puntero_aplicacion.dp2_pc2, 
+                        -puntero_aplicacion.dp2_phx1, -puntero_aplicacion.dp2_phx2, -puntero_aplicacion.dp2_rhx1, 
+                        -puntero_aplicacion.dp2_rhx2, -puntero_aplicacion.dp2_cooler1, -puntero_aplicacion.dp2_cooler2);
 
                         counter++;
 

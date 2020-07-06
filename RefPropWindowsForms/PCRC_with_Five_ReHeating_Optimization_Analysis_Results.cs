@@ -23,9 +23,9 @@ namespace RefPropWindowsForms
 {
     public partial class PCRC_with_Five_ReHeating_Optimization_Analysis_Results : Form
     {
-        PCRC_with_Three_ReHeating puntero_aplicacion;
+        PCRC_with_Five_ReHeatings puntero_aplicacion;
 
-        public PCRC_with_Five_ReHeating_Optimization_Analysis_Results(PCRC_with_Three_ReHeating puntero1)
+        public PCRC_with_Five_ReHeating_Optimization_Analysis_Results(PCRC_with_Five_ReHeatings puntero1)
         {
             puntero_aplicacion = puntero1;
             InitializeComponent();
@@ -86,10 +86,9 @@ namespace RefPropWindowsForms
                 {
                     puntero_aplicacion.category = RefrigerantCategory.NewMixture;
                     puntero_aplicacion.luis.core1(puntero_aplicacion.comboBox2.Text + "=" + puntero_aplicacion.textBox35.Text + "," +
-                                                  puntero_aplicacion.comboBox16.Text + "=" + puntero_aplicacion.textBox36.Text + "," +
-                                                  puntero_aplicacion.comboBox18.Text + "=" + puntero_aplicacion.textBox87.Text + "," +
-                                                  puntero_aplicacion.comboBox17.Text + "=" + puntero_aplicacion.textBox88.Text,
-                                                  puntero_aplicacion.category);
+                               puntero_aplicacion.comboBox16.Text + "=" + puntero_aplicacion.textBox36.Text + "," +
+                               puntero_aplicacion.comboBox18.Text + "=" + puntero_aplicacion.textBox87.Text + "," +
+                               puntero_aplicacion.comboBox17.Text + "=" + puntero_aplicacion.textBox88.Text, puntero_aplicacion.category);
                 }
 
                 if (puntero_aplicacion.comboBox1.Text == "PredefinedMixture")
@@ -137,6 +136,10 @@ namespace RefPropWindowsForms
                 puntero_aplicacion.t_rht2_in2 = Convert.ToDouble(puntero_aplicacion.textBox90.Text);
                 puntero_aplicacion.p_rhx3_in2 = Convert.ToDouble(puntero_aplicacion.textBox100.Text);
                 puntero_aplicacion.t_rht3_in2 = Convert.ToDouble(puntero_aplicacion.textBox99.Text);
+                puntero_aplicacion.p_rhx4_in2 = Convert.ToDouble(puntero_aplicacion.textBox115.Text);
+                puntero_aplicacion.t_rht4_in2 = Convert.ToDouble(puntero_aplicacion.textBox114.Text);
+                puntero_aplicacion.p_rhx5_in2 = Convert.ToDouble(puntero_aplicacion.textBox118.Text);
+                puntero_aplicacion.t_rht5_in2 = Convert.ToDouble(puntero_aplicacion.textBox117.Text);
                 puntero_aplicacion.dp2_lt1 = Convert.ToDouble(puntero_aplicacion.textBox5.Text);
                 puntero_aplicacion.dp2_ht1 = Convert.ToDouble(puntero_aplicacion.textBox12.Text);
                 puntero_aplicacion.dp2_pc1 = Convert.ToDouble(puntero_aplicacion.textBox11.Text);
@@ -144,6 +147,8 @@ namespace RefPropWindowsForms
                 puntero_aplicacion.dp2_rhx11 = Convert.ToDouble(puntero_aplicacion.textBox9.Text);
                 puntero_aplicacion.dp2_rhx21 = Convert.ToDouble(puntero_aplicacion.textBox89.Text);
                 puntero_aplicacion.dp2_rhx31 = Convert.ToDouble(puntero_aplicacion.textBox98.Text);
+                puntero_aplicacion.dp2_rhx41 = Convert.ToDouble(puntero_aplicacion.textBox116.Text);
+                puntero_aplicacion.dp2_rhx51 = Convert.ToDouble(puntero_aplicacion.textBox119.Text);
                 puntero_aplicacion.dp2_lt2 = Convert.ToDouble(puntero_aplicacion.textBox26.Text);
                 puntero_aplicacion.dp2_ht2 = Convert.ToDouble(puntero_aplicacion.textBox25.Text);
                 puntero_aplicacion.dp2_cooler2 = Convert.ToDouble(puntero_aplicacion.textBox27.Text);
@@ -157,12 +162,14 @@ namespace RefPropWindowsForms
                 puntero_aplicacion.m_eta_trh12 = Convert.ToDouble(puntero_aplicacion.textBox18.Text);
                 puntero_aplicacion.m_eta_trh22 = Convert.ToDouble(puntero_aplicacion.textBox92.Text);
                 puntero_aplicacion.m_eta_trh32 = Convert.ToDouble(puntero_aplicacion.textBox97.Text);
+                puntero_aplicacion.m_eta_trh42 = Convert.ToDouble(puntero_aplicacion.textBox113.Text);
+                puntero_aplicacion.m_eta_trh52 = Convert.ToDouble(puntero_aplicacion.textBox120.Text);
                 puntero_aplicacion.n_sub_hxrs2 = Convert.ToInt64(puntero_aplicacion.textBox20.Text);
                 puntero_aplicacion.tol2 = Convert.ToDouble(puntero_aplicacion.textBox21.Text);
 
                 puntero_aplicacion.luis.wmm = puntero_aplicacion.luis.working_fluid.MolecularWeight;
 
-                core.PCRCwithThreeReheating cicloPCRC_withThreeRH = new core.PCRCwithThreeReheating();
+                core.PCRCwithFiveReheating cicloPCRC_withFiveRH = new core.PCRCwithFiveReheating();
 
                 double UA_Total = puntero_aplicacion.ua_lt2 + puntero_aplicacion.ua_ht2;
 
@@ -176,6 +183,8 @@ namespace RefPropWindowsForms
                 List<Double> p_rhx1_in2_list = new List<Double>();
                 List<Double> p_rhx2_in2_list = new List<Double>();
                 List<Double> p_rhx3_in2_list = new List<Double>();
+                List<Double> p_rhx4_in2_list = new List<Double>();
+                List<Double> p_rhx5_in2_list = new List<Double>();
                 List<Double> eta_thermal2_list = new List<Double>();
                 List<Double> ua_HT_list = new List<Double>();
                 List<Double> ua_LT_list = new List<Double>();
@@ -232,156 +241,176 @@ namespace RefPropWindowsForms
                 xlWorkSheet1.Cells[4, 7] = "P_rhx1(kPa)";
                 xlWorkSheet1.Cells[4, 8] = "P_rhx2(kPa)";
                 xlWorkSheet1.Cells[4, 9] = "P_rhx3(kPa)";
-                xlWorkSheet1.Cells[4, 10] = "Eff.(%)";
-                xlWorkSheet1.Cells[4, 11] = "LTR Eff.(%)";
-                xlWorkSheet1.Cells[4, 12] = "LTR Pinch(ºC)";
-                xlWorkSheet1.Cells[4, 13] = "HTR Eff.(%)";
-                xlWorkSheet1.Cells[4, 14] = "HTR Pinch(ºC)";
+                xlWorkSheet1.Cells[4, 10] = "P_rhx4(kPa)";
+                xlWorkSheet1.Cells[4, 11] = "P_rhx5(kPa)";
+                xlWorkSheet1.Cells[4, 12] = "Eff.(%)";
+                xlWorkSheet1.Cells[4, 13] = "LTR Eff.(%)";
+                xlWorkSheet1.Cells[4, 14] = "LTR Pinch(ºC)";
+                xlWorkSheet1.Cells[4, 15] = "HTR Eff.(%)";
+                xlWorkSheet1.Cells[4, 16] = "HTR Pinch(ºC)";
 
-                using (var solver = new NLoptSolver(algorithm_type, 6, 0.01, 10000))
+                using (var solver = new NLoptSolver(algorithm_type, 8, 0.000001, 10000))
                 {
+                    solver.SetLowerBounds(new[] { 0.0, initial_CIP_value , initial_CIP_value + 1000,
+                    initial_CIP_value + 7000, initial_CIP_value + 6000, initial_CIP_value + 5000,
+                    initial_CIP_value + 4000, initial_CIP_value + 3000});
 
-                    solver.SetLowerBounds(new[] { 0.1, initial_CIP_value, (initial_CIP_value + 500), initial_CIP_value + 3000, initial_CIP_value + 2000, initial_CIP_value + 1000 });
-                    solver.SetUpperBounds(new[] { 1.0, 125000, (puntero_aplicacion.p_mc_out2 / 1.5), puntero_aplicacion.p_mc_out2 - 1000, puntero_aplicacion.p_mc_out2 - 2000, puntero_aplicacion.p_mc_out2 - 3000 });
+                    solver.SetUpperBounds(new[] { 1.0, puntero_aplicacion.p_mc_out2, puntero_aplicacion.p_mc_out2,
+                    puntero_aplicacion.p_mc_out2 , puntero_aplicacion.p_mc_out2, puntero_aplicacion.p_mc_out2,
+                    puntero_aplicacion.p_mc_out2, puntero_aplicacion.p_mc_out2});
 
-                    solver.SetInitialStepSize(new[] { 0.05, 100, 100, 1000, 1000, 1000 });
+                    solver.SetInitialStepSize(new[] { 0.05, 100, 100, 1000, 1000, 1000, 1000, 1000 });
 
-                    var initialValue = new[] { 0.2, initial_CIP_value, (initial_CIP_value + 500), 15000, 13000, 11000 };
+                    var initialValue = new[] { 0.25, initial_CIP_value, initial_CIP_value + 2000, 18000, 17000, 16000, 15000, 14000};
 
                     Func<double[], double> funcion = delegate (double[] variables)
-                    {
-
-                        puntero_aplicacion.luis.RecompCycle_PCRC_withThreeReheating(puntero_aplicacion.luis,
-                        ref cicloPCRC_withThreeRH, puntero_aplicacion.m_w_dot_net2,
-                        puntero_aplicacion.t_mc_in2, puntero_aplicacion.t_t_in2,
-                        puntero_aplicacion.t_rht1_in2, variables[3],
-                        puntero_aplicacion.t_rht2_in2, variables[4],
-                        puntero_aplicacion.t_rht3_in2, variables[5],
-                        variables[2], puntero_aplicacion.p_mc_out2, variables[1],
-                        puntero_aplicacion.t_pc_in2, variables[2],
-                        puntero_aplicacion.ua_lt2, puntero_aplicacion.ua_ht2, puntero_aplicacion.m_eta_mc2,
-                        puntero_aplicacion.m_eta_rc2, puntero_aplicacion.m_eta_pc2, puntero_aplicacion.m_eta_t2,
-                        puntero_aplicacion.m_eta_trh12, puntero_aplicacion.m_eta_trh22,
-                        puntero_aplicacion.m_eta_trh32, puntero_aplicacion.n_sub_hxrs2,
-                        variables[0], puntero_aplicacion.tol2,
-                        puntero_aplicacion.eta_thermal2, -puntero_aplicacion.dp2_lt1,
-                        -puntero_aplicacion.dp2_lt2, -puntero_aplicacion.dp2_ht1, -puntero_aplicacion.dp2_ht2,
-                        -puntero_aplicacion.dp2_pc1, -puntero_aplicacion.dp2_pc2,
-                        -puntero_aplicacion.dp2_phx1, -puntero_aplicacion.dp2_phx2,
-                        -puntero_aplicacion.dp2_rhx11, -puntero_aplicacion.dp2_rhx12,
-                        -puntero_aplicacion.dp2_rhx21, -puntero_aplicacion.dp2_rhx22,
-                        -puntero_aplicacion.dp2_rhx31, -puntero_aplicacion.dp2_rhx32,
-                        -puntero_aplicacion.dp2_cooler1, -puntero_aplicacion.dp2_cooler2);
+                    {                        
+                        puntero_aplicacion.luis.RecompCycle_PCRC_withFiveReheating(puntero_aplicacion.luis,
+                        ref cicloPCRC_withFiveRH, puntero_aplicacion.m_w_dot_net2, puntero_aplicacion.t_mc_in2,
+                        puntero_aplicacion.t_t_in2, puntero_aplicacion.t_rht1_in2, variables[3],
+                        puntero_aplicacion.t_rht2_in2, variables[4], puntero_aplicacion.t_rht3_in2,
+                        variables[5], puntero_aplicacion.t_rht4_in2, variables[6],
+                        puntero_aplicacion.t_rht5_in2, variables[7], puntero_aplicacion.p_mc_in2,
+                        puntero_aplicacion.p_mc_out2, variables[1], puntero_aplicacion.t_pc_in2,
+                        variables[2], puntero_aplicacion.ua_lt2, puntero_aplicacion.ua_ht2,
+                        puntero_aplicacion.m_eta_mc2, puntero_aplicacion.m_eta_rc2, puntero_aplicacion.m_eta_pc2,
+                        puntero_aplicacion.m_eta_t2, puntero_aplicacion.m_eta_trh12, puntero_aplicacion.m_eta_trh22,
+                        puntero_aplicacion.m_eta_trh32, puntero_aplicacion.m_eta_trh42, puntero_aplicacion.m_eta_trh52,
+                        puntero_aplicacion.n_sub_hxrs2, variables[0], puntero_aplicacion.tol2,
+                        puntero_aplicacion.eta_thermal2, -puntero_aplicacion.dp2_lt1, -puntero_aplicacion.dp2_lt2, 
+                        -puntero_aplicacion.dp2_ht1, -puntero_aplicacion.dp2_ht2, -puntero_aplicacion.dp2_pc1, 
+                        -puntero_aplicacion.dp2_pc2, -puntero_aplicacion.dp2_phx1, -puntero_aplicacion.dp2_phx2, 
+                        -puntero_aplicacion.dp2_rhx11, -puntero_aplicacion.dp2_rhx12, -puntero_aplicacion.dp2_rhx21,
+                        -puntero_aplicacion.dp2_rhx22, -puntero_aplicacion.dp2_rhx31, -puntero_aplicacion.dp2_rhx32,
+                        -puntero_aplicacion.dp2_rhx41, -puntero_aplicacion.dp2_rhx42, -puntero_aplicacion.dp2_rhx51, 
+                        -puntero_aplicacion.dp2_rhx52, -puntero_aplicacion.dp2_cooler1, -puntero_aplicacion.dp2_cooler2);
 
                         counter++;
 
-                        puntero_aplicacion.massflow2 = cicloPCRC_withThreeRH.m_dot_turbine;
-                        puntero_aplicacion.w_dot_net2 = cicloPCRC_withThreeRH.W_dot_net;
-                        puntero_aplicacion.eta_thermal2 = cicloPCRC_withThreeRH.eta_thermal;
-                        puntero_aplicacion.recomp_frac2 = variables[0];
+                        puntero_aplicacion.massflow2 = cicloPCRC_withFiveRH.m_dot_turbine;
+                        puntero_aplicacion.w_dot_net2 = cicloPCRC_withFiveRH.W_dot_net;
+                        puntero_aplicacion.eta_thermal2 = cicloPCRC_withFiveRH.eta_thermal;
+                        puntero_aplicacion.m_recomp_frac2 = variables[0];
                         puntero_aplicacion.p_pc_in2 = variables[1];
                         puntero_aplicacion.p_pc_out2 = variables[2];
+                        puntero_aplicacion.p_mc_in2 = variables[2];
                         puntero_aplicacion.p_rhx1_in2 = variables[3];
                         puntero_aplicacion.p_rhx2_in2 = variables[4];
                         puntero_aplicacion.p_rhx3_in2 = variables[5];
+                        puntero_aplicacion.p_rhx4_in2 = variables[6];
+                        puntero_aplicacion.p_rhx5_in2 = variables[7];
 
-                        puntero_aplicacion.temp21 = cicloPCRC_withThreeRH.temp[0];
-                        puntero_aplicacion.temp22 = cicloPCRC_withThreeRH.temp[1];
-                        puntero_aplicacion.temp23 = cicloPCRC_withThreeRH.temp[2];
-                        puntero_aplicacion.temp24 = cicloPCRC_withThreeRH.temp[3];
-                        puntero_aplicacion.temp25 = cicloPCRC_withThreeRH.temp[4];
-                        puntero_aplicacion.temp26 = cicloPCRC_withThreeRH.temp[5];
-                        puntero_aplicacion.temp27 = cicloPCRC_withThreeRH.temp[6];
-                        puntero_aplicacion.temp28 = cicloPCRC_withThreeRH.temp[7];
-                        puntero_aplicacion.temp29 = cicloPCRC_withThreeRH.temp[8];
-                        puntero_aplicacion.temp210 = cicloPCRC_withThreeRH.temp[9];
-                        puntero_aplicacion.temp211 = cicloPCRC_withThreeRH.temp[10];
-                        puntero_aplicacion.temp212 = cicloPCRC_withThreeRH.temp[11];
-                        puntero_aplicacion.temp213 = cicloPCRC_withThreeRH.temp[12];
-                        puntero_aplicacion.temp214 = cicloPCRC_withThreeRH.temp[13];
-                        puntero_aplicacion.temp215 = cicloPCRC_withThreeRH.temp[14];
-                        puntero_aplicacion.temp216 = cicloPCRC_withThreeRH.temp[15];
-                        puntero_aplicacion.temp217 = cicloPCRC_withThreeRH.temp[16];
-                        puntero_aplicacion.temp218 = cicloPCRC_withThreeRH.temp[17];
+                        puntero_aplicacion.temp21 = cicloPCRC_withFiveRH.temp[0];
+                        puntero_aplicacion.temp22 = cicloPCRC_withFiveRH.temp[1];
+                        puntero_aplicacion.temp23 = cicloPCRC_withFiveRH.temp[2];
+                        puntero_aplicacion.temp24 = cicloPCRC_withFiveRH.temp[3];
+                        puntero_aplicacion.temp25 = cicloPCRC_withFiveRH.temp[4];
+                        puntero_aplicacion.temp26 = cicloPCRC_withFiveRH.temp[5];
+                        puntero_aplicacion.temp27 = cicloPCRC_withFiveRH.temp[6];
+                        puntero_aplicacion.temp28 = cicloPCRC_withFiveRH.temp[7];
+                        puntero_aplicacion.temp29 = cicloPCRC_withFiveRH.temp[8];
+                        puntero_aplicacion.temp210 = cicloPCRC_withFiveRH.temp[9];
+                        puntero_aplicacion.temp211 = cicloPCRC_withFiveRH.temp[10];
+                        puntero_aplicacion.temp212 = cicloPCRC_withFiveRH.temp[11];
+                        puntero_aplicacion.temp213 = cicloPCRC_withFiveRH.temp[12];
+                        puntero_aplicacion.temp214 = cicloPCRC_withFiveRH.temp[13];
+                        puntero_aplicacion.temp215 = cicloPCRC_withFiveRH.temp[14];
+                        puntero_aplicacion.temp216 = cicloPCRC_withFiveRH.temp[15];
+                        puntero_aplicacion.temp217 = cicloPCRC_withFiveRH.temp[16];
+                        puntero_aplicacion.temp218 = cicloPCRC_withFiveRH.temp[17];
+                        puntero_aplicacion.temp219 = cicloPCRC_withFiveRH.temp[18];
+                        puntero_aplicacion.temp220 = cicloPCRC_withFiveRH.temp[19];
+                        puntero_aplicacion.temp221 = cicloPCRC_withFiveRH.temp[20];
+                        puntero_aplicacion.temp222 = cicloPCRC_withFiveRH.temp[21];
 
-                        puntero_aplicacion.pres21 = cicloPCRC_withThreeRH.pres[0];
-                        puntero_aplicacion.pres22 = cicloPCRC_withThreeRH.pres[1];
-                        puntero_aplicacion.pres23 = cicloPCRC_withThreeRH.pres[2];
-                        puntero_aplicacion.pres24 = cicloPCRC_withThreeRH.pres[3];
-                        puntero_aplicacion.pres25 = cicloPCRC_withThreeRH.pres[4];
-                        puntero_aplicacion.pres26 = cicloPCRC_withThreeRH.pres[5];
-                        puntero_aplicacion.pres27 = cicloPCRC_withThreeRH.pres[6];
-                        puntero_aplicacion.pres28 = cicloPCRC_withThreeRH.pres[7];
-                        puntero_aplicacion.pres29 = cicloPCRC_withThreeRH.pres[8];
-                        puntero_aplicacion.pres210 = cicloPCRC_withThreeRH.pres[9];
-                        puntero_aplicacion.pres211 = cicloPCRC_withThreeRH.pres[10];
-                        puntero_aplicacion.pres212 = cicloPCRC_withThreeRH.pres[11];
-                        puntero_aplicacion.pres213 = cicloPCRC_withThreeRH.pres[12];
-                        puntero_aplicacion.pres214 = cicloPCRC_withThreeRH.pres[13];
-                        puntero_aplicacion.pres215 = cicloPCRC_withThreeRH.pres[14];
-                        puntero_aplicacion.pres216 = cicloPCRC_withThreeRH.pres[15];
-                        puntero_aplicacion.pres217 = cicloPCRC_withThreeRH.pres[16];
-                        puntero_aplicacion.pres218 = cicloPCRC_withThreeRH.pres[17];
+                        puntero_aplicacion.pres21 = cicloPCRC_withFiveRH.pres[0];
+                        puntero_aplicacion.pres22 = cicloPCRC_withFiveRH.pres[1];
+                        puntero_aplicacion.pres23 = cicloPCRC_withFiveRH.pres[2];
+                        puntero_aplicacion.pres24 = cicloPCRC_withFiveRH.pres[3];
+                        puntero_aplicacion.pres25 = cicloPCRC_withFiveRH.pres[4];
+                        puntero_aplicacion.pres26 = cicloPCRC_withFiveRH.pres[5];
+                        puntero_aplicacion.pres27 = cicloPCRC_withFiveRH.pres[6];
+                        puntero_aplicacion.pres28 = cicloPCRC_withFiveRH.pres[7];
+                        puntero_aplicacion.pres29 = cicloPCRC_withFiveRH.pres[8];
+                        puntero_aplicacion.pres210 = cicloPCRC_withFiveRH.pres[9];
+                        puntero_aplicacion.pres211 = cicloPCRC_withFiveRH.pres[10];
+                        puntero_aplicacion.pres212 = cicloPCRC_withFiveRH.pres[11];
+                        puntero_aplicacion.pres213 = cicloPCRC_withFiveRH.pres[12];
+                        puntero_aplicacion.pres214 = cicloPCRC_withFiveRH.pres[13];
+                        puntero_aplicacion.pres215 = cicloPCRC_withFiveRH.pres[14];
+                        puntero_aplicacion.pres216 = cicloPCRC_withFiveRH.pres[15];
+                        puntero_aplicacion.pres217 = cicloPCRC_withFiveRH.pres[16];
+                        puntero_aplicacion.pres218 = cicloPCRC_withFiveRH.pres[17];
+                        puntero_aplicacion.pres219 = cicloPCRC_withFiveRH.pres[18];
+                        puntero_aplicacion.pres220 = cicloPCRC_withFiveRH.pres[19];
+                        puntero_aplicacion.pres221 = cicloPCRC_withFiveRH.pres[20];
+                        puntero_aplicacion.pres222 = cicloPCRC_withFiveRH.pres[21];
 
-                        puntero_aplicacion.PHX1 = cicloPCRC_withThreeRH.PHX.Q_dot;
-                        puntero_aplicacion.RHX1 = cicloPCRC_withThreeRH.RHX1.Q_dot;
-                        puntero_aplicacion.RHX2 = cicloPCRC_withThreeRH.RHX2.Q_dot;
-                        puntero_aplicacion.RHX3 = cicloPCRC_withThreeRH.RHX3.Q_dot;
+                        puntero_aplicacion.PHX1 = cicloPCRC_withFiveRH.PHX.Q_dot;
+                        puntero_aplicacion.RHX1 = cicloPCRC_withFiveRH.RHX1.Q_dot;
+                        puntero_aplicacion.RHX2 = cicloPCRC_withFiveRH.RHX2.Q_dot;
+                        puntero_aplicacion.RHX3 = cicloPCRC_withFiveRH.RHX3.Q_dot;
+                        puntero_aplicacion.RHX4 = cicloPCRC_withFiveRH.RHX4.Q_dot;
+                        puntero_aplicacion.RHX5 = cicloPCRC_withFiveRH.RHX5.Q_dot;
 
-                        puntero_aplicacion.LT_Q = cicloPCRC_withThreeRH.LT.Q_dot;
-                        puntero_aplicacion.LT_mdotc = cicloPCRC_withThreeRH.LT.m_dot_design[0];
-                        puntero_aplicacion.LT_mdoth = cicloPCRC_withThreeRH.LT.m_dot_design[1];
-                        puntero_aplicacion.LT_Tcin = cicloPCRC_withThreeRH.LT.T_c_in;
-                        puntero_aplicacion.LT_Thin = cicloPCRC_withThreeRH.LT.T_h_in;
-                        puntero_aplicacion.LT_Pcin = cicloPCRC_withThreeRH.LT.P_c_in;
-                        puntero_aplicacion.LT_Phin = cicloPCRC_withThreeRH.LT.P_h_in;
-                        puntero_aplicacion.LT_Pcout = cicloPCRC_withThreeRH.LT.P_c_out;
-                        puntero_aplicacion.LT_Phout = cicloPCRC_withThreeRH.LT.P_h_out;
-                        puntero_aplicacion.LT_Effc = cicloPCRC_withThreeRH.LT.eff;
+                        puntero_aplicacion.LT_Q = cicloPCRC_withFiveRH.LT.Q_dot;
+                        puntero_aplicacion.LT_mdotc = cicloPCRC_withFiveRH.LT.m_dot_design[0];
+                        puntero_aplicacion.LT_mdoth = cicloPCRC_withFiveRH.LT.m_dot_design[1];
+                        puntero_aplicacion.LT_Tcin = cicloPCRC_withFiveRH.LT.T_c_in;
+                        puntero_aplicacion.LT_Thin = cicloPCRC_withFiveRH.LT.T_h_in;
+                        puntero_aplicacion.LT_Pcin = cicloPCRC_withFiveRH.LT.P_c_in;
+                        puntero_aplicacion.LT_Phin = cicloPCRC_withFiveRH.LT.P_h_in;
+                        puntero_aplicacion.LT_Pcout = cicloPCRC_withFiveRH.LT.P_c_out;
+                        puntero_aplicacion.LT_Phout = cicloPCRC_withFiveRH.LT.P_h_out;
+                        puntero_aplicacion.LT_Effc = cicloPCRC_withFiveRH.LT.eff;
 
-                        puntero_aplicacion.HT_Q = cicloPCRC_withThreeRH.HT.Q_dot;
-                        puntero_aplicacion.HT_mdotc = cicloPCRC_withThreeRH.HT.m_dot_design[0];
-                        puntero_aplicacion.HT_mdoth = cicloPCRC_withThreeRH.HT.m_dot_design[1];
-                        puntero_aplicacion.HT_Tcin = cicloPCRC_withThreeRH.HT.T_c_in;
-                        puntero_aplicacion.HT_Thin = cicloPCRC_withThreeRH.HT.T_h_in;
-                        puntero_aplicacion.HT_Pcin = cicloPCRC_withThreeRH.HT.P_c_in;
-                        puntero_aplicacion.HT_Phin = cicloPCRC_withThreeRH.HT.P_h_in;
-                        puntero_aplicacion.HT_Pcout = cicloPCRC_withThreeRH.HT.P_c_out;
-                        puntero_aplicacion.HT_Phout = cicloPCRC_withThreeRH.HT.P_h_out;
-                        puntero_aplicacion.HT_Effc = cicloPCRC_withThreeRH.HT.eff;
+                        puntero_aplicacion.HT_Q = cicloPCRC_withFiveRH.HT.Q_dot;
+                        puntero_aplicacion.HT_mdotc = cicloPCRC_withFiveRH.HT.m_dot_design[0];
+                        puntero_aplicacion.HT_mdoth = cicloPCRC_withFiveRH.HT.m_dot_design[1];
+                        puntero_aplicacion.HT_Tcin = cicloPCRC_withFiveRH.HT.T_c_in;
+                        puntero_aplicacion.HT_Thin = cicloPCRC_withFiveRH.HT.T_h_in;
+                        puntero_aplicacion.HT_Pcin = cicloPCRC_withFiveRH.HT.P_c_in;
+                        puntero_aplicacion.HT_Phin = cicloPCRC_withFiveRH.HT.P_h_in;
+                        puntero_aplicacion.HT_Pcout = cicloPCRC_withFiveRH.HT.P_c_out;
+                        puntero_aplicacion.HT_Phout = cicloPCRC_withFiveRH.HT.P_h_out;
+                        puntero_aplicacion.HT_Effc = cicloPCRC_withFiveRH.HT.eff;
 
-                        puntero_aplicacion.PC1 = -cicloPCRC_withThreeRH.PC.Q_dot;
-                        puntero_aplicacion.COOLER1 = -cicloPCRC_withThreeRH.COOLER.Q_dot;
+                        puntero_aplicacion.PC1 = -cicloPCRC_withFiveRH.PC.Q_dot;
+                        puntero_aplicacion.COOLER1 = -cicloPCRC_withFiveRH.COOLER.Q_dot;
 
                         eta_thermal2_list.Add(puntero_aplicacion.eta_thermal2);
-                        recomp_frac2_list.Add(puntero_aplicacion.recomp_frac2);
+                        recomp_frac2_list.Add(puntero_aplicacion.m_recomp_frac2);
                         p_pc_in2_list.Add(puntero_aplicacion.p_pc_in2);
                         p_pc_out2_list.Add(puntero_aplicacion.p_pc_out2);
                         p_rhx1_in2_list.Add(puntero_aplicacion.p_rhx1_in2);
                         p_rhx2_in2_list.Add(puntero_aplicacion.p_rhx2_in2);
                         p_rhx3_in2_list.Add(puntero_aplicacion.p_rhx3_in2);
+                        p_rhx4_in2_list.Add(puntero_aplicacion.p_rhx4_in2);
+                        p_rhx5_in2_list.Add(puntero_aplicacion.p_rhx5_in2);
                         ua_HT_list.Add(puntero_aplicacion.ua_ht2);
                         ua_LT_list.Add(puntero_aplicacion.ua_lt2);
 
                         listBox1.Items.Add(counter.ToString());
                         listBox2.Items.Add(puntero_aplicacion.eta_thermal2.ToString());
-                        listBox3.Items.Add(puntero_aplicacion.recomp_frac2.ToString());
+                        listBox3.Items.Add(puntero_aplicacion.m_recomp_frac2.ToString());
                         listBox4.Items.Add(puntero_aplicacion.p_pc_in2.ToString());
                         listBox9.Items.Add(puntero_aplicacion.p_pc_out2.ToString());
                         listBox19.Items.Add(puntero_aplicacion.p_rhx1_in2.ToString());
                         listBox21.Items.Add(puntero_aplicacion.p_rhx2_in2.ToString());
                         listBox23.Items.Add(puntero_aplicacion.p_rhx3_in2.ToString());
+                        listBox25.Items.Add(puntero_aplicacion.p_rhx4_in2.ToString());
+                        listBox26.Items.Add(puntero_aplicacion.p_rhx5_in2.ToString());
                         listBox5.Items.Add(puntero_aplicacion.ua_lt2.ToString());
                         listBox6.Items.Add(puntero_aplicacion.ua_ht2.ToString());
                         listBox7.Items.Add(puntero_aplicacion.temp27.ToString());
                         listBox8.Items.Add(puntero_aplicacion.temp28.ToString());
 
-                        double LTR_min_DT_1 = cicloPCRC_withThreeRH.temp[7] - cicloPCRC_withThreeRH.temp[2];
-                        double LTR_min_DT_2 = cicloPCRC_withThreeRH.temp[8] - cicloPCRC_withThreeRH.temp[1];
+                        double LTR_min_DT_1 = cicloPCRC_withFiveRH.temp[9] - cicloPCRC_withFiveRH.temp[2];
+                        double LTR_min_DT_2 = cicloPCRC_withFiveRH.temp[8] - cicloPCRC_withFiveRH.temp[3];
                         double LTR_min_DT_paper = Math.Min(LTR_min_DT_1, LTR_min_DT_2);
 
-                        double HTR_min_DT_1 = cicloPCRC_withThreeRH.temp[7] - cicloPCRC_withThreeRH.temp[3];
-                        double HTR_min_DT_2 = cicloPCRC_withThreeRH.temp[6] - cicloPCRC_withThreeRH.temp[4];
+                        double HTR_min_DT_1 = cicloPCRC_withFiveRH.temp[7] - cicloPCRC_withFiveRH.temp[5];
+                        double HTR_min_DT_2 = cicloPCRC_withFiveRH.temp[8] - cicloPCRC_withFiveRH.temp[4];
                         double HTR_min_DT_paper = Math.Min(HTR_min_DT_1, HTR_min_DT_2);
 
                         //PC_in(kPa)
@@ -395,23 +424,27 @@ namespace RefPropWindowsForms
                         //HT UA(kW/K)
                         xlWorkSheet1.Cells[counter_Excel + 1, 5] = Convert.ToString(puntero_aplicacion.ua_ht2);
                         //Rec.Frac.
-                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.recomp_frac2.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 6] = puntero_aplicacion.m_recomp_frac2.ToString();
                         //P_rhx1_in
                         xlWorkSheet1.Cells[counter_Excel + 1, 7] = puntero_aplicacion.p_rhx1_in2.ToString();
                         //P_rhx2_in
                         xlWorkSheet1.Cells[counter_Excel + 1, 8] = puntero_aplicacion.p_rhx2_in2.ToString();
                         //P_rhx3_in
                         xlWorkSheet1.Cells[counter_Excel + 1, 9] = puntero_aplicacion.p_rhx3_in2.ToString();
+                        //P_rhx4_in
+                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = puntero_aplicacion.p_rhx4_in2.ToString();
+                        //P_rhx5_in
+                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = puntero_aplicacion.p_rhx5_in2.ToString();
                         //Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 10] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 12] = (puntero_aplicacion.eta_thermal2 * 100).ToString();
                         //LTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 11] = cicloPCRC_withThreeRH.LT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 13] = cicloPCRC_withFiveRH.LT.eff.ToString();
                         //LTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 12] = LTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 14] = LTR_min_DT_paper.ToString();
                         //HTR Eff.(%)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 13] = cicloPCRC_withThreeRH.HT.eff.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 15] = cicloPCRC_withFiveRH.HT.eff.ToString();
                         //HTR Pinch(ºC)
-                        xlWorkSheet1.Cells[counter_Excel + 1, 14] = HTR_min_DT_paper.ToString();
+                        xlWorkSheet1.Cells[counter_Excel + 1, 16] = HTR_min_DT_paper.ToString();
 
                         counter_Excel++;
 
@@ -435,6 +468,8 @@ namespace RefPropWindowsForms
                     textBox1.Text = p_rhx1_in2_list[maxIndex].ToString();
                     textBox3.Text = p_rhx2_in2_list[maxIndex].ToString();
                     textBox6.Text = p_rhx3_in2_list[maxIndex].ToString();
+                    textBox8.Text = p_rhx4_in2_list[maxIndex].ToString();
+                    textBox7.Text = p_rhx5_in2_list[maxIndex].ToString();
                     textBox90.Text = recomp_frac2_list[maxIndex].ToString();
                     textBox86.Text = eta_thermal2_list[maxIndex].ToString();
 
@@ -448,12 +483,14 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.textBox7.Text = p_rhx1_in2_list[maxIndex].ToString();
                         puntero_aplicacion.textBox91.Text = p_rhx2_in2_list[maxIndex].ToString();
                         puntero_aplicacion.textBox100.Text = p_rhx3_in2_list[maxIndex].ToString();
+                        puntero_aplicacion.textBox115.Text = p_rhx4_in2_list[maxIndex].ToString();
+                        puntero_aplicacion.textBox118.Text = p_rhx5_in2_list[maxIndex].ToString();
                         puntero_aplicacion.textBox17.Text = ua_LT_list[maxIndex].ToString();
                         puntero_aplicacion.textBox16.Text = ua_HT_list[maxIndex].ToString();
                     }
 
                     //Closing Excel Book
-                    xlWorkBook1.SaveAs(textBox4.Text + "PCRC_with_Three_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+                    xlWorkBook1.SaveAs(textBox4.Text + "PCRC_with_Five_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
 
                     xlWorkBook1.Close(true, misValue1, misValue1);
                     xlApp1.Quit();

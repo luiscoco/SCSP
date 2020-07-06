@@ -797,7 +797,8 @@ namespace RefPropWindowsForms
         //Optimization analysis
         private void button36_Click(object sender, EventArgs e)
         {
-
+            PCRC_with_Five_ReHeating_Optimization_Analysis_Results PCRC_with_Five_ReHeating_Optimization_Analysis_Results_dialog = new PCRC_with_Five_ReHeating_Optimization_Analysis_Results(this);
+            PCRC_with_Five_ReHeating_Optimization_Analysis_Results_dialog.Show();
         }
 
         //Mixtures calculation
@@ -947,6 +948,8 @@ namespace RefPropWindowsForms
             temp218 = cicloPCRC_withFiveRH.temp[17];
             temp219 = cicloPCRC_withFiveRH.temp[18];
             temp220 = cicloPCRC_withFiveRH.temp[19];
+            temp221 = cicloPCRC_withFiveRH.temp[20];
+            temp222 = cicloPCRC_withFiveRH.temp[21];
 
             pres21 = cicloPCRC_withFiveRH.pres[0];
             pres22 = cicloPCRC_withFiveRH.pres[1];
@@ -968,6 +971,8 @@ namespace RefPropWindowsForms
             pres218 = cicloPCRC_withFiveRH.pres[17];
             pres219 = cicloPCRC_withFiveRH.pres[18];
             pres220 = cicloPCRC_withFiveRH.pres[19];
+            pres221 = cicloPCRC_withFiveRH.pres[20];
+            pres222 = cicloPCRC_withFiveRH.pres[21];
 
             textBox47.Text = Convert.ToString(temp21);
             textBox46.Text = Convert.ToString(temp22);

@@ -2447,6 +2447,7 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Paper_Luis_Gonzalez_Portillo_UPM Figura con Torre Central.jpg" />
     <Content Include="x32\nlopt.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
