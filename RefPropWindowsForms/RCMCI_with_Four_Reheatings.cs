@@ -1254,7 +1254,8 @@ namespace RefPropWindowsForms
         //Optimization analysis
         private void button36_Click(object sender, EventArgs e)
         {
-
+            RCMCI_with_Four_ReHeating_Optimization_Analysis_Results RCMCI_with_Four_ReHeating_Optimization_Analysis_Results_dialog = new RCMCI_with_Four_ReHeating_Optimization_Analysis_Results(this);
+            RCMCI_with_Four_ReHeating_Optimization_Analysis_Results_dialog.Show();
         }
     }
 }
