@@ -2826,10 +2826,6 @@ namespace RefPropWindowsForms
                             initial_pc_out_value = puntero_aplicacion.p_pc_out2;
                         }
                     }
-
-
-
-
                 }
             }
         }

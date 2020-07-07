@@ -674,7 +674,8 @@ namespace RefPropWindowsForms
         //Optimization analysis
         private void button36_Click(object sender, EventArgs e)
         {
-
+            PCRC_with_Four_ReHeating_Optimization_Analysis_Results PCRC_with_Four_ReHeating_Optimization_Analysis_Results_dialog = new PCRC_with_Four_ReHeating_Optimization_Analysis_Results(this);
+            PCRC_with_Four_ReHeating_Optimization_Analysis_Results_dialog.Show();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
