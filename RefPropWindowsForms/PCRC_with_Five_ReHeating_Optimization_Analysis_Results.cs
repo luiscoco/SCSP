@@ -2826,8 +2826,24 @@ namespace RefPropWindowsForms
                             initial_pc_out_value = puntero_aplicacion.p_pc_out2;
                         }
                     }
+
+
+
+
+
                 }
             }
+
+            //Closing Excel Book
+            xlWorkBook1.SaveAs(textBox4.Text + "PCRC_with_Five_ReHeating_" + xlWorkSheet1.Name + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+
+            xlWorkBook1.Close(true, misValue1, misValue1);
+            xlApp1.Quit();
+
+            releaseObject(xlWorkSheet1);
+            //releaseObject(xlWorkSheet2);
+            releaseObject(xlWorkBook1);
+            releaseObject(xlApp1);
         }
     }
 }
