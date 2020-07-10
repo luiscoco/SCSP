@@ -2664,21 +2664,6 @@ namespace RefPropWindowsForms
                         }
                     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 }
             }
 
