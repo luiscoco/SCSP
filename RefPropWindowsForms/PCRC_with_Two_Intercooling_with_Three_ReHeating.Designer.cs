@@ -203,6 +203,8 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox29 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -336,8 +338,6 @@
             this.label138 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
             this.textBox108 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.textBox109 = new System.Windows.Forms.TextBox();
@@ -2422,6 +2422,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop";
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(203, 164);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(88, 13);
+            this.label34.TabIndex = 1594;
+            this.label34.Text = "DP_RHX3 (kPa):";
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(296, 161);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(40, 20);
+            this.textBox29.TabIndex = 1595;
+            this.textBox29.Text = "0.0";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -3593,23 +3610,6 @@
             this.label33.Size = new System.Drawing.Size(49, 13);
             this.label33.TabIndex = 2105;
             this.label33.Text = "eta_trh3:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(203, 164);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(88, 13);
-            this.label34.TabIndex = 1594;
-            this.label34.Text = "DP_RHX3 (kPa):";
-            // 
-            // textBox29
-            // 
-            this.textBox29.Location = new System.Drawing.Point(296, 161);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(40, 20);
-            this.textBox29.TabIndex = 1595;
-            this.textBox29.Text = "0.0";
             // 
             // textBox108
             // 
