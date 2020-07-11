@@ -353,6 +353,8 @@
             this.label52 = new System.Windows.Forms.Label();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label125 = new System.Windows.Forms.Label();
+            this.textBox123 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -368,8 +370,6 @@
             this.textBox121 = new System.Windows.Forms.TextBox();
             this.textBox122 = new System.Windows.Forms.TextBox();
             this.label124 = new System.Windows.Forms.Label();
-            this.label125 = new System.Windows.Forms.Label();
-            this.textBox123 = new System.Windows.Forms.TextBox();
             this.textBox124 = new System.Windows.Forms.TextBox();
             this.label126 = new System.Windows.Forms.Label();
             this.textBox125 = new System.Windows.Forms.TextBox();
@@ -3994,6 +3994,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(1, 171);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(88, 13);
+            this.label125.TabIndex = 374;
+            this.label125.Text = "DP_RHX3 (kPa):";
+            // 
+            // textBox123
+            // 
+            this.textBox123.Location = new System.Drawing.Point(89, 168);
+            this.textBox123.Name = "textBox123";
+            this.textBox123.Size = new System.Drawing.Size(48, 20);
+            this.textBox123.TabIndex = 375;
+            this.textBox123.Text = "0.0";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1219, 7);
@@ -4136,23 +4153,6 @@
             this.label124.TabIndex = 2141;
             this.label124.Text = "eta_trh3:";
             // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Location = new System.Drawing.Point(1, 171);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(88, 13);
-            this.label125.TabIndex = 374;
-            this.label125.Text = "DP_RHX3 (kPa):";
-            // 
-            // textBox123
-            // 
-            this.textBox123.Location = new System.Drawing.Point(89, 168);
-            this.textBox123.Name = "textBox123";
-            this.textBox123.Size = new System.Drawing.Size(48, 20);
-            this.textBox123.TabIndex = 375;
-            this.textBox123.Text = "0.0";
-            // 
             // textBox124
             // 
             this.textBox124.Location = new System.Drawing.Point(111, 369);
@@ -4168,7 +4168,7 @@
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(71, 13);
             this.label126.TabIndex = 2145;
-            this.label126.Text = "T_rht2_in (K):";
+            this.label126.Text = "T_rht3_in (K):";
             // 
             // textBox125
             // 
@@ -4176,7 +4176,7 @@
             this.textBox125.Name = "textBox125";
             this.textBox125.Size = new System.Drawing.Size(40, 20);
             this.textBox125.TabIndex = 2144;
-            this.textBox125.Text = "15000";
+            this.textBox125.Text = "13000";
             // 
             // label127
             // 
@@ -4185,7 +4185,7 @@
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(85, 13);
             this.label127.TabIndex = 2143;
-            this.label127.Text = "P_rhx2_in (kPa):";
+            this.label127.Text = "P_rhx3_in (kPa):";
             // 
             // PCRCMCI_with_Three_ReHeating
             // 

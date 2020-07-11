@@ -306,6 +306,7 @@ namespace RefPropWindowsForms
             InitializeComponent();
         }
 
+        //Mixtures calculation
         private void button20_Click(object sender, EventArgs e)
         {
             int maxIterations = 5;
