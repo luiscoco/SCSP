@@ -25,7 +25,6 @@ namespace RefPropWindowsForms
         public PCRCMCI_with_Two_ReHeating_Optimization_Analysis_Results(PCRCMCI_with_Two_ReHeating puntero1)
         {
             puntero_aplicacion = puntero1;
-
             InitializeComponent();
         }
 

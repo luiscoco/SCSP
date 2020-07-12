@@ -883,7 +883,8 @@ namespace RefPropWindowsForms
         //Optimization Analysis
         private void button39_Click(object sender, EventArgs e)
         {
-
+            PCRCMCI_with_Three_ReHeating_Optimization_Analysis_Results PCRCMCI_with_Three_ReHeating_Optimization_Analysis_Results_dialog = new PCRCMCI_with_Three_ReHeating_Optimization_Analysis_Results(this);
+            PCRCMCI_with_Three_ReHeating_Optimization_Analysis_Results_dialog.Show();
         }
 
         //Set Critical Conditions
@@ -999,7 +1000,10 @@ namespace RefPropWindowsForms
                 textBox34.Text = Convert.ToString(working_fluid.CriticalPressure);
                 textBox68.Text = Convert.ToString(working_fluid.CriticalTemperature);
                 textBox51.Text = Convert.ToString(working_fluid.CriticalDensity);
-            }
+
+                MixtureCriticalPressure = working_fluid.CriticalPressure;
+                MixtureCriticalTemperature = working_fluid.CriticalTemperature;
+            }           
         }
     }
 }

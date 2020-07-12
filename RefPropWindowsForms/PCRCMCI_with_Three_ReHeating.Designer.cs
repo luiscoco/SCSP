@@ -1014,7 +1014,7 @@
             // 
             // textBox113
             // 
-            this.textBox113.Location = new System.Drawing.Point(111, 347);
+            this.textBox113.Location = new System.Drawing.Point(111, 346);
             this.textBox113.Name = "textBox113";
             this.textBox113.Size = new System.Drawing.Size(40, 20);
             this.textBox113.TabIndex = 2113;
@@ -4017,7 +4017,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 37);
             this.button1.TabIndex = 1919;
-            this.button1.Text = "00";
+            this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
