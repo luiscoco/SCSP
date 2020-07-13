@@ -1252,7 +1252,8 @@ namespace RefPropWindowsForms
         //Optimization Analysis
         private void button36_Click(object sender, EventArgs e)
         {
-
+            PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results_dialog = new PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results(this);
+            PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results_dialog.Show();
         }
     }
 }

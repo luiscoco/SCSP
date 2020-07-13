@@ -25,10 +25,8 @@ namespace RefPropWindowsForms
         public PCRC_with_Two_Intercooling_withTwoReheating_Analysis_Results(PCRC_with_Two_Intercooling_with_Two_ReHeating puntero1)
         {
             puntero_aplicacion = puntero1;
-
             InitializeComponent();
         }
-
 
         private void releaseObject(object obj)
         {

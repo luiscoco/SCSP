@@ -751,6 +751,12 @@
     <Compile Include="PCRC_with_Two_Intercooling_withReheating_Analysis_Results.Designer.cs">
       <DependentUpon>PCRC_with_Two_Intercooling_withReheating_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results.Designer.cs">
+      <DependentUpon>PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCRC_with_Two_Intercooling_withTwoReheating_Analysis_Results.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1822,6 +1828,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PCRC_with_Two_Intercooling_withReheating_Analysis_Results.resx">
       <DependentUpon>PCRC_with_Two_Intercooling_withReheating_Analysis_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results.resx">
+      <DependentUpon>PCRC_with_Two_Intercooling_withThreeReheating_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PCRC_with_Two_Intercooling_withTwoReheating_Analysis_Results.resx">
       <DependentUpon>PCRC_with_Two_Intercooling_withTwoReheating_Analysis_Results.cs</DependentUpon>
