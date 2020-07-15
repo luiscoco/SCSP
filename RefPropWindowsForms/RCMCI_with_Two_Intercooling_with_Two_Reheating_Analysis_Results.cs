@@ -15,12 +15,12 @@ using NLoptNet;
 using Excel = Microsoft.Office.Interop.Excel;
 
 using System.Reflection;
+
 namespace RefPropWindowsForms
 {
     public partial class RCMCI_with_Two_Intercooling_with_Two_Reheating_Analysis_Results : Form
     {
         RCMCI_with_Two_Intercooling_with_Two_Reheating puntero_aplicacion;
-        private object i;
 
         public RCMCI_with_Two_Intercooling_with_Two_Reheating_Analysis_Results(RCMCI_with_Two_Intercooling_with_Two_Reheating puntero1)
         {

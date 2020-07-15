@@ -1198,7 +1198,8 @@ namespace RefPropWindowsForms
         //Optimization Analysis
         private void button36_Click(object sender, EventArgs e)
         {
-
+            RCMCI_with_Two_Intercooling_with_Three_Reheating_Analysis_Results RCMCI_with_Two_Intercooling_with_Three_Reheating_Analysis_Results_dialog = new RCMCI_with_Two_Intercooling_with_Three_Reheating_Analysis_Results(this);
+            RCMCI_with_Two_Intercooling_with_Three_Reheating_Analysis_Results_dialog.Show();
         }
     }
 }
