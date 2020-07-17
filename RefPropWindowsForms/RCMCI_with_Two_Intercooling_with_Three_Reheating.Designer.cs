@@ -331,6 +331,8 @@
             this.button20 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label147 = new System.Windows.Forms.Label();
+            this.textBox116 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label138 = new System.Windows.Forms.Label();
             this.textBox109 = new System.Windows.Forms.TextBox();
@@ -350,8 +352,6 @@
             this.label145 = new System.Windows.Forms.Label();
             this.textBox115 = new System.Windows.Forms.TextBox();
             this.label146 = new System.Windows.Forms.Label();
-            this.label147 = new System.Windows.Forms.Label();
-            this.textBox116 = new System.Windows.Forms.TextBox();
             this.button32 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
@@ -3776,6 +3776,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(165, 111);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(88, 13);
+            this.label147.TabIndex = 374;
+            this.label147.Text = "DP_RHX3 (kPa):";
+            // 
+            // textBox116
+            // 
+            this.textBox116.Location = new System.Drawing.Point(254, 108);
+            this.textBox116.Name = "textBox116";
+            this.textBox116.Size = new System.Drawing.Size(48, 20);
+            this.textBox116.TabIndex = 375;
+            this.textBox116.Text = "0.0";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -3955,23 +3972,6 @@
             this.label146.Size = new System.Drawing.Size(85, 13);
             this.label146.TabIndex = 1956;
             this.label146.Text = "P_rhx3_in (kPa):";
-            // 
-            // label147
-            // 
-            this.label147.AutoSize = true;
-            this.label147.Location = new System.Drawing.Point(165, 111);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(88, 13);
-            this.label147.TabIndex = 374;
-            this.label147.Text = "DP_RHX3 (kPa):";
-            // 
-            // textBox116
-            // 
-            this.textBox116.Location = new System.Drawing.Point(254, 108);
-            this.textBox116.Name = "textBox116";
-            this.textBox116.Size = new System.Drawing.Size(48, 20);
-            this.textBox116.TabIndex = 375;
-            this.textBox116.Text = "0.0";
             // 
             // button32
             // 
