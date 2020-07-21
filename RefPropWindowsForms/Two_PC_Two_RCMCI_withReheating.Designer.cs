@@ -2186,6 +2186,7 @@
             this.button20.TabIndex = 2205;
             this.button20.Text = "Mixtures Calculation";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // comboBox7
             // 
