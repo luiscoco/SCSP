@@ -266,7 +266,7 @@
             // 
             this.configuration7075ToolStripMenuItem.Name = "configuration7075ToolStripMenuItem";
             this.configuration7075ToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.configuration7075ToolStripMenuItem.Text = "6. Configuration 28-30 PTE.";
+            this.configuration7075ToolStripMenuItem.Text = "6. Configuration 28-30";
             this.configuration7075ToolStripMenuItem.Click += new System.EventHandler(this.configuration7075ToolStripMenuItem_Click);
             // 
             // configurations2224ToolStripMenuItem
