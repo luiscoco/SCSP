@@ -2216,6 +2216,7 @@
             this.button37.TabIndex = 2622;
             this.button37.Text = "Optimization Analysis";
             this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // label119
             // 
@@ -3804,6 +3805,7 @@
             this.button20.TabIndex = 2465;
             this.button20.Text = "Mixtures Calculation";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // comboBox7
             // 
