@@ -375,6 +375,8 @@
             this.label52 = new System.Windows.Forms.Label();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label165 = new System.Windows.Forms.Label();
+            this.textBox134 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button41 = new System.Windows.Forms.Button();
             this.label145 = new System.Windows.Forms.Label();
@@ -391,8 +393,6 @@
             this.label163 = new System.Windows.Forms.Label();
             this.textBox133 = new System.Windows.Forms.TextBox();
             this.label164 = new System.Windows.Forms.Label();
-            this.label165 = new System.Windows.Forms.Label();
-            this.textBox134 = new System.Windows.Forms.TextBox();
             this.comboBox21 = new System.Windows.Forms.ComboBox();
             this.label166 = new System.Windows.Forms.Label();
             this.comboBox22 = new System.Windows.Forms.ComboBox();
@@ -626,7 +626,7 @@
             this.textBox126.Name = "textBox126";
             this.textBox126.Size = new System.Drawing.Size(40, 20);
             this.textBox126.TabIndex = 2979;
-            this.textBox126.Text = "17300";
+            this.textBox126.Text = "15300";
             // 
             // label144
             // 
@@ -4220,6 +4220,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // label165
+            // 
+            this.label165.AutoSize = true;
+            this.label165.Location = new System.Drawing.Point(1, 171);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(88, 13);
+            this.label165.TabIndex = 378;
+            this.label165.Text = "DP_RHX2 (kPa):";
+            // 
+            // textBox134
+            // 
+            this.textBox134.Location = new System.Drawing.Point(89, 168);
+            this.textBox134.Name = "textBox134";
+            this.textBox134.Size = new System.Drawing.Size(48, 20);
+            this.textBox134.TabIndex = 379;
+            this.textBox134.Text = "0.0";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.PCRCMCI_with_Two_Intercooling_with_Three_ReHeating;
@@ -4351,7 +4368,7 @@
             this.textBox133.Name = "textBox133";
             this.textBox133.Size = new System.Drawing.Size(40, 20);
             this.textBox133.TabIndex = 2995;
-            this.textBox133.Text = "17300";
+            this.textBox133.Text = "12300";
             // 
             // label164
             // 
@@ -4361,23 +4378,6 @@
             this.label164.Size = new System.Drawing.Size(85, 13);
             this.label164.TabIndex = 2994;
             this.label164.Text = "P_rhx3_in (kPa):";
-            // 
-            // label165
-            // 
-            this.label165.AutoSize = true;
-            this.label165.Location = new System.Drawing.Point(1, 171);
-            this.label165.Name = "label165";
-            this.label165.Size = new System.Drawing.Size(88, 13);
-            this.label165.TabIndex = 378;
-            this.label165.Text = "DP_RHX2 (kPa):";
-            // 
-            // textBox134
-            // 
-            this.textBox134.Location = new System.Drawing.Point(89, 168);
-            this.textBox134.Name = "textBox134";
-            this.textBox134.Size = new System.Drawing.Size(48, 20);
-            this.textBox134.TabIndex = 379;
-            this.textBox134.Text = "0.0";
             // 
             // comboBox21
             // 

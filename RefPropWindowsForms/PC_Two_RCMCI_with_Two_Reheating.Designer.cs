@@ -4182,7 +4182,7 @@
             this.textBox126.Name = "textBox126";
             this.textBox126.Size = new System.Drawing.Size(40, 20);
             this.textBox126.TabIndex = 2681;
-            this.textBox126.Text = "17300";
+            this.textBox126.Text = "15300";
             // 
             // label144
             // 

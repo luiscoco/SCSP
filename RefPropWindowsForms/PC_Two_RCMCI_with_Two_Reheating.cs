@@ -505,7 +505,7 @@ namespace RefPropWindowsForms
             m_eta_mc3 = Convert.ToDouble(textBox27.Text);
             m_eta_mc2 = Convert.ToDouble(textBox98.Text);
             m_eta_rc = Convert.ToDouble(textBox13.Text);
-            m_eta_t = Convert.ToDouble(textBox19.Text);
+            m_eta_t = Convert.ToDouble(textBox123.Text);
             m_eta_trh1 = Convert.ToDouble(textBox19.Text);
             m_eta_trh2 = Convert.ToDouble(textBox115.Text);
 
@@ -831,6 +831,8 @@ namespace RefPropWindowsForms
             {
                 PHX = cicloPC_Two_RCMCI_with_Two_Reheating.PHX.Q_dot;
                 RHX1 = cicloPC_Two_RCMCI_with_Two_Reheating.RHX1.Q_dot;
+                RHX2 = cicloPC_Two_RCMCI_with_Two_Reheating.RHX2.Q_dot;
+                
                 recomp_frac2 = cicloPC_Two_RCMCI_with_Two_Reheating.recomp_frac;
 
                 LT_Q = cicloPC_Two_RCMCI_with_Two_Reheating.LT.Q_dot;
