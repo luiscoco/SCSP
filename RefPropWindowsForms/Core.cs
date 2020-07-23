@@ -58232,10 +58232,6 @@ namespace RefPropWindowsForms
             cicloTwo_PC_Two_RCMCI_with_Three_Reheating.conv_tol = m_tol;
         }
 
-
-
-
-
         public void SimpleBrayton_with_Three_Recuperators_without_ReHeating(core luis, ref core.RecompCycle_with_Three_Recuperatos_withoutRH recomp_cycle,
         Double m_W_dot_net, Double m_T_mc_in, Double m_T_t_in, Double P_mc_in, Double m_P_mc_out, Double DP_LT_c, Double DP_MT_c,
         Double DP_HT_c, Double DP_PC, Double DP_PHX, Double DP_LT_h, Double DP_MT_h, Double DP_HT_h, Double UA_LT, Double UA_MT, Double UA_HT, 
