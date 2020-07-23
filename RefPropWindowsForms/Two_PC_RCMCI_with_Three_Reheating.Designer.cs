@@ -427,7 +427,7 @@
             this.textBox126.Name = "textBox126";
             this.textBox126.Size = new System.Drawing.Size(40, 20);
             this.textBox126.TabIndex = 2970;
-            this.textBox126.Text = "17300";
+            this.textBox126.Text = "15300";
             // 
             // textBox124
             // 
@@ -4278,7 +4278,7 @@
             this.textBox132.Name = "textBox132";
             this.textBox132.Size = new System.Drawing.Size(40, 20);
             this.textBox132.TabIndex = 2985;
-            this.textBox132.Text = "17300";
+            this.textBox132.Text = "12300";
             // 
             // textBox133
             // 
