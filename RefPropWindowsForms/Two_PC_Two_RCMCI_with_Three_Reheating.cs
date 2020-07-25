@@ -1035,7 +1035,8 @@ namespace RefPropWindowsForms
         //Optimization Analysis
         private void button37_Click(object sender, EventArgs e)
         {
-
+            Two_PC_Two_RCMCI_with_Three_Reheating_Optimization_Analysis_Results Two_PC_Two_RCMCI_with_Three_Reheating_Optimization_Analysis_Results_dialog = new Two_PC_Two_RCMCI_with_Three_Reheating_Optimization_Analysis_Results();
+            Two_PC_Two_RCMCI_with_Three_Reheating_Optimization_Analysis_Results_dialog.Show();
         }
     }
 }
