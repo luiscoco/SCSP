@@ -280,21 +280,21 @@
             // 
             this.configurations2527ToolStripMenuItem.Name = "configurations2527ToolStripMenuItem";
             this.configurations2527ToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.configurations2527ToolStripMenuItem.Text = "8. Configurations 34-36 PTE.";
+            this.configurations2527ToolStripMenuItem.Text = "8. Configurations 34-36";
             this.configurations2527ToolStripMenuItem.Click += new System.EventHandler(this.configurations2527ToolStripMenuItem_Click);
             // 
             // configurations2830ToolStripMenuItem
             // 
             this.configurations2830ToolStripMenuItem.Name = "configurations2830ToolStripMenuItem";
             this.configurations2830ToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.configurations2830ToolStripMenuItem.Text = "9. Configurations 37-39 PTE.";
+            this.configurations2830ToolStripMenuItem.Text = "9. Configurations 37-39";
             this.configurations2830ToolStripMenuItem.Click += new System.EventHandler(this.configurations2830ToolStripMenuItem_Click);
             // 
             // configurations3133ToolStripMenuItem
             // 
             this.configurations3133ToolStripMenuItem.Name = "configurations3133ToolStripMenuItem";
             this.configurations3133ToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.configurations3133ToolStripMenuItem.Text = "10. Configurations 40-42 PTE.";
+            this.configurations3133ToolStripMenuItem.Text = "10. Configurations 40-42";
             this.configurations3133ToolStripMenuItem.Click += new System.EventHandler(this.configurations3133ToolStripMenuItem_Click);
             // 
             // configurations3437ToolStripMenuItem
