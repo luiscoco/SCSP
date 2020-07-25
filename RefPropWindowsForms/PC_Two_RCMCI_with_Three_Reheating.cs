@@ -438,7 +438,8 @@ namespace RefPropWindowsForms
         //Optimization Analysis
         private void button37_Click(object sender, EventArgs e)
         {
-
+            PC_Two_RCMCI_with_Three_ReHeating_Optimization_Analysis_Results PC_Two_RCMCI_with_Three_ReHeating_Optimization_Analysis_Results_dialog = new PC_Two_RCMCI_with_Three_ReHeating_Optimization_Analysis_Results();
+            PC_Two_RCMCI_with_Three_ReHeating_Optimization_Analysis_Results_dialog.Show();
         }
 
         //Mixtures Calculations
