@@ -33,6 +33,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.listBox32 = new System.Windows.Forms.ListBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.listBox31 = new System.Windows.Forms.ListBox();
             this.listBox25 = new System.Windows.Forms.ListBox();
             this.label33 = new System.Windows.Forms.Label();
             this.listBox26 = new System.Windows.Forms.ListBox();
@@ -126,6 +130,10 @@
             this.label37 = new System.Windows.Forms.Label();
             this.listBox30 = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.listBox33 = new System.Windows.Forms.ListBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.listBox34 = new System.Windows.Forms.ListBox();
             this.label16 = new System.Windows.Forms.Label();
             this.listBox10 = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -154,14 +162,10 @@
             this.label127 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.listBox31 = new System.Windows.Forms.ListBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.listBox32 = new System.Windows.Forms.ListBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.listBox33 = new System.Windows.Forms.ListBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.listBox34 = new System.Windows.Forms.ListBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -247,6 +251,40 @@
             this.groupBox3.TabIndex = 1317;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Optimization Intermediate Results";
+            // 
+            // label44
+            // 
+            this.label44.Location = new System.Drawing.Point(855, 15);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(62, 30);
+            this.label44.TabIndex = 1256;
+            this.label44.Text = "P_rhx2_in (kPa)";
+            // 
+            // listBox32
+            // 
+            this.listBox32.FormattingEnabled = true;
+            this.listBox32.IntegralHeight = false;
+            this.listBox32.Location = new System.Drawing.Point(851, 48);
+            this.listBox32.Name = "listBox32";
+            this.listBox32.Size = new System.Drawing.Size(66, 91);
+            this.listBox32.TabIndex = 1255;
+            // 
+            // label43
+            // 
+            this.label43.Location = new System.Drawing.Point(783, 15);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(62, 30);
+            this.label43.TabIndex = 1254;
+            this.label43.Text = "P_rhx1_in (kPa)";
+            // 
+            // listBox31
+            // 
+            this.listBox31.FormattingEnabled = true;
+            this.listBox31.IntegralHeight = false;
+            this.listBox31.Location = new System.Drawing.Point(779, 48);
+            this.listBox31.Name = "listBox31";
+            this.listBox31.Size = new System.Drawing.Size(66, 91);
+            this.listBox31.TabIndex = 1253;
             // 
             // listBox25
             // 
@@ -897,7 +935,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 488);
+            this.label18.Location = new System.Drawing.Point(6, 504);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(143, 13);
             this.label18.TabIndex = 1333;
@@ -905,7 +943,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 485);
+            this.textBox3.Location = new System.Drawing.Point(152, 501);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(487, 20);
             this.textBox3.TabIndex = 1332;
@@ -1112,6 +1150,40 @@
             this.groupBox5.TabIndex = 1327;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "CIT Optimization Results";
+            // 
+            // label45
+            // 
+            this.label45.Location = new System.Drawing.Point(855, 9);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(62, 30);
+            this.label45.TabIndex = 1264;
+            this.label45.Text = "P_rhx2_in (kPa)";
+            // 
+            // listBox33
+            // 
+            this.listBox33.FormattingEnabled = true;
+            this.listBox33.IntegralHeight = false;
+            this.listBox33.Location = new System.Drawing.Point(851, 40);
+            this.listBox33.Name = "listBox33";
+            this.listBox33.Size = new System.Drawing.Size(66, 96);
+            this.listBox33.TabIndex = 1263;
+            // 
+            // label46
+            // 
+            this.label46.Location = new System.Drawing.Point(783, 9);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(62, 30);
+            this.label46.TabIndex = 1262;
+            this.label46.Text = "P_rhx1_in (kPa)";
+            // 
+            // listBox34
+            // 
+            this.listBox34.FormattingEnabled = true;
+            this.listBox34.IntegralHeight = false;
+            this.listBox34.Location = new System.Drawing.Point(779, 40);
+            this.listBox34.Name = "listBox34";
+            this.listBox34.Size = new System.Drawing.Size(66, 96);
+            this.listBox34.TabIndex = 1261;
             // 
             // label16
             // 
@@ -1342,9 +1414,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label47);
             this.groupBox1.Controls.Add(this.label41);
+            this.groupBox1.Controls.Add(this.textBox14);
             this.groupBox1.Controls.Add(this.textBox12);
+            this.groupBox1.Controls.Add(this.label48);
             this.groupBox1.Controls.Add(this.label42);
+            this.groupBox1.Controls.Add(this.textBox15);
             this.groupBox1.Controls.Add(this.textBox13);
             this.groupBox1.Controls.Add(this.label40);
             this.groupBox1.Controls.Add(this.textBox8);
@@ -1368,84 +1444,48 @@
             this.groupBox1.Controls.Add(this.label123);
             this.groupBox1.Location = new System.Drawing.Point(485, 307);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(446, 159);
+            this.groupBox1.Size = new System.Drawing.Size(446, 175);
             this.groupBox1.TabIndex = 1325;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Optmization Results";
             // 
-            // label43
+            // label47
             // 
-            this.label43.Location = new System.Drawing.Point(783, 15);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(62, 30);
-            this.label43.TabIndex = 1254;
-            this.label43.Text = "P_rhx1_in (kPa)";
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(37, 154);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(85, 13);
+            this.label47.TabIndex = 1339;
+            this.label47.Text = "P_rhx1_in (kPa):";
             // 
-            // listBox31
+            // textBox14
             // 
-            this.listBox31.FormattingEnabled = true;
-            this.listBox31.IntegralHeight = false;
-            this.listBox31.Location = new System.Drawing.Point(779, 48);
-            this.listBox31.Name = "listBox31";
-            this.listBox31.Size = new System.Drawing.Size(66, 91);
-            this.listBox31.TabIndex = 1253;
+            this.textBox14.Location = new System.Drawing.Point(135, 151);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(88, 20);
+            this.textBox14.TabIndex = 1338;
             // 
-            // label44
+            // label48
             // 
-            this.label44.Location = new System.Drawing.Point(855, 15);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(62, 30);
-            this.label44.TabIndex = 1256;
-            this.label44.Text = "P_rhx2_in (kPa)";
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(252, 154);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(85, 13);
+            this.label48.TabIndex = 1337;
+            this.label48.Text = "P_rhx2_in (kPa):";
             // 
-            // listBox32
+            // textBox15
             // 
-            this.listBox32.FormattingEnabled = true;
-            this.listBox32.IntegralHeight = false;
-            this.listBox32.Location = new System.Drawing.Point(851, 48);
-            this.listBox32.Name = "listBox32";
-            this.listBox32.Size = new System.Drawing.Size(66, 91);
-            this.listBox32.TabIndex = 1255;
-            // 
-            // label45
-            // 
-            this.label45.Location = new System.Drawing.Point(855, 9);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(62, 30);
-            this.label45.TabIndex = 1264;
-            this.label45.Text = "P_rhx2_in (kPa)";
-            // 
-            // listBox33
-            // 
-            this.listBox33.FormattingEnabled = true;
-            this.listBox33.IntegralHeight = false;
-            this.listBox33.Location = new System.Drawing.Point(851, 40);
-            this.listBox33.Name = "listBox33";
-            this.listBox33.Size = new System.Drawing.Size(66, 96);
-            this.listBox33.TabIndex = 1263;
-            // 
-            // label46
-            // 
-            this.label46.Location = new System.Drawing.Point(783, 9);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(62, 30);
-            this.label46.TabIndex = 1262;
-            this.label46.Text = "P_rhx1_in (kPa)";
-            // 
-            // listBox34
-            // 
-            this.listBox34.FormattingEnabled = true;
-            this.listBox34.IntegralHeight = false;
-            this.listBox34.Location = new System.Drawing.Point(779, 40);
-            this.listBox34.Name = "listBox34";
-            this.listBox34.Size = new System.Drawing.Size(66, 96);
-            this.listBox34.TabIndex = 1261;
+            this.textBox15.Location = new System.Drawing.Point(344, 151);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(88, 20);
+            this.textBox15.TabIndex = 1336;
             // 
             // PC_Two_RCMCI_with_Two_ReHeating_Optimization_Analysis_Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 526);
+            this.ClientSize = new System.Drawing.Size(1354, 530);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
@@ -1620,5 +1660,9 @@
         public System.Windows.Forms.ListBox listBox33;
         public System.Windows.Forms.Label label46;
         public System.Windows.Forms.ListBox listBox34;
+        public System.Windows.Forms.Label label47;
+        public System.Windows.Forms.TextBox textBox14;
+        public System.Windows.Forms.Label label48;
+        public System.Windows.Forms.TextBox textBox15;
     }
 }
