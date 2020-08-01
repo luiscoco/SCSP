@@ -1245,8 +1245,7 @@ namespace RefPropWindowsForms
                                 puntero_aplicacion.luis.RecompCycle_PC_Two_RCMCI_withReheating(puntero_aplicacion.luis,
                                 ref cicloPC_Two_RCMCI_withReheating, puntero_aplicacion.w_dot_net, i,
                                 i, i, i, puntero_aplicacion.t_t_in, puntero_aplicacion.t_trh_in, variables[5],
-                                variables[1], variables[2], variables[2],
-                                variables[3], variables[3], variables[4],
+                                variables[1], variables[2], variables[2], variables[3], variables[3], variables[4],
                                 variables[4], puntero_aplicacion.p_mc2_out, puntero_aplicacion.ua_lt,
                                 puntero_aplicacion.ua_ht, puntero_aplicacion.m_eta_mc4, puntero_aplicacion.m_eta_pc,
                                 puntero_aplicacion.m_eta_rc, puntero_aplicacion.m_eta_mc3, puntero_aplicacion.m_eta_mc2,
@@ -2419,6 +2418,17 @@ namespace RefPropWindowsForms
                     }
                 }
             }
+
+            //Closing Excel Book
+            xlWorkBook1.SaveAs(textBox3.Text + "PC_Two_RCMCI_withRH" + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue1, misValue1, misValue1, misValue1, Excel.XlSaveAsAccessMode.xlExclusive, misValue1, misValue1, misValue1, misValue1, misValue1);
+
+            xlWorkBook1.Close(true, misValue1, misValue1);
+            xlApp1.Quit();
+
+            releaseObject(xlWorkSheet1);
+            //releaseObject(xlWorkSheet2);
+            releaseObject(xlWorkBook1);
+            releaseObject(xlApp1);
         }   
     }
 }
