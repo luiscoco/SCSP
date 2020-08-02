@@ -309,6 +309,8 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.temp214 = cicloTwo_PC_RCMCI_withReheating.temp[13];
                         puntero_aplicacion.temp215 = cicloTwo_PC_RCMCI_withReheating.temp[14];
                         puntero_aplicacion.temp216 = cicloTwo_PC_RCMCI_withReheating.temp[15];
+                        puntero_aplicacion.temp217 = cicloTwo_PC_RCMCI_withReheating.temp[16];
+                        puntero_aplicacion.temp218 = cicloTwo_PC_RCMCI_withReheating.temp[17];
 
                         puntero_aplicacion.pres21 = cicloTwo_PC_RCMCI_withReheating.pres[0];
                         puntero_aplicacion.pres22 = cicloTwo_PC_RCMCI_withReheating.pres[1];
@@ -326,6 +328,8 @@ namespace RefPropWindowsForms
                         puntero_aplicacion.pres214 = cicloTwo_PC_RCMCI_withReheating.pres[13];
                         puntero_aplicacion.pres215 = cicloTwo_PC_RCMCI_withReheating.pres[14];
                         puntero_aplicacion.pres216 = cicloTwo_PC_RCMCI_withReheating.pres[15];
+                        puntero_aplicacion.pres217 = cicloTwo_PC_RCMCI_withReheating.pres[16];
+                        puntero_aplicacion.pres218 = cicloTwo_PC_RCMCI_withReheating.pres[17];
 
                         puntero_aplicacion.PHX = cicloTwo_PC_RCMCI_withReheating.PHX.Q_dot;
                         puntero_aplicacion.RHX = cicloTwo_PC_RCMCI_withReheating.RHX.Q_dot;
