@@ -282,6 +282,46 @@ namespace RefPropWindowsForms
 
         public Double LF_Main_SF_Pump_Shaft_Work, LF_Main_SF_Pump_Motor_eff, LF_Main_SF_Pump_Motor_Elec_Consump, LF_Main_SF_Pump_Motor_NamePlate_Design, LF_Main_SF_Pump_Motor_NamePlate;
 
+        //Reheating1 Solar Field 
+        public Double PTC_Reheating1_SF_Effective_Apperture_Area;
+        public Double LF_Reheating1_SF_Effective_Apperture_Area;
+
+        public Double PTC_Reheating1_Solar_Impinging_flowpath, PTC_Reheating1_Solar_Energy_Absorbed_flowpath, PTC_Reheating1_Energy_Loss_flowpath, PTC_Reheating1_Net_Absorbed_flowpath;
+        public Double PTC_Reheating1_Net_Absorbed_SF, PTC_Reheating1_Collector_Efficiency, PTC_Reheating1_SF_Pressure_drop, PTC_Reheating1_calculated_mass_flux, PTC_Reheating1_calculated_Number_Rows;
+        public Double PTC_Reheating1_calculated_Row_length;
+
+        public Double PTC_Reheating1_SF_Pump_Calculated_Power, PTC_Reheating1_SF_Pump_isoentropic_eff, PTC_Reheating1_SF_Pump_Hydraulic_Power, PTC_Reheating1_SF_Pump_Mechanical_eff;
+        public Double PTC_Reheating1_SF_Pump_Shaft_Work, PTC_Reheating1_SF_Pump_Motor_eff, PTC_Reheating1_SF_Pump_Motor_Elec_Consump, PTC_Reheating1_SF_Pump_Motor_NamePlate_Design, PTC_Reheating1_SF_Pump_Motor_NamePlate;
+
+        public Double LF_Reheating1_Solar_Impinging_flowpath, LF_Reheating1_Solar_Energy_Absorbed_flowpath, LF_Reheating1_Energy_Loss_flowpath, LF_Reheating1_Net_Absorbed_flowpath;
+
+        public Double LF_Reheating1_Net_Absorbed_SF, LF_Reheating1_Collector_Efficiency, LF_Reheating1_SF_Pressure_drop, LF_Reheating1_calculated_mass_flux, LF_Reheating1_calculated_Number_Rows;
+        public Double LF_Reheating1_calculated_Row_length;
+
+        public Double LF_Reheating1_SF_Pump_Calculated_Power, LF_Reheating1_SF_Pump_isoentropic_eff, LF_Reheating1_SF_Pump_Hydraulic_Power, LF_Reheating1_SF_Pump_Mechanical_eff;
+
+        public Double LF_Reheating1_SF_Pump_Shaft_Work, LF_Reheating1_SF_Pump_Motor_eff, LF_Reheating1_SF_Pump_Motor_Elec_Consump, LF_Reheating1_SF_Pump_Motor_NamePlate_Design, LF_Reheating1_SF_Pump_Motor_NamePlate;
+
+        //Reheating2 Solar Field 
+        public Double PTC_Reheating2_SF_Effective_Apperture_Area;
+        public Double LF_Reheating2_SF_Effective_Apperture_Area;
+
+        public Double PTC_Reheating2_Solar_Impinging_flowpath, PTC_Reheating2_Solar_Energy_Absorbed_flowpath, PTC_Reheating2_Energy_Loss_flowpath, PTC_Reheating2_Net_Absorbed_flowpath;
+        public Double PTC_Reheating2_Net_Absorbed_SF, PTC_Reheating2_Collector_Efficiency, PTC_Reheating2_SF_Pressure_drop, PTC_Reheating2_calculated_mass_flux, PTC_Reheating2_calculated_Number_Rows;
+        public Double PTC_Reheating2_calculated_Row_length;
+
+        public Double PTC_Reheating2_SF_Pump_Calculated_Power, PTC_Reheating2_SF_Pump_isoentropic_eff, PTC_Reheating2_SF_Pump_Hydraulic_Power, PTC_Reheating2_SF_Pump_Mechanical_eff;
+        public Double PTC_Reheating2_SF_Pump_Shaft_Work, PTC_Reheating2_SF_Pump_Motor_eff, PTC_Reheating2_SF_Pump_Motor_Elec_Consump, PTC_Reheating2_SF_Pump_Motor_NamePlate_Design, PTC_Reheating2_SF_Pump_Motor_NamePlate;
+
+        public Double LF_Reheating2_Solar_Impinging_flowpath, LF_Reheating2_Solar_Energy_Absorbed_flowpath, LF_Reheating2_Energy_Loss_flowpath, LF_Reheating2_Net_Absorbed_flowpath;
+
+        public Double LF_Reheating2_Net_Absorbed_SF, LF_Reheating2_Collector_Efficiency, LF_Reheating2_SF_Pressure_drop, LF_Reheating2_calculated_mass_flux, LF_Reheating2_calculated_Number_Rows;
+        public Double LF_Reheating2_calculated_Row_length;
+
+        public Double LF_Reheating2_SF_Pump_Calculated_Power, LF_Reheating2_SF_Pump_isoentropic_eff, LF_Reheating2_SF_Pump_Hydraulic_Power, LF_Reheating2_SF_Pump_Mechanical_eff;
+
+        public Double LF_Reheating2_SF_Pump_Shaft_Work, LF_Reheating2_SF_Pump_Motor_eff, LF_Reheating2_SF_Pump_Motor_Elec_Consump, LF_Reheating2_SF_Pump_Motor_NamePlate_Design, LF_Reheating2_SF_Pump_Motor_NamePlate;
+
         //Generator Information
         public Double Generator_Name_Plate_Power, Generator_Power_Output, Generator_Total_Loss;
         public Double Generator_Shaft_Power, Gear_Efficiency, Rating_Point_Efficiency;
