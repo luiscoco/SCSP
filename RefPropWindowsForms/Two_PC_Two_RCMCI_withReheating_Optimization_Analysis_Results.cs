@@ -1011,6 +1011,7 @@ namespace RefPropWindowsForms
                     releaseObject(xlApp1);
                 }
             }
+        
         }
 
         //Run CIT Optimization
