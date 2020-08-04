@@ -203,6 +203,12 @@
             this.listBox49 = new System.Windows.Forms.ListBox();
             this.listBox50 = new System.Windows.Forms.ListBox();
             this.listBox51 = new System.Windows.Forms.ListBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -1044,7 +1050,7 @@
             // 
             // label20
             // 
-            this.label20.Location = new System.Drawing.Point(1165, 306);
+            this.label20.Location = new System.Drawing.Point(1155, 312);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(110, 15);
             this.label20.TabIndex = 1335;
@@ -1063,7 +1069,7 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Parabolic",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox4.Location = new System.Drawing.Point(1167, 324);
+            this.comboBox4.Location = new System.Drawing.Point(1157, 330);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(191, 21);
             this.comboBox4.TabIndex = 1334;
@@ -1358,7 +1364,7 @@
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(1251, 133);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(115, 48);
+            this.checkBox3.Size = new System.Drawing.Size(97, 45);
             this.checkBox3.TabIndex = 1324;
             this.checkBox3.Text = "Copy results as design-point inputs";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -1841,11 +1847,77 @@
             this.listBox51.Size = new System.Drawing.Size(67, 91);
             this.listBox51.TabIndex = 0;
             // 
+            // label67
+            // 
+            this.label67.Location = new System.Drawing.Point(1155, 356);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(110, 15);
+            this.label67.TabIndex = 1339;
+            this.label67.Text = "Solar Field Collectors:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Parabolic",
+            "Parabolic with cavity receiver (Norwich)"});
+            this.comboBox1.Location = new System.Drawing.Point(1157, 374);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(191, 21);
+            this.comboBox1.TabIndex = 1338;
+            this.comboBox1.Text = "Parabolic";
+            // 
+            // label68
+            // 
+            this.label68.Location = new System.Drawing.Point(1155, 401);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(110, 15);
+            this.label68.TabIndex = 1341;
+            this.label68.Text = "Solar Field Collectors:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Parabolic",
+            "Parabolic with cavity receiver (Norwich)"});
+            this.comboBox2.Location = new System.Drawing.Point(1157, 419);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(191, 21);
+            this.comboBox2.TabIndex = 1340;
+            this.comboBox2.Text = "Parabolic";
+            // 
+            // label69
+            // 
+            this.label69.Location = new System.Drawing.Point(1155, 448);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(110, 15);
+            this.label69.TabIndex = 1343;
+            this.label69.Text = "Solar Field Collectors:";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Parabolic",
+            "Parabolic with cavity receiver (Norwich)"});
+            this.comboBox3.Location = new System.Drawing.Point(1157, 466);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(191, 21);
+            this.comboBox3.TabIndex = 1342;
+            this.comboBox3.Text = "Parabolic";
+            // 
             // PC_Two_RCMCI_with_Three_ReHeating_Optimization_Analysis_Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 549);
+            this.ClientSize = new System.Drawing.Size(1354, 549);
+            this.Controls.Add(this.label69);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.label68);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label67);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -2062,5 +2134,11 @@
         public System.Windows.Forms.ListBox listBox49;
         public System.Windows.Forms.ListBox listBox50;
         public System.Windows.Forms.ListBox listBox51;
+        public System.Windows.Forms.Label label67;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.Label label68;
+        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.Label label69;
+        public System.Windows.Forms.ComboBox comboBox3;
     }
 }
