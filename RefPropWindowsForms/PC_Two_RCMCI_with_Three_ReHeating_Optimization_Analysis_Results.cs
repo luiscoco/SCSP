@@ -2892,13 +2892,6 @@ namespace RefPropWindowsForms
                             initial_mc2_out_value = puntero_aplicacion.p_mc2_out;
                         }
                     }
-
-
-
-
-
-
-
                 }
             }
 

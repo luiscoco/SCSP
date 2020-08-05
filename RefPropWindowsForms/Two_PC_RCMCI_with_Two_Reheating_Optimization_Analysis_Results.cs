@@ -2500,9 +2500,6 @@ namespace RefPropWindowsForms
                             initial_mc4_out_value = puntero_aplicacion.p_mc4_out;
                         }
                     }
-
-
-
                 }
             }
 
