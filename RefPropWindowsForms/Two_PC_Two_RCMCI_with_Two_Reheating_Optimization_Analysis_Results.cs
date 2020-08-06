@@ -1903,7 +1903,7 @@ namespace RefPropWindowsForms
                             //P_rhx1_in(kPa)
                             xlWorkSheet1.Cells[counter_Excel + 1, 10] = p_rhx1_in2_list[maxIndex].ToString();
                             //P_rhx2_in(kPa)
-                            xlWorkSheet1.Cells[counter_Excel + 1, 11] = p_rhx2_in2_list[maxIndex].ToString();
+                            xlWorkSheet1.Cells[counter_Excel + 1, 11] = p_rhx2_in2_list[maxIndex].ToString();                           
                             //CIT
                             xlWorkSheet1.Cells[counter_Excel + 1, 12] = Convert.ToString(i - 273.15);
                             //LT UA(kW/K)
@@ -1946,7 +1946,7 @@ namespace RefPropWindowsForms
                             xlWorkSheet1.Cells[counter_Excel + 1, 31] = puntero_aplicacion.LF_Reheating2_SF_Effective_Apperture_Area.ToString();
                             //LF_rhx2_Pressure_Drop(bar)
                             xlWorkSheet1.Cells[counter_Excel + 1, 32] = puntero_aplicacion.LF_Reheating2_SF_Pressure_drop.ToString();
-
+                           
                             counter_Excel++;
 
                             initial_pc1_in_value = puntero_aplicacion.p_pc1_in;

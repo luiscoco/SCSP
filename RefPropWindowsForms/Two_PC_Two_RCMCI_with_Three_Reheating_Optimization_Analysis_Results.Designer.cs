@@ -361,7 +361,7 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Parabolic",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox4.Location = new System.Drawing.Point(1019, 378);
+            this.comboBox4.Location = new System.Drawing.Point(1019, 500);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(191, 21);
             this.comboBox4.TabIndex = 1355;
@@ -1479,7 +1479,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Parabolic",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox1.Location = new System.Drawing.Point(1019, 419);
+            this.comboBox1.Location = new System.Drawing.Point(1019, 376);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(191, 21);
             this.comboBox1.TabIndex = 1357;
@@ -1499,7 +1499,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Parabolic",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox2.Location = new System.Drawing.Point(1019, 462);
+            this.comboBox2.Location = new System.Drawing.Point(1019, 420);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(191, 21);
             this.comboBox2.TabIndex = 1359;
@@ -1519,7 +1519,7 @@
             this.comboBox3.Items.AddRange(new object[] {
             "Parabolic",
             "Parabolic with cavity receiver (Norwich)"});
-            this.comboBox3.Location = new System.Drawing.Point(1019, 503);
+            this.comboBox3.Location = new System.Drawing.Point(1019, 461);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(191, 21);
             this.comboBox3.TabIndex = 1361;
