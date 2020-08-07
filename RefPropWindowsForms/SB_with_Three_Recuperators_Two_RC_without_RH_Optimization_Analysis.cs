@@ -1896,10 +1896,6 @@ namespace RefPropWindowsForms
                             initial_CIP_value = puntero_aplicacion.p_mc_in2;
                         }
                     }
-
-
-
-
                 }
             }
 
