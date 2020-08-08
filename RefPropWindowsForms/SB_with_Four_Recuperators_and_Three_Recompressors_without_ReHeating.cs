@@ -77,7 +77,8 @@ namespace RefPropWindowsForms
         public PreeCooler Precooler_dialog;
 
         public HeatExchangerUA LT_Recuperator;
-        public HeatExchangerUA MT_Recuperator;
+        public HeatExchangerUA MT1_Recuperator;
+        public HeatExchangerUA MT2_Recuperator;
         public HeatExchangerUA HT_Recuperator;
 
         public Radial_Turbine Main_Turbine;
@@ -635,6 +636,7 @@ namespace RefPropWindowsForms
             button6.Enabled = true;
             button7.Enabled = true;
             button12.Enabled = true;
+            button30.Enabled = true;
         }
 
         //Set critical conditions
@@ -782,6 +784,82 @@ namespace RefPropWindowsForms
         {
             SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis_dialog = new SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis(this);
             SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis_dialog.Show();
+        }
+
+        //HTR
+        private void button12_Click(object sender, EventArgs e)
+        {
+            HT_Recuperator = new HeatExchangerUA();
+            HT_Recuperator.textBox2.Text = Convert.ToString(HT_Q);
+            HT_Recuperator.textBox3.Text = Convert.ToString(HT_mdotc);
+            HT_Recuperator.textBox4.Text = Convert.ToString(HT_mdoth);
+            HT_Recuperator.textBox7.Text = Convert.ToString(HT_Tcin);
+            HT_Recuperator.textBox6.Text = Convert.ToString(HT_Thin);
+            HT_Recuperator.textBox5.Text = Convert.ToString(HT_Pcin);
+            HT_Recuperator.textBox8.Text = Convert.ToString(HT_Phin);
+            HT_Recuperator.textBox9.Text = Convert.ToString(HT_Pcout);
+            HT_Recuperator.textBox12.Text = Convert.ToString(HT_Phout);
+            HT_Recuperator.textBox13.Text = Convert.ToString(HT_Effc);
+            HT_Recuperator.HeatExchangerUA1(luis);
+            HT_Recuperator.Calculate_HX();
+            HT_Recuperator.Show();
+        }
+
+        //MTR2
+        private void button30_Click(object sender, EventArgs e)
+        {
+            MT2_Recuperator = new HeatExchangerUA();
+            MT2_Recuperator.textBox2.Text = Convert.ToString(MT2_Q);
+            MT2_Recuperator.textBox3.Text = Convert.ToString(MT2_mdotc);
+            MT2_Recuperator.textBox4.Text = Convert.ToString(MT2_mdoth);
+            MT2_Recuperator.textBox7.Text = Convert.ToString(MT2_Tcin);
+            MT2_Recuperator.textBox6.Text = Convert.ToString(MT2_Thin);
+            MT2_Recuperator.textBox5.Text = Convert.ToString(MT2_Pcin);
+            MT2_Recuperator.textBox8.Text = Convert.ToString(MT2_Phin);
+            MT2_Recuperator.textBox9.Text = Convert.ToString(MT2_Pcout);
+            MT2_Recuperator.textBox12.Text = Convert.ToString(MT2_Phout);
+            MT2_Recuperator.textBox13.Text = Convert.ToString(MT2_Effc);
+            MT2_Recuperator.HeatExchangerUA1(luis);
+            MT2_Recuperator.Calculate_HX();
+            MT2_Recuperator.Show();
+        }
+
+        //MTR1
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MT1_Recuperator = new HeatExchangerUA();
+            MT1_Recuperator.textBox2.Text = Convert.ToString(MT1_Q);
+            MT1_Recuperator.textBox3.Text = Convert.ToString(MT1_mdotc);
+            MT1_Recuperator.textBox4.Text = Convert.ToString(MT1_mdoth);
+            MT1_Recuperator.textBox7.Text = Convert.ToString(MT1_Tcin);
+            MT1_Recuperator.textBox6.Text = Convert.ToString(MT1_Thin);
+            MT1_Recuperator.textBox5.Text = Convert.ToString(MT1_Pcin);
+            MT1_Recuperator.textBox8.Text = Convert.ToString(MT1_Phin);
+            MT1_Recuperator.textBox9.Text = Convert.ToString(MT1_Pcout);
+            MT1_Recuperator.textBox12.Text = Convert.ToString(MT1_Phout);
+            MT1_Recuperator.textBox13.Text = Convert.ToString(MT1_Effc);
+            MT1_Recuperator.HeatExchangerUA1(luis);
+            MT1_Recuperator.Calculate_HX();
+            MT1_Recuperator.Show();
+        }
+
+        //LTR
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LT_Recuperator = new HeatExchangerUA();
+            LT_Recuperator.textBox2.Text = Convert.ToString(LT_Q);
+            LT_Recuperator.textBox3.Text = Convert.ToString(LT_mdotc);
+            LT_Recuperator.textBox4.Text = Convert.ToString(LT_mdoth);
+            LT_Recuperator.textBox7.Text = Convert.ToString(LT_Tcin);
+            LT_Recuperator.textBox6.Text = Convert.ToString(LT_Thin);
+            LT_Recuperator.textBox5.Text = Convert.ToString(LT_Pcin);
+            LT_Recuperator.textBox8.Text = Convert.ToString(LT_Phin);
+            LT_Recuperator.textBox9.Text = Convert.ToString(LT_Pcout);
+            LT_Recuperator.textBox12.Text = Convert.ToString(LT_Phout);
+            LT_Recuperator.textBox13.Text = Convert.ToString(LT_Effc);
+            LT_Recuperator.HeatExchangerUA1(luis);
+            LT_Recuperator.Calculate_HX();
+            LT_Recuperator.Show();
         }
     }
 }

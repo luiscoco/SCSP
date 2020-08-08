@@ -796,7 +796,7 @@ namespace RefPropWindowsForms
 
                 using (var solver = new NLoptSolver(algorithm_type, 10, 0.000001, 10000))
                 {
-                    solver.SetLowerBounds(new[] { 0.0, initial_CIP_value, initial_CIP_value + 500.0,
+                    solver.SetLowerBounds(new[] { 0.01, initial_CIP_value, initial_CIP_value + 500.0,
                                                   initial_CIP_value + 1000.0, initial_CIP_value + 1500.0,
                                                   initial_CIP_value + 2000.0 , initial_CIP_value + 5000.0, 0.0,
                                                   initial_CIP_value + 4000.0, initial_CIP_value + 3500.0});

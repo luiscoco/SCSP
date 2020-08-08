@@ -604,22 +604,24 @@
             // button12
             // 
             this.button12.Enabled = false;
-            this.button12.Location = new System.Drawing.Point(852, 349);
+            this.button12.Location = new System.Drawing.Point(853, 350);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(76, 23);
             this.button12.TabIndex = 2689;
             this.button12.Text = "HTR";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button7
             // 
             this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(547, 349);
+            this.button7.Location = new System.Drawing.Point(547, 350);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(76, 23);
             this.button7.TabIndex = 2688;
             this.button7.Text = "MTR1";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button10
             // 
@@ -852,12 +854,13 @@
             // button6
             // 
             this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(399, 349);
+            this.button6.Location = new System.Drawing.Point(399, 350);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(76, 23);
             this.button6.TabIndex = 2562;
             this.button6.Text = "LTR";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button3
             // 
@@ -3270,6 +3273,7 @@
             this.button30.TabIndex = 2722;
             this.button30.Text = "MTR2";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button31
             // 
