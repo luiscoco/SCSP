@@ -171,6 +171,8 @@
             this.label52 = new System.Windows.Forms.Label();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.textBox118 = new System.Windows.Forms.TextBox();
             this.textBox107 = new System.Windows.Forms.TextBox();
             this.label151 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -352,8 +354,6 @@
             this.label66 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label85 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.textBox118 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -478,6 +478,7 @@
             this.button13.TabIndex = 2364;
             this.button13.Text = "Precooler 2";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button10
             // 
@@ -491,6 +492,7 @@
             this.button10.TabIndex = 2363;
             this.button10.Text = "Precooler 3";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -504,6 +506,7 @@
             this.button9.TabIndex = 2362;
             this.button9.Text = "Precooler 4";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // textBox87
             // 
@@ -634,6 +637,7 @@
             this.button6.TabIndex = 2347;
             this.button6.Text = "C4";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button2
             // 
@@ -645,6 +649,7 @@
             this.button2.TabIndex = 2346;
             this.button2.Text = "C3";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -2280,6 +2285,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Heat Exchangers Pressure Drop:";
             // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(141, 145);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(82, 13);
+            this.label67.TabIndex = 374;
+            this.label67.Text = "DP_RHX (kPa):";
+            // 
+            // textBox118
+            // 
+            this.textBox118.Location = new System.Drawing.Point(227, 142);
+            this.textBox118.Name = "textBox118";
+            this.textBox118.Size = new System.Drawing.Size(48, 20);
+            this.textBox118.TabIndex = 375;
+            this.textBox118.Text = "0.0";
+            // 
             // textBox107
             // 
             this.textBox107.Location = new System.Drawing.Point(89, 116);
@@ -2826,6 +2848,7 @@
             this.button19.TabIndex = 2315;
             this.button19.Text = "T1";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button14
             // 
@@ -2837,6 +2860,7 @@
             this.button14.TabIndex = 2314;
             this.button14.Text = "C1";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button12
             // 
@@ -2848,6 +2872,7 @@
             this.button12.TabIndex = 2313;
             this.button12.Text = "RC";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -2859,6 +2884,7 @@
             this.button11.TabIndex = 2312;
             this.button11.Text = "C2";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button15
             // 
@@ -2885,6 +2911,7 @@
             this.button8.TabIndex = 2310;
             this.button8.Text = "Precooler 1";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button4
             // 
@@ -2896,6 +2923,7 @@
             this.button4.TabIndex = 2309;
             this.button4.Text = "LTR";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button7
             // 
@@ -2907,6 +2935,7 @@
             this.button7.TabIndex = 2308;
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label138
             // 
@@ -3772,6 +3801,7 @@
             this.button31.TabIndex = 2367;
             this.button31.Text = "T2";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button38
             // 
@@ -3954,23 +3984,6 @@
             this.label85.Size = new System.Drawing.Size(129, 18);
             this.label85.TabIndex = 2386;
             this.label85.Text = "ReHeating SF Collectors:";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(141, 145);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(82, 13);
-            this.label67.TabIndex = 374;
-            this.label67.Text = "DP_RHX (kPa):";
-            // 
-            // textBox118
-            // 
-            this.textBox118.Location = new System.Drawing.Point(227, 142);
-            this.textBox118.Name = "textBox118";
-            this.textBox118.Size = new System.Drawing.Size(48, 20);
-            this.textBox118.TabIndex = 375;
-            this.textBox118.Text = "0.0";
             // 
             // PC_Two_RCMCI_withReheating
             // 
