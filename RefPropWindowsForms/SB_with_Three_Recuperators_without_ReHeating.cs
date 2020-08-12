@@ -77,6 +77,7 @@ namespace RefPropWindowsForms
         public PreeCooler Precooler_dialog;
 
         public HeatExchangerUA LT_Recuperator;
+        public HeatExchangerUA MT_Recuperator;
         public HeatExchangerUA HT_Recuperator;
 
         public Radial_Turbine Main_Turbine;
@@ -355,10 +356,13 @@ namespace RefPropWindowsForms
 
         public Double massflow2;
         public Double LT_mdoth, LT_mdotc, LT_Tcin, LT_Thin, LT_Pcin, LT_Phin;
+        public Double MT_mdoth, MT_mdotc, MT_Tcin, MT_Thin, MT_Pcin, MT_Phin;
+        public Double MT_Pcout, MT_Phout, MT_Q;
         public Double LT_Pcout, LT_Phout, LT_Q, HT_mdoth, HT_mdotc, HT_Tcin, HT_Thin;
         public Double HT_Pcin, HT_Phin, HT_Pcout, HT_Phout, HT_Q, LT_UA, HT_UA;
+        public Double MT_UA;
         public Double PHX_Q2, RHX_Q2, PC_Q2;
-        public Double LT_Effc, HT_Effc;
+        public Double LT_Effc, MT_Effc, HT_Effc;
         public Double N_design2 = 0;
 
         public SB_with_Three_Recuperators_without_ReHeating(MainWindow punteroMainWindow1)
@@ -503,6 +507,49 @@ namespace RefPropWindowsForms
             textBox48.Text = Convert.ToString(w_dot_net2);
             textBox49.Text = Convert.ToString(massflow2);
             textBox50.Text = Convert.ToString(eta_thermal2 * 100);
+
+            PHX_Q2 = cicloRC.PHX.Q_dot;
+
+            LT_Q = cicloRC.LT.Q_dot;
+            LT_mdotc = cicloRC.LT.m_dot_design[0];
+            LT_mdoth = cicloRC.LT.m_dot_design[1];
+            LT_Tcin = cicloRC.LT.T_c_in;
+            LT_Thin = cicloRC.LT.T_h_in;
+            LT_Pcin = cicloRC.LT.P_c_in;
+            LT_Phin = cicloRC.LT.P_h_in;
+            LT_Pcout = cicloRC.LT.P_c_out;
+            LT_Phout = cicloRC.LT.P_h_out;
+            LT_Effc = cicloRC.LT.eff;
+
+            MT_Q = cicloRC.MT.Q_dot;
+            MT_mdotc = cicloRC.MT.m_dot_design[0];
+            MT_mdoth = cicloRC.MT.m_dot_design[1];
+            MT_Tcin = cicloRC.MT.T_c_in;
+            MT_Thin = cicloRC.MT.T_h_in;
+            MT_Pcin = cicloRC.MT.P_c_in;
+            MT_Phin = cicloRC.MT.P_h_in;
+            MT_Pcout = cicloRC.MT.P_c_out;
+            MT_Phout = cicloRC.MT.P_h_out;
+            MT_Effc = cicloRC.MT.eff;
+
+            HT_Q = cicloRC.HT.Q_dot;
+            HT_mdotc = cicloRC.HT.m_dot_design[0];
+            HT_mdoth = cicloRC.HT.m_dot_design[1];
+            HT_Tcin = cicloRC.HT.T_c_in;
+            HT_Thin = cicloRC.HT.T_h_in;
+            HT_Pcin = cicloRC.HT.P_c_in;
+            HT_Phin = cicloRC.HT.P_h_in;
+            HT_Pcout = cicloRC.HT.P_c_out;
+            HT_Phout = cicloRC.HT.P_h_out;
+            HT_Effc = cicloRC.HT.eff;
+
+            PC_Q2 = cicloRC.PC.Q_dot;
+
+            button6.Enabled = true;
+            button7.Enabled = true;
+            button12.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
         }
 
         //Set Critical conditions
@@ -649,6 +696,63 @@ namespace RefPropWindowsForms
                 MixtureCriticalPressure = working_fluid.CriticalPressure;
                 MixtureCriticalTemperature = working_fluid.CriticalTemperature;
             }
+        }
+
+        //LTR
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LT_Recuperator = new HeatExchangerUA();
+            LT_Recuperator.textBox2.Text = Convert.ToString(LT_Q);
+            LT_Recuperator.textBox3.Text = Convert.ToString(LT_mdotc);
+            LT_Recuperator.textBox4.Text = Convert.ToString(LT_mdoth);
+            LT_Recuperator.textBox7.Text = Convert.ToString(LT_Tcin);
+            LT_Recuperator.textBox6.Text = Convert.ToString(LT_Thin);
+            LT_Recuperator.textBox5.Text = Convert.ToString(LT_Pcin);
+            LT_Recuperator.textBox8.Text = Convert.ToString(LT_Phin);
+            LT_Recuperator.textBox9.Text = Convert.ToString(LT_Pcout);
+            LT_Recuperator.textBox12.Text = Convert.ToString(LT_Phout);
+            LT_Recuperator.textBox13.Text = Convert.ToString(LT_Effc);
+            LT_Recuperator.HeatExchangerUA1(luis);
+            LT_Recuperator.Calculate_HX();
+            LT_Recuperator.Show();
+        }
+
+        //MTR
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MT_Recuperator = new HeatExchangerUA();
+            MT_Recuperator.textBox2.Text = Convert.ToString(MT_Q);
+            MT_Recuperator.textBox3.Text = Convert.ToString(MT_mdotc);
+            MT_Recuperator.textBox4.Text = Convert.ToString(MT_mdoth);
+            MT_Recuperator.textBox7.Text = Convert.ToString(MT_Tcin);
+            MT_Recuperator.textBox6.Text = Convert.ToString(MT_Thin);
+            MT_Recuperator.textBox5.Text = Convert.ToString(MT_Pcin);
+            MT_Recuperator.textBox8.Text = Convert.ToString(MT_Phin);
+            MT_Recuperator.textBox9.Text = Convert.ToString(MT_Pcout);
+            MT_Recuperator.textBox12.Text = Convert.ToString(MT_Phout);
+            MT_Recuperator.textBox13.Text = Convert.ToString(MT_Effc);
+            MT_Recuperator.HeatExchangerUA1(luis);
+            MT_Recuperator.Calculate_HX();
+            MT_Recuperator.Show();
+        }
+
+        //HTR
+        private void button12_Click(object sender, EventArgs e)
+        {
+            HT_Recuperator = new HeatExchangerUA();
+            HT_Recuperator.textBox2.Text = Convert.ToString(HT_Q);
+            HT_Recuperator.textBox3.Text = Convert.ToString(HT_mdotc);
+            HT_Recuperator.textBox4.Text = Convert.ToString(HT_mdoth);
+            HT_Recuperator.textBox7.Text = Convert.ToString(HT_Tcin);
+            HT_Recuperator.textBox6.Text = Convert.ToString(HT_Thin);
+            HT_Recuperator.textBox5.Text = Convert.ToString(HT_Pcin);
+            HT_Recuperator.textBox8.Text = Convert.ToString(HT_Phin);
+            HT_Recuperator.textBox9.Text = Convert.ToString(HT_Pcout);
+            HT_Recuperator.textBox12.Text = Convert.ToString(HT_Phout);
+            HT_Recuperator.textBox13.Text = Convert.ToString(HT_Effc);
+            HT_Recuperator.HeatExchangerUA1(luis);
+            HT_Recuperator.Calculate_HX();
+            HT_Recuperator.Show();
         }
     }
 }

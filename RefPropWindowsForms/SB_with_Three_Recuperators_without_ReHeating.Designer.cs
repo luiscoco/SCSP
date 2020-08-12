@@ -755,6 +755,7 @@
             this.button6.TabIndex = 1921;
             this.button6.Text = "LTR";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button3
             // 
@@ -2883,6 +2884,7 @@
             this.button7.TabIndex = 2049;
             this.button7.Text = "MTR";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button12
             // 
@@ -2893,6 +2895,7 @@
             this.button12.TabIndex = 2050;
             this.button12.Text = "HTR";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // label42
             // 
