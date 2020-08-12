@@ -408,6 +408,7 @@
             this.button6.TabIndex = 1722;
             this.button6.Text = "LTR";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button3
             // 
@@ -2786,6 +2787,7 @@
             this.button7.TabIndex = 1847;
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox1
             // 

@@ -87,7 +87,8 @@ namespace RefPropWindowsForms
         public Double N_design_Main_Compressor;
 
         public snl_compressor_tsr Main_Compressor;
-        public snl_compressor_tsr ReCompressor;
+        public snl_compressor_tsr ReCompressor1;
+        public snl_compressor_tsr ReCompressor2;
 
         //Input Data:
         public RefrigerantCategory category;
@@ -221,7 +222,9 @@ namespace RefPropWindowsForms
 
         //LTR results 
         public Double LTR_Qdot, LTR_Num_HXs, LTR_mdot_c, LTR_mdot_h, LTR_cold_Pin, LTR_cold_Tin, LTR_cold_Pout, LTR_cold_Tout;
+
         public Double LTR_hot_Pin, LTR_hot_Tin, LTR_hot_Pout, LTR_hot_Tout;
+
         public Double LTR_UA, LTR_NTU, LTR_CR, LTR_min_DT, LTR_Effectiveness, LTR_Q_per_module, LTR_number_modules;
         public Double LTR_mdot_h_module, LTR_mdot_c_module, LTR_UA_module, LTR_NTU_module, LTR_CR_module, LTR_min_DT_module, LTR_Effectiveness_module;
 
@@ -297,6 +300,8 @@ namespace RefPropWindowsForms
         public Double recomp_frac2;
         public Double tol2;
         public Double eta_thermal2;
+        public Double recompFrac1;
+        public Double recompFrac2;
 
         public Double dp2_lt1, dp2_lt2;
         public Double dp2_mt1, dp2_mt2;
@@ -470,8 +475,8 @@ namespace RefPropWindowsForms
             massflow2 = cicloRC.m_dot_turbine;
             w_dot_net2 = cicloRC.W_dot_net;
             eta_thermal2 = cicloRC.eta_thermal;
-            recomp_frac1 = cicloRC.recomp_frac1;
-            recomp_frac2 = cicloRC.recomp_frac2;
+            recompFrac1 = cicloRC.recomp_frac1;
+            recompFrac2 = cicloRC.recomp_frac2;
 
             temp21 = cicloRC.temp[0];
             temp22 = cicloRC.temp[1];
@@ -583,6 +588,7 @@ namespace RefPropWindowsForms
             button12.Enabled = true;
             button4.Enabled = true;
             button5.Enabled = true;
+            button9.Enabled = true;
         }
 
         //Set critical conditions
@@ -944,6 +950,77 @@ namespace RefPropWindowsForms
             Precooler_dialog.PreeCooler1(luis);
             Precooler_dialog.Calculate_Cooler();
             Precooler_dialog.Show();
+        }
+
+        //Main Compressor
+        private void button9_Click(object sender, EventArgs e)
+        {
+            button23.Enabled = true;
+            button26.Enabled = true;
+            button10.Enabled = true;
+
+            Main_Compressor = new snl_compressor_tsr();
+            Main_Compressor.textBox1.Text = Convert.ToString(pres21);
+            Main_Compressor.textBox2.Text = Convert.ToString(temp21);
+            Main_Compressor.textBox6.Text = Convert.ToString(pres22);
+            Main_Compressor.textBox5.Text = Convert.ToString(temp22);
+            Main_Compressor.textBox9.Text = Convert.ToString(massflow2 * (1- recompFrac2));
+            Main_Compressor.textBox8.Text = Convert.ToString(recompFrac1);
+            Main_Compressor.button3.Enabled = false;
+            Main_Compressor.button5.Enabled = false;
+            Main_Compressor.button6.Enabled = false;
+            Main_Compressor.button7.Enabled = false;
+            Main_Compressor.Calculate_Main_Compressor();
+            N_design_Main_Compressor = Convert.ToDouble(Main_Compressor.textBox11.Text);
+            Main_Compressor.Show();
+        }
+
+        //Recompressor_1
+        private void button23_Click(object sender, EventArgs e)
+        {
+            ReCompressor1 = new snl_compressor_tsr();
+            ReCompressor1.textBox1.Text = Convert.ToString(pres212);
+            ReCompressor1.textBox2.Text = Convert.ToString(temp212);
+            ReCompressor1.textBox6.Text = Convert.ToString(pres213);
+            ReCompressor1.textBox5.Text = Convert.ToString(temp213);
+            ReCompressor1.textBox9.Text = Convert.ToString(massflow2 * (1 - recompFrac2));
+            ReCompressor1.textBox8.Text = Convert.ToString(recompFrac1);
+            ReCompressor1.button2.Enabled = false;
+            ReCompressor1.button4.Enabled = false;
+            //ReCompressor1.button3_Click(this, e);
+            ReCompressor1.Show();
+        }
+
+        //Recompressor_2
+        private void button26_Click(object sender, EventArgs e)
+        {
+            ReCompressor2 = new snl_compressor_tsr();
+            ReCompressor2.textBox1.Text = Convert.ToString(pres211);
+            ReCompressor2.textBox2.Text = Convert.ToString(temp211);
+            ReCompressor2.textBox6.Text = Convert.ToString(pres214);
+            ReCompressor2.textBox5.Text = Convert.ToString(temp214);
+            ReCompressor2.textBox9.Text = Convert.ToString(massflow2);
+            ReCompressor2.textBox8.Text = Convert.ToString(recompFrac2);
+            ReCompressor2.button2.Enabled = false;
+            ReCompressor2.button4.Enabled = false;
+            //ReCompressor2.button3_Click(this, e);
+            ReCompressor2.Show();
+        }
+
+        //Turbine
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Main_Turbine = new Radial_Turbine();
+            Main_Turbine.textBox1.Text = Convert.ToString(pres28);
+            Main_Turbine.textBox6.Text = Convert.ToString(pres29);
+            Main_Turbine.textBox2.Text = Convert.ToString(temp28);
+            Main_Turbine.textBox5.Text = Convert.ToString(temp29);
+            Main_Turbine.textBox9.Text = Convert.ToString(massflow2);
+            Main_Turbine.textBox8.Text = Convert.ToString(recomp_frac2);
+            Main_Turbine.textBox3.Text = Convert.ToString(N_design_Main_Compressor);
+            // MessageBox.Show("Not forget to set the Turbine Rotation speed (rpm)");
+            Main_Turbine.calculate_Radial_Turbine();
+            Main_Turbine.Show();
         }
     }
 }

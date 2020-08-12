@@ -651,12 +651,13 @@
             // button23
             // 
             this.button23.Enabled = false;
-            this.button23.Location = new System.Drawing.Point(404, 135);
+            this.button23.Location = new System.Drawing.Point(407, 135);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(45, 34);
+            this.button23.Size = new System.Drawing.Size(40, 34);
             this.button23.TabIndex = 2470;
             this.button23.Text = "RC1";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // label25
             // 
@@ -769,12 +770,13 @@
             // 
             this.button10.Enabled = false;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(966, 135);
+            this.button10.Location = new System.Drawing.Point(971, 135);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(46, 34);
+            this.button10.Size = new System.Drawing.Size(39, 34);
             this.button10.TabIndex = 2461;
             this.button10.Text = "T1";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox38
             // 
@@ -988,12 +990,13 @@
             // button9
             // 
             this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(274, 134);
+            this.button9.Location = new System.Drawing.Point(278, 134);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(45, 34);
+            this.button9.Size = new System.Drawing.Size(39, 34);
             this.button9.TabIndex = 2337;
             this.button9.Text = "C1";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button6
             // 
@@ -3092,12 +3095,13 @@
             // button26
             // 
             this.button26.Enabled = false;
-            this.button26.Location = new System.Drawing.Point(599, 134);
+            this.button26.Location = new System.Drawing.Point(603, 134);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(45, 34);
+            this.button26.Size = new System.Drawing.Size(39, 34);
             this.button26.TabIndex = 2483;
             this.button26.Text = "RC2";
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // label61
             // 
@@ -3190,7 +3194,7 @@
             this.textBox93.Name = "textBox93";
             this.textBox93.Size = new System.Drawing.Size(57, 20);
             this.textBox93.TabIndex = 2495;
-            this.textBox93.Text = "0.0";
+            this.textBox93.Text = "0.05";
             // 
             // label67
             // 
