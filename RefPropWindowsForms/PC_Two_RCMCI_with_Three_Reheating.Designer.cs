@@ -782,6 +782,7 @@
             this.button39.TabIndex = 2963;
             this.button39.Text = "T3";
             this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
             // comboBox5
             // 
@@ -975,6 +976,7 @@
             this.button31.TabIndex = 2943;
             this.button31.Text = "T2";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button1
             // 
@@ -1229,6 +1231,7 @@
             this.button19.TabIndex = 2891;
             this.button19.Text = "T1";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button14
             // 
@@ -1240,6 +1243,7 @@
             this.button14.TabIndex = 2890;
             this.button14.Text = "C1";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button12
             // 
@@ -1251,6 +1255,7 @@
             this.button12.TabIndex = 2889;
             this.button12.Text = "RC";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -1262,6 +1267,7 @@
             this.button11.TabIndex = 2888;
             this.button11.Text = "C2";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button15
             // 
@@ -1288,6 +1294,7 @@
             this.button8.TabIndex = 2886;
             this.button8.Text = "Precooler 1";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button4
             // 
@@ -1299,6 +1306,7 @@
             this.button4.TabIndex = 2885;
             this.button4.Text = "LTR";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button7
             // 
@@ -1310,6 +1318,7 @@
             this.button7.TabIndex = 2884;
             this.button7.Text = "HTR";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label138
             // 
@@ -2414,6 +2423,7 @@
             this.button13.TabIndex = 2940;
             this.button13.Text = "Precooler 2";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button10
             // 
@@ -2427,6 +2437,7 @@
             this.button10.TabIndex = 2939;
             this.button10.Text = "Precooler 3";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -2440,6 +2451,7 @@
             this.button9.TabIndex = 2938;
             this.button9.Text = "Precooler 4";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // textBox87
             // 
@@ -2570,6 +2582,7 @@
             this.button6.TabIndex = 2923;
             this.button6.Text = "C4";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button2
             // 
@@ -2581,6 +2594,7 @@
             this.button2.TabIndex = 2922;
             this.button2.Text = "C3";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -4439,6 +4453,7 @@
             this.button42.TabIndex = 3002;
             this.button42.Text = "T4";
             this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // PC_Two_RCMCI_with_Three_Reheating
             // 
