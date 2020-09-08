@@ -33,5 +33,12 @@ namespace RefPropWindowsForms
             puntero.SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating_dialog.MdiParent = puntero;
             puntero.SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating_dialog.Show();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            puntero.SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating_dialog = new SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating(puntero);
+            puntero.SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating_dialog.MdiParent = puntero;
+            puntero.SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating_dialog.Show();
+        }
     }
 }

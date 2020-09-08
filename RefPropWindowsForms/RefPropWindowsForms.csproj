@@ -1283,6 +1283,12 @@
     <Compile Include="SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.Designer.cs">
       <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs</DependentUpon>
     </Compile>
+    <Compile Include="SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.Designer.cs">
+      <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs</DependentUpon>
+    </Compile>
     <Compile Include="SB_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2156,6 +2162,9 @@
     <EmbeddedResource Include="SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.resx">
       <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.resx">
+      <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SB_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.resx">
       <DependentUpon>SB_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
     </EmbeddedResource>
@@ -2574,6 +2583,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Paper_Luis_Gonzalez_Portillo_UPM Figura con Torre Central.jpg" />
+    <None Include="Resources\SB with Three Recuperators and Two Recompressor with ReHeating.jpg" />
+    <None Include="Resources\SB with Three Recuperators and Two Recompressor with ReHeating Small.jpg" />
+    <None Include="Resources\SB with Three Recuperators and Two Recompressor with Two ReHeating Small.jpg" />
+    <None Include="Resources\SB with Three Recuperators and Two Recompressor with Three ReHeating Small.jpg" />
     <Content Include="x32\nlopt.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

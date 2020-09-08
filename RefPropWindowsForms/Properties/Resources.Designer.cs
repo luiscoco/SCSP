@@ -2385,6 +2385,46 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Three_Recuperators_and_Two_Recompressor_with_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("SB with Three Recuperators and Two Recompressor with ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Three_Recuperators_and_Two_Recompressor_with_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB with Three Recuperators and Two Recompressor with ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Three_Recuperators_and_Two_Recompressor_with_Three_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB with Three Recuperators and Two Recompressor with Three ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SB_with_Three_Recuperators_and_Two_Recompressor_with_Two_ReHeating_Small {
+            get {
+                object obj = ResourceManager.GetObject("SB with Three Recuperators and Two Recompressor with Two ReHeating Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SB_with_Three_Recuperators_and_Two_Recompressor_without_ReHeating {
             get {
                 object obj = ResourceManager.GetObject("SB with Three Recuperators and Two Recompressor without ReHeating", resourceCulture);
