@@ -1253,11 +1253,11 @@
     <Compile Include="PTC_SF_PHX_Data_Input.Designer.cs">
       <DependentUpon>PTC_SF_PHX_Data_Input.cs</DependentUpon>
     </Compile>
-    <Compile Include="SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.cs">
+    <Compile Include="RC_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.Designer.cs">
-      <DependentUpon>SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
+    <Compile Include="RC_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.Designer.cs">
+      <DependentUpon>RC_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
     </Compile>
     <Compile Include="SB_with_Four_Recuperators_without_ReHeating.cs">
       <SubType>Form</SubType>
@@ -1265,35 +1265,35 @@
     <Compile Include="SB_with_Four_Recuperators_without_ReHeating.Designer.cs">
       <DependentUpon>SB_with_Four_Recuperators_without_ReHeating.cs</DependentUpon>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.cs">
+    <Compile Include="RC_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.Designer.cs">
-      <DependentUpon>SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.cs</DependentUpon>
+    <Compile Include="RC_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.Designer.cs">
+      <DependentUpon>RC_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.cs</DependentUpon>
     </Compile>
-    <Compile Include="SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs">
+    <Compile Include="RC_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.Designer.cs">
-      <DependentUpon>SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs</DependentUpon>
+    <Compile Include="RC_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.Designer.cs">
+      <DependentUpon>RC_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs</DependentUpon>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs">
+    <Compile Include="RC_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.Designer.cs">
-      <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs</DependentUpon>
+    <Compile Include="RC_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.Designer.cs">
+      <DependentUpon>RC_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs</DependentUpon>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs">
+    <Compile Include="RC_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.Designer.cs">
-      <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs</DependentUpon>
+    <Compile Include="RC_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.Designer.cs">
+      <DependentUpon>RC_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs</DependentUpon>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.cs">
+    <Compile Include="RC_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SB_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.Designer.cs">
-      <DependentUpon>SB_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
+    <Compile Include="RC_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.Designer.cs">
+      <DependentUpon>RC_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
     </Compile>
     <Compile Include="SB_with_Three_Recuperators_without_ReHeating.cs">
       <SubType>Form</SubType>
@@ -2147,26 +2147,26 @@
     <EmbeddedResource Include="REFPROP_Interface_Mixture.resx">
       <DependentUpon>REFPROP_Interface_Mixture.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.resx">
-      <DependentUpon>SB_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
+    <EmbeddedResource Include="RC_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.resx">
+      <DependentUpon>RC_with_Four_Recuperators_Three_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SB_with_Four_Recuperators_without_ReHeating.resx">
       <DependentUpon>SB_with_Four_Recuperators_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.resx">
-      <DependentUpon>SB_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.cs</DependentUpon>
+    <EmbeddedResource Include="RC_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.resx">
+      <DependentUpon>RC_with_Three_Recuperators_and_One_Recompressors_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.resx">
-      <DependentUpon>SB_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs</DependentUpon>
+    <EmbeddedResource Include="RC_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.resx">
+      <DependentUpon>RC_with_Four_Recuperators_and_Three_Recompressors_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.resx">
-      <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs</DependentUpon>
+    <EmbeddedResource Include="RC_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.resx">
+      <DependentUpon>RC_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.resx">
-      <DependentUpon>SB_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs</DependentUpon>
+    <EmbeddedResource Include="RC_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.resx">
+      <DependentUpon>RC_with_Three_Recuperators_and_Two_Recompressors_with_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SB_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.resx">
-      <DependentUpon>SB_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
+    <EmbeddedResource Include="RC_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.resx">
+      <DependentUpon>RC_with_Three_Recuperators_Two_RC_without_RH_Optimization_Analysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SB_with_Three_Recuperators_without_ReHeating.resx">
       <DependentUpon>SB_with_Three_Recuperators_without_ReHeating.cs</DependentUpon>
@@ -2582,15 +2582,13 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="x64\nlopt.dll" />
     <None Include="Resources\Paper_Luis_Gonzalez_Portillo_UPM Figura con Torre Central.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with ReHeating.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with ReHeating Small.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with Two ReHeating Small.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with Three ReHeating Small.jpg" />
     <Content Include="x32\nlopt.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="x64\nlopt.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Thermal performance and economic analysis fig11 FINAL Small.jpg" />

@@ -131,7 +131,7 @@ namespace RefPropWindowsForms
         public RCMCI_with_ReHeating_new_proposed_configuration Punterociclo_24;
         public RCMCI_with_Two_Intercooling_without_Reheating Punterociclo_28;
 
-        public SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating Punterociclo_29;
+        public RC_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating Punterociclo_29;
 
         //public PCRCMCI_optimal Punterociclo_13;
         public PCRCMCI Punterociclo_14;
@@ -483,7 +483,7 @@ namespace RefPropWindowsForms
         }
 
         // PTC_Solar_Field_ciclo_SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating: Brayton_cycle_type_variable = 29
-        public void PTC_Solar_Field_ciclo_SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating(SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating Punterociclo29, Double Brayton_cycle_type, String SF_Type)
+        public void PTC_Solar_Field_ciclo_SB_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating(RC_with_Three_Recuperators_and_Two_Recompressors_without_ReHeating Punterociclo29, Double Brayton_cycle_type, String SF_Type)
         {
             SF_Type_variable = SF_Type;
             Brayton_cycle_type_variable = Brayton_cycle_type;
