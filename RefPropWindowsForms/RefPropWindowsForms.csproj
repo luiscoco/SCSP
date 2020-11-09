@@ -721,6 +721,18 @@
     <Compile Include="PCRC_with_ReHeating_Optimization_Analysis_Results.Designer.cs">
       <DependentUpon>PCRC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCRC_with_Three_Recuperators_Two_Recompressors_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Three_Recuperators_Two_Recompressors_without_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_with_Three_Recuperators_Two_Recompressors_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCRC_with_Three_Recuperators_Two_Recompressors_with_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRC_with_Three_Recuperators_Two_Recompressors_with_ReHeating.Designer.cs">
+      <DependentUpon>PCRC_with_Three_Recuperators_Two_Recompressors_with_ReHeating.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCRC_with_Three_ReHeating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -971,6 +983,18 @@
     </Compile>
     <Compile Include="RCMCI_with_ReHeating_Optimization_new_configuration.Designer.cs">
       <DependentUpon>RCMCI_with_ReHeating_Optimization_new_configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Three_Recuperators_Two_Recompressors_without_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Three_Recuperators_Two_Recompressors_without_ReHeating.Designer.cs">
+      <DependentUpon>RCMCI_with_Three_Recuperators_Two_Recompressors_without_ReHeating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCMCI_with_Three_Recuperators_Two_Recompressors_with_ReHeating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCMCI_with_Three_Recuperators_Two_Recompressors_with_ReHeating.Designer.cs">
+      <DependentUpon>RCMCI_with_Three_Recuperators_Two_Recompressors_with_ReHeating.cs</DependentUpon>
     </Compile>
     <Compile Include="RCMCI_with_Three_Reheatings.cs">
       <SubType>Form</SubType>
@@ -1880,6 +1904,12 @@
     <EmbeddedResource Include="PCRC_with_ReHeating_Optimization_Analysis_Results.resx">
       <DependentUpon>PCRC_with_ReHeating_Optimization_Analysis_Results.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Three_Recuperators_Two_Recompressors_without_ReHeating.resx">
+      <DependentUpon>PCRC_with_Three_Recuperators_Two_Recompressors_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRC_with_Three_Recuperators_Two_Recompressors_with_ReHeating.resx">
+      <DependentUpon>PCRC_with_Three_Recuperators_Two_Recompressors_with_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCRC_with_Three_ReHeating.resx">
       <DependentUpon>PCRC_with_Three_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
@@ -2003,6 +2033,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_with_ReHeating_Optimization_new_configuration.resx">
       <DependentUpon>RCMCI_with_ReHeating_Optimization_new_configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Three_Recuperators_Two_Recompressors_without_ReHeating.resx">
+      <DependentUpon>RCMCI_with_Three_Recuperators_Two_Recompressors_without_ReHeating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCMCI_with_Three_Recuperators_Two_Recompressors_with_ReHeating.resx">
+      <DependentUpon>RCMCI_with_Three_Recuperators_Two_Recompressors_with_ReHeating.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RCMCI_with_Three_Reheatings.resx">
       <DependentUpon>RCMCI_with_Three_Reheatings.cs</DependentUpon>
@@ -2582,6 +2618,10 @@
     <None Include="Resources\PCRCMCI with ReHeating.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\RCMCI with Three Recuperators and Two Recompressor without ReHeating.jpg" />
+    <None Include="Resources\RCMCI with Three Recuperators and Two Recompressor with ReHeating.jpg" />
+    <None Include="Resources\PCRC with Three Recuperators and Two Recompressor without ReHeating.jpg" />
+    <None Include="Resources\PCRC with Three Recuperators and Two Recompressor with ReHeating.jpg" />
     <Content Include="x64\nlopt.dll" />
     <None Include="Resources\Paper_Luis_Gonzalez_Portillo_UPM Figura con Torre Central.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with ReHeating.jpg" />
