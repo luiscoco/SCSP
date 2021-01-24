@@ -2407,8 +2407,6 @@
     </Compile>
     <None Include="x32\nlopt.exp" />
     <None Include="x32\nlopt.lib" />
-    <None Include="x64\nlopt.exp" />
-    <None Include="x64\nlopt.lib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="RefPropWindowsForms_TemporaryKey.pfx" />
@@ -2622,7 +2620,6 @@
     <None Include="Resources\RCMCI with Three Recuperators and Two Recompressor with ReHeating.jpg" />
     <None Include="Resources\PCRC with Three Recuperators and Two Recompressor without ReHeating.jpg" />
     <None Include="Resources\PCRC with Three Recuperators and Two Recompressor with ReHeating.jpg" />
-    <Content Include="x64\nlopt.dll" />
     <None Include="Resources\Paper_Luis_Gonzalez_Portillo_UPM Figura con Torre Central.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with ReHeating.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with ReHeating Small.jpg" />
@@ -2835,6 +2832,9 @@
     <None Include="Resources\RCMCI with Two Intercooling and Three Reheating Stages.jpg" />
     <None Include="Resources\RCMCI with Two ReHeating ICAI proposed configuration.jpg" />
     <Content Include="Resources\RCMCI with Two ReHeating Small2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="x64\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

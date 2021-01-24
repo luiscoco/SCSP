@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QPQY1eSZAQ1n99SAaqGGfyOA0h3WM81Yikl8T6NM4FQ=</dsig:DigestValue>
+        <dsig:DigestValue>mqGs4LP4rLwSihNT5mYOQw/dPKzIFYuiOHjAX1E1lXY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -145,7 +145,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ilaQg8lJzKC8D4RsJu1CR+IfrAjBFBcoa6fky3kjwUc=</dsig:DigestValue>
+        <dsig:DigestValue>vxgb0xLTd4M3FZm6aDv0xPkQN58Pa0woUgpoWeZrcaU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -174,14 +174,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="35280896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RefPropWindowsForms.exe" size="35815424">
       <assemblyIdentity name="RefPropWindowsForms" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qABK8qrU19EtJSHV+9HqX8QUyelga4yKRMWmZ3vjIM0=</dsig:DigestValue>
+        <dsig:DigestValue>I/FSkAe3017D20CIuTrgKd7RaXujFNwhA9hJ89ylvxg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -372,15 +372,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>1VEhQJVqW8F91us++F/gTV/9zMPKF6HglYW+i8kg1b4=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="x64\nlopt.dll" size="830976">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>kSRHj0m+f+ft9Os94PyfhhNCK252ps7JcXC2Y4YYzuc=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
