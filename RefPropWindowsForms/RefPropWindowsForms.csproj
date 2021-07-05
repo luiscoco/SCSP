@@ -2625,6 +2625,7 @@
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with ReHeating Small.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with Two ReHeating Small.jpg" />
     <None Include="Resources\SB with Three Recuperators and Two Recompressor with Three ReHeating Small.jpg" />
+    <None Include="Resources\RC with Three Recuperators and One Recompressor without ReHeating.jpg" />
     <Content Include="x32\nlopt.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -1695,6 +1695,16 @@ namespace RefPropWindowsForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RC_with_Three_Recuperators_and_One_Recompressor_without_ReHeating {
+            get {
+                object obj = ResourceManager.GetObject("RC with Three Recuperators and One Recompressor without ReHeating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RC_with_Three_ReHeating_Stages {
             get {
                 object obj = ResourceManager.GetObject("RC with Three ReHeating Stages", resourceCulture);

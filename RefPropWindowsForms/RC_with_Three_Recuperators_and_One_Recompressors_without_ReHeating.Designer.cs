@@ -267,7 +267,6 @@
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button23 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
@@ -281,6 +280,7 @@
             this.label59 = new System.Windows.Forms.Label();
             this.textBox87 = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -363,7 +363,7 @@
             // 
             this.button10.Enabled = false;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(966, 135);
+            this.button10.Location = new System.Drawing.Point(969, 135);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(46, 34);
             this.button10.TabIndex = 2248;
@@ -501,7 +501,7 @@
             this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(606, 126);
+            this.button19.Location = new System.Drawing.Point(788, 126);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(83, 57);
             this.button19.TabIndex = 2133;
@@ -2962,16 +2962,6 @@
             this.checkBox2.Text = "Simple Brayton";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating;
-            this.pictureBox1.Location = new System.Drawing.Point(235, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(804, 310);
-            this.pictureBox1.TabIndex = 2247;
-            this.pictureBox1.TabStop = false;
-            // 
             // button23
             // 
             this.button23.Enabled = false;
@@ -3084,7 +3074,18 @@
             this.label60.TabIndex = 2268;
             this.label60.Text = "recomp_frac:";
             // 
-            // SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::RefPropWindowsForms.Properties.Resources.RC_with_Three_Recuperators_and_One_Recompressor_without_ReHeating;
+            this.pictureBox1.Location = new System.Drawing.Point(235, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(804, 310);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2247;
+            this.pictureBox1.TabStop = false;
+            // 
+            // RC_with_Three_Recuperators_and_One_Recompressors_without_ReHeating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -3302,7 +3303,7 @@
             this.Controls.Add(this.textBox36);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating";
+            this.Name = "RC_with_Three_Recuperators_and_One_Recompressors_without_ReHeating";
             this.Text = "SB_with_Three_Recuperators_and_One_Recompressor_without_ReHeating";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

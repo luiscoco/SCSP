@@ -87,7 +87,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(561, 17);
             this.label1.TabIndex = 190;
-            this.label1.Text = "71. SB_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITHOUT_REHEATING";
+            this.label1.Text = "71. RC_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITHOUT_REHEATING";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel5
@@ -121,7 +121,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(548, 20);
             this.label3.TabIndex = 200;
-            this.label3.Text = "75. SB_WITH_FOUR_RECUPERATOS_AND_THREE_RECOMPRESSORS_WITHOUT_REHEATING";
+            this.label3.Text = "75. RC_WITH_FOUR_RECUPERATOS_AND_THREE_RECOMPRESSORS_WITHOUT_REHEATING";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
@@ -155,7 +155,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(541, 17);
             this.label2.TabIndex = 204;
-            this.label2.Text = "72. SB_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITH_REHEATING";
+            this.label2.Text = "72. RC_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITH_REHEATING";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel7
@@ -188,7 +188,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(541, 17);
             this.label4.TabIndex = 208;
-            this.label4.Text = "73. SB_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITH_TWO_REHEATING";
+            this.label4.Text = "73. RC_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITH_TWO_REHEATING";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel9
@@ -221,7 +221,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(564, 17);
             this.label5.TabIndex = 212;
-            this.label5.Text = "74. SB_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITH_THREE_REHEATING";
+            this.label5.Text = "74. RC_WITH_THREE_RECUPERATOS_AND_TWO_RECOMPRESSORS_WITH_THREE_REHEATING";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox5
